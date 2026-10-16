@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대각화의 활용 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="대각화를 이용한 점화 관계의 장기 예측: 마르코프 연쇄의 장기 비율(고윳값 1의 고유벡터), 단계별 개체군 모형의 증가율(가장 큰 고윳값). 공유 자전거 이동을 시뮬레이션하는 카드와, 멸종 위기종의 생존율을 조절하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-markov canvas { aspect-ratio: 16 / 10; max-width: 560px; margin: 0 auto; display: block; }
+    #card-adalg-markov .ctl-row > div { min-width: 9rem; }
+    #card-adalg-population canvas { aspect-ratio: 16 / 10; max-width: 560px; margin: 0 auto; display: block; }
+    #card-adalg-population .ctl-row > div { min-width: 9rem; }
+  </style>
+</head>
+<body data-course="adalg" data-sec="3-6">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>대각화의 활용</h1>
+    <p class="lead">해마다, 날마다 같은 규칙으로 바뀌는 양은 \(\vec{x}_{n+1} = A\vec{x}_n\)으로 나타납니다. 대각화하면 오래 지난 뒤의 모습은 가장 큰 고윳값과 그 고유벡터가 정한다는 것을 알 수 있습니다. 이 절에서는 공유 자전거가 두 대여소에 어떤 비율로 모이는지 모의 실험과 비교하고, 멸종 위기종의 개체 수를 늘리려면 어느 생존율을 올려야 하는지 찾아봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adalg/3-3.html#card-adalg-diag-grid" title="고급 대수 3.3 · 어떤 격자에서 보면 행렬이 늘이기만 할까?">행렬의 대각화</a><a class="p p-card" href="../../c/calc2/1-3.html#card-calc2-geo-ratio" title="미적분Ⅱ 1.3 · 공비 r에 따라 rⁿ은 어디로 갈까?">등비수열의 극한</a><a class="p p-card" href="../../c/stat/2-2.html#card-stat-add-rule" title="확률과 통계 2.2 · &#x27;A 또는 B&#x27;의 확률은 두 확률의 합일까?">확률</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-markov"><span class="mono">3.6.1</span>공유 자전거는 결국 어디에 모일까</a></li>
+        <li><a href="#card-adalg-population"><span class="mono">3.6.2</span>가장 큰 고윳값이 정하는 개체 수의 운명</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-3-6">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-markov">
+        <header class="card-head">
+          <span class="no">3.6.1</span><h2>공유 자전거는 며칠 뒤 어느 대여소에 모일까?</h2><span class="kind">마르코프 연쇄와 대각화 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">A → B 비율 p = <output class="p-out">0.2</output></label><input class="p" type="range" min="0.05" max="0.9" step="0.05" value="0.2" aria-label="하루에 A에서 B로 가는 비율"></div>
+              <div><label class="mono">B → A 비율 q = <output class="q-out">0.3</output></label><input class="q" type="range" min="0.05" max="0.9" step="0.05" value="0.3" aria-label="하루에 B에서 A로 가는 비율"></div>
+              <div><label class="mono">처음 A의 자전거 = <output class="a0-out">100</output>%</label><input class="a0" type="range" min="0" max="100" step="5" value="100" aria-label="처음 A에 있는 자전거 비율"></div>
+            </div>
+            <canvas aria-label="날짜별 A 대여소의 자전거 비율: 행렬 계산(선)과 자전거 300대 모의 실험(점)"></canvas>
+            <div class="presets"><button class="chip go-sim" type="button">모의 실험 다시</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공유 자전거 대여소 A, B가 있습니다. 하루 동안 A의 자전거 중 일부는 B로, B의 일부는 A로 옮겨 갑니다. 이 비율이 날마다 같다면, 처음에 자전거를 어떻게 두든 결국 같은 비율로 나뉠까요? 그 비율은 무엇이 정할까요?</li>
+            <li><span class="tag">복원</span>\(A = PDP^{-1}\)이면 \(A^n = PD^nP^{-1}\)이고, \(|\lambda| < 1\)인 고윳값의 \(\lambda^n\)은 0으로 갑니다.</li>
+            <li><span class="tag">설명</span>A, B의 비율을 \(\vec{x}_n\)이라 하면 \(\vec{x}_{n+1} = T\vec{x}_n\), \(T = \begin{pmatrix} 1 - p & q \\ p & 1 - q \end{pmatrix}\)입니다(열의 합이 1인 <em>전이행렬</em>). \(T\)의 고윳값은 1과 \(1 - p - q\)입니다. 고윳값 1의 고유벡터 \(\vec{s} = \frac{1}{p + q}(q, p)\)를 \(\vec{x}_0\)에서 떼어 내면 나머지는 날마다 \((1 - p - q)\)배가 되어 사라지므로 \(\vec{x}_n \to \vec{s}\)입니다. 처음 상태와 상관없이 <b>고윳값 1의 고유벡터</b>가 장기 비율을 정합니다.</li>
+            <li><span class="tag">연결</span>이렇게 다음 상태가 지금 상태만으로 정해지는 과정을 <em>마르코프 연쇄</em>라고 합니다. 페이지랭크(1절), 날씨 모형, 고객의 브랜드 이동 분석이 모두 같은 계산입니다. 둘째 고윳값의 크기가 수렴 속도를 정합니다.</li>
+            <li><span class="tag">적용</span>처음 비율을 바꿔도 곡선이 같은 높이로 모이는지 보세요. \(p\), \(q\)를 바꾸면 장기 비율과 수렴 속도가 어떻게 바뀌나요? \(p + q\)가 1에 가까울 때와 0.1일 때를 비교하세요. 점은 자전거 300대를 하나씩 무작위로 움직인 모의 실험입니다.</li>
+            <li class="warn"><span class="tag">판단</span>이 비율은 수업용으로 정한 모의 값입니다. 실제 대여소는 요일·날씨·시간대에 따라 비율이 바뀌어 전이행렬이 날마다 같지 않습니다. 운영사는 모형의 예측과 실제 기록을 비교해 자전거를 다시 배치합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(p = 0.1\), \(q = 0.4\)이면 오래 지난 뒤 A에 있는 자전거의 비율은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(0.8\)<span class="why"><b>맞습니다.</b> \(q/(p + q) = 0.4/0.5\)입니다. A에서 덜 빠져나가고 B에서 많이 들어옵니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(0.2\)<span class="why"><b>B의 비율입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>처음 비율에 따라 다르다.<span class="why"><b>고윳값 1이 아닌 부분은 \(0.5^n\)으로 사라집니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(0.5\)<span class="why"><b>두 대여소가 같은 비율이 되는 것은 \(p = q\)일 때입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/3-3.html#card-adalg-diag-grid"><small class="mono">고급 대수 3.3</small>어떤 격자에서 보면 행렬이 늘이기만 할까?</a><a href="../../c/adalg/3-3.html#card-adalg-fibonacci"><small class="mono">고급 대수 3.3</small>피보나치 수열의 일반항에 왜 √5가 나올까?</a><a href="../../c/adalg/3-1.html#card-adalg-eigen-hunt"><small class="mono">고급 대수 3.1</small>행렬을 곱해도 방향이 그대로인 벡터가 있을까?</a><a href="../../c/adalg/3-1.html#card-adalg-pagerank"><small class="mono">고급 대수 3.1</small>검색 엔진은 어떤 페이지를 맨 위에 올릴까?</a></div></nav>
+
+      <article class="card" id="card-adalg-population">
+        <header class="card-head">
+          <span class="no">3.6.2</span><h2>멸종 위기종을 살리려면 어느 생존율을 높일까?</h2><span class="kind">단계별 개체군 모형과 고윳값 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">새끼 수 f =<output class="f-out">1.2</output></label><input class="f" type="range" min="0.2" max="3" step="0.1" value="1.2" aria-label="어른 한 마리가 한 해에 낳아 살아남는 새끼 수"></div>
+              <div><label class="mono">새끼 생존율 s₁ = <output class="s1-out">0.3</output></label><input class="s1" type="range" min="0.05" max="0.95" step="0.05" value="0.3" aria-label="새끼가 어른이 되는 비율"></div>
+              <div><label class="mono">어른 생존율 s₂ = <output class="s2-out">0.6</output></label><input class="s2" type="range" min="0.05" max="0.95" step="0.05" value="0.6" aria-label="어른이 한 해를 살아남는 비율"></div>
+            </div>
+            <canvas aria-label="해마다 새끼(주황)와 어른(파랑)의 수. 세로축은 로그 눈금"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="verdict"></p>
+            <p class="fig-note">수치는 수업용으로 정한 모식 값입니다. 처음에는 새끼 50, 어른 50마리입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>어떤 바다거북은 알을 많이 낳지만 새끼가 어른까지 살아남기 어렵습니다. 보호 예산이 한정되어 있다면 새끼를 지키는 것과 어른을 지키는 것 중 어느 쪽이 개체 수를 늘리는 데 효과적일까요?</li>
+            <li><span class="tag">복원</span>\(\vec{x}_{n+1} = A\vec{x}_n\)이면 \(\vec{x}_n = A^n\vec{x}_0\)이고, 대각화하면 절댓값이 가장 큰 고윳값의 항이 결국 다른 항을 압도합니다.</li>
+            <li><span class="tag">설명</span>새끼 \(J\), 어른 \(A\)의 수를 \(\binom{J_{n+1}}{A_{n+1}} = \begin{pmatrix} 0 & f \\ s_1 & s_2 \end{pmatrix}\binom{J_n}{A_n}\)으로 나타냅니다(나이별 레슬리 행렬을 성장 단계별로 바꾼 <em>단계별 개체군 모형</em>). 가장 큰 고윳값 \(\lambda\)가 한 해의 증가율이 되어 \(\lambda > 1\)이면 늘고 \(\lambda < 1\)이면 줄어듭니다. 그 고유벡터가 오래 지난 뒤의 새끼와 어른의 비율입니다. 여기서 \(\lambda\)는 \(\lambda^2 - s_2\lambda - fs_1 = 0\)의 양의 근입니다.</li>
+            <li><span class="tag">연결</span>생태학에서는 이런 행렬 모형으로 어느 단계의 생존율이 \(\lambda\)에 가장 큰 영향을 주는지 따져 보호 정책을 정합니다. 붉은바다거북 연구에서는 알과 새끼보다 큰 개체의 생존율을 높이는 편이 효과가 크다는 분석이 알려져 있습니다.</li>
+            <li><span class="tag">적용</span>처음 값에서는 개체 수가 줄어듭니다. \(f\), \(s_1\), \(s_2\) 중 하나만 0.1씩 올려 \(\lambda \ge 1\)을 만들려면 어느 것을 몇 번 올려야 하나요? 그래프가 곧은 직선으로 변하는 것(로그 눈금)은 무엇을 뜻하나요?</li>
+            <li class="warn"><span class="tag">판단</span>이 모형은 먹이나 공간의 한계를 넣지 않아 \(\lambda > 1\)이면 끝없이 늘어납니다. 실제 개체군은 어느 수준에서 멈춥니다. 또 실제 생존율은 해마다 흔들리므로 한 번 계산한 \(\lambda\)를 확정된 미래로 보면 안 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(f = 2\), \(s_1 = 0.5\), \(s_2 = 0\)이면 가장 큰 고윳값 \(\lambda\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(1\)<span class="why"><b>맞습니다.</b> \(\lambda^2 - 1 = 0\)입니다. 고윳값 \(-1\)도 있어 새끼와 어른 수가 해마다 번갈아 바뀌며 전체는 유지됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(2\)<span class="why"><b>새끼 수만 보았습니다.</b> 새끼의 절반만 어른이 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(0.5\)<span class="why"><b>생존율만 보았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(2.5\)<span class="why"><b>더해서는 안 됩니다.</b> \(\lambda^2 = fs_1\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/3-3.html#card-adalg-diag-grid"><small class="mono">고급 대수 3.3</small>어떤 격자에서 보면 행렬이 늘이기만 할까?</a><a href="../../c/adalg/3-3.html#card-adalg-fibonacci"><small class="mono">고급 대수 3.3</small>피보나치 수열의 일반항에 왜 √5가 나올까?</a><a href="../../c/adalg/3-1.html#card-adalg-eigen-hunt"><small class="mono">고급 대수 3.1</small>행렬을 곱해도 방향이 그대로인 벡터가 있을까?</a><a href="../../c/adalg/3-1.html#card-adalg-pagerank"><small class="mono">고급 대수 3.1</small>검색 엔진은 어떤 페이지를 맨 위에 올릴까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-3-6"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/markov.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/population.js"></script>
+</body>
+</html>

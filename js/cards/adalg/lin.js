@@ -77,7 +77,9 @@ window.NMLin = (() => {
       let v = Math.abs(b) > EPS ? [b, l - a] : Math.abs(c) > EPS ? [l - d, c] : (Math.abs(l - a) < EPS ? [1, 0] : [0, 1]);
       const L = Math.hypot(...v); return [v[0] / L, v[1] / L];
     };
-    return { complex: false, vals: [l1, l2], vecs: [vec(l1), vec(l2)], tr, det: dt };
+    // kI 꼴이면 모든 방향이 고유 방향: 표준기저를 돌려준다
+    const vecs = Math.abs(b) < EPS && Math.abs(c) < EPS && Math.abs(a - d) < EPS ? [[1, 0], [0, 1]] : [vec(l1), vec(l2)];
+    return { complex: false, vals: [l1, l2], vecs, tr, det: dt };
   }
 
   /* 2차원 좌표판: 상자 box = {x, y, w, h}, 보이는 반지름 R (가로세로 같은 축척). 반환: P(x, y) → 화면, inv(px, py) → 좌표 */

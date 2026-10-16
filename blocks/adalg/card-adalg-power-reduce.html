@@ -1,0 +1,52 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/adalg/lin.js",
+    "js/cards/adalg/power-reduce.js"
+  ],
+  "short": "케일리-해밀턴으로 거듭제곱 줄이기"
+}
+-->
+<style>
+#card-adalg-power-reduce .tb { overflow-x: auto; max-height: 15rem; overflow-y: auto; }
+#card-adalg-power-reduce table.st { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .82rem; }
+#card-adalg-power-reduce table.st td, #card-adalg-power-reduce table.st th { padding: .15rem .55rem; border-bottom: 1px solid var(--rule); text-align: right; }
+#card-adalg-power-reduce .row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+#card-adalg-power-reduce .row .lin-m { display: inline-table; }
+</style>
+<article class="card" id="card-adalg-power-reduce">
+  <header class="card-head">
+    <span class="no"></span><h2>A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?</h2><span class="kind">케일리-해밀턴 정리의 활용 · 만들기</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="ctl-row">
+        <label class="mono">A <select class="pick" aria-label="행렬 고르기"><option value="0">[1, 1 ; 1, 0]</option><option value="1">[2, 1 ; −1, 0]</option><option value="2">[0, −1 ; 1, 0]</option><option value="3">[3, −2 ; 1, 0]</option></select></label>
+        <div><label class="mono">n = <output class="n-out">10</output></label><input class="n" type="range" min="2" max="30" step="1" value="10" aria-label="지수 n"></div>
+      </div>
+      <p class="mono small rule">—</p>
+      <div class="tb"><table class="st" aria-label="Aⁿ = aₙA + bₙI의 계수 표"></table></div>
+      <div class="row res"></div>
+      <p class="mono small cmp"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(A^{10}\)을 구하려면 행렬을 아홉 번 곱해야 할 것 같습니다. \(2 \times 2\) 행렬 곱셈 한 번에 곱셈이 8번이니 72번입니다. 케일리-해밀턴 정리를 쓰면 얼마나 줄일 수 있을까요?</li>
+      <li><span class="tag">복원</span>\(A^2 = tA - dI\) (\(t = \mathrm{tr}\,A\), \(d = \det A\)). 이 식으로 \(A^2\)을 \(A\)와 \(I\)로 바꿀 수 있습니다.</li>
+      <li><span class="tag">설명</span>\(A^n = a_nA + b_nI\)로 두면 \(A^{n+1} = A \cdot A^n = a_nA^2 + b_nA = a_n(tA - dI) + b_nA\)이므로 \(a_{n+1} = ta_n + b_n\), \(b_{n+1} = -da_n\)입니다. 행렬 대신 <b>수 두 개만</b> 갱신하면 됩니다. \(a_1 = 1\), \(b_1 = 0\)에서 시작합니다. 결국 \(a_n\)은 점화식 \(a_{n+1} = ta_n - da_{n-1}\)을 따르는 수열이고, 그 특성방정식이 \(A\)의 특성방정식과 같습니다.</li>
+      <li><span class="tag">연결</span>\(A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}\)이면 \(a_n\)이 피보나치 수열이 됩니다(다음 절). 회전행렬은 \(A^2 = -I\)라 네 번마다 제자리로 돌아옵니다. 컴퓨터 대수 시스템은 큰 행렬의 거듭제곱을 이렇게 다항식 나눗셈으로 줄여 계산합니다.</li>
+      <li><span class="tag">적용</span>행렬을 바꾸며 \(a_n\), \(b_n\)의 규칙을 찾으세요. 90° 회전에서는 어떤 주기가 보이나요? 아래의 곱셈 횟수 비교도 확인하세요.</li>
+      <li class="warn"><span class="tag">판단</span>\(A^n = a_nA + b_nI\)가 된다고 \(A^n\)의 성분이 \(a_n\), \(b_n\)인 것은 아닙니다. 마지막에 \(a_nA + b_nI\)를 계산해야 성분이 나옵니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(A^2 = 3A - 2I\)인 행렬에서 \(A^3\)을 \(A\)와 \(I\)로 나타내면?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(7A - 6I\)<span class="why"><b>맞습니다.</b> \(A^3 = 3A^2 - 2A = 3(3A - 2I) - 2A = 7A - 6I\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(9A - 4I\)<span class="why"><b>\(A^2\)의 계수를 제곱했습니다.</b> \(A^3 = A \cdot A^2\)으로 한 번 더 바꿔야 합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(3A^2 - 2A\)<span class="why"><b>아직 \(A^2\)이 남아 있습니다.</b> 한 번 더 바꾸세요.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(7A + 6I\)<span class="why"><b>\(-2I\)에 3을 곱할 때 부호를 놓쳤습니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

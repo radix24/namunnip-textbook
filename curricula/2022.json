@@ -8988,37 +8988,61 @@
        "n": 1,
        "title": "고윳값과 고유벡터",
        "code": "12고대03-01",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-1",
+        "card-adalg-eigen-hunt",
+        "card-adalg-pagerank"
+       ]
       },
       {
        "n": 2,
        "title": "케일리-해밀턴 정리",
        "code": "12고대03-02",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-2",
+        "card-adalg-cayley-check",
+        "card-adalg-power-reduce"
+       ]
       },
       {
        "n": 3,
        "title": "행렬의 대각화",
        "code": "12고대03-03",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-3",
+        "card-adalg-diag-grid",
+        "card-adalg-fibonacci"
+       ]
       },
       {
        "n": 4,
        "title": "직교행렬과 직교대각화",
        "code": "12고대03-04",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-4",
+        "card-adalg-symmetric-ellipse",
+        "card-adalg-orth-diag-proof"
+       ]
       },
       {
        "n": 5,
        "title": "이차곡선의 표준형",
        "code": "12고대03-05",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-5",
+        "card-adalg-conic-rotate",
+        "card-adalg-conic-classify"
+       ]
       },
       {
        "n": 6,
        "title": "대각화의 활용",
        "code": "12고대03-06",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-3-6",
+        "card-adalg-markov",
+        "card-adalg-population"
+       ]
       }
      ]
     }

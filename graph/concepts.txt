@@ -994,3 +994,9 @@ ada-det | 행렬식 | card-adalg-det-area card-adalg-det-spot | ada-inverse pm-c
 ada-lin-map | 선형변환과 행렬 | card-adalg-grid-transform card-adalg-match-matrix | ada-basis-dim cm1-matrix-mult ada-det
 ada-rot-ref | 대칭변환·닮음변환·회전변환 | card-adalg-transform-target card-adalg-pixel-rotate | ada-lin-map
 ada-compose | 선형변환의 합성과 역변환 | card-adalg-compose-order card-adalg-undo | ada-lin-map ada-inverse ada-rot-ref
+ada-eigen | 고윳값과 고유벡터 | card-adalg-eigen-hunt card-adalg-pagerank | ada-det ada-lin-map
+ada-cayley | 케일리-해밀턴 정리 | card-adalg-cayley-check card-adalg-power-reduce | ada-eigen cm1-matrix-mult
+ada-diag | 행렬의 대각화 | card-adalg-diag-grid card-adalg-fibonacci | ada-eigen ada-basis-dim ada-inverse
+ada-orth-diag | 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse card-adalg-orth-diag-proof | ada-diag ada-orthonormal ada-rot-ref
+ada-quadric | 이차곡선의 표준형 | card-adalg-conic-rotate card-adalg-conic-classify | ada-orth-diag geo-ellipse geo-hyperbola
+ada-diag-apply | 대각화의 활용(마르코프 연쇄·개체군 모형) | card-adalg-markov card-adalg-population | ada-diag ada-eigen

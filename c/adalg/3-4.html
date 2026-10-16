@@ -1,0 +1,161 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>직교행렬과 직교대각화 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="직교행렬(QᵀQ = I), 대칭행렬의 고유벡터가 서로 수직임과 직교대각화 A = QDQᵀ. 대칭행렬이 단위원을 타원으로 바꾸는 카드와, 고유벡터가 수직임을 증명 조립하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-symmetric-ellipse canvas { aspect-ratio: 1 / 1; max-width: 440px; margin: 0 auto; display: block; touch-action: none; }
+    #card-adalg-symmetric-ellipse .qd { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    #card-adalg-symmetric-ellipse .qd .lin-m { display: inline-table; }
+    #card-adalg-orth-diag-proof canvas { aspect-ratio: 4 / 3; max-width: 440px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adalg" data-sec="3-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>직교행렬과 직교대각화</h1>
+    <p class="lead">열벡터들이 정규직교기저를 이루는 행렬을 <em>직교행렬</em>이라고 합니다. 회전과 대칭이 그 예이며, 역행렬이 전치행렬과 같습니다. 대칭행렬은 고유벡터끼리 서로 수직이라 직교행렬로 대각화할 수 있습니다. 이 절에서는 대칭행렬이 원을 타원으로 바꿀 때 타원의 축이 고유벡터 방향임을 확인하고, 고유벡터가 수직인 이유를 한 단계씩 증명합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adalg/3-3.html#card-adalg-diag-grid" title="고급 대수 3.3 · 어떤 격자에서 보면 행렬이 늘이기만 할까?">행렬의 대각화</a><a class="p p-card" href="../../c/adalg/1-8.html#card-adalg-gram-schmidt" title="고급 대수 1.8 · 비스듬한 두 벡터로 직각 자를 만들 수 있을까?">정규직교기저</a><a class="p p-card" href="../../c/adalg/2-5.html#card-adalg-transform-target" title="고급 대수 2.5 · 회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?">대칭변환·닮음변환·회전변환</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-symmetric-ellipse"><span class="mono">3.4.1</span>대칭행렬은 원을 타원으로, 축은 서로 수직</a></li>
+        <li><a href="#card-adalg-orth-diag-proof"><span class="mono">3.4.2</span>대칭행렬의 고유벡터는 수직 · 증명 조립</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-3-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-symmetric-ellipse">
+        <header class="card-head">
+          <span class="no">3.4.1</span><h2>대칭행렬은 원을 어떤 모양으로 바꿀까?</h2><span class="kind">직교행렬과 직교대각화 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">a = <output data-o="0">2</output></label><input data-m="0" type="range" min="-2" max="3" step="0.25" value="2" aria-label="1행 1열 a"></div>
+              <div><label class="mono">b = <output data-o="1">1</output></label><input data-m="1" type="range" min="-2" max="2" step="0.25" value="1" aria-label="대각 밖 성분 b"></div>
+              <div><label class="mono">d = <output data-o="2">1</output></label><input data-m="2" type="range" min="-2" max="3" step="0.25" value="1" aria-label="2행 2열 d"></div>
+            </div>
+            <canvas aria-label="단위원(점선)과 그 상(파란 곡선), 두 고유벡터 방향. 원 위의 점 x를 끌 수 있다"></canvas>
+            <div class="qd" aria-label="A = QDQᵀ"></div>
+            <p class="mono small say"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(A = \begin{pmatrix} a & b \\ b & d \end{pmatrix}\)처럼 대각선에 대해 대칭인 행렬로 단위원을 변환하면 어떤 곡선이 될까요? 그 곡선의 축은 어떤 방향일까요?</li>
+            <li><span class="tag">복원</span>열벡터들이 정규직교기저를 이루는 행렬 \(Q\)를 <em>직교행렬</em>이라고 하며, \(Q^TQ = I\), 곧 \(Q^{-1} = Q^T\)입니다. 회전과 대칭이 직교행렬입니다.</li>
+            <li><span class="tag">설명</span><em>대칭행렬</em>(\(A^T = A\))은 고윳값이 모두 실수이고, 서로 다른 고윳값의 고유벡터는 서로 수직입니다(다음 카드에서 증명). 그래서 단위 고유벡터를 열로 하는 직교행렬 \(Q\)로 \(A = QDQ^T\)라 쓸 수 있고, 이것을 <em>직교대각화</em>라고 합니다. 그림으로는 "\(Q^T\)로 돌리고, 축마다 \(\lambda\)배 늘이고, \(Q\)로 되돌리기"이므로, 단위원은 <b>축이 고유벡터 방향이고 반지름이 \(|\lambda_1|\), \(|\lambda_2|\)인 타원</b>이 됩니다.</li>
+            <li><span class="tag">연결</span>재료가 받는 힘(응력), 자료의 퍼진 정도(공분산 행렬)가 모두 대칭행렬입니다. 공분산 행렬의 고유벡터 방향을 찾는 것이 자료 분석의 주성분 분석이고, 다음 절에서는 이차곡선의 축을 찾는 데 씁니다.</li>
+            <li><span class="tag">적용</span>원 위의 점 \(\vec{x}\)를 끌어 \(A\vec{x}\)가 \(\vec{x}\)와 같은 방향이 되는 곳을 찾으세요. 그곳이 타원의 가장 긴 곳, 가장 짧은 곳과 일치하나요? \(b\)를 바꿔도 두 고유벡터는 늘 수직인가요? 고윳값 하나를 음수로 만들면 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>대칭이 아닌 행렬도 원을 타원으로 바꾸지만, 그 타원의 축이 고유벡터 방향과 일치하지 않고 고유벡터끼리 수직이 아닐 수 있습니다. "고유벡터가 수직"은 대칭행렬의 특별한 성질입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(A = \begin{pmatrix} 3 & 1 \\ 1 & 3 \end{pmatrix}\)이 단위원을 바꾼 타원의 긴 반지름과 그 방향은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4, 방향 \((1, 1)\)<span class="why"><b>맞습니다.</b> 고윳값 4의 고유벡터가 \((1, 1)\), 고윳값 2의 고유벡터가 \((1, -1)\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>3, 방향 \((1, 0)\)<span class="why"><b>대각성분은 고윳값이 아닙니다.</b> \(b \ne 0\)이면 축이 기울어집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>4, 방향 \((1, -1)\)<span class="why"><b>\((1, -1)\)은 고윳값 2의 방향입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\sqrt{10}\), 방향 \((3, 1)\)<span class="why"><b>첫 열의 길이입니다.</b> \(A\vec{e}_1\)이 가장 긴 것은 아닙니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/3-3.html#card-adalg-diag-grid"><small class="mono">고급 대수 3.3</small>어떤 격자에서 보면 행렬이 늘이기만 할까?</a><a href="../../c/adalg/3-3.html#card-adalg-fibonacci"><small class="mono">고급 대수 3.3</small>피보나치 수열의 일반항에 왜 √5가 나올까?</a><a href="../../c/adalg/1-8.html#card-adalg-gram-schmidt"><small class="mono">고급 대수 1.8</small>비스듬한 두 벡터로 직각 자를 만들 수 있을까?</a><a href="../../c/adalg/1-8.html#card-adalg-ortho-coords"><small class="mono">고급 대수 1.8</small>정규직교기저의 좌표는 왜 내적 한 번이면 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/3-5.html#card-adalg-conic-rotate"><small class="mono">고급 대수 3.5</small>xy항이 있는 이차곡선은 어떻게 표준형으로 바꿀까?</a><a href="../../c/adalg/3-5.html#card-adalg-conic-classify"><small class="mono">고급 대수 3.5</small>그리지 않고 이차곡선의 모양을 알 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adalg-orth-diag-proof">
+        <header class="card-head">
+          <span class="no">3.4.2</span><h2>대칭행렬의 고유벡터는 왜 서로 수직일까?</h2><span class="kind">대칭행렬의 성질 · 증명 조립</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="행렬 [2, 1 ; c, 1]의 두 고유벡터 방향. c가 1일 때 대칭"></canvas>
+            <div class="ctl">
+              <label class="mono">\(A = \begin{pmatrix} 2 & 1 \\ c & 1 \end{pmatrix}\), c = <output class="c-out">0</output></label>
+              <input class="c" type="range" min="-0.2" max="3" step="0.1" value="0" aria-label="2행 1열 c">
+              <p class="mono small say"></p>
+              <div class="pf">
+                <ol class="pf-pool">
+                  <li data-k="a">\(A^T = A\)이고 \(A\vec{v}_1 = \lambda_1\vec{v}_1\), \(A\vec{v}_2 = \lambda_2\vec{v}_2\), \(\lambda_1 \ne \lambda_2\)라 하자.</li>
+                  <li data-k="b">\(\lambda_1(\vec{v}_1\cdot\vec{v}_2) = (\lambda_1\vec{v}_1)\cdot\vec{v}_2 = (A\vec{v}_1)\cdot\vec{v}_2\)이다.<span class="pf-why">먼저 무엇을 가정하는지 밝혀야 합니다.</span></li>
+                  <li data-k="c">\((A\vec{v}_1)\cdot\vec{v}_2 = (A\vec{v}_1)^T\vec{v}_2 = \vec{v}_1^TA^T\vec{v}_2 = \vec{v}_1^TA\vec{v}_2\) (\(A^T = A\)를 씀)이다.<span class="pf-why">이 식은 \(\lambda_1(\vec{v}_1\cdot\vec{v}_2)\)를 행렬로 바꾼 뒤에 이어집니다.</span></li>
+                  <li data-k="d">\(\vec{v}_1^TA\vec{v}_2 = \vec{v}_1\cdot(A\vec{v}_2) = \lambda_2(\vec{v}_1\cdot\vec{v}_2)\)이다.<span class="pf-why">\(A\)를 \(\vec{v}_2\) 쪽으로 옮기는 단계(대칭을 쓰는 곳)가 먼저입니다.</span></li>
+                  <li data-k="e">따라서 \((\lambda_1 - \lambda_2)(\vec{v}_1\cdot\vec{v}_2) = 0\)이고 \(\lambda_1 \ne \lambda_2\)이므로 \(\vec{v}_1\cdot\vec{v}_2 = 0\), 곧 두 고유벡터는 수직이다.<span class="pf-why">같은 양을 두 가지로 나타낸 식이 아직 완성되지 않았습니다.</span></li>
+                  <li data-k="t">\(\lambda_1 \ne \lambda_2\)이면 \(\vec{v}_1 \ne \vec{v}_2\)이므로 두 벡터는 수직이다.<span class="pf-why">다른 벡터라고 수직인 것은 아닙니다. 대칭이 아닌 행렬(c ≠ 1)에서 그림을 보세요.</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>앞 카드에서 대칭행렬의 두 고유벡터는 \(b\)를 아무리 바꿔도 늘 수직이었습니다. 우연일까요, 아니면 증명할 수 있을까요?</li>
+            <li><span class="tag">복원</span>\(\vec{u}\cdot\vec{v} = \vec{u}^T\vec{v}\), \((AB)^T = B^TA^T\)입니다.</li>
+            <li><span class="tag">설명</span>핵심은 \((A\vec{v}_1)\cdot\vec{v}_2\)를 두 가지로 계산하는 것입니다. 한 번은 \(A\vec{v}_1 = \lambda_1\vec{v}_1\)으로, 한 번은 \(A\)를 반대편으로 옮겨 \(A\vec{v}_2 = \lambda_2\vec{v}_2\)로 계산합니다. \(A\)를 옮길 때 \(A^T\)가 생기는데, 대칭이라 \(A^T = A\)입니다. 두 결과가 같으려면 \(\lambda_1 \ne \lambda_2\)일 때 내적이 0이어야 합니다.</li>
+            <li><span class="tag">연결</span>이 성질에 "대칭행렬의 고윳값은 실수"라는 사실까지 쓰면, 모든 실대칭행렬은 직교대각화된다는 <em>스펙트럼 정리</em>가 나옵니다. 다음 절에서 이차곡선의 축을 찾는 근거입니다.</li>
+            <li><span class="tag">적용</span>증명을 순서대로 쌓으세요. 그다음 \(c\)를 움직여 대칭(\(c = 1\))일 때만 두 고유벡터가 수직인지 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>증명에서 \(A^T = A\)를 쓴 곳은 한 군데뿐입니다. 그곳이 없으면 증명이 무너지고, 그림에서도 \(c \ne 1\)이면 각이 90°가 아닙니다. 가정이 증명의 어디에 쓰였는지 찾는 습관이 중요합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">대칭행렬 \(A\)의 고유벡터가 \((1, 2)\)(고윳값 5)이고 다른 고윳값이 \(-1\)일 때, 고윳값 \(-1\)의 고유벡터 방향은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((2, -1)\)<span class="why"><b>맞습니다.</b> 서로 다른 고윳값의 고유벡터는 수직이므로 \((1, 2)\)에 수직인 방향입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((-1, -2)\)<span class="why"><b>같은 방향(반대 방향)입니다.</b> 이것은 고윳값 5의 고유벡터입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((2, 1)\)<span class="why"><b>성분을 바꾸기만 하고 부호를 바꾸지 않았습니다.</b> \((1, 2)\cdot(2, 1) = 4 \ne 0\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정할 수 없다.<span class="why"><b>대칭행렬이라는 조건으로 정해집니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/3-3.html#card-adalg-diag-grid"><small class="mono">고급 대수 3.3</small>어떤 격자에서 보면 행렬이 늘이기만 할까?</a><a href="../../c/adalg/3-3.html#card-adalg-fibonacci"><small class="mono">고급 대수 3.3</small>피보나치 수열의 일반항에 왜 √5가 나올까?</a><a href="../../c/adalg/1-8.html#card-adalg-gram-schmidt"><small class="mono">고급 대수 1.8</small>비스듬한 두 벡터로 직각 자를 만들 수 있을까?</a><a href="../../c/adalg/1-8.html#card-adalg-ortho-coords"><small class="mono">고급 대수 1.8</small>정규직교기저의 좌표는 왜 내적 한 번이면 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/3-5.html#card-adalg-conic-rotate"><small class="mono">고급 대수 3.5</small>xy항이 있는 이차곡선은 어떻게 표준형으로 바꿀까?</a><a href="../../c/adalg/3-5.html#card-adalg-conic-classify"><small class="mono">고급 대수 3.5</small>그리지 않고 이차곡선의 모양을 알 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-3-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/symmetric-ellipse.js"></script>
+<script src="../../js/lib/proof.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/orth-diag-proof.js"></script>
+</body>
+</html>

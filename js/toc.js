@@ -16193,43 +16193,109 @@ window.TOC = [
       "n": 1,
       "title": "고윳값과 고유벡터",
       "code": "12고대03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-eigen-hunt",
+        "title": "행렬을 곱해도 방향이 그대로인 벡터가 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-pagerank",
+        "title": "검색 엔진은 어떤 페이지를 맨 위에 올릴까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "케일리-해밀턴 정리",
       "code": "12고대03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-cayley-check",
+        "title": "A² + pA + qI = O가 되는 p, q는 무엇일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-power-reduce",
+        "title": "A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "행렬의 대각화",
       "code": "12고대03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-diag-grid",
+        "title": "어떤 격자에서 보면 행렬이 늘이기만 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-fibonacci",
+        "title": "피보나치 수열의 일반항에 왜 √5가 나올까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "직교행렬과 직교대각화",
       "code": "12고대03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-symmetric-ellipse",
+        "title": "대칭행렬은 원을 어떤 모양으로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-orth-diag-proof",
+        "title": "대칭행렬의 고유벡터는 왜 서로 수직일까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "이차곡선의 표준형",
       "code": "12고대03-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-conic-rotate",
+        "title": "xy항이 있는 이차곡선은 어떻게 표준형으로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-conic-classify",
+        "title": "그리지 않고 이차곡선의 모양을 알 수 있을까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "대각화의 활용",
       "code": "12고대03-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-markov",
+        "title": "공유 자전거는 며칠 뒤 어느 대여소에 모일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-population",
+        "title": "멸종 위기종을 살리려면 어느 생존율을 높일까?"
+       }
+      ]
      }
     ]
    }

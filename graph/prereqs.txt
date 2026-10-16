@@ -1523,3 +1523,8 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 행렬식 | card-adalg-det-area
 선형변환과 행렬 | card-adalg-grid-transform
 대칭변환·닮음변환·회전변환 | card-adalg-transform-target
+이차방정식 | card-cm1-discriminant
+정규직교기저 | card-adalg-gram-schmidt
+고윳값과 고유벡터 | card-adalg-eigen-hunt
+행렬의 대각화 | card-adalg-diag-grid
+직교행렬과 직교대각화 | card-adalg-symmetric-ellipse
