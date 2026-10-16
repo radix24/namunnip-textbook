@@ -15263,64 +15263,178 @@ window.TOC = [
       "n": 1,
       "title": "여러 가지 순열과 중복조합",
       "code": "12전수03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-round-table",
+        "title": "둥근 탁자에 둘러앉는 방법은 줄을 서는 방법보다 왜 적을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-necklace",
+        "title": "서로 다른 구슬 다섯 개로 목걸이를 몇 가지나 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-candy",
+        "title": "똑같은 사탕 6개를 세 사람에게 나누는 방법은 몇 가지일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "이항정리",
       "code": "12전수03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-galton",
+        "title": "못이 박힌 판에 공을 떨어뜨리면 왜 가운데에 많이 쌓일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-binom-approx",
+        "title": "계산기 없이 1.01¹⁰을 소수 셋째 자리까지 구할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "통계적 확률과 수학적 확률",
       "code": "12전수03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-buffon",
+        "title": "바늘을 바닥에 떨어뜨려 원주율을 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-thumbtack",
+        "title": "압정이 바늘 끝을 위로 하고 떨어질 확률은 계산할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "확률의 여러 가지 정리",
       "code": "12전수03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-monty-hall",
+        "title": "사회자가 빈 문을 열어 주면, 고른 문을 바꾸는 게 나을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-bayes-area",
+        "title": "정확도 99 %인 검사에서 양성이 나오면, 병에 걸렸을 확률도 99 %일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-gambler",
+        "title": "동전이 다섯 번 연속 앞면이 나왔다면, 다음은 뒷면이 나올 차례일까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "확률변수와 확률분포",
       "code": "12전수03-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-dice-dist",
+        "title": "두 주사위 눈의 합은 왜 7이 가장 잘 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-hist-density",
+        "title": "버스를 정확히 3분 기다릴 확률은 왜 0일까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "이산확률변수와 이항분포",
       "code": "12전수03-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-fair-game",
+        "title": "학교 축제 주사위 게임, 상금을 얼마로 해야 공정할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-binom-slider",
+        "title": "자유투 성공률 70 %인 선수가 20번 던지면 몇 번쯤 넣을까?"
+       }
+      ]
      },
      {
       "n": 7,
       "title": "연속확률변수와 정규분포",
       "code": "12전수03-07",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-cont-expect",
+        "title": "밀도 곡선의 어디에 받침을 대면 수평이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-continuity-corr",
+        "title": "이항분포를 정규분포로 어림할 때 왜 0.5를 더하고 뺄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-height-normal",
+        "title": "우리 반의 키(또는 직접 잰 자료)는 정규분포를 따를까?"
+       }
+      ]
      },
      {
       "n": 8,
       "title": "모집단과 표본",
       "code": "12전수03-08",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-sampling-methods",
+        "title": "학생 40명을 어떻게 뽑아야 전교생의 평균 통학 시간을 잘 맞힐까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-pmath-literary-digest",
+        "title": "수백만 명에게 물은 여론조사가 왜 틀렸을까?"
+       }
+      ]
      },
      {
       "n": 9,
       "title": "모평균과 모비율의 추정",
       "code": "12전수03-09",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-ci-100",
+        "title": "\"신뢰도 95 %\"의 95 %는 무엇에 대한 확률일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-sample-size",
+        "title": "오차 범위를 ±3 %p 안으로 하려면 몇 명에게 물어야 할까?"
+       }
+      ]
      }
     ]
    }

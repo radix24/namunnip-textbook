@@ -8466,55 +8466,94 @@
        "n": 1,
        "title": "여러 가지 순열과 중복조합",
        "code": "12전수03-01",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-1",
+        "card-pmath-round-table",
+        "card-pmath-necklace",
+        "card-pmath-candy"
+       ]
       },
       {
        "n": 2,
        "title": "이항정리",
        "code": "12전수03-02",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-2",
+        "card-pmath-galton",
+        "card-pmath-binom-approx"
+       ]
       },
       {
        "n": 3,
        "title": "통계적 확률과 수학적 확률",
        "code": "12전수03-03",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-3",
+        "card-pmath-buffon",
+        "card-pmath-thumbtack"
+       ]
       },
       {
        "n": 4,
        "title": "확률의 여러 가지 정리",
        "code": "12전수03-04",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-4",
+        "card-pmath-monty-hall",
+        "card-pmath-bayes-area",
+        "card-pmath-gambler"
+       ]
       },
       {
        "n": 5,
        "title": "확률변수와 확률분포",
        "code": "12전수03-05",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-5",
+        "card-pmath-dice-dist",
+        "card-pmath-hist-density"
+       ]
       },
       {
        "n": 6,
        "title": "이산확률변수와 이항분포",
        "code": "12전수03-06",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-6",
+        "card-pmath-fair-game",
+        "card-pmath-binom-slider"
+       ]
       },
       {
        "n": 7,
        "title": "연속확률변수와 정규분포",
        "code": "12전수03-07",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-7",
+        "card-pmath-cont-expect",
+        "card-pmath-continuity-corr",
+        "card-pmath-height-normal"
+       ]
       },
       {
        "n": 8,
        "title": "모집단과 표본",
        "code": "12전수03-08",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-8",
+        "card-pmath-sampling-methods",
+        "text-pmath-literary-digest"
+       ]
       },
       {
        "n": 9,
        "title": "모평균과 모비율의 추정",
        "code": "12전수03-09",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-3-9",
+        "card-pmath-ci-100",
+        "card-pmath-sample-size"
+       ]
       }
      ]
     }

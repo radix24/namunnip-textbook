@@ -941,3 +941,15 @@ pm-cross | 벡터의 외적 | card-pmath-cross card-pmath-torque | geo-dot geo-p
 pm-shading | 법선과 조명 | card-pmath-shading | pm-cross pm-dot-work
 pm-vec-figures | 벡터로 나타낸 직선·평면·원·구 | card-pmath-param-line-plane card-pmath-circle-sphere-vec | geo-line-vec geo-plane-vec geo-sphere-vec pm-cross
 pm-raytrace | 직선과 구의 교점 | card-pmath-raytrace | pm-vec-figures pm-shading
+# 전문 수학 Ⅲ. 확률과 통계
+pm-circular-perm | 원순열과 염주순열 | card-pmath-round-table card-pmath-necklace | cm1-permutation
+pm-rep-comb | 중복조합(별과 막대) | card-pmath-candy | stat-rep-comb
+pm-binom-thm | 이항정리와 갈톤 보드 | card-pmath-galton card-pmath-binom-approx | stat-binom-thm stat-pascal
+pm-stat-prob | 통계적 확률과 수학적 확률 | card-pmath-buffon card-pmath-thumbtack | stat-prob-def stat-large-numbers
+pm-prob-theorems | 확률의 여러 가지 정리 | card-pmath-monty-hall card-pmath-bayes-area card-pmath-gambler | stat-cond-prob stat-independence stat-mult-rule
+pm-rv-dist | 확률변수와 확률분포 | card-pmath-dice-dist card-pmath-hist-density | stat-rv stat-continuous-rv
+pm-expect-binom | 기댓값과 이항분포 | card-pmath-fair-game card-pmath-binom-slider | stat-expectation stat-binomial
+pm-cont-expect | 연속확률변수의 기댓값과 표준편차 | card-pmath-cont-expect | pm-rv-dist pm-riemann
+pm-normal | 정규분포와 연속성 보정 | card-pmath-continuity-corr card-pmath-height-normal | stat-normal stat-binom-normal
+pm-sampling | 표본추출 방법과 편향 | card-pmath-sampling-methods text-pmath-literary-digest | stat-sampling
+pm-estimation | 모평균·모비율의 추정 | card-pmath-ci-100 card-pmath-sample-size | stat-est-mean stat-est-prop
