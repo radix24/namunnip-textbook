@@ -12,6 +12,16 @@
 import json, re, sys, pathlib, html as H
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+# Windows에서도 맥·리눅스와 같은 결과를 내도록 읽기·쓰기는 UTF-8, 줄바꿈은 LF로 고정한다.
+def rd(p):
+    return p.read_text(encoding="utf-8")
+
+
+def wr(p, s):
+    p.write_text(s, encoding="utf-8", newline="\n")
+
+
 NUMBERED = {"card", "text"}
 TOC_KIND = {"card": "card", "text": "text", "video": "video"}
 
@@ -19,7 +29,7 @@ TOC_KIND = {"card": "card", "text": "text", "video": "video"}
 def load_blocks():
     blocks = {}
     for p in sorted((ROOT / "blocks").glob("*/*.html")):
-        src = p.read_text()
+        src = rd(p)
         m = re.match(r"<!--block\n(.*?)\n-->\n", src, re.S)
         if not m:
             raise SystemExit(f"블록 머리 없음: {p}")
@@ -75,14 +85,17 @@ def build_sw():
     import hashlib
     files = sorted(p.name for p in ROOT.glob("*.html")) + ["manifest.webmanifest"]
     for d in PRECACHE_DIRS:
-        files += sorted(str(p.relative_to(ROOT)) for p in (ROOT / d).rglob("*")
+        files += sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / d).rglob("*")
                         if p.is_file() and p.name not in PRECACHE_SKIP and p.suffix not in (".md", ".txt"))
     h = hashlib.sha256()
     for f in files + ["sw.js"]:
-        h.update(f.encode()); h.update((ROOT / f).read_bytes())
+        data = (ROOT / f).read_bytes()
+        if b"\0" not in data[:8000]:   # git처럼 NUL이 없으면 글 파일로 보고, Windows 체크아웃(CRLF)에서도 같은 버전이 나오게
+            data = data.replace(b"\r\n", b"\n")
+        h.update(f.encode()); h.update(data)
     version = h.hexdigest()[:12]
     size = sum((ROOT / f).stat().st_size for f in files)
-    (ROOT / "sw-files.js").write_text("/* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */\nself.PRECACHE = "
+    wr(ROOT / "sw-files.js", "/* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */\nself.PRECACHE = "
         + json.dumps({"version": version, "files": files}, ensure_ascii=False, indent=0) + ";\n")
     print(f"오프라인 저장: 파일 {len(files)}개, {size / 1e6:.1f} MB, 버전 {version}")
 
@@ -100,7 +113,7 @@ def exam_count(course, ch, sec):
     """절 끝 연습문제 버튼에 적을 문항 수 문구."""
     global _exam_counts
     if _exam_counts is None:
-        _exam_counts = json.loads(EXAM_INDEX.read_text()) if EXAM_INDEX.exists() else {}
+        _exam_counts = json.loads(rd(EXAM_INDEX)) if EXAM_INDEX.exists() else {}
     n = _exam_counts.get(f'{course["id"]}-{ch["n"]}-{sec["n"]}', 0)
     return f"{n}문항" if n else "준비 중"
 
@@ -115,7 +128,7 @@ def related_map(blocks, used):
     if not src.exists():
         return {}
     cons = {}
-    for line in src.read_text().splitlines():
+    for line in rd(src).splitlines():
         parts = [p.strip() for p in line.split("|")]
         if line.strip() and not line.lstrip().startswith("#") and len(parts) == 4:
             cons[parts[0]] = (parts[2].split(), parts[3].split())
@@ -196,7 +209,7 @@ def load_prereqs(used):
     if not src.exists():
         return
     errors = []
-    for ln, line in enumerate(src.read_text().splitlines(), 1):
+    for ln, line in enumerate(rd(src).splitlines(), 1):
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         label, sep, target = (x.strip() for x in line.partition("|"))
@@ -326,7 +339,7 @@ def build_graph(blocks, used, out):
     if not src.exists():
         return
     concepts, errors = [], []
-    for ln, line in enumerate(src.read_text().splitlines(), 1):
+    for ln, line in enumerate(rd(src).splitlines(), 1):
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         parts = [p.strip() for p in line.split("|")]
@@ -371,14 +384,14 @@ def build_graph(blocks, used, out):
     extra = []
     lsrc = ROOT / "graph" / "links.txt"
     if lsrc.exists():
-        for ln, line in enumerate(lsrc.read_text().splitlines(), 1):
+        for ln, line in enumerate(rd(lsrc).splitlines(), 1):
             if not line.strip() or line.lstrip().startswith("#"):
                 continue
             a, sep, b = (x.strip() for x in line.partition(">"))
             if not sep or a not in used or b not in used:
                 raise SystemExit(f"graph/links.txt {ln}행: '먼저 블록 > 다음 블록' 형식이 아니거나 배치되지 않은 블록")
             extra.append([a, b])
-    (out / "js" / "graph-data.js").write_text("/* 자동 생성: python3 tools/build.py (원본: graph/concepts.txt, graph/links.txt) — 직접 고치지 말 것 */\n"
+    wr(out / "js" / "graph-data.js", "/* 자동 생성: python3 tools/build.py (원본: graph/concepts.txt, graph/links.txt) — 직접 고치지 말 것 */\n"
         + "window.GRAPH = " + json.dumps(data, ensure_ascii=False) + ";\nwindow.GRAPH_LINKS = " + json.dumps(extra, ensure_ascii=False) + ";\n")
     print(f"개념 지도: 개념 {len(data)}개, 선수 관계 {sum(len(c['req']) for c in data)}개, 카드 사이 선 {len(extra)}개")
 
@@ -389,7 +402,7 @@ def main():
     if "--out" in args:
         i = args.index("--out"); out = pathlib.Path(args[i + 1]).resolve(); del args[i:i + 2]
     cur_path = ROOT / (args[0] if args else "curricula/2022.json")
-    cur = json.loads(cur_path.read_text())
+    cur = json.loads(rd(cur_path))
     blocks = load_blocks()
 
     used = {}
@@ -424,10 +437,10 @@ def main():
     for c, ch, s in pages:
         p = out / "c" / c["id"] / f'{ch["n"]}-{s["n"]}.html'
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(page_html(c, ch, s, blocks))
+        wr(p, page_html(c, ch, s, blocks))
 
     (out / "js").mkdir(parents=True, exist_ok=True)
-    (out / "js" / "toc.js").write_text("/* 자동 생성: python3 tools/build.py — 직접 고치지 말 것 */\nwindow.TOC = " + json.dumps(toc, ensure_ascii=False, indent=1) + ";\n")
+    wr(out / "js" / "toc.js", "/* 자동 생성: python3 tools/build.py — 직접 고치지 말 것 */\nwindow.TOC = " + json.dumps(toc, ensure_ascii=False, indent=1) + ";\n")
     build_graph(blocks, used, out)
     if out == ROOT:
         build_sw()   # 페이지를 모두 만든 뒤에 해시를 잰다
