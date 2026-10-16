@@ -15093,57 +15093,165 @@ window.TOC = [
       "n": 1,
       "title": "이차곡선",
       "code": "12전수02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-cone-cut",
+        "title": "원뿔을 자르는 칼을 기울이면 단면은 어떻게 바뀔까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-eccentricity",
+        "title": "포물선, 타원, 쌍곡선을 하나의 규칙으로 그릴 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "이차곡선의 접선",
       "code": "12전수02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-parabolic-mirror",
+        "title": "위성 안테나는 왜 접시 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-ellipse-billiard",
+        "title": "타원 모양 당구대에서 초점을 지나게 친 공은 어디로 갈까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "직선과 평면에 관한 명제",
       "code": "12전수02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-three-perp-proof",
+        "title": "평면 위에 그은 수선 하나로 공중의 수선을 어떻게 증명할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-space-counter",
+        "title": "평면에서 참인 명제가 공간에서도 참일까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "정사영",
       "code": "12전수02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-disk-shadow",
+        "title": "동전을 기울이면 그림자의 넓이는 얼마나 줄어들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-solar-panel",
+        "title": "태양광 패널은 몇 도로 세워야 햇빛을 가장 많이 받을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "공간좌표와 구의 방정식",
       "code": "12전수02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-treasure3d",
+        "title": "거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-section3d",
+        "title": "선분 밖에서도 선분을 m : n으로 나눌 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-trilateration",
+        "title": "위성까지의 거리만으로 내 위치를 어떻게 알아낼까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "벡터의 연산",
       "code": "12전수02-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-river",
+        "title": "물살이 센 강에서 맞은편 선착장에 닿으려면 뱃머리를 어디로 돌려야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-vec-puzzle",
+        "title": "주어진 화살표 두 개만으로 목표점에 갈 수 있을까?"
+       }
+      ]
      },
      {
       "n": 7,
       "title": "위치벡터, 내적과 외적",
       "code": "12전수02-07",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-work-dot",
+        "title": "썰매 줄을 비스듬히 당기면 힘의 얼마가 썰매를 끄는 데 쓰일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-cross",
+        "title": "두 벡터에 모두 수직인 벡터는 어느 쪽을 향하고, 길이는 얼마일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-torque",
+        "title": "녹슨 볼트를 풀려면 렌치의 어디를 어느 방향으로 밀어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-shading",
+        "title": "게임 속 3D 물체는 어떻게 그림자를 칠할까?"
+       }
+      ]
      },
      {
       "n": 8,
       "title": "벡터로 나타낸 도형의 방정식",
       "code": "12전수02-08",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-param-line-plane",
+        "title": "매개변수 하나는 직선을, 둘은 평면을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-circle-sphere-vec",
+        "title": "원과 구는 같은 식 하나로 쓸 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-raytrace",
+        "title": "빛줄기와 구의 교점만 계산해서 3D 그림을 그릴 수 있을까?"
+       }
+      ]
      }
     ]
    },

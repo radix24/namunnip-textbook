@@ -8376,49 +8376,85 @@
        "n": 1,
        "title": "이차곡선",
        "code": "12전수02-01",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-1",
+        "card-pmath-cone-cut",
+        "card-pmath-eccentricity"
+       ]
       },
       {
        "n": 2,
        "title": "이차곡선의 접선",
        "code": "12전수02-02",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-2",
+        "card-pmath-parabolic-mirror",
+        "card-pmath-ellipse-billiard"
+       ]
       },
       {
        "n": 3,
        "title": "직선과 평면에 관한 명제",
        "code": "12전수02-03",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-3",
+        "card-pmath-three-perp-proof",
+        "card-pmath-space-counter"
+       ]
       },
       {
        "n": 4,
        "title": "정사영",
        "code": "12전수02-04",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-4",
+        "card-pmath-disk-shadow",
+        "card-pmath-solar-panel"
+       ]
       },
       {
        "n": 5,
        "title": "공간좌표와 구의 방정식",
        "code": "12전수02-05",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-5",
+        "card-pmath-treasure3d",
+        "card-pmath-section3d",
+        "card-pmath-trilateration"
+       ]
       },
       {
        "n": 6,
        "title": "벡터의 연산",
        "code": "12전수02-06",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-6",
+        "card-pmath-river",
+        "card-pmath-vec-puzzle"
+       ]
       },
       {
        "n": 7,
        "title": "위치벡터, 내적과 외적",
        "code": "12전수02-07",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-7",
+        "card-pmath-work-dot",
+        "card-pmath-cross",
+        "card-pmath-torque",
+        "card-pmath-shading"
+       ]
       },
       {
        "n": 8,
        "title": "벡터로 나타낸 도형의 방정식",
        "code": "12전수02-08",
-       "blocks": []
+       "blocks": [
+        "intro-pmath-2-8",
+        "card-pmath-param-line-plane",
+        "card-pmath-circle-sphere-vec",
+        "card-pmath-raytrace"
+       ]
       }
      ]
     },

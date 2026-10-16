@@ -927,3 +927,17 @@ pm-lhopital | 로피탈의 정리 | card-pmath-lhopital-zoom card-pmath-lhopital
 pm-riemann | 구분구적법과 정적분의 뜻 | card-pmath-riemann card-pmath-pyramid | alg-sigma calc1-definite
 pm-int-methods | 여러 가지 적분법 | card-pmath-int-choose card-pmath-partial-frac | calc2-int-substitution calc2-int-parts
 pm-trig-sub | 삼각치환 | card-pmath-trig-sub | pm-int-methods pm-inverse-trig alg-radian
+# 전문 수학 Ⅱ. 기하
+pm-conic-section | 원뿔곡선 | card-pmath-cone-cut | geo-parabola geo-ellipse geo-hyperbola
+pm-eccentricity | 이심률 | card-pmath-eccentricity | pm-conic-section
+pm-conic-reflect | 이차곡선의 접선과 반사 성질 | card-pmath-parabolic-mirror card-pmath-ellipse-billiard | geo-conic-tangent
+pm-space-proof | 직선과 평면에 관한 명제의 증명 | card-pmath-three-perp-proof card-pmath-space-counter | geo-line-line geo-line-plane geo-three-perp
+pm-proj-area | 정사영의 넓이와 활용 | card-pmath-disk-shadow card-pmath-solar-panel | geo-proj-area
+pm-space-dist | 공간의 거리와 내분점·외분점 | card-pmath-treasure3d card-pmath-section3d | geo-dist3 geo-section3
+pm-trilateration | 구 세 개의 교점과 위치 측정 | card-pmath-trilateration | geo-sphere-eq pm-space-dist
+pm-vec-ops | 벡터의 연산과 활용 | card-pmath-river card-pmath-vec-puzzle | geo-vec-add geo-vec-scalar geo-vec-comp
+pm-dot-work | 내적과 일 | card-pmath-work-dot | geo-dot
+pm-cross | 벡터의 외적 | card-pmath-cross card-pmath-torque | geo-dot geo-pos-vec
+pm-shading | 법선과 조명 | card-pmath-shading | pm-cross pm-dot-work
+pm-vec-figures | 벡터로 나타낸 직선·평면·원·구 | card-pmath-param-line-plane card-pmath-circle-sphere-vec | geo-line-vec geo-plane-vec geo-sphere-vec pm-cross
+pm-raytrace | 직선과 구의 교점 | card-pmath-raytrace | pm-vec-figures pm-shading

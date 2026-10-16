@@ -1505,3 +1505,8 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 앙금 생성 반응 | basics/b-p-precipitation
 역함수의 미분법 | card-calc2-inverse-slope
 몫의 미분법 | card-calc2-quotient
+쌍곡선의 방정식 | card-geo-hyperbola-def
+이차곡선의 접선 | card-geo-tangent-point
+직선과 평면의 위치 관계 | card-geo-line-plane
+삼수선 정리 | card-geo-three-perp
+구의 방정식 | card-geo-sphere-eq
