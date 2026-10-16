@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>코시컨트·시컨트·코탄젠트함수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="코시컨트·시컨트·코탄젠트함수를 단위원의 접선 길이로 정의하고, 사인·코사인 그래프에서 역수 그래프를 예측해 그려 보는 카드. 점근선과 주기, 치역.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-recip-circle canvas { aspect-ratio: 16 / 10; }
+    #card-pmath-csc-predict canvas { aspect-ratio: 16 / 10; touch-action: none; }
+    #card-pmath-csc-predict .asy .chip[aria-pressed="true"] { background: var(--warn); border-color: var(--warn); color: var(--on-accent); }
+  </style>
+</head>
+<body data-course="pmath" data-sec="1-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>코시컨트·시컨트·코탄젠트함수</h1>
+    <p class="lead">사인, 코사인, 탄젠트의 역수에도 이름이 있습니다. \(\csc x = \frac{1}{\sin x}\), \(\sec x = \frac{1}{\cos x}\), \(\cot x = \frac{1}{\tan x}\)입니다. 이 세 함수는 단위원에 그은 접선의 길이로 볼 수도 있습니다. 이 절에서는 원 위의 점을 움직이며 세 길이가 어떻게 늘고 줄어드는지 보고, 사인 그래프만 보고 코시컨트 그래프를 먼저 예측해 그린 뒤 확인합니다. 분모가 0이 되는 곳에서 그래프가 어떻게 되는지가 핵심입니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/2-2.html#card-alg-trig-def" title="대수 2.2 · 150circ나 -60circ의 사인은 무엇일까?">삼각함수의 정의와 그래프</a><a class="p p-card" href="../../c/alg/2-1.html#card-alg-general-angle" title="대수 2.1 · 두 바퀴 돈 각은 720circ일까, 0circ일까?">라디안</a><a class="p p-card" href="../../c/cm2/3-4.html#card-cm2-rational-form" title="공통수학2 3.4 · y = (ax + b)/(cx + d)의 점근선은 어떻게 찾을까?">함수의 극한과 점근선</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-recip-circle"><span class="mono">1.2.1</span>단위원의 접선과 sec·csc·cot</a></li>
+        <li><a href="#card-pmath-csc-predict"><span class="mono">1.2.2</span>역수 그래프 예측하기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-1-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-recip-circle">
+        <header class="card-head">
+          <span class="no">1.2.1</span><h2>단위원에 접선 하나를 그으면 삼각함수 몇 개가 보일까?</h2><span class="kind">sec · csc · cot · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="단위원 위의 점 P에서 그은 접선이 x축, y축과 만나는 점. 오른쪽에 고른 함수의 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-f="sec" aria-pressed="true">\(\sec\theta\)</button>
+                <button class="chip" type="button" data-f="csc">\(\csc\theta\)</button>
+                <button class="chip" type="button" data-f="cot">\(\cot\theta\)</button>
+                <button class="chip" type="button" data-f="tan">\(\tan\theta\)</button>
+              </div>
+              <label class="mono">\(\theta\) = <output class="t-out">40°</output></label>
+              <input class="st" type="range" min="0" max="360" step="1" value="40" aria-label="각 세타">
+              <dl class="nums n4">
+                <div><dt>\(\sec\theta = \frac{1}{\cos\theta}\)</dt><dd class="n-sec">—</dd></div>
+                <div><dt>\(\csc\theta = \frac{1}{\sin\theta}\)</dt><dd class="n-csc">—</dd></div>
+                <div><dt>\(\tan\theta\)</dt><dd class="n-tan">—</dd></div>
+                <div><dt>\(\cot\theta = \frac{1}{\tan\theta}\)</dt><dd class="n-cot">—</dd></div>
+              </dl>
+              <p class="fig-note">원 위의 점 P를 끌어도 됩니다. 접선이 x축과 만나는 점 S까지의 거리 OS가 \(\sec\theta\), y축과 만나는 점 T까지의 거리 OT가 \(\csc\theta\)입니다. 부호는 좌표의 부호를 따릅니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>탄젠트에는 "접선"이라는 이름이 붙어 있고, 시컨트는 "할선"이라는 뜻입니다. 삼각함수의 이름이 왜 선의 이름일까요?</li>
+            <li><span class="tag">복원</span>단위원 위의 점 \(\mathrm{P}(\cos\theta, \sin\theta)\)에서 원에 그은 접선은 반지름 OP와 수직입니다. 닮은 직각삼각형의 대응하는 변의 길이의 비는 같습니다.</li>
+            <li><span class="tag">설명</span>P에서 그은 접선이 x축과 만나는 점을 S, y축과 만나는 점을 T라고 합시다. 직각삼각형 OPS에서 \(\cos\theta = \frac{\overline{\mathrm{OP}}}{\overline{\mathrm{OS}}} = \frac{1}{\overline{\mathrm{OS}}}\)이므로 <b>\(\overline{\mathrm{OS}} = \sec\theta\)</b>, \(\overline{\mathrm{PS}} = \tan\theta\)입니다. 같은 방법으로 삼각형 OPT에서 <b>\(\overline{\mathrm{OT}} = \csc\theta\)</b>, \(\overline{\mathrm{PT}} = \cot\theta\)입니다. 시컨트(secant)는 원을 뚫고 지나가는 선 OS의 길이, 탄젠트(tangent)는 접선 PS의 길이였던 것입니다. 또 피타고라스 정리에서 \(1 + \tan^2\theta = \sec^2\theta\), \(1 + \cot^2\theta = \csc^2\theta\)가 바로 나옵니다.</li>
+            <li><span class="tag">연결</span>\(\sec\theta\)가 한없이 커지는 곳은 접선이 x축과 나란해지는 곳, 곧 \(\cos\theta = 0\)인 곳입니다. 그래프에서는 이곳이 점근선이 됩니다. 이 관계식들은 다음 절들에서 미분과 적분을 할 때 계속 쓰입니다.</li>
+            <li><span class="tag">적용</span>P를 한 바퀴 돌리며 오른쪽 그래프의 점이 어떻게 움직이는지 보세요. \(\theta\)가 \(90^\circ\)에 다가갈 때 S는 어디로 가나요? \(\sec\theta\)는 왜 −1과 1 사이의 값을 가질 수 없을까요?</li>
+            <li class="warn"><span class="tag">판단</span>\(\sec x\)를 \(\cos^{-1} x\)로 쓰면 안 됩니다. \(\cos^{-1} x\)는 다음 절의 역함수 \(\arccos x\)를 뜻합니다. 역수는 \((\cos x)^{-1}\)로 괄호를 쳐서 구분합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\theta\)가 제2사분면의 각이고 \(\tan\theta = -\frac{3}{4}\)일 때 \(\sec\theta\)의 값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(-\frac{5}{4}\)<span class="why"><b>맞습니다.</b> \(\sec^2\theta = 1 + \tan^2\theta = \frac{25}{16}\)이고, 제2사분면에서 \(\cos\theta &lt; 0\)이므로 \(\sec\theta\)도 음수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{5}{4}\)<span class="why"><b>부호를 정하지 않았습니다.</b> 제2사분면에서 코사인은 음수이므로 그 역수인 시컨트도 음수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(-\frac{4}{5}\)<span class="why"><b>\(\cos\theta\)를 구하고 멈추었습니다.</b> \(\sec\theta\)는 그 역수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(-\frac{5}{3}\)<span class="why"><b>\(\csc\theta\)와 헷갈렸습니다.</b> 게다가 제2사분면에서 \(\csc\theta\)는 양수입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/2-2.html#card-alg-trig-graph"><small class="mono">대수 2.2</small>원을 도는 점의 높이를 옆으로 펼치면 어떤 모양일까?</a><a href="../../c/alg/2-2.html#card-alg-sin-param"><small class="mono">대수 2.2</small>식의 어느 수가 파동의 높이와 폭을 정할까?</a><a href="../../c/cm2/3-4.html#card-cm2-rational-shift"><small class="mono">공통수학2 3.4</small>y = k/(x − p) + q의 그래프는 어떻게 생겼을까?</a><a href="../../c/cm2/3-4.html#card-cm2-rational-form"><small class="mono">공통수학2 3.4</small>y = (ax + b)/(cx + d)의 점근선은 어떻게 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/1-4.html#card-pmath-deriv-trace"><small class="mono">전문 수학 1.4</small>접선의 기울기를 모으면 sec x의 도함수가 보일까?</a><a href="../../c/pmath/1-4.html#card-pmath-museum"><small class="mono">전문 수학 1.4</small>벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?</a></div></nav>
+
+      <article class="card" id="card-pmath-csc-predict">
+        <header class="card-head">
+          <span class="no">1.2.2</span><h2>사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?</h2><span class="kind">역수 함수의 그래프 · 예측 → 확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="회색 사인(또는 코사인) 그래프 위에 세로 안내선 여덟 개. 안내선의 점을 위아래로 끌어 역수 그래프를 예측한다"></canvas>
+            <div class="ctl">
+              <div class="presets mode">
+                <button class="chip" type="button" data-m="csc" aria-pressed="true">\(\sin x\) → \(\csc x\)</button>
+                <button class="chip" type="button" data-m="sec">\(\cos x\) → \(\sec x\)</button>
+              </div>
+              <p class="mono small">1) 점 여덟 개를 끌어 역수의 값을 예측하세요. 2) 점근선이 생길 곳을 모두 고르세요.</p>
+              <div class="presets asy" aria-label="점근선이 생길 곳">
+                <button class="chip" type="button" data-x="0" aria-pressed="false">\(x = 0\)</button>
+                <button class="chip" type="button" data-x="1" aria-pressed="false">\(\frac{\pi}{2}\)</button>
+                <button class="chip" type="button" data-x="2" aria-pressed="false">\(\pi\)</button>
+                <button class="chip" type="button" data-x="3" aria-pressed="false">\(\frac{3\pi}{2}\)</button>
+                <button class="chip" type="button" data-x="4" aria-pressed="false">\(2\pi\)</button>
+              </div>
+              <div class="presets"><button class="chip go-check" type="button">정답과 겹쳐 보기</button><button class="chip go-reset" type="button">다시 예측</button></div>
+              <p class="verdict" role="status"></p>
+              <p class="fig-note">역수는 "1을 그 값으로 나눈 것"입니다. 원래 값이 1이면 역수도 1, 원래 값이 \(\frac{1}{2}\)이면 역수는 2입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(y = \csc x\)의 식을 계산기에 넣지 않고, \(y = \sin x\)의 그래프만 보고 모양을 그릴 수 있을까요? 어디가 높고 어디가 낮으며, 어디에서 끊어질까요?</li>
+            <li><span class="tag">복원</span>\(\csc x = \frac{1}{\sin x}\)입니다. 양수의 역수는 양수, 음수의 역수는 음수이고, 0에 가까운 수의 역수는 절댓값이 아주 큽니다.</li>
+            <li><span class="tag">설명</span>역수 그래프는 원래 그래프에서 네 가지만 읽으면 그릴 수 있습니다. ① 원래 값이 \(\pm 1\)인 곳은 역수도 \(\pm 1\)이고, 이곳에서 두 그래프가 만납니다. ② 원래 값의 절댓값이 작을수록 역수의 절댓값은 큽니다. ③ 원래 값이 0인 곳에서는 역수가 정의되지 않고, 근처에서 한없이 커지거나 작아지므로 <em>점근선</em>이 생깁니다. ④ 부호는 그대로입니다. 그래서 \(\csc x\)는 사인의 꼭대기 \(x = \frac{\pi}{2}\)에서 가장 낮은 1이 되는 U자 모양이고, 치역은 \(y \le -1\) 또는 \(y \ge 1\)입니다.</li>
+            <li><span class="tag">연결</span>같은 방법으로 \(\cot x = \frac{1}{\tan x}\)도 그릴 수 있습니다. \(\tan x\)가 0인 곳은 \(\cot x\)의 점근선이 되고, \(\tan x\)의 점근선은 \(\cot x\)가 0이 되는 곳입니다. 역수 그래프를 그리는 이 방법은 유리함수의 그래프에서도 그대로 쓰입니다.</li>
+            <li><span class="tag">적용</span>사인 그래프를 보며 점 여덟 개를 예측한 위치로 끌고, 점근선 자리를 고른 뒤 정답과 겹쳐 보세요. 오차가 큰 점은 원래 값이 0에 가까운 곳인가요, 1에 가까운 곳인가요? 같은 일을 \(\cos x\) → \(\sec x\)로도 해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>역수 그래프를 "원래 그래프를 위아래로 뒤집은 것"으로 생각하기 쉽습니다. 뒤집으면 \(-\sin x\)가 되어 부호가 바뀌지만, 역수는 부호를 바꾸지 않습니다. 바뀌는 것은 "작은 값 ↔ 큰 값"의 관계입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(y = \cot x\)의 그래프가 \(0 &lt; x &lt; \pi\)에서 x축과 만나는 점은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(x = \frac{\pi}{2}\)<span class="why"><b>맞습니다.</b> \(\cot x = \frac{\cos x}{\sin x}\)이므로 분자 \(\cos x\)가 0인 \(x = \frac{\pi}{2}\)에서 0이 됩니다. 이곳은 \(\tan x\)의 점근선 자리입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(x = \frac{\pi}{4}\)<span class="why"><b>\(\cot x = 1\)인 점입니다.</b> \(\tan x\)와 \(\cot x\)가 만나는 곳이지 x축과 만나는 곳은 아닙니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>만나지 않는다<span class="why"><b>\(\csc x\)와 헷갈렸습니다.</b> \(\csc x\)는 분자가 1이라 0이 될 수 없지만, \(\cot x\)는 분자가 \(\cos x\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(x = 0\)과 \(x = \pi\)<span class="why"><b>점근선 자리를 골랐습니다.</b> 이곳에서는 \(\sin x = 0\)이라 \(\cot x\)가 정의되지 않습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/2-2.html#card-alg-trig-graph"><small class="mono">대수 2.2</small>원을 도는 점의 높이를 옆으로 펼치면 어떤 모양일까?</a><a href="../../c/alg/2-2.html#card-alg-sin-param"><small class="mono">대수 2.2</small>식의 어느 수가 파동의 높이와 폭을 정할까?</a><a href="../../c/cm2/3-4.html#card-cm2-rational-shift"><small class="mono">공통수학2 3.4</small>y = k/(x − p) + q의 그래프는 어떻게 생겼을까?</a><a href="../../c/cm2/3-4.html#card-cm2-rational-form"><small class="mono">공통수학2 3.4</small>y = (ax + b)/(cx + d)의 점근선은 어떻게 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/1-4.html#card-pmath-deriv-trace"><small class="mono">전문 수학 1.4</small>접선의 기울기를 모으면 sec x의 도함수가 보일까?</a><a href="../../c/pmath/1-4.html#card-pmath-museum"><small class="mono">전문 수학 1.4</small>벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/recip-circle.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/csc-predict.js"></script>
+</body>
+</html>

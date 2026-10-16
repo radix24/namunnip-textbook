@@ -1,0 +1,223 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>여러 가지 함수의 미분과 고계도함수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="코시컨트·시컨트·코탄젠트함수와 역삼각함수의 도함수, 여러 가지 함수의 고계도함수. 접선 기울기를 따라 도함수 그래프를 그리고, 그림을 가장 크게 보는 거리(arctan의 미분)와 엘리베이터의 저크(3계도함수)를 다루는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-deriv-trace canvas { aspect-ratio: 4 / 3.4; touch-action: pan-y; cursor: ew-resize; }
+    #card-pmath-museum canvas { aspect-ratio: 16 / 10; touch-action: pan-y; }
+    #card-pmath-jerk canvas { aspect-ratio: 4 / 3.6; }
+  </style>
+</head>
+<body data-course="pmath" data-sec="1-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>여러 가지 함수의 미분과 고계도함수</h1>
+    <p class="lead">몫의 미분법과 역함수의 미분법만 있으면 새 함수 다섯 개의 도함수를 모두 구할 수 있습니다. 이 절에서는 곡선 위의 점을 움직이며 접선 기울기가 그리는 그래프를 직접 그려 공식과 비교합니다. 이어서 미분을 두 번, 세 번 거듭한 고계도함수가 무엇을 뜻하는지 엘리베이터의 움직임으로 확인하고, 미술관에서 그림이 가장 크게 보이는 거리를 역탄젠트의 미분으로 구합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/2-4.html#card-calc2-quotient" title="미적분Ⅱ 2.4 · 몫 f/g의 도함수는 f&#x27;/g&#x27;일까?">몫의 미분법</a><a class="p p-card" href="../../c/calc2/2-7.html#card-calc2-inverse-slope" title="미적분Ⅱ 2.7 · 식을 모르는 역함수의 기울기를 구할 수 있을까?">역함수의 미분법</a><a class="p p-card" href="../../c/calc2/2-5.html#card-calc2-chain-lines" title="미적분Ⅱ 2.5 · 안쪽 함수와 바깥 함수의 변화율은 어떻게 합쳐질까?">합성함수의 미분법</a><a class="p p-card" href="../../c/calc2/2-3.html#card-calc2-sin-deriv" title="미적분Ⅱ 2.3 · sin x의 접선의 기울기를 모으면 어떤 그래프가 될까?">삼각함수의 도함수</a><a class="p p-card" href="../../c/calc1/2-10.html#card-calc1-motion" title="미적분Ⅰ 2.10 · 점은 언제 방향을 바꿀까?">가속도의 뜻</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-deriv-trace"><span class="mono">1.4.1</span>기울기를 따라 그리는 도함수</a></li>
+        <li><a href="#card-pmath-museum"><span class="mono">1.4.2</span>그림이 가장 크게 보이는 거리</a></li>
+        <li><a href="#card-pmath-jerk"><span class="mono">1.4.3</span>엘리베이터와 고계도함수</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-1-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-deriv-trace">
+        <header class="card-head">
+          <span class="no">1.4.1</span><h2>접선의 기울기를 모으면 \(\sec x\)의 도함수가 보일까?</h2><span class="kind">여러 가지 함수의 도함수 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="위: 고른 함수의 그래프와 움직이는 점의 접선. 아래: 접선의 기울기를 찍어 남긴 자취와 도함수 공식의 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-f="sec" aria-pressed="true">\(\sec x\)</button>
+                <button class="chip" type="button" data-f="csc">\(\csc x\)</button>
+                <button class="chip" type="button" data-f="cot">\(\cot x\)</button>
+                <button class="chip" type="button" data-f="asin">\(\arcsin x\)</button>
+                <button class="chip" type="button" data-f="atan">\(\arctan x\)</button>
+              </div>
+              <label class="mono">\(x\) = <output class="x-out">—</output></label>
+              <input class="sx" type="range" min="0" max="1000" step="1" value="300" aria-label="접선을 그을 점의 x좌표">
+              <div class="presets"><button class="chip go-formula" type="button" aria-pressed="false">공식 겹치기</button><button class="chip go-clear" type="button">자취 지우기</button></div>
+              <dl class="nums">
+                <div><dt>접선의 기울기(수치)</dt><dd class="n-num">—</dd></div>
+                <div><dt>공식의 값</dt><dd class="n-for">—</dd></div>
+                <div><dt>공식</dt><dd class="n-name">—</dd></div>
+              </dl>
+              <p class="fig-note">그림 위를 가로로 끌어도 점이 움직입니다. 점을 천천히 움직이면 아래 칸에 기울기의 자취가 남습니다. 자취를 다 그린 뒤 공식과 겹쳐 보세요.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\sec x = \frac{1}{\cos x}\)의 그래프는 U자 모양을 되풀이합니다. 이 곡선의 접선 기울기는 어디에서 0이고, 어디에서 가파를까요? 기울기를 모은 그래프는 어떤 식일까요?</li>
+            <li><span class="tag">복원</span>몫의 미분법 \(\left(\frac{1}{g}\right)' = -\frac{g'}{g^2}\)과 역함수의 미분법 \(\frac{dy}{dx} = \frac{1}{\,dx/dy\,}\), \((\sin x)' = \cos x\), \((\cos x)' = -\sin x\), \((\tan x)' = \sec^2 x\)를 씁니다.</li>
+            <li><span class="tag">설명</span>몫의 미분법으로 <b>\((\sec x)' = \frac{\sin x}{\cos^2 x} = \sec x\tan x\)</b>, \((\csc x)' = -\csc x\cot x\), \((\cot x)' = -\csc^2 x\)입니다. 역함수는 거꾸로 생각합니다. \(y = \arcsin x\)이면 \(x = \sin y\)이므로 \(\frac{dx}{dy} = \cos y = \sqrt{1 - x^2}\) (\(-\frac{\pi}{2} \le y \le \frac{\pi}{2}\)에서 \(\cos y \ge 0\))이고, 따라서 <b>\((\arcsin x)' = \frac{1}{\sqrt{1 - x^2}}\)</b>입니다. 같은 방법으로 \(x = \tan y\)에서 \((\arctan x)' = \frac{1}{1 + x^2}\)입니다.</li>
+            <li><span class="tag">연결</span>\((\arctan x)' = \frac{1}{1 + x^2}\)를 거꾸로 읽으면 \(\int \frac{dx}{1 + x^2} = \arctan x + C\)입니다. 삼각함수가 전혀 없는 분수식의 적분에서 역삼각함수가 나오는 이유입니다. 다음 카드의 미술관 문제는 이 도함수를 실제로 씁니다.</li>
+            <li><span class="tag">적용</span>\(\sec x\)에서 점을 천천히 움직여 자취를 그리세요. 자취가 0을 지나는 곳은 원래 그래프의 어디인가요? 공식을 겹쳐 맞는지 확인한 뒤, 다섯 함수를 모두 해 보세요. \(\arcsin x\)의 기울기는 \(x = \pm 1\) 근처에서 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>\((\arcsin x)'\)를 구할 때 \(\cos y = \pm\sqrt{1 - x^2}\)에서 양의 부호만 고른 것은 \(\arcsin\)의 치역 \(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\) 때문입니다. 치역을 잊으면 부호를 정할 수 없습니다. 또 \(x = \pm 1\)에서는 접선이 세로가 되어 미분계수가 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(y = \arctan 2x\)의 \(x = \frac{1}{2}\)에서의 미분계수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>1<span class="why"><b>맞습니다.</b> 합성함수의 미분법으로 \(y' = \frac{2}{1 + 4x^2}\)이고, \(x = \frac{1}{2}\)을 넣으면 \(\frac{2}{2} = 1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{1}{2}\)<span class="why"><b>속미분을 빠뜨렸습니다.</b> \(\frac{1}{1 + (2x)^2}\)에 안쪽 함수 \(2x\)의 도함수 2를 곱해야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{4}{5}\)<span class="why"><b>\(\frac{1}{1 + x^2}\)에 \(x = \frac{1}{2}\)을 넣었습니다.</b> 안쪽이 \(2x\)이므로 \(1 + (2x)^2 = 2\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{\pi}{4}\)<span class="why"><b>함숫값을 구했습니다.</b> \(\arctan 1 = \frac{\pi}{4}\)는 높이이고, 물은 것은 기울기입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/2-4.html#card-calc2-trig-table"><small class="mono">미적분Ⅱ 2.4</small>tan x의 접선의 기울기는 왜 1보다 작아지지 않을까?</a><a href="../../c/calc2/2-7.html#card-calc2-inverse-slope"><small class="mono">미적분Ⅱ 2.7</small>식을 모르는 역함수의 기울기를 구할 수 있을까?</a><a href="../../c/pmath/1-2.html#card-pmath-recip-circle"><small class="mono">전문 수학 1.2</small>단위원에 접선 하나를 그으면 삼각함수 몇 개가 보일까?</a><a href="../../c/pmath/1-2.html#card-pmath-csc-predict"><small class="mono">전문 수학 1.2</small>사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-pmath-museum">
+        <header class="card-head">
+          <span class="no">1.4.2</span><h2>벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?</h2><span class="kind">역탄젠트의 미분 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="왼쪽: 옆에서 본 관람객의 눈과 벽의 그림, 그림 위아래 끝을 향한 시선. 오른쪽: 거리에 따른 시야각 그래프"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">눈에서 그림 아래 끝까지 높이 \(a\) = <output class="a-out">1</output> m</label>
+                <input class="sa" type="range" min="0.2" max="3" step="0.1" value="1" aria-label="눈높이에서 그림 아래 끝까지의 높이"></div>
+                <div><label class="mono">그림의 세로 길이 = <output class="hh-out">1.5</output> m</label>
+                <input class="sh" type="range" min="0.3" max="3" step="0.1" value="1.5" aria-label="그림의 세로 길이"></div>
+              </div>
+              <label class="mono">벽까지 거리 \(x\) = <output class="x-out">4</output> m</label>
+              <input class="sx" type="range" min="0.1" max="8" step="0.05" value="4" aria-label="벽까지의 거리">
+              <dl class="nums">
+                <div><dt>시야각 \(\theta\)</dt><dd class="n-t">—</dd></div>
+                <div><dt>\(\theta'(x)\)</dt><dd class="n-d">—</dd></div>
+                <div><dt>가장 좋은 거리</dt><dd class="n-best">?</dd></div>
+              </dl>
+              <button class="chip go-best" type="button" aria-pressed="false">미분으로 구한 답 보기</button>
+              <p class="fig-note">먼저 거리를 바꿔 가며 시야각이 가장 큰 곳을 직접 찾아보세요. 그다음 답을 열어 비교하세요.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>미술관에서 높이 걸린 그림 바로 아래에 서면 고개를 젖혀도 그림이 납작하게 보이고, 너무 멀리 서면 그림이 작게 보입니다. 그 사이 어딘가에 그림이 가장 크게 보이는 거리가 있을 것입니다. 어떻게 찾을까요?</li>
+            <li><span class="tag">복원</span>눈에서 그림의 아래 끝과 위 끝을 바라보는 각은 \(\arctan\frac{a}{x}\), \(\arctan\frac{b}{x}\)입니다(\(b\)는 눈에서 위 끝까지의 높이). \((\arctan u)' = \frac{1}{1 + u^2}\)이고, 미분계수가 0이 되는 곳에서 최댓값이 나올 수 있습니다.</li>
+            <li><span class="tag">설명</span>그림이 보이는 크기는 시야각 \(\theta(x) = \arctan\frac{b}{x} - \arctan\frac{a}{x}\)입니다. 합성함수의 미분법으로 \(\theta'(x) = -\frac{b}{x^2 + b^2} + \frac{a}{x^2 + a^2}\)이고, 이것을 0으로 놓고 정리하면 \((b - a)(x^2 - ab) = 0\), 곧 <b>\(x = \sqrt{ab}\)</b>입니다. 이보다 가까우면 \(\theta' &gt; 0\)이라 물러설수록 커지고, 멀면 \(\theta' &lt; 0\)이라 작아지므로 이곳이 최대입니다.</li>
+            <li><span class="tag">연결</span>같은 계산이 축구에서 골대가 가장 넓게 보이는 슛 위치, 극장에서 스크린이 가장 크게 보이는 좌석을 찾는 문제에도 그대로 쓰입니다. 답이 두 높이의 <em>기하평균</em> \(\sqrt{ab}\)라는 것도 눈여겨볼 만합니다.</li>
+            <li><span class="tag">적용</span>거리를 바꾸며 시야각이 가장 큰 곳을 찾고, \(\theta'(x)\)의 부호가 그곳에서 바뀌는지 보세요. 답을 연 뒤에는 그림을 더 높이 걸어(\(a\)를 키워) 보세요. 가장 좋은 거리는 늘어나나요? 그림의 세로 길이만 바꾸면 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>이 모형은 눈을 한 점으로, 그림을 벽에 붙은 선분으로 보고, 시야각이 크면 "잘 보인다"고 가정했습니다. 실제로는 그림을 비스듬히 보면 찌그러져 보이고, 사람마다 눈높이도 다릅니다. 또 \(a \le 0\)이면(그림 아래 끝이 눈보다 낮으면) 가까이 갈수록 계속 커지므로 최댓값이 생기지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">눈높이보다 2 m 높은 곳에서 시작해 8 m 높이까지(눈 기준) 걸린 큰 그림을 가장 크게 보려면 벽에서 몇 m 떨어져야 할까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4 m<span class="why"><b>맞습니다.</b> \(a = 2\), \(b = 8\)이므로 \(x = \sqrt{2 \times 8} = 4\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>5 m<span class="why"><b>산술평균을 썼습니다.</b> \(\frac{2 + 8}{2} = 5\)는 그림 가운데 높이입니다. 답은 기하평균입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6 m<span class="why"><b>그림의 세로 길이를 썼습니다.</b> 길이는 \(8 - 2 = 6\)이지만 답은 두 높이로 정해집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>가까울수록 좋다<span class="why"><b>그림 아래 끝이 눈보다 높은 경우입니다.</b> 너무 가까우면 아래 끝도 위로 올려다보게 되어 시야각이 0에 가까워집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/2-4.html#card-calc2-trig-table"><small class="mono">미적분Ⅱ 2.4</small>tan x의 접선의 기울기는 왜 1보다 작아지지 않을까?</a><a href="../../c/calc2/2-7.html#card-calc2-inverse-slope"><small class="mono">미적분Ⅱ 2.7</small>식을 모르는 역함수의 기울기를 구할 수 있을까?</a><a href="../../c/pmath/1-2.html#card-pmath-recip-circle"><small class="mono">전문 수학 1.2</small>단위원에 접선 하나를 그으면 삼각함수 몇 개가 보일까?</a><a href="../../c/pmath/1-2.html#card-pmath-csc-predict"><small class="mono">전문 수학 1.2</small>사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-pmath-jerk">
+        <header class="card-head">
+          <span class="no">1.4.3</span><h2>엘리베이터가 덜컹거리지 않으려면 몇 번째 도함수까지 매끄러워야 할까?</h2><span class="kind">고계도함수 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="왼쪽: 움직이는 엘리베이터와 승객. 오른쪽: 위치, 속도, 가속도, 저크의 그래프 네 개"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-p="smooth" aria-pressed="true">부드러운 운행</button>
+                <button class="chip" type="button" data-p="step">급출발·급정거</button>
+                <button class="chip" type="button" data-p="sin">\(\sin t\)의 도함수들</button>
+              </div>
+              <label class="mono">시각 \(t\) = <output class="t-out">0</output> s</label>
+              <input class="stt" type="range" min="0" max="1000" step="1" value="0" aria-label="시각">
+              <button class="chip go-play" type="button" aria-pressed="false">운행하기</button>
+              <dl class="nums n4">
+                <div><dt class="d0">높이 \(s\)</dt><dd class="n0">—</dd></div>
+                <div><dt class="d1">속도 \(s'\)</dt><dd class="n1">—</dd></div>
+                <div><dt class="d2">가속도 \(s''\)</dt><dd class="n2">—</dd></div>
+                <div><dt class="d3">저크 \(s'''\)</dt><dd class="n3">—</dd></div>
+              </dl>
+              <p class="fig-note">승객이 흔들리는 정도는 저크의 크기에 비례하게 그렸습니다(모식). 급출발 운행의 저크는 가속도가 갑자기 바뀌는 순간에 한없이 커집니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>엘리베이터가 출발하는 순간 몸이 "쿵" 하고 눌리는 것은 가속도 때문일까요? 일정하게 가속하는 동안에는 불편하지 않은데, 가속이 시작되고 끝나는 순간에만 덜컹거립니다. 무엇이 변하기 때문일까요?</li>
+            <li><span class="tag">복원</span>위치 \(s(t)\)를 미분하면 속도 \(v = s'\), 다시 미분하면 가속도 \(a = s''\)입니다. 이처럼 \(n\)번 미분한 함수를 <em>\(n\)계도함수</em> \(f^{(n)}\)이라고 합니다.</li>
+            <li><span class="tag">설명</span>가속도를 한 번 더 미분한 <b>\(s'''(t)\)를 저크(jerk)</b>라고 합니다. 가속도가 갑자기 바뀌면 근육이 몸을 버티는 힘을 바꿀 틈이 없어 덜컹거림을 느끼는데, 그 정도가 저크입니다. "급출발" 운행은 가속도가 계단처럼 갑자기 바뀌므로 그 순간 저크가 한없이 커집니다. "부드러운 운행"은 \(s(t) = H(10u^3 - 15u^4 + 6u^5)\) (\(u = \frac{t}{T}\))처럼 위치를 다항식으로 정해, 출발과 도착에서 속도와 가속도가 모두 0이 되고 저크도 유한하게 만듭니다.</li>
+            <li><span class="tag">연결</span>고계도함수는 규칙을 찾으면 한꺼번에 구할 수 있습니다. \((\sin t)^{(n)}\)은 \(\sin t \to \cos t \to -\sin t \to -\cos t\)를 되풀이해 네 번마다 제자리로 돌아오고, \((e^t)^{(n)} = e^t\), \(n\)차 다항식은 \(n + 1\)번 미분하면 0이 됩니다. 롤러코스터의 궤도와 자동차의 차선 변경 곡선도 저크를 줄이도록 설계합니다.</li>
+            <li><span class="tag">적용</span>두 운행 방식을 "운행하기"로 비교하세요. 두 방식 모두 10초 동안 30 m를 올라가는데, 가장 큰 속도는 어느 쪽이 큰가요? 저크 그래프는 어떻게 다른가요? \(\sin t\)를 골라 네 그래프가 서로 어떻게 닮았는지도 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>"가속도가 크면 불편하다"는 반만 맞습니다. 비행기는 이륙할 때 큰 가속도로 오래 가속하지만 크게 불편하지 않고, 작은 가속도라도 갑자기 바뀌면 불편합니다. 또 이 카드의 흔들림 그림은 저크에 비례하게 그린 모식이지 실제 몸의 움직임을 계산한 것이 아닙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(f(x) = \sin 2x\)일 때 \(f^{(4)}(x)\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(16\sin 2x\)<span class="why"><b>맞습니다.</b> 한 번 미분할 때마다 2가 곱해지고, 네 번 미분하면 사인이 제자리로 돌아오므로 \(2^4\sin 2x\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\sin 2x\)<span class="why"><b>속미분을 빠뜨렸습니다.</b> \(\sin x\)라면 맞지만, 안쪽 함수 \(2x\)의 도함수 2가 미분할 때마다 곱해집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(8\sin 2x\)<span class="why"><b>2를 네 번 곱하는 대신 네 번 더했습니다.</b> \(2 \times 2 \times 2 \times 2 = 16\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(-16\cos 2x\)<span class="why"><b>세 번 미분한 데서 멈추고 한 단계를 더 돌렸습니다.</b> \(f'''(x) = -8\cos 2x\)이고, 한 번 더 미분하면 \(16\sin 2x\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/2-11.html#card-calc2-line-motion"><small class="mono">미적분Ⅱ 2.11</small>흔들리는 물체는 어디에서 가장 빠르고, 어디에서 가속도가 가장 클까?</a><a href="../../c/calc2/2-11.html#card-calc2-plane-motion"><small class="mono">미적분Ⅱ 2.11</small>일정한 빠르기로 원을 도는 점에도 가속도가 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-1-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/deriv-trace.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/museum.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/jerk.js"></script>
+</body>
+</html>

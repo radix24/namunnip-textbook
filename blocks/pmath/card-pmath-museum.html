@@ -1,0 +1,59 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/pmath/museum.js"
+  ],
+  "short": "그림이 가장 크게 보이는 거리"
+}
+-->
+<style>
+#card-pmath-museum canvas { aspect-ratio: 16 / 10; touch-action: pan-y; }
+</style>
+<article class="card" id="card-pmath-museum">
+  <header class="card-head">
+    <span class="no"></span><h2>벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?</h2><span class="kind">역탄젠트의 미분 · 활용</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="왼쪽: 옆에서 본 관람객의 눈과 벽의 그림, 그림 위아래 끝을 향한 시선. 오른쪽: 거리에 따른 시야각 그래프"></canvas>
+      <div class="ctl">
+        <div class="ctl-row">
+          <div><label class="mono">눈에서 그림 아래 끝까지 높이 \(a\) = <output class="a-out">1</output> m</label>
+          <input class="sa" type="range" min="0.2" max="3" step="0.1" value="1" aria-label="눈높이에서 그림 아래 끝까지의 높이"></div>
+          <div><label class="mono">그림의 세로 길이 = <output class="hh-out">1.5</output> m</label>
+          <input class="sh" type="range" min="0.3" max="3" step="0.1" value="1.5" aria-label="그림의 세로 길이"></div>
+        </div>
+        <label class="mono">벽까지 거리 \(x\) = <output class="x-out">4</output> m</label>
+        <input class="sx" type="range" min="0.1" max="8" step="0.05" value="4" aria-label="벽까지의 거리">
+        <dl class="nums">
+          <div><dt>시야각 \(\theta\)</dt><dd class="n-t">—</dd></div>
+          <div><dt>\(\theta'(x)\)</dt><dd class="n-d">—</dd></div>
+          <div><dt>가장 좋은 거리</dt><dd class="n-best">?</dd></div>
+        </dl>
+        <button class="chip go-best" type="button" aria-pressed="false">미분으로 구한 답 보기</button>
+        <p class="fig-note">먼저 거리를 바꿔 가며 시야각이 가장 큰 곳을 직접 찾아보세요. 그다음 답을 열어 비교하세요.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>미술관에서 높이 걸린 그림 바로 아래에 서면 고개를 젖혀도 그림이 납작하게 보이고, 너무 멀리 서면 그림이 작게 보입니다. 그 사이 어딘가에 그림이 가장 크게 보이는 거리가 있을 것입니다. 어떻게 찾을까요?</li>
+      <li><span class="tag">복원</span>눈에서 그림의 아래 끝과 위 끝을 바라보는 각은 \(\arctan\frac{a}{x}\), \(\arctan\frac{b}{x}\)입니다(\(b\)는 눈에서 위 끝까지의 높이). \((\arctan u)' = \frac{1}{1 + u^2}\)이고, 미분계수가 0이 되는 곳에서 최댓값이 나올 수 있습니다.</li>
+      <li><span class="tag">설명</span>그림이 보이는 크기는 시야각 \(\theta(x) = \arctan\frac{b}{x} - \arctan\frac{a}{x}\)입니다. 합성함수의 미분법으로 \(\theta'(x) = -\frac{b}{x^2 + b^2} + \frac{a}{x^2 + a^2}\)이고, 이것을 0으로 놓고 정리하면 \((b - a)(x^2 - ab) = 0\), 곧 <b>\(x = \sqrt{ab}\)</b>입니다. 이보다 가까우면 \(\theta' &gt; 0\)이라 물러설수록 커지고, 멀면 \(\theta' &lt; 0\)이라 작아지므로 이곳이 최대입니다.</li>
+      <li><span class="tag">연결</span>같은 계산이 축구에서 골대가 가장 넓게 보이는 슛 위치, 극장에서 스크린이 가장 크게 보이는 좌석을 찾는 문제에도 그대로 쓰입니다. 답이 두 높이의 <em>기하평균</em> \(\sqrt{ab}\)라는 것도 눈여겨볼 만합니다.</li>
+      <li><span class="tag">적용</span>거리를 바꾸며 시야각이 가장 큰 곳을 찾고, \(\theta'(x)\)의 부호가 그곳에서 바뀌는지 보세요. 답을 연 뒤에는 그림을 더 높이 걸어(\(a\)를 키워) 보세요. 가장 좋은 거리는 늘어나나요? 그림의 세로 길이만 바꾸면 어떻게 되나요?</li>
+      <li class="warn"><span class="tag">판단</span>이 모형은 눈을 한 점으로, 그림을 벽에 붙은 선분으로 보고, 시야각이 크면 "잘 보인다"고 가정했습니다. 실제로는 그림을 비스듬히 보면 찌그러져 보이고, 사람마다 눈높이도 다릅니다. 또 \(a \le 0\)이면(그림 아래 끝이 눈보다 낮으면) 가까이 갈수록 계속 커지므로 최댓값이 생기지 않습니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">눈높이보다 2 m 높은 곳에서 시작해 8 m 높이까지(눈 기준) 걸린 큰 그림을 가장 크게 보려면 벽에서 몇 m 떨어져야 할까요?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4 m<span class="why"><b>맞습니다.</b> \(a = 2\), \(b = 8\)이므로 \(x = \sqrt{2 \times 8} = 4\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>5 m<span class="why"><b>산술평균을 썼습니다.</b> \(\frac{2 + 8}{2} = 5\)는 그림 가운데 높이입니다. 답은 기하평균입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6 m<span class="why"><b>그림의 세로 길이를 썼습니다.</b> 길이는 \(8 - 2 = 6\)이지만 답은 두 높이로 정해집니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>가까울수록 좋다<span class="why"><b>그림 아래 끝이 눈보다 높은 경우입니다.</b> 너무 가까우면 아래 끝도 위로 올려다보게 되어 시야각이 0에 가까워집니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

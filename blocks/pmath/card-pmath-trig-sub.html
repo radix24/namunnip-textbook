@@ -1,0 +1,53 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/pmath/trig-sub.js"
+  ],
+  "short": "삼각치환과 원의 넓이"
+}
+-->
+<style>
+#card-pmath-trig-sub canvas { aspect-ratio: 16 / 9; }
+</style>
+<article class="card" id="card-pmath-trig-sub">
+  <header class="card-head">
+    <span class="no"></span><h2>\(\int_0^a\sqrt{1 - x^2}\,dx\)를 원의 그림만으로 계산할 수 있을까?</h2><span class="kind">삼각치환 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="왼쪽: 단위원의 윗부분 아래 0부터 a까지의 넓이를 삼각형과 부채꼴로 나눈 그림. 오른쪽: x = sin θ로 바꾼 뒤 cos²θ 아래 넓이"></canvas>
+      <div class="ctl">
+        <label class="mono">\(a\) = <output class="a-out">0.6</output></label>
+        <input class="sa" type="range" min="0" max="1" step="0.01" value="0.6" aria-label="적분의 위끝 a">
+        <dl class="nums n4">
+          <div><dt>삼각형</dt><dd class="n-tri">—</dd></div>
+          <div><dt>부채꼴</dt><dd class="n-sec">—</dd></div>
+          <div><dt>합</dt><dd class="n-sum">—</dd></div>
+          <div><dt>수치 적분</dt><dd class="n-num">—</dd></div>
+        </dl>
+        <p class="fig-note">왼쪽의 초록 넓이와 오른쪽의 초록 넓이는 같은 적분입니다. 오른쪽은 \(x = \sin\theta\)로 바꾼 뒤의 모습이고, 가로축이 \(x\) 대신 \(\theta\)입니다.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(\sqrt{1 - x^2}\)의 원시함수는 표에 없고, 치환 \(u = 1 - x^2\)도 \(du = -2x\,dx\)라서 \(x\)가 남아 쓸 수 없습니다. 그런데 \(y = \sqrt{1 - x^2}\)은 단위원의 윗부분입니다. 원의 그림을 쓰면 어떨까요?</li>
+      <li><span class="tag">복원</span>반지름 1, 중심각 \(\theta\)인 부채꼴의 넓이는 \(\frac{1}{2}\theta\)입니다. \(1 - \sin^2\theta = \cos^2\theta\), \(\cos^2\theta = \frac{1 + \cos 2\theta}{2}\)입니다.</li>
+      <li><span class="tag">설명</span>그림으로 보면 넓이는 직각삼각형 \(\frac{1}{2}a\sqrt{1 - a^2}\)과 중심각 \(\arcsin a\)인 부채꼴 \(\frac{1}{2}\arcsin a\)의 합입니다. 계산으로는 <em>삼각치환</em> \(x = \sin\theta\)를 씁니다. \(dx = \cos\theta\,d\theta\), \(\sqrt{1 - \sin^2\theta} = \cos\theta\)이므로 \(\int_0^a\sqrt{1 - x^2}\,dx = \int_0^{\arcsin a}\cos^2\theta\,d\theta = \left[\frac{\theta}{2} + \frac{\sin 2\theta}{4}\right]_0^{\arcsin a}\)이고, \(\frac{\sin 2\theta}{4} = \frac{\sin\theta\cos\theta}{2} = \frac{1}{2}a\sqrt{1 - a^2}\)이 바로 삼각형입니다. 두 방법의 답이 <b>\(\frac{1}{2}a\sqrt{1 - a^2} + \frac{1}{2}\arcsin a\)</b>로 같습니다.</li>
+      <li><span class="tag">연결</span>\(\sqrt{a^2 - x^2}\)은 \(x = a\sin\theta\), \(\frac{1}{a^2 + x^2}\)은 \(x = a\tan\theta\)로 바꿉니다. 근호나 분모 속의 "\(a^2 \pm x^2\)"이 삼각함수의 관계식 \(1 - \sin^2\theta = \cos^2\theta\), \(1 + \tan^2\theta = \sec^2\theta\)로 한 항이 되기 때문입니다.</li>
+      <li><span class="tag">적용</span>\(a\)를 0부터 1까지 움직이며 삼각형과 부채꼴이 어떻게 나눠 갖는지 보세요. \(a = 1\)이면 삼각형이 사라지고 넓이는 사분원 \(\frac{\pi}{4}\)가 됩니다. 오른쪽 그림의 넓이가 왼쪽과 늘 같은지 표로 확인하세요.</li>
+      <li class="warn"><span class="tag">판단</span>치환하면 적분 구간도 바꾸어야 합니다. \(x\)가 0에서 \(a\)까지 갈 때 \(\theta\)는 0에서 \(\arcsin a\)까지 갑니다. 또 \(\sqrt{\cos^2\theta} = \cos\theta\)로 쓸 수 있는 것은 이 구간에서 \(\cos\theta \ge 0\)이기 때문입니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(\int_0^3\sqrt{9 - x^2}\,dx\)의 값은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{9\pi}{4}\)<span class="why"><b>맞습니다.</b> 반지름 3인 원의 사분원 넓이 \(\frac{1}{4}\pi \cdot 3^2\)입니다. \(x = 3\sin\theta\)로 계산해도 같습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{3\pi}{4}\)<span class="why"><b>반지름을 제곱하지 않았습니다.</b> 넓이는 반지름의 제곱에 비례합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{9\pi}{2}\)<span class="why"><b>반원의 넓이입니다.</b> 0부터 3까지는 원의 4분의 1입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>9<span class="why"><b>\(\int_0^3 (9 - x^2)\)처럼 근호를 지웠습니다.</b> 그 값은 18이고, 근호가 있으면 원이 됩니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

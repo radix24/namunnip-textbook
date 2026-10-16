@@ -1,0 +1,66 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/lib/proof.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/pmath/add-proof.js"
+  ],
+  "short": "덧셈정리 증명 조립"
+}
+-->
+<style>
+#card-pmath-add-proof canvas { aspect-ratio: 1 / 1; max-width: 420px; margin: 0 auto; display: block; }
+</style>
+<article class="card" id="card-pmath-add-proof">
+  <header class="card-head">
+    <span class="no"></span><h2>\(\cos(\alpha - \beta)\)의 공식은 어디에서 나올까?</h2><span class="kind">덧셈정리 · 증명 조립</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="단위원 위의 두 점 P, Q와, 그림 전체를 돌려 Q를 A(1, 0)에 옮긴 점 P′"></canvas>
+      <div class="ctl">
+        <div class="ctl-row">
+          <div><label class="mono">\(\alpha\) = <output class="a-out">110°</output></label>
+          <input class="sa" type="range" min="0" max="360" step="1" value="110" aria-label="각 알파"></div>
+          <div><label class="mono">\(\beta\) = <output class="b-out">35°</output></label>
+          <input class="sb" type="range" min="0" max="360" step="1" value="35" aria-label="각 베타"></div>
+        </div>
+        <dl class="nums">
+          <div><dt>\(\overline{\mathrm{PQ}}^2\)</dt><dd class="n-pq">—</dd></div>
+          <div><dt>\(\overline{\mathrm{P'A}}^2\)</dt><dd class="n-pa">—</dd></div>
+          <div><dt>\(\cos(\alpha - \beta)\)</dt><dd class="n-c">—</dd></div>
+        </dl>
+        <div class="pf">
+          <ol class="pf-pool">
+            <li data-k="a">단위원 위에 \(\mathrm{P}(\cos\alpha, \sin\alpha)\), \(\mathrm{Q}(\cos\beta, \sin\beta)\)를 잡는다.</li>
+            <li data-k="b">두 점 사이의 거리 공식으로 \(\overline{\mathrm{PQ}}^2 = (\cos\alpha - \cos\beta)^2 + (\sin\alpha - \sin\beta)^2 = 2 - 2(\cos\alpha\cos\beta + \sin\alpha\sin\beta)\)이다.<span class="pf-why">P와 Q의 좌표가 먼저 정해져야 거리를 계산할 수 있습니다.</span></li>
+            <li data-k="c">그림 전체를 원점을 중심으로 \(-\beta\)만큼 돌리면 Q는 \(\mathrm{A}(1, 0)\)으로, P는 \(\mathrm{P'}(\cos(\alpha - \beta), \sin(\alpha - \beta))\)로 간다. 회전은 길이를 바꾸지 않으므로 \(\overline{\mathrm{PQ}} = \overline{\mathrm{P'A}}\)이다.<span class="pf-why">돌리기 전에 원래 자리에서 \(\overline{\mathrm{PQ}}\)를 한 번 계산해 두어야, 돌린 뒤의 길이와 비교할 수 있습니다.</span></li>
+            <li data-k="d">\(\overline{\mathrm{P'A}}^2 = (\cos(\alpha - \beta) - 1)^2 + \sin^2(\alpha - \beta) = 2 - 2\cos(\alpha - \beta)\)이다.<span class="pf-why">P′과 A는 그림을 돌린 뒤에야 생기는 점입니다.</span></li>
+            <li data-k="e">두 식을 같게 놓으면 \(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\)이다.<span class="pf-why">같게 놓을 두 식이 아직 모두 나오지 않았습니다.</span></li>
+            <li data-k="t">\(\cos(\alpha - \beta) = \cos\alpha - \cos\beta\)이므로 이것을 정리한다.<span class="pf-why">각을 빼는 것과 코사인 값을 빼는 것은 다릅니다. \(\alpha = \beta = 60^\circ\)이면 왼쪽은 \(\cos 0 = 1\), 오른쪽은 0입니다.</span></li>
+          </ol>
+        </div>
+        <p class="fig-note">단계를 하나 놓을 때마다 그림이 그 단계까지 그려집니다. 각을 바꾸어도 \(\overline{\mathrm{PQ}}^2\)과 \(\overline{\mathrm{P'A}}^2\)이 언제나 같은지 보세요.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(\cos 75^\circ\)는 표를 보지 않고 구할 수 있을까요? \(75^\circ = 45^\circ + 30^\circ\)이지만 \(\cos 45^\circ + \cos 30^\circ\)은 1보다 커서 답이 될 수 없습니다. 두 각의 합이나 차의 코사인은 어떻게 구해야 할까요?</li>
+      <li><span class="tag">복원</span>단위원 위에서 각 \(\theta\)를 나타내는 점의 좌표는 \((\cos\theta, \sin\theta)\)입니다. 두 점 \((x_1, y_1)\), \((x_2, y_2)\) 사이 거리의 제곱은 \((x_1 - x_2)^2 + (y_1 - y_2)^2\)이고, \(\sin^2\theta + \cos^2\theta = 1\)입니다.</li>
+      <li><span class="tag">설명</span>같은 길이를 두 가지 방법으로 계산하는 것이 증명의 핵심입니다. 원래 자리에서 \(\overline{\mathrm{PQ}}\)를 계산하면 \(\cos\alpha\cos\beta + \sin\alpha\sin\beta\)가 나오고, 그림 전체를 돌려 Q를 \(\mathrm{A}(1, 0)\)에 놓고 계산하면 \(\cos(\alpha - \beta)\)가 나옵니다. 회전은 길이를 바꾸지 않으므로 두 값이 같습니다. 이렇게 얻은 <b>\(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\)</b>에서 \(\beta\) 대신 \(-\beta\)를 넣으면 \(\cos(\alpha + \beta)\)가, \(\alpha\) 대신 \(\frac{\pi}{2} - \alpha\)를 넣으면 사인의 덧셈정리가 나옵니다.</li>
+      <li><span class="tag">연결</span>이 공식 하나에서 배각 공식, 반각 공식, 합을 곱으로 바꾸는 공식이 모두 나옵니다. 다음 카드들은 모두 이 공식에 값을 바꾸어 넣은 것입니다. 또 미분에서 \((\sin x)' = \cos x\)를 증명할 때도 사인의 덧셈정리가 쓰입니다.</li>
+      <li><span class="tag">적용</span>단계를 순서대로 쌓아 증명을 완성하세요. 그다음 \(\alpha\)와 \(\beta\)를 바꾸며 \(\overline{\mathrm{PQ}}^2\)과 \(\overline{\mathrm{P'A}}^2\)이 늘 같은지 확인하세요. \(\alpha &lt; \beta\)여서 \(\alpha - \beta\)가 음수일 때도 증명이 그대로 통하나요?</li>
+      <li class="warn"><span class="tag">판단</span>이 증명은 각의 크기에 대해 아무것도 가정하지 않았습니다. 그래서 둔각이나 음의 각에서도 성립합니다. 교과서에 흔한 "예각인 삼각형으로 그린 증명"은 그림이 한 경우만 다루므로, 그 증명만으로는 모든 각에서 성립한다고 말할 수 없습니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\)에서 \(\beta\) 대신 \(-\beta\)를 넣으면 무엇이 나오나요?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta\)<span class="why"><b>맞습니다.</b> \(\cos(-\beta) = \cos\beta\), \(\sin(-\beta) = -\sin\beta\)이므로 둘째 항의 부호만 바뀝니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\cos(\alpha + \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\)<span class="why"><b>사인이 홀함수라는 점을 빠뜨렸습니다.</b> \(\sin(-\beta) = -\sin\beta\)이므로 부호가 바뀌어야 합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\cos(\alpha + \beta) = -\cos\alpha\cos\beta + \sin\alpha\sin\beta\)<span class="why"><b>코사인의 부호도 바꾸었습니다.</b> 코사인은 짝함수라서 \(\cos(-\beta) = \cos\beta\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta\)<span class="why"><b>공식은 맞지만 다른 치환에서 나옵니다.</b> 사인의 덧셈정리는 \(\alpha\) 대신 \(\frac{\pi}{2} - \alpha\)를 넣어야 나옵니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

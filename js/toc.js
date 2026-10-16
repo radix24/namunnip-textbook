@@ -14927,6 +14927,298 @@ window.TOC = [
   ]
  },
  {
+  "id": "pmath",
+  "name": "전문 수학",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "삼각함수와 미적분",
+    "sections": [
+     {
+      "n": 1,
+      "title": "삼각함수의 여러 가지 공식",
+      "code": "12전수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-add-proof",
+        "title": "cos(α − β)의 공식은 어디에서 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-double-angle",
+        "title": "cos² x의 그래프는 왜 코사인 곡선과 똑같이 생겼을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-beats",
+        "title": "음이 조금 다른 두 소리를 함께 내면 왜 \"웅웅\" 울릴까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "코시컨트·시컨트·코탄젠트함수",
+      "code": "12전수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-recip-circle",
+        "title": "단위원에 접선 하나를 그으면 삼각함수 몇 개가 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-csc-predict",
+        "title": "사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "역삼각함수",
+      "code": "12전수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-arc-restrict",
+        "title": "사인함수의 어디를 잘라야 역함수가 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-arc-sawtooth",
+        "title": "arcsin(sin x)는 언제나 x일까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "여러 가지 함수의 미분과 고계도함수",
+      "code": "12전수01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-deriv-trace",
+        "title": "접선의 기울기를 모으면 sec x의 도함수가 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-museum",
+        "title": "벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-jerk",
+        "title": "엘리베이터가 덜컹거리지 않으려면 몇 번째 도함수까지 매끄러워야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "로피탈의 정리",
+      "code": "12전수01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-lhopital-zoom",
+        "title": "0/0 근처를 크게 확대하면 무엇이 남을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-lhopital-errors",
+        "title": "로피탈의 정리를 쓴 이 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-growth-race",
+        "title": "x¹⁰과 ex가 무한대까지 달리면 누가 이길까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "구분구적법과 정적분",
+      "code": "12전수01-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-riemann",
+        "title": "직사각형을 끝없이 잘게 쪼개면 곡선 아래 넓이가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-pyramid",
+        "title": "각뿔의 부피는 왜 각기둥의 1/3일까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "여러 가지 적분법",
+      "code": "12전수01-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-int-choose",
+        "title": "이 적분은 어떤 방법으로 풀어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-trig-sub",
+        "title": "∫₀a√(1 − x²) dx를 원의 그림만으로 계산할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-partial-frac",
+        "title": "복잡한 분수식을 간단한 분수 두 개로 쪼갤 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "기하",
+    "sections": [
+     {
+      "n": 1,
+      "title": "이차곡선",
+      "code": "12전수02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "이차곡선의 접선",
+      "code": "12전수02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "직선과 평면에 관한 명제",
+      "code": "12전수02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "정사영",
+      "code": "12전수02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "공간좌표와 구의 방정식",
+      "code": "12전수02-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "벡터의 연산",
+      "code": "12전수02-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "위치벡터, 내적과 외적",
+      "code": "12전수02-07",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 8,
+      "title": "벡터로 나타낸 도형의 방정식",
+      "code": "12전수02-08",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "확률과 통계",
+    "sections": [
+     {
+      "n": 1,
+      "title": "여러 가지 순열과 중복조합",
+      "code": "12전수03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "이항정리",
+      "code": "12전수03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "통계적 확률과 수학적 확률",
+      "code": "12전수03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "확률의 여러 가지 정리",
+      "code": "12전수03-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "확률변수와 확률분포",
+      "code": "12전수03-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "이산확률변수와 이항분포",
+      "code": "12전수03-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "연속확률변수와 정규분포",
+      "code": "12전수03-07",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 8,
+      "title": "모집단과 표본",
+      "code": "12전수03-08",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 9,
+      "title": "모평균과 모비율의 추정",
+      "code": "12전수03-09",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
   "id": "extra",
   "name": "교양·심화",
   "meta": "교육과정 밖",

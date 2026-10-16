@@ -1503,3 +1503,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 훅 법칙 | basics/b-p-hooke-law
 훅 법칙 F = kx | basics/b-p-hooke-law
 앙금 생성 반응 | basics/b-p-precipitation
+역함수의 미분법 | card-calc2-inverse-slope
+몫의 미분법 | card-calc2-quotient
