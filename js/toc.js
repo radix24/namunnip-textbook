@@ -15594,36 +15594,96 @@ window.TOC = [
       "n": 1,
       "title": "극좌표",
       "code": "12고미02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-radar",
+        "title": "레이더는 왜 (x, y) 대신 거리와 방향으로 위치를 알려 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-spot",
+        "title": "θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "극곡선의 대칭성과 그래프",
       "code": "12고미02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-trace",
+        "title": "r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-rose-predict",
+        "title": "r = cos kθ의 꽃잎은 몇 장일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-mic-pattern",
+        "title": "무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "극곡선의 접선",
       "code": "12고미02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-tangent",
+        "title": "카디오이드에서 접선이 수평인 곳은 어디일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-log-spiral",
+        "title": "목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "두 극곡선의 교점과 사잇각",
       "code": "12고미02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-meet",
+        "title": "두 극방정식을 연립하면 교점이 모두 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-angle",
+        "title": "마주 보는 두 카디오이드는 몇 도로 만날까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "극곡선의 길이와 넓이",
       "code": "12고미02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-area",
+        "title": "극곡선의 넓이는 왜 직사각형이 아니라 부채꼴로 잘라 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-roll-length",
+        "title": "두루마리 휴지를 풀지 않고 길이를 잴 수 있을까?"
+       }
+      ]
      }
     ]
    },

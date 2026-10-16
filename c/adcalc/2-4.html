@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>두 극곡선의 교점과 사잇각 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="두 극곡선의 교점과, 교점에서 두 곡선이 이루는 각. 연립방정식으로 나오지 않는 교점(극, 음의 r)을 찾는 카드, 마주 보는 두 카디오이드가 언제나 수직으로 만남을 확인하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-polar-meet canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+    #card-adcalc-polar-angle canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>두 극곡선의 교점과 사잇각</h1>
+    <p class="lead">극좌표에서는 한 점이 여러 이름을 가지므로, 두 극방정식을 연립해 풀어도 교점이 모두 나오지 않을 수 있습니다. 이 절에서는 그림에서 교점을 직접 찾아 연립방정식의 해와 비교하고, 빠진 교점이 어디에서 왔는지 밝힙니다. 그리고 교점에서 두 곡선이 이루는 각을 반지름과 접선의 각 \(\psi\)로 구해, 마주 보는 두 카디오이드가 크기와 상관없이 수직으로 만나는 것을 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/2-2.html#card-alg-trig-def" title="대수 2.2 · 150circ나 -60circ의 사인은 무엇일까?">삼각함수의 정의와 그래프</a><a class="p p-card" href="../../c/calc2/2-6.html#card-calc2-param-tangent" title="미적분Ⅱ 2.6 · x와 y가 모두 t의 함수일 때 접선의 기울기는?">매개변수로 나타낸 함수의 미분</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-polar-meet"><span class="mono">2.4.1</span>식으로 찾지 못하는 교점</a></li>
+        <li><a href="#card-adcalc-polar-angle"><span class="mono">2.4.2</span>두 극곡선이 만나는 각</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-polar-meet">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>두 극방정식을 연립하면 교점이 모두 나올까?</h2><span class="kind">두 극곡선의 교점 · 발견 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets pk">
+              <button class="chip" type="button" data-p="0" aria-pressed="true">\(r = 1 + \cos\theta\)와 \(r = 3\cos\theta\)</button>
+              <button class="chip" type="button" data-p="1">\(r = \cos 2\theta\)와 \(r = \frac{1}{2}\)</button>
+            </div>
+            <canvas aria-label="두 극곡선. 교점이라고 생각하는 곳을 누르면 표시된다. θ를 움직이면 두 곡선 위에서 같은 θ에 해당하는 두 점이 함께 움직인다"></canvas>
+            <div class="ctl">
+              <p class="mono small">그림에서 교점을 모두 찾아 누르세요.</p>
+              <label class="mono">같은 \(\theta\)의 두 점: \(\theta\) = <output class="t-out">0°</output></label>
+              <input class="st" type="range" min="0" max="360" step="0.5" value="20" aria-label="각 θ (도)">
+              <div class="presets"><button class="chip go-eq" type="button" aria-pressed="false">연립해서 얻은 교점 보기</button><button class="chip go-reset" type="button">다시 찾기</button></div>
+              <dl class="nums">
+                <div><dt>찾은 교점</dt><dd class="n-f">0</dd></div>
+                <div><dt>연립으로 얻은 교점</dt><dd class="n-e">?</dd></div>
+                <div><dt>같은 \(\theta\)의 두 점 사이 거리</dt><dd class="n-d">—</dd></div>
+              </dl>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>직교좌표에서는 두 방정식을 연립하면 교점이 모두 나옵니다. 극좌표에서도 \(1 + \cos\theta = 3\cos\theta\)를 풀면 \(r = 1 + \cos\theta\)와 \(r = 3\cos\theta\)의 교점이 모두 나올까요?</li>
+            <li><span class="tag">복원</span>극좌표에서 한 점은 \((r, \theta)\), \((r, \theta + 2\pi)\), \((-r, \theta + \pi)\) 등 여러 이름을 가집니다. 극은 \(r = 0\)이기만 하면 \(\theta\)와 상관없이 같은 점입니다.</li>
+            <li><span class="tag">설명</span>연립방정식 \(f(\theta) = g(\theta)\)는 "<b>같은 \(\theta\)</b>에서 같은 \(r\)"인 점만 찾습니다. 그런데 두 곡선이 같은 점을 <b>서로 다른 이름</b>으로 지날 수 있습니다. ① 극: 카디오이드는 \(\theta = \pi\)일 때, 원은 \(\theta = \frac{\pi}{2}\)일 때 극을 지나므로 방정식에는 나오지 않습니다. ② 음의 \(r\): \(\cos 2\theta = -\frac{1}{2}\)인 점 \(\left(-\frac{1}{2}, \theta\right)\)은 원 \(r = \frac{1}{2}\) 위의 점 \(\left(\frac{1}{2}, \theta + \pi\right)\)과 같습니다. 그래서 교점은 \(f(\theta) = g(\theta)\), \(f(\theta) = -g(\theta + \pi)\)를 풀고 극을 따로 확인한 뒤, 그림으로 빠진 것이 없는지 보아야 합니다.</li>
+            <li><span class="tag">연결</span>같은 \(\theta\)에서 두 점이 움직이는 것은, 두 사람이 서로 다른 길을 각자의 시간표대로 걷는 것과 같습니다. 두 길이 겹치는 곳(교점)과 두 사람이 실제로 만나는 곳(같은 \(\theta\))은 다를 수 있습니다. 매개변수로 나타낸 운동에서도 같은 구분이 필요합니다.</li>
+            <li><span class="tag">적용</span>두 보기에서 교점을 모두 찾아 누른 다음, 연립해서 얻은 교점과 비교하세요. 빠진 교점은 어떤 이유로 빠졌나요? \(\theta\)를 움직이며 같은 \(\theta\)의 두 점 사이 거리가 0이 되는 곳이 몇 군데인지 세어 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>극곡선의 교점 문제에서 식만 풀고 끝내면 교점을 빠뜨리기 쉽습니다. 특히 극은 거의 언제나 따로 확인해야 합니다. 그래프를 함께 그리는 것이 가장 확실한 점검입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">두 원 \(r = 2\sin\theta\)와 \(r = 2\cos\theta\)의 교점은 모두 몇 개인가요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>2개<span class="why"><b>맞습니다.</b> \(\tan\theta = 1\)에서 \(\left(\sqrt{2}, \frac{\pi}{4}\right)\)이 나오고, 극도 두 원 위에 있습니다(각각 \(\theta = 0\), \(\theta = \frac{\pi}{2}\)에서).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1개<span class="why"><b>극을 빠뜨렸습니다.</b> 두 원은 같은 \(\theta\)에서 극을 지나지 않아 방정식에는 나오지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>3개<span class="why"><b>\(\theta = \frac{5\pi}{4}\)를 다른 점으로 셌습니다.</b> \(\left(-\sqrt{2}, \frac{5\pi}{4}\right)\)은 \(\left(\sqrt{2}, \frac{\pi}{4}\right)\)과 같은 점입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>4개<span class="why"><b>서로 다른 두 원은 많아야 두 점에서 만납니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-2.html#card-adcalc-polar-trace"><small class="mono">고급 미적분 2.2</small>r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-rose-predict"><small class="mono">고급 미적분 2.2</small>r = cos kθ의 꽃잎은 몇 장일까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-mic-pattern"><small class="mono">고급 미적분 2.2</small>무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?</a><a href="../../c/adcalc/2-3.html#card-adcalc-polar-tangent"><small class="mono">고급 미적분 2.3</small>카디오이드에서 접선이 수평인 곳은 어디일까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-polar-angle">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>마주 보는 두 카디오이드는 몇 도로 만날까?</h2><span class="kind">두 극곡선의 사잇각 · 조작 · 발견</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets pk">
+              <button class="chip" type="button" data-p="0" aria-pressed="true">\(r = a(1 + \cos\theta)\), \(r = b(1 - \cos\theta)\)</button>
+              <button class="chip" type="button" data-p="1">\(r = 1 + \cos\theta\), \(r = 3\cos\theta\)</button>
+            </div>
+            <canvas aria-label="두 극곡선과 위쪽 교점에서 그은 두 접선, 각 곡선의 반지름과 접선이 이루는 각 ψ1, ψ2"></canvas>
+            <div class="ctl">
+              <div class="ctl-row ab">
+                <div><label class="mono">\(a\) = <output class="a-out">1</output></label>
+                <input class="sa" type="range" min="0.3" max="2" step="0.05" value="1" aria-label="계수 a"></div>
+                <div><label class="mono">\(b\) = <output class="b-out">1.5</output></label>
+                <input class="sb" type="range" min="0.3" max="2" step="0.05" value="1.5" aria-label="계수 b"></div>
+              </div>
+              <dl class="nums">
+                <div><dt>\(\psi_1\)</dt><dd class="n-1">—</dd></div>
+                <div><dt>\(\psi_2\)</dt><dd class="n-2">—</dd></div>
+                <div><dt>두 곡선의 사잇각</dt><dd class="n-g">—</dd></div>
+              </dl>
+              <p class="fig-note">사잇각은 교점에서 두 접선이 이루는 각 가운데 \(90^\circ\) 이하인 것입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>오른쪽을 향한 카디오이드 \(r = a(1 + \cos\theta)\)와 왼쪽을 향한 카디오이드 \(r = b(1 - \cos\theta)\)가 극이 아닌 곳에서 만납니다. 크기 \(a\), \(b\)를 바꾸면 만나는 각도도 바뀔까요?</li>
+            <li><span class="tag">복원</span>극곡선에서 반지름 방향과 접선이 이루는 각 \(\psi\)는 \(\tan\psi = \frac{r}{dr/d\theta}\)입니다(\(0 &lt; \psi &lt; \pi\)로 잡습니다).</li>
+            <li><span class="tag">설명</span>두 곡선이 같은 점 \((r, \theta)\)에서 만나면 두 접선은 모두 같은 반지름 선분과 각을 이루므로, 두 곡선의 사잇각은 \(|\psi_1 - \psi_2|\)(또는 \(\pi\)에서 뺀 값)입니다. 기울기 \(\frac{dy}{dx}\)를 두 번 구하는 것보다 간단합니다. 마주 보는 카디오이드에서는 \(\tan\psi_1 = \frac{1 + \cos\theta}{-\sin\theta}\), \(\tan\psi_2 = \frac{1 - \cos\theta}{\sin\theta}\)이고 \[\tan\psi_1\tan\psi_2 = -\frac{1 - \cos^2\theta}{\sin^2\theta} = -1\]이므로 두 접선은 \(a\), \(b\)와 상관없이 언제나 <b>수직</b>입니다.</li>
+            <li><span class="tag">연결</span>\(\tan\psi_1\tan\psi_2 = -1\)은 직교좌표에서 두 직선의 기울기의 곱이 \(-1\)이면 수직이라는 조건과 같은 모양입니다. 한 곡선족의 모든 곡선과 수직으로 만나는 곡선족을 <em>직교 곡선족</em>이라고 하며, 전기장의 전기력선과 등전위선이 그 예입니다.</li>
+            <li><span class="tag">적용</span>\(a\)와 \(b\)를 여러 값으로 바꾸어도 사잇각이 \(90^\circ\)인지 확인하세요. 두 번째 보기에서는 사잇각이 몇 도인가요? \(\psi_1\)과 \(\psi_2\)를 직접 계산해 맞추어 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>극에서 만나는 경우에는 \(r = 0\)이라 \(\tan\psi = \frac{r}{r'}\)로 각을 구할 수 없습니다. 극에서 곡선의 접선은 \(r = 0\)이 되는 \(\theta\)의 방향이므로, 그 방향끼리의 각으로 따로 구해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">두 원 \(r = 2\cos\theta\)와 \(r = 2\sin\theta\)는 \(\theta = \frac{\pi}{4}\)인 점에서 만납니다. 사잇각은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(90^\circ\)<span class="why"><b>맞습니다.</b> \(\tan\psi_1 = \frac{2\cos\theta}{-2\sin\theta} = -1\), \(\tan\psi_2 = \frac{2\sin\theta}{2\cos\theta} = 1\)이므로 \(\psi_1 = 135^\circ\), \(\psi_2 = 45^\circ\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(45^\circ\)<span class="why"><b>교점의 각 \(\theta = \frac{\pi}{4}\)를 사잇각으로 보았습니다.</b> 사잇각은 두 접선 사이의 각입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(0^\circ\)(접한다)<span class="why"><b>두 원은 서로 가로질러 만납니다.</b> 접하면 교점이 하나뿐이어야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(60^\circ\)<span class="why"><b>근거 없는 값입니다.</b> \(\psi_1 - \psi_2\)를 계산해 보세요.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-2.html#card-adcalc-polar-trace"><small class="mono">고급 미적분 2.2</small>r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-rose-predict"><small class="mono">고급 미적분 2.2</small>r = cos kθ의 꽃잎은 몇 장일까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-mic-pattern"><small class="mono">고급 미적분 2.2</small>무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?</a><a href="../../c/adcalc/2-3.html#card-adcalc-polar-tangent"><small class="mono">고급 미적분 2.3</small>카디오이드에서 접선이 수평인 곳은 어디일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/polar-meet.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/polar-angle.js"></script>
+</body>
+</html>

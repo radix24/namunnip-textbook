@@ -8645,31 +8645,52 @@
        "n": 1,
        "title": "극좌표",
        "code": "12고미02-01",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-2-1",
+        "card-adcalc-radar",
+        "card-adcalc-polar-spot"
+       ]
       },
       {
        "n": 2,
        "title": "극곡선의 대칭성과 그래프",
        "code": "12고미02-02",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-2-2",
+        "card-adcalc-polar-trace",
+        "card-adcalc-rose-predict",
+        "card-adcalc-mic-pattern"
+       ]
       },
       {
        "n": 3,
        "title": "극곡선의 접선",
        "code": "12고미02-03",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-2-3",
+        "card-adcalc-polar-tangent",
+        "card-adcalc-log-spiral"
+       ]
       },
       {
        "n": 4,
        "title": "두 극곡선의 교점과 사잇각",
        "code": "12고미02-04",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-2-4",
+        "card-adcalc-polar-meet",
+        "card-adcalc-polar-angle"
+       ]
       },
       {
        "n": 5,
        "title": "극곡선의 길이와 넓이",
        "code": "12고미02-05",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-2-5",
+        "card-adcalc-polar-area",
+        "card-adcalc-roll-length"
+       ]
       }
      ]
     },

@@ -962,3 +962,9 @@ adc-hyp-integral | 쌍곡선함수의 적분과 쌍곡선 치환 | card-adcalc-h
 adc-improper | 이상적분 | card-adcalc-improper-p card-adcalc-improper-spot card-adcalc-escape | calc1-ftc calc1-limit
 adc-revolution | 회전체의 부피와 겉넓이 | card-adcalc-vase card-adcalc-band-area | calc2-int-volume calc2-int-distance
 adc-gabriel | 가브리엘의 나팔 | card-adcalc-gabriel | adc-improper adc-revolution
+# 고급 미적분 Ⅱ. 극좌표와 극곡선
+adc-polar-coord | 극좌표 | card-adcalc-radar card-adcalc-polar-spot | alg-radian alg-trig-func
+adc-polar-curve | 극곡선의 그래프와 대칭성 | card-adcalc-polar-trace card-adcalc-rose-predict card-adcalc-mic-pattern | adc-polar-coord alg-trig-graph
+adc-polar-tangent | 극곡선의 접선 | card-adcalc-polar-tangent card-adcalc-log-spiral | adc-polar-curve calc2-param-deriv
+adc-polar-meet | 두 극곡선의 교점과 사잇각 | card-adcalc-polar-meet card-adcalc-polar-angle | adc-polar-curve adc-polar-tangent
+adc-polar-area-length | 극곡선의 넓이와 길이 | card-adcalc-polar-area card-adcalc-roll-length | adc-polar-curve calc2-int-series calc2-int-distance
