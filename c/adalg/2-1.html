@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>가우스 소거법 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="첨가행렬과 기본 행 연산, 행 사다리꼴과 기약 행 사다리꼴, 가우스 소거법으로 연립일차방정식 풀기. 행 연산을 직접 골라 적용하는 카드와, 화학 반응식의 계수를 동차 연립방정식으로 맞추는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-row-puzzle .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .8rem; align-items: center; }
+    #card-adalg-row-puzzle .eqs { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .9rem; line-height: 1.8; }
+    #card-adalg-row-puzzle .ops { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+    #card-adalg-row-puzzle .ops select, #card-adalg-row-puzzle .ops input { font: inherit; padding: .2rem .3rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); }
+    #card-adalg-row-puzzle .ops input { width: 4.2rem; }
+    #card-adalg-balance-eq .rx { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; font-size: 1.05rem; margin: .4rem 0 .8rem; }
+    #card-adalg-balance-eq .mol { display: inline-flex; align-items: center; gap: .25rem; padding: .25rem .4rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); }
+    #card-adalg-balance-eq .mol button { width: 1.6rem; height: 1.6rem; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper); color: var(--ink); font: inherit; line-height: 1; cursor: pointer; }
+    #card-adalg-balance-eq .mol b { min-width: 1.2rem; text-align: center; font-family: "IBM Plex Mono", ui-monospace, monospace; color: var(--forest); }
+    #card-adalg-balance-eq table.cnt { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .85rem; }
+    #card-adalg-balance-eq table.cnt td, #card-adalg-balance-eq table.cnt th { padding: .2rem .6rem; border-bottom: 1px solid var(--rule); text-align: center; }
+    #card-adalg-balance-eq table.cnt td.ok { color: var(--forest); } #card-adalg-balance-eq table.cnt td.no { color: var(--warn); }
+    #card-adalg-balance-eq .mx .lin-m { display: inline-table; vertical-align: middle; margin: 0 .3rem; }
+  </style>
+</head>
+<body data-course="adalg" data-sec="2-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>가우스 소거법</h1>
+    <p class="lead">연립방정식을 풀 때 하던 손놀림, 곧 식의 순서 바꾸기, 식에 수 곱하기, 식끼리 더하기를 계수만 모은 행렬에서 하면 <em>기본 행 연산</em>이 됩니다. 이 세 가지로 행렬을 계단 모양으로 만드는 것이 <em>가우스 소거법</em>입니다. 이 절에서는 행 연산을 하나씩 골라 해가 하나인 경우, 무수히 많은 경우, 없는 경우를 직접 확인하고, 화학 반응식의 계수를 연립방정식으로 맞춰 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/2-8.html#card-cm1-line-conic" title="공통수학1 2.8 · 일차식과 이차식을 함께 만족하는 해는 몇 개일까?">연립일차방정식</a><a class="p p-card" href="../../c/cm1/4-1.html#card-cm1-matrix-entry" title="공통수학1 4.1 · 표의 칸 하나를 어떻게 정확히 가리킬까?">행렬의 뜻과 성분</a><a class="p p-card" href="../../c/adalg/1-4.html#card-adalg-indep-predict" title="고급 대수 1.4 · 계산하기 전에 일차독립인지 알아볼 수 있을까?">일차독립과 일차종속</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-row-puzzle"><span class="mono">2.1.1</span>행 연산 세 가지로 연립방정식 풀기</a></li>
+        <li><a href="#card-adalg-balance-eq"><span class="mono">2.1.2</span>화학 반응식의 계수는 연립방정식의 해</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-2-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-row-puzzle">
+        <header class="card-head">
+          <span class="no">2.1.1</span><h2>행 연산 세 가지면 어떤 연립방정식도 풀릴까?</h2><span class="kind">가우스 소거법 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">문제 <select class="pick" aria-label="문제 고르기"><option value="0">1 (해가 하나)</option><option value="1">2 (해가 무수히 많음)</option><option value="2">3 (해가 없음)</option></select></label></div>
+            <div class="board">
+              <div class="mat" aria-label="첨가행렬"></div>
+              <div class="eqs" aria-label="같은 내용의 연립방정식"></div>
+            </div>
+            <div class="ops" role="group" aria-label="행 연산">
+              <select class="op" aria-label="연산 종류">
+                <option value="add">Rᵢ ← Rᵢ + k·Rⱼ</option>
+                <option value="scale">Rᵢ ← k·Rᵢ</option>
+                <option value="swap">Rᵢ ↔ Rⱼ</option>
+              </select>
+              <label>i <select class="ri" aria-label="바꿀 행 i"><option>1</option><option>2</option><option>3</option></select></label>
+              <label>j <select class="rj" aria-label="쓸 행 j"><option>1</option><option selected>2</option><option>3</option></select></label>
+              <label>k <input class="k" value="-2" aria-label="곱할 수 k (분수 가능, 예: -1/2)"></label>
+              <button class="chip go" type="button">적용</button>
+              <button class="chip undo" type="button">되돌리기</button>
+              <button class="chip reset" type="button">처음부터</button>
+            </div>
+            <p class="mono small log">—</p>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>미지수가 셋인 연립방정식을 풀 때 우리는 식끼리 더하고 빼고, 식에 수를 곱했습니다. 이 손놀림을 몇 가지 규칙으로 정리하면 미지수가 100개여도 컴퓨터가 똑같이 풀 수 있을까요?</li>
+            <li><span class="tag">복원</span>연립방정식의 한 식에 0이 아닌 수를 곱하거나, 한 식에 다른 식의 몇 배를 더해도 해는 바뀌지 않습니다. 식의 순서를 바꾸어도 마찬가지입니다.</li>
+            <li><span class="tag">설명</span>계수와 상수항만 모은 <em>첨가행렬</em>에서 이 세 가지를 <em>기본 행 연산</em>이라고 합니다: ① 두 행 바꾸기, ② 한 행에 0이 아닌 수 곱하기, ③ 한 행에 다른 행의 실수배 더하기. 왼쪽 위부터 피벗(각 행의 처음 0이 아닌 수) 아래를 0으로 만들어 계단 모양(<em>행 사다리꼴</em>)으로 만드는 것이 <em>가우스 소거법</em>이고, 피벗을 1로, 피벗 위까지 0으로 만들면 <em>기약 행 사다리꼴</em>이 되어 해를 바로 읽습니다.</li>
+            <li><span class="tag">연결</span>1단원에서 일차독립을 판정할 때 쓴 "피벗의 개수"도 이 계산에서 나옵니다. 공학 시뮬레이션, 회로 해석, 3D 그래픽이 매일 수백만 개의 미지수로 이 계산을 합니다.</li>
+            <li><span class="tag">적용</span>문제 1을 기약 행 사다리꼴까지 바꿔 보세요. 몇 번 만에 되나요? 문제 2, 3에서는 사다리꼴이 된 뒤 마지막 행을 보고 해가 몇 개인지 판단하세요. 오른쪽 방정식이 행 연산과 함께 어떻게 바뀌는지도 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>한 행에 0을 곱하는 것은 행 연산이 아닙니다. 식 하나를 지워 버려 해가 늘어납니다. 또 마지막 행이 \([0\ 0\ 0 \mid 5]\)이면 \(0 = 5\)라는 뜻이므로 해가 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">미지수가 3개인 연립방정식의 첨가행렬을 행 사다리꼴로 바꾸었더니 피벗이 계수 부분에 2개 있고, \([0\ 0\ 0 \mid 0]\)인 행이 하나 생겼습니다. 해는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>무수히 많다(자유변수 1개).<span class="why"><b>맞습니다.</b> 피벗이 없는 열의 미지수 하나를 자유롭게 정할 수 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>해가 없다.<span class="why"><b>\(0 = 0\)은 늘 참입니다.</b> 해가 없는 것은 \([0\ 0\ 0 \mid c]\), \(c \ne 0\)일 때입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>하나뿐이다.<span class="why"><b>피벗이 미지수 수(3)보다 적습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정확히 두 개다.<span class="why"><b>연립일차방정식의 해는 0개, 1개, 무수히 많음 셋 중 하나입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/4-1.html#card-cm1-matrix-entry"><small class="mono">공통수학1 4.1</small>표의 칸 하나를 어떻게 정확히 가리킬까?</a><a href="../../c/cm1/4-1.html#card-cm1-road-matrix"><small class="mono">공통수학1 4.1</small>도로 지도를 수의 표로 바꿀 수 있을까?</a><a href="../../c/adalg/1-4.html#card-adalg-span-3d"><small class="mono">고급 대수 1.4</small>세 벡터가 공간을 채우지 못하고 평면에 갇히는 때는 언제일까?</a><a href="../../c/adalg/1-4.html#card-adalg-indep-predict"><small class="mono">고급 대수 1.4</small>계산하기 전에 일차독립인지 알아볼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/2-2.html#card-adalg-inverse-elim"><small class="mono">고급 대수 2.2</small>역행렬이 있는지 계산하기 전에 알 수 있을까?</a><a href="../../c/adalg/2-2.html#card-adalg-hill-cipher"><small class="mono">고급 대수 2.2</small>행렬로 잠근 암호는 어떤 열쇠로 열릴까?</a></div></nav>
+
+      <article class="card" id="card-adalg-balance-eq">
+        <header class="card-head">
+          <span class="no">2.1.2</span><h2>화학 반응식의 계수는 어떻게 한 번에 정할까?</h2><span class="kind">동차 연립방정식 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">반응 <select class="pick" aria-label="반응 고르기"></select></label></div>
+            <div class="rx" aria-label="반응식과 계수 조절"></div>
+            <table class="cnt" aria-label="원소별 원자 수"></table>
+            <div class="presets"><button class="chip go-solve" type="button">가우스 소거법으로 풀기</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="mx small"></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>프로페인이 탈 때 \(\mathrm{C_3H_8} + \mathrm{O_2} \to \mathrm{CO_2} + \mathrm{H_2O}\)의 계수를 어림으로 맞추다 보면 한쪽을 맞추면 다른 쪽이 틀어집니다. 반응식 맞추기를 연립방정식 문제로 바꿀 수 있을까요?</li>
+            <li><span class="tag">복원</span>화학 반응 전후에 원소마다 원자의 개수는 같습니다(질량 보존). 우변이 모두 0인 연립방정식은 늘 \(\vec{0}\)이라는 해를 가집니다.</li>
+            <li><span class="tag">설명</span>계수를 \(a, b, c, d\)로 두면 원소마다 식이 하나씩 생깁니다. 프로페인이면 C: \(3a = c\), H: \(8a = 2d\), O: \(2b = 2c + d\). 우변이 0인 <em>동차 연립방정식</em> \(A\vec{x} = \vec{0}\)이고, 미지수(4)가 식의 피벗 수(3)보다 많아 자유변수가 하나 생깁니다. 가우스 소거법으로 해를 \(t(1, 5, 3, 4)\) 꼴로 구한 뒤 가장 작은 자연수가 되게 \(t\)를 고릅니다.</li>
+            <li><span class="tag">연결</span>열에 분자 하나씩, 행에 원소 하나씩을 둔 행렬 \(A\)에서 계수 벡터는 열들의 일차종속 관계식입니다. 1단원의 일차종속이 화학에서 이렇게 쓰입니다. 화학 공정 설계 프로그램이 복잡한 반응식을 같은 방식으로 맞춥니다.</li>
+            <li><span class="tag">적용</span>먼저 + − 버튼으로 계수를 직접 맞춰 보세요. 원소별 표가 모두 초록이 되면 성공입니다. 그다음 "가우스 소거법으로 풀기"로 행렬과 해를 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>모든 계수를 2배 해도 식은 맞습니다. 해가 하나가 아니라 직선 하나만큼 있기 때문입니다. 관례로 가장 작은 자연수 비를 씁니다. 식이 맞는다고 그 반응이 실제로 일어난다는 뜻은 아닙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(a\,\mathrm{H_2} + b\,\mathrm{O_2} \to c\,\mathrm{H_2O}\)를 동차 연립방정식으로 쓰고 풀면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((a, b, c) = t(2, 1, 2)\)<span class="why"><b>맞습니다.</b> H: \(2a = 2c\), O: \(2b = c\)이므로 \(a = c = 2b\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((a, b, c) = (1, 1, 1)\)뿐<span class="why"><b>O가 맞지 않습니다.</b> 왼쪽 2개, 오른쪽 1개입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((0, 0, 0)\)뿐<span class="why"><b>자명한 해 말고도 해가 있습니다.</b> 미지수가 피벗보다 많습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(t(1, 2, 1)\)<span class="why"><b>O를 거꾸로 세었습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/4-1.html#card-cm1-matrix-entry"><small class="mono">공통수학1 4.1</small>표의 칸 하나를 어떻게 정확히 가리킬까?</a><a href="../../c/cm1/4-1.html#card-cm1-road-matrix"><small class="mono">공통수학1 4.1</small>도로 지도를 수의 표로 바꿀 수 있을까?</a><a href="../../c/adalg/1-4.html#card-adalg-span-3d"><small class="mono">고급 대수 1.4</small>세 벡터가 공간을 채우지 못하고 평면에 갇히는 때는 언제일까?</a><a href="../../c/adalg/1-4.html#card-adalg-indep-predict"><small class="mono">고급 대수 1.4</small>계산하기 전에 일차독립인지 알아볼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/2-2.html#card-adalg-inverse-elim"><small class="mono">고급 대수 2.2</small>역행렬이 있는지 계산하기 전에 알 수 있을까?</a><a href="../../c/adalg/2-2.html#card-adalg-hill-cipher"><small class="mono">고급 대수 2.2</small>행렬로 잠근 암호는 어떤 열쇠로 열릴까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-2-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/row-puzzle.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/balance-eq.js"></script>
+</body>
+</html>

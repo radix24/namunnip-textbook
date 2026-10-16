@@ -1,0 +1,83 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/pmath/pm.js",
+    "js/cards/adalg/lin.js",
+    "js/cards/adalg/det-spot.js"
+  ],
+  "short": "행렬식 계산에서 틀린 줄 찾기"
+}
+-->
+<style>
+#card-adalg-det-spot .sol[hidden] { display: none; }
+</style>
+<article class="card" id="card-adalg-det-spot">
+  <header class="card-head">
+    <span class="no"></span><h2>이 행렬식 계산, 어디서 틀렸을까?</h2><span class="kind">행렬식의 계산 · 오류 찾기</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="presets">
+        <button class="chip" type="button" data-s="0" aria-pressed="true">풀이 1</button>
+        <button class="chip" type="button" data-s="1">풀이 2</button>
+        <button class="chip" type="button" data-s="2">풀이 3</button>
+        <button class="chip" type="button" data-s="3">풀이 4</button>
+      </div>
+      <div class="ctl">
+        <p class="mono small">처음 틀린 줄을 누르세요. 틀린 곳이 없으면 마지막 줄을 누르세요.</p>
+        <div class="sol" data-s="0">
+          <ol class="spot">
+            <li>\(A = \begin{pmatrix} 2 & 1 & 3 \\ 0 & 4 & 1 \\ 5 & 2 & 0 \end{pmatrix}\)를 1행을 따라 여인수 전개한다.<span class="why">맞습니다. 어느 행이나 열을 따라도 됩니다.</span></li>
+            <li data-bad>\(\det A = 2\begin{vmatrix} 4 & 1 \\ 2 & 0 \end{vmatrix} + 1\begin{vmatrix} 0 & 1 \\ 5 & 0 \end{vmatrix} + 3\begin{vmatrix} 0 & 4 \\ 5 & 2 \end{vmatrix}\)<span class="why"><b>여기가 틀렸습니다.</b> 여인수의 부호는 \((-1)^{i+j}\)라 1행에서는 \(+, -, +\)입니다. 가운데 항은 \(-1\begin{vmatrix} 0 & 1 \\ 5 & 0 \end{vmatrix}\)이어야 합니다.</span></li>
+            <li>\(= 2(-2) + 1(-5) + 3(-20) = -69\)<span class="why">앞 줄의 부호 잘못을 이어받았습니다. 바르게는 \(-4 + 5 - 60 = -59\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">아래 확인 칸에서 참값을 보세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="1" hidden>
+          <ol class="spot">
+            <li>\(A\)는 \(3 \times 3\) 행렬이고 \(\det A = 5\)이다.<span class="why">문제의 조건입니다.</span></li>
+            <li>한 행에 \(k\)를 곱하면 행렬식은 \(k\)배가 된다.<span class="why">맞는 성질입니다.</span></li>
+            <li data-bad>\(2A\)는 \(A\)에 2를 곱한 것이므로 \(\det(2A) = 2 \cdot 5 = 10\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(2A\)는 세 행이 <b>모두</b> 2배이므로 \(2^3 = 8\)배, \(\det(2A) = 40\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">\(A = I\)로 놓고 \(\det(2I)\)를 직접 계산해 보세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="2" hidden>
+          <ol class="spot">
+            <li>\(\det(AB) = \det A \cdot \det B\)이다.<span class="why">맞는 성질입니다.</span></li>
+            <li data-bad>곱에 대해 성립하므로 합에 대해서도 \(\det(A + B) = \det A + \det B\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(A = B = I\) (\(2 \times 2\))이면 좌변은 \(\det(2I) = 4\), 우변은 \(1 + 1 = 2\)입니다.</span></li>
+            <li>따라서 \(\det(A + A) = 2\det A\)이다.<span class="why">틀린 성질을 이어받았습니다. \(n \times n\)이면 \(2^n\det A\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">단위행렬 두 개로 확인해 보세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="3" hidden>
+          <ol class="spot">
+            <li>\(A = \begin{pmatrix} 0 & 2 & 1 \\ 1 & 3 & 2 \\ 2 & 6 & 7 \end{pmatrix}\)에서 1행과 2행을 바꾸면 행렬식의 부호가 바뀐다.<span class="why">맞습니다. 두 행을 바꾸면 \(-1\)배입니다.</span></li>
+            <li>\(R_3 \leftarrow R_3 - 2R_1\)을 하면 \(\begin{pmatrix} 1 & 3 & 2 \\ 0 & 2 & 1 \\ 0 & 0 & 3 \end{pmatrix}\)이 되고, 이 연산은 행렬식을 바꾸지 않는다.<span class="why">맞습니다. 한 행에 다른 행의 실수배를 더해도 그대로입니다.</span></li>
+            <li>삼각행렬의 행렬식은 대각성분의 곱이므로 \(1 \cdot 2 \cdot 3 = 6\), 따라서 \(\det A = -6\)이다.<span class="why">맞습니다. 처음에 행을 한 번 바꿨으므로 부호를 되돌렸습니다.</span></li>
+            <li data-bad>이 풀이에는 틀린 곳이 없다.<span class="why"><b>맞습니다.</b> 행 연산마다 행렬식이 어떻게 바뀌는지 정확히 따라갔습니다. 큰 행렬은 이 방법이 여인수 전개보다 훨씬 빠릅니다.</span></li>
+          </ol>
+        </div>
+        <p class="mono small chk" role="status"></p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(3 \times 3\) 행렬식은 계산할 곳이 많아 부호 하나만 틀려도 답이 달라집니다. 행렬식의 성질도 비슷해 보이는 것끼리 헷갈리기 쉽습니다. 어디서 자주 틀릴까요?</li>
+      <li><span class="tag">복원</span>여인수 전개: \(\det A = \sum_j (-1)^{i+j}a_{ij}M_{ij}\) (\(M_{ij}\)는 \(i\)행 \(j\)열을 지운 소행렬식). 행 연산의 효과: 바꾸기 \(-1\)배, \(k\)배 하기 \(k\)배, 다른 행의 배수 더하기 그대로.</li>
+      <li><span class="tag">설명</span>자주 나오는 실수는 세 가지입니다. ① 여인수의 부호 \((-1)^{i+j}\)를 빠뜨린다. ② \(\det(kA)\)를 \(k\det A\)로 쓴다(바르게는 \(k^n\det A\)). ③ 곱에 대한 성질 \(\det(AB) = \det A\det B\)를 합에도 쓴다. 행 연산으로 삼각행렬을 만들어 대각성분을 곱하는 방법은 계산이 적지만, 연산마다 행렬식이 어떻게 바뀌는지 기록해야 합니다.</li>
+      <li><span class="tag">연결</span>컴퓨터는 행렬식을 여인수 전개가 아니라 행 연산(가우스 소거법)으로 계산합니다. \(n \times n\)에서 여인수 전개는 약 \(n!\)번, 소거법은 약 \(n^3\)번의 곱셈이 필요하기 때문입니다.</li>
+      <li><span class="tag">적용</span>네 풀이에서 처음 틀린 줄을 찾으세요. 찾고 나면 아래에 컴퓨터가 계산한 참값이 나타납니다.</li>
+      <li class="warn"><span class="tag">판단</span>계산한 행렬식이 맞는지 확인하는 빠른 방법은 다른 행이나 열로 한 번 더 전개해 보는 것입니다. 두 결과가 같으면 부호 실수일 가능성이 줄어듭니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(\begin{vmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 0 & 0 & 5 \end{vmatrix}\)의 값은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(5\)<span class="why"><b>맞습니다.</b> 위 삼각행렬이라 대각성분의 곱 \(1 \cdot 1 \cdot 5\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(15\)<span class="why"><b>모든 성분을 더하지 않습니다.</b> 대각선 아래가 0이면 대각성분만 곱합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(0\)<span class="why"><b>0이 많다고 행렬식이 0은 아닙니다.</b> 대각성분에 0이 없습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(-5\)<span class="why"><b>행을 바꾼 적이 없으므로 부호는 그대로입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

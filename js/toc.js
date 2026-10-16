@@ -16079,43 +16079,109 @@ window.TOC = [
       "n": 1,
       "title": "가우스 소거법",
       "code": "12고대02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-row-puzzle",
+        "title": "행 연산 세 가지면 어떤 연립방정식도 풀릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-balance-eq",
+        "title": "화학 반응식의 계수는 어떻게 한 번에 정할까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "역행렬",
       "code": "12고대02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-inverse-elim",
+        "title": "역행렬이 있는지 계산하기 전에 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-hill-cipher",
+        "title": "행렬로 잠근 암호는 어떤 열쇠로 열릴까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "행렬식",
       "code": "12고대02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-det-area",
+        "title": "행렬식은 무엇을 재는 수일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-det-spot",
+        "title": "이 행렬식 계산, 어디서 틀렸을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "선형변환과 행렬",
       "code": "12고대02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-grid-transform",
+        "title": "행렬 하나가 평면 전체를 어떻게 움직일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-match-matrix",
+        "title": "바뀐 그림만 보고 행렬을 알아낼 수 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "대칭변환·닮음변환·회전변환",
       "code": "12고대02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-transform-target",
+        "title": "회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-pixel-rotate",
+        "title": "사진을 돌리면 왜 구멍이 뚫릴까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "선형변환의 합성과 역변환",
       "code": "12고대02-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-compose-order",
+        "title": "두 변환의 순서를 바꾸면 결과도 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-undo",
+        "title": "뒤틀린 그림을 제자리로 되돌리는 행렬은?"
+       }
+      ]
      }
     ]
    },

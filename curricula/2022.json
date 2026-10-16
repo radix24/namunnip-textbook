@@ -8922,37 +8922,61 @@
        "n": 1,
        "title": "가우스 소거법",
        "code": "12고대02-01",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-1",
+        "card-adalg-row-puzzle",
+        "card-adalg-balance-eq"
+       ]
       },
       {
        "n": 2,
        "title": "역행렬",
        "code": "12고대02-02",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-2",
+        "card-adalg-inverse-elim",
+        "card-adalg-hill-cipher"
+       ]
       },
       {
        "n": 3,
        "title": "행렬식",
        "code": "12고대02-03",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-3",
+        "card-adalg-det-area",
+        "card-adalg-det-spot"
+       ]
       },
       {
        "n": 4,
        "title": "선형변환과 행렬",
        "code": "12고대02-04",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-4",
+        "card-adalg-grid-transform",
+        "card-adalg-match-matrix"
+       ]
       },
       {
        "n": 5,
        "title": "대칭변환·닮음변환·회전변환",
        "code": "12고대02-05",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-5",
+        "card-adalg-transform-target",
+        "card-adalg-pixel-rotate"
+       ]
       },
       {
        "n": 6,
        "title": "선형변환의 합성과 역변환",
        "code": "12고대02-06",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-2-6",
+        "card-adalg-compose-order",
+        "card-adalg-undo"
+       ]
       }
      ]
     },
