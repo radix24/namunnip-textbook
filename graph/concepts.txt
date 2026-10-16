@@ -968,3 +968,11 @@ adc-polar-curve | 극곡선의 그래프와 대칭성 | card-adcalc-polar-trace 
 adc-polar-tangent | 극곡선의 접선 | card-adcalc-polar-tangent card-adcalc-log-spiral | adc-polar-curve calc2-param-deriv
 adc-polar-meet | 두 극곡선의 교점과 사잇각 | card-adcalc-polar-meet card-adcalc-polar-angle | adc-polar-curve adc-polar-tangent
 adc-polar-area-length | 극곡선의 넓이와 길이 | card-adcalc-polar-area card-adcalc-roll-length | adc-polar-curve calc2-int-series calc2-int-distance
+# 고급 미적분 Ⅲ. 급수
+adc-monotone | 단조수렴정리 | card-adcalc-monotone card-adcalc-monotone-proof | calc2-seq-limit alg-induction alg-recursive
+adc-positive-tests | 양항급수의 판정법 | card-adcalc-integral-test card-adcalc-test-pick card-adcalc-overhang | adc-monotone adc-improper calc2-series calc2-geo-series
+adc-alternating | 교대급수와 절대수렴·조건수렴 | card-adcalc-alt-zigzag card-adcalc-rearrange | adc-positive-tests
+adc-power-radius | 멱급수와 수렴반경 | card-adcalc-radius card-adcalc-radius-why | adc-positive-tests adc-alternating
+adc-power-ops | 멱급수의 미분·적분과 함수의 표현 | card-adcalc-series-build card-adcalc-pi-race | adc-power-radius pm-inverse-trig calc2-int-functions
+adc-taylor | 테일러다항식과 테일러급수 | card-adcalc-taylor-fit card-adcalc-taylor-build | adc-power-radius calc2-second-deriv pm-higher-deriv
+adc-taylor-uses | 테일러급수의 활용 | card-adcalc-calc-sin card-adcalc-pendulum card-adcalc-relativity | adc-taylor

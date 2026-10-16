@@ -8702,43 +8702,73 @@
        "n": 1,
        "title": "단조수렴정리",
        "code": "12고미03-01",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-1",
+        "card-adcalc-monotone",
+        "card-adcalc-monotone-proof"
+       ]
       },
       {
        "n": 2,
        "title": "양항급수의 판정법",
        "code": "12고미03-02",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-2",
+        "card-adcalc-integral-test",
+        "card-adcalc-test-pick",
+        "card-adcalc-overhang"
+       ]
       },
       {
        "n": 3,
        "title": "교대급수와 절대수렴·조건수렴",
        "code": "12고미03-03",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-3",
+        "card-adcalc-alt-zigzag",
+        "card-adcalc-rearrange"
+       ]
       },
       {
        "n": 4,
        "title": "멱급수와 수렴반경",
        "code": "12고미03-04",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-4",
+        "card-adcalc-radius",
+        "card-adcalc-radius-why"
+       ]
       },
       {
        "n": 5,
        "title": "멱급수의 성질과 함수의 표현",
        "code": "12고미03-05",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-5",
+        "card-adcalc-series-build",
+        "card-adcalc-pi-race"
+       ]
       },
       {
        "n": 6,
        "title": "테일러다항식과 테일러급수",
        "code": "12고미03-06",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-6",
+        "card-adcalc-taylor-fit",
+        "card-adcalc-taylor-build"
+       ]
       },
       {
        "n": 7,
        "title": "테일러급수의 활용",
        "code": "12고미03-07",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-3-7",
+        "card-adcalc-calc-sin",
+        "card-adcalc-pendulum",
+        "card-adcalc-relativity"
+       ]
       }
      ]
     },
