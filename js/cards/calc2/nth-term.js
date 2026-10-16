@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-nth-term");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const st = $(".t"), TOP = 1e6;
   const SUP = { 0: "⁰", 1: "¹", 2: "²", 3: "³", 4: "⁴", 5: "⁵", 6: "⁶" };

@@ -34,6 +34,15 @@
 | `NMMol` (구조식 그리기) | `js/cards/rxn/mol-draw.js` | 화학 반응의 세계 |
 | `NMCodon` (유전 부호 표) | `js/cards/gene/codon.js` | 생물의 유전 |
 | `NMLab` (가상 실험: 측정·기록 표·통계·직선 맞춤·오차 막대) | `js/lib/lab.js` | 여러 과목 (실험 카드, 3절-1) |
+| `NMPoly` · `NMEqPlot` · `NMEq` · `NMMat` | `js/cards/cm1/` | 공통수학1 |
+| `NMCoord` · `NMSets` · `NMMap` | `js/cards/cm2/` | 공통수학2 |
+| `NMExp` · `NMSeq` (수열) | `js/cards/alg/` | 대수 |
+| `NMCalc` · `NMInt` | `js/cards/calc1/` | 미적분Ⅰ |
+| `NMLim` (수열의 극한) · `NMInteg` | `js/cards/calc2/` | 미적분Ⅱ |
+| `NMStat` · `NMDice` | `js/cards/stat/` | 확률과 통계 |
+| `NMConic` · `NMGeoVec` · `NMSpace3` (좌표공간 평행 투영) | `js/cards/geo/` | 기하 |
+
+도구 이름(`window.NM*`)은 과목이 달라도 겹치면 안 된다. 한 절에 두 과목의 카드를 함께 배치하면 나중에 불린 쪽이 앞의 것을 덮어쓴다.
 
 여러 과목에서 쓰게 되면 `js/lib/`로 옮기는 것을 검토한다(옮기면 블록 머리의 경로도 함께 고칠 것).
 블록 폴더는 처음 만든 과목을 따르며, 다른 과목에 배치해도 옮기지 않는다.
@@ -164,6 +173,7 @@ python3 tools/check.py 8811 --shot <폴더> c/earth/1-6.html          # 1440px �
 python3 tools/check.py 8811 --mobile --shot <폴더> c/earth/1-6.html # 390px 스크린샷
 ```
 
+- Windows에서는 `python3` 대신 `python`(또는 `py`)으로 실행한다. 빌드는 UTF-8·LF로 읽고 쓰므로 맥과 같은 결과가 나온다.
 - 모든 페이지가 `OK`여야 한다. 스크린샷을 열어 그림, 글자 겹침, 모바일 가로 넘침을 확인한다.
 - 계산이 들어간 카드는 `node`로 핵심 수치를 따로 검산한다.
 

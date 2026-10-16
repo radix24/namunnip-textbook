@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-lim-laws");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sn = $(".nn");
   const a = (k) => 2 + 1 / k, alpha = 2;

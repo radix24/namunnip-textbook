@@ -23,6 +23,8 @@
     const TRACKS = [["phy", "물리"], ["chem", "화학"], ["bio", "생명과학"], ["earth", "지구과학"]];
     const LV = { 공통: "공통", 일반: "일반선택", 진로: "진로선택", 고급: "과학계열 진로", 실험: "과학계열 융합", 융합: "융합선택" };
     const RANK = ["공통", "일반", "진로", "고급", "실험", "융합"];
+    /* 수학 탭: 과목 수가 많아 이수 단계별 열로 나눈다. 과목이 없는 열은 그리지 않는다 */
+    const MATH_COLS = [["공통", "공통"], ["일반", "일반선택"], ["진로", "진로선택"], ["융합", "융합선택"], ["고급", "과학계열 선택"]];
     /* 학습률: 이 브라우저 기록(NMStore)에서 본(seen) 카드·읽기·영상 수 ÷ 전체 */
     const S = window.NMStore;
     const learn = (c) => {
@@ -47,7 +49,10 @@
         <div class="tree-col" data-track="${t}"><h3>${nm}</h3>${pick((c) => c.track === t).map(box).join("")}</div>`).join("")}
       </div>
       <div class="tree-band" data-track="fusion"><span class="band-lb mono">융합</span><div>${pick((c) => c.track === "fusion").map(box).join("")}</div></div>
-      <div class="tree-band" data-track="math"><span class="band-lb mono">수학</span><div>${pick((c) => c.track === "math").map(box).join("")}</div></div>`;
+      <div class="tree-band tree-math" data-track="math"><span class="band-lb mono">수학</span><div>${MATH_COLS.map(([lv, nm]) => {
+        const cs = pick((c) => c.track === "math" && c.level === lv);
+        return cs.length ? `<div class="m-col"><h3 class="mono">${nm}</h3>${cs.map(box).join("")}</div>` : "";
+      }).join("")}</div></div>`;
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
       const chapters = c.chapters.map((ch) => `

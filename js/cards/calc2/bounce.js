@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-bounce");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sh = $(".h"), sr = $(".r"), sk = $(".kk"), KMAX = 20;
   const getR = () => Math.round(+sr.value * 100) / 100;
