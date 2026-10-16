@@ -15455,43 +15455,134 @@ window.TOC = [
       "n": 1,
       "title": "뉴턴의 방법",
       "code": "12고미01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-tangent",
+        "title": "접선을 따라 내려가면 방정식의 근에 닿을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-sqrt",
+        "title": "계산기는 √a를 어떻게 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-basin",
+        "title": "출발점에서 가장 가까운 근으로 갈까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "쌍곡선함수와 역쌍곡선함수",
       "code": "12고미01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-unit",
+        "title": "원 위의 점이 (cos t, sin t)라면, 쌍곡선 위의 점은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-catenary",
+        "title": "두 끝을 잡고 늘어뜨린 사슬은 포물선일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-arsinh-proof",
+        "title": "sinh의 역함수는 왜 로그로 쓸 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "쌍곡선함수의 도함수",
       "code": "12고미01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-slope",
+        "title": "cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-deriv-spot",
+        "title": "이 미분 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-skydiver",
+        "title": "스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "쌍곡선함수의 부정적분",
       "code": "12고미01-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-sub",
+        "title": "근호 속의 x² + 1을 없애는 치환은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-cable-length",
+        "title": "100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "이상적분",
       "code": "12고미01-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-improper-p",
+        "title": "끝없이 뻗은 꼬리 아래의 넓이는 유한할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-improper-spot",
+        "title": "넓이가 음수로 나온 이 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-escape",
+        "title": "무한히 멀리 가는 데 드는 일은 유한할까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "회전체의 부피와 겉넓이",
       "code": "12고미01-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-vase",
+        "title": "정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-band-area",
+        "title": "구의 겉넓이를 띠로 어림하면 4π r²이 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-gabriel",
+        "title": "채울 수는 있는데 칠할 수는 없는 나팔이 있을까?"
+       }
+      ]
      }
     ]
    },

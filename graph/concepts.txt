@@ -953,3 +953,12 @@ pm-cont-expect | 연속확률변수의 기댓값과 표준편차 | card-pmath-co
 pm-normal | 정규분포와 연속성 보정 | card-pmath-continuity-corr card-pmath-height-normal | stat-normal stat-binom-normal
 pm-sampling | 표본추출 방법과 편향 | card-pmath-sampling-methods text-pmath-literary-digest | stat-sampling
 pm-estimation | 모평균·모비율의 추정 | card-pmath-ci-100 card-pmath-sample-size | stat-est-mean stat-est-prop
+# 고급 미적분 Ⅰ. 미적분의 활용
+adc-newton | 뉴턴의 방법 | card-adcalc-newton-tangent card-adcalc-newton-sqrt card-adcalc-newton-basin | calc1-tangent calc1-ivt
+adc-hyperbolic | 쌍곡선함수 | card-adcalc-hyp-unit card-adcalc-catenary | calc2-e-natlog
+adc-inverse-hyp | 역쌍곡선함수 | card-adcalc-arsinh-proof | adc-hyperbolic
+adc-hyp-deriv | 쌍곡선함수의 도함수 | card-adcalc-hyp-slope card-adcalc-hyp-deriv-spot card-adcalc-skydiver | adc-hyperbolic calc2-exp-log-deriv calc2-chain-rule calc2-inverse-deriv
+adc-hyp-integral | 쌍곡선함수의 적분과 쌍곡선 치환 | card-adcalc-hyp-sub card-adcalc-cable-length | adc-hyp-deriv adc-inverse-hyp calc2-int-substitution calc2-int-distance
+adc-improper | 이상적분 | card-adcalc-improper-p card-adcalc-improper-spot card-adcalc-escape | calc1-ftc calc1-limit
+adc-revolution | 회전체의 부피와 겉넓이 | card-adcalc-vase card-adcalc-band-area | calc2-int-volume calc2-int-distance
+adc-gabriel | 가브리엘의 나팔 | card-adcalc-gabriel | adc-improper adc-revolution

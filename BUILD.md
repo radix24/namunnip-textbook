@@ -41,6 +41,7 @@
 | `NMLim` (수열의 극한) · `NMInteg` | `js/cards/calc2/` | 미적분Ⅱ |
 | `NMStat` · `NMDice` | `js/cards/stat/` | 확률과 통계 |
 | `NMConic` · `NMGeoVec` · `NMSpace3` (좌표공간 평행 투영) | `js/cards/geo/` | 기하 |
+| `NMAdc` (극좌표 판·극곡선, 방향장, 룽게–쿠타, 심프슨, 쌍곡선함수) | `js/cards/adcalc/adc.js` | 고급 미적분 |
 
 도구 이름(`window.NM*`)은 과목이 달라도 겹치면 안 된다. 한 절에 두 과목의 카드를 함께 배치하면 나중에 불린 쪽이 앞의 것을 덮어쓴다.
 

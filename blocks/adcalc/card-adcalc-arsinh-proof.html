@@ -1,0 +1,63 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/lib/proof.js",
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/arsinh-proof.js"
+  ],
+  "short": "역쌍곡선함수를 로그로"
+}
+-->
+<style>
+#card-adcalc-arsinh-proof canvas { aspect-ratio: 1 / 1; max-width: 360px; margin: 0 auto; display: block; }
+</style>
+<article class="card" id="card-adcalc-arsinh-proof">
+  <header class="card-head">
+    <span class="no"></span><h2>\(\sinh\)의 역함수는 왜 로그로 쓸 수 있을까?</h2><span class="kind">역쌍곡선함수 · 증명 조립</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="y = sinh x의 그래프와 직선 y = x에 대칭인 역함수 y = arsinh x의 그래프. 증명을 마치면 로그 식의 그래프가 겹쳐진다"></canvas>
+      <div class="ctl">
+        <label class="mono">\(x\) = <output class="x-out">2</output></label>
+        <input class="sx" type="range" min="-4" max="4" step="0.05" value="2" aria-label="x 값">
+        <dl class="nums">
+          <div><dt>\(u = x + \sqrt{x^2 + 1}\)</dt><dd class="n-up">—</dd></div>
+          <div><dt>\(u = x - \sqrt{x^2 + 1}\)</dt><dd class="n-um">—</dd></div>
+          <div><dt>\(\ln(x + \sqrt{x^2 + 1})\)</dt><dd class="n-y">—</dd></div>
+        </dl>
+        <div class="pf">
+          <ol class="pf-pool">
+            <li data-k="a">\(y = \sinh^{-1} x\)로 놓으면 \(x = \sinh y = \frac{e^y - e^{-y}}{2}\)이다.</li>
+            <li data-k="b">양변에 \(2e^y\)를 곱하여 정리하면 \(e^{2y} - 2xe^y - 1 = 0\)이다.<span class="pf-why">먼저 \(x\)를 \(y\)로 나타낸 식이 있어야 곱할 수 있습니다.</span></li>
+            <li data-k="c">\(u = e^y\)로 놓으면 \(u^2 - 2xu - 1 = 0\)이므로 근의 공식으로 \(u = x \pm \sqrt{x^2 + 1}\)이다.<span class="pf-why">아직 \(e^y\)에 대한 이차방정식이 만들어지지 않았습니다.</span></li>
+            <li data-k="d">\(\sqrt{x^2 + 1} &gt; |x|\)이므로 \(x - \sqrt{x^2 + 1} &lt; 0\)이다. 그런데 \(u = e^y &gt; 0\)이므로 \(u = x + \sqrt{x^2 + 1}\)만 남는다.<span class="pf-why">두 근이 나온 다음에야 하나를 버릴 수 있습니다.</span></li>
+            <li data-k="e">양변에 자연로그를 취하면 \(\sinh^{-1} x = \ln\left(x + \sqrt{x^2 + 1}\right)\)이다.<span class="pf-why">\(e^y\)가 하나로 정해져야 로그를 취해 \(y\)를 구할 수 있습니다.</span></li>
+            <li data-k="t">\(\sinh y = x\)이므로 \(y = \frac{1}{\sinh x}\)이다.<span class="pf-why">역함수 \(\sinh^{-1}\)과 역수 \(\frac{1}{\sinh}\)를 혼동했습니다. 역함수는 \(x\)와 \(y\)의 자리를 바꾼 함수입니다.</span></li>
+            <li data-k="s">\(x - \sqrt{x^2 + 1}\)도 근이므로 \(y = \ln\left(x - \sqrt{x^2 + 1}\right)\)도 답이다.<span class="pf-why">이 값은 늘 음수입니다. \(e^y\)는 음수가 될 수 없으므로 버려야 합니다.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(\sinh x\)는 실수 전체에서 증가하므로 역함수 \(\sinh^{-1} x\)(\(\operatorname{arsinh} x\)로도 씁니다)가 있습니다. 그런데 \(\sin^{-1} x\)는 다른 함수로 바꿔 쓸 수 없는 새 함수였습니다. \(\sinh^{-1} x\)도 그럴까요?</li>
+      <li><span class="tag">복원</span>\(y = f^{-1}(x)\)이면 \(x = f(y)\)입니다. \(e^y &gt; 0\)이고, \(e^y = u\)이면 \(y = \ln u\)입니다.</li>
+      <li><span class="tag">설명</span>\(\sinh\)는 지수함수로 만든 함수이므로, \(x = \sinh y\)를 \(e^y\)에 대한 이차방정식으로 바꾸어 풀 수 있습니다. 두 근 가운데 양수인 것만 \(e^y\)가 될 수 있다는 점이 핵심입니다. 같은 방법으로 \[\cosh^{-1} x = \ln\left(x + \sqrt{x^2 - 1}\right)\] \[\tanh^{-1} x = \frac{1}{2}\ln\frac{1 + x}{1 - x}\]을 얻습니다(앞의 것은 \(x \ge 1\), 뒤의 것은 \(|x| &lt; 1\)). \(\cosh\)는 일대일이 아니므로 \(x \ge 0\)으로 정의역을 제한하고 역함수를 정합니다.</li>
+      <li><span class="tag">연결</span>역쌍곡선함수가 로그로 쓰인다는 사실 때문에 \(\int\frac{dx}{\sqrt{x^2 + 1}} = \ln\left(x + \sqrt{x^2 + 1}\right) + C\) 같은 적분이 쌍곡선함수 치환으로 풀립니다(이 대단원 4절).</li>
+      <li><span class="tag">적용</span>단계를 순서대로 쌓아 증명을 완성하세요. \(x\)를 움직이며 두 근 \(x \pm \sqrt{x^2 + 1}\)의 부호를 보세요. 한 근은 언제나 음수인가요? 증명을 마치면 로그 식의 그래프가 역함수의 그래프와 겹치는지 확인하세요.</li>
+      <li class="warn"><span class="tag">판단</span>\(\sinh^{-1} x\)의 \(-1\)은 역함수를 뜻하는 기호이지 \(-1\)제곱이 아닙니다. \(\frac{1}{\sinh x}\)는 따로 \(\operatorname{csch} x\)라고 씁니다. 헷갈리지 않으려고 \(\operatorname{arsinh}\)라는 이름을 쓰기도 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(\sinh y = \frac{3}{4}\)을 만족하는 실수 \(y\)는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\ln 2\)<span class="why"><b>맞습니다.</b> \(\frac{3}{4} + \sqrt{\frac{9}{16} + 1} = \frac{3}{4} + \frac{5}{4} = 2\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\ln 2\)<span class="why"><b>부호가 반대입니다.</b> \(\sinh y &gt; 0\)이면 \(y &gt; 0\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{\sinh\frac{3}{4}}\)<span class="why"><b>역함수와 역수를 혼동했습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\ln\frac{5}{4}\)<span class="why"><b>\(x\)를 빠뜨렸습니다.</b> \(\ln\left(x + \sqrt{x^2 + 1}\right)\)에서 \(\sqrt{x^2 + 1}\)만 남겼습니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

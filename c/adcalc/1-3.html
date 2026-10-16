@@ -1,0 +1,244 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>쌍곡선함수의 도함수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="쌍곡선함수와 역쌍곡선함수의 도함수. 접선의 기울기로 (cosh x)&#x27; = sinh x를 확인하는 카드, 도함수 계산의 오류 찾기, 공기 저항을 받는 낙하 속도 tanh 모형.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-hyp-slope canvas { aspect-ratio: 4 / 4.2; max-width: 420px; display: block; margin: 0 auto; }
+    #card-adcalc-hyp-deriv-spot canvas { aspect-ratio: 16 / 9; }
+    #card-adcalc-hyp-deriv-spot .sol[hidden] { display: none; }
+    #card-adcalc-skydiver canvas { aspect-ratio: 16 / 10; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="1-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>쌍곡선함수의 도함수</h1>
+    <p class="lead">\(\cosh x\)와 \(\sinh x\)는 \(e^x\)와 \(e^{-x}\)로 만든 함수이므로 지수함수의 도함수에서 바로 도함수가 나옵니다. 결과는 삼각함수와 닮았지만 부호 하나가 다릅니다. 이 절에서는 접선의 기울기를 따라가며 도함수를 확인하고, 삼각함수를 흉내 내다 생기는 계산 오류를 찾고, 공기 저항을 받으며 떨어지는 스카이다이버의 속도가 \(\tanh\)로 나타나는 까닭을 미분으로 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/2-1.html#card-calc2-exp-slope" title="미적분Ⅱ 2.1 · 접선의 기울기가 높이와 같은 지수함수의 밑은?">지수함수와 로그함수의 도함수</a><a class="p p-card" href="../../c/calc2/2-5.html#card-calc2-chain-lines" title="미적분Ⅱ 2.5 · 안쪽 함수와 바깥 함수의 변화율은 어떻게 합쳐질까?">합성함수의 미분법</a><a class="p p-card" href="../../c/calc2/2-7.html#card-calc2-inverse-slope" title="미적분Ⅱ 2.7 · 식을 모르는 역함수의 기울기를 구할 수 있을까?">역함수의 미분법</a><a class="p p-card" href="../../c/calc2/2-4.html#card-calc2-quotient" title="미적분Ⅱ 2.4 · 몫 f/g의 도함수는 f&#x27;/g&#x27;일까?">몫의 미분법</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-hyp-slope"><span class="mono">1.3.1</span>접선의 기울기로 도함수 찾기</a></li>
+        <li><a href="#card-adcalc-hyp-deriv-spot"><span class="mono">1.3.2</span>쌍곡선함수 미분의 오류 찾기</a></li>
+        <li><a href="#card-adcalc-skydiver"><span class="mono">1.3.3</span>스카이다이버의 속도와 tanh</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-1-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-hyp-slope">
+        <header class="card-head">
+          <span class="no">1.3.1</span><h2>\(\cosh x\)의 접선의 기울기를 모으면 어떤 그래프가 될까?</h2><span class="kind">쌍곡선함수의 도함수 · 조작 · 발견</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="위: 고른 함수의 그래프와 x에서의 접선. 아래: x를 움직일 때마다 접선의 기울기를 점으로 찍어 모은 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-f="cosh" aria-pressed="true">\(\cosh x\)</button>
+                <button class="chip" type="button" data-f="sinh">\(\sinh x\)</button>
+                <button class="chip" type="button" data-f="tanh">\(\tanh x\)</button>
+                <button class="chip" type="button" data-f="cos">비교: \(\cos x\)</button>
+              </div>
+              <label class="mono">\(x\) = <output class="x-out">0</output></label>
+              <input class="sx" type="range" min="-2.5" max="2.5" step="0.02" value="0" aria-label="접점의 x 좌표">
+              <div class="presets"><button class="chip go-sweep" type="button">끝에서 끝까지 쓸기</button><button class="chip go-ans" type="button" aria-pressed="false">짐작한 함수 겹치기</button><button class="chip go-clear" type="button">점 지우기</button></div>
+              <dl class="nums">
+                <div><dt>접선의 기울기</dt><dd class="n-m">—</dd></div>
+                <div><dt>겹친 함수의 값</dt><dd class="n-g">—</dd></div>
+                <div><dt>모은 점</dt><dd class="n-k">0</dd></div>
+              </dl>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\cosh x\)의 그래프는 \(x = 0\)에서 평평하고, 오른쪽으로 갈수록 가파르게 오르며, 왼쪽에서는 내려갑니다. 접선의 기울기만 모아 그래프로 그리면 어떤 함수가 나올까요?</li>
+            <li><span class="tag">복원</span>\((e^x)' = e^x\), \((e^{-x})' = -e^{-x}\)이고, 미분은 합과 실수배를 지킵니다. 몫의 미분법은 \(\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}\)입니다.</li>
+            <li><span class="tag">설명</span>정의에서 바로 \[(\cosh x)' = \frac{e^x - e^{-x}}{2} = \sinh x\] \[(\sinh x)' = \frac{e^x + e^{-x}}{2} = \cosh x\]입니다. 몫의 미분법과 \(\cosh^2 x - \sinh^2 x = 1\)을 쓰면 \((\tanh x)' = \frac{1}{\cosh^2 x}\)입니다(\(\frac{1}{\cosh x}\)을 \(\operatorname{sech} x\)로 씁니다). 삼각함수와 모양은 같지만, \((\cos x)' = -\sin x\)와 달리 \((\cosh x)' = \sinh x\)에는 음의 부호가 없습니다.</li>
+            <li><span class="tag">연결</span>역함수의 미분법으로 \((\sinh^{-1} x)' = \frac{1}{\sqrt{x^2 + 1}}\), \((\cosh^{-1} x)' = \frac{1}{\sqrt{x^2 - 1}}\ (x &gt; 1)\), \((\tanh^{-1} x)' = \frac{1}{1 - x^2}\ (|x| &lt; 1)\)도 얻습니다. 두 번 미분하면 \((\cosh x)'' = \cosh x\)이므로 \(\cosh\)와 \(\sinh\)는 미분방정식 \(y'' = y\)의 해입니다. \(\cos\)와 \(\sin\)이 \(y'' = -y\)의 해인 것과 짝을 이룹니다.</li>
+            <li><span class="tag">적용</span>\(\cosh x\)를 고르고 \(x\)를 움직이거나 쓸기 단추를 눌러 기울기 점을 모으세요. 점들이 어떤 그래프를 이루는지 짐작한 다음 겹쳐 보세요. \(\tanh x\)의 기울기는 어디에서 가장 크고, 그 값은 얼마인가요? \(\cos x\)의 기울기 점과 비교하면 무엇이 다른가요?</li>
+            <li class="warn"><span class="tag">판단</span>쌍곡선함수의 공식은 삼각함수 공식에서 부호만 몇 개 바꾸면 되는 경우가 많지만, 어느 부호가 바뀌는지는 외워 맞히는 것이 아니라 정의에서 확인해야 합니다. 예를 들어 \(\cos^2 + \sin^2 = 1\)은 \(\cosh^2 - \sinh^2 = 1\)로 바뀌지만 \((\sin)' = \cos\)는 \((\sinh)' = \cosh\)로 그대로입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(f(x) = \cosh 2x\)일 때 \(f''(x)\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(4\cosh 2x\)<span class="why"><b>맞습니다.</b> \(f'(x) = 2\sinh 2x\), \(f''(x) = 4\cosh 2x\)입니다. 곧 \(f'' = 4f\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-4\cosh 2x\)<span class="why"><b>삼각함수처럼 부호를 바꾸었습니다.</b> \(\cos 2x\)라면 맞는 답입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\cosh 2x\)<span class="why"><b>합성함수의 미분에서 나오는 2를 빠뜨렸습니다.</b> 한 번 미분할 때마다 2가 곱해집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(4\sinh 2x\)<span class="why"><b>한 번 더 미분했거나 한 번 덜 미분했습니다.</b> \(\cosh \to \sinh \to \cosh\)로 두 번이면 다시 \(\cosh\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-2.html#card-adcalc-hyp-unit"><small class="mono">고급 미적분 1.2</small>원 위의 점이 (cos t, sin t)라면, 쌍곡선 위의 점은?</a><a href="../../c/adcalc/1-2.html#card-adcalc-catenary"><small class="mono">고급 미적분 1.2</small>두 끝을 잡고 늘어뜨린 사슬은 포물선일까?</a><a href="../../c/calc2/2-1.html#card-calc2-exp-slope"><small class="mono">미적분Ⅱ 2.1</small>접선의 기울기가 높이와 같은 지수함수의 밑은?</a><a href="../../c/calc2/2-1.html#card-calc2-log-deriv"><small class="mono">미적분Ⅱ 2.1</small>y = ln x의 접선의 기울기는 왜 1/x일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-hyp-deriv-spot">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>이 미분 풀이, 어디가 틀렸을까?</h2><span class="kind">쌍곡선함수의 도함수 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets">
+              <button class="chip" type="button" data-s="0" aria-pressed="true">풀이 1</button>
+              <button class="chip" type="button" data-s="1">풀이 2</button>
+              <button class="chip" type="button" data-s="2">풀이 3</button>
+              <button class="chip" type="button" data-s="3">풀이 4</button>
+            </div>
+            <canvas aria-label="실선: 풀이가 낸 도함수의 그래프. 점선: 원래 함수의 접선 기울기를 수치로 잰 그래프. 두 그래프가 다르면 풀이 어딘가가 틀렸다"></canvas>
+            <div class="ctl">
+              <p class="mono small">처음 틀린 줄을 누르세요. 틀린 곳이 없으면 마지막 줄을 누르세요. 두 그래프가 겹치는지가 단서입니다.</p>
+              <div class="sol" data-s="0">
+                <ol class="spot">
+                  <li>\(f(x) = x\cosh x\)를 곱의 미분법으로 미분한다.<span class="why">방법은 맞습니다.</span></li>
+                  <li data-bad>\(f'(x) = \cosh x + x(\cosh x)' = \cosh x - x\sinh x\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \((\cosh x)' = \sinh x\)이고 음의 부호가 없습니다. \(\cos x\)의 공식을 흉내 냈습니다. 바른 답은 \(\cosh x + x\sinh x\)입니다.</span></li>
+                  <li>따라서 \(f'(0) = 1\)이다.<span class="why">\(x = 0\)에서는 둘째 항이 0이라 우연히 맞았습니다. 다른 점에서는 틀린 값이 나옵니다.</span></li>
+                  <li>이 풀이에는 틀린 곳이 없다.<span class="why">두 그래프가 \(x = 0\)에서만 만나는 것을 보세요.</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="1" hidden>
+                <ol class="spot">
+                  <li>\(f(x) = \sinh 3x\)는 \(\sinh u\)와 \(u = 3x\)의 합성함수이다.<span class="why">맞습니다.</span></li>
+                  <li data-bad>\((\sinh u)' = \cosh u\)이므로 \(f'(x) = \cosh 3x\)이다.<span class="why"><b>여기가 틀렸습니다.</b> 합성함수의 미분법에서 \(\frac{du}{dx} = 3\)을 곱해야 합니다. 바른 답은 \(3\cosh 3x\)입니다.</span></li>
+                  <li>\(f'(0) = \cosh 0 = 1\)이다.<span class="why">앞 줄의 잘못을 이어받았습니다. 실제 \(f'(0) = 3\)입니다.</span></li>
+                  <li>이 풀이에는 틀린 곳이 없다.<span class="why">원점에서 두 그래프의 높이를 비교하세요.</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="2" hidden>
+                <ol class="spot">
+                  <li>\(\tanh x = \frac{\sinh x}{\cosh x}\)에 몫의 미분법을 쓴다.<span class="why">맞습니다.</span></li>
+                  <li>\((\tanh x)' = \frac{\cosh x \cdot \cosh x - \sinh x \cdot \sinh x}{\cosh^2 x}\)이다.<span class="why">맞습니다. \((\sinh x)' = \cosh x\), \((\cosh x)' = \sinh x\)를 바르게 넣었습니다.</span></li>
+                  <li>\(\cosh^2 x - \sinh^2 x = 1\)이므로 \((\tanh x)' = \frac{1}{\cosh^2 x}\)이다.<span class="why">맞습니다.</span></li>
+                  <li data-bad>이 풀이에는 틀린 곳이 없다.<span class="why"><b>맞습니다.</b> 두 그래프가 완전히 겹칩니다. \(\frac{1}{\cosh^2 x} = 1 - \tanh^2 x\)로 쓸 수도 있습니다.</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="3" hidden>
+                <ol class="spot">
+                  <li>\(y = \sinh^{-1} x\)로 놓으면 \(x = \sinh y\)이다.<span class="why">맞습니다.</span></li>
+                  <li>양변을 \(y\)로 미분하면 \(\frac{dx}{dy} = \cosh y\)이므로 \(\frac{dy}{dx} = \frac{1}{\cosh y}\)이다.<span class="why">역함수의 미분법을 바르게 썼습니다.</span></li>
+                  <li data-bad>\(\cosh^2 y = \sinh^2 y - 1 = x^2 - 1\)이므로 \(\frac{dy}{dx} = \frac{1}{\sqrt{x^2 - 1}}\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(\cosh^2 y - \sinh^2 y = 1\)이므로 \(\cosh^2 y = 1 + \sinh^2 y = 1 + x^2\)입니다. 바른 답은 \(\frac{1}{\sqrt{x^2 + 1}}\)입니다. 이 풀이의 답은 \(|x| &lt; 1\)에서 정의되지도 않습니다.</span></li>
+                  <li>이 풀이에는 틀린 곳이 없다.<span class="why">풀이의 그래프가 \(-1 &lt; x &lt; 1\)에서 끊긴 것을 보세요. 원래 함수는 실수 전체에서 미분가능합니다.</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>쌍곡선함수의 미분 공식은 삼각함수와 닮아서 빨리 익숙해집니다. 그런데 닮았기 때문에 생기는 실수도 있습니다. 어디에서 틀리기 쉬울까요?</li>
+            <li><span class="tag">복원</span>\((\sinh x)' = \cosh x\), \((\cosh x)' = \sinh x\), \(\cosh^2 x - \sinh^2 x = 1\). 합성함수의 미분법 \(\{f(g(x))\}' = f'(g(x))g'(x)\)와 역함수의 미분법 \(\frac{dy}{dx} = \frac{1}{dx/dy}\).</li>
+            <li><span class="tag">설명</span>틀리기 쉬운 곳은 세 군데입니다. ① \(\cos\)처럼 \((\cosh x)'\)에 음의 부호를 붙인다(풀이 1). ② 합성함수의 속미분을 빠뜨린다(풀이 2). ③ \(\cos^2 + \sin^2 = 1\)을 흉내 내 \(\cosh^2 y\)를 잘못 바꾼다(풀이 4). 계산이 맞는지 의심스러우면 \(x = 0\) 한 점이 아니라 여러 점에서 기울기를 확인해야 합니다. 풀이 1은 \(x = 0\)에서만 우연히 맞습니다.</li>
+            <li><span class="tag">연결</span>풀이 4의 바른 결과 \((\sinh^{-1} x)' = \frac{1}{\sqrt{x^2 + 1}}\)을 거꾸로 읽으면 \(\int \frac{dx}{\sqrt{x^2 + 1}} = \sinh^{-1} x + C\)입니다. 다음 절의 적분에서 바로 씁니다.</li>
+            <li><span class="tag">적용</span>네 풀이에서 처음 틀린 줄을 찾으세요. 실선(풀이의 답)과 점선(실제 기울기)이 어디에서 갈라지나요? 풀이 3에서는 두 선이 겹치나요?</li>
+            <li class="warn"><span class="tag">판단</span>한 점에서 값이 맞는다고 도함수가 맞는 것은 아닙니다. 반대로 그래프 두 개가 그림의 범위에서 겹쳐 보여도 증명은 아닙니다. 그래프는 틀린 곳을 찾는 단서이고, 맞다는 근거는 계산의 각 단계입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(f(x) = \ln(\cosh x)\)의 도함수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\tanh x\)<span class="why"><b>맞습니다.</b> \(\frac{(\cosh x)'}{\cosh x} = \frac{\sinh x}{\cosh x}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\tanh x\)<span class="why"><b>\((\cosh x)'\)에 음의 부호를 붙였습니다.</b> \(\ln(\cos x)\)라면 \(-\tan x\)가 맞습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{\cosh x}\)<span class="why"><b>속미분 \((\cosh x)' = \sinh x\)를 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{1}{\sinh x}\)<span class="why"><b>분자와 분모를 바꾸었습니다.</b> \((\ln u)' = \frac{u'}{u}\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-2.html#card-adcalc-hyp-unit"><small class="mono">고급 미적분 1.2</small>원 위의 점이 (cos t, sin t)라면, 쌍곡선 위의 점은?</a><a href="../../c/adcalc/1-2.html#card-adcalc-catenary"><small class="mono">고급 미적분 1.2</small>두 끝을 잡고 늘어뜨린 사슬은 포물선일까?</a><a href="../../c/calc2/2-1.html#card-calc2-exp-slope"><small class="mono">미적분Ⅱ 2.1</small>접선의 기울기가 높이와 같은 지수함수의 밑은?</a><a href="../../c/calc2/2-1.html#card-calc2-log-deriv"><small class="mono">미적분Ⅱ 2.1</small>y = ln x의 접선의 기울기는 왜 1/x일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-skydiver">
+        <header class="card-head">
+          <span class="no">1.3.3</span><h2>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</h2><span class="kind">\(\tanh\)의 도함수 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="시간에 따른 낙하 속도. 공기 저항이 없으면 직선 v = gt, 있으면 종단 속도에 다가가는 곡선 v = vT tanh(gt/vT). 고른 시각의 접선과 가속도"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">종단 속도 \(v_T\) = <output class="v-out">55</output> m/s</label>
+                <input class="sv" type="range" min="20" max="90" step="1" value="55" aria-label="종단 속도"></div>
+                <div><label class="mono">시각 \(t\) = <output class="t-out">5</output> s</label>
+                <input class="st" type="range" min="0" max="25" step="0.1" value="5" aria-label="시각"></div>
+              </div>
+              <dl class="nums n4">
+                <div><dt>속도 \(v\) (m/s)</dt><dd class="n-v">—</dd></div>
+                <div><dt>접선 기울기 \(v'\)</dt><dd class="n-a">—</dd></div>
+                <div><dt>\(g\left(1 - \frac{v^2}{v_T^2}\right)\)</dt><dd class="n-r">—</dd></div>
+                <div><dt>\(v \div v_T\)</dt><dd class="n-p">—</dd></div>
+              </dl>
+              <p class="fig-note">\(g = 9.8\ \mathrm{m/s^2}\). 공기 저항이 속도의 제곱에 비례한다는 모형입니다. 실제 저항은 자세, 고도에 따른 공기 밀도에 따라 달라집니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공기 저항이 없다면 4000 m 높이에서 뛰어내린 사람은 땅에 닿을 때 초속 280 m 가까이 됩니다. 실제 스카이다이버는 몇 초 뒤부터 거의 일정한 속도로 떨어집니다. 이 속도 변화를 어떤 함수로 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>\((\tanh x)' = \frac{1}{\cosh^2 x} = 1 - \tanh^2 x\)이고, \(\tanh x\)는 \(x \to \infty\)일 때 1에 다가갑니다. 가속도는 속도의 순간변화율입니다.</li>
+            <li><span class="tag">설명</span>공기 저항이 속도의 제곱에 비례하면 운동 방정식은 \(mv' = mg - kv^2\), 곧 \(v' = g\left(1 - \frac{v^2}{v_T^2}\right)\)입니다. 여기서 \(v_T = \sqrt{\frac{mg}{k}}\)는 저항과 무게가 같아지는 <em>종단 속도</em>입니다. \(v = v_T\tanh\frac{gt}{v_T}\)로 놓고 미분하면 \[v' = v_T \cdot \frac{g}{v_T}\left(1 - \tanh^2\frac{gt}{v_T}\right) = g\left(1 - \frac{v^2}{v_T^2}\right)\]이므로 이 함수가 방정식을 만족합니다. 처음(\(t\)가 작을 때)에는 \(\tanh x \approx x\)라서 \(v \approx gt\)이고, 시간이 지나면 \(v_T\)에 다가갑니다.</li>
+            <li><span class="tag">연결</span>배를 아래로 한 자세의 스카이다이버의 종단 속도는 약 55 m/s(시속 약 200 km)로 알려져 있습니다. 머리를 아래로 하면 저항이 줄어 더 빨라지고, 낙하산을 펴면 저항이 크게 늘어 종단 속도가 수 m/s로 떨어집니다. 이런 방정식을 미분방정식이라 하고, 4대단원에서 직접 풉니다.</li>
+            <li><span class="tag">적용</span>\(t\)를 움직이며 접선의 기울기 \(v'\)와 \(g\left(1 - \frac{v^2}{v_T^2}\right)\)이 늘 같은지 확인하세요. \(v_T = 55\)일 때 종단 속도의 95 %에 이르는 시각은 몇 초인가요? \(v_T\)를 키우면 그 시각은 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>속도가 \(v_T\)에 "도달"하는 시각은 없습니다. \(\tanh\)는 1에 끝없이 다가갈 뿐 1이 되지 않습니다. 또 이 모형에서 저항을 속도에 정비례(\(kv\))로 바꾸면 해는 \(\tanh\)가 아니라 지수함수 \(v_T(1 - e^{-gt/v_T})\)가 됩니다. 저항이 속도의 몇 제곱에 비례하는지는 물체의 크기와 빠르기에 따라 다릅니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(v = v_T\tanh\frac{gt}{v_T}\)에서 속도가 종단 속도의 절반일 때 가속도는 \(g\)의 몇 배인가요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{3}{4}\)배<span class="why"><b>맞습니다.</b> \(v' = g\left(1 - \left(\frac{1}{2}\right)^2\right) = \frac{3}{4}g\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{1}{2}\)배<span class="why"><b>저항이 속도에 정비례한다고 보았습니다.</b> 이 모형의 저항은 \(v^2\)에 비례합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{4}\)배<span class="why"><b>저항의 몫과 가속도를 바꾸어 읽었습니다.</b> 저항이 무게의 \(\frac{1}{4}\)이므로 남는 힘은 \(\frac{3}{4}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1배<span class="why"><b>공기 저항을 무시했습니다.</b> 저항이 없을 때만 가속도가 늘 \(g\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-2.html#card-adcalc-hyp-unit"><small class="mono">고급 미적분 1.2</small>원 위의 점이 (cos t, sin t)라면, 쌍곡선 위의 점은?</a><a href="../../c/adcalc/1-2.html#card-adcalc-catenary"><small class="mono">고급 미적분 1.2</small>두 끝을 잡고 늘어뜨린 사슬은 포물선일까?</a><a href="../../c/calc2/2-1.html#card-calc2-exp-slope"><small class="mono">미적분Ⅱ 2.1</small>접선의 기울기가 높이와 같은 지수함수의 밑은?</a><a href="../../c/calc2/2-1.html#card-calc2-log-deriv"><small class="mono">미적분Ⅱ 2.1</small>y = ln x의 접선의 기울기는 왜 1/x일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/hyp-slope.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/hyp-deriv-spot.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/skydiver.js"></script>
+</body>
+</html>

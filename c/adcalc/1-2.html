@@ -1,0 +1,218 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>쌍곡선함수와 역쌍곡선함수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="쌍곡선함수 sinh, cosh, tanh의 뜻과 그래프, 역쌍곡선함수. 단위쌍곡선 위의 점과 넓이로 원의 삼각함수와 비교하는 카드, 늘어진 사슬(현수선) 시뮬레이션, arsinh의 로그 표현을 증명하는 증명 조립 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-hyp-unit canvas { aspect-ratio: 16 / 9; }
+    #card-adcalc-catenary canvas { aspect-ratio: 16 / 11; }
+    #card-adcalc-arsinh-proof canvas { aspect-ratio: 1 / 1; max-width: 360px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="1-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>쌍곡선함수와 역쌍곡선함수</h1>
+    <p class="lead">지수함수 \(e^x\)와 \(e^{-x}\)를 더하고 빼서 반으로 나누면 <em>쌍곡선함수</em> \(\cosh x\), \(\sinh x\)가 됩니다. 이름처럼 점 \((\cosh t, \sinh t)\)는 쌍곡선 \(x^2 - y^2 = 1\) 위에 있고, 삼각함수와 닮은 공식을 많이 만족합니다. 이 절에서는 원과 쌍곡선을 나란히 놓고 두 함수를 비교하고, 두 끝을 잡고 늘어뜨린 사슬이 포물선이 아니라 \(\cosh\)의 그래프라는 것을 시뮬레이션으로 확인하고, 역쌍곡선함수를 로그로 나타내는 증명을 조립합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/1-7.html#card-alg-exp-graph" title="대수 1.7 · 밑이 바뀌면 지수함수의 그래프는 어떻게 달라질까?">지수함수의 그래프</a><a class="p p-card" href="../../c/calc2/2-1.html#card-calc2-e-limit" title="미적분Ⅱ 2.1 · (1 + h)¹/h는 h가 0에 가까워지면 어디로 갈까?">자연로그</a><a class="p p-card" href="../../c/geo/1-3.html#card-geo-hyperbola-def" title="기하 1.3 · 두 초점까지 거리의 차가 일정한 점은 어떤 곡선을 이룰까?">쌍곡선의 방정식</a><a class="p p-card" href="../../c/alg/1-7.html#card-alg-inverse-graph" title="대수 1.7 · 로그함수의 그래프는 지수함수의 그래프와 어떤 관계일까?">역함수의 그래프</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-hyp-unit"><span class="mono">1.2.1</span>원과 쌍곡선 위의 점</a></li>
+        <li><a href="#card-adcalc-catenary"><span class="mono">1.2.2</span>늘어진 사슬은 포물선일까</a></li>
+        <li><a href="#card-adcalc-arsinh-proof"><span class="mono">1.2.3</span>역쌍곡선함수를 로그로</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-1-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-hyp-unit">
+        <header class="card-head">
+          <span class="no">1.2.1</span><h2>원 위의 점이 \((\cos t, \sin t)\)라면, 쌍곡선 위의 점은?</h2><span class="kind">쌍곡선함수 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="왼쪽: 단위원 위의 점 (cos t, sin t)와 넓이가 t/2인 부채꼴. 오른쪽: 쌍곡선 x² − y² = 1 위의 점 (cosh t, sinh t)와 넓이가 t/2인 쌍곡 부채꼴"></canvas>
+            <div class="ctl">
+              <label class="mono">\(t\) = <output class="t-out">0.8</output></label>
+              <input class="st" type="range" min="-2.2" max="2.2" step="0.01" value="0.8" aria-label="매개변수 t">
+              <dl class="nums n4">
+                <div><dt>\(\cosh t\)</dt><dd class="n-c">—</dd></div>
+                <div><dt>\(\sinh t\)</dt><dd class="n-s">—</dd></div>
+                <div><dt>\(\cosh^2 t - \sinh^2 t\)</dt><dd class="n-i">—</dd></div>
+                <div><dt>칠한 넓이 (쌍곡선)</dt><dd class="n-a">—</dd></div>
+              </dl>
+              <p class="fig-note">두 그림 모두 칠한 부분의 넓이는 \(\frac{t}{2}\)입니다. 오른쪽 넓이는 경계를 따라 수치로 잰 값입니다. 음의 \(t\)는 \(x\)축 아래쪽 넓이로 셉니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>단위원 \(x^2 + y^2 = 1\) 위의 점은 \((\cos t, \sin t)\)로 나타냅니다. 쌍곡선 \(x^2 - y^2 = 1\) 위의 점도 이렇게 한 변수 \(t\)의 함수 두 개로 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>\(\cos^2 t + \sin^2 t = 1\)이고, 단위원에서 각 \(t\)의 부채꼴 넓이는 \(\frac{t}{2}\)입니다. \(e^x\)는 늘 양수이고 \(e^{-x} = \frac{1}{e^x}\)입니다.</li>
+            <li><span class="tag">설명</span>다음 두 함수를 <em>쌍곡선함수</em>라고 합니다. \[\cosh x = \frac{e^x + e^{-x}}{2}\] \[\sinh x = \frac{e^x - e^{-x}}{2}\] 또 \(\tanh x = \frac{\sinh x}{\cosh x}\)입니다. 두 식을 제곱해서 빼면 교차항 \(e^x e^{-x} = 1\)만 남아 \(\cosh^2 x - \sinh^2 x = 1\)이므로 점 \((\cosh t, \sinh t)\)는 쌍곡선 \(x^2 - y^2 = 1\)의 오른쪽 가지 위에 있습니다. 게다가 원점, \((1, 0)\), 이 점이 쌍곡선과 함께 둘러싸는 넓이도 원처럼 정확히 \(\frac{t}{2}\)입니다. 그래서 \(t\)를 "쌍곡선의 각"처럼 볼 수 있습니다.</li>
+            <li><span class="tag">연결</span>\(\cosh\)는 짝함수(\(\cosh(-x) = \cosh x\))이고 \(\sinh\)는 홀함수입니다. \(\cosh x \ge 1\)이고, \(\tanh x\)는 \(-1\)과 1 사이에 갇힙니다. 원의 \(\cos t\)는 주기함수이지만 \(\cosh t\)는 \(t\)가 커지면 \(\frac{e^t}{2}\)처럼 끝없이 커집니다.</li>
+            <li><span class="tag">적용</span>\(t\)를 움직이며 두 점을 비교하세요. \(\cosh^2 t - \sinh^2 t\)는 언제나 1인가요? 칠한 넓이가 \(\frac{t}{2}\)와 같은가요? \(t\)를 음수로 하면 쌍곡선 위의 점은 어디로 가나요? 왼쪽 점은 한 바퀴 돌아 제자리로 오지만 오른쪽 점은 어떤가요?</li>
+            <li class="warn"><span class="tag">판단</span>쌍곡선함수의 \(t\)는 각의 크기가 아닙니다. 원점에서 점 \((\cosh t, \sinh t)\)로 그은 선분이 \(x\)축과 이루는 각은 \(45^\circ\)를 넘지 못하지만 \(t\)는 얼마든지 커집니다. \(t\)는 넓이의 두 배로 정한 수입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(x &gt; 0\)이고 \(\cosh x = \frac{5}{4}\)일 때 \(\sinh x\)의 값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{3}{4}\)<span class="why"><b>맞습니다.</b> \(\sinh^2 x = \cosh^2 x - 1 = \frac{9}{16}\)이고, \(x &gt; 0\)이면 \(\sinh x &gt; 0\)입니다. 실제로 \(x = \ln 2\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\frac{3}{4}\)<span class="why"><b>부호를 잘못 골랐습니다.</b> \(\sinh x\)는 \(x\)와 부호가 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{\sqrt{41}}{4}\)<span class="why"><b>원의 공식처럼 더했습니다.</b> 쌍곡선함수는 \(\cosh^2 - \sinh^2 = 1\)로 <b>뺍니다</b>.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{1}{4}\)<span class="why"><b>제곱하지 않고 뺐습니다.</b> \(\cosh x - 1\)이 아니라 \(\cosh^2 x - 1\)의 제곱근입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/2-1.html#card-calc2-e-limit"><small class="mono">미적분Ⅱ 2.1</small>(1 + h)¹/h는 h가 0에 가까워지면 어디로 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-catenary">
+        <header class="card-head">
+          <span class="no">1.2.2</span><h2>두 끝을 잡고 늘어뜨린 사슬은 포물선일까?</h2><span class="kind">현수선 · 시뮬레이션 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="두 못에 건 사슬(구슬 40개를 막대로 이은 모형)이 중력으로 늘어진 모양. 같은 처짐의 포물선과 현수선을 겹쳐 볼 수 있다"></canvas>
+            <div class="ctl">
+              <label class="mono">사슬 길이 ÷ 두 못 사이 거리 = <output class="l-out">1.6</output></label>
+              <input class="sl" type="range" min="1.05" max="2.6" step="0.01" value="1.6" aria-label="사슬 길이와 두 못 사이 거리의 비">
+              <div class="presets">
+                <button class="chip ov-par" type="button" aria-pressed="false">포물선 겹치기</button>
+                <button class="chip ov-cat" type="button" aria-pressed="false">현수선 겹치기</button>
+                <button class="chip go-shake" type="button">흔들기</button>
+              </div>
+              <dl class="nums">
+                <div><dt>처짐 ÷ 거리</dt><dd class="n-sag">—</dd></div>
+                <div><dt>포물선과 최대 차이</dt><dd class="n-p">—</dd></div>
+                <div><dt>현수선과 최대 차이</dt><dd class="n-c">—</dd></div>
+              </dl>
+              <p class="fig-note">구슬마다 중력을 주고 이웃 구슬 사이 거리를 일정하게 지키도록 되풀이해 계산한 모형입니다. 두 곡선은 두 못과 가장 낮은 점을 지나게 맞춥니다. 차이는 두 못 사이 거리에 대한 비율입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>목걸이나 전선을 두 끝만 잡고 늘어뜨리면 U자 모양이 됩니다. 이 곡선은 포물선일까요? 갈릴레이는 포물선에 가깝다고 보았습니다.</li>
+            <li><span class="tag">복원</span>\(\cosh x = \frac{e^x + e^{-x}}{2}\)는 짝함수이고 \(x = 0\)에서 최솟값 1을 가집니다. 포물선 \(y = ax^2\)도 \(y\)축에 대칭이고 꼭짓점에서 가장 낮습니다.</li>
+            <li><span class="tag">설명</span>사슬의 각 부분은 양쪽에서 당기는 장력과 자기 무게가 균형을 이룹니다. 이 균형을 식으로 쓰면 가장 낮은 점에서 \(x\)만큼 떨어진 곳의 기울기가 그 사이 사슬의 <b>길이</b>에 비례해야 합니다. 이 조건을 만족하는 곡선이 \[y = a\cosh\frac{x}{a}\]이고, 이를 <em>현수선</em>(catenary, 라틴어로 사슬)이라고 합니다. 1691년 요한 베르누이, 라이프니츠, 하위헌스가 각각 이 답을 냈습니다. 포물선은 무게가 <b>가로 거리</b>에 비례해 걸릴 때, 예를 들어 무거운 다리 상판을 고르게 매단 현수교 케이블의 모양입니다.</li>
+            <li><span class="tag">연결</span>현수선을 뒤집으면 자기 무게를 압축력만으로 버티는 아치가 됩니다. 미국 세인트루이스의 게이트웨이 아치(높이와 폭이 모두 약 192 m)는 이 모양을 무게 분포에 맞게 조금 고친 현수선입니다. 현수선의 길이는 다음 절의 \(\cosh\)의 적분으로 구합니다.</li>
+            <li><span class="tag">적용</span>사슬 길이를 1.05배쯤으로 줄여 거의 팽팽하게 하고 두 곡선을 겹쳐 보세요. 둘 다 잘 맞나요? 이제 2.6배로 늘이세요. 어느 곡선이 사슬에서 벗어나나요? 흔들어도 사슬은 같은 모양으로 돌아오나요?</li>
+            <li class="warn"><span class="tag">판단</span>처짐이 작으면 \(\cosh\frac{x}{a} \approx 1 + \frac{x^2}{2a^2}\)이라 현수선과 포물선은 거의 같습니다. 그래서 늘어진 전선을 포물선으로 계산해도 대개 충분합니다. 둘이 같은 곡선이라는 뜻은 아닙니다. 이 모형은 구슬 40개라 현수선과도 아주 조금 다릅니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">무게를 무시할 수 있는 케이블에 무거운 다리 상판을 가로 방향으로 고르게 매달았습니다. 케이블은 어떤 곡선에 가장 가까울까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>포물선<span class="why"><b>맞습니다.</b> 무게가 케이블 길이가 아니라 가로 거리에 비례해 걸리므로 기울기가 \(x\)에 비례하고, 곡선은 포물선이 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>현수선<span class="why"><b>케이블 자체의 무게일 때의 답입니다.</b> 현수선은 무게가 곡선의 길이를 따라 고르게 걸릴 때 생깁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>원의 호<span class="why"><b>원은 이 균형 조건에서 나오지 않습니다.</b> 기울기가 \(x\)에 비례하는 곡선은 포물선뿐입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>꺾은선<span class="why"><b>몇 곳에만 무게가 걸릴 때의 모양입니다.</b> 무게가 고르게 퍼져 있으면 매끄러운 곡선이 됩니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/2-1.html#card-calc2-e-limit"><small class="mono">미적분Ⅱ 2.1</small>(1 + h)¹/h는 h가 0에 가까워지면 어디로 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-arsinh-proof">
+        <header class="card-head">
+          <span class="no">1.2.3</span><h2>\(\sinh\)의 역함수는 왜 로그로 쓸 수 있을까?</h2><span class="kind">역쌍곡선함수 · 증명 조립</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="y = sinh x의 그래프와 직선 y = x에 대칭인 역함수 y = arsinh x의 그래프. 증명을 마치면 로그 식의 그래프가 겹쳐진다"></canvas>
+            <div class="ctl">
+              <label class="mono">\(x\) = <output class="x-out">2</output></label>
+              <input class="sx" type="range" min="-4" max="4" step="0.05" value="2" aria-label="x 값">
+              <dl class="nums">
+                <div><dt>\(u = x + \sqrt{x^2 + 1}\)</dt><dd class="n-up">—</dd></div>
+                <div><dt>\(u = x - \sqrt{x^2 + 1}\)</dt><dd class="n-um">—</dd></div>
+                <div><dt>\(\ln(x + \sqrt{x^2 + 1})\)</dt><dd class="n-y">—</dd></div>
+              </dl>
+              <div class="pf">
+                <ol class="pf-pool">
+                  <li data-k="a">\(y = \sinh^{-1} x\)로 놓으면 \(x = \sinh y = \frac{e^y - e^{-y}}{2}\)이다.</li>
+                  <li data-k="b">양변에 \(2e^y\)를 곱하여 정리하면 \(e^{2y} - 2xe^y - 1 = 0\)이다.<span class="pf-why">먼저 \(x\)를 \(y\)로 나타낸 식이 있어야 곱할 수 있습니다.</span></li>
+                  <li data-k="c">\(u = e^y\)로 놓으면 \(u^2 - 2xu - 1 = 0\)이므로 근의 공식으로 \(u = x \pm \sqrt{x^2 + 1}\)이다.<span class="pf-why">아직 \(e^y\)에 대한 이차방정식이 만들어지지 않았습니다.</span></li>
+                  <li data-k="d">\(\sqrt{x^2 + 1} &gt; |x|\)이므로 \(x - \sqrt{x^2 + 1} &lt; 0\)이다. 그런데 \(u = e^y &gt; 0\)이므로 \(u = x + \sqrt{x^2 + 1}\)만 남는다.<span class="pf-why">두 근이 나온 다음에야 하나를 버릴 수 있습니다.</span></li>
+                  <li data-k="e">양변에 자연로그를 취하면 \(\sinh^{-1} x = \ln\left(x + \sqrt{x^2 + 1}\right)\)이다.<span class="pf-why">\(e^y\)가 하나로 정해져야 로그를 취해 \(y\)를 구할 수 있습니다.</span></li>
+                  <li data-k="t">\(\sinh y = x\)이므로 \(y = \frac{1}{\sinh x}\)이다.<span class="pf-why">역함수 \(\sinh^{-1}\)과 역수 \(\frac{1}{\sinh}\)를 혼동했습니다. 역함수는 \(x\)와 \(y\)의 자리를 바꾼 함수입니다.</span></li>
+                  <li data-k="s">\(x - \sqrt{x^2 + 1}\)도 근이므로 \(y = \ln\left(x - \sqrt{x^2 + 1}\right)\)도 답이다.<span class="pf-why">이 값은 늘 음수입니다. \(e^y\)는 음수가 될 수 없으므로 버려야 합니다.</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\sinh x\)는 실수 전체에서 증가하므로 역함수 \(\sinh^{-1} x\)(\(\operatorname{arsinh} x\)로도 씁니다)가 있습니다. 그런데 \(\sin^{-1} x\)는 다른 함수로 바꿔 쓸 수 없는 새 함수였습니다. \(\sinh^{-1} x\)도 그럴까요?</li>
+            <li><span class="tag">복원</span>\(y = f^{-1}(x)\)이면 \(x = f(y)\)입니다. \(e^y &gt; 0\)이고, \(e^y = u\)이면 \(y = \ln u\)입니다.</li>
+            <li><span class="tag">설명</span>\(\sinh\)는 지수함수로 만든 함수이므로, \(x = \sinh y\)를 \(e^y\)에 대한 이차방정식으로 바꾸어 풀 수 있습니다. 두 근 가운데 양수인 것만 \(e^y\)가 될 수 있다는 점이 핵심입니다. 같은 방법으로 \[\cosh^{-1} x = \ln\left(x + \sqrt{x^2 - 1}\right)\] \[\tanh^{-1} x = \frac{1}{2}\ln\frac{1 + x}{1 - x}\]을 얻습니다(앞의 것은 \(x \ge 1\), 뒤의 것은 \(|x| &lt; 1\)). \(\cosh\)는 일대일이 아니므로 \(x \ge 0\)으로 정의역을 제한하고 역함수를 정합니다.</li>
+            <li><span class="tag">연결</span>역쌍곡선함수가 로그로 쓰인다는 사실 때문에 \(\int\frac{dx}{\sqrt{x^2 + 1}} = \ln\left(x + \sqrt{x^2 + 1}\right) + C\) 같은 적분이 쌍곡선함수 치환으로 풀립니다(이 대단원 4절).</li>
+            <li><span class="tag">적용</span>단계를 순서대로 쌓아 증명을 완성하세요. \(x\)를 움직이며 두 근 \(x \pm \sqrt{x^2 + 1}\)의 부호를 보세요. 한 근은 언제나 음수인가요? 증명을 마치면 로그 식의 그래프가 역함수의 그래프와 겹치는지 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>\(\sinh^{-1} x\)의 \(-1\)은 역함수를 뜻하는 기호이지 \(-1\)제곱이 아닙니다. \(\frac{1}{\sinh x}\)는 따로 \(\operatorname{csch} x\)라고 씁니다. 헷갈리지 않으려고 \(\operatorname{arsinh}\)라는 이름을 쓰기도 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\sinh y = \frac{3}{4}\)을 만족하는 실수 \(y\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\ln 2\)<span class="why"><b>맞습니다.</b> \(\frac{3}{4} + \sqrt{\frac{9}{16} + 1} = \frac{3}{4} + \frac{5}{4} = 2\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\ln 2\)<span class="why"><b>부호가 반대입니다.</b> \(\sinh y &gt; 0\)이면 \(y &gt; 0\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{\sinh\frac{3}{4}}\)<span class="why"><b>역함수와 역수를 혼동했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\ln\frac{5}{4}\)<span class="why"><b>\(x\)를 빠뜨렸습니다.</b> \(\ln\left(x + \sqrt{x^2 + 1}\right)\)에서 \(\sqrt{x^2 + 1}\)만 남겼습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/hyp-unit.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/catenary.js"></script>
+<script src="../../js/lib/proof.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/arsinh-proof.js"></script>
+</body>
+</html>
