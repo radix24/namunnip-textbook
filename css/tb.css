@@ -726,6 +726,12 @@ body[data-domain="math"] .tree-band { grid-template-columns: 1fr; }
 .spot > li.sp-hit .why { color: var(--warn); }
 .spot[data-done] > li { cursor: default; }
 
+/* 행렬 표 (고급 대수 NMLin.table) */
+.lin-m { border-collapse: collapse; margin: 6px 0; font-family: var(--f-mono); font-size: 13.5px; border-left: 2px solid var(--ink); border-right: 2px solid var(--ink); }
+.lin-m td { padding: 3px 10px; text-align: right; min-width: 2.6em; }
+.lin-m td.bar { border-left: 1px dashed var(--ink3, var(--ink-3)); }
+.lin-m tr.hi td { background: var(--paper-2); color: var(--forest); font-weight: 600; }
+
 /* 예측 → 확인 카드: 정답을 열기 전에는 결과 칸을 흐리게 */
 .predict-lock { opacity: .35; pointer-events: none; }
 

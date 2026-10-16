@@ -15929,57 +15929,145 @@ window.TOC = [
       "n": 1,
       "title": "n차원 벡터",
       "code": "12고대01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-nutrition",
+        "title": "메뉴 세 가지로 목표 영양 식단을 정확히 맞출 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-rgb-mix",
+        "title": "색이 섞인 조명 세 개로 원하는 색을 만들 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "벡터공간",
       "code": "12고대01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-axiom-test",
+        "title": "이 집합에서 마음대로 더하고 실수배해도 집합 안에 머물까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-poly-vector",
+        "title": "화살표가 아닌 다항식도 벡터처럼 더할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "부분공간",
       "code": "12고대01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-subspace-3d",
+        "title": "좌표공간의 어떤 평면과 직선이 부분공간일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-intersect-proof",
+        "title": "두 부분공간이 겹치는 부분도 부분공간일까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "일차독립과 일차종속",
       "code": "12고대01-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-span-3d",
+        "title": "세 벡터가 공간을 채우지 못하고 평면에 갇히는 때는 언제일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-indep-predict",
+        "title": "계산하기 전에 일차독립인지 알아볼 수 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "기저",
       "code": "12고대01-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-basis-grid",
+        "title": "같은 점인데 기저를 바꾸면 왜 좌표가 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-basis-hunt",
+        "title": "비스듬한 두 방향만으로 목표점까지 안내할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "n차원 벡터의 내적",
       "code": "12고대01-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-cosine-sim",
+        "title": "컴퓨터는 어떻게 비슷한 기사를 골라낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-cauchy",
+        "title": "내적은 두 크기의 곱보다 커질 수 있을까?"
+       }
+      ]
      },
      {
       "n": 7,
       "title": "벡터의 정사영",
       "code": "12고대01-07",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-proj-shadow",
+        "title": "비탈에서 썰매를 끄는 힘 중 얼마가 일을 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-least-squares",
+        "title": "모든 점을 지나는 직선이 없을 때 가장 좋은 직선은?"
+       }
+      ]
      },
      {
       "n": 8,
       "title": "정규직교기저",
       "code": "12고대01-08",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-gram-schmidt",
+        "title": "비스듬한 두 벡터로 직각 자를 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-ortho-coords",
+        "title": "정규직교기저의 좌표는 왜 내적 한 번이면 될까?"
+       }
+      ]
      }
     ]
    },

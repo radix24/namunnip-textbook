@@ -1,0 +1,160 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n차원 벡터의 내적 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="n차원 벡터의 내적과 크기, 사잇각, 코시-슈바르츠 부등식. 취향을 벡터로 나타내 코사인 유사도로 비슷한 사람을 찾는 추천 카드와, 내적의 크기가 두 벡터 크기의 곱을 넘지 못하는 이유를 보는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-cosine-sim .docs { display: grid; gap: .4rem; margin: 0 0 .6rem; }
+    #card-adalg-cosine-sim .doc { display: grid; grid-template-columns: 1.6rem 1fr auto; gap: .5rem; align-items: center; text-align: left; padding: .45rem .6rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; }
+    #card-adalg-cosine-sim .doc[aria-pressed="true"] { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+    #card-adalg-cosine-sim .doc.q { background: var(--paper-2); cursor: default; opacity: 1; }
+    #card-adalg-cosine-sim .doc .vec { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .8rem; color: var(--ink-2); }
+    #card-adalg-cosine-sim .doc .bar { grid-column: 2 / 4; height: 6px; border-radius: 3px; background: var(--rule); position: relative; overflow: hidden; }
+    #card-adalg-cosine-sim .doc .bar i { position: absolute; inset: 0 auto 0 0; background: var(--forest); width: 0; transition: width .4s; }
+    #card-adalg-cauchy .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .6rem; }
+    #card-adalg-cauchy canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+  </style>
+</head>
+<body data-course="adalg" data-sec="1-6">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>n차원 벡터의 내적</h1>
+    <p class="lead">평면과 공간에서 내적은 \(a_1b_1 + a_2b_2 + a_3b_3\)처럼 같은 자리의 성분을 곱해 더했습니다. 이 계산은 성분이 몇 개든 그대로 할 수 있고, 그 결과로 n차원 벡터 사이의 "각"도 정할 수 있습니다. 이 절에서는 영화 장르별 별점을 벡터로 보고 코사인 유사도로 취향이 비슷한 사람을 찾는 추천의 원리를 체험하고, 내적의 크기에 한계가 있다는 코시-슈바르츠 부등식을 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/3-3.html#card-geo-dot-space" title="기하 3.3 · 공간에서 두 벡터가 수직인지 어떻게 알까?">벡터의 내적과 수직 조건</a><a class="p p-card" href="../../c/geo/3-2.html#card-geo-components" title="기하 3.2 · 화살표를 수 두 개로 바꿀 수 있을까?">벡터의 성분</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-cosine-sim"><span class="mono">1.6.1</span>단어 벡터로 비슷한 기사 찾기</a></li>
+        <li><a href="#card-adalg-cauchy"><span class="mono">1.6.2</span>포물선으로 보는 코시-슈바르츠 부등식</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-1-6">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-cosine-sim">
+        <header class="card-head">
+          <span class="no">1.6.1</span><h2>컴퓨터는 어떻게 비슷한 기사를 골라낼까?</h2><span class="kind">내적과 코사인 유사도 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">가상 기사 제목입니다. 단어 <span class="mono">[경기, 골, 감독, 금리, 주가]</span>가 나온 횟수를 벡터로 적었습니다.</p>
+            <div class="ctl-row"><label class="mono">기준 기사 <select class="pick" aria-label="기준 기사 고르기"></select></label></div>
+            <div class="docs" role="group" aria-label="기사 목록"></div>
+            <div class="presets"><button class="chip go-dbl" type="button" aria-pressed="false">기준 기사를 두 번 이어 붙이기</button></div>
+            <p class="verdict" role="status"></p>
+            <p class="fig-note">먼저 기준 기사와 가장 비슷한 기사 하나를 누르세요. 그 뒤에 내적과 코사인 유사도가 나타납니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>뉴스 앱은 방금 읽은 기사와 "비슷한" 기사를 추천합니다. 문장을 이해하지 못하는 컴퓨터가 두 글이 비슷한지를 어떻게 수 하나로 판단할까요?</li>
+            <li><span class="tag">복원</span>평면벡터에서 \(\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta\)였습니다. 두 벡터의 방향이 같으면 \(\cos\theta = 1\), 수직이면 0입니다.</li>
+            <li><span class="tag">설명</span>\(\mathbb{R}^n\)에서도 <em>내적</em>을 \(\vec{a}\cdot\vec{b} = a_1b_1 + \cdots + a_nb_n\), <em>크기</em>를 \(|\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}}\)로 정합니다. 그러면 \(\cos\theta = (\vec{a}\cdot\vec{b}) / (|\vec{a}||\vec{b}|)\)로 두 벡터 사이의 각을 정의할 수 있습니다(이 값이 \(-1\)과 1 사이라는 것은 다음 카드의 코시-슈바르츠 부등식이 보장합니다). 내적이 0이면 두 벡터는 <em>수직</em>(직교)입니다.</li>
+            <li><span class="tag">연결</span>글을 단어 횟수 벡터로 바꾸고 \(\cos\theta\)를 재는 것을 <em>코사인 유사도</em>라고 합니다. 검색 엔진, 추천 시스템, 인공지능의 단어 임베딩이 모두 이 계산을 씁니다.</li>
+            <li><span class="tag">적용</span>기준 기사를 바꿔 가며 가장 비슷한 기사를 예측해 보세요. 그다음 "두 번 이어 붙이기"를 눌러 기사 길이만 두 배로 만들면 내적과 코사인 유사도가 각각 어떻게 되는지 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>내적은 글이 길수록 커집니다. 그래서 내적만 비교하면 긴 글이 무조건 "비슷한" 글이 됩니다. 크기로 나누어 방향만 비교해야 공정합니다. 또 "경기"처럼 뜻이 둘인 단어는 횟수만으로 구분되지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\vec{a} = (1, 2, 2)\), \(\vec{b} = (2, 0, -1)\)일 때 옳은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>두 벡터는 수직이다.<span class="why"><b>맞습니다.</b> \(2 + 0 - 2 = 0\)이므로 \(\cos\theta = 0\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\cos\theta = 1/3\)이다.<span class="why"><b>내적을 다시 계산해 보세요.</b> 셋째 성분의 곱은 \(-2\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\vec{b}\)를 3배 하면 \(\cos\theta\)도 3배가 된다.<span class="why"><b>아닙니다.</b> 양수배는 방향을 바꾸지 않으므로 \(\cos\theta\)는 그대로입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\mathbb{R}^3\)의 벡터라 각을 정의할 수 없다.<span class="why"><b>아닙니다.</b> 내적과 크기로 \(\mathbb{R}^n\)에서도 각을 정의합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/adalg/1-1.html#card-adalg-nutrition"><small class="mono">고급 대수 1.1</small>메뉴 세 가지로 목표 영양 식단을 정확히 맞출 수 있을까?</a><a href="../../c/adalg/1-1.html#card-adalg-rgb-mix"><small class="mono">고급 대수 1.1</small>색이 섞인 조명 세 개로 원하는 색을 만들 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/1-7.html#card-adalg-proj-shadow"><small class="mono">고급 대수 1.7</small>비탈에서 썰매를 끄는 힘 중 얼마가 일을 할까?</a><a href="../../c/adalg/1-7.html#card-adalg-least-squares"><small class="mono">고급 대수 1.7</small>모든 점을 지나는 직선이 없을 때 가장 좋은 직선은?</a></div></nav>
+
+      <article class="card" id="card-adalg-cauchy">
+        <header class="card-head">
+          <span class="no">1.6.2</span><h2>내적은 두 크기의 곱보다 커질 수 있을까?</h2><span class="kind">코시-슈바르츠 부등식 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="two">
+              <canvas class="cv-v" aria-label="벡터 a, b와 a + t b. a, b의 끝을 끌 수 있다"></canvas>
+              <canvas class="cv-f" aria-label="f(t) = |a + t b|²의 그래프"></canvas>
+            </div>
+            <div class="ctl">
+              <div class="ctl-row"><div><label class="mono">\(t\) = <output class="t-out">−0.5</output></label><input class="t" type="range" min="-3" max="3" step="0.05" value="-0.5" aria-label="t"></div></div>
+              <dl class="nums">
+                <div><dt>\(|\vec{a}\cdot\vec{b}|\)</dt><dd class="n-dot">—</dd></div>
+                <div><dt>\(|\vec{a}||\vec{b}|\)</dt><dd class="n-prod">—</dd></div>
+                <div><dt>\(|\vec{a}+\vec{b}|\) vs \(|\vec{a}|+|\vec{b}|\)</dt><dd class="n-tri">—</dd></div>
+                <div><dt>\(f(t)\)의 최솟값</dt><dd class="n-min">—</dd></div>
+              </dl>
+              <p class="fig-note">보라: \(\vec{a} + t\vec{b}\). 오른쪽 그래프는 그 크기의 제곱입니다. 끝점은 0.5 간격으로 맞춰집니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>평면에서는 \(\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta\)이므로 \(|\vec{a}\cdot\vec{b}| \le |\vec{a}||\vec{b}|\)가 당연합니다. 그런데 각을 그릴 수 없는 \(\mathbb{R}^5\)에서는 각을 내적으로 정의했습니다. 그 정의가 말이 되려면 무엇이 먼저 보장되어야 할까요?</li>
+            <li><span class="tag">복원</span>이차함수 \(f(t) = pt^2 + qt + r\) \((p > 0)\)이 모든 \(t\)에서 \(f(t) \ge 0\)이면 판별식 \(q^2 - 4pr \le 0\)입니다.</li>
+            <li><span class="tag">설명</span>\(f(t) = |\vec{a} + t\vec{b}|^2\)은 크기의 제곱이라 늘 0 이상입니다. 전개하면 \(f(t) = |\vec{b}|^2t^2 + 2(\vec{a}\cdot\vec{b})t + |\vec{a}|^2\)이므로 판별식에서 \(4(\vec{a}\cdot\vec{b})^2 - 4|\vec{a}|^2|\vec{b}|^2 \le 0\), 곧 <em>코시-슈바르츠 부등식</em> \(|\vec{a}\cdot\vec{b}| \le |\vec{a}||\vec{b}|\)을 얻습니다. 등호는 포물선이 \(t\)축에 닿을 때, 곧 \(\vec{a} + t\vec{b} = \vec{0}\)인 \(t\)가 있어 두 벡터가 평행할 때입니다. 이 증명은 차원과 상관없이 성립하므로 \(\mathbb{R}^n\)의 \(\cos\theta\)가 \(-1\)과 1 사이에 들어옵니다.</li>
+            <li><span class="tag">연결</span>이 부등식에서 <em>삼각부등식</em> \(|\vec{a}+\vec{b}| \le |\vec{a}| + |\vec{b}|\)이 나옵니다. 통계의 상관계수가 \(-1\)과 1 사이인 이유도 같은 부등식입니다.</li>
+            <li><span class="tag">적용</span>\(t\)를 움직여 보라 벡터가 가장 짧아지는 곳을 찾으세요. 그때 보라 벡터와 \(\vec{b}\)는 어떤 관계인가요? 이어서 \(\vec{a}\)와 \(\vec{b}\)를 평행하게 만들면 포물선은 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>\(\vec{b} = \vec{0}\)이면 \(f\)는 이차함수가 아니어서 판별식을 쓸 수 없습니다. 이때는 양변이 모두 0이라 따로 확인합니다. 증명에서 나누거나 판별식을 쓰기 전에는 늘 이런 경우를 먼저 빼야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(|\vec{a}| = 3\), \(|\vec{b}| = 4\)일 때 \(\vec{a}\cdot\vec{b}\)가 가질 수 있는 값의 범위는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(-12 \le \vec{a}\cdot\vec{b} \le 12\)<span class="why"><b>맞습니다.</b> 코시-슈바르츠 부등식에서 \(|\vec{a}\cdot\vec{b}| \le 12\)이고, 같은 방향이면 12, 반대 방향이면 \(-12\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(0 \le \vec{a}\cdot\vec{b} \le 12\)<span class="why"><b>내적은 음수도 됩니다.</b> 둔각이면 음수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(-7 \le \vec{a}\cdot\vec{b} \le 7\)<span class="why"><b>합이 아니라 곱입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>차원을 알아야 정할 수 있다.<span class="why"><b>아닙니다.</b> 이 부등식은 차원과 상관없이 성립합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/adalg/1-1.html#card-adalg-nutrition"><small class="mono">고급 대수 1.1</small>메뉴 세 가지로 목표 영양 식단을 정확히 맞출 수 있을까?</a><a href="../../c/adalg/1-1.html#card-adalg-rgb-mix"><small class="mono">고급 대수 1.1</small>색이 섞인 조명 세 개로 원하는 색을 만들 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/1-7.html#card-adalg-proj-shadow"><small class="mono">고급 대수 1.7</small>비탈에서 썰매를 끄는 힘 중 얼마가 일을 할까?</a><a href="../../c/adalg/1-7.html#card-adalg-least-squares"><small class="mono">고급 대수 1.7</small>모든 점을 지나는 직선이 없을 때 가장 좋은 직선은?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-1-6"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/cosine-sim.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/cauchy.js"></script>
+</body>
+</html>

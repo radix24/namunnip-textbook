@@ -981,3 +981,10 @@ adc-ode-field | 미분방정식과 방향장 | card-adcalc-slope-field card-adca
 adc-euler | 오일러의 방법 | card-adcalc-euler-steps card-adcalc-euler-orbit | adc-ode-field calc2-e-natlog
 adc-separable | 변수분리형 미분방정식의 풀이 | card-adcalc-separable-proof card-adcalc-separable-spot | adc-ode-field calc2-int-substitution calc2-exp-log-deriv
 adc-ode-models | 미분방정식의 활용 | card-adcalc-coffee card-adcalc-carbon14 card-adcalc-logistic | adc-separable
+ada-vector-space | 벡터공간의 뜻 | card-adalg-nutrition card-adalg-rgb-mix card-adalg-axiom-test card-adalg-poly-vector | geo-vec-add geo-vec-scalar geo-vec-comp
+ada-subspace | 부분공간 | card-adalg-subspace-3d card-adalg-intersect-proof | ada-vector-space
+ada-span-indep | 일차결합·생성·일차독립 | card-adalg-span-3d card-adalg-indep-predict | ada-subspace
+ada-basis-dim | 기저와 차원, 좌표 | card-adalg-basis-grid card-adalg-basis-hunt | ada-span-indep
+ada-inner-product | ℝⁿ의 내적과 코시-슈바르츠 부등식 | card-adalg-cosine-sim card-adalg-cauchy | geo-dot ada-vector-space
+ada-projection | 정사영과 최소제곱법 | card-adalg-proj-shadow card-adalg-least-squares | ada-inner-product ada-basis-dim
+ada-orthonormal | 정규직교기저와 그람-슈미트 과정 | card-adalg-gram-schmidt card-adalg-ortho-coords | ada-projection ada-basis-dim

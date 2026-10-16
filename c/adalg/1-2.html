@@ -1,0 +1,165 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>벡터공간 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="덧셈과 실수배에 대하여 닫혀 있고 여덟 가지 성질을 만족하는 집합, 벡터공간. 여러 집합이 벡터공간인지 반례로 확인하는 카드와, 다항식을 벡터처럼 더하고 실수배하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-axiom-test canvas { aspect-ratio: 1 / 1; max-width: 440px; margin: 0 auto; display: block; touch-action: none; }
+    #card-adalg-poly-vector canvas { aspect-ratio: 16 / 10; }
+    #card-adalg-poly-vector .vec { font-family: var(--f-mono); font-size: 13px; line-height: 1.8; }
+  </style>
+</head>
+<body data-course="adalg" data-sec="1-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>벡터공간</h1>
+    <p class="lead">화살표만 벡터인 것은 아닙니다. 더하고 실수배할 수 있고, 그 결과가 다시 같은 집합에 들어가며, 덧셈과 실수배가 익숙한 규칙을 지키면 무엇이든 벡터처럼 다룰 수 있습니다. 이런 집합을 <em>벡터공간</em>이라고 합니다. 이 절에서는 여러 집합에서 두 원소를 골라 더하고 실수배해 보며 집합 밖으로 나가는 반례를 찾고, 다항식이 벡터처럼 움직이는 것을 그래프로 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/3-1.html#card-geo-vec-add" title="기하 3.1 · 두 이동을 하나로 합치면 어떤 화살표가 될까?">벡터의 덧셈과 실수배</a><a class="p p-card" href="../../c/geo/3-1.html#card-geo-vec-add" title="기하 3.1 · 두 이동을 하나로 합치면 어떤 화살표가 될까?">벡터의 합성</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-axiom-test"><span class="mono">1.2.1</span>벡터공간인지 반례로 판정하기</a></li>
+        <li><a href="#card-adalg-poly-vector"><span class="mono">1.2.2</span>다항식도 벡터다</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-1-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-axiom-test">
+        <header class="card-head">
+          <span class="no">1.2.1</span><h2>이 집합에서 마음대로 더하고 실수배해도 집합 안에 머물까?</h2><span class="kind">벡터공간 · 반례 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets which">
+              <button class="chip" type="button" data-s="0" aria-pressed="true">직선 \(y = 2x\)</button>
+              <button class="chip" type="button" data-s="1">제1사분면</button>
+              <button class="chip" type="button" data-s="2">직선 \(y = 2x + 1\)</button>
+              <button class="chip" type="button" data-s="3">두 좌표축</button>
+              <button class="chip" type="button" data-s="4">원점 하나</button>
+            </div>
+            <canvas aria-label="집합(초록)과 그 안의 두 벡터 u, v, 그리고 u + v와 k·u. 집합을 벗어난 결과는 빨간색"></canvas>
+            <div class="ctl">
+              <label class="mono">실수배 \(k\) = <output class="k-out">2</output></label>
+              <input class="sk" type="range" min="-3" max="3" step="0.5" value="2" aria-label="실수배 k">
+              <div class="presets judge"><button class="chip" type="button" data-j="1">벡터공간이다</button><button class="chip" type="button" data-j="0">벡터공간이 아니다</button></div>
+              <p class="mono small st">—</p>
+              <p class="verdict" role="status"></p>
+              <p class="fig-note">u와 v 끝을 끌어 보세요. 점은 집합 위에서만 움직입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>평면의 모든 벡터는 더하고 실수배해도 평면 안에 있습니다. 그런데 평면의 일부, 예를 들어 제1사분면만 모은 집합도 그럴까요? 어떤 집합이 "벡터처럼" 다룰 수 있는 집합일까요?</li>
+            <li><span class="tag">복원</span>벡터의 덧셈은 교환법칙·결합법칙을 만족하고, 영벡터 \(\vec{0}\)과 역벡터 \(-\vec{v}\)가 있으며, 실수배는 분배법칙 등을 만족합니다.</li>
+            <li><span class="tag">설명</span>덧셈과 실수배가 정의되어 있고, 그 결과가 늘 집합 안에 있으며(닫혀 있음), 덧셈과 실수배가 여덟 가지 규칙(교환법칙, 결합법칙, 영벡터와 역벡터의 존재, 두 분배법칙, \((ab)\vec{v} = a(b\vec{v})\), \(1\vec{v} = \vec{v}\))을 지키는 집합을 <em>벡터공간</em>이라고 합니다. 평면의 부분집합이 벡터공간인지 따질 때는 규칙 대부분이 저절로 성립하므로, 핵심은 <b>덧셈과 실수배에 닫혀 있는지</b>입니다. 반례 하나만 찾으면 벡터공간이 아닙니다. 제1사분면은 \(k = -1\)을 곱하면 밖으로 나가고, 두 좌표축의 합집합은 \((1, 0) + (0, 1)\)이 밖으로 나갑니다.</li>
+            <li><span class="tag">연결</span>원점을 지나는 직선, 평면 전체, 원점 하나뿐인 집합은 벡터공간입니다. 이들은 평면이라는 큰 벡터공간 안의 작은 벡터공간, 곧 다음 절의 부분공간입니다. 원점을 지나지 않는 직선은 영벡터가 없어 처음부터 탈락입니다.</li>
+            <li><span class="tag">적용</span>집합마다 먼저 판단을 고른 뒤, u, v를 끌고 \(k\)를 바꾸며 반례를 찾아보세요. 반례를 찾은 집합은 덧셈 때문인가요, 실수배 때문인가요?</li>
+            <li class="warn"><span class="tag">판단</span>몇 번 해 봐서 집합 안에 머문다고 벡터공간이라고 단정할 수는 없습니다. 벡터공간임을 보이려면 모든 경우에 성립함을 증명해야 하고, 아님을 보이려면 반례 하나면 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 가운데 평면 \(\mathbb{R}^2\)의 덧셈과 실수배에 대하여 벡터공간인 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\{(x, y) \mid 3x - y = 0\}\)<span class="why"><b>맞습니다.</b> 원점을 지나는 직선이라 두 점을 더해도, 실수배해도 \(3x - y = 0\)을 만족합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\{(x, y) \mid y = x^2\}\)<span class="why"><b>덧셈에 닫혀 있지 않습니다.</b> \((1, 1) + (1, 1) = (2, 2)\)는 \(y = x^2\) 위에 없습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\{(x, y) \mid x \ge 0\}\)<span class="why"><b>실수배에 닫혀 있지 않습니다.</b> \(-1\)을 곱하면 \(x &lt; 0\)이 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\{(x, y) \mid x + y = 1\}\)<span class="why"><b>영벡터가 없습니다.</b> \((0, 0)\)은 \(x + y = 1\)을 만족하지 않습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-1.html#card-geo-vec-add"><small class="mono">기하 3.1</small>두 이동을 하나로 합치면 어떤 화살표가 될까?</a><a href="../../c/geo/3-1.html#card-geo-vec-scalar"><small class="mono">기하 3.1</small>벡터에 음수를 곱하면 무엇이 바뀔까?</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/1-3.html#card-adalg-subspace-3d"><small class="mono">고급 대수 1.3</small>좌표공간의 어떤 평면과 직선이 부분공간일까?</a><a href="../../c/adalg/1-3.html#card-adalg-intersect-proof"><small class="mono">고급 대수 1.3</small>두 부분공간이 겹치는 부분도 부분공간일까?</a><a href="../../c/adalg/1-6.html#card-adalg-cosine-sim"><small class="mono">고급 대수 1.6</small>컴퓨터는 어떻게 비슷한 기사를 골라낼까?</a><a href="../../c/adalg/1-6.html#card-adalg-cauchy"><small class="mono">고급 대수 1.6</small>내적은 두 크기의 곱보다 커질 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adalg-poly-vector">
+        <header class="card-head">
+          <span class="no">1.2.2</span><h2>화살표가 아닌 다항식도 벡터처럼 더할 수 있을까?</h2><span class="kind">벡터공간의 예 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="두 이차 이하 다항식 p, q의 그래프와 p + q, k·p의 그래프"></canvas>
+            <div class="ctl">
+              <p class="mono small">\(p(x) = a_0 + a_1x + a_2x^2\)</p>
+              <div class="ctl-row">
+                <div><label class="mono">\(a_0\) = <output class="o0">1</output></label><input class="p0" type="range" min="-3" max="3" step="0.5" value="1" aria-label="p의 상수항"></div>
+                <div><label class="mono">\(a_1\) = <output class="o1">−1</output></label><input class="p1" type="range" min="-3" max="3" step="0.5" value="-1" aria-label="p의 일차항 계수"></div>
+              </div>
+              <label class="mono">\(a_2\) = <output class="o2">0.5</output></label><input class="p2" type="range" min="-2" max="2" step="0.25" value="0.5" aria-label="p의 이차항 계수">
+              <p class="mono small">\(q(x) = -1 + 2x - 0.5x^2\) (고정)</p>
+              <label class="mono">\(k\) = <output class="ko">2</output></label><input class="sk" type="range" min="-2" max="2" step="0.5" value="2" aria-label="실수배 k">
+              <div class="presets show"><button class="chip" type="button" data-s="sum" aria-pressed="true">p + q 보기</button><button class="chip" type="button" data-s="k">k·p 보기</button></div>
+              <p class="vec">—</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>벡터는 "크기와 방향을 가진 화살표"라고 배웠습니다. 그런데 이차 이하의 다항식도 더하면 이차 이하의 다항식이 되고, 실수배해도 그렇습니다. 다항식도 벡터라고 부를 수 있을까요?</li>
+            <li><span class="tag">복원</span>벡터공간은 덧셈과 실수배에 닫혀 있고, 덧셈과 실수배가 교환법칙·결합법칙·분배법칙 등 여덟 가지 규칙을 만족하는 집합입니다.</li>
+            <li><span class="tag">설명</span>이차 이하의 다항식의 집합 \(P_2\)에서 덧셈은 같은 차수끼리 계수를 더하고, 실수배는 모든 계수에 곱합니다. 그러면 \(p(x) = a_0 + a_1x + a_2x^2\)는 계수만 모은 <b>3차원 벡터 \((a_0, a_1, a_2)\)</b>처럼 움직입니다. 영벡터는 \(0\)이라는 다항식, \(p\)의 역벡터는 \(-p\)입니다. 그래서 \(P_2\)는 벡터공간이고, 그 원소인 다항식이 <b>벡터</b>입니다. 벡터가 무엇인지는 모양이 아니라 "더하고 실수배하는 규칙"이 정합니다.</li>
+            <li><span class="tag">연결</span>같은 방법으로 2×2 행렬의 모임, 연속함수의 모임, 수열의 모임도 벡터공간입니다. 소리를 여러 사인파의 합으로 나누는 푸리에 해석은 함수를 벡터로 보는 생각에서 나왔습니다.</li>
+            <li><span class="tag">적용</span>\(p\)의 계수를 바꾸며 \(p + q\)의 그래프와 계수 벡터가 성분마다 더한 것과 같은지 확인하세요. \(p = -q\)가 되도록 맞추면 \(p + q\)의 그래프는 어떻게 되나요? 그것이 영벡터입니다.</li>
+            <li class="warn"><span class="tag">판단</span>"정확히 이차인 다항식"만 모은 집합은 벡터공간이 아닙니다. \(x^2 + (-x^2) = 0\)처럼 더하면 이차가 아닌 다항식이 나와 덧셈에 닫혀 있지 않기 때문입니다. "이하"라는 말이 중요합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(P_2\)에서 \(p(x) = 1 + 2x\), \(q(x) = 3 - x + x^2\)일 때 \(2p - q\)를 계수 벡터로 나타내면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((-1, 5, -1)\)<span class="why"><b>맞습니다.</b> \(2(1, 2, 0) - (3, -1, 1) = (-1, 5, -1)\), 곧 \(-1 + 5x - x^2\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((-1, 3, -1)\)<span class="why"><b>\(-(-x)\)의 부호를 놓쳤습니다.</b> \(4 - (-1) = 5\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((5, 3, 1)\)<span class="why"><b>\(2p + q\)를 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((-1, 5)\)<span class="why"><b>이차항 자리를 빠뜨렸습니다.</b> \(P_2\)의 원소는 성분이 셋인 벡터로 봅니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-1.html#card-geo-vec-add"><small class="mono">기하 3.1</small>두 이동을 하나로 합치면 어떤 화살표가 될까?</a><a href="../../c/geo/3-1.html#card-geo-vec-scalar"><small class="mono">기하 3.1</small>벡터에 음수를 곱하면 무엇이 바뀔까?</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/1-3.html#card-adalg-subspace-3d"><small class="mono">고급 대수 1.3</small>좌표공간의 어떤 평면과 직선이 부분공간일까?</a><a href="../../c/adalg/1-3.html#card-adalg-intersect-proof"><small class="mono">고급 대수 1.3</small>두 부분공간이 겹치는 부분도 부분공간일까?</a><a href="../../c/adalg/1-6.html#card-adalg-cosine-sim"><small class="mono">고급 대수 1.6</small>컴퓨터는 어떻게 비슷한 기사를 골라낼까?</a><a href="../../c/adalg/1-6.html#card-adalg-cauchy"><small class="mono">고급 대수 1.6</small>내적은 두 크기의 곱보다 커질 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/axiom-test.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/poly-vector.js"></script>
+</body>
+</html>

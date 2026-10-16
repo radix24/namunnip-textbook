@@ -8836,49 +8836,81 @@
        "n": 1,
        "title": "n차원 벡터",
        "code": "12고대01-01",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-1",
+        "card-adalg-nutrition",
+        "card-adalg-rgb-mix"
+       ]
       },
       {
        "n": 2,
        "title": "벡터공간",
        "code": "12고대01-02",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-2",
+        "card-adalg-axiom-test",
+        "card-adalg-poly-vector"
+       ]
       },
       {
        "n": 3,
        "title": "부분공간",
        "code": "12고대01-03",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-3",
+        "card-adalg-subspace-3d",
+        "card-adalg-intersect-proof"
+       ]
       },
       {
        "n": 4,
        "title": "일차독립과 일차종속",
        "code": "12고대01-04",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-4",
+        "card-adalg-span-3d",
+        "card-adalg-indep-predict"
+       ]
       },
       {
        "n": 5,
        "title": "기저",
        "code": "12고대01-05",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-5",
+        "card-adalg-basis-grid",
+        "card-adalg-basis-hunt"
+       ]
       },
       {
        "n": 6,
        "title": "n차원 벡터의 내적",
        "code": "12고대01-06",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-6",
+        "card-adalg-cosine-sim",
+        "card-adalg-cauchy"
+       ]
       },
       {
        "n": 7,
        "title": "벡터의 정사영",
        "code": "12고대01-07",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-7",
+        "card-adalg-proj-shadow",
+        "card-adalg-least-squares"
+       ]
       },
       {
        "n": 8,
        "title": "정규직교기저",
        "code": "12고대01-08",
-       "blocks": []
+       "blocks": [
+        "intro-adalg-1-8",
+        "card-adalg-gram-schmidt",
+        "card-adalg-ortho-coords"
+       ]
       }
      ]
     },
