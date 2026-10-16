@@ -15219,6 +15219,1521 @@ window.TOC = [
   ]
  },
  {
+  "id": "adcalc",
+  "name": "고급 미적분",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "미적분의 활용",
+    "sections": [
+     {
+      "n": 1,
+      "title": "뉴턴의 방법",
+      "code": "12고미01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "쌍곡선함수와 역쌍곡선함수",
+      "code": "12고미01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "쌍곡선함수의 도함수",
+      "code": "12고미01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "쌍곡선함수의 부정적분",
+      "code": "12고미01-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "이상적분",
+      "code": "12고미01-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "회전체의 부피와 겉넓이",
+      "code": "12고미01-06",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "극좌표와 극곡선",
+    "sections": [
+     {
+      "n": 1,
+      "title": "극좌표",
+      "code": "12고미02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "극곡선의 대칭성과 그래프",
+      "code": "12고미02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "극곡선의 접선",
+      "code": "12고미02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "두 극곡선의 교점과 사잇각",
+      "code": "12고미02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "극곡선의 길이와 넓이",
+      "code": "12고미02-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "급수",
+    "sections": [
+     {
+      "n": 1,
+      "title": "단조수렴정리",
+      "code": "12고미03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "양항급수의 판정법",
+      "code": "12고미03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "교대급수와 절대수렴·조건수렴",
+      "code": "12고미03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "멱급수와 수렴반경",
+      "code": "12고미03-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "멱급수의 성질과 함수의 표현",
+      "code": "12고미03-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "테일러다항식과 테일러급수",
+      "code": "12고미03-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "테일러급수의 활용",
+      "code": "12고미03-07",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "미분방정식",
+    "sections": [
+     {
+      "n": 1,
+      "title": "미분방정식과 방향장",
+      "code": "12고미04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "오일러의 방법",
+      "code": "12고미04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "미분방정식의 풀이",
+      "code": "12고미04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "미분방정식의 활용",
+      "code": "12고미04-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adalg",
+  "name": "고급 대수",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "벡터공간",
+    "sections": [
+     {
+      "n": 1,
+      "title": "n차원 벡터",
+      "code": "12고대01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "벡터공간",
+      "code": "12고대01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "부분공간",
+      "code": "12고대01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "일차독립과 일차종속",
+      "code": "12고대01-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "기저",
+      "code": "12고대01-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "n차원 벡터의 내적",
+      "code": "12고대01-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "벡터의 정사영",
+      "code": "12고대01-07",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 8,
+      "title": "정규직교기저",
+      "code": "12고대01-08",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "행렬과 선형변환",
+    "sections": [
+     {
+      "n": 1,
+      "title": "가우스 소거법",
+      "code": "12고대02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "역행렬",
+      "code": "12고대02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "행렬식",
+      "code": "12고대02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "선형변환과 행렬",
+      "code": "12고대02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "대칭변환·닮음변환·회전변환",
+      "code": "12고대02-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "선형변환의 합성과 역변환",
+      "code": "12고대02-06",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "행렬의 대각화",
+    "sections": [
+     {
+      "n": 1,
+      "title": "고윳값과 고유벡터",
+      "code": "12고대03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "케일리-해밀턴 정리",
+      "code": "12고대03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "행렬의 대각화",
+      "code": "12고대03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "직교행렬과 직교대각화",
+      "code": "12고대03-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "이차곡선의 표준형",
+      "code": "12고대03-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "대각화의 활용",
+      "code": "12고대03-06",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dmath",
+  "name": "이산 수학",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "선택과 배열",
+    "sections": [
+     {
+      "n": 1,
+      "title": "여러 가지 순열",
+      "code": "12이수01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "중복조합",
+      "code": "12이수01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "포함배제의 원리",
+      "code": "12이수01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "집합의 분할과 자연수의 분할",
+      "code": "12이수01-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "비둘기집의 원리",
+      "code": "12이수01-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "점화 관계와 알고리즘",
+    "sections": [
+     {
+      "n": 1,
+      "title": "수열의 귀납적 정의",
+      "code": "12이수02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "점화 관계와 일반항",
+      "code": "12이수02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "알고리즘과 그 표현",
+      "code": "12이수02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "재귀적 알고리즘",
+      "code": "12이수02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "여러 가지 알고리즘",
+      "code": "12이수02-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "수의 표현과 부울 대수",
+    "sections": [
+     {
+      "n": 1,
+      "title": "진법",
+      "code": "12이수03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "이진수의 사칙연산",
+      "code": "12이수03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "부울 함수와 간소화",
+      "code": "12이수03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "논리 회로",
+      "code": "12이수03-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "그래프",
+    "sections": [
+     {
+      "n": 1,
+      "title": "그래프와 실생활 문제",
+      "code": "12이수04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "꼭짓점의 차수와 변의 개수",
+      "code": "12이수04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "인접행렬",
+      "code": "12이수04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "평면그래프",
+      "code": "12이수04-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "오일러그래프와 해밀턴그래프",
+      "code": "12이수04-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "수형도와 생성수형도",
+      "code": "12이수04-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "채색수와 채색다항식",
+      "code": "12이수04-07",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adgeo",
+  "name": "고급 기하",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "작도와 평면기하",
+    "sections": [
+     {
+      "n": 1,
+      "title": "기초적인 작도",
+      "code": "12고기01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "여러 가지 작도",
+      "code": "12고기01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "작도 가능성과 대수",
+      "code": "12고기01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "평면도형의 기초 성질과 증명",
+      "code": "12고기01-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "삼각형에 관한 정리",
+      "code": "12고기01-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "원에 관한 정리",
+      "code": "12고기01-06",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "곡선의 성질",
+    "sections": [
+     {
+      "n": 1,
+      "title": "평면곡선의 매개변수 방정식",
+      "code": "12고기02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "점의 자취 탐구",
+      "code": "12고기02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "공간곡선의 매개변수 방정식",
+      "code": "12고기02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "공간에서의 속도와 가속도",
+      "code": "12고기02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "정칙곡선과 곡선의 길이",
+      "code": "12고기02-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "단위속력곡선과 호의 길이 매개변수",
+      "code": "12고기02-06",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 7,
+      "title": "단위속력곡선으로 재매개화",
+      "code": "12고기02-07",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 8,
+      "title": "곡률과 곡률반경",
+      "code": "12고기02-08",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "곡면의 성질",
+    "sections": [
+     {
+      "n": 1,
+      "title": "등위곡선과 곡면",
+      "code": "12고기03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "이차곡면",
+      "code": "12고기03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "구면삼각형",
+      "code": "12고기03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "구면코사인법칙과 구면사인법칙",
+      "code": "12고기03-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "econ",
+  "name": "경제 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "수와 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제지표",
+      "code": "12경수01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "환율",
+      "code": "12경수01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "세금",
+      "code": "12경수01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "단리와 복리, 현재 가치",
+      "code": "12경수01-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "연금",
+      "code": "12경수01-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "함수와 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 현상과 함수",
+      "code": "12경수02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "수요곡선과 공급곡선",
+      "code": "12경수02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "효용함수",
+      "code": "12경수02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "균형 가격",
+      "code": "12경수02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "세금·소득과 균형 가격",
+      "code": "12경수02-05",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 6,
+      "title": "부등식의 영역과 경제",
+      "code": "12경수02-06",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "행렬과 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 현상과 행렬",
+      "code": "12경수03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "역행렬",
+      "code": "12경수03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "행렬로 푸는 경제 문제",
+      "code": "12경수03-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "미분과 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 함수의 미분",
+      "code": "12경수04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "그래프의 개형과 해석",
+      "code": "12경수04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "탄력성",
+      "code": "12경수04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "최적화",
+      "code": "12경수04-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "aimath",
+  "name": "인공지능 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "인공지능과 빅데이터",
+    "sections": [
+     {
+      "n": 1,
+      "title": "인공지능의 학습과 수학",
+      "code": "12인수01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "인공지능과 수학의 역사",
+      "code": "12인수01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "빅데이터",
+      "code": "12인수01-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "텍스트 데이터 처리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "집합과 벡터로 나타낸 텍스트",
+      "code": "12인수02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "빈도수 벡터와 요약",
+      "code": "12인수02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "텍스트 분석의 수학",
+      "code": "12인수02-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "이미지 데이터 처리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "행렬로 나타낸 이미지",
+      "code": "12인수03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "행렬 연산과 이미지 변환",
+      "code": "12인수03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "이미지 분류의 수학",
+      "code": "12인수03-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "예측과 최적화",
+    "sections": [
+     {
+      "n": 1,
+      "title": "확률과 예측",
+      "code": "12인수04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "추세선",
+      "code": "12인수04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "손실함수",
+      "code": "12인수04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "경사하강법",
+      "code": "12인수04-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "title": "인공지능과 수학 탐구",
+    "sections": [
+     {
+      "n": 1,
+      "title": "인공지능의 문제 해결 사례",
+      "code": "12인수05-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "인공지능 수학 주제 탐구",
+      "code": "12인수05-02",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jmath",
+  "name": "직무 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "수와 연산",
+    "sections": [
+     {
+      "n": 1,
+      "title": "직무 속의 수와 사칙연산",
+      "code": "12직수01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "큰 수의 어림",
+      "code": "12직수01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "표준 단위와 단위 환산",
+      "code": "12직수01-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "변화와 관계",
+    "sections": [
+     {
+      "n": 1,
+      "title": "비",
+      "code": "12직수02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "비율과 백분율",
+      "code": "12직수02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "대응 관계와 규칙",
+      "code": "12직수02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "변화를 나타내는 그래프",
+      "code": "12직수02-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "일차방정식과 일차부등식의 활용",
+      "code": "12직수02-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "도형과 측정",
+    "sections": [
+     {
+      "n": 1,
+      "title": "겨냥도와 전개도",
+      "code": "12직수03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "위, 앞, 옆에서 본 모양",
+      "code": "12직수03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "도형의 이동, 합동과 닮음",
+      "code": "12직수03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "평면도형의 둘레와 넓이",
+      "code": "12직수03-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "입체도형의 겉넓이와 부피",
+      "code": "12직수03-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "자료와 가능성",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경우의 수",
+      "code": "12직수04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "가능성의 수치화",
+      "code": "12직수04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "표와 그래프로 정리하기",
+      "code": "12직수04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "표와 그래프의 해석",
+      "code": "12직수04-04",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 5,
+      "title": "목적에 맞는 표현과 의사 결정",
+      "code": "12직수04-05",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mcult",
+  "name": "수학과 문화",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "예술과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "음악과 수학",
+      "code": "12수문01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "미술과 수학",
+      "code": "12수문01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "문학과 수학",
+      "code": "12수문01-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "영화와 수학",
+      "code": "12수문01-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "생활과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "스포츠와 수학",
+      "code": "12수문02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "게임과 수학",
+      "code": "12수문02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "디지털 기술과 수학",
+      "code": "12수문02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "투표와 수학",
+      "code": "12수문02-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "사회와 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "민속 수학과 건축",
+      "code": "12수문03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "점자와 수학",
+      "code": "12수문03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "대중매체와 데이터",
+      "code": "12수문03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "가치소비와 의사 결정",
+      "code": "12수문03-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "환경과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "식생활과 수학",
+      "code": "12수문04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "대기 오염과 수학",
+      "code": "12수문04-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "사막화와 수학",
+      "code": "12수문04-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "생물 다양성과 수학",
+      "code": "12수문04-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pstat",
+  "name": "실용 통계",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "통계와 통계적 문제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "통계의 유용성",
+      "code": "12실통01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "통계적 문제해결 과정",
+      "code": "12실통01-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "모집단과 표본추출",
+      "code": "12실통01-03",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "자료의 수집과 정리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "자료의 종류",
+      "code": "12실통02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "자료의 수집 방법",
+      "code": "12실통02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "그래프의 종류",
+      "code": "12실통02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "대푯값과 산포도",
+      "code": "12실통02-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "자료의 분석",
+    "sections": [
+     {
+      "n": 1,
+      "title": "정규분포와 t분포",
+      "code": "12실통03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "모평균의 추정",
+      "code": "12실통03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "모비율의 추정",
+      "code": "12실통03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "가설검정",
+      "code": "12실통03-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "통계적 탐구",
+    "sections": [
+     {
+      "n": 1,
+      "title": "통계적 탐구와 의사 결정",
+      "code": "12실통04-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "통계적 탐구의 성찰",
+      "code": "12실통04-02",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mres",
+  "name": "수학과제 탐구",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "과제 탐구의 이해",
+    "sections": [
+     {
+      "n": 1,
+      "title": "수학과제 탐구의 의미",
+      "code": "12수과01-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "연구 윤리",
+      "code": "12수과01-02",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "과제 탐구의 방법과 절차",
+    "sections": [
+     {
+      "n": 1,
+      "title": "문헌 조사",
+      "code": "12수과02-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "사례 조사",
+      "code": "12수과02-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "수학 실험",
+      "code": "12수과02-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "개발 연구",
+      "code": "12수과02-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "과제 탐구의 실행 및 평가",
+    "sections": [
+     {
+      "n": 1,
+      "title": "주제 선정과 탐구 계획",
+      "code": "12수과03-01",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 2,
+      "title": "탐구 수행",
+      "code": "12수과03-02",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 3,
+      "title": "산출물과 발표",
+      "code": "12수과03-03",
+      "page": false,
+      "items": []
+     },
+     {
+      "n": 4,
+      "title": "반성과 평가",
+      "code": "12수과03-04",
+      "page": false,
+      "items": []
+     }
+    ]
+   }
+  ]
+ },
+ {
   "id": "extra",
   "name": "교양·심화",
   "meta": "교육과정 밖",

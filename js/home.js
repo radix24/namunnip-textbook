@@ -36,7 +36,7 @@
     const box = (c) => {
       const n = count(c), l = learn(c);
       return `<a class="tbox${n.open ? "" : " soon"}" href="${base}${c.id}/" data-track="${c.track}" data-cid="${c.id}">
-        <span class="lv mono">${LV[c.level]}</span><b>${esc(c.name)}</b>
+        <span class="lv mono">${c.track === "math" && c.level === "고급" ? "과학계열 선택" : LV[c.level]}</span><b>${esc(c.name)}</b>
         <span class="pg mono">${n.open ? `절 ${n.open} · 학습 <span class="lp-n">${pct(l)}</span>` : `준비 중 · 절 ${n.sec}`}</span>
         ${n.open ? `<span class="lp" aria-hidden="true"><i style="--p:${l.p.toFixed(3)}"></i></span>` : ""}</a>`;
     };

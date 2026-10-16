@@ -11,6 +11,7 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const COLORS = { is1: "#86c36f", is2: "#4fc1b6", phy: "#6ea4e6", mech: "#4f7fd6", emq: "#8fc3f5", chem: "#b58de3", mateng: "#9267d6", rxn: "#d3a8f0", bio: "#e89a55", cell: "#d97a3a", gene: "#f2bd86", earth: "#caa47c", esys: "#a88457", space: "#e3cfa3", extra: "#9a9aa0",
     cm1: "#e8c547", cm2: "#d39b2a", alg: "#e2665f", calc1: "#f0936a", stat: "#4fb3dc", calc2: "#c94a6a", geo: "#f08fb7", pmath: "#b07a1e",
+    adcalc: "#a8324f", adalg: "#d1781c", dmath: "#3d9a8a", adgeo: "#c45fa0", econ: "#7a9a2e", aimath: "#5470c6", jmath: "#9b8a4a", mcult: "#d4a017", pstat: "#2f8fbf", mres: "#8c6bb1",
     sie1: "#a6d98f", sie2: "#7ed6cc", adphy: "#3a62b0", labphy: "#b5d6f7", adchem: "#7449b8", labchem: "#e3c9f7", adbio: "#b8602a", labbio: "#f7d3ad", adearth: "#866640", labearth: "#efe1c0", resr: "#d6d06b", info: "#9fb0bf", hist: "#e08aa8", clim: "#5fae8f", fusi: "#c9a0d9" };
   // 블록이 하나라도 배치된 과목만 지도에 (뼈대만 있는 과목은 범례·칩·과목 노드에서 뺀다)
   const LIVE = TOC.filter((c) => c.chapters.some((ch) => ch.sections.some((x) => x.page)));
@@ -32,7 +33,7 @@
   /* ───── 데이터: 블록 점과 개념 허브 ───── */
   const courseName = {}, where = {}, order = [];
   TOC.forEach((c) => { courseName[c.id] = c.name; c.chapters.forEach((ch) => ch.sections.forEach((s) => s.items.forEach((it) => { if (where[it.id]) { where[it.id].also.push({ c, ch, s }); return; } where[it.id] = { c, ch, s, it, also: [] }; order.push(it.id); }))); });
-  const ORDER = ["is1", "sie1", "phy", "mech", "emq", "adphy", "labphy", "chem", "mateng", "rxn", "adchem", "labchem", "is2", "sie2", "bio", "cell", "gene", "adbio", "labbio", "earth", "esys", "space", "adearth", "labearth", "resr", "info", "hist", "clim", "fusi", "cm1", "cm2", "alg", "calc1", "stat", "calc2", "geo", "pmath", "extra"], count = {};
+  const ORDER = ["is1", "sie1", "phy", "mech", "emq", "adphy", "labphy", "chem", "mateng", "rxn", "adchem", "labchem", "is2", "sie2", "bio", "cell", "gene", "adbio", "labbio", "earth", "esys", "space", "adearth", "labearth", "resr", "info", "hist", "clim", "fusi", "cm1", "cm2", "alg", "calc1", "stat", "calc2", "geo", "pmath", "adcalc", "adalg", "dmath", "adgeo", "econ", "aimath", "jmath", "mcult", "pstat", "mres", "extra"], count = {};
   const place = (course) => {
     const i = (count[course] = (count[course] || 0) + 1), ca = ORDER.indexOf(course) / ORDER.length * Math.PI * 2, a = i * 2.39996, r = 7 * Math.sqrt(i);
     return { x: Math.cos(ca) * 220 + Math.cos(a) * r, y: Math.sin(ca) * 220 + Math.sin(a) * r };
