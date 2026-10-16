@@ -8780,25 +8780,42 @@
        "n": 1,
        "title": "미분방정식과 방향장",
        "code": "12고미04-01",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-4-1",
+        "card-adcalc-slope-field",
+        "card-adcalc-field-match"
+       ]
       },
       {
        "n": 2,
        "title": "오일러의 방법",
        "code": "12고미04-02",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-4-2",
+        "card-adcalc-euler-steps",
+        "card-adcalc-euler-orbit"
+       ]
       },
       {
        "n": 3,
        "title": "미분방정식의 풀이",
        "code": "12고미04-03",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-4-3",
+        "card-adcalc-separable-proof",
+        "card-adcalc-separable-spot"
+       ]
       },
       {
        "n": 4,
        "title": "미분방정식의 활용",
        "code": "12고미04-04",
-       "blocks": []
+       "blocks": [
+        "intro-adcalc-4-4",
+        "card-adcalc-coffee",
+        "card-adcalc-carbon14",
+        "card-adcalc-logistic"
+       ]
       }
      ]
     }

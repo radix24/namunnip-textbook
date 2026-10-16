@@ -15837,29 +15837,78 @@ window.TOC = [
       "n": 1,
       "title": "미분방정식과 방향장",
       "code": "12고미04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-slope-field",
+        "title": "풀지 않고도 미분방정식의 해를 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-field-match",
+        "title": "방향장만 보고 미분방정식을 알아맞힐 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "오일러의 방법",
       "code": "12고미04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-euler-steps",
+        "title": "접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-euler-orbit",
+        "title": "원을 그려야 할 공이 왜 점점 멀어질까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "미분방정식의 풀이",
       "code": "12고미04-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-separable-proof",
+        "title": "y' = 2xy의 해를 식으로 구하려면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-separable-spot",
+        "title": "초기 조건을 넣었는데 해가 맞지 않는 이 풀이, 어디가 틀렸을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "미분방정식의 활용",
       "code": "12고미04-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-coffee",
+        "title": "커피를 빨리 식히려면 찬 우유를 언제 넣어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-carbon14",
+        "title": "원자 하나하나는 제멋대로 붕괴하는데 왜 전체는 지수함수를 따를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-logistic",
+        "title": "개체 수는 왜 끝없이 지수적으로 늘지 않을까?"
+       }
+      ]
      }
     ]
    }

@@ -976,3 +976,8 @@ adc-power-radius | 멱급수와 수렴반경 | card-adcalc-radius card-adcalc-ra
 adc-power-ops | 멱급수의 미분·적분과 함수의 표현 | card-adcalc-series-build card-adcalc-pi-race | adc-power-radius pm-inverse-trig calc2-int-functions
 adc-taylor | 테일러다항식과 테일러급수 | card-adcalc-taylor-fit card-adcalc-taylor-build | adc-power-radius calc2-second-deriv pm-higher-deriv
 adc-taylor-uses | 테일러급수의 활용 | card-adcalc-calc-sin card-adcalc-pendulum card-adcalc-relativity | adc-taylor
+# 고급 미적분 Ⅳ. 미분방정식
+adc-ode-field | 미분방정식과 방향장 | card-adcalc-slope-field card-adcalc-field-match | calc1-tangent calc1-derivative-fn
+adc-euler | 오일러의 방법 | card-adcalc-euler-steps card-adcalc-euler-orbit | adc-ode-field calc2-e-natlog
+adc-separable | 변수분리형 미분방정식의 풀이 | card-adcalc-separable-proof card-adcalc-separable-spot | adc-ode-field calc2-int-substitution calc2-exp-log-deriv
+adc-ode-models | 미분방정식의 활용 | card-adcalc-coffee card-adcalc-carbon14 card-adcalc-logistic | adc-separable

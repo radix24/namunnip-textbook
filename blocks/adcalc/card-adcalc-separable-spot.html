@@ -1,0 +1,85 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/adc.js",
+    "js/cards/adcalc/separable-spot.js"
+  ],
+  "short": "변수분리 풀이의 오류 찾기"
+}
+-->
+<style>
+#card-adcalc-separable-spot canvas { aspect-ratio: 16 / 10; }
+#card-adcalc-separable-spot .sol[hidden] { display: none; }
+</style>
+<article class="card" id="card-adcalc-separable-spot">
+  <header class="card-head">
+    <span class="no"></span><h2>초기 조건을 넣었는데 해가 맞지 않는 이 풀이, 어디가 틀렸을까?</h2><span class="kind">미분방정식의 풀이 · 오류 찾기</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="presets">
+        <button class="chip" type="button" data-s="0" aria-pressed="true">풀이 1</button>
+        <button class="chip" type="button" data-s="1">풀이 2</button>
+        <button class="chip" type="button" data-s="2">풀이 3</button>
+        <button class="chip" type="button" data-s="3">풀이 4</button>
+      </div>
+      <canvas aria-label="방향장과, 초기 조건을 지나는 실제 해(수치 계산), 풀이가 낸 답의 그래프"></canvas>
+      <div class="ctl">
+        <p class="mono small">처음 틀린 줄을 누르세요. 틀린 곳이 없으면 마지막 줄을 누르세요. 검정은 실제 해, 주황은 풀이의 답입니다.</p>
+        <div class="sol" data-s="0">
+          <ol class="spot">
+            <li>\(y' = 3y\), \(y(0) = 2\)를 푼다. \(\frac{1}{y}dy = 3\,dx\)이다.<span class="why">맞습니다(\(y \ne 0\)).</span></li>
+            <li>양변을 적분하면 \(\ln|y| = 3x + C\)이다.<span class="why">맞습니다.</span></li>
+            <li data-bad>따라서 \(y = e^{3x} + C\)이고, \(y(0) = 2\)에서 \(C = 1\)이므로 \(y = e^{3x} + 1\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(e^{3x + C} = e^C e^{3x}\)이므로 상수는 곱해집니다. \(y = Ae^{3x}\)에서 \(A = 2\), 곧 \(y = 2e^{3x}\)입니다. 검산: \(y = e^{3x} + 1\)이면 \(y' = 3e^{3x} \ne 3y\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">답을 원래 식에 넣어 보세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="1" hidden>
+          <ol class="spot">
+            <li>\(y' = \frac{x}{y}\), \(y(0) = 1\)을 푼다. \(y\,dy = x\,dx\)이다.<span class="why">맞습니다.</span></li>
+            <li>양변을 적분하면 \(\frac{y^2}{2} = \frac{x^2}{2} + C\), 곧 \(y^2 = x^2 + 2C\)이다.<span class="why">맞습니다.</span></li>
+            <li data-bad>양변의 제곱근을 취하면 \(y = x + \sqrt{2C}\)이고, \(y(0) = 1\)에서 \(y = x + 1\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(\sqrt{x^2 + 2C} \ne x + \sqrt{2C}\)입니다. \(y(0) = 1\)이면 \(2C = 1\)이고 \(y = \sqrt{x^2 + 1}\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">\(x = 0\) 근처에서 두 그래프의 기울기를 비교하세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="2" hidden>
+          <ol class="spot">
+            <li>\(y' = y^2\), \(y(0) = 1\)을 푼다. \(\frac{1}{y^2}dy = dx\)이다.<span class="why">맞습니다.</span></li>
+            <li>양변을 적분하면 \(-\frac{1}{y} = x + C\)이고, \(y(0) = 1\)에서 \(C = -1\)이다.<span class="why">맞습니다.</span></li>
+            <li>따라서 \(y = \frac{1}{1 - x}\)이고, 이 해는 \(x \to 1\)일 때 무한대로 커진다.<span class="why">맞습니다. 해가 유한한 시간에 무한대로 가는 "폭발"이 실제로 일어납니다.</span></li>
+            <li data-bad>이 풀이에는 틀린 곳이 없다.<span class="why"><b>맞습니다.</b> 방정식은 단순해 보여도 해는 \(x = 1\)에서 끝납니다.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="3" hidden>
+          <ol class="spot">
+            <li>\(y' = y - 1\), \(y(0) = 1\)을 푼다.<span class="why">문제를 옮겼습니다.</span></li>
+            <li>양변을 \(y - 1\)로 나누어 적분하면 \(\ln|y - 1| = x + C\), 곧 \(y = 1 + Ae^x\ (A \ne 0)\)이다.<span class="why">계산은 맞습니다. 다만 나누기 전에 \(y - 1 = 0\)인 경우를 빠뜨렸습니다.</span></li>
+            <li data-bad>\(y(0) = 1\)이면 \(A = 0\)이어야 하는데 \(A \ne 0\)이므로, 이 초기값 문제는 해가 없다.<span class="why"><b>여기가 틀렸습니다.</b> 상수함수 \(y = 1\)은 \(y' = 0 = y - 1\)이므로 해이고, \(y(0) = 1\)도 만족합니다. 나누면서 잃어버린 상수해입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">방향장에서 \(y = 1\) 위의 선분은 어느 쪽을 향하나요?</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>변수분리형 미분방정식은 "나누고, 적분하고, 정리한다"로 풀립니다. 짧은 풀이이지만 틀리기 쉬운 곳이 몇 군데 있습니다. 어디일까요?</li>
+      <li><span class="tag">복원</span>\(e^{a + b} = e^a e^b\). 미분방정식의 해는 원래 식에 넣어 성립하는지로 검산할 수 있습니다.</li>
+      <li><span class="tag">설명</span>틀리기 쉬운 곳은 세 군데입니다. ① 적분상수의 위치: \(\ln|y| = 3x + C\)에서 \(C\)는 지수로 올라가 곱하는 상수가 됩니다(풀이 1). ② 식 정리: 제곱근이나 역수를 취할 때 항별로 계산하면 안 됩니다(풀이 2). ③ 상수해: \(g(y)\)로 나누면 \(g(y) = 0\)인 해를 잃습니다(풀이 4). 가장 확실한 점검은 답을 미분해 원래 식에 넣어 보는 것입니다.</li>
+      <li><span class="tag">연결</span>풀이 3처럼 해가 유한한 \(x\)에서 끝나는 경우도 있습니다. 방향장만 보면 해가 영원히 이어질 것 같지만, 식으로 풀어 보면 그렇지 않을 수 있습니다. 방향장, 수치 해, 식으로 구한 해는 서로를 점검하는 도구입니다.</li>
+      <li><span class="tag">적용</span>네 풀이에서 처음 틀린 줄을 찾으세요. 그래프에서 실제 해와 풀이의 답이 어디서 갈라지나요? 풀이 3의 실제 해는 \(x = 1\)에 다가갈 때 어떻게 되나요?</li>
+      <li class="warn"><span class="tag">판단</span>초기 조건을 만족한다고 해가 맞는 것은 아닙니다. 풀이 1의 \(y = e^{3x} + 1\)도 \(y(0) = 2\)를 만족하지만 방정식을 만족하지 않습니다. 초기 조건과 방정식을 <b>둘 다</b> 확인해야 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(y' = -2y\), \(y(0) = 5\)의 해는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(y = 5e^{-2x}\)<span class="why"><b>맞습니다.</b> \(y = Ae^{-2x}\)에서 \(A = 5\)입니다. \(y' = -10e^{-2x} = -2y\)로 검산됩니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(y = e^{-2x} + 4\)<span class="why"><b>적분상수를 더했습니다.</b> 이 함수는 \(y' = -2y\)를 만족하지 않습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(y = 5e^{2x}\)<span class="why"><b>부호를 놓쳤습니다.</b> 감소하는 해여야 합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(y = 5 - 2x\)<span class="why"><b>기울기를 \(-2\)로 일정하게 보았습니다.</b> 기울기는 \(-2y\)라 \(y\)에 따라 변합니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>
