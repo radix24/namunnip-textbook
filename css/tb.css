@@ -667,6 +667,29 @@ a.nb-title:hover { text-decoration: underline; }
 .tbox b { font-size: 15px; letter-spacing: -.02em; line-height: 1.35; }
 .tbox .pg { font-size: 11.5px; color: var(--ink-2); }
 .tbox.soon { background: var(--paper); border-style: dashed; }
+/* 과학 선택 과목 표: 행 = 교과, 열 = 선택 구분(일반·진로·융합선택은 나란히, 과학계열은 오른쪽) */
+.mx-arrow { text-align: center; margin: 10px 0 6px; }
+.sci-mx { display: grid; gap: 6px; }
+.mx-row { display: grid; grid-template-columns: 76px repeat(5, minmax(0, 1fr)); gap: 8px; align-items: stretch; }
+.mx-head { align-items: end; }
+.mx-h { font-size: 12.5px; font-weight: 700; color: var(--ink); padding: 0 2px 6px; border-bottom: 2px solid var(--ink); line-height: 1.3; }
+.mx-h small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); }
+.mx-head .mx-h:nth-child(n+5) { border-bottom-style: dashed; }
+.mx-lb { display: flex; align-items: center; font-size: 14px; font-weight: 800; color: var(--tc); border-left: 3px solid var(--tc); padding-left: 8px; }
+.mx-cell { display: flex; flex-direction: column; gap: 6px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.mx-cell.empty { background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--ink) 4%, transparent) 6px 7px); }
+.sci-mx .tbox { padding: 8px 10px 9px; }
+.sci-mx .tbox b { font-size: 14px; }
+body[data-domain="math"] .sci-mx, body[data-domain="math"] .mx-arrow { display: none; }
+@media (max-width: 860px) {
+  .mx-head { display: none; }
+  .mx-row { grid-template-columns: 1fr; gap: 6px; padding: 10px 0 14px; border-bottom: 1px solid var(--rule); }
+  .mx-lb { padding: 2px 0 2px 8px; }
+  .mx-cell { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 8px; align-items: start; border: 0; padding: 0; }
+  .mx-cell > .tbox { grid-column: 2; }
+  .mx-cell.empty { display: none; }
+  .mx-cell::before { content: attr(data-col); grid-column: 1; grid-row: 1 / span 4; font-size: 11.5px; color: var(--ink-3); padding-top: 9px; }
+}
 /* 학습률 막대: 상자 안쪽에 얇게(테두리가 아니라 내용의 일부) */
 .lp { display: block; height: 4px; margin-top: 7px; border-radius: 2px; background: color-mix(in srgb, var(--ink) 10%, transparent); overflow: hidden; }
 .lp i { display: block; height: 100%; width: calc(var(--p, 0) * 100%); border-radius: 2px; background: var(--tc, var(--forest)); }

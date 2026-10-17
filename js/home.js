@@ -33,25 +33,35 @@
       return { seen, total: ids.length, p: ids.length ? seen / ids.length : 0 };
     };
     const pct = (l) => `${Math.round(l.p * 100)}%`;
-    const box = (c) => {
+    const box = (c, bare) => {
       const n = count(c), l = learn(c);
       return `<a class="tbox${n.open ? "" : " soon"}" href="${base}${c.id}/" data-track="${c.track}" data-cid="${c.id}">
-        <span class="lv mono">${c.track === "math" && c.level === "고급" ? "과학계열 선택" : LV[c.level]}</span><b>${esc(c.name)}</b>
+        ${bare ? "" : `<span class="lv mono">${c.track === "math" && c.level === "고급" ? "과학계열 선택" : LV[c.level]}</span>`}<b>${esc(c.name)}</b>
         <span class="pg mono">${n.open ? `절 ${n.open} · 학습 <span class="lp-n">${pct(l)}</span>` : `준비 중 · 절 ${n.sec}`}</span>
         ${n.open ? `<span class="lp" aria-hidden="true"><i style="--p:${l.p.toFixed(3)}"></i></span>` : ""}</a>`;
     };
     const pick = (f) => TOC.filter(f).sort((a, b) => RANK.indexOf(a.level) - RANK.indexOf(b.level));
     const tree = document.getElementById("tree");
+    /* 과학: 공통 과목 띠 아래에 교과(행) × 선택 구분(열) 표. 일반·진로·융합선택은 나란히 고르는 구분이고,
+       과학계열 과목은 과학고·영재학교 등에서 여는 과목이라 맨 오른쪽 열에 둔다 */
+    const SCI_COLS = [["일반", "일반선택", "교과의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"],
+      ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
+    const SCI_ROWS = [...TRACKS, ["fusion", "교과 공통"]];
+    const cell = (t, lv) => pick((c) => c.track === t && c.level === lv).map((c) => box(c, true)).join("");
     if (tree) tree.innerHTML = `
-      <div class="tree-head"><h2>과목 체계도</h2><p class="mono small dim">열마다 위에서 아래로 일반선택 → 진로선택 → 고급 → 실험. 흐린 상자는 아직 준비 중입니다.</p></div>
-      <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map(box).join("")}</div></div>
-      <div class="tree-cols">${TRACKS.map(([t, nm]) => `
-        <div class="tree-col" data-track="${t}"><h3>${nm}</h3>${pick((c) => c.track === t).map(box).join("")}</div>`).join("")}
+      <div class="tree-head"><h2>과목 체계도</h2><p class="mono small dim">공통 과목을 배운 뒤 선택 과목을 고릅니다. 행은 교과, 열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
+      <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
+      <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
+      <div class="sci-mx" role="table" aria-label="과학 선택 과목: 교과별, 선택 구분별">
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${SCI_COLS.map(([, nm, d]) => `<span class="mx-h" role="columnheader">${nm}<small>${d}</small></span>`).join("")}</div>
+        ${SCI_ROWS.map(([t, nm]) => `<div class="mx-row" data-track="${t}" role="row"><span class="mx-lb" role="rowheader">${nm}</span>${SCI_COLS.map(([lv, cn]) => {
+          const h = cell(t, lv);
+          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${cn}">${h}</div>`;
+        }).join("")}</div>`).join("")}
       </div>
-      <div class="tree-band" data-track="fusion"><span class="band-lb mono">융합</span><div>${pick((c) => c.track === "fusion").map(box).join("")}</div></div>
       <div class="tree-band tree-math" data-track="math"><span class="band-lb mono">수학</span><div>${MATH_COLS.map(([lv, nm]) => {
         const cs = pick((c) => c.track === "math" && c.level === lv);
-        return cs.length ? `<div class="m-col"><h3 class="mono">${nm}</h3>${cs.map(box).join("")}</div>` : "";
+        return cs.length ? `<div class="m-col"><h3 class="mono">${nm}</h3>${cs.map((c) => box(c)).join("")}</div>` : "";
       }).join("")}</div></div>`;
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
