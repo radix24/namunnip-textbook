@@ -9834,25 +9834,41 @@
        "n": 1,
        "title": "확률과 예측",
        "code": "12인수04-01",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-4-1",
+        "card-aimath-weather-predict",
+        "card-aimath-base-rate"
+       ]
       },
       {
        "n": 2,
        "title": "추세선",
        "code": "12인수04-02",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-4-2",
+        "card-aimath-trendline",
+        "card-aimath-extrapolate"
+       ]
       },
       {
        "n": 3,
        "title": "손실함수",
        "code": "12인수04-03",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-4-3",
+        "card-aimath-loss-curve",
+        "card-aimath-loss-outlier"
+       ]
       },
       {
        "n": 4,
        "title": "경사하강법",
        "code": "12인수04-04",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-4-4",
+        "card-aimath-gradient-descent",
+        "card-aimath-gd-contour"
+       ]
       }
      ]
     },

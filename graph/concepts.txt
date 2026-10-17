@@ -1066,3 +1066,7 @@ ai-text-analysis | 텍스트 분석의 수학 | card-aimath-cosine-doc card-aima
 ai-image-matrix | 행렬로 나타낸 이미지 | card-aimath-pixel-grid card-aimath-rgb | cm1-matrix
 ai-image-ops | 행렬 연산과 이미지 변환 | card-aimath-image-ops card-aimath-convolution | ai-image-matrix cm1-matrix-ops cm1-matrix-mult
 ai-image-classify | 이미지 분류의 수학 | card-aimath-digit-distance card-aimath-knn | ai-image-matrix ai-learn
+ai-prob-predict | 확률과 예측 | card-aimath-weather-predict card-aimath-base-rate | stat-cond-prob
+ai-trendline | 추세선 | card-aimath-trendline card-aimath-extrapolate | cm1-quad-graph
+ai-loss | 손실함수 | card-aimath-loss-curve card-aimath-loss-outlier | ai-trendline
+ai-gradient | 경사하강법 | card-aimath-gradient-descent card-aimath-gd-contour | ai-loss calc1-derivative-coef

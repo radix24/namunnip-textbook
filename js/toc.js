@@ -17615,29 +17615,73 @@ window.TOC = [
       "n": 1,
       "title": "확률과 예측",
       "code": "12인수04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-weather-predict",
+        "title": "오늘 비가 오면 내일도 비가 올 확률은 얼마일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-base-rate",
+        "title": "정확도 99%인 진단 인공지능이 \"양성\"이라고 하면 정말 병이 있을 확률은?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "추세선",
       "code": "12인수04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-trendline",
+        "title": "흩어진 점들을 가장 잘 나타내는 직선은 어떻게 고를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-extrapolate",
+        "title": "처음 몇 해의 추세로 10년 뒤를 예측해도 될까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "손실함수",
       "code": "12인수04-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-loss-curve",
+        "title": "모델이 틀린 정도를 함수로 나타내면 어떤 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-loss-outlier",
+        "title": "잘못 입력된 자료 하나가 들어오면 어떤 손실함수가 더 크게 흔들릴까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "경사하강법",
       "code": "12인수04-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-gradient-descent",
+        "title": "안개 낀 산에서 가장 낮은 곳을 찾아 내려가려면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-gd-contour",
+        "title": "기울기와 절편을 함께 학습하면 어떤 길로 내려갈까?"
+       }
+      ]
      }
     ]
    },
