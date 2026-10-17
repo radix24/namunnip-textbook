@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>게임과 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="돌 줍기 게임 님(Nim)과 님 합(이진법 XOR)으로 찾는 필승 전략, 확률형 뽑기에서 한 번 이상 당첨될 확률 1 − (1 − p)ⁿ, 첫 당첨까지 횟수의 분포, 도박사의 오류. 님 카드와, 뽑기 시뮬레이션 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-nim .heap { display: flex; align-items: center; gap: .35rem; margin: .35rem 0; min-height: 2rem; }
+    #card-mcult-nim .heap b { width: 3.2rem; font-weight: 600; font-size: .85rem; }
+    #card-mcult-nim .stone { width: 1.7rem; height: 1.7rem; border-radius: 50%; border: 1px solid #5d5d61; background: #8d8d92; padding: 0; cursor: pointer; }
+    #card-mcult-nim .stone:hover, #card-mcult-nim .stone:focus-visible { background: #b5532f; }
+    #card-mcult-nim .stone:disabled { cursor: default; opacity: .6; }
+    #card-mcult-nim .bin { font-size: .84rem; margin-top: .4rem; white-space: pre; line-height: 1.5; }
+    #card-mcult-gacha canvas { aspect-ratio: 16 / 8; max-width: 560px; margin: .3rem auto 0; }
+    #card-mcult-gacha .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>게임과 수학</h1>
+    <p class="lead">게임에는 이기는 방법을 수학으로 찾을 수 있는 것과, 확률이 결과를 정하는 것이 있습니다. 돌 줍기 게임은 <em>이진법</em>으로 필승 전략을 찾고, 뽑기는 <em>여사건의 확률</em>로 당첨 가능성을 바르게 읽습니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/dmath/3-1.html#card-dmath-base-convert" title="이산 수학 3.1 · 같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?">진법</a><a class="p p-card" href="../../c/stat/2-2.html#card-stat-add-rule" title="확률과 통계 2.2 · &#x27;A 또는 B&#x27;의 확률은 두 확률의 합일까?">여사건의 확률</a><a class="p p-card" href="../../c/stat/2-6.html#card-stat-indep-trials" title="확률과 통계 2.6 · 동전을 네 번 던져 앞면이 두 번 나오는 길은 몇 가지일까?">독립시행의 확률</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-nim"><span class="mono">2.2.1</span>돌 줍기 게임의 필승 전략 — 이진법과 XOR</a></li>
+        <li><a href="#card-mcult-gacha"><span class="mono">2.2.2</span>확률 1%면 100번 뽑으면 반드시 나올까 — 뽑기의 확률</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-nim">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>돌 줍기 게임에서 컴퓨터를 이길 수 있을까?</h2><span class="kind">이진법과 필승 전략 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">규칙: 차례마다 한 더미를 골라 돌을 1개 이상 가져갑니다. <b>마지막 돌을 가져가는 사람이 이깁니다.</b> 돌을 누르면 그 돌부터 오른쪽 끝까지 가져갑니다.</p>
+            <div class="heaps"></div>
+            <div class="presets"><button class="chip reset" type="button">새 게임(3, 4, 5)</button><button class="chip reset2" type="button">새 게임(무작위)</button><label class="small"><input class="hint" type="checkbox"> 이진법 보기</label></div>
+            <p class="verdict" role="status"></p>
+            <div class="bin mono" hidden></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>님(Nim)은 여러 나라에서 오래 즐긴 돌 줍기 놀이입니다. 컴퓨터가 늘 이기는 것 같다면, 컴퓨터는 어떤 규칙으로 돌을 고르는 걸까요?</li>
+            <li><span class="tag">복원</span>십진수를 이진법으로 나타내기. \(5 = 101_{(2)}\).</li>
+            <li><span class="tag">설명</span>각 더미의 돌 수를 이진법으로 쓰고, 자리마다 1의 개수가 짝수면 0, 홀수면 1로 적은 값을 <em>님 합</em>(XOR)이라 합니다. 님 합이 0인 상태에서는 어떻게 가져가도 0이 아닌 상태가 되고, 0이 아닌 상태에서는 언제나 님 합을 0으로 만드는 수가 있습니다. 돌이 모두 없어진 상태의 님 합은 0이므로, <em>님 합을 0으로 만들어 넘기는 쪽</em>이 이깁니다.</li>
+            <li><span class="tag">연결</span>님은 조합 게임 이론의 출발점입니다. 여러 게임을 님으로 바꾸어 분석할 수 있다는 것이 알려져 있습니다(스프라그–그런디 정리).</li>
+            <li><span class="tag">적용</span>이진법 보기를 켜고, 님 합을 0으로 만드는 수를 찾아 컴퓨터를 이겨 보세요. 컴퓨터가 먼저 둘 때는 어떻게 될까요?</li>
+            <li class="warn"><span class="tag">판단</span>필승 전략이 있다는 것은 처음 상태에 따라 누가 이길지가 이미 정해져 있다는 뜻입니다. 시작 상태의 님 합이 0이면 먼저 두는 사람은 상대가 실수하지 않는 한 집니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">세 더미의 돌이 1, 2, 3개입니다. 먼저 두는 사람은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>상대가 바르게 두면 진다<span class="why"><b>맞습니다.</b> \(01 \oplus 10 \oplus 11 = 00\), 님 합이 0입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>언제나 이길 수 있다<span class="why"><b>님 합이 0인 상태에서는 이기는 수가 없습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>돌이 짝수 개(6개)라 이긴다<span class="why"><b>전체 돌 수의 홀짝은 승패를 정하지 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>운에 달려 있다<span class="why"><b>님에는 우연이 없습니다.</b> 상태만으로 승패가 정해집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/mcult/2-3.html#card-mcult-barcode-check"><small class="mono">수학과 문화 2.3</small>바코드의 마지막 숫자는 왜 있을까? 계산대는 잘못 읽은 것을 어떻게 알아챌까?</a><a href="../../c/mcult/2-3.html#card-mcult-run-length"><small class="mono">수학과 문화 2.3</small>흑백 그림을 더 짧은 숫자로 저장할 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-mcult-gacha">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>당첨 확률 1%인 뽑기를 100번 하면 반드시 당첨될까?</h2><span class="kind">여사건과 기하분포 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">한 번 당첨 확률 \(p\) = <output class="p-out"></output>%</label><input class="p" type="range" min="0.5" max="10" step="0.5" value="1" aria-label="한 번 당첨 확률"></div>
+              <div><label class="mono">뽑는 횟수 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="1" max="400" step="1" value="100" aria-label="뽑는 횟수"></div>
+            </div>
+            <div class="presets"><button class="chip sim" type="button">가상 이용자 1000명 시뮬레이션</button></div>
+            <canvas aria-label="뽑는 횟수에 따른 한 번 이상 당첨될 확률 곡선과 가상 이용자들의 첫 당첨까지 횟수 분포"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="mono small sim-say"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>게임의 뽑기(가챠)나 복권에 "당첨 확률 1%"라고 쓰여 있으면, 100번 뽑으면 한 번은 당첨된다고 생각하기 쉽습니다. 정말 그럴까요?</li>
+            <li><span class="tag">복원</span>여사건의 확률 \(P(A^C) = 1 - P(A)\), 독립인 시행의 확률은 곱합니다.</li>
+            <li><span class="tag">설명</span>매번 독립으로 확률 \(p\)인 뽑기를 \(n\)번 해서 한 번도 당첨되지 않을 확률은 \((1 - p)^n\)이므로, <em>한 번 이상 당첨될 확률</em>은 \(1 - (1 - p)^n\)입니다. \(p = 0.01\), \(n = 100\)이면 \(1 - 0.99^{100} \approx 0.634\)로 약 37%의 사람은 100번 뽑아도 당첨되지 않습니다. 첫 당첨까지 횟수의 평균은 \(\frac1p = 100\)번이지만, 그보다 훨씬 많이 뽑는 사람도 적지 않습니다.</li>
+            <li><span class="tag">연결</span>국내에서는 게임 확률형 아이템의 확률을 공개하도록 법으로 정하고 있습니다. 공개된 확률을 바르게 해석하는 것이 중요합니다.</li>
+            <li><span class="tag">적용</span>당첨 확률이 50% 이상이 되려면 몇 번 뽑아야 하는지 찾아보세요. 시뮬레이션에서 300번 넘게 뽑은 가상 이용자는 몇 명인가요?</li>
+            <li class="warn"><span class="tag">판단</span>"지금까지 많이 꽝이었으니 이번엔 나올 것"이라는 생각은 틀립니다. 각 시행이 독립이면 앞의 결과는 다음 확률에 영향을 주지 않습니다(도박사의 오류).</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">당첨 확률 10%인 뽑기를 10번 할 때 한 번 이상 당첨될 확률은 약?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>65%<span class="why"><b>맞습니다.</b> \(1 - 0.9^{10} \approx 0.651\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>100%<span class="why"><b>확률을 10번 더했습니다.</b> 확률을 더하면 겹치는 경우를 여러 번 셉니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>10%<span class="why"><b>한 번의 확률입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>35%<span class="why"><b>한 번도 당첨되지 않을 확률입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/mcult/2-3.html#card-mcult-barcode-check"><small class="mono">수학과 문화 2.3</small>바코드의 마지막 숫자는 왜 있을까? 계산대는 잘못 읽은 것을 어떻게 알아챌까?</a><a href="../../c/mcult/2-3.html#card-mcult-run-length"><small class="mono">수학과 문화 2.3</small>흑백 그림을 더 짧은 숫자로 저장할 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/nim.js"></script>
+<script src="../../js/cards/mcult/gacha.js"></script>
+</body>
+</html>

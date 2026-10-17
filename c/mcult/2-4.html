@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>투표와 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="같은 선호 투표를 다수 득표제, 결선 투표제, 보르다 방식, 콩도르세 방식으로 세었을 때 달라지는 당선자, 인구 비례 의석 배분의 최대 나머지 방식과 동트 방식, 앨라배마 역설. 투표 방법 카드와, 의석 배분 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-voting-methods .prefs { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .35rem .6rem; margin: .4rem 0; }
+    #card-mcult-voting-methods .prefs label { display: flex; align-items: center; justify-content: space-between; gap: .4rem; font: .85rem var(--mono, monospace); }
+    #card-mcult-voting-methods .prefs input { width: 3.6rem; }
+    #card-mcult-voting-methods table { border-collapse: collapse; font-size: .84rem; width: 100%; }
+    #card-mcult-voting-methods td, #card-mcult-voting-methods th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .25rem .35rem; text-align: left; vertical-align: top; }
+    #card-mcult-voting-methods td b { color: #b5532f; }
+    #card-mcult-apportionment .pops { display: flex; flex-wrap: wrap; gap: .4rem .8rem; margin: .3rem 0; }
+    #card-mcult-apportionment .pops label { font: .85rem var(--mono, monospace); }
+    #card-mcult-apportionment .pops input[type=number] { width: 4.2rem; }
+    #card-mcult-apportionment table { border-collapse: collapse; font: .84rem var(--mono, monospace); width: 100%; margin: .4rem 0; }
+    #card-mcult-apportionment td, #card-mcult-apportionment th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .2rem .35rem; text-align: right; }
+    #card-mcult-apportionment td:first-child, #card-mcult-apportionment th:first-child { text-align: left; }
+    #card-mcult-apportionment canvas { aspect-ratio: 16 / 7; max-width: 560px; margin: .2rem auto 0; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>투표와 수학</h1>
+    <p class="lead">민주주의는 표를 세는 일에서 시작합니다. 그런데 같은 표라도 <em>세는 방법</em>에 따라 당선자가 달라지고, 의석을 인구에 비례해 정수로 나누는 일에도 피할 수 없는 문제가 있습니다. 이 절에서는 투표와 의석 배분의 수학을 살펴봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/3-2.html#card-cm1-perm-slots" title="공통수학1 3.2 · 뽑아서 줄 세우는 방법은 왜 n(n − 1)(n − 2)…일까?">순열</a><a class="p p-card" href="../../c/cm2/1-1.html#card-cm2-internal-div" title="공통수학2 1.1 · 선분을 m : n으로 나누는 점은 어디에 있을까?">비례식</a><a class="p p-card" href="../../c/is1/1-4.html#card-is1-sampling" title="통합과학1 1.4 · 소리는 어떻게 숫자가 될까?">반올림</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-voting-methods"><span class="mono">2.4.1</span>같은 표, 다른 당선자 — 투표 방법에 따라 달라지는 결과</a></li>
+        <li><a href="#card-mcult-apportionment"><span class="mono">2.4.2</span>의석을 늘렸는데 한 지역은 줄어든다 — 의석 배분과 앨라배마 역설</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-voting-methods">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>똑같은 표로 뽑았는데, 세는 방법을 바꾸면 당선자가 달라질까?</h2><span class="kind">선호 투표와 집계 방법 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">학급 회장 후보 A, B, C. 투표자는 좋아하는 순서대로 적어 냈습니다(가상 자료). 순서별 인원을 바꿔 보세요.</p>
+            <div class="prefs"></div>
+            <table></table>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>18명이 후보 3명에 대해 좋아하는 순서를 적어 냈습니다. 가장 많은 1순위를 받은 사람, 결선 투표의 승자, 순위 점수의 1등은 모두 같은 사람일까요?</li>
+            <li><span class="tag">복원</span>순서쌍과 경우의 수(3명을 줄 세우는 방법 \(3! = 6\)가지).</li>
+            <li><span class="tag">설명</span><em>다수 득표제</em>는 1순위 표만 셉니다. <em>결선 투표제</em>는 1순위 상위 두 명 중에서 각 투표자가 더 좋아하는 쪽을 셉니다. <em>보르다 방식</em>은 1순위에 2점, 2순위에 1점을 주어 더합니다. <em>콩도르세 승자</em>는 다른 모든 후보와 일대일로 겨뤄 이기는 후보입니다. 기본 자료에서는 이 방법들이 A, B, C로 서로 다른 당선자를 냅니다. 어떤 방법이 공정한지는 수학만으로 정할 수 없고, 사회가 고른 가치에 달려 있습니다.</li>
+            <li><span class="tag">연결</span>합리적인 조건을 모두 만족하는 순위 투표 방법은 없다는 애로의 불가능성 정리가 알려져 있습니다. 나라와 단체마다 다른 선거 방법을 씁니다.</li>
+            <li><span class="tag">적용</span>인원을 바꿔 네 방법이 모두 같은 당선자를 내는 경우를 만들어 보세요. 콩도르세 승자가 없는 경우(순환)도 만들 수 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>투표 결과를 볼 때는 "누가 이겼나"와 함께 "어떤 방법으로 셌나"를 확인해야 합니다. 방법을 정하는 쪽이 결과에 영향을 줄 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">A&gt;B&gt;C 5명, B&gt;C&gt;A 3명, C&gt;B&gt;A 2명입니다. 다수 득표제로는 A가 당선됩니다. 보르다 방식(1순위 2점, 2순위 1점)의 당선자는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>B(13점)<span class="why"><b>맞습니다.</b> A = 2×5 = 10, B = 1×5 + 2×3 + 1×2 = 13, C = 1×3 + 2×2 = 7입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>A(10점)<span class="why"><b>1순위 표가 가장 많아도 나머지 5명에게 A는 꼴찌입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>C(7점)<span class="why"><b>C는 점수가 가장 적습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>A와 B 동점<span class="why"><b>2순위 점수를 빠뜨렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-apportionment">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>전체 의석을 하나 늘렸는데 어떤 지역의 의석은 줄어들 수 있을까?</h2><span class="kind">비례 배분과 반올림 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="pops"><label>가 <input type="number" min="1" max="999" value="61" data-r="0" aria-label="가 지역 인구"></label><label>나 <input type="number" min="1" max="999" value="59" data-r="1" aria-label="나 지역 인구"></label><label>다 <input type="number" min="1" max="999" value="20" data-r="2" aria-label="다 지역 인구"></label><span class="small">(인구, 만 명 · 가상)</span></div>
+            <div class="ctl-row"><div><label class="mono">전체 의석 = <output class="s-out"></output></label><input class="s" type="range" min="3" max="30" step="1" value="10" aria-label="전체 의석"></div></div>
+            <table></table>
+            <canvas aria-label="전체 의석 수에 따라 인구가 가장 적은 지역이 받는 의석, 최대 나머지 방식과 동트 방식"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>의석을 인구에 비례해 나누면 몫이 4.29석처럼 소수가 됩니다. 사람을 쪼갤 수 없으니 반올림해야 하는데, 어떤 규칙으로 정수로 만들어야 공정할까요?</li>
+            <li><span class="tag">복원</span>비례배분: 전체를 \(a : b : c\)로 나누면 첫째 몫은 전체 \(\times \frac{a}{a + b + c}\)입니다.</li>
+            <li><span class="tag">설명</span><em>최대 나머지 방식</em>(해밀턴)은 몫의 정수 부분을 먼저 주고, 남은 의석을 소수 부분이 큰 순서로 줍니다. 이 방식은 몫과 늘 1석 이내로 가깝지만, 전체 의석을 늘렸을 때 어떤 지역이 오히려 줄어드는 <em>앨라배마 역설</em>이 생길 수 있습니다. 기본 자료에서 10석이면 다 지역이 2석이지만 11석이면 1석입니다. <em>동트 방식</em>은 인구를 1, 2, 3, …으로 나눈 값이 큰 순서로 한 석씩 주는데, 이런 역설은 없지만 큰 지역에 조금 유리합니다.</li>
+            <li><span class="tag">연결</span>미국 하원의 주별 의석 배분에서 실제로 이 역설이 발견되었고, 우리나라 국회의원 선거의 비례대표 의석 배분도 정해진 규칙(최대 나머지 방식에 기반)으로 계산합니다.</li>
+            <li><span class="tag">적용</span>의석을 하나씩 늘리며 그래프에서 다 지역의 의석이 줄어드는 곳을 찾으세요. 인구를 바꾸면 역설이 사라지나요?</li>
+            <li class="warn"><span class="tag">판단</span>모든 공정성 조건을 함께 만족하는 배분 방법은 없다는 것이 알려져 있습니다(발린스키–영 정리). 어떤 성질을 지킬지 먼저 합의해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">인구 50, 30, 20(만 명)인 세 지역에 7석을 최대 나머지 방식으로 나누면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4, 2, 1<span class="why"><b>맞습니다.</b> 몫 3.5, 2.1, 1.4 → 정수 부분 3, 2, 1(6석), 남은 1석은 소수 부분이 가장 큰 첫째(0.5)에.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>3, 2, 2<span class="why"><b>소수 부분 0.4를 0.5보다 크게 보았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>3, 3, 1<span class="why"><b>둘째의 소수 부분 0.1은 가장 작습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3, 2, 1<span class="why"><b>정수 부분만 주어 1석이 남았습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/voting-methods.js"></script>
+<script src="../../js/cards/mcult/apportionment.js"></script>
+</body>
+</html>

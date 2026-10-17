@@ -23,7 +23,6 @@
     #card-mcult-fib-poem .bar { height: 100%; border-radius: 3px; background: rgba(63,111,163,.5); }
     #card-mcult-fib-poem .bar.ok { background: rgba(59,124,42,.6); }
     #card-mcult-fib-poem .track i { position: absolute; top: -3px; bottom: -3px; margin-left: -1px; border-left: 2px dashed #b4562f; }
-    #card-mcult-babel-library .choices { display: flex; flex-wrap: wrap; gap: .4rem; margin: .3rem 0 .5rem; }
     #card-mcult-babel-library .ctl-row > div { min-width: 12rem; }
     #card-mcult-babel-library table { border-collapse: collapse; font-size: .85rem; margin-top: .4rem; width: 100%; }
     #card-mcult-babel-library td, #card-mcult-babel-library th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .2rem .4rem; text-align: left; }
@@ -100,11 +99,7 @@
         <div class="card-body">
           <div class="card-fig">
             <p class="small">보르헤스의 소설 「바벨의 도서관」에는 410쪽, 쪽마다 40행, 행마다 80글자, 25가지 기호로 만들 수 있는 <b>모든</b> 책이 있습니다. <b>예측</b>: 책의 수는 우주의 원자 수(약 \(10^{80}\))와 비교하면?</p>
-            <div class="choices" role="group" aria-label="예측">
-              <button type="button" data-g="lo">원자 수보다 적다</button>
-              <button type="button" data-g="eq">비슷하다</button>
-              <button type="button" data-g="hi">훨씬 많다</button>
-            </div>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="lo">원자 수보다 적다</button><button class="chip" type="button" data-g="eq">비슷하다</button><button class="chip" type="button" data-g="hi">훨씬 많다</button></div>
             <p class="verdict" role="status"></p>
             <div class="after" hidden>
               <div class="ctl-row">

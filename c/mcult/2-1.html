@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스포츠와 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="측면에서 달려 들어갈 때 골문이 보이는 각 θ(y), 탄젠트 덧셈정리와 산술·기하평균으로 찾는 최적 위치 y = √(ab), 엘로 레이팅의 기대 점수 1/(1 + 10^(Δ/400))와 점수 갱신 R + K(S − E). 슛 각도 카드와, 레이팅 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-shot-angle canvas { aspect-ratio: 16 / 9; max-width: 600px; margin: 0 auto; }
+    #card-mcult-shot-angle .ctl-row > div { min-width: 12rem; }
+    #card-mcult-elo-rating canvas { aspect-ratio: 16 / 8; max-width: 560px; margin: .3rem auto 0; }
+    #card-mcult-elo-rating .ctl-row > div { min-width: 11rem; }
+    #card-mcult-elo-rating .log { font-size: .8rem; max-height: 6.2rem; overflow-y: auto; margin: .3rem 0 0; padding-left: 1.2rem; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="2-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>스포츠와 수학</h1>
+    <p class="lead">스포츠에는 위치와 기록, 순위를 다루는 수학이 많습니다. 슛하기 좋은 자리는 골문이 보이는 각으로 따질 수 있고, 선수의 실력 점수는 기대한 결과와 실제 결과의 차이로 고쳐 갑니다. 이 절에서는 <em>각의 최대</em>와 <em>엘로 레이팅</em>을 다룹니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/2-2.html#card-calc2-chord-add" title="미적분Ⅱ 2.2 · cos(α − β)를 α, β의 삼각함수로 나타낼 수 있을까?">삼각함수의 덧셈정리</a><a class="p p-card" href="../../c/cm2/2-8.html#card-cm2-amgm" title="공통수학2 2.8 · 두 양수의 산술평균과 기하평균 가운데 어느 쪽이 클까?">산술평균과 기하평균</a><a class="p p-card" href="../../c/alg/1-6.html#card-alg-exp-func-def" title="대수 1.6 · y = ax가 함수가 되려면 밑은 어때야 할까?">지수함수</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-shot-angle"><span class="mono">2.1.1</span>골문이 가장 넓게 보이는 슛 위치 — 각의 최대</a></li>
+        <li><a href="#card-mcult-elo-rating"><span class="mono">2.1.2</span>실력 점수는 기대보다 잘한 만큼 오른다 — 엘로 레이팅</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-2-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-shot-angle">
+        <header class="card-head">
+          <span class="no">2.1.1</span><h2>측면으로 달려 들어가는 공격수는 어디에서 슛을 해야 골문이 가장 넓게 보일까?</h2><span class="kind">각의 최대와 원 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">골문 중앙에서 옆으로 \(c\) = <output class="c-out"></output> m</label><input class="c" type="range" min="5" max="20" step="0.5" value="10" aria-label="골문 중앙에서 옆으로 떨어진 거리"></div>
+              <div><label class="mono">골라인까지 거리 \(y\) = <output class="y-out"></output> m</label><input class="y" type="range" min="0.5" max="30" step="0.1" value="20" aria-label="골라인까지의 거리"></div>
+            </div>
+            <canvas aria-label="왼쪽은 위에서 본 골문과 공격수, 오른쪽은 거리에 따른 골문이 보이는 각의 그래프"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공격수가 측면에서 골라인과 수직으로 달려 들어갑니다. 너무 멀면 골문이 작게 보이고, 너무 가까우면 각이 좁아집니다. 골문(너비 7.32 m)이 가장 넓은 각으로 보이는 지점은 어디일까요?</li>
+            <li><span class="tag">복원</span>탄젠트의 덧셈정리 \(\tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}\), 산술평균과 기하평균의 관계.</li>
+            <li><span class="tag">설명</span>공격수가 달리는 선에서 가까운 골대까지 옆 거리를 \(a\), 먼 골대까지를 \(b\)라 하면, 골라인에서 \(y\)만큼 떨어진 곳에서 골문이 보이는 각 \(\theta\)는 \(\tan\theta = \frac{b/y - a/y}{1 + ab/y^2} = \frac{b - a}{y + ab/y}\)입니다. 분모 \(y + \frac{ab}{y}\)는 \(y = \sqrt{ab}\)일 때 가장 작으므로(산술·기하평균), 각은 <em>\(y = \sqrt{ab}\)</em>에서 가장 큽니다. 기하로는 두 골대를 지나고 달리는 선에 접하는 원의 접점입니다.</li>
+            <li><span class="tag">연결</span>미술관에서 그림이 가장 크게 보이는 자리, 럭비의 전환 킥 위치 고르기도 같은 문제입니다(레기오몬타누스의 문제).</li>
+            <li><span class="tag">적용</span>옆 거리 \(c\)를 바꾸며 가장 좋은 \(y\)가 \(\sqrt{(c - 3.66)(c + 3.66)}\)와 같은지 확인하세요. 골문에 가까이 갈수록 언제나 좋을까요?</li>
+            <li class="warn"><span class="tag">판단</span>실제 슛은 수비수, 골키퍼의 위치, 슛의 정확도에 따라 달라집니다. 각이 가장 크다는 것은 여러 판단 기준 중 하나입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">달리는 선에서 가까운 골대까지 옆 거리가 4 m, 먼 골대까지가 9 m입니다. 골문이 가장 넓게 보이는 곳은 골라인에서 몇 m일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>6 m<span class="why"><b>맞습니다.</b> \(\sqrt{4 \times 9} = 6\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>6.5 m<span class="why"><b>산술평균입니다.</b> 기하평균이 답입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0 m(골라인 위)<span class="why"><b>골라인 위에서는 각이 0입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>5 m<span class="why"><b>먼 골대와 가까운 골대 거리의 차입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-elo-rating">
+        <header class="card-head">
+          <span class="no">2.1.2</span><h2>약한 팀을 이기면 점수가 조금, 강한 팀을 이기면 많이 오르는 까닭은?</h2><span class="kind">지수함수와 기댓값 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">A 점수 = <output class="a-out"></output></label><input class="ra" type="range" min="1000" max="2400" step="1" value="1600" aria-label="A의 점수"></div>
+              <div><label class="mono">B 점수 = <output class="b-out"></output></label><input class="rb" type="range" min="1000" max="2400" step="1" value="1400" aria-label="B의 점수"></div>
+              <div><label class="mono">K = <output class="k-out"></output></label><input class="k" type="range" min="8" max="64" step="8" value="32" aria-label="K 계수"></div>
+            </div>
+            <div class="presets" role="group" aria-label="경기 결과"><button class="chip" type="button" data-s="1">A 승</button><button class="chip" type="button" data-s="0.5">무승부</button><button class="chip" type="button" data-s="0">B 승</button></div>
+            <canvas aria-label="점수 차이에 따른 A의 기대 승률 곡선과 지금 위치"></canvas>
+            <p class="mono small say" role="status"></p>
+            <ol class="log mono"></ol>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>체스, 바둑, 온라인 게임은 선수마다 실력 점수(레이팅)를 매깁니다. 한 경기의 결과로 점수를 얼마나 올리고 내려야 공정할까요?</li>
+            <li><span class="tag">복원</span>지수함수 \(10^x\)의 성질, 기댓값.</li>
+            <li><span class="tag">설명</span>엘로 방식은 점수 차이로 A의 <em>기대 점수</em>를 \(E_A = \frac{1}{1 + 10^{(R_B - R_A)/400}}\)로 계산합니다(승 1, 무 0.5, 패 0). 경기 뒤에는 실제 결과 \(S\)와 비교해 \(R_A' = R_A + K(S - E_A)\)로 고칩니다. 이기리라 예상된 경기에서 이기면 \(S - E_A\)가 작아 조금 오르고, 예상을 뒤집으면 많이 오릅니다. B는 A가 얻은 만큼 잃으므로 두 점수의 합은 그대로입니다.</li>
+            <li><span class="tag">연결</span>국제 체스 연맹, FIFA 남자 축구 세계 랭킹(2018년부터 엘로 방식을 바탕으로 함), 게임 대전 상대 연결에 쓰입니다.</li>
+            <li><span class="tag">적용</span>점수가 같은 두 선수가 비기면 점수는 어떻게 되나요? 1600점이 1400점을 이길 때와 질 때 바뀌는 점수를 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>점수는 지난 결과로 실력을 추정한 값일 뿐입니다. 경기 수가 적은 선수의 점수는 믿을 만하지 않고, 400이라는 눈금과 \(K\)도 사람이 정한 값입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">A가 B보다 400점 높으면 A의 기대 점수 \(E_A\)는 약?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>0.91<span class="why"><b>맞습니다.</b> \(\frac{1}{1 + 10^{-1}} = \frac{10}{11}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1<span class="why"><b>아무리 차이가 커도 1이 되지는 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0.5<span class="why"><b>점수가 같을 때입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>0.75<span class="why"><b>200점 차이일 때(약 0.76)에 가깝습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-2-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/shot-angle.js"></script>
+<script src="../../js/cards/mcult/elo-rating.js"></script>
+</body>
+</html>

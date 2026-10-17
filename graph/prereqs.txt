@@ -1570,3 +1570,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 단위의 접두어 | basics/b-l-unit-prefix
 합동 | basics/b-m-congruence
 원주율 | basics/b-m-pi
+산술평균과 기하평균 | card-cm2-amgm

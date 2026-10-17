@@ -18179,29 +18179,73 @@ window.TOC = [
       "n": 1,
       "title": "스포츠와 수학",
       "code": "12수문02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-shot-angle",
+        "title": "측면으로 달려 들어가는 공격수는 어디에서 슛을 해야 골문이 가장 넓게 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-elo-rating",
+        "title": "약한 팀을 이기면 점수가 조금, 강한 팀을 이기면 많이 오르는 까닭은?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "게임과 수학",
       "code": "12수문02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-nim",
+        "title": "돌 줍기 게임에서 컴퓨터를 이길 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-gacha",
+        "title": "당첨 확률 1%인 뽑기를 100번 하면 반드시 당첨될까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "디지털 기술과 수학",
       "code": "12수문02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-barcode-check",
+        "title": "바코드의 마지막 숫자는 왜 있을까? 계산대는 잘못 읽은 것을 어떻게 알아챌까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-run-length",
+        "title": "흑백 그림을 더 짧은 숫자로 저장할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "투표와 수학",
       "code": "12수문02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-voting-methods",
+        "title": "똑같은 표로 뽑았는데, 세는 방법을 바꾸면 당선자가 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-apportionment",
+        "title": "전체 의석을 하나 늘렸는데 어떤 지역의 의석은 줄어들 수 있을까?"
+       }
+      ]
      }
     ]
    },

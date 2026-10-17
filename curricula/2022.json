@@ -10174,25 +10174,41 @@
        "n": 1,
        "title": "스포츠와 수학",
        "code": "12수문02-01",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-2-1",
+        "card-mcult-shot-angle",
+        "card-mcult-elo-rating"
+       ]
       },
       {
        "n": 2,
        "title": "게임과 수학",
        "code": "12수문02-02",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-2-2",
+        "card-mcult-nim",
+        "card-mcult-gacha"
+       ]
       },
       {
        "n": 3,
        "title": "디지털 기술과 수학",
        "code": "12수문02-03",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-2-3",
+        "card-mcult-barcode-check",
+        "card-mcult-run-length"
+       ]
       },
       {
        "n": 4,
        "title": "투표와 수학",
        "code": "12수문02-04",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-2-4",
+        "card-mcult-voting-methods",
+        "card-mcult-apportionment"
+       ]
       }
      ]
     },
