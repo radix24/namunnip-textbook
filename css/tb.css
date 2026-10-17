@@ -681,8 +681,8 @@ a.nb-title:hover { text-decoration: underline; }
 .tree-head .tree-note { flex-basis: 100%; margin: 4px 0 0; }
 body[data-scope="basic"] .mx [data-lv="고급"], body[data-scope="basic"] .mx [data-lv="실험"], body[data-scope="basic"] .mx [data-lv="융합"],
 body[data-scope="basic"] section.course[data-adv], body[data-scope="basic"] .mx-row[data-adv], body[data-scope="basic"] .for-all, body[data-scope="all"] .for-basic { display: none; }
-.sci-mx { --cols: 5; } .math-mx { --cols: 4; }
-body[data-scope="basic"] .sci-mx { --cols: 4; } body[data-scope="basic"] .math-mx { --cols: 2; }
+.sci-mx { --cols: 5; }
+body[data-scope="basic"] .sci-mx { --cols: 4; }
 body[data-scope="basic"] .sci-mx [data-tk="fusion"] { display: none; }   /* 교과 공통 열은 융합선택·과학계열 과목만 있다 */
 /* 과학 표(열 = 교과): 열 제목은 교과 색, 행 이름은 선택 구분 */
 .mx-h.mx-tk { color: var(--tc); border-bottom-color: var(--tc); font-size: 14px; font-weight: 800; }
@@ -695,10 +695,6 @@ body[data-scope="basic"] .sci-mx [data-tk="fusion"] { display: none; }   /* 교�
 .mx { display: grid; gap: 6px; }
 .mx-row { display: grid; grid-template-columns: 86px repeat(var(--cols, 5), minmax(0, 1fr)); gap: 8px; align-items: stretch; }
 .mx-head { align-items: end; }
-/* 수학: 행 이름 칸 없이 선택 구분 열만 */
-.mx.no-lb .mx-row { grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); }
-.mx.no-lb .mx-lb, .mx.no-lb .mx-head > span:first-child { display: none; }
-.mx.no-lb .mx-cell { border-bottom: 0; }
 .mx-h { font-size: 12.5px; font-weight: 700; color: var(--ink); padding: 0 2px 6px; border-bottom: 2px solid var(--ink); line-height: 1.3; }
 .mx-h small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); }
 .mx-head .mx-h:nth-child(n+5) { border-bottom-style: dashed; }
@@ -707,15 +703,21 @@ body[data-scope="basic"] .sci-mx [data-tk="fusion"] { display: none; }   /* 교�
 .mx-cell.empty { background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--ink) 4%, transparent) 6px 7px); }
 .mx .tbox { padding: 8px 10px 9px; }
 .mx .tbox b { font-size: 14px; }
+/* 수학 표: 행 = 선택 구분, 과목 상자는 같은 폭으로 옆으로 늘어놓는다 */
+.mx .mx-row.mx-flowrow { grid-template-columns: 120px minmax(0, 1fr); }
+.mx-cell.mx-flow { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 220px)); gap: 8px; padding: 8px 0; }
 body[data-domain="math"] .tree-sci, body[data-domain="sci"] .tree-mth,
 body[data-domain="math"] .for-sci, body[data-domain="sci"] .for-math { display: none; }
 @media (max-width: 860px) {
   .mx-head { display: none; }
-  .mx.no-lb .mx-row { grid-template-columns: 1fr; }
   .mx-row { grid-template-columns: 1fr; gap: 6px; padding: 10px 0 14px; border-bottom: 1px solid var(--rule); }
   .mx-lb { padding: 2px 0 2px 8px; }
   .mx-cell { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 8px; align-items: start; border: 0; padding: 0; }
   .mx-cell > .tbox { grid-column: 2; }
+  .mx .mx-row.mx-flowrow { grid-template-columns: 1fr; }
+  .mx-cell.mx-flow { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .mx-cell.mx-flow > .tbox { grid-column: auto; }
+  .mx-cell.mx-flow::before { content: none; }
   .mx-cell.empty { display: none; }
   .mx-cell::before { content: attr(data-col); grid-column: 1; grid-row: 1 / span 4; font-size: 11.5px; color: var(--ink-3); padding-top: 9px; }
 }
