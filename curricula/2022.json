@@ -1592,8 +1592,7 @@
        "code": "12전자01-06",
        "blocks": [
         "intro-emq-1-6",
-        "card-emq-rlc",
-        "card-phy-capacitor"
+        "card-emq-rlc"
        ]
       },
       {
@@ -1666,8 +1665,7 @@
        "blocks": [
         "intro-emq-2-5",
         "card-emq-laser",
-        "text-emq-fiber",
-        "card-phy-lm-hyd"
+        "text-emq-fiber"
        ]
       }
      ]
@@ -1683,7 +1681,6 @@
        "blocks": [
         "intro-emq-3-1",
         "card-emq-single-photon",
-        "card-phy-lm-dslit",
         "card-phy-lm-emicro"
        ]
       },
@@ -2637,8 +2634,7 @@
        "code": "12지시03-04",
        "blocks": [
         "intro-esys-3-4",
-        "card-esys-hydro",
-        "card-earth-updown"
+        "card-esys-hydro"
        ]
       },
       {
@@ -2793,8 +2789,7 @@
        "code": "12행우03-01",
        "blocks": [
         "intro-space-3-1",
-        "card-space-cluster",
-        "card-earth-hrd"
+        "card-space-cluster"
        ]
       },
       {
@@ -3887,8 +3882,7 @@
        "code": "12고화01-03",
        "blocks": [
         "intro-adchem-1-3",
-        "card-adchem-potential",
-        "card-mateng-solids"
+        "card-adchem-potential"
        ]
       },
       {
@@ -4139,7 +4133,6 @@
        "blocks": [
         "intro-adchem-4-3",
         "card-chem-phase",
-        "card-labchem-vapor",
         "card-adchem-ksp"
        ]
       },

@@ -3261,11 +3261,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-emq-rlc",
         "title": "축전기에 담긴 에너지는 회로에서 어디로 갈까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-capacitor",
-        "title": "축전기는 전기 에너지를 어떻게 저장할까?"
        }
       ]
      },
@@ -3415,11 +3410,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-emq-fiber",
         "title": "머리카락 굵기의 유리실로 어떻게 대륙 사이의 인터넷을 이을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-hyd",
-        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
        }
       ]
      }
@@ -3439,11 +3429,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-emq-single-photon",
         "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-dslit",
-        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
        },
        {
         "kind": "card",
@@ -5090,11 +5075,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-esys-hydro",
         "title": "공기는 왜 위로 떠오르지도, 가라앉지도 않을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-updown",
-        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
        }
       ]
      },
@@ -5346,11 +5326,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-space-cluster",
         "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-hrd",
-        "title": "H–R도는 어떻게 읽을까?"
        }
       ]
      },
@@ -7316,11 +7291,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adchem-potential",
         "title": "두 입자를 가까이 가져가면 에너지는 어떻게 변할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-mateng-solids",
-        "title": "소금, 얼음, 다이아몬드, 구리는 무엇으로 붙잡혀 있을까?"
        }
       ]
      },
@@ -7795,11 +7765,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-phase",
         "title": "얼린 딸기는 어떻게 물을 녹이지 않고 바로 날려 보낼까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-labchem-vapor",
-        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
        },
        {
         "kind": "card",
@@ -14048,7 +14013,7 @@ window.TOC = [
        {
         "kind": "card",
         "id": "card-stat-linear-rv",
-        "title": "점수를 두 배 하고 5점을 더하면 표준편차는?"
+        "title": "점수를 두 배 하고 5점을 빼면 표준편차는?"
        }
       ]
      },
