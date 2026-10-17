@@ -16841,57 +16841,145 @@ window.TOC = [
       "n": 1,
       "title": "평면곡선의 매개변수 방정식",
       "code": "12고기02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-cycloid",
+        "title": "굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-lissajous",
+        "title": "가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "점의 자취 탐구",
       "code": "12고기02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-ladder",
+        "title": "벽에서 미끄러지는 사다리의 가운데 점은 어떤 길을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-apollonius",
+        "title": "두 점까지 거리의 비가 2 : 1인 점은 어디에 모일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "공간곡선의 매개변수 방정식",
       "code": "12고기02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-helix",
+        "title": "용수철과 나사의 모양은 어떤 식으로 나타낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-curve-match",
+        "title": "식만 보고 공간곡선의 모양을 알아볼 수 있을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "공간에서의 속도와 가속도",
       "code": "12고기02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-vel-acc",
+        "title": "나선을 따라 움직이는 점의 가속도는 어느 쪽을 향할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-drone",
+        "title": "8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "정칙곡선과 곡선의 길이",
       "code": "12고기02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-regular-cusp",
+        "title": "매끄러운 매개변수 식이 왜 뾰족한 곡선을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-arc-length",
+        "title": "휘어진 곡선의 길이는 어떻게 잴까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "단위속력곡선과 호의 길이 매개변수",
       "code": "12고기02-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-speed-param",
+        "title": "같은 원을 그리는데 왜 점마다 빠르기가 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-milestones",
+        "title": "구불구불한 산길에 1 km마다 표지판을 세우려면?"
+       }
+      ]
      },
      {
       "n": 7,
       "title": "단위속력곡선으로 재매개화",
       "code": "12고기02-07",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-reparam",
+        "title": "나선 위를 속력 1로 움직이게 하려면 매개변수를 어떻게 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-reparam-spot",
+        "title": "이 재매개화 풀이는 어디서 틀렸을까?"
+       }
+      ]
      },
      {
       "n": 8,
       "title": "곡률과 곡률반경",
       "code": "12고기02-08",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-osculating",
+        "title": "곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-road-curve",
+        "title": "고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?"
+       }
+      ]
      }
     ]
    },

@@ -1027,3 +1027,11 @@ agx-constructible | 작도 가능성과 대수 | card-adgeo-constructible-number
 agx-proof | 평면도형의 증명 | card-adgeo-isosceles-proof card-adgeo-fallacy | agx-construct
 agx-triangle | 삼각형에 관한 정리(체바, 오일러 직선) | card-adgeo-ceva card-adgeo-euler-line | agx-proof agx-construct2
 agx-circle | 원에 관한 정리(방멱, 톨레미) | card-adgeo-power-point card-adgeo-ptolemy | agx-proof
+agx-param-plane | 평면곡선의 매개변수 방정식 | card-adgeo-cycloid card-adgeo-lissajous | calc2-param-deriv
+agx-locus | 점의 자취 | card-adgeo-ladder card-adgeo-apollonius | agx-param-plane geo-ellipse
+agx-space-curve | 공간곡선의 매개변수 방정식 | card-adgeo-helix card-adgeo-curve-match | agx-param-plane
+agx-vel-acc | 공간에서의 속도와 가속도 | card-adgeo-vel-acc card-adgeo-drone | agx-space-curve
+agx-regular-length | 정칙곡선과 곡선의 길이 | card-adgeo-regular-cusp card-adgeo-arc-length | agx-vel-acc calc2-int-distance
+agx-unit-speed | 단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param card-adgeo-milestones | agx-regular-length
+agx-reparam | 단위속력곡선으로 재매개화 | card-adgeo-reparam card-adgeo-reparam-spot | agx-unit-speed
+agx-curvature | 곡률과 곡률반경 | card-adgeo-osculating card-adgeo-road-curve | agx-reparam pm-cross

@@ -9372,49 +9372,81 @@
        "n": 1,
        "title": "평면곡선의 매개변수 방정식",
        "code": "12고기02-01",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-1",
+        "card-adgeo-cycloid",
+        "card-adgeo-lissajous"
+       ]
       },
       {
        "n": 2,
        "title": "점의 자취 탐구",
        "code": "12고기02-02",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-2",
+        "card-adgeo-ladder",
+        "card-adgeo-apollonius"
+       ]
       },
       {
        "n": 3,
        "title": "공간곡선의 매개변수 방정식",
        "code": "12고기02-03",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-3",
+        "card-adgeo-helix",
+        "card-adgeo-curve-match"
+       ]
       },
       {
        "n": 4,
        "title": "공간에서의 속도와 가속도",
        "code": "12고기02-04",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-4",
+        "card-adgeo-vel-acc",
+        "card-adgeo-drone"
+       ]
       },
       {
        "n": 5,
        "title": "정칙곡선과 곡선의 길이",
        "code": "12고기02-05",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-5",
+        "card-adgeo-regular-cusp",
+        "card-adgeo-arc-length"
+       ]
       },
       {
        "n": 6,
        "title": "단위속력곡선과 호의 길이 매개변수",
        "code": "12고기02-06",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-6",
+        "card-adgeo-speed-param",
+        "card-adgeo-milestones"
+       ]
       },
       {
        "n": 7,
        "title": "단위속력곡선으로 재매개화",
        "code": "12고기02-07",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-7",
+        "card-adgeo-reparam",
+        "card-adgeo-reparam-spot"
+       ]
       },
       {
        "n": 8,
        "title": "곡률과 곡률반경",
        "code": "12고기02-08",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-2-8",
+        "card-adgeo-osculating",
+        "card-adgeo-road-curve"
+       ]
       }
      ]
     },

@@ -1548,3 +1548,13 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 평면그래프 | card-dmath-untangle
 기초적인 작도 | card-adgeo-construct-replay
 여러 가지 작도 | card-adgeo-center-construct
+삼각함수의 그래프 | card-alg-trig-graph
+매개변수로 나타낸 함수 | card-calc2-param-tangent
+평면곡선의 매개변수 방정식 | card-adgeo-cycloid
+공간곡선의 매개변수 방정식 | card-adgeo-helix
+평면 운동의 속도와 가속도 | card-calc2-distance-area
+공간에서의 속도와 가속도 | card-adgeo-vel-acc
+정칙곡선과 곡선의 길이 | card-adgeo-arc-length
+단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param
+단위속력곡선으로 재매개화 | card-adgeo-reparam
+역함수의 미분 | card-calc2-inverse-slope

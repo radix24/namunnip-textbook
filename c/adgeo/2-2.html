@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>점의 자취 탐구 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="주어진 조건을 만족하는 점의 자취, 매개변수를 지워 자취의 방정식 구하기(미끄러지는 사다리 → 타원), 아폴로니오스의 원. 사다리 위 점의 자취를 예측하는 카드와, 거리의 비가 일정한 점을 모으는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-ladder canvas { aspect-ratio: 1 / 1; max-width: 400px; margin: 0 auto; display: block; }
+    #card-adgeo-ladder .gp { display: flex; flex-wrap: wrap; gap: .3rem; }
+    #card-adgeo-apollonius canvas { aspect-ratio: 4 / 3; max-width: 480px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>점의 자취 탐구</h1>
+    <p class="lead">조건을 만족하며 움직이는 점이 그리는 도형을 <em>자취</em>라 합니다. 자취를 구하려면 점의 위치를 매개변수나 좌표로 나타내고, 조건을 식으로 쓴 뒤 정리합니다. 이 절에서는 벽에서 미끄러지는 사다리 위의 점, 두 점까지 거리의 비가 일정한 점이 각각 어떤 도형을 그리는지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adgeo/2-1.html#card-adgeo-cycloid" title="고급 기하 2.1 · 굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?">평면곡선의 매개변수 방정식</a><a class="p p-card" href="../../c/cm2/1-4.html#card-cm2-circle-eq" title="공통수학2 1.4 · 원 위의 점들은 어떤 식을 만족할까?">원의 방정식</a><a class="p p-card" href="../../c/geo/1-2.html#card-geo-ellipse-eq" title="기하 1.2 · 방정식만 보고 타원의 초점과 장축을 찾을 수 있을까?">타원의 방정식</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-ladder"><span class="mono">2.2.1</span>미끄러지는 사다리 위 한 점의 자취</a></li>
+        <li><a href="#card-adgeo-apollonius"><span class="mono">2.2.2</span>두 점까지 거리의 비가 일정한 점들</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-ladder">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>벽에서 미끄러지는 사다리의 가운데 점은 어떤 길을 그릴까?</h2><span class="kind">점의 자취 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">사다리 위 점의 위치 k = <output class="k-out">0.5</output></label><input class="k" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="바닥 끝에서부터 사다리 길이의 몇 배 위치"></div></div>
+            <p class="small">예측: 이 점의 자취는?</p>
+            <div class="gp" role="group" aria-label="예측"><button class="chip" type="button" data-g="circle">원의 일부</button><button class="chip" type="button" data-g="ellipse">타원의 일부</button><button class="chip" type="button" data-g="line">선분</button><button class="chip" type="button" data-g="parabola">포물선의 일부</button></div>
+            <canvas aria-label="벽(세로축)과 바닥(가로축) 사이를 미끄러지는 사다리와 점의 자취"></canvas>
+            <div class="presets"><button class="chip go-slide" type="button">미끄러뜨리기</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>길이 \(L\)인 사다리가 벽에 기대어 있다가 아래쪽이 벽에서 멀어지며 미끄러집니다. 사다리의 한가운데에 앉은 고양이는 어떤 길을 따라 내려올까요? 가운데가 아닌 점은요?</li>
+            <li><span class="tag">복원</span>직각삼각형의 빗변의 중점은 세 꼭짓점에서 같은 거리에 있습니다. \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)은 타원입니다.</li>
+            <li><span class="tag">설명</span>주어진 조건을 만족하며 움직이는 점이 그리는 도형을 <em>자취</em>라 합니다. 사다리가 바닥과 이루는 각을 \(\theta\)라 하면 바닥 끝은 \((L\cos\theta, 0)\), 벽 끝은 \((0, L\sin\theta)\)이고, 바닥 끝에서 \(k\)배 위치의 점은 \(x = (1 - k)L\cos\theta\), \(y = kL\sin\theta\)입니다. \(\theta\)를 지우면 \(\frac{x^2}{((1-k)L)^2} + \frac{y^2}{(kL)^2} = 1\)이므로 타원이고, 가운데(\(k = \frac{1}{2}\))이면 반지름 \(\frac{L}{2}\)인 원입니다. 매개변수를 지워 자취의 방정식을 얻는 것이 핵심입니다.</li>
+            <li><span class="tag">연결</span>이 원리로 타원을 그리는 도구가 "타원 컴퍼스(아르키메데스의 트래멜)"입니다. 막대의 두 끝을 서로 수직인 홈에 끼워 움직이면 막대 위의 펜이 타원을 그립니다.</li>
+            <li><span class="tag">적용</span>먼저 점의 자취를 예측하고 미끄러뜨려 확인하세요. \(k\)를 0, 0.25, 0.5, 1로 바꾸면 자취는 어떻게 달라지나요?</li>
+            <li class="warn"><span class="tag">판단</span>사다리는 벽과 바닥 사이에서만 움직이므로 자취는 타원 전체가 아니라 제1사분면에 있는 부분(4분의 1)입니다. 자취를 구할 때는 매개변수의 범위도 함께 따져야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">길이 6인 사다리에서 바닥 끝으로부터 2만큼 떨어진 점의 자취의 방정식은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{x^2}{16} + \frac{y^2}{4} = 1\)<span class="why"><b>맞습니다.</b> \(k = \frac{1}{3}\)이므로 \(x = 4\cos\theta\), \(y = 2\sin\theta\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{x^2}{4} + \frac{y^2}{16} = 1\)<span class="why"><b>두 반축을 바꾸었습니다.</b> 바닥 끝에 가까운 점은 가로로 더 많이 움직입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(x^2 + y^2 = 9\)<span class="why"><b>가운데 점의 자취입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{x}{4} + \frac{y}{2} = 1\)<span class="why"><b>직선이 아닙니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-eq"><small class="mono">기하 1.2</small>방정식만 보고 타원의 초점과 장축을 찾을 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-apollonius">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>두 점까지 거리의 비가 2 : 1인 점은 어디에 모일까?</h2><span class="kind">아폴로니오스의 원 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">PA : PB = k : 1, k = <output class="k-out">2</output></label><input class="k" type="range" min="0.25" max="4" step="0.05" value="2" aria-label="거리의 비 k"></div></div>
+            <canvas aria-label="두 점 A, B와 점 P. P를 끌 수 있다. 조건을 만족하는 위치는 초록으로 남는다"></canvas>
+            <div class="presets"><button class="chip go-show" type="button" aria-pressed="false">자취 보기</button><button class="chip go-clr" type="button">찍은 점 지우기</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>두 기지국 A, B에서 보낸 신호의 세기를 비교하면 휴대폰이 "A까지의 거리가 B까지의 거리의 2배"인 곳에 있다는 것을 알 수 있습니다. 그런 곳은 어떤 모양으로 모여 있을까요?</li>
+            <li><span class="tag">복원</span>두 점에서 같은 거리에 있는 점들(비가 1 : 1)은 수직이등분선 위에 있습니다. 원의 방정식은 \((x - a)^2 + (y - b)^2 = r^2\)입니다.</li>
+            <li><span class="tag">설명</span>\(A(-1, 0)\), \(B(1, 0)\)일 때 \(PA = k \cdot PB\)를 제곱해 정리하면 \((k^2 - 1)(x^2 + y^2) - 2(k^2 + 1)x + (k^2 - 1) = 0\)이 되어, \(k \ne 1\)이면 원입니다(<em>아폴로니오스의 원</em>). 이 원은 선분 \(AB\)를 \(k : 1\)로 내분하는 점과 외분하는 점을 지름의 양 끝으로 합니다. \(k = 1\)이면 수직이등분선(직선)이 됩니다. 이처럼 자취를 구할 때는 점을 \((x, y)\)로 두고 조건을 식으로 쓴 뒤 정리합니다.</li>
+            <li><span class="tag">연결</span>거리의 "합"이 일정하면 타원, "차"가 일정하면 쌍곡선이 되었습니다. 거리의 "비"가 일정하면 원이 됩니다. 비가 같은 두 신호원의 위치를 찾는 문제, 음원의 위치 추정에 이런 자취가 쓰입니다.</li>
+            <li><span class="tag">적용</span>P를 끌어 비가 \(k\)에 가까운 곳을 여러 군데 찾아 보세요(초록으로 남음). 그 점들이 어떤 모양을 이루나요? 자취를 켜고 \(k\)를 1에 가깝게 하면 원은 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>\(k\)와 \(\frac{1}{k}\)의 원은 서로 다릅니다(B 쪽과 A 쪽). 비의 순서(PA : PB인지 PB : PA인지)를 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(A(0, 0)\), \(B(3, 0)\)에서 \(PA : PB = 2 : 1\)인 점 P의 자취인 원의 중심은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((4, 0)\)<span class="why"><b>맞습니다.</b> 내분점 \((2, 0)\), 외분점 \((6, 0)\)을 지름의 양 끝으로 하므로 중심은 \((4, 0)\), 반지름은 2입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((1.5, 0)\)<span class="why"><b>AB의 중점입니다.</b> 비가 1 : 1일 때와 헷갈렸습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((2, 0)\)<span class="why"><b>내분점입니다.</b> 원 위의 한 점입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((-1, 0)\)<span class="why"><b>비 1 : 2(A 쪽)의 원과 헷갈렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-eq"><small class="mono">기하 1.2</small>방정식만 보고 타원의 초점과 장축을 찾을 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/adgeo/tri.js"></script>
+<script src="../../js/cards/adgeo/ladder.js"></script>
+<script src="../../js/cards/adgeo/tri.js"></script>
+<script src="../../js/cards/adgeo/apollonius.js"></script>
+</body>
+</html>

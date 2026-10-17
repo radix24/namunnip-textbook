@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공간에서의 속도와 가속도 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="공간곡선의 속도·속력·가속도, 속력이 일정할 때 속도와 가속도가 수직인 성질, 빠르기를 바꿀 때 가속도가 제곱으로 변함. 나선 위의 속도·가속도 벡터 카드와, 드론의 8자 비행 가속도 한계 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-vel-acc canvas { aspect-ratio: 4 / 3.3; max-width: 500px; margin: 0 auto; display: block; }
+    #card-adgeo-drone canvas.v3 { aspect-ratio: 4 / 3; max-width: 480px; margin: 0 auto; display: block; }
+    #card-adgeo-drone canvas.gr { aspect-ratio: 16 / 7; max-width: 560px; margin: .4rem auto 0; display: block; }
+    #card-adgeo-drone .ctl-row > div { min-width: 9rem; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>공간에서의 속도와 가속도</h1>
+    <p class="lead">점이 공간곡선 \(\vec{r}(t)\)를 따라 움직이면 \(\vec{r}\,'(t)\)가 <em>속도</em>, \(\vec{r}\,''(t)\)가 <em>가속도</em>입니다. 속력이 일정해도 방향이 바뀌면 가속도가 생깁니다. 이 절에서는 나선 위에서 두 벡터의 방향을 확인하고, 드론의 비행 경로에서 빠르기와 가속도의 관계를 따져 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adgeo/2-3.html#card-adgeo-helix" title="고급 기하 2.3 · 용수철과 나사의 모양은 어떤 식으로 나타낼까?">공간곡선의 매개변수 방정식</a><a class="p p-card" href="../../c/calc2/3-7.html#card-calc2-distance-area" title="미적분Ⅱ 3.7 · 속도 그래프만 보고 얼마나 움직였는지 알 수 있을까?">평면 운동의 속도와 가속도</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-vel-acc"><span class="mono">2.4.1</span>공간곡선 위의 속도와 가속도 벡터</a></li>
+        <li><a href="#card-adgeo-drone"><span class="mono">2.4.2</span>드론 경로의 속력과 가속도 한계</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-vel-acc">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>나선을 따라 움직이는 점의 가속도는 어느 쪽을 향할까?</h2><span class="kind">공간에서의 속도와 가속도 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">곡선 <select class="pick" aria-label="곡선 고르기"><option value="0">나선 (2cos t, 2sin t, t/2)</option><option value="1">원뿔 나선 (t cos t, t sin t, t)/4</option><option value="2">꼬인 삼차곡선 1.6(t, t², t³)</option></select></label>
+              <div><label class="mono">t = <output class="t-out">1</output></label><input class="t" type="range" min="0" max="1" step="0.002" value="0.25" aria-label="시각 t"></div>
+            </div>
+            <canvas aria-label="공간곡선과 점, 속도 벡터(파랑), 가속도 벡터(빨강). 끌어서 돌려 볼 수 있다"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>회전목마처럼 나선을 따라 일정한 속력으로 올라가는 점도 가속도가 있을까요? 있다면 어느 쪽을 향할까요?</li>
+            <li><span class="tag">복원</span>평면에서 위치가 \((x(t), y(t))\)이면 속도는 \((x'(t), y'(t))\), 가속도는 \((x''(t), y''(t))\)입니다.</li>
+            <li><span class="tag">설명</span>공간에서 위치 \(\vec{r}(t) = (x(t), y(t), z(t))\)의 <em>속도</em>는 \(\vec{v} = \vec{r}\,'(t)\), <em>속력</em>은 \(|\vec{v}|\), <em>가속도</em>는 \(\vec{a} = \vec{r}\,''(t)\)입니다. 속도는 곡선의 접선 방향입니다. 나선 \((\cos t, \sin t, \frac{t}{4})\)은 \(|\vec{v}| = \sqrt{1 + \frac{1}{16}}\)로 속력이 일정한데도 \(\vec{a} = (-\cos t, -\sin t, 0)\)으로 늘 축을 향합니다. 속력이 일정하면 \(\vec{v}\cdot\vec{v}\)가 상수라 미분하면 \(2\vec{v}\cdot\vec{a} = 0\), 곧 가속도가 속도와 수직입니다.</li>
+            <li><span class="tag">연결</span>가속도를 속도 방향 성분(속력의 변화)과 수직 성분(방향의 변화)으로 나누면, 수직 성분의 크기는 \(\kappa|\vec{v}|^2\)(\(\kappa\)는 8절의 곡률)입니다. 자동차가 굽은 길에서 받는 옆쪽 힘이 이것입니다.</li>
+            <li><span class="tag">적용</span>곡선마다 \(t\)를 움직이며 두 벡터의 방향과 둘 사이의 각을 보세요. 나선에서 각은 늘 90°인가요? 원뿔 나선과 꼬인 삼차곡선에서는 어떤가요?</li>
+            <li class="warn"><span class="tag">판단</span>"속력이 일정하면 가속도가 0"은 틀립니다. 가속도는 속도 벡터의 변화이므로 방향만 바뀌어도 생깁니다. 가속도가 0인 것은 직선 위를 일정한 속력으로 움직일 때뿐입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\vec{r}(t) = (3\cos 2t, 3\sin 2t, 4t)\)의 속력은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(2\sqrt{13}\)<span class="why"><b>맞습니다.</b> \(\vec{v} = (-6\sin 2t, 6\cos 2t, 4)\)이므로 \(\sqrt{36 + 16} = \sqrt{52}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(5\)<span class="why"><b>연쇄법칙의 2를 빠뜨렸습니다.</b> \((3\cos 2t)' = -6\sin 2t\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(10\)<span class="why"><b>성분을 그냥 더했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(t\)에 따라 달라진다<span class="why"><b>\(\sin^2 + \cos^2 = 1\)이라 일정합니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-3.html#card-adgeo-helix"><small class="mono">고급 기하 2.3</small>용수철과 나사의 모양은 어떤 식으로 나타낼까?</a><a href="../../c/adgeo/2-3.html#card-adgeo-curve-match"><small class="mono">고급 기하 2.3</small>식만 보고 공간곡선의 모양을 알아볼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-5.html#card-adgeo-regular-cusp"><small class="mono">고급 기하 2.5</small>매끄러운 매개변수 식이 왜 뾰족한 곡선을 그릴까?</a><a href="../../c/adgeo/2-5.html#card-adgeo-arc-length"><small class="mono">고급 기하 2.5</small>휘어진 곡선의 길이는 어떻게 잴까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-drone">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?</h2><span class="kind">속도와 가속도의 활용 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">빠르기 ω = <output class="w-out">0.3</output></label><input class="w" type="range" min="0.1" max="0.8" step="0.01" value="0.3" aria-label="경로를 도는 빠르기"></div>
+              <div><label class="mono">시각 t = <output class="t-out">0</output>초</label><input class="t" type="range" min="0" max="1" step="0.002" value="0" aria-label="시각"></div>
+            </div>
+            <canvas class="v3" aria-label="드론의 8자 비행 경로와 지금 위치, 속도(파랑)와 가속도(빨강). 끌어서 돌려 볼 수 있다"></canvas>
+            <canvas class="gr" aria-label="한 바퀴 동안의 속력과 가속도의 크기 그래프. 점선은 가속도 한계"></canvas>
+            <p class="verdict" role="status"></p>
+            <p class="fig-note">경로와 가속도 한계(4 m/s²)는 수업용으로 정한 모의 값입니다. 실제 드론의 한계는 기체와 바람에 따라 다릅니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공연용 드론이 높이를 조금씩 바꾸며 8자 모양으로 날고 있습니다. 더 빨리 돌게 하면 화려하지만, 모터가 낼 수 있는 가속도에는 한계가 있습니다. 경로를 얼마나 빨리 돌 수 있을까요? 가장 위험한 곳은 어디일까요?</li>
+            <li><span class="tag">복원</span>\(\vec{r}(t)\)의 속도는 \(\vec{r}\,'(t)\), 가속도는 \(\vec{r}\,''(t)\)입니다. \((\sin\omega t)'' = -\omega^2\sin\omega t\)입니다.</li>
+            <li><span class="tag">설명</span>경로를 \(\vec{r}(t) = (20\sin\omega t, 10\sin 2\omega t, 15 + 3\sin\omega t)\) (단위 m)로 두면 같은 경로를 \(\omega\)배 빠르기로 도는 셈이라, 속력은 \(\omega\)에, 가속도의 크기는 \(\omega^2\)에 비례합니다. 그래서 빠르기를 2배로 하면 가속도는 4배가 됩니다. 가속도가 가장 큰 곳은 고리를 돌아 나가며 방향이 크게 바뀌는 부분입니다. 한계 \(a_{\max}\)를 넘지 않는 가장 큰 \(\omega\)는 \(\omega_{\max} = \omega_0\sqrt{a_{\max}/a_0}\)로 구합니다(\(a_0\)은 \(\omega_0\)일 때의 최대 가속도).</li>
+            <li><span class="tag">연결</span>롤러코스터, 고속도로 진입로, 로봇 팔의 경로 계획에서도 같은 원리로 "모양은 그대로, 빠르기만 조절"합니다. 8절의 곡률을 쓰면 휘는 정도와 가속도의 관계를 더 정확히 알 수 있습니다.</li>
+            <li><span class="tag">적용</span>빠르기를 조절해 한 바퀴 동안 가속도가 한계(점선)를 넘지 않는 가장 큰 \(\omega\)를 찾아보세요. 그다음 \(\omega\)를 두 배로 해 그래프의 높이가 몇 배가 되는지 확인하세요. 가속도가 가장 큰 순간 드론은 경로의 어디에 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>속력이 가장 큰 곳과 가속도가 가장 큰 곳은 다릅니다. 8자의 가운데를 지날 때 가장 빠르지만 그곳의 가속도는 0입니다(휘는 방향이 바뀌는 곳). 가속도는 고리를 돌 때 커집니다. 안전은 속력만이 아니라 가속도로도 판단해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">같은 경로를 1.5배 빠르기로 돌면 최대 가속도는 몇 배가 될까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(2.25\)배<span class="why"><b>맞습니다.</b> 가속도는 \(\omega^2\)에 비례하므로 \(1.5^2\)배입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(1.5\)배<span class="why"><b>속력이 1.5배입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(3\)배<span class="why"><b>두 배를 했습니다.</b> 제곱입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>변하지 않는다<span class="why"><b>경로는 같아도 빨리 돌면 방향이 더 빨리 바뀝니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-3.html#card-adgeo-helix"><small class="mono">고급 기하 2.3</small>용수철과 나사의 모양은 어떤 식으로 나타낼까?</a><a href="../../c/adgeo/2-3.html#card-adgeo-curve-match"><small class="mono">고급 기하 2.3</small>식만 보고 공간곡선의 모양을 알아볼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-5.html#card-adgeo-regular-cusp"><small class="mono">고급 기하 2.5</small>매끄러운 매개변수 식이 왜 뾰족한 곡선을 그릴까?</a><a href="../../c/adgeo/2-5.html#card-adgeo-arc-length"><small class="mono">고급 기하 2.5</small>휘어진 곡선의 길이는 어떻게 잴까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/curve3.js"></script>
+<script src="../../js/cards/adgeo/vel-acc.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/curve3.js"></script>
+<script src="../../js/cards/adgeo/drone.js"></script>
+</body>
+</html>
