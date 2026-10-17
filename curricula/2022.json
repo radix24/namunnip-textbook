@@ -9513,31 +9513,51 @@
        "n": 1,
        "title": "경제지표",
        "code": "12경수01-01",
-       "blocks": []
+       "blocks": [
+        "intro-econ-1-1",
+        "card-econ-cpi-basket",
+        "card-econ-index-trap"
+       ]
       },
       {
        "n": 2,
        "title": "환율",
        "code": "12경수01-02",
-       "blocks": []
+       "blocks": [
+        "intro-econ-1-2",
+        "card-econ-exchange",
+        "card-econ-cross-rate"
+       ]
       },
       {
        "n": 3,
        "title": "세금",
        "code": "12경수01-03",
-       "blocks": []
+       "blocks": [
+        "intro-econ-1-3",
+        "card-econ-progressive-tax",
+        "card-econ-tax-myth"
+       ]
       },
       {
        "n": 4,
        "title": "단리와 복리, 현재 가치",
        "code": "12경수01-04",
-       "blocks": []
+       "blocks": [
+        "intro-econ-1-4",
+        "card-econ-compound",
+        "card-econ-present-value"
+       ]
       },
       {
        "n": 5,
        "title": "연금",
        "code": "12경수01-05",
-       "blocks": []
+       "blocks": [
+        "intro-econ-1-5",
+        "card-econ-annuity",
+        "card-econ-lump-or-annuity"
+       ]
       }
      ]
     },

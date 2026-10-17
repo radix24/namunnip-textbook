@@ -17078,36 +17078,91 @@ window.TOC = [
       "n": 1,
       "title": "경제지표",
       "code": "12경수01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-cpi-basket",
+        "title": "내 장바구니로 물가지수를 만들면 얼마가 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-index-trap",
+        "title": "이 경제 기사 문장은 숫자를 바르게 읽었을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "환율",
       "code": "12경수01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-exchange",
+        "title": "환율이 오르면 누가 이득이고 누가 손해일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-cross-rate",
+        "title": "100만 원을 엔화로 바꿀 때 어느 길이 가장 유리할까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "세금",
       "code": "12경수01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-progressive-tax",
+        "title": "세율이 35%인 사람은 소득의 35%를 세금으로 낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-tax-myth",
+        "title": "세율 구간이 올라가면 오히려 손에 쥐는 돈이 줄어들까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "단리와 복리, 현재 가치",
       "code": "12경수01-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-compound",
+        "title": "이자에 이자가 붙으면 돈은 언제 두 배가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-present-value",
+        "title": "지금 100만 원과 5년 뒤 130만 원, 어느 쪽이 더 이득일까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "연금",
       "code": "12경수01-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-annuity",
+        "title": "해마다 100만 원씩 20년 모으면 얼마가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-lump-or-annuity",
+        "title": "일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?"
+       }
+      ]
      }
     ]
    },

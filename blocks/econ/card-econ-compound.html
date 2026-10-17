@@ -1,0 +1,48 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/econ/econ.js",
+    "js/cards/econ/compound.js"
+  ],
+  "short": "단리와 복리, 72의 법칙"
+}
+-->
+<style>
+#card-econ-compound canvas { aspect-ratio: 16 / 9; max-width: 560px; width: 100%; margin: 0 auto; display: block; }
+#card-econ-compound .ctl-row > div { min-width: 10rem; }
+</style>
+<article class="card" id="card-econ-compound">
+  <header class="card-head">
+    <span class="no"></span><h2>이자에 이자가 붙으면 돈은 언제 두 배가 될까?</h2><span class="kind">단리와 복리 · 시뮬레이션</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="ctl-row">
+        <div><label class="mono">연이율 = <output class="r-out"></output>%</label><input class="r" type="range" min="1" max="15" step="0.5" value="6" aria-label="연이율"></div>
+        <div><label class="mono">기간 = <output class="n-out"></output>년</label><input class="n" type="range" min="1" max="40" step="1" value="30" aria-label="기간"></div>
+        <div><label class="mono">복리 계산 <select class="m" aria-label="복리 계산 주기"><option value="1">1년마다</option><option value="12">1달마다</option><option value="365">하루마다</option><option value="0">연속 복리</option></select></label></div>
+      </div>
+      <canvas aria-label="원금 100만 원의 단리(직선)와 복리(곡선) 원리합계, 두 배가 되는 때 표시"></canvas>
+      <p class="mono small say" role="status"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>100만 원을 연이율 6%로 맡기면 30년 뒤 얼마가 될까요? 이자를 원금에만 붙이는 것과 이자에도 이자를 붙이는 것은 얼마나 차이가 날까요?</li>
+      <li><span class="tag">복원</span>등차수열 \(a_n = a + nd\)는 일정하게 더하고, 등비수열 \(a_n = ar^n\)은 일정하게 곱합니다.</li>
+      <li><span class="tag">설명</span><em>단리</em>는 원금에만 이자가 붙어 \(S = P(1 + rn)\)로 일정하게 늘어납니다(등차수열). <em>복리</em>는 이자도 원금에 더해 다음 이자를 낳으므로 \(S = P(1 + r)^n\)으로 일정한 비율로 늘어납니다(등비수열). 1년을 \(m\)번 나누어 복리로 계산하면 \(P\left(1 + \frac{r}{m}\right)^{mn}\)이고, \(m\)을 한없이 키우면 \(Pe^{rn}\)(연속 복리)에 가까워집니다.</li>
+      <li><span class="tag">연결</span>돈이 두 배가 되는 기간은 \((1 + r)^n = 2\), 곧 \(n = \frac{\log 2}{\log(1 + r)}\)이고, 이율을 % 단위로 \(R\)이라 하면 대략 \(\frac{72}{R}\)년입니다(<em>72의 법칙</em>). 물가가 연 3%씩 오르면 약 24년 뒤 물가가 두 배가 된다는 것도 같은 계산입니다.</li>
+      <li><span class="tag">적용</span>이율을 바꾸며 실제로 두 배가 되는 때와 \(72/R\)을 비교하세요. 72의 법칙은 이율이 몇 %일 때 가장 잘 맞나요? 복리 주기를 바꾸면 결과가 얼마나 달라지나요?</li>
+      <li class="warn"><span class="tag">판단</span>복리 주기를 하루로 줄여도 원리합계는 한없이 커지지 않고 \(Pe^{rn}\)을 넘지 않습니다. 또 대출에도 복리가 적용되므로, 갚지 않은 이자는 빚을 같은 방식으로 불립니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">72의 법칙으로 어림하면, 연 9% 복리로 맡긴 돈이 네 배가 되는 데 걸리는 기간은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 16년<span class="why"><b>맞습니다.</b> 두 배에 \(72/9 = 8\)년, 네 배는 두 배의 두 배이므로 약 16년입니다(정확히는 약 16.1년).</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 32년<span class="why"><b>네 배를 두 배의 네 배로 셌습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 8년<span class="why"><b>두 배가 되는 기간입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 33년<span class="why"><b>단리로 계산했습니다.</b> \(1 + 0.09n = 4\).</span></span></button></li>
+    </ol>
+  </div>
+</article>

@@ -1039,3 +1039,8 @@ agx-level | 등위곡선과 곡면 | card-adgeo-contour card-adgeo-level-match |
 agx-quadric | 이차곡면 | card-adgeo-quadric card-adgeo-slice-predict | agx-level geo-ellipse geo-hyperbola geo-parabola geo-sphere-eq
 agx-sph-tri | 구면삼각형 | card-adgeo-sphere-triangle card-adgeo-flight-route | geo-sphere-eq
 agx-sph-law | 구면코사인법칙과 구면사인법칙 | card-adgeo-spherical-law card-adgeo-city-distance | agx-sph-tri alg-cosine-law geo-dot
+econ-index | 경제지표와 물가지수 | card-econ-cpi-basket card-econ-index-trap | 
+econ-fx | 환율 | card-econ-exchange card-econ-cross-rate | econ-index
+econ-tax | 누진세와 세율 | card-econ-progressive-tax card-econ-tax-myth | cm2-function
+econ-interest | 단리와 복리, 현재 가치 | card-econ-compound card-econ-present-value | alg-arith-seq alg-geo-seq alg-exp-func
+econ-annuity | 연금 | card-econ-annuity card-econ-lump-or-annuity | econ-interest alg-geo-seq
