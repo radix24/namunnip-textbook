@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "ef4245ba981c",
+"version": "4d4c1698806a",
 "files": [
 "graph.html",
 "index.html",
@@ -196,6 +196,8 @@ self.PRECACHE = {
 "c/aimath/4-2.html",
 "c/aimath/4-3.html",
 "c/aimath/4-4.html",
+"c/aimath/5-1.html",
+"c/aimath/5-2.html",
 "c/aimath/index.html",
 "c/alg/1-1.html",
 "c/alg/1-2.html",
@@ -1164,7 +1166,9 @@ self.PRECACHE = {
 "js/cards/aimath/cosine-doc.js",
 "js/cards/aimath/data-bias.js",
 "js/cards/aimath/digit-distance.js",
+"js/cards/aimath/explore-plan.js",
 "js/cards/aimath/extrapolate.js",
+"js/cards/aimath/fairness.js",
 "js/cards/aimath/gd-contour.js",
 "js/cards/aimath/gradient-descent.js",
 "js/cards/aimath/image-ops.js",
@@ -1173,9 +1177,11 @@ self.PRECACHE = {
 "js/cards/aimath/knn.js",
 "js/cards/aimath/loss-curve.js",
 "js/cards/aimath/loss-outlier.js",
+"js/cards/aimath/neuron.js",
 "js/cards/aimath/onehot.js",
 "js/cards/aimath/perceptron-xor.js",
 "js/cards/aimath/pixel-grid.js",
+"js/cards/aimath/recommend.js",
 "js/cards/aimath/rgb.js",
 "js/cards/aimath/rule-vs-learn.js",
 "js/cards/aimath/spam.js",

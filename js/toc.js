@@ -17693,15 +17693,37 @@ window.TOC = [
       "n": 1,
       "title": "인공지능의 문제 해결 사례",
       "code": "12인수05-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-recommend",
+        "title": "동영상 앱은 내가 볼 만한 영화를 어떻게 골라 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-neuron",
+        "title": "인공 뉴런 하나는 입력을 어떻게 확률로 바꿀까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "인공지능 수학 주제 탐구",
       "code": "12인수05-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-explore-plan",
+        "title": "내가 궁금한 것을 인공지능 수학 탐구 주제로 바꿀 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-fairness",
+        "title": "같은 기준 점수를 적용하면 공정한 인공지능일까?"
+       }
+      ]
      }
     ]
    }

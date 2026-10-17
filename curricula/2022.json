@@ -9880,13 +9880,21 @@
        "n": 1,
        "title": "인공지능의 문제 해결 사례",
        "code": "12인수05-01",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-5-1",
+        "card-aimath-recommend",
+        "card-aimath-neuron"
+       ]
       },
       {
        "n": 2,
        "title": "인공지능 수학 주제 탐구",
        "code": "12인수05-02",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-5-2",
+        "card-aimath-explore-plan",
+        "card-aimath-fairness"
+       ]
       }
      ]
     }
