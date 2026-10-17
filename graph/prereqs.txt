@@ -1560,3 +1560,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 역함수의 미분 | card-calc2-inverse-slope
 사인법칙 | card-alg-sine-law
 지수함수 | card-alg-exp-func-def
+함수의 증가와 감소 | card-calc1-incdec

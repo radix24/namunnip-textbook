@@ -9671,25 +9671,41 @@
        "n": 1,
        "title": "경제 함수의 미분",
        "code": "12경수04-01",
-       "blocks": []
+       "blocks": [
+        "intro-econ-4-1",
+        "card-econ-marginal-cost",
+        "card-econ-marginal-revenue"
+       ]
       },
       {
        "n": 2,
        "title": "그래프의 개형과 해석",
        "code": "12경수04-02",
-       "blocks": []
+       "blocks": [
+        "intro-econ-4-2",
+        "card-econ-avg-marginal",
+        "card-econ-revenue-shape"
+       ]
       },
       {
        "n": 3,
        "title": "탄력성",
        "code": "12경수04-03",
-       "blocks": []
+       "blocks": [
+        "intro-econ-4-3",
+        "card-econ-elasticity",
+        "card-econ-price-hike"
+       ]
       },
       {
        "n": 4,
        "title": "최적화",
        "code": "12경수04-04",
-       "blocks": []
+       "blocks": [
+        "intro-econ-4-4",
+        "card-econ-profit-max",
+        "card-econ-ticket-price"
+       ]
       }
      ]
     }

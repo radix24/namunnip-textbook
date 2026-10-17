@@ -1053,3 +1053,7 @@ econ-lp | 부등식의 영역과 선형계획 | card-econ-lp-production card-eco
 econ-matrix | 경제 현상과 행렬 | card-econ-sales-matrix card-econ-market-share | cm1-matrix-mult
 econ-inverse | 역행렬과 연립방정식 | card-econ-inverse-steps card-econ-bundle-price | econ-matrix
 econ-leontief | 행렬로 푸는 경제 문제 | card-econ-leontief card-econ-two-market | econ-inverse econ-equilibrium
+econ-marginal | 한계비용과 한계수입 | card-econ-marginal-cost card-econ-marginal-revenue | calc1-derivative-coef calc1-product-rule econ-func
+econ-shape | 경제 함수의 그래프 개형 | card-econ-avg-marginal card-econ-revenue-shape | econ-marginal calc1-extremum
+econ-elasticity | 가격 탄력성 | card-econ-elasticity card-econ-price-hike | econ-marginal econ-demand
+econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-price | econ-shape calc1-maxmin

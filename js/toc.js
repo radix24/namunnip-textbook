@@ -17348,29 +17348,73 @@ window.TOC = [
       "n": 1,
       "title": "경제 함수의 미분",
       "code": "12경수04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-cost",
+        "title": "하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-revenue",
+        "title": "한 개를 더 팔면 수입이 그 가격만큼 늘어날까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "그래프의 개형과 해석",
       "code": "12경수04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-avg-marginal",
+        "title": "개당 평균 비용이 가장 낮은 생산량은 어디일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-revenue-shape",
+        "title": "이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "탄력성",
       "code": "12경수04-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-elasticity",
+        "title": "기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-price-hike",
+        "title": "값을 10% 올리면 매출이 늘어날까 줄어들까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "최적화",
       "code": "12경수04-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-profit-max",
+        "title": "몇 개를 만들어 팔아야 이윤이 가장 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-ticket-price",
+        "title": "학교 축제 공연 티켓 값을 얼마로 정해야 수익이 가장 클까?"
+       }
+      ]
      }
     ]
    }
