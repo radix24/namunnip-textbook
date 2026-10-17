@@ -17288,22 +17288,55 @@ window.TOC = [
       "n": 1,
       "title": "경제 현상과 행렬",
       "code": "12경수03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-sales-matrix",
+        "title": "세 지점의 하루 매출을 한 번에 계산할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-market-share",
+        "title": "해마다 일부 고객이 갈아타면 점유율은 결국 어떻게 될까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "역행렬",
       "code": "12경수03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-inverse-steps",
+        "title": "주문표의 개수와 금액으로 단가를 거꾸로 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-bundle-price",
+        "title": "세트 메뉴 가격만 보고 버거 하나의 값을 맞힐 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "행렬로 푸는 경제 문제",
       "code": "12경수03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-leontief",
+        "title": "자동차 수요가 100억 원 늘면 철강은 얼마나 더 만들어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-two-market",
+        "title": "돼지고기 값이 오르면 닭고기 값은 왜 따라 오를까?"
+       }
+      ]
      }
     ]
    },

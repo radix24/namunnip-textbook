@@ -9635,19 +9635,31 @@
        "n": 1,
        "title": "경제 현상과 행렬",
        "code": "12경수03-01",
-       "blocks": []
+       "blocks": [
+        "intro-econ-3-1",
+        "card-econ-sales-matrix",
+        "card-econ-market-share"
+       ]
       },
       {
        "n": 2,
        "title": "역행렬",
        "code": "12경수03-02",
-       "blocks": []
+       "blocks": [
+        "intro-econ-3-2",
+        "card-econ-inverse-steps",
+        "card-econ-bundle-price"
+       ]
       },
       {
        "n": 3,
        "title": "행렬로 푸는 경제 문제",
        "code": "12경수03-03",
-       "blocks": []
+       "blocks": [
+        "intro-econ-3-3",
+        "card-econ-leontief",
+        "card-econ-two-market"
+       ]
       }
      ]
     },

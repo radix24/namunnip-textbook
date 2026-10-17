@@ -1050,3 +1050,6 @@ econ-utility | 효용함수와 무차별곡선 | card-econ-marginal-utility card
 econ-equilibrium | 균형 가격 | card-econ-equilibrium card-econ-cobweb | econ-demand
 econ-shift | 세금·소득과 균형의 변화 | card-econ-tax-incidence card-econ-income-shift | econ-equilibrium econ-tax
 econ-lp | 부등식의 영역과 선형계획 | card-econ-lp-production card-econ-diet | cm1-ineq-lin-sys
+econ-matrix | 경제 현상과 행렬 | card-econ-sales-matrix card-econ-market-share | cm1-matrix-mult
+econ-inverse | 역행렬과 연립방정식 | card-econ-inverse-steps card-econ-bundle-price | econ-matrix
+econ-leontief | 행렬로 푸는 경제 문제 | card-econ-leontief card-econ-two-market | econ-inverse econ-equilibrium
