@@ -42,7 +42,7 @@
     <p class="lead">가격이 1% 변할 때 수요량이 몇 % 변하는지를 나타낸 값이 <em>수요의 가격 탄력성</em>입니다. 기울기와 달리 단위와 상관없이 비교할 수 있고, 값을 올렸을 때 매출이 늘지 줄지를 알려 줍니다. 이 절에서는 탄력성을 미분으로 계산하고 매출 변화를 예측합니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/calc1/2-1.html#card-calc1-secant" title="미적분Ⅰ 2.1 · 할선의 기울기는 h가 0에 가까워지면 어디로 갈까?">미분계수</a><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+      <a class="p p-card" href="../../c/econ/4-1.html#card-econ-marginal-cost" title="경제 수학 4.1 · 하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?">미분계수와 한계비용</a><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
     </div>
   </section>
 
@@ -74,7 +74,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>가격이 10에서 11로 오르면 수요량은 2 줄고, 40에서 41로 올라도 2 줄어듭니다. 그런데 소비자의 반응이 "같은 크기"라고 할 수 있을까요?</li>
-            <li><span class="tag">복원</span>변화율은 \(\dfrac{\text{변화량}}{\text{처음 값}}\)입니다. 미분계수 \(\dfrac{dQ}{dP}\)는 \(P\)가 조금 변할 때 \(Q\)가 변하는 비율입니다.</li>
+            <li><span class="tag">복원</span>변화율은 \(\dfrac{\text{변화량}}{\text{처음 값}}\)입니다. 수요량 \(Q\)를 가격 \(P\)의 함수로 보고 미분한 도함수를 \(\dfrac{dQ}{dP}\)로도 씁니다. 이 값은 \(P\)가 조금 변할 때 \(Q\)가 변하는 비율입니다.</li>
             <li><span class="tag">설명</span>가격이 1% 변할 때 수요량이 몇 % 변하는지를 <em>수요의 가격 탄력성</em> \(\varepsilon = -\dfrac{dQ}{dP} \cdot \dfrac{P}{Q}\)라 합니다. 직선 수요 \(Q = 100 - 2P\)에서는 \(\varepsilon = \dfrac{2P}{100 - 2P}\)라서 가격이 높을수록 커집니다. \(\varepsilon > 1\)이면 <em>탄력적</em>, \(\varepsilon < 1\)이면 <em>비탄력적</em>이고, 가운데 점 \(P = 25\)에서 \(\varepsilon = 1\)입니다.</li>
             <li><span class="tag">연결</span>총수입 \(R = PQ\)를 \(P\)로 미분하면 \(R' = Q(1 - \varepsilon)\)입니다. 그래서 비탄력적인 구간에서는 값을 올리면 수입이 늘고, 탄력적인 구간에서는 줄며, \(\varepsilon = 1\)에서 수입이 가장 큽니다(다음 카드).</li>
             <li><span class="tag">적용</span>가격을 움직여 탄력성이 1이 되는 곳을 찾고, 그때 총수입 그래프의 모양을 확인하세요. 가격 10과 40에서 1% 올릴 때 수요량은 각각 몇 % 줄어드나요?</li>

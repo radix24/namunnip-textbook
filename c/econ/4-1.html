@@ -37,7 +37,7 @@
     <p class="lead">경제학에서 "한계"는 하나를 더 만들거나 팔 때의 변화, 곧 <em>미분계수</em>를 뜻합니다. 비용 함수를 미분하면 <em>한계비용</em>, 수입 함수를 미분하면 <em>한계수입</em>입니다. 이 절에서는 두 값을 그래프의 접선 기울기로 확인하고, 경제적 의미를 해석합니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/calc1/2-1.html#card-calc1-secant" title="미적분Ⅰ 2.1 · 할선의 기울기는 h가 0에 가까워지면 어디로 갈까?">미분계수</a><a class="p p-card" href="../../c/calc1/2-4.html#card-calc1-sum-rule" title="미적분Ⅰ 2.4 · 두 함수를 더하면 기울기도 더해질까?">다항함수의 미분</a><a class="p p-card" href="../../c/calc1/2-4.html#card-calc1-product-rule" title="미적분Ⅰ 2.4 · 곱의 미분은 왜 f&#x27;g + fg&#x27;일까?">곱의 미분법</a>
+      <a class="p p-card" href="../../c/cm2/3-1.html#card-cm2-func-map" title="공통수학2 3.1 · 어떤 대응을 함수라고 부를까?">함수의 뜻과 함숫값</a><button type="button" class="p p-basic" data-basic="b-m-slope-intercept" title="중학교 개념 설명 보기">직선의 기울기와 y절편</button>
     </div>
   </section>
 
@@ -70,8 +70,8 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>공장에서 10개를 만들다가 하나를 더 만들면 비용이 얼마나 늘까요? 40개를 만들 때 하나를 더 만들면 어떨까요?</li>
-            <li><span class="tag">복원</span>미분계수 \(f'(a) = \lim\limits_{h \to 0}\dfrac{f(a + h) - f(a)}{h}\)는 \(x = a\)에서 접선의 기울기입니다.</li>
-            <li><span class="tag">설명</span>생산량을 \(h\)만큼 늘릴 때 1개당 늘어나는 비용은 \(\dfrac{C(x + h) - C(x)}{h}\)(평균변화율)입니다. \(h \to 0\)일 때의 값 \(C'(x)\)를 <em>한계비용</em>이라 하고, "하나 더 만들 때 드는 비용"의 근삿값으로 씁니다. 이 함수에서 \(C'(x) = 0.03x^2 - 1.2x + 15\)는 처음에는 줄다가(숙련, 설비 활용) \(x = 20\)을 지나면 다시 늘어납니다(설비 과부하).</li>
+            <li><span class="tag">복원</span>두 점 \((a, f(a))\), \((b, f(b))\)를 이은 직선의 기울기는 \(\dfrac{f(b) - f(a)}{b - a}\)이고, 이것을 \(x\)가 \(a\)에서 \(b\)까지 변할 때의 <em>평균변화율</em>이라 합니다.</li>
+            <li><span class="tag">설명</span>생산량을 \(h\)만큼 늘릴 때 1개당 늘어나는 비용은 \(\dfrac{C(x + h) - C(x)}{h}\)(평균변화율)입니다. \(h\)를 0에 한없이 가깝게 하면 이 값은 곡선의 접선의 기울기에 다가가는데, 이 값을 \(x\)에서의 <em>미분계수</em>라 하고 \(C'(x)\)로 씁니다. \(x\)마다 미분계수를 대응시킨 함수 \(C'\)을 <em>도함수</em>라 하며, 다항함수의 도함수는 \((x^n)' = nx^{n-1}\), \((\text{상수})' = 0\)을 항마다 적용해 구합니다. 비용의 미분계수 \(C'(x)\)를 <em>한계비용</em>이라 하고, "하나 더 만들 때 드는 비용"의 근삿값으로 씁니다. 이 함수에서 \(C'(x) = 0.03x^2 - 1.2x + 15\)는 처음에는 줄다가(숙련, 설비 활용) \(x = 20\)을 지나면 다시 늘어납니다(설비 과부하).</li>
             <li><span class="tag">연결</span>같은 방법으로 수입 함수를 미분하면 <em>한계수입</em>, 효용함수를 미분하면 <em>한계효용</em>(2단원)입니다. 경제학의 "한계"는 미분계수를 뜻합니다.</li>
             <li><span class="tag">적용</span>\(h\)를 줄여 할선이 접선에 가까워지는 것을 확인하세요. 한계비용이 가장 작은 생산량은 몇 개인가요? 그때 곡선은 어떤 모양으로 꺾이나요?</li>
             <li class="warn"><span class="tag">판단</span>한계비용 \(C'(x)\)와 실제로 1개 더 만들 때의 비용 \(C(x + 1) - C(x)\)는 조금 다릅니다. 생산량이 클 때는 그 차이가 작아 근삿값으로 씁니다.</li>
@@ -88,7 +88,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-4.html#card-calc1-product-rule"><small class="mono">미적분Ⅰ 2.4</small>곱의 미분은 왜 f'g + fg'일까?</a><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
 
       <article class="card" id="card-econ-marginal-revenue">
         <header class="card-head">
@@ -109,8 +109,8 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>쿠키 한 상자가 6000원이면 한 상자를 더 팔 때 수입도 6000원 늘어날 것 같습니다. 그런데 더 팔려고 값을 조금 내리면 이미 팔던 상자의 값도 함께 내려갑니다. 어떻게 될까요?</li>
-            <li><span class="tag">복원</span>곱의 미분법: \(\{f(x)g(x)\}' = f'(x)g(x) + f(x)g'(x)\).</li>
-            <li><span class="tag">설명</span>총수입은 \(R(Q) = P \times Q = (100 - 2Q)Q = 100Q - 2Q^2\)이고, 판매량을 하나 늘릴 때 늘어나는 수입 \(R'(Q) = 100 - 4Q\)를 <em>한계수입</em>이라 합니다. 곱의 미분법으로 보면 \(R' = P + Q\dfrac{dP}{dQ}\)이고, 둘째 항은 "가격을 낮춰서 기존 판매분에서 줄어든 수입"이라 음수입니다. 그래서 값을 내려야 더 팔리는 시장에서는 <em>한계수입이 가격보다 작습니다</em>.</li>
+            <li><span class="tag">복원</span>비용 함수의 미분계수가 한계비용이고, 다항함수는 \((x^n)' = nx^{n-1}\)을 항마다 적용해 미분합니다.</li>
+            <li><span class="tag">설명</span>총수입은 \(R(Q) = P \times Q = (100 - 2Q)Q = 100Q - 2Q^2\)이고, 판매량을 하나 늘릴 때 늘어나는 수입 \(R'(Q) = 100 - 4Q\)를 <em>한계수입</em>이라 합니다. 가격 \(P = 100 - 2Q\)와 비교하면 \(R' = P - 2Q\)입니다. 하나를 더 팔려면 가격을 2만큼 내려야 하므로, 새로 판 1개의 값 \(P\)를 얻는 대신 이미 팔던 \(Q\)개에서 \(2Q\)만큼 수입이 줄어드는 것입니다. 그래서 값을 내려야 더 팔리는 시장에서는 <em>한계수입이 가격보다 작습니다</em>.</li>
             <li><span class="tag">연결</span>한계수입이 0이 되는 판매량(\(Q = 25\))에서 총수입이 가장 큽니다. 다음 절에서 그래프의 개형으로, 4절에서 한계비용과 함께 이윤의 최대를 찾습니다.</li>
             <li><span class="tag">적용</span>예측한 뒤 판매량을 움직여 한계수입이 0이나 음수가 되는 곳을 찾으세요. 그때 하나 더 팔면 수입은 어떻게 되나요?</li>
             <li class="warn"><span class="tag">판단</span>가격이 정해져 있어 얼마든지 팔 수 있는 경우(완전경쟁)에만 한계수입과 가격이 같습니다. 판매량을 늘리려면 값을 내려야 할 때는 한계수입이 가격보다 작습니다.</li>
@@ -127,7 +127,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-4.html#card-calc1-product-rule"><small class="mono">미적분Ⅰ 2.4</small>곱의 미분은 왜 f'g + fg'일까?</a><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
 
       <a class="px-go" href="../../practice.html?sec=econ-4-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
 
