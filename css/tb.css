@@ -689,6 +689,10 @@ body[data-scope="basic"] .sci-mx, body[data-scope="basic"] .math-mx { --cols: 3;
 .mx { display: grid; gap: 6px; }
 .mx-row { display: grid; grid-template-columns: 86px repeat(var(--cols, 5), minmax(0, 1fr)); gap: 8px; align-items: stretch; }
 .mx-head { align-items: end; }
+/* 수학: 행 이름 칸 없이 선택 구분 열만 */
+.mx.no-lb .mx-row { grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); }
+.mx.no-lb .mx-lb, .mx.no-lb .mx-head > span:first-child { display: none; }
+.mx.no-lb .mx-cell { border-bottom: 0; }
 .mx-h { font-size: 12.5px; font-weight: 700; color: var(--ink); padding: 0 2px 6px; border-bottom: 2px solid var(--ink); line-height: 1.3; }
 .mx-h small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); }
 .mx-head .mx-h:nth-child(n+5) { border-bottom-style: dashed; }
@@ -701,6 +705,7 @@ body[data-domain="math"] .tree-sci, body[data-domain="sci"] .tree-mth,
 body[data-domain="math"] .for-sci, body[data-domain="sci"] .for-math { display: none; }
 @media (max-width: 860px) {
   .mx-head { display: none; }
+  .mx.no-lb .mx-row { grid-template-columns: 1fr; }
   .mx-row { grid-template-columns: 1fr; gap: 6px; padding: 10px 0 14px; border-bottom: 1px solid var(--rule); }
   .mx-lb { padding: 2px 0 2px 8px; }
   .mx-cell { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 8px; align-items: start; border: 0; padding: 0; }

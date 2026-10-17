@@ -46,17 +46,8 @@
       ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
     const SCI_ROWS = [...TRACKS, ["fusion", "교과 공통"]];
     const cell = (t, lv) => pick((c) => c.track === t && c.level === lv).map((c) => box(c, true)).join("");
-    /* 수학: 영역(행) × 선택 구분(열). 같은 행에서 왼쪽에서 오른쪽으로 이어진다(대수·미적분Ⅰ → 미적분Ⅱ → 고급 대수·고급 미적분).
-       교과 영역(대수·미적분, 기하, 확률과 통계) 아래에 수학을 쓰는 과목(활용과 탐구)을 두고,
-       과학계열에만 있는 전문 수학·이산 수학은 따로 한 행으로 묶는다 */
+    /* 수학: 분야로 행을 나누지 않고 선택 구분 열에 과목을 늘어놓는다(행 이름 칸 없음) */
     const MATH_COLS2 = [["일반", "일반선택", "수학의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"], ["고급", "과학계열 선택", "과학고·영재학교"]];
-    const MATH_ROWS = [["대수·미적분", { 일반: ["alg", "calc1"], 진로: ["calc2"], 고급: ["adalg", "adcalc"] }],
-      ["기하", { 진로: ["geo"], 고급: ["adgeo"] }], ["확률과 통계", { 일반: ["stat"], 융합: ["pstat"] }],
-      ["활용과 탐구", { 진로: ["econ", "aimath", "jmath"], 융합: ["mcult", "mres"] }],
-      ["과학계열 기초", { 고급: ["pmath", "dmath"] }]];
-    const byId = (id) => TOC.find((c) => c.id === id);
-    const placed = new Set(MATH_ROWS.flatMap(([, m]) => Object.values(m).flat()));
-    const extraMath = TOC.filter((c) => c.track === "math" && c.level !== "공통" && !placed.has(c.id));   // 표에 없는 새 과목은 마지막 행에
     const matrix = (cls, label, cols, rows) => `
       <div class="mx ${cls}" role="table" aria-label="${label}" style="--cols:${cols.length}">
         <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([lv, nm, d]) => `<span class="mx-h" role="columnheader" data-lv="${lv}">${nm}<small>${d}</small></span>`).join("")}</div>
@@ -68,8 +59,7 @@
         }).join("")}
       </div>`;
     const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
-    const mathRows = MATH_ROWS.map(([nm, m]) => ["math", nm, (lv) => (m[lv] || []).map(byId).filter(Boolean).map((c) => box(c, true)).join("")]);
-    if (extraMath.length) mathRows.push(["math", "그 밖의 과목", (lv) => extraMath.filter((c) => c.level === lv).map((c) => box(c, true)).join("")]);
+    const mathRows = [["math", "선택 과목", (lv) => cell("math", lv)]];
     /* 보기 범위: 일반 고등학교(과학계열 과목 숨김) / 과학고·영재학교 과목까지 */
     const ADV = (c) => c.level === "고급" || c.level === "실험";
     const cnt2 = (f) => `<span class="for-basic">${TOC.filter((c) => f(c) && !ADV(c)).length}</span><span class="for-all">${TOC.filter(f).length}</span>`;
@@ -78,7 +68,7 @@
       <div class="tree-head"><h2>과목 체계도</h2>
         <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
         <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반 고등학교</button><button type="button" data-scope="all" aria-pressed="false">과학고·영재학교 과목까지</button></span>
-        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. 행은 ${"<span class=\"for-sci\">교과</span><span class=\"for-math\">영역</span>"}, 열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
+        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">행은 교과, </span>열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
       <div class="tree-body" id="tree-body">
       <div class="tree-sci">
         <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
@@ -88,7 +78,7 @@
       <div class="tree-mth">
         <div class="tree-band" data-track="math"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div>
         <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
-        ${matrix("math-mx", "수학 선택 과목: 영역별, 선택 구분별", MATH_COLS2, mathRows)}
+        ${matrix("math-mx no-lb", "수학 선택 과목: 영역별, 선택 구분별", MATH_COLS2, mathRows)}
       </div>
       </div>`;
     /* 체계도 접기: 처음엔 접힌 채로, 펼친 상태는 이 브라우저에 기억한다 */
