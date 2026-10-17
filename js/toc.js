@@ -16727,43 +16727,109 @@ window.TOC = [
       "n": 1,
       "title": "기초적인 작도",
       "code": "12고기01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-construct-replay",
+        "title": "눈금 없는 자와 컴퍼스만으로 무엇을 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-construct-challenge",
+        "title": "원과 직선 몇 번이면 목표 도형을 그릴 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "여러 가지 작도",
       "code": "12고기01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-center-construct",
+        "title": "세 점을 모두 지나는 원은 어떻게 작도할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-regular-polygon",
+        "title": "원 안에 정육각형, 정사각형, 정팔각형을 작도할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "작도 가능성과 대수",
       "code": "12고기01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-constructible-number",
+        "title": "길이 1만 주어지면 어떤 길이를 작도할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-gauss-polygon",
+        "title": "정칠각형은 작도할 수 있을까, 정십칠각형은?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "평면도형의 기초 성질과 증명",
       "code": "12고기01-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-isosceles-proof",
+        "title": "두 변이 같으면 두 밑각도 같다는 것을 어떻게 증명할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-fallacy",
+        "title": "\"모든 삼각형은 이등변삼각형이다\"의 증명은 어디가 틀렸을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "삼각형에 관한 정리",
       "code": "12고기01-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-ceva",
+        "title": "세 꼭짓점에서 그은 세 선분이 한 점에서 만날 조건은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-euler-line",
+        "title": "삼각형의 세 중심이 한 직선 위에 있을까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "원에 관한 정리",
       "code": "12고기01-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-power-point",
+        "title": "원을 지나는 직선을 아무렇게나 그어도 변하지 않는 곱은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-ptolemy",
+        "title": "원에 내접하는 사각형의 두 대각선의 곱은 무엇과 같을까?"
+       }
+      ]
      }
     ]
    },

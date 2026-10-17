@@ -1546,3 +1546,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 그래프와 실생활 문제 | card-dmath-konigsberg
 꼭짓점의 차수와 변의 개수 | card-dmath-handshake
 평면그래프 | card-dmath-untangle
+기초적인 작도 | card-adgeo-construct-replay
+여러 가지 작도 | card-adgeo-center-construct

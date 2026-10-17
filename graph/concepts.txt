@@ -1021,3 +1021,9 @@ dm-planar | 평면그래프와 오일러 공식 | card-dmath-untangle card-dmath
 dm-euler-hamilton | 오일러그래프와 해밀턴그래프 | card-dmath-euler-trail card-dmath-hamilton | dm-degree
 dm-tree | 수형도와 생성수형도 | card-dmath-tree-facts card-dmath-kruskal | dm-degree
 dm-coloring | 채색수와 채색다항식 | card-dmath-map-color card-dmath-chromatic-poly | dm-planar cm1-product-rule
+agx-construct | 기초적인 작도 | card-adgeo-construct-replay card-adgeo-construct-challenge |
+agx-construct2 | 여러 가지 작도(외접원·내접원, 정다각형) | card-adgeo-center-construct card-adgeo-regular-polygon | agx-construct
+agx-constructible | 작도 가능성과 대수 | card-adgeo-constructible-number card-adgeo-gauss-polygon | agx-construct2
+agx-proof | 평면도형의 증명 | card-adgeo-isosceles-proof card-adgeo-fallacy | agx-construct
+agx-triangle | 삼각형에 관한 정리(체바, 오일러 직선) | card-adgeo-ceva card-adgeo-euler-line | agx-proof agx-construct2
+agx-circle | 원에 관한 정리(방멱, 톨레미) | card-adgeo-power-point card-adgeo-ptolemy | agx-proof

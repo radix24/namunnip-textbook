@@ -9306,37 +9306,61 @@
        "n": 1,
        "title": "기초적인 작도",
        "code": "12고기01-01",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-1",
+        "card-adgeo-construct-replay",
+        "card-adgeo-construct-challenge"
+       ]
       },
       {
        "n": 2,
        "title": "여러 가지 작도",
        "code": "12고기01-02",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-2",
+        "card-adgeo-center-construct",
+        "card-adgeo-regular-polygon"
+       ]
       },
       {
        "n": 3,
        "title": "작도 가능성과 대수",
        "code": "12고기01-03",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-3",
+        "card-adgeo-constructible-number",
+        "card-adgeo-gauss-polygon"
+       ]
       },
       {
        "n": 4,
        "title": "평면도형의 기초 성질과 증명",
        "code": "12고기01-04",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-4",
+        "card-adgeo-isosceles-proof",
+        "card-adgeo-fallacy"
+       ]
       },
       {
        "n": 5,
        "title": "삼각형에 관한 정리",
        "code": "12고기01-05",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-5",
+        "card-adgeo-ceva",
+        "card-adgeo-euler-line"
+       ]
       },
       {
        "n": 6,
        "title": "원에 관한 정리",
        "code": "12고기01-06",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-1-6",
+        "card-adgeo-power-point",
+        "card-adgeo-ptolemy"
+       ]
       }
      ]
     },
