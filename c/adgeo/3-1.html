@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>등위곡선과 곡면 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="이변수함수의 그래프인 곡면, 높이가 같은 점을 이은 등위곡선, 등고선 지도에서 곡면 모양 읽기. 곡면과 등고선을 함께 돌려 보는 카드와, 등고선 지도와 곡면을 짝짓는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-contour .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .5rem; }
+    #card-adgeo-contour canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+    #card-adgeo-level-match .eqs { display: flex; flex-wrap: wrap; gap: .35rem; margin: .4rem 0; }
+    #card-adgeo-level-match .eqs button { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    #card-adgeo-level-match .eqs button.done { opacity: .45; }
+    #card-adgeo-level-match .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+    #card-adgeo-level-match .grid figure { margin: 0; border: 1px solid var(--rule); border-radius: 8px; padding: .25rem; background: var(--card); cursor: pointer; }
+    #card-adgeo-level-match .grid figure.hit { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+    #card-adgeo-level-match .grid canvas { width: 100%; aspect-ratio: 1 / 1; display: block; }
+    #card-adgeo-level-match .grid figcaption { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .75rem; text-align: center; min-height: 1.2em; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="3-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>등위곡선과 곡면</h1>
+    <p class="lead">높이가 \(z = f(x, y)\)로 주어진 곡면을 평면 \(z = k\)로 자르면 높이가 같은 점들이 곡선을 이룹니다. 이것이 <em>등위곡선</em>이고, 지도의 등고선이 그 예입니다. 이 절에서는 곡면과 등위곡선을 함께 보고, 등위곡선의 간격과 모양만으로 곡면의 모양을 추측해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/2-4.html#card-geo-coord-point" title="기하 2.4 · 공간의 점 하나를 수 몇 개로 나타낼 수 있을까?">공간좌표</a><a class="p p-card" href="../../c/cm2/1-4.html#card-cm2-circle-eq" title="공통수학2 1.4 · 원 위의 점들은 어떤 식을 만족할까?">원의 방정식</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-contour"><span class="mono">3.1.1</span>곡면을 같은 높이로 잘라 만든 등고선</a></li>
+        <li><a href="#card-adgeo-level-match"><span class="mono">3.1.2</span>등고선 지도와 함수 짝짓기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-3-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-contour">
+        <header class="card-head">
+          <span class="no">3.1.1</span><h2>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</h2><span class="kind">등위곡선과 곡면 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">곡면 <select class="pick" aria-label="곡면 고르기"><option value="0">산봉우리 두 개 (모식 지형)</option><option value="1">그릇 z = x² + y²</option><option value="2">안장 z = x² − y²</option><option value="3">경사면 z = x + y/2</option></select></label>
+              <div><label class="mono">자르는 높이 c = <output class="c-out">0.5</output></label><input class="c" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="자르는 높이"></div>
+            </div>
+            <div class="two">
+              <canvas class="v3" aria-label="곡면 z = f(x, y)와 높이 c인 평면, 그 교선. 끌어서 돌려 볼 수 있다"></canvas>
+              <canvas class="map" aria-label="위에서 본 등고선 지도. 굵은 선은 높이 c의 등위곡선"></canvas>
+            </div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>등산 지도에는 산이 그려져 있지 않고 구불구불한 선만 있습니다. 그런데도 어디가 가파르고 어디가 봉우리인지 알 수 있습니다. 평면의 곡선들이 어떻게 곡면을 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>이변수함수 \(z = f(x, y)\)의 그래프는 공간의 곡면입니다.</li>
+            <li><span class="tag">설명</span>곡면 \(z = f(x, y)\)를 높이 \(z = c\)인 평면으로 자른 교선을 \(xy\)평면에 내려놓은 곡선 \(f(x, y) = c\)를 <em>등위곡선</em>이라 합니다. 여러 높이의 등위곡선을 함께 그린 것이 등고선 지도입니다. 같은 간격의 높이로 그렸을 때 선이 촘촘한 곳은 가파르고, 성긴 곳은 완만합니다. 그릇 모양은 동심원, 경사면은 평행한 직선, 안장 모양은 쌍곡선으로 나타납니다. 반대로 등위곡선을 높이별로 쌓아 올리면 곡면을 다시 만들 수 있습니다.</li>
+            <li><span class="tag">연결</span>일기도의 등압선, 온도 지도의 등온선, 전기장의 등전위선이 모두 등위곡선입니다. 공간에서는 \(F(x, y, z) = c\)인 점들이 곡면을 이루며(등위곡면), 다음 절의 이차곡면이 그 예입니다.</li>
+            <li><span class="tag">적용</span>높이 \(c\)를 움직이며 왼쪽의 교선과 오른쪽의 굵은 등위곡선을 비교하세요. 산봉우리 지형에서 두 봉우리 사이의 낮은 고개는 등고선 지도에서 어떻게 보이나요? 안장 곡면의 \(c = 0\) 등위곡선은 무엇인가요?</li>
+            <li class="warn"><span class="tag">판단</span>등고선 지도만으로는 높이 간격 사이의 지형을 알 수 없습니다. 간격보다 작은 언덕이나 웅덩이는 등고선에 나타나지 않을 수 있습니다. 또 서로 다른 높이의 등위곡선은 만나지 않습니다(한 점의 높이는 하나).</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(f(x, y) = x^2 + 4y^2\)의 등위곡선 \(f = 4\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>타원 \(\frac{x^2}{4} + y^2 = 1\)<span class="why"><b>맞습니다.</b> 양변을 4로 나누면 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>원 \(x^2 + y^2 = 4\)<span class="why"><b>\(y^2\)의 계수 4를 놓쳤습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>쌍곡선<span class="why"><b>두 항의 부호가 같습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>점 하나<span class="why"><b>\(f = 0\)일 때가 점 하나(원점)입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-2.html#card-adgeo-quadric"><small class="mono">고급 기하 3.2</small>x², y², z²의 부호만 바꾸면 곡면은 어떻게 달라질까?</a><a href="../../c/adgeo/3-2.html#card-adgeo-slice-predict"><small class="mono">고급 기하 3.2</small>이 곡면을 이 평면으로 자르면 어떤 모양이 나올까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-level-match">
+        <header class="card-head">
+          <span class="no">3.1.2</span><h2>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</h2><span class="kind">등위곡선 읽기 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">함수를 하나 고른 뒤 그 등고선 지도를 누르세요. 모든 지도는 같은 간격의 높이(0.5, 1, 1.5, …)로 그렸고, 주황은 높이 0 또는 가장 낮은 선입니다.</p>
+            <div class="eqs" role="group" aria-label="함수"></div>
+            <div class="grid" aria-label="등고선 지도 넷"></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(x^2 + y^2\)과 \(\sqrt{x^2 + y^2}\)은 등위곡선이 모두 원입니다. 그렇다면 두 등고선 지도는 똑같을까요? 무엇으로 구별할 수 있을까요?</li>
+            <li><span class="tag">복원</span>등위곡선은 \(f(x, y) = c\)인 점들이고, 같은 간격의 높이로 그린 선이 촘촘할수록 가파릅니다.</li>
+            <li><span class="tag">설명</span>등고선 지도에서는 ① <b>선의 모양</b>(원, 쌍곡선, 포물선, 직선)이 함수의 식의 꼴을, ② <b>선의 간격</b>이 높이가 늘어나는 빠르기를 알려 줍니다. \(x^2 + y^2 = c\)는 반지름이 \(\sqrt{c}\)라 바깥으로 갈수록 원 사이가 좁아지고(점점 가파름), \(\sqrt{x^2 + y^2} = c\)는 반지름이 \(c\)라 간격이 일정합니다(원뿔). \(xy = c\)는 좌표축을 점근선으로 하는 쌍곡선이고, \(y - x^2 = c\)는 위로 평행이동한 포물선들입니다.</li>
+            <li><span class="tag">연결</span>기상 예보관은 등압선의 간격으로 바람의 세기를 판단합니다(촘촘할수록 강한 바람). 등고선의 간격은 곡면의 기울기, 곧 편미분과 관계가 있습니다.</li>
+            <li><span class="tag">적용</span>네 함수를 등고선 지도와 짝지어 보세요. 원 모양의 지도 둘은 간격으로 구별하세요.</li>
+            <li class="warn"><span class="tag">판단</span>등고선의 모양만 보면 서로 다른 함수를 같은 것으로 착각하기 쉽습니다. 높이 값과 간격까지 함께 읽어야 합니다. 또 지도의 범위 밖에서는 등고선의 모양이 달라질 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">등고선이 모두 같은 간격의 평행한 직선인 함수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(f(x, y) = 2x - y\)<span class="why"><b>맞습니다.</b> 일차함수의 그래프는 평면이라 기울기가 어디서나 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(f(x, y) = x^2\)<span class="why"><b>직선 \(x = \pm\sqrt{c}\)이지만 간격이 일정하지 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(f(x, y) = xy\)<span class="why"><b>쌍곡선입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(f(x, y) = x^2 + y^2\)<span class="why"><b>원입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-2.html#card-adgeo-quadric"><small class="mono">고급 기하 3.2</small>x², y², z²의 부호만 바꾸면 곡면은 어떻게 달라질까?</a><a href="../../c/adgeo/3-2.html#card-adgeo-slice-predict"><small class="mono">고급 기하 3.2</small>이 곡면을 이 평면으로 자르면 어떤 모양이 나올까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/contour.js"></script>
+<script src="../../js/cards/adgeo/level-match.js"></script>
+</body>
+</html>

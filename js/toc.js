@@ -16991,29 +16991,73 @@ window.TOC = [
       "n": 1,
       "title": "등위곡선과 곡면",
       "code": "12고기03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-contour",
+        "title": "지도의 등고선은 곡면을 어떻게 나타낸 것일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-level-match",
+        "title": "등고선 지도만 보고 함수를 알아맞힐 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "이차곡면",
       "code": "12고기03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-quadric",
+        "title": "x², y², z²의 부호만 바꾸면 곡면은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-slice-predict",
+        "title": "이 곡면을 이 평면으로 자르면 어떤 모양이 나올까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "구면삼각형",
       "code": "12고기03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-sphere-triangle",
+        "title": "지구 위의 삼각형은 세 각의 합이 왜 180°보다 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-flight-route",
+        "title": "서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "구면코사인법칙과 구면사인법칙",
       "code": "12고기03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-spherical-law",
+        "title": "구면삼각형에서도 코사인법칙이 성립할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-city-distance",
+        "title": "위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?"
+       }
+      ]
      }
     ]
    }

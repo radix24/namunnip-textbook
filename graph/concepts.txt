@@ -1035,3 +1035,7 @@ agx-regular-length | 정칙곡선과 곡선의 길이 | card-adgeo-regular-cusp 
 agx-unit-speed | 단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param card-adgeo-milestones | agx-regular-length
 agx-reparam | 단위속력곡선으로 재매개화 | card-adgeo-reparam card-adgeo-reparam-spot | agx-unit-speed
 agx-curvature | 곡률과 곡률반경 | card-adgeo-osculating card-adgeo-road-curve | agx-reparam pm-cross
+agx-level | 등위곡선과 곡면 | card-adgeo-contour card-adgeo-level-match | geo-space-coord
+agx-quadric | 이차곡면 | card-adgeo-quadric card-adgeo-slice-predict | agx-level geo-ellipse geo-hyperbola geo-parabola geo-sphere-eq
+agx-sph-tri | 구면삼각형 | card-adgeo-sphere-triangle card-adgeo-flight-route | geo-sphere-eq
+agx-sph-law | 구면코사인법칙과 구면사인법칙 | card-adgeo-spherical-law card-adgeo-city-distance | agx-sph-tri alg-cosine-law geo-dot

@@ -9458,25 +9458,41 @@
        "n": 1,
        "title": "등위곡선과 곡면",
        "code": "12고기03-01",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-3-1",
+        "card-adgeo-contour",
+        "card-adgeo-level-match"
+       ]
       },
       {
        "n": 2,
        "title": "이차곡면",
        "code": "12고기03-02",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-3-2",
+        "card-adgeo-quadric",
+        "card-adgeo-slice-predict"
+       ]
       },
       {
        "n": 3,
        "title": "구면삼각형",
        "code": "12고기03-03",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-3-3",
+        "card-adgeo-sphere-triangle",
+        "card-adgeo-flight-route"
+       ]
       },
       {
        "n": 4,
        "title": "구면코사인법칙과 구면사인법칙",
        "code": "12고기03-04",
-       "blocks": []
+       "blocks": [
+        "intro-adgeo-3-4",
+        "card-adgeo-spherical-law",
+        "card-adgeo-city-distance"
+       ]
       }
      ]
     }

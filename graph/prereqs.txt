@@ -1558,3 +1558,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param
 단위속력곡선으로 재매개화 | card-adgeo-reparam
 역함수의 미분 | card-calc2-inverse-slope
+사인법칙 | card-alg-sine-law
