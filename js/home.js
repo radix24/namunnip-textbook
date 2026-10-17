@@ -46,22 +46,26 @@
       ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
     const SCI_ROWS = [...TRACKS, ["fusion", "교과 공통"]];
     const cell = (t, lv) => pick((c) => c.track === t && c.level === lv).map((c) => box(c, true)).join("");
-    /* 수학: 영역(행) × 선택 구분(열). 같은 행에서 왼쪽에서 오른쪽으로 이어진다(대수 → 고급 대수, 미적분Ⅰ → 미적분Ⅱ → 고급 미적분).
-       전문 수학은 미적분·기하·확률과 통계를 함께 다루므로 '통합·활용' 행에 둔다 */
+    /* 수학: 영역(행) × 선택 구분(열). 같은 행에서 왼쪽에서 오른쪽으로 이어진다(대수·미적분Ⅰ → 미적분Ⅱ → 고급 대수·고급 미적분).
+       교과 영역(대수·미적분, 기하, 확률과 통계) 아래에 수학을 쓰는 과목(활용과 탐구)을 두고,
+       과학계열에만 있는 전문 수학·이산 수학은 따로 한 행으로 묶는다 */
     const MATH_COLS2 = [["일반", "일반선택", "수학의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"], ["고급", "과학계열 선택", "과학고·영재학교"]];
-    const MATH_ROWS = [["대수", { 일반: ["alg"], 고급: ["adalg"] }], ["미적분", { 일반: ["calc1"], 진로: ["calc2"], 고급: ["adcalc"] }],
+    const MATH_ROWS = [["대수·미적분", { 일반: ["alg", "calc1"], 진로: ["calc2"], 고급: ["adalg", "adcalc"] }],
       ["기하", { 진로: ["geo"], 고급: ["adgeo"] }], ["확률과 통계", { 일반: ["stat"], 융합: ["pstat"] }],
-      ["이산·데이터", { 진로: ["aimath"], 고급: ["dmath"] }], ["통합·활용", { 진로: ["econ", "jmath"], 융합: ["mcult", "mres"], 고급: ["pmath"] }]];
+      ["활용과 탐구", { 진로: ["econ", "aimath", "jmath"], 융합: ["mcult", "mres"] }],
+      ["과학계열 기초", { 고급: ["pmath", "dmath"] }]];
     const byId = (id) => TOC.find((c) => c.id === id);
     const placed = new Set(MATH_ROWS.flatMap(([, m]) => Object.values(m).flat()));
     const extraMath = TOC.filter((c) => c.track === "math" && c.level !== "공통" && !placed.has(c.id));   // 표에 없는 새 과목은 마지막 행에
     const matrix = (cls, label, cols, rows) => `
       <div class="mx ${cls}" role="table" aria-label="${label}" style="--cols:${cols.length}">
         <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([lv, nm, d]) => `<span class="mx-h" role="columnheader" data-lv="${lv}">${nm}<small>${d}</small></span>`).join("")}</div>
-        ${rows.map(([t, nm, get]) => `<div class="mx-row" data-track="${t}" role="row"><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn]) => {
-          const h = get(lv);
-          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${h}</div>`;
-        }).join("")}</div>`).join("")}
+        ${rows.map(([t, nm, get]) => {
+          const hs = cols.map(([lv]) => get(lv));
+          const advOnly = cols.every(([lv], i) => lv === "고급" || lv === "실험" || !hs[i]);   // 과학계열 과목만 있는 행은 일반 보기에서 숨긴다
+          return `<div class="mx-row" data-track="${t}" role="row"${advOnly ? " data-adv" : ""}><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn], i) =>
+            `<div class="mx-cell${hs[i] ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${hs[i]}</div>`).join("")}</div>`;
+        }).join("")}
       </div>`;
     const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
     const mathRows = MATH_ROWS.map(([nm, m]) => ["math", nm, (lv) => (m[lv] || []).map(byId).filter(Boolean).map((c) => box(c, true)).join("")]);

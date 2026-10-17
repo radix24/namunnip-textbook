@@ -680,7 +680,7 @@ a.nb-title:hover { text-decoration: underline; }
 .scope-seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 .tree-head .tree-note { flex-basis: 100%; margin: 4px 0 0; }
 body[data-scope="basic"] .mx [data-lv="고급"], body[data-scope="basic"] .mx [data-lv="실험"],
-body[data-scope="basic"] section.course[data-adv], body[data-scope="basic"] .for-all, body[data-scope="all"] .for-basic { display: none; }
+body[data-scope="basic"] section.course[data-adv], body[data-scope="basic"] .mx-row[data-adv], body[data-scope="basic"] .for-all, body[data-scope="all"] .for-basic { display: none; }
 body[data-scope="basic"] .sci-mx, body[data-scope="basic"] .math-mx { --cols: 3; }
 .tree:not(.open) { padding-bottom: 20px; }
 .tree:not(.open) .tree-head { margin-bottom: 0; }
