@@ -53,7 +53,7 @@
   function play() {
     cancelAnimationFrame(raf);
     const t0 = performance.now();
-    const tick = (t) => { tnow = Math.min(TMAX, (t - t0) / 1000); draw(); if (tnow < TMAX) raf = requestAnimationFrame(tick); };
+    const tick = (t) => { tnow = Math.max(0, Math.min(TMAX, (t - t0) / 1000)); /* rAF 시각이 t0보다 앞설 수 있음 */ draw(); if (tnow < TMAX) raf = requestAnimationFrame(tick); };
     if (NM.reduce) { tnow = TMAX; draw(); return; }
     raf = requestAnimationFrame(tick);
   }

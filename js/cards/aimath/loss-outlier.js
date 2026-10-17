@@ -24,7 +24,8 @@
     E.fn(ctx, P, (x) => a[0] * x + a[1], 0, 9, E.ORANGE, 2.4, [8, 4]);
     ctx.restore();
     D.forEach(([x, y]) => E.dot(ctx, P, x, y, x === OUT[0] && y === OUT[1] ? C.warn : C.ink, x === OUT[0] && y === OUT[1] ? 6 : 4, x === OUT[0] && y === OUT[1] ? "튀는 자료" : "", 8, 4));
-    E.text(ctx, P.L + 6, P.T + 12, "파랑: 제곱오차 직선 · 주황 점선: 절댓값오차 직선 · 흐린 선: 튀는 자료 넣기 전", C.ink2);
+    E.text(ctx, P.L + 6, P.T + 12, "파랑: 제곱오차 · 주황 점선: 절댓값오차", C.ink2);
+    if (withOut) E.text(ctx, P.L + 6, P.T + 26, "흐린 선: 튀는 자료 넣기 전", C.ink3);
   }
   function update() {
     const D = data(), m = mse(D), a = mae(D);
@@ -39,4 +40,7 @@
     update();
   }));
   $(".go-toggle").addEventListener("click", () => { withOut = !withOut; update(); });
+  /* 예측 전에도 튀는 자료가 없는 기본 자료와 두 직선을 그려 둔다 */
+  cv = fit($("canvas"), () => draw());
+  update();
 })();

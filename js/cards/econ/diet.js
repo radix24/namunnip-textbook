@@ -19,7 +19,7 @@
     const x = +xIn.value, y = +yIn.value, k = cost(x, y);
     E.line(ctx, P, [[0, k / 600], [k / 800, 0]], C.warn, 2, [6, 4]);
     ctx.restore();
-    E.text(ctx, P.X(0.2), P.Y(8.2) - 2, "단백질 8x + 4y = 32", E.BLUE);
+    E.text(ctx, P.X(1.4), P.Y(5.6), "단백질 8x + 4y = 32", E.BLUE);
     E.text(ctx, P.X(6.3), P.Y(1.2) - 4, "열량 120x + 200y = 1000", E.ORANGE);
     if (showV) R.vertices(CS).forEach(([vx, vy]) => E.dot(ctx, P, vx, vy, C.ink, 4.5, `${E.n(cost(vx, vy))}원`, 6, -6));
     E.dot(ctx, P, x, y, R.ok(CS, x, y) ? C.forest : C.warn, 6);

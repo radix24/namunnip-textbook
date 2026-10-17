@@ -266,7 +266,7 @@ def page_html(course, ch, sec, blocks):
         bodies.append(indent(body, 6) + (rel_html(b["id"], here) if b["type"] in NUMBERED else ""))
         if b["style"]:
             styles.append(b["style"])
-        scripts += b.get("scripts", [])
+        scripts += [s for s in b.get("scripts", []) if s not in scripts]   # 같은 공용 스크립트는 한 번만(순서 유지)
     for b in intro:
         if b["style"]:
             styles.insert(0, b["style"])

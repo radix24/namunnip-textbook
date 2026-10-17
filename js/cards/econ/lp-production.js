@@ -20,7 +20,7 @@
     E.line(ctx, P, [[0, k / 3], [k / a, 0]], C.warn, 2, [6, 4]);
     ctx.restore();
     E.text(ctx, P.X(47) + 4, P.Y(10), "작업 2x + y = 100", E.BLUE);
-    E.text(ctx, P.X(2), P.Y(41) - 6, "나무 x + 2y = 80", E.ORANGE);
+    E.text(ctx, P.X(14), P.Y(33) - 6, "나무 x + 2y = 80", E.ORANGE);
     if (showV) R.vertices(CS).forEach(([vx, vy]) => E.dot(ctx, P, vx, vy, C.ink, 4.5, `${E.n(prof(vx, vy), 1)}`, 6, vy < 3 ? -8 : -6));
     E.dot(ctx, P, x, y, R.ok(CS, x, y) ? C.forest : C.warn, 6);
   }

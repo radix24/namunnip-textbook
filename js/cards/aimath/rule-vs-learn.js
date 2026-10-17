@@ -22,7 +22,7 @@
     const line = (t, col, lab, dash) => { ctx.save(); ctx.strokeStyle = col; ctx.lineWidth = 2; if (dash) ctx.setLineDash(dash); ctx.beginPath(); ctx.moveTo(P.X(t), P.T); ctx.lineTo(P.X(t), P.T + P.h); ctx.stroke(); ctx.restore(); E.text(ctx, P.X(t) + 4, P.T + 12, lab, col); };
     line(+tIn.value, C.ink, "내 기준");
     if (L) line(L.t, E.BLUE, "학습한 기준", [6, 4]);
-    E.text(ctx, P.X(X1) - 4, P.T + 12, "초록: 정상 · 주황: 불량", C.ink2, "right");
+    E.text(ctx, P.L, P.T + P.h + 28, "초록: 정상 · 주황: 불량", C.ink2);
   }
   function drawErr() {
     if (!ev || !ev.size.w) return;

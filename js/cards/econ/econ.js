@@ -27,12 +27,20 @@ window.NMEcon = (() => {
     ctx.save(); ctx.strokeStyle = col; ctx.lineWidth = lw; if (dash) ctx.setLineDash(dash);
     ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(P.X(x), P.Y(y)) : ctx.moveTo(P.X(x), P.Y(y)))); ctx.stroke(); ctx.restore();
   }
+  /* 글자가 캔버스 밖으로 잘리지 않게 x, y를 화면 안으로 당겨 쓴다(폭은 measureText로 잼) */
+  function fitText(ctx, s, x, y, align) {
+    const W = ctx.canvas.clientWidth || 1e9, H = ctx.canvas.clientHeight || 1e9, tw = ctx.measureText(s).width, pad = 3;
+    let left = align === "right" ? x - tw : align === "center" ? x - tw / 2 : x;
+    left = Math.max(pad, Math.min(W - pad - tw, left));
+    const yy = Math.max(11, Math.min(H - 3, y));
+    ctx.textAlign = "left"; ctx.fillText(s, left, yy);
+  }
   function dot(ctx, P, x, y, col, r = 4.5, lab, dx = 6, dy = -6) {
     ctx.save(); ctx.fillStyle = col; ctx.beginPath(); ctx.arc(P.X(x), P.Y(y), r, 0, 7); ctx.fill();
-    if (lab) { ctx.font = `600 11px ${F.sans}`; ctx.textAlign = dx < 0 ? "right" : "left"; ctx.fillText(lab, P.X(x) + dx, P.Y(y) + dy); }
+    if (lab) { ctx.font = `600 11px ${F.sans}`; fitText(ctx, lab, P.X(x) + dx, P.Y(y) + dy, dx < 0 ? "right" : "left"); }
     ctx.restore();
   }
-  function text(ctx, x, y, s, col = C.ink2, align = "left", font = `11px ${F.sans}`) { ctx.save(); ctx.fillStyle = col; ctx.font = font; ctx.textAlign = align; ctx.fillText(s, x, y); ctx.restore(); }
+  function text(ctx, x, y, s, col = C.ink2, align = "left", font = `11px ${F.sans}`) { ctx.save(); ctx.fillStyle = col; ctx.font = font; fitText(ctx, s, x, y, align); ctx.restore(); }
   const BLUE = "#3f6fa3", PURPLE = "#7b5ea7", ORANGE = "#e0a02a";
   return { n, pct, frame, fn, line, dot, text, BLUE, PURPLE, ORANGE };
 })();

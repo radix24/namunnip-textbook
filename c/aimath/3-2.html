@@ -67,7 +67,7 @@
           <div class="card-fig">
             <div class="presets" role="group" aria-label="변환 고르기"><button class="chip" type="button" data-o="bright" aria-pressed="true">밝기</button><button class="chip" type="button" data-o="contrast">대비</button><button class="chip" type="button" data-o="invert">반전</button><button class="chip" type="button" data-o="transpose">전치</button><button class="chip" type="button" data-o="flip">좌우 뒤집기</button></div>
             <div class="ctl-row"><div><label class="mono">값 = <output class="k-out"></output></label><input class="k" type="range" min="-100" max="100" step="5" value="60" aria-label="변환의 세기"></div></div>
-            <div class="two"><div><canvas class="src" aria-label="원래 24×24 흑백 이미지"></canvas><p class="lab">원래 A</p></div><div><canvas class="dst" aria-label="변환한 이미지"></canvas><p class="lab dl"></p></div></div>
+            <div class="two"><div><canvas class="src no-invert" aria-label="원래 24×24 흑백 이미지"></canvas><p class="lab">원래 A</p></div><div><canvas class="dst no-invert" aria-label="변환한 이미지"></canvas><p class="lab dl"></p></div></div>
             <p class="mono small say" role="status"></p>
             <p class="fig-note">원과 네모, 줄로 만든 24×24 가상 이미지입니다. 계산 결과가 0보다 작으면 0, 255보다 크면 255로 자릅니다.</p>
           </div>
@@ -101,7 +101,7 @@
           <div class="card-fig">
             <div class="presets" role="group" aria-label="필터 고르기"><button class="chip" type="button" data-f="blur" aria-pressed="true">흐리게</button><button class="chip" type="button" data-f="sharp">선명하게</button><button class="chip" type="button" data-f="edgeH">가로 윤곽</button><button class="chip" type="button" data-f="edgeV">세로 윤곽</button></div>
             <div class="k" aria-label="3×3 필터 성분(직접 바꿀 수 있음)"></div>
-            <div class="two"><div><canvas class="src" aria-label="원래 이미지. 누르면 그 픽셀의 계산을 보여 준다"></canvas><p class="lab">원래 이미지</p></div><div><canvas class="dst" aria-label="필터를 적용한 이미지"></canvas><p class="lab">필터 결과</p></div></div>
+            <div class="two"><div><canvas class="src no-invert" aria-label="원래 이미지. 누르면 그 픽셀의 계산을 보여 준다"></canvas><p class="lab">원래 이미지</p></div><div><canvas class="dst no-invert" aria-label="필터를 적용한 이미지"></canvas><p class="lab">필터 결과</p></div></div>
             <pre class="mono calc" aria-live="polite"></pre>
           </div>
           <ol class="steps">
@@ -143,7 +143,6 @@
 <script src="../../js/prereq.js"></script>
 <script src="../../js/cards/aimath/img.js"></script>
 <script src="../../js/cards/aimath/image-ops.js"></script>
-<script src="../../js/cards/aimath/img.js"></script>
 <script src="../../js/cards/aimath/convolution.js"></script>
 </body>
 </html>
