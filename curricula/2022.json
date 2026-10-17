@@ -10357,25 +10357,41 @@
        "n": 1,
        "title": "자료의 종류",
        "code": "12실통02-01",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-2-1",
+        "card-pstat-data-types",
+        "card-pstat-number-not-number"
+       ]
       },
       {
        "n": 2,
        "title": "자료의 수집 방법",
        "code": "12실통02-02",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-2-2",
+        "card-pstat-survey-wording",
+        "card-pstat-random-assign"
+       ]
       },
       {
        "n": 3,
        "title": "그래프의 종류",
        "code": "12실통02-03",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-2-3",
+        "card-pstat-boxplot-build",
+        "card-pstat-scatter-r"
+       ]
       },
       {
        "n": 4,
        "title": "대푯값과 산포도",
        "code": "12실통02-04",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-2-4",
+        "card-pstat-mean-median",
+        "card-pstat-sd-spread"
+       ]
       }
      ]
     },

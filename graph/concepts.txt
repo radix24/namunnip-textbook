@@ -1109,3 +1109,7 @@ mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcul
 pst-useful | 통계의 유용성과 통계적 질문 | card-pstat-cholera-map card-pstat-stat-question |
 pst-process | 통계적 문제해결 과정 | card-pstat-ppdac-order card-pstat-question-refine | pst-useful
 pst-sampling | 모집단과 표본추출 방법 | card-pstat-sampling-methods card-pstat-volunteer-bias | pst-process
+pst-datatype | 자료의 종류(범주형·수치형) | card-pstat-data-types card-pstat-number-not-number | pst-useful
+pst-collect | 자료의 수집 방법(설문·실험) | card-pstat-survey-wording card-pstat-random-assign | pst-sampling
+pst-graphs | 상자그림과 산점도 | card-pstat-boxplot-build card-pstat-scatter-r | pst-datatype
+pst-summary | 대푯값과 산포도 | card-pstat-mean-median card-pstat-sd-spread | pst-datatype

@@ -18482,29 +18482,73 @@ window.TOC = [
       "n": 1,
       "title": "자료의 종류",
       "code": "12실통02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-data-types",
+        "title": "혈액형, 키, 만족도 점수, 형제 수는 각각 어떤 종류의 자료일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-number-not-number",
+        "title": "축구팀 선수들의 등번호 평균이 12.6이라는 것은 무슨 뜻일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "자료의 수집 방법",
       "code": "12실통02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-survey-wording",
+        "title": "설문 문항을 어떻게 쓰느냐에 따라 응답이 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-random-assign",
+        "title": "새 공부법을 고른 학생들의 점수가 높다면, 공부법의 효과일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "그래프의 종류",
       "code": "12실통02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-boxplot-build",
+        "title": "점수 하나를 옮기면 상자그림은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-scatter-r",
+        "title": "상관계수가 0에 가까우면 두 변수는 아무 관계가 없는 걸까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "대푯값과 산포도",
       "code": "12실통02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-mean-median",
+        "title": "동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-sd-spread",
+        "title": "평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?"
+       }
+      ]
      }
     ]
    },

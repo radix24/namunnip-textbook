@@ -1,0 +1,147 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자료의 종류 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="범주형(명목·순서)과 수치형(이산·연속) 자료 나누기, 설문 문항별 자료의 종류, 등번호·포지션 번호처럼 숫자로 된 범주형 자료의 평균이 뜻이 없는 까닭, 범주형은 도수·비율·최빈값으로 정리. 자료 종류 카드와, 등번호 평균 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pstat-data-types table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+    #card-pstat-data-types td, #card-pstat-data-types th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .3rem .3rem; text-align: left; vertical-align: top; }
+    #card-pstat-data-types select { font-size: .82rem; max-width: 100%; }
+    #card-pstat-data-types tr.ok td:first-child::before { content: "✓ "; color: #3b7c2a; font-weight: 700; }
+    #card-pstat-data-types tr.no td:first-child::before { content: "✕ "; color: #b5532f; font-weight: 700; }
+    #card-pstat-data-types .ex { font-size: .78rem; color: #5d5d61; display: block; }
+    #card-pstat-number-not-number table { border-collapse: collapse; width: 100%; font: .84rem var(--mono, monospace); }
+    #card-pstat-number-not-number td, #card-pstat-number-not-number th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .2rem .35rem; text-align: right; }
+    #card-pstat-number-not-number td:first-child, #card-pstat-number-not-number th:first-child { text-align: left; font-family: inherit; }
+    #card-pstat-number-not-number th button { font-size: .72rem; padding: .1rem .35rem; margin-top: .2rem; }
+    #card-pstat-number-not-number tr.avg td { font-weight: 700; background: rgba(63,111,163,.08); }
+    #card-pstat-number-not-number .tw { overflow-x: auto; }
+  </style>
+</head>
+<body data-course="pstat" data-sec="2-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>자료의 종류</h1>
+    <p class="lead">자료는 크게 <em>범주형</em>과 <em>수치형</em>으로 나뉘고, 종류에 따라 정리하는 방법과 알맞은 그래프가 다릅니다. 숫자로 적혀 있어도 이름표 역할만 하는 범주형 자료가 있으니 주의해야 합니다. 이 절에서는 자료의 종류를 구별하고 알맞은 요약 방법을 고릅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-l-mean" title="중학교 개념 설명 보기">평균</button><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pstat-data-types"><span class="mono">2.1.1</span>범주형(명목·순서)과 수치형(이산·연속) 자료 나누기</a></li>
+        <li><a href="#card-pstat-number-not-number"><span class="mono">2.1.2</span>등번호의 평균은 뜻이 있을까 — 숫자로 된 범주형 자료</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pstat-2-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pstat-data-types">
+        <header class="card-head">
+          <span class="no">2.1.1</span><h2>혈액형, 키, 만족도 점수, 형제 수는 각각 어떤 종류의 자료일까?</h2><span class="kind">자료의 종류 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">학급 설문 문항(가상)마다 자료의 종류를 고르고 확인하세요.</p>
+            <table></table>
+            <div class="presets"><button class="chip check" type="button">확인</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>자료의 평균을 낼 수 있는지, 어떤 그래프로 나타낼지는 자료의 종류에 따라 다릅니다. 설문으로 모은 여러 자료를 어떻게 나눌 수 있을까요?</li>
+            <li><span class="tag">복원</span>자연수와 실수, 순서.</li>
+            <li><span class="tag">설명</span><em>범주형 자료</em>는 대상을 몇 가지 범주로 나눈 자료입니다. 혈액형처럼 순서가 없으면 <em>명목형</em>, 만족도(매우 불만 ~ 매우 만족)처럼 순서가 있으면 <em>순서형</em>입니다. <em>수치형 자료</em>는 크기를 수로 잰 자료로, 형제 수처럼 셀 수 있는 값만 가지면 <em>이산형</em>, 키처럼 어떤 구간의 모든 값을 가질 수 있으면 <em>연속형</em>입니다. 범주형은 도수와 비율로, 수치형은 평균, 표준편차, 히스토그램으로 정리합니다.</li>
+            <li><span class="tag">연결</span>자료의 종류는 Ⅱ단원 뒤에서 그래프와 대푯값을 고를 때의 기준이 됩니다.</li>
+            <li><span class="tag">적용</span>"하루 수면 시간"을 "6시간 미만 / 6~8시간 / 8시간 이상"으로 물으면 자료의 종류가 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>숫자로 적혀 있다고 수치형은 아닙니다. 등번호, 우편번호, 학번처럼 이름 대신 쓰는 숫자는 범주형입니다(다음 카드).</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">"하루 휴대전화 사용 시간(분)"은 어떤 자료일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>수치형 연속 자료<span class="why"><b>맞습니다.</b> 시간은 구간의 어떤 값도 가질 수 있습니다(재는 정밀도로 반올림할 뿐).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>범주형 순서 자료<span class="why"><b>구간으로 묶어 물을 때에 해당합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>범주형 명목 자료<span class="why"><b>크기를 잰 값이므로 범주형이 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>수치형 이산 자료<span class="why"><b>분 단위로 적었을 뿐 시간 자체는 연속입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/1-1.html#card-pstat-cholera-map"><small class="mono">실용 통계 1.1</small>목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?</a><a href="../../c/pstat/1-1.html#card-pstat-stat-question"><small class="mono">실용 통계 1.1</small>"우리 반 학생들은 몇 시간 잘까?"와 "나는 어제 몇 시간 잤을까?"는 무엇이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/2-3.html#card-pstat-boxplot-build"><small class="mono">실용 통계 2.3</small>점수 하나를 옮기면 상자그림은 어떻게 달라질까?</a><a href="../../c/pstat/2-3.html#card-pstat-scatter-r"><small class="mono">실용 통계 2.3</small>상관계수가 0에 가까우면 두 변수는 아무 관계가 없는 걸까?</a><a href="../../c/pstat/2-4.html#card-pstat-mean-median"><small class="mono">실용 통계 2.4</small>동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?</a><a href="../../c/pstat/2-4.html#card-pstat-sd-spread"><small class="mono">실용 통계 2.4</small>평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?</a></div></nav>
+
+      <article class="card" id="card-pstat-number-not-number">
+        <header class="card-head">
+          <span class="no">2.1.2</span><h2>축구팀 선수들의 등번호 평균이 12.6이라는 것은 무슨 뜻일까?</h2><span class="kind">숫자로 된 범주 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small"><b>가상</b> 동아리 축구팀 명단입니다. 열마다 "평균 내기"를 눌러 보고, 그 평균에 뜻이 있는지 판단하세요.</p>
+            <div class="tw"><table></table></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>명단의 모든 열이 숫자로 되어 있으니 컴퓨터는 어느 열이든 평균을 계산해 줍니다. 계산이 된다고 모두 뜻이 있을까요?</li>
+            <li><span class="tag">복원</span>평균 \(= \frac{\text{변량의 합}}{\text{변량의 개수}}\), 범주형 자료와 수치형 자료.</li>
+            <li><span class="tag">설명</span>등번호와 포지션 번호(1 = 골키퍼, 2 = 수비수, …)는 숫자가 <em>이름표</em> 역할만 하는 범주형 자료라서 더하거나 평균을 내도 뜻이 없습니다. 범주형 자료는 <em>도수, 비율, 최빈값</em>으로 정리합니다. 키와 골 수는 크기를 잰 수치형 자료라 평균이 뜻을 가집니다. 계산하기 전에 "이 숫자가 양을 나타내는가?"를 먼저 물어야 합니다.</li>
+            <li><span class="tag">연결</span>스프레드시트에서 학번이나 전화번호를 숫자 대신 '텍스트'로 저장하는 까닭도 같습니다.</li>
+            <li><span class="tag">적용</span>포지션 열은 어떻게 정리해야 뜻이 있을까요? 포지션별 인원을 세어 최빈값을 구해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>만족도(1~5점)처럼 순서형 자료의 평균은 자주 쓰이지만, 점수 사이 간격이 같다는 가정이 들어 있습니다. 중앙값이나 비율과 함께 보는 것이 안전합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 중 평균을 내는 것이 뜻이 있는 자료는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>학생들의 통학 거리(km)<span class="why"><b>맞습니다.</b> 크기를 잰 수치형 자료입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>학생들의 학번<span class="why"><b>이름표 역할을 하는 숫자입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>학생들 집의 우편번호<span class="why"><b>지역을 나타내는 범주입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>사물함 번호<span class="why"><b>위치를 구별하는 이름표입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/1-1.html#card-pstat-cholera-map"><small class="mono">실용 통계 1.1</small>목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?</a><a href="../../c/pstat/1-1.html#card-pstat-stat-question"><small class="mono">실용 통계 1.1</small>"우리 반 학생들은 몇 시간 잘까?"와 "나는 어제 몇 시간 잤을까?"는 무엇이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/2-3.html#card-pstat-boxplot-build"><small class="mono">실용 통계 2.3</small>점수 하나를 옮기면 상자그림은 어떻게 달라질까?</a><a href="../../c/pstat/2-3.html#card-pstat-scatter-r"><small class="mono">실용 통계 2.3</small>상관계수가 0에 가까우면 두 변수는 아무 관계가 없는 걸까?</a><a href="../../c/pstat/2-4.html#card-pstat-mean-median"><small class="mono">실용 통계 2.4</small>동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?</a><a href="../../c/pstat/2-4.html#card-pstat-sd-spread"><small class="mono">실용 통계 2.4</small>평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pstat-2-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pstat/data-types.js"></script>
+<script src="../../js/cards/pstat/number-not-number.js"></script>
+</body>
+</html>
