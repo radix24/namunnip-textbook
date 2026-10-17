@@ -1057,3 +1057,6 @@ econ-marginal | 한계비용과 한계수입 | card-econ-marginal-cost card-econ
 econ-shape | 경제 함수의 그래프 개형 | card-econ-avg-marginal card-econ-revenue-shape | econ-marginal calc1-extremum
 econ-elasticity | 가격 탄력성 | card-econ-elasticity card-econ-price-hike | econ-marginal econ-demand
 econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-price | econ-shape calc1-maxmin
+ai-learn | 인공지능의 학습과 수학 | card-aimath-teach-machine card-aimath-rule-vs-learn | 
+ai-history | 인공지능과 수학의 역사 | card-aimath-timeline card-aimath-perceptron-xor | ai-learn
+ai-bigdata | 빅데이터와 표본 | card-aimath-bigdata-sample card-aimath-data-bias | stat-sample-prop

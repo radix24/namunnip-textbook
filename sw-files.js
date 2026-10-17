@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "53e405292c0a",
+"version": "fd827794838f",
 "files": [
 "graph.html",
 "index.html",
@@ -183,6 +183,9 @@ self.PRECACHE = {
 "c/adphy/4-5.html",
 "c/adphy/4-6.html",
 "c/adphy/index.html",
+"c/aimath/1-1.html",
+"c/aimath/1-2.html",
+"c/aimath/1-3.html",
 "c/aimath/index.html",
 "c/alg/1-1.html",
 "c/alg/1-2.html",
@@ -1144,6 +1147,13 @@ self.PRECACHE = {
 "js/cards/adphy/q5-bands.js",
 "js/cards/adphy/q5-well.js",
 "js/cards/adphy/q6-gamow.js",
+"js/cards/aimath/ai.js",
+"js/cards/aimath/bigdata-sample.js",
+"js/cards/aimath/data-bias.js",
+"js/cards/aimath/perceptron-xor.js",
+"js/cards/aimath/rule-vs-learn.js",
+"js/cards/aimath/teach-machine.js",
+"js/cards/aimath/timeline.js",
 "js/cards/alg/arith-sn.js",
 "js/cards/alg/arith-sum.js",
 "js/cards/alg/arith-term.js",

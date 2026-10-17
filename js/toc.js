@@ -17435,22 +17435,55 @@ window.TOC = [
       "n": 1,
       "title": "인공지능의 학습과 수학",
       "code": "12인수01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-teach-machine",
+        "title": "예시만 보여 주고 컴퓨터에게 사과와 귤을 구별하게 할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-rule-vs-learn",
+        "title": "불량품을 가려내는 기준 무게는 사람이 정하는 것이 좋을까, 자료가 정하는 것이 좋을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "인공지능과 수학의 역사",
       "code": "12인수01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-timeline",
+        "title": "인공지능을 만든 수학과 사건을 시간 순서로 놓을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-perceptron-xor",
+        "title": "인공 뉴런 하나로 \"둘 중 하나만 참\"을 판단할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "빅데이터",
       "code": "12인수01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-bigdata-sample",
+        "title": "자료를 100배 모으면 추정도 100배 정확해질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-data-bias",
+        "title": "자료가 많은데도 인공지능이 틀리는 이유는 무엇일까?"
+       }
+      ]
      }
     ]
    },

@@ -9726,19 +9726,31 @@
        "n": 1,
        "title": "인공지능의 학습과 수학",
        "code": "12인수01-01",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-1-1",
+        "card-aimath-teach-machine",
+        "card-aimath-rule-vs-learn"
+       ]
       },
       {
        "n": 2,
        "title": "인공지능과 수학의 역사",
        "code": "12인수01-02",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-1-2",
+        "card-aimath-timeline",
+        "card-aimath-perceptron-xor"
+       ]
       },
       {
        "n": 3,
        "title": "빅데이터",
        "code": "12인수01-03",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-1-3",
+        "card-aimath-bigdata-sample",
+        "card-aimath-data-bias"
+       ]
       }
      ]
     },

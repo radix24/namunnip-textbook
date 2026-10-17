@@ -1561,3 +1561,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 사인법칙 | card-alg-sine-law
 지수함수 | card-alg-exp-func-def
 함수의 증가와 감소 | card-calc1-incdec
+부등식의 영역 | card-econ-lp-production
+표본추출 | card-stat-random-sample
