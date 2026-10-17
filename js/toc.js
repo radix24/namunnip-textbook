@@ -16508,29 +16508,73 @@ window.TOC = [
       "n": 1,
       "title": "진법",
       "code": "12이수03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-base-convert",
+        "title": "같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-binary-cards",
+        "title": "카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "이진수의 사칙연산",
       "code": "12이수03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-binary-add",
+        "title": "이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-twos-comp",
+        "title": "8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "부울 함수와 간소화",
       "code": "12이수03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-truth-table",
+        "title": "\"셋 중 둘 이상이 찬성하면 통과\"를 식으로 쓸 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-karnaugh",
+        "title": "긴 부울 식을 그림으로 묶어 줄일 수 있을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "논리 회로",
       "code": "12이수03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-gate-lab",
+        "title": "스위치와 게이트로 규칙을 회로로 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-adder",
+        "title": "게이트만으로 덧셈하는 기계를 만들 수 있을까?"
+       }
+      ]
      }
     ]
    },

@@ -1010,3 +1010,7 @@ dm-recur-solve | 점화 관계의 일반항 | card-dmath-recur-plot card-dmath-l
 dm-algorithm | 알고리즘과 그 표현 | card-dmath-euclid-flow card-dmath-algo-bug | dm-recur-def
 dm-recursion | 재귀적 알고리즘 | card-dmath-call-tree card-dmath-fast-power | dm-algorithm dm-recur-def
 dm-sort-search | 정렬과 탐색 알고리즘 | card-dmath-sort-race card-dmath-updown | dm-recursion
+dm-base | 진법 | card-dmath-base-convert card-dmath-binary-cards |
+dm-binary-arith | 이진수의 사칙연산과 2의 보수 | card-dmath-binary-add card-dmath-twos-comp | dm-base
+dm-boolean | 부울 함수와 간소화 | card-dmath-truth-table card-dmath-karnaugh | dm-binary-arith cm2-prop
+dm-logic-circuit | 논리 회로와 가산기 | card-dmath-gate-lab card-dmath-adder | dm-boolean dm-binary-arith

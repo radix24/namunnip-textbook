@@ -9175,25 +9175,41 @@
        "n": 1,
        "title": "진법",
        "code": "12이수03-01",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-3-1",
+        "card-dmath-base-convert",
+        "card-dmath-binary-cards"
+       ]
       },
       {
        "n": 2,
        "title": "이진수의 사칙연산",
        "code": "12이수03-02",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-3-2",
+        "card-dmath-binary-add",
+        "card-dmath-twos-comp"
+       ]
       },
       {
        "n": 3,
        "title": "부울 함수와 간소화",
        "code": "12이수03-03",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-3-3",
+        "card-dmath-truth-table",
+        "card-dmath-karnaugh"
+       ]
       },
       {
        "n": 4,
        "title": "논리 회로",
        "code": "12이수03-04",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-3-4",
+        "card-dmath-gate-lab",
+        "card-dmath-adder"
+       ]
       }
      ]
     },

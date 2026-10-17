@@ -1,0 +1,160 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이진수의 사칙연산 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="이진수의 덧셈·뺄셈·곱셈, 받아올림, 2의 보수로 나타낸 음수와 넘침. 이진수 세로셈을 한 자리씩 하는 카드와, 8비트 수의 원으로 넘침을 예측하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-binary-add .grid { font-family: "IBM Plex Mono", ui-monospace, monospace; display: inline-grid; gap: .15rem; margin: .4rem 0; }
+    #card-dmath-binary-add .grid .c { width: 1.9rem; height: 1.9rem; display: grid; place-items: center; font-size: 1.05rem; }
+    #card-dmath-binary-add .grid button.c { border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+    #card-dmath-binary-add .grid button.c.one { background: #3f6fa3; color: #fff; border-color: #3f6fa3; }
+    #card-dmath-binary-add .grid .carry { color: var(--warn); font-size: .8rem; }
+    #card-dmath-binary-add .grid .now { outline: 2px solid var(--amber, #e0a02a); border-radius: 6px; }
+    #card-dmath-binary-add .grid .sum { font-weight: 700; color: var(--forest); }
+    #card-dmath-binary-add .grid .line { border-top: 2px solid var(--ink); }
+    #card-dmath-binary-add .wrap { overflow-x: auto; }
+    #card-dmath-twos-comp canvas { aspect-ratio: 1 / 1; max-width: 360px; margin: 0 auto; display: block; }
+    #card-dmath-twos-comp .bits { display: flex; gap: .2rem; margin: .4rem 0; }
+    #card-dmath-twos-comp .bits button { width: 2.2rem; height: 2.2rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); font: 700 1.05rem/1 "IBM Plex Mono", monospace; cursor: pointer; }
+    #card-dmath-twos-comp .bits button.one { background: #3f6fa3; color: #fff; border-color: #3f6fa3; }
+    #card-dmath-twos-comp .bits button:first-child { box-shadow: inset 0 -3px 0 var(--warn); }
+    #card-dmath-twos-comp .gp { display: flex; flex-wrap: wrap; gap: .3rem; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="3-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>이진수의 사칙연산</h1>
+    <p class="lead">이진법의 계산 규칙은 놀랄 만큼 단순합니다. 덧셈은 \(1 + 1 = 10_{(2)}\)만 기억하면 되고, 곱셈은 밀어 적고 더하기입니다. 컴퓨터는 정해진 자리 수 안에서 계산하므로 음수를 나타내는 약속과 넘침도 함께 알아야 합니다. 이 절에서는 이진수 세로셈을 직접 해 보고, 2의 보수로 뺄셈이 덧셈이 되는 원리와 넘침을 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/dmath/3-1.html#card-dmath-base-convert" title="이산 수학 3.1 · 같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?">진법</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-binary-add"><span class="mono">3.2.1</span>받아올림이 2에서 생기는 덧셈과 밀기 곱셈</a></li>
+        <li><a href="#card-dmath-twos-comp"><span class="mono">3.2.2</span>컴퓨터는 음수와 뺄셈을 어떻게 다룰까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-3-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-binary-add">
+        <header class="card-head">
+          <span class="no">3.2.1</span><h2>이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?</h2><span class="kind">이진수의 사칙연산 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="연산">
+              <button class="chip" type="button" data-op="add" aria-pressed="true">덧셈</button>
+              <button class="chip" type="button" data-op="mul">곱셈</button>
+            </div>
+            <p class="small">자리를 누르면 0과 1이 바뀝니다.</p>
+            <div class="wrap"><div class="grid" aria-label="세로셈"></div></div>
+            <div class="presets"><button class="chip go-step" type="button">한 자리씩 계산</button><button class="chip go-all" type="button">한꺼번에</button><button class="chip go-rand" type="button">다른 수</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>십진법 덧셈은 자리의 합이 10 이상이면 받아올립니다. 이진법이면 어떨까요? 곱셈 구구단은 이진법에서 몇 줄일까요?</li>
+            <li><span class="tag">복원</span>\(b\)진법에서 한 자리의 합이 \(b\) 이상이면 \(b\)를 빼고 윗자리에 1을 올립니다.</li>
+            <li><span class="tag">설명</span>이진법 덧셈의 규칙은 \(0 + 0 = 0\), \(0 + 1 = 1\), \(1 + 1 = 10_{(2)}\)(0을 쓰고 1을 받아올림), \(1 + 1 + 1 = 11_{(2)}\)뿐입니다. 곱셈 구구단은 \(0 \times 0, 0 \times 1, 1 \times 1\)의 세 줄이라, 곱셈은 "곱하는 수의 자리가 1이면 피승수를 그 자리만큼 왼쪽으로 밀어 적고 모두 더하기"가 됩니다. 이진수를 왼쪽으로 한 자리 밀면 2배입니다. 뺄셈과 나눗셈도 같은 방식으로 하며, 컴퓨터는 뺄셈을 다음 카드의 2의 보수로 덧셈처럼 처리합니다.</li>
+            <li><span class="tag">연결</span>규칙이 이렇게 적어서 덧셈을 논리 회로(4절의 가산기)로 만들 수 있습니다. 받아올림이 자리를 따라 전해지는 모습이 그대로 회로의 연결이 됩니다.</li>
+            <li><span class="tag">적용</span>"한 자리씩 계산"으로 오른쪽부터 받아올림이 어떻게 전해지는지 보세요. 11111111에 1을 더하면 어떻게 되나요? 곱셈에서 곱하는 수가 100(2)이면 결과는 피승수와 어떤 관계인가요?</li>
+            <li class="warn"><span class="tag">판단</span>8자리로만 저장하는 컴퓨터에서 결과가 9자리가 되면 맨 앞자리가 사라집니다(넘침). 255 + 1이 0이 되는 이유입니다. 계산 결과를 믿기 전에 자리 수가 충분한지 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(1011_{(2)} + 0111_{(2)}\)은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(10010_{(2)}\)<span class="why"><b>맞습니다.</b> \(11 + 7 = 18\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(1122_{(2)}\)<span class="why"><b>이진법에 2는 없습니다.</b> 받아올려야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(1110_{(2)}\)<span class="why"><b>받아올림을 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(11000_{(2)}\)<span class="why"><b>받아올림을 한 번 더 했습니다.</b> 24가 됩니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/3-1.html#card-dmath-base-convert"><small class="mono">이산 수학 3.1</small>같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?</a><a href="../../c/dmath/3-1.html#card-dmath-binary-cards"><small class="mono">이산 수학 3.1</small>카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-3.html#card-dmath-truth-table"><small class="mono">이산 수학 3.3</small>"셋 중 둘 이상이 찬성하면 통과"를 식으로 쓸 수 있을까?</a><a href="../../c/dmath/3-3.html#card-dmath-karnaugh"><small class="mono">이산 수학 3.3</small>긴 부울 식을 그림으로 묶어 줄일 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-gate-lab"><small class="mono">이산 수학 3.4</small>스위치와 게이트로 규칙을 회로로 만들 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-adder"><small class="mono">이산 수학 3.4</small>게이트만으로 덧셈하는 기계를 만들 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-twos-comp">
+        <header class="card-head">
+          <span class="no">3.2.2</span><h2>8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?</h2><span class="kind">2의 보수와 넘침 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="bits" role="group" aria-label="8비트. 맨 왼쪽은 부호 자리"></div>
+            <p class="mono small cur"></p>
+            <div class="presets"><button class="chip go-neg" type="button">부호 바꾸기(반전 + 1)</button><button class="chip go-inc" type="button">+1</button><button class="chip go-dec" type="button">−1</button></div>
+            <canvas aria-label="8비트 수 256개를 원 위에 놓은 시계. 0에서 127까지와 −128에서 −1까지"></canvas>
+            <p class="small">예측: 8비트 부호 있는 수로 100 + 50을 계산하면?</p>
+            <div class="gp" role="group" aria-label="예측"><button class="chip" type="button" data-g="150">150</button><button class="chip" type="button" data-g="127">127</button><button class="chip" type="button" data-g="-106">−106</button><button class="chip" type="button" data-g="err">오류로 멈춘다</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>컴퓨터의 한 칸에는 0과 1이 8개만 들어갑니다. 여기에 −5 같은 음수는 어떻게 넣고, 뺄셈은 어떻게 할까요? 결과가 칸에 들어가지 않으면 어떻게 될까요?</li>
+            <li><span class="tag">복원</span>8자리 이진수는 \(2^8 = 256\)가지이고, 8자리만 남기는 것은 256으로 나눈 나머지를 구하는 것과 같습니다.</li>
+            <li><span class="tag">설명</span><em>2의 보수</em> 방식에서는 \(-x\)를 \(256 - x\)로 저장합니다. 계산은 "모든 자리를 뒤집고 1을 더하기"로 합니다. 그러면 맨 왼쪽 자리가 1인 수가 음수가 되어 \(-128\)부터 127까지를 나타내고, 뺄셈 \(a - b\)는 \(a + (-b)\)의 덧셈으로 그대로 계산됩니다(넘친 9번째 자리는 버림). 대신 결과가 127을 넘으면 원을 한 바퀴 돌아 음수가 되는 <em>넘침</em>이 생깁니다.</li>
+            <li><span class="tag">연결</span>덧셈 회로 하나로 덧셈과 뺄셈을 모두 할 수 있어 회로가 단순해집니다(4절). 1996년 아리안 5 로켓 사고처럼, 큰 수를 작은 칸에 옮기다 생긴 넘침은 실제 사고의 원인이 되기도 했습니다.</li>
+            <li><span class="tag">적용</span>자리를 눌러 여러 수를 만들고 원 위의 위치를 보세요. 00000101(5)의 부호를 바꾸면 무엇이 되나요? 그다음 100 + 50의 결과를 예측하고 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>같은 비트 11111011도 "부호 없는 수"로 읽으면 251, "부호 있는 수"로 읽으면 −5입니다. 비트만으로는 뜻이 정해지지 않고, 어떤 약속으로 읽는지가 필요합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">8비트 2의 보수로 \(-1\)을 나타내면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(11111111\)<span class="why"><b>맞습니다.</b> 00000001을 뒤집으면 11111110, 1을 더하면 11111111(=256 − 1)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(10000001\)<span class="why"><b>부호 자리만 1로 바꾼 방식(부호-크기)입니다.</b> 2의 보수로는 −127입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(11111110\)<span class="why"><b>뒤집기만 하고 1을 더하지 않았습니다(1의 보수).</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(10000000\)<span class="why"><b>−128입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/3-1.html#card-dmath-base-convert"><small class="mono">이산 수학 3.1</small>같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?</a><a href="../../c/dmath/3-1.html#card-dmath-binary-cards"><small class="mono">이산 수학 3.1</small>카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-3.html#card-dmath-truth-table"><small class="mono">이산 수학 3.3</small>"셋 중 둘 이상이 찬성하면 통과"를 식으로 쓸 수 있을까?</a><a href="../../c/dmath/3-3.html#card-dmath-karnaugh"><small class="mono">이산 수학 3.3</small>긴 부울 식을 그림으로 묶어 줄일 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-gate-lab"><small class="mono">이산 수학 3.4</small>스위치와 게이트로 규칙을 회로로 만들 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-adder"><small class="mono">이산 수학 3.4</small>게이트만으로 덧셈하는 기계를 만들 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/binary-add.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/twos-comp.js"></script>
+</body>
+</html>
