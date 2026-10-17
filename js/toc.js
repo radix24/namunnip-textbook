@@ -17900,36 +17900,91 @@ window.TOC = [
       "n": 1,
       "title": "겨냥도와 전개도",
       "code": "12직수03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-box-net",
+        "title": "정사각형 6개를 어떻게 이어 붙여야 접어서 상자가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-package-board",
+        "title": "상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "위, 앞, 옆에서 본 모양",
       "code": "12직수03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-three-views",
+        "title": "쌓기나무를 위, 앞, 옆에서 보면 어떤 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-view-count",
+        "title": "앞과 옆에서 찍은 사진만 있을 때 상자는 몇 개일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "도형의 이동, 합동과 닮음",
       "code": "12직수03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tile-transform",
+        "title": "한 가지 무늬 타일만으로 바닥에 여러 무늬를 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-sign-enlarge",
+        "title": "간판 시안을 3배로 키우면 페인트와 재료는 몇 배가 들까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "평면도형의 둘레와 넓이",
       "code": "12직수03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-floor-area",
+        "title": "ㄱ자 모양 방에 장판을 깔려면 몇 m²를 주문해야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-fence",
+        "title": "울타리 24 m로 둘러싼 직사각형 텃밭은 어떤 모양일 때 가장 넓을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "입체도형의 겉넓이와 부피",
       "code": "12직수03-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tank-volume",
+        "title": "원기둥 물탱크를 가득 채우려면 물이 몇 L 필요하고 몇 분이 걸릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-paint-surface",
+        "title": "창고 바깥을 칠하려면 칠할 넓이는 얼마일까?"
+       }
+      ]
      }
     ]
    },

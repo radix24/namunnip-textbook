@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>입체도형의 겉넓이와 부피 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="원기둥 부피 πr²h와 m³·L 환산, 수위와 물의 양, 펌프로 채우는 시간, 직육면체·원기둥의 겉넓이와 칠하지 않는 면 빼기, 페인트 양과 통 수. 물탱크 들이 카드와, 창고 도색 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-tank-volume canvas { aspect-ratio: 16 / 10; max-width: 520px; margin: 0 auto; }
+    #card-jmath-tank-volume .ctl-row > div { min-width: 10rem; }
+    #card-jmath-paint-surface canvas { aspect-ratio: 16 / 9; max-width: 520px; margin: 0 auto; }
+    #card-jmath-paint-surface .ctl-row > div { min-width: 10rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="3-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>입체도형의 겉넓이와 부피</h1>
+    <p class="lead">탱크에 담기는 양은 <em>부피</em>로, 칠하거나 감싸는 데 드는 재료는 <em>겉넓이</em>로 계산합니다. 이 절에서는 원기둥 물탱크의 들이와 채우는 시간을 구하고, 창고와 탱크의 바깥을 칠하는 데 필요한 넓이와 페인트 양을 계산합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-pi" title="중학교 개념 설명 보기">원주율</button><button type="button" class="p p-basic" data-basic="b-p-cylinder-volume" title="중학교 개념 설명 보기">원기둥의 부피</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-tank-volume"><span class="mono">3.5.1</span>원기둥 물탱크에 물이 몇 L 들어갈까</a></li>
+        <li><a href="#card-jmath-paint-surface"><span class="mono">3.5.2</span>창고와 탱크 바깥면 도색 넓이 구하기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-3-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-tank-volume">
+        <header class="card-head">
+          <span class="no">3.5.1</span><h2>원기둥 물탱크를 가득 채우려면 물이 몇 L 필요하고 몇 분이 걸릴까?</h2><span class="kind">입체도형의 부피 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">지름 = <output class="d-out"></output> m</label><input class="d" type="range" min="0.5" max="4" step="0.1" value="2" aria-label="탱크 지름"></div>
+              <div><label class="mono">높이 = <output class="h-out"></output> m</label><input class="h" type="range" min="0.5" max="4" step="0.1" value="2.5" aria-label="탱크 높이"></div>
+              <div><label class="mono">수위 = <output class="w-out"></output>%</label><input class="w" type="range" min="0" max="100" step="5" value="60" aria-label="수위"></div>
+              <div><label class="mono">펌프 = 분당 <output class="q-out"></output> L</label><input class="q" type="range" min="20" max="500" step="10" value="120" aria-label="펌프 유량"></div>
+            </div>
+            <canvas aria-label="원기둥 탱크 그림과 지금 수위, 같은 바닥 폭의 직육면체 탱크와 비교"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">탱크 크기와 펌프 유량은 수업용 가정입니다. 탱크 벽의 두께는 무시했습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>시설 관리자가 지름 2 m, 높이 2.5 m인 원기둥 물탱크를 점검합니다. 가득 채우면 물이 몇 L이고, 분당 120 L 펌프로 비어 있는 탱크를 채우는 데 얼마나 걸릴까요?</li>
+            <li><span class="tag">복원</span>원의 넓이 \(\pi r^2\), 기둥의 부피 = 밑넓이 × 높이, \(1\text{ m}^3 = 1000\text{ L}\).</li>
+            <li><span class="tag">설명</span>밑면의 반지름이 1 m이므로 밑넓이는 \(\pi \times 1^2 \approx 3.14\) m², 부피는 \(3.14 \times 2.5 \approx 7.85\) m³ \(= 7850\) L입니다. 분당 120 L이면 \(7850 \div 120 \approx 65\)분이 걸립니다. 수위가 60%이면 남은 물은 부피의 60%이고, 원기둥은 단면이 일정해 수위와 물의 양이 정비례합니다(2.4절 물통 그래프의 직선).</li>
+            <li><span class="tag">연결</span>밑면이 같은 정사각형(한 변 = 지름)인 직육면체 탱크보다 원기둥 탱크는 \(\frac{\pi}{4} \approx 78.5\%\)만큼 담습니다. 같은 재료로 더 많이 담는 모양을 찾는 것은 다음 카드의 겉넓이와 이어집니다.</li>
+            <li><span class="tag">적용</span>지름을 두 배로 하면 부피는 몇 배가 되나요? 높이를 두 배로 할 때와 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>지름을 반지름으로 착각하면 부피를 4배로 잘못 계산합니다. 도면에 적힌 값이 지름인지 반지름인지 먼저 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">반지름 0.5 m, 높이 2 m인 원기둥 탱크의 들이는 약 몇 L일까요? (\(\pi \approx 3.14\))</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 1570 L<span class="why"><b>맞습니다.</b> \(3.14 \times 0.25 \times 2 = 1.57\) m³입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 6280 L<span class="why"><b>0.5를 지름이 아닌 반지름 1로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 3140 L<span class="why"><b>반지름을 제곱하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 1.57 L<span class="why"><b>m³를 L로 바꾸지 않았습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/3-1.html#card-jmath-box-net"><small class="mono">직무 수학 3.1</small>정사각형 6개를 어떻게 이어 붙여야 접어서 상자가 될까?</a><a href="../../c/jmath/3-1.html#card-jmath-package-board"><small class="mono">직무 수학 3.1</small>상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?</a><a href="../../c/jmath/3-4.html#card-jmath-floor-area"><small class="mono">직무 수학 3.4</small>ㄱ자 모양 방에 장판을 깔려면 몇 m²를 주문해야 할까?</a><a href="../../c/jmath/3-4.html#card-jmath-fence"><small class="mono">직무 수학 3.4</small>울타리 24 m로 둘러싼 직사각형 텃밭은 어떤 모양일 때 가장 넓을까?</a></div></nav>
+
+      <article class="card" id="card-jmath-paint-surface">
+        <header class="card-head">
+          <span class="no">3.5.2</span><h2>창고 바깥을 칠하려면 칠할 넓이는 얼마일까?</h2><span class="kind">입체도형의 겉넓이 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="건물 모양"><button class="chip" type="button" data-s="0" aria-pressed="true">직육면체 창고</button><button class="chip" type="button" data-s="1">원기둥 저장 탱크</button></div>
+            <div class="ctl-row">
+              <div><label class="mono">가로(지름) = <output class="a-out"></output> m</label><input class="a" type="range" min="2" max="20" step="0.5" value="10" aria-label="가로 또는 지름"></div>
+              <div><label class="mono">세로 = <output class="b-out"></output> m</label><input class="b" type="range" min="2" max="20" step="0.5" value="6" aria-label="세로(직육면체만)"></div>
+              <div><label class="mono">높이 = <output class="c-out"></output> m</label><input class="c" type="range" min="2" max="10" step="0.5" value="4" aria-label="높이"></div>
+            </div>
+            <canvas aria-label="펼친 전개도에서 칠하는 면(파랑)과 칠하지 않는 면(바닥, 문)"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">문 2개(합계 6 m², 직육면체만)는 칠하지 않고, 바닥도 칠하지 않습니다. 페인트 1 L로 8 m²를 한 번 칠하고 두 번 칠한다고 가정합니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>도장 업체가 창고의 바깥 벽과 지붕을 두 번 칠합니다. 페인트를 얼마나 준비해야 할까요?</li>
+            <li><span class="tag">복원</span>직육면체의 겉넓이 \(2(ab + bc + ca)\), 원기둥의 옆넓이 \(2\pi rh\), 밑넓이 \(\pi r^2\).</li>
+            <li><span class="tag">설명</span>칠할 넓이는 <em>겉넓이에서 칠하지 않는 면을 뺀 것</em>입니다. 직육면체 창고는 바닥(\(ab\))과 문을 빼면 \(ab + 2(a + b)c - (\text{문})\)입니다. 원기둥 탱크는 옆면을 펼치면 가로 \(2\pi r\), 세로 \(h\)인 직사각형이므로 옆넓이 \(2\pi rh\)에 지붕 \(\pi r^2\)를 더합니다. 넓이 × 칠하는 횟수 ÷ (1 L로 칠하는 넓이)가 필요한 페인트 양입니다.</li>
+            <li><span class="tag">연결</span>3.1절의 전개도로 겉넓이를 확인할 수 있습니다. 앞 카드의 부피와 비교하면, 같은 부피를 담는 탱크라도 모양에 따라 칠할 넓이(재료)가 다릅니다.</li>
+            <li><span class="tag">적용</span>건물 모양과 크기를 바꿔 필요한 페인트 통 수(18 L 통)를 구하세요. 높이만 두 배로 하면 칠할 넓이도 두 배가 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>겉넓이 공식을 그대로 쓰면 칠하지 않는 바닥까지 포함해 페인트가 남습니다. 반대로 문을 빼는 것을 잊어도 큰 차이는 아니지만, 지붕을 빠뜨리면 크게 모자랍니다. 무엇을 칠하는지 먼저 정해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">반지름 2 m, 높이 5 m인 원기둥 탱크의 옆면만 칠할 때 넓이는? (\(\pi \approx 3.14\))</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 62.8 m²<span class="why"><b>맞습니다.</b> \(2 \times 3.14 \times 2 \times 5 = 62.8\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 31.4 m²<span class="why"><b>둘레를 \(\pi r\)로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 62.8 m³<span class="why"><b>넓이의 단위는 m²입니다.</b> 부피(\(\pi r^2 h\))는 62.8 m³로 우연히 같은 수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 87.9 m²<span class="why"><b>위아래 밑면까지 더했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/3-1.html#card-jmath-box-net"><small class="mono">직무 수학 3.1</small>정사각형 6개를 어떻게 이어 붙여야 접어서 상자가 될까?</a><a href="../../c/jmath/3-1.html#card-jmath-package-board"><small class="mono">직무 수학 3.1</small>상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?</a><a href="../../c/jmath/3-4.html#card-jmath-floor-area"><small class="mono">직무 수학 3.4</small>ㄱ자 모양 방에 장판을 깔려면 몇 m²를 주문해야 할까?</a><a href="../../c/jmath/3-4.html#card-jmath-fence"><small class="mono">직무 수학 3.4</small>울타리 24 m로 둘러싼 직사각형 텃밭은 어떤 모양일 때 가장 넓을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/tank-volume.js"></script>
+<script src="../../js/cards/jmath/paint-surface.js"></script>
+</body>
+</html>

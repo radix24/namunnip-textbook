@@ -1,0 +1,154 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>위, 앞, 옆에서 본 모양 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="쌓기나무를 위·앞·옆에서 본 모양(투영, 삼면도), 가려진 쌓기나무, 두 방향 모습에 맞는 쌓기의 최소·최대 개수. 높이 격자로 세 모습을 보는 카드와, 사진 두 장으로 개수 범위를 찾는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-three-views .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .6rem; align-items: start; }
+    #card-jmath-three-views .hgrid { display: grid; grid-template-columns: repeat(3, 2.6rem); gap: 3px; }
+    #card-jmath-three-views .hgrid button { width: 2.6rem; height: 2.6rem; font-weight: 700; padding: 0; }
+    #card-jmath-three-views canvas { aspect-ratio: 4 / 3; }
+    #card-jmath-three-views canvas.views { aspect-ratio: 3 / 1; }
+    #card-jmath-view-count .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .6rem; align-items: start; }
+    #card-jmath-view-count .hgrid { display: grid; grid-template-columns: repeat(3, 2.6rem); gap: 3px; margin-top: .3rem; }
+    #card-jmath-view-count .hgrid button { width: 2.6rem; height: 2.6rem; font-weight: 700; padding: 0; }
+    #card-jmath-view-count canvas { aspect-ratio: 4 / 3; }
+    #card-jmath-view-count canvas.target { aspect-ratio: 3 / 1.1; }
+    #card-jmath-view-count .score { font-size: .88rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="3-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>위, 앞, 옆에서 본 모양</h1>
+    <p class="lead">입체를 한 방향에서 보면 그 방향의 평면에 비친 모양만 보입니다. 건축과 기계 도면은 위, 앞, 옆에서 본 세 모양으로 입체를 나타냅니다. 이 절에서는 쌓기나무로 세 방향의 모양을 확인하고, 일부 모습만으로는 개수가 하나로 정해지지 않는다는 것을 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-three-views"><span class="mono">3.2.1</span>쌓기나무를 위, 앞, 옆에서 본 모양</a></li>
+        <li><a href="#card-jmath-view-count"><span class="mono">3.2.2</span>앞과 옆 모습만으로 상자가 가장 적게, 가장 많게 몇 개일까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-3-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-three-views">
+        <header class="card-head">
+          <span class="no">3.2.1</span><h2>쌓기나무를 위, 앞, 옆에서 보면 어떤 모양일까?</h2><span class="kind">위, 앞, 옆에서 본 모양 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">위에서 본 칸의 숫자는 그 자리에 쌓은 개수입니다. 칸을 누를 때마다 0~3으로 바뀝니다(위쪽 행이 뒤, 아래쪽 행이 앞).</p>
+            <div class="wrap">
+              <div><div class="hgrid" role="group" aria-label="위에서 본 3×3 칸의 쌓은 개수"></div></div>
+              <canvas class="iso" aria-label="쌓기나무를 비스듬히 본 그림"></canvas>
+            </div>
+            <canvas class="views" aria-label="위, 앞, 오른쪽 옆에서 본 모양"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>창고 관리자는 상자를 쌓은 모양을 위, 앞, 옆에서 찍은 사진으로 기록합니다. 세 사진만 보고 상자가 몇 개인지 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>입체도형을 한 방향에서 보면 그 방향에 수직인 평면에 비친 모양(투영)이 보입니다.</li>
+            <li><span class="tag">설명</span><em>위에서 본 모양</em>은 쌓기나무가 놓인 자리를, <em>앞에서 본 모양</em>은 열마다 가장 높이 쌓인 개수를, <em>옆에서 본 모양</em>은 행마다 가장 높이 쌓인 개수를 보여 줍니다. 앞에서 볼 때 뒤에 있는 낮은 쌓기나무는 앞의 높은 것에 가려 보이지 않습니다. 그래서 세 모습이 같아도 쌓은 개수가 다를 수 있습니다(다음 카드).</li>
+            <li><span class="tag">연결</span>건축과 기계 도면은 정면도, 평면도, 측면도의 세 방향 그림으로 입체를 나타냅니다(삼면도). 3D 프린터와 CAD 프로그램도 같은 원리로 모양을 보여 줍니다.</li>
+            <li><span class="tag">적용</span>칸을 바꿔 가며 세 모습이 어떻게 변하는지 보세요. 쌓기나무를 하나 더 놓아도 세 모습이 그대로인 자리를 찾을 수 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>옆에서 본 모양의 왼쪽과 오른쪽을 헷갈리기 쉽습니다. 이 카드의 "옆"은 오른쪽에서 본 것이라 앞쪽 행이 왼쪽에 보입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">한 줄로 놓인 세 자리에 앞에서부터 1, 3, 2개를 쌓았습니다(앞–뒤 방향 한 줄). 앞에서 보면 몇 층으로 보일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>3층 한 기둥<span class="why"><b>맞습니다.</b> 한 열에 있으니 가장 높은 3개만 보입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1층<span class="why"><b>맨 앞의 것만 보인다고 생각했습니다.</b> 뒤의 높은 것이 위로 보입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6층<span class="why"><b>개수를 더했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1, 3, 2층 세 기둥<span class="why"><b>옆에서 본 모양입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-jmath-view-count">
+        <header class="card-head">
+          <span class="no">3.2.2</span><h2>앞과 옆에서 찍은 사진만 있을 때 상자는 몇 개일까?</h2><span class="kind">세 방향 모습과 개수 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">창고 사진(가상) 두 장입니다. 3×3 자리에 상자를 쌓아 두 사진과 똑같이 보이게 만드세요. 도전: 가장 적은 개수와 가장 많은 개수를 모두 찾기.</p>
+            <canvas class="target" aria-label="목표: 앞에서 본 모양과 오른쪽 옆에서 본 모양"></canvas>
+            <div class="wrap">
+              <div><div class="hgrid" role="group" aria-label="위에서 본 3×3 칸의 쌓은 개수(위쪽 행이 뒤)"></div><div class="presets"><button class="chip go-clear" type="button">모두 0</button></div></div>
+              <canvas class="iso" aria-label="내가 쌓은 모양"></canvas>
+            </div>
+            <p class="verdict" role="status"></p>
+            <p class="score mono"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>앞에서 본 사진과 옆에서 본 사진만 남아 있습니다. 상자가 정확히 몇 개인지 알 수 있을까요? 모른다면 가능한 개수의 범위는 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>앞 카드: 앞에서 본 높이는 열의 최댓값, 옆에서 본 높이는 행의 최댓값입니다.</li>
+            <li><span class="tag">설명</span>\(r\)행 \(c\)열 자리에는 앞에서 본 그 열의 높이와 옆에서 본 그 행의 높이 중 <em>작은 값</em>까지만 쌓을 수 있습니다. 모든 자리를 그 값까지 채우면 <em>가장 많은</em> 개수입니다. <em>가장 적은</em> 개수는 각 열과 각 행의 최댓값이 한 번씩만 나타나게 하면서, 같은 높이를 요구하는 열과 행은 한 자리에서 함께 만족시킬 때 나옵니다.</li>
+            <li><span class="tag">연결</span>재고 조사, 화물 적재 점검처럼 일부 방향에서만 볼 수 있을 때는 가능한 범위로 추정합니다. 위에서 본 모습까지 있으면 범위가 더 좁아집니다.</li>
+            <li><span class="tag">적용</span>두 사진과 맞는 쌓기 방법을 여러 개 만들고, 개수의 최솟값과 최댓값을 찾으세요.</li>
+            <li class="warn"><span class="tag">판단</span>두 방향 사진이 같아도 개수는 하나로 정해지지 않습니다. 사진으로 개수를 보고할 때는 "최소 몇 개, 최대 몇 개"처럼 범위로 말해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">2×2 자리에서 앞에서 본 높이가 (2, 2), 옆에서 본 높이도 (2, 2)일 때 상자 수의 최솟값과 최댓값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4개, 8개<span class="why"><b>맞습니다.</b> 대각선 두 자리에만 2개씩 쌓으면 4개, 네 자리를 모두 2개씩 쌓으면 8개입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>2개, 8개<span class="why"><b>한 자리 2개로는 한 열, 한 행만 맞습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>8개, 8개<span class="why"><b>개수가 하나로 정해지지 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>4개, 4개<span class="why"><b>최댓값은 모두 채운 경우입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/blocks3d.js"></script>
+<script src="../../js/cards/jmath/three-views.js"></script>
+<script src="../../js/cards/jmath/blocks3d.js"></script>
+<script src="../../js/cards/jmath/view-count.js"></script>
+</body>
+</html>

@@ -1080,3 +1080,8 @@ jm-percent | 비율과 백분율 | card-jmath-discount-chain card-jmath-margin-m
 jm-correspond | 대응 관계와 규칙 | card-jmath-tile-pattern card-jmath-pay-table | jm-arith
 jm-change-graph | 변화를 나타내는 그래프 | card-jmath-tank-graph card-jmath-delivery-graph | jm-correspond
 jm-linear | 일차방정식과 일차부등식의 활용 | card-jmath-rent-or-buy card-jmath-dilution | jm-correspond jm-percent
+jm-net | 겨냥도와 전개도 | card-jmath-box-net card-jmath-package-board | 
+jm-views | 위, 앞, 옆에서 본 모양 | card-jmath-three-views card-jmath-view-count | 
+jm-transform | 도형의 이동, 합동과 닮음 | card-jmath-tile-transform card-jmath-sign-enlarge | jm-ratio
+jm-area | 평면도형의 둘레와 넓이 | card-jmath-floor-area card-jmath-fence | jm-estimate
+jm-volume | 입체도형의 겉넓이와 부피 | card-jmath-tank-volume card-jmath-paint-surface | jm-net jm-area

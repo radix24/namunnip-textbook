@@ -10007,31 +10007,51 @@
        "n": 1,
        "title": "겨냥도와 전개도",
        "code": "12직수03-01",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-3-1",
+        "card-jmath-box-net",
+        "card-jmath-package-board"
+       ]
       },
       {
        "n": 2,
        "title": "위, 앞, 옆에서 본 모양",
        "code": "12직수03-02",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-3-2",
+        "card-jmath-three-views",
+        "card-jmath-view-count"
+       ]
       },
       {
        "n": 3,
        "title": "도형의 이동, 합동과 닮음",
        "code": "12직수03-03",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-3-3",
+        "card-jmath-tile-transform",
+        "card-jmath-sign-enlarge"
+       ]
       },
       {
        "n": 4,
        "title": "평면도형의 둘레와 넓이",
        "code": "12직수03-04",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-3-4",
+        "card-jmath-floor-area",
+        "card-jmath-fence"
+       ]
       },
       {
        "n": 5,
        "title": "입체도형의 겉넓이와 부피",
        "code": "12직수03-05",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-3-5",
+        "card-jmath-tank-volume",
+        "card-jmath-paint-surface"
+       ]
       }
      ]
     },

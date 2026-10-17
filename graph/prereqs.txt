@@ -1568,3 +1568,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add
 큰 수 읽기 | basics/b-l-big-numbers
 단위의 접두어 | basics/b-l-unit-prefix
+합동 | basics/b-m-congruence
+원주율 | basics/b-m-pi
