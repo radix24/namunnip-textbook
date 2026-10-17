@@ -9569,37 +9569,61 @@
        "n": 1,
        "title": "경제 현상과 함수",
        "code": "12경수02-01",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-1",
+        "card-econ-cost-function",
+        "card-econ-phone-plan"
+       ]
       },
       {
        "n": 2,
        "title": "수요곡선과 공급곡선",
        "code": "12경수02-02",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-2",
+        "card-econ-demand-shift",
+        "card-econ-demand-fit"
+       ]
       },
       {
        "n": 3,
        "title": "효용함수",
        "code": "12경수02-03",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-3",
+        "card-econ-marginal-utility",
+        "card-econ-indifference"
+       ]
       },
       {
        "n": 4,
        "title": "균형 가격",
        "code": "12경수02-04",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-4",
+        "card-econ-equilibrium",
+        "card-econ-cobweb"
+       ]
       },
       {
        "n": 5,
        "title": "세금·소득과 균형 가격",
        "code": "12경수02-05",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-5",
+        "card-econ-tax-incidence",
+        "card-econ-income-shift"
+       ]
       },
       {
        "n": 6,
        "title": "부등식의 영역과 경제",
        "code": "12경수02-06",
-       "blocks": []
+       "blocks": [
+        "intro-econ-2-6",
+        "card-econ-lp-production",
+        "card-econ-diet"
+       ]
       }
      ]
     },

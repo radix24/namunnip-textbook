@@ -17174,43 +17174,109 @@ window.TOC = [
       "n": 1,
       "title": "경제 현상과 함수",
       "code": "12경수02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-cost-function",
+        "title": "빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-phone-plan",
+        "title": "한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "수요곡선과 공급곡선",
       "code": "12경수02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-demand-shift",
+        "title": "가격이 올라 덜 사는 것과 덜 사고 싶어지는 것은 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-demand-fit",
+        "title": "설문 자료로 우리 학교 매점의 수요곡선을 만들 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "효용함수",
       "code": "12경수02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-utility",
+        "title": "용돈 1만 원으로 떡볶이와 음료를 어떻게 사야 가장 만족스러울까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-indifference",
+        "title": "예산선 위에서 만족이 가장 큰 점은 어떻게 생겼을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "균형 가격",
       "code": "12경수02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-equilibrium",
+        "title": "운동화 값은 왜 결국 한 가격에 자리 잡을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-cobweb",
+        "title": "배추값은 왜 해마다 폭등과 폭락을 되풀이할까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "세금·소득과 균형 가격",
       "code": "12경수02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-tax-incidence",
+        "title": "판매자에게 1잔에 500원씩 세금을 매기면 누가 그 세금을 낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-income-shift",
+        "title": "소득이 늘면 라면 값은 오를까 내릴까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "부등식의 영역과 경제",
       "code": "12경수02-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-lp-production",
+        "title": "책상과 의자를 몇 개씩 만들어야 이익이 가장 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-diet",
+        "title": "영양 기준을 채우는 가장 싼 아침 식단은?"
+       }
+      ]
      }
     ]
    },

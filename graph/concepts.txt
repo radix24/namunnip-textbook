@@ -1044,3 +1044,9 @@ econ-fx | 환율 | card-econ-exchange card-econ-cross-rate | econ-index
 econ-tax | 누진세와 세율 | card-econ-progressive-tax card-econ-tax-myth | cm2-function
 econ-interest | 단리와 복리, 현재 가치 | card-econ-compound card-econ-present-value | alg-arith-seq alg-geo-seq alg-exp-func
 econ-annuity | 연금 | card-econ-annuity card-econ-lump-or-annuity | econ-interest alg-geo-seq
+econ-func | 경제 함수와 손익분기점 | card-econ-cost-function card-econ-phone-plan | cm2-function
+econ-demand | 수요곡선과 공급곡선 | card-econ-demand-shift card-econ-demand-fit | econ-func
+econ-utility | 효용함수와 무차별곡선 | card-econ-marginal-utility card-econ-indifference | cm2-function
+econ-equilibrium | 균형 가격 | card-econ-equilibrium card-econ-cobweb | econ-demand
+econ-shift | 세금·소득과 균형의 변화 | card-econ-tax-incidence card-econ-income-shift | econ-equilibrium econ-tax
+econ-lp | 부등식의 영역과 선형계획 | card-econ-lp-production card-econ-diet | cm1-ineq-lin-sys
