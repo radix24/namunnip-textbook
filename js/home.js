@@ -23,8 +23,6 @@
     const TRACKS = [["phy", "물리"], ["chem", "화학"], ["bio", "생명과학"], ["earth", "지구과학"]];
     const LV = { 공통: "공통", 일반: "일반선택", 진로: "진로선택", 고급: "과학계열 진로", 실험: "과학계열 융합", 융합: "융합선택" };
     const RANK = ["공통", "일반", "진로", "고급", "실험", "융합"];
-    /* 수학 탭: 과목 수가 많아 이수 단계별 열로 나눈다. 과목이 없는 열은 그리지 않는다 */
-    const MATH_COLS = [["공통", "공통"], ["일반", "일반선택"], ["진로", "진로선택"], ["융합", "융합선택"], ["고급", "과학계열 선택"]];
     /* 학습률: 이 브라우저 기록(NMStore)에서 본(seen) 카드·읽기·영상 수 ÷ 전체 */
     const S = window.NMStore;
     const learn = (c) => {
@@ -48,21 +46,57 @@
       ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
     const SCI_ROWS = [...TRACKS, ["fusion", "교과 공통"]];
     const cell = (t, lv) => pick((c) => c.track === t && c.level === lv).map((c) => box(c, true)).join("");
-    if (tree) tree.innerHTML = `
-      <div class="tree-head"><h2>과목 체계도</h2><p class="mono small dim">공통 과목을 배운 뒤 선택 과목을 고릅니다. 행은 교과, 열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
-      <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
-      <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
-      <div class="sci-mx" role="table" aria-label="과학 선택 과목: 교과별, 선택 구분별">
-        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${SCI_COLS.map(([, nm, d]) => `<span class="mx-h" role="columnheader">${nm}<small>${d}</small></span>`).join("")}</div>
-        ${SCI_ROWS.map(([t, nm]) => `<div class="mx-row" data-track="${t}" role="row"><span class="mx-lb" role="rowheader">${nm}</span>${SCI_COLS.map(([lv, cn]) => {
-          const h = cell(t, lv);
+    /* 수학: 영역(행) × 선택 구분(열). 같은 행에서 왼쪽에서 오른쪽으로 이어진다(대수 → 고급 대수, 미적분Ⅰ → 미적분Ⅱ → 고급 미적분).
+       전문 수학은 미적분·기하·확률과 통계를 함께 다루므로 '통합·활용' 행에 둔다 */
+    const MATH_COLS2 = [["일반", "일반선택", "수학의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"], ["고급", "과학계열 선택", "과학고·영재학교"]];
+    const MATH_ROWS = [["대수", { 일반: ["alg"], 고급: ["adalg"] }], ["미적분", { 일반: ["calc1"], 진로: ["calc2"], 고급: ["adcalc"] }],
+      ["기하", { 진로: ["geo"], 고급: ["adgeo"] }], ["확률과 통계", { 일반: ["stat"], 융합: ["pstat"] }],
+      ["이산·데이터", { 진로: ["aimath"], 고급: ["dmath"] }], ["통합·활용", { 진로: ["econ", "jmath"], 융합: ["mcult", "mres"], 고급: ["pmath"] }]];
+    const byId = (id) => TOC.find((c) => c.id === id);
+    const placed = new Set(MATH_ROWS.flatMap(([, m]) => Object.values(m).flat()));
+    const extraMath = TOC.filter((c) => c.track === "math" && c.level !== "공통" && !placed.has(c.id));   // 표에 없는 새 과목은 마지막 행에
+    const matrix = (cls, label, cols, rows) => `
+      <div class="mx ${cls}" role="table" aria-label="${label}" style="--cols:${cols.length}">
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([, nm, d]) => `<span class="mx-h" role="columnheader">${nm}<small>${d}</small></span>`).join("")}</div>
+        ${rows.map(([t, nm, get]) => `<div class="mx-row" data-track="${t}" role="row"><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn]) => {
+          const h = get(lv);
           return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${cn}">${h}</div>`;
         }).join("")}</div>`).join("")}
+      </div>`;
+    const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
+    const mathRows = MATH_ROWS.map(([nm, m]) => ["math", nm, (lv) => (m[lv] || []).map(byId).filter(Boolean).map((c) => box(c, true)).join("")]);
+    if (extraMath.length) mathRows.push(["math", "그 밖의 과목", (lv) => extraMath.filter((c) => c.level === lv).map((c) => box(c, true)).join("")]);
+    const nSci = TOC.filter((c) => c.track !== "math" && c.track !== "extra").length, nMath = TOC.filter((c) => c.track === "math").length;
+    if (tree) tree.innerHTML = `
+      <div class="tree-head"><h2>과목 체계도</h2>
+        <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
+        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. 행은 ${"<span class=\"for-sci\">교과</span><span class=\"for-math\">영역</span>"}, 열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
+      <div class="tree-body" id="tree-body">
+      <div class="tree-sci">
+        <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
+        <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
+        ${matrix("sci-mx", "과학 선택 과목: 교과별, 선택 구분별", SCI_COLS, sciRows)}
       </div>
-      <div class="tree-band tree-math" data-track="math"><span class="band-lb mono">수학</span><div>${MATH_COLS.map(([lv, nm]) => {
-        const cs = pick((c) => c.track === "math" && c.level === lv);
-        return cs.length ? `<div class="m-col"><h3 class="mono">${nm}</h3>${cs.map((c) => box(c)).join("")}</div>` : "";
-      }).join("")}</div></div>`;
+      <div class="tree-mth">
+        <div class="tree-band" data-track="math"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div>
+        <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
+        ${matrix("math-mx", "수학 선택 과목: 영역별, 선택 구분별", MATH_COLS2, mathRows)}
+      </div>
+      </div>`;
+    /* 체계도 접기: 처음엔 접힌 채로, 펼친 상태는 이 브라우저에 기억한다 */
+    if (tree) {
+      const TREE_KEY = "namunnip-tree-open", tg = tree.querySelector(".tree-tg");
+      const setOpen = (open, save) => {
+        tree.classList.toggle("open", open);
+        tg.setAttribute("aria-expanded", String(open));
+        tg.querySelector(".tg-t").textContent = open ? "접기" : "펼치기";
+        if (save) try { localStorage.setItem(TREE_KEY, open ? "1" : "0"); } catch (e) { /* 저장 못 해도 동작은 한다 */ }
+      };
+      let open = false;
+      try { open = localStorage.getItem(TREE_KEY) === "1"; } catch (e) { open = false; }
+      setOpen(open, false);
+      tg.addEventListener("click", () => setOpen(!tree.classList.contains("open"), true));
+    }
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
       const chapters = c.chapters.map((ch) => `
