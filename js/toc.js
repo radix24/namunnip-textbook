@@ -16412,36 +16412,91 @@ window.TOC = [
       "n": 1,
       "title": "수열의 귀납적 정의",
       "code": "12이수02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-hanoi",
+        "title": "원판 n개를 옮기는 최소 횟수는 어떻게 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-domino",
+        "title": "2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "점화 관계와 일반항",
       "code": "12이수02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-recur-plot",
+        "title": "점화식만 보고 수열이 어디로 갈지 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-loan",
+        "title": "매달 얼마씩 갚아야 24개월 만에 대출이 끝날까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "알고리즘과 그 표현",
       "code": "12이수02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-euclid-flow",
+        "title": "최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-algo-bug",
+        "title": "이 알고리즘은 어떤 입력에서 틀릴까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "재귀적 알고리즘",
       "code": "12이수02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-call-tree",
+        "title": "재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-fast-power",
+        "title": "a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "여러 가지 알고리즘",
       "code": "12이수02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-sort-race",
+        "title": "정렬 방법에 따라 비교 횟수는 얼마나 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-updown",
+        "title": "1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?"
+       }
+      ]
      }
     ]
    },

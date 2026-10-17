@@ -9119,31 +9119,51 @@
        "n": 1,
        "title": "수열의 귀납적 정의",
        "code": "12이수02-01",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-2-1",
+        "card-dmath-hanoi",
+        "card-dmath-domino"
+       ]
       },
       {
        "n": 2,
        "title": "점화 관계와 일반항",
        "code": "12이수02-02",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-2-2",
+        "card-dmath-recur-plot",
+        "card-dmath-loan"
+       ]
       },
       {
        "n": 3,
        "title": "알고리즘과 그 표현",
        "code": "12이수02-03",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-2-3",
+        "card-dmath-euclid-flow",
+        "card-dmath-algo-bug"
+       ]
       },
       {
        "n": 4,
        "title": "재귀적 알고리즘",
        "code": "12이수02-04",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-2-4",
+        "card-dmath-call-tree",
+        "card-dmath-fast-power"
+       ]
       },
       {
        "n": 5,
        "title": "여러 가지 알고리즘",
        "code": "12이수02-05",
-       "blocks": []
+       "blocks": [
+        "intro-dmath-2-5",
+        "card-dmath-sort-race",
+        "card-dmath-updown"
+       ]
       }
      ]
     },

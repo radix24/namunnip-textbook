@@ -1533,3 +1533,7 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 여사건의 확률 | card-stat-add-rule
 중복조합 | card-dmath-stars-bars
 포함배제의 원리 | card-dmath-venn-count
+점화 관계 | card-dmath-hanoi
+최대공약수 | card-dmath-euclid-flow
+알고리즘과 순서도 | card-dmath-euclid-flow
+재귀적 알고리즘 | card-dmath-call-tree

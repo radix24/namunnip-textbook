@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>재귀적 알고리즘 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="자기 자신을 부르는 재귀적 알고리즘, 기저 경우와 재귀 단계, 호출 횟수의 점화식, 분할 정복. 피보나치 재귀의 호출 나무를 보는 카드와, 제곱을 거듭해 빠르게 거듭제곱하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-call-tree canvas { aspect-ratio: 16 / 9; max-width: 600px; margin: 0 auto; display: block; }
+    #card-dmath-fast-power .chain { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .95rem; line-height: 1.9; min-height: 2rem; }
+    #card-dmath-fast-power .big { font-size: 1.4rem; font-weight: 700; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>재귀적 알고리즘</h1>
+    <p class="lead">점화 관계를 그대로 알고리즘으로 옮기면 자기 자신을 다시 부르는 <em>재귀적 알고리즘</em>이 됩니다. 재귀는 짧고 분명하지만, 같은 계산을 반복하면 매우 느려질 수 있고, 문제를 절반으로 줄이면 놀랄 만큼 빨라질 수 있습니다. 이 절에서는 호출 나무로 재귀의 비용을 세어 보고, 거듭제곱을 몇 번의 곱셈으로 줄일 수 있는지 도전합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/dmath/2-1.html#card-dmath-hanoi" title="이산 수학 2.1 · 원판 n개를 옮기는 최소 횟수는 어떻게 구할까?">점화 관계</a><a class="p p-card" href="../../c/dmath/2-3.html#card-dmath-euclid-flow" title="이산 수학 2.3 · 최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?">알고리즘과 순서도</a><a class="p p-card" href="../../c/alg/1-3.html#card-alg-exp-law-count" title="대수 1.3 · 거듭제곱끼리 곱하면 지수는 왜 더해질까?">지수법칙</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-call-tree"><span class="mono">2.4.1</span>재귀 호출 나무와 기억하기</a></li>
+        <li><a href="#card-dmath-fast-power"><span class="mono">2.4.2</span>제곱을 거듭해 빨리 거듭제곱하기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-call-tree">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</h2><span class="kind">재귀적 알고리즘 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">n = <output class="n-out">6</output></label><input class="n" type="range" min="1" max="8" step="1" value="6" aria-label="구할 항의 번호"></div>
+            </div>
+            <div class="presets"><button class="chip go-memo" type="button" aria-pressed="false">한 번 구한 값 기억하기</button></div>
+            <canvas aria-label="F(n)을 구하는 재귀 호출 나무. 같은 값을 다시 구하는 호출은 같은 색"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="mono small big-n"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>"\(F(n) = F(n - 1) + F(n - 2)\), \(F(1) = F(2) = 1\)"을 그대로 컴퓨터 함수로 쓰면 아주 짧은 프로그램이 됩니다. 그런데 \(F(40)\)만 넣어도 한참 걸립니다. 무엇이 문제일까요?</li>
+            <li><span class="tag">복원</span>수열의 귀납적 정의는 앞의 항으로 다음 항을 정합니다.</li>
+            <li><span class="tag">설명</span>자기 자신을 더 작은 입력으로 다시 부르는 알고리즘을 <em>재귀적 알고리즘</em>이라 합니다. 재귀에는 ① 더 이상 부르지 않는 <b>기저 경우</b>(\(F(1), F(2)\))와 ② 문제를 줄이는 <b>재귀 단계</b>가 있어야 합니다. 피보나치를 그대로 재귀로 쓰면 \(F(n - 2)\)를 두 번, \(F(n - 3)\)을 세 번…처럼 같은 계산을 거듭해, 호출 횟수 \(c_n = c_{n-1} + c_{n-2} + 1\)이 \(F(n)\)처럼 기하급수로 늘어납니다. 한 번 구한 값을 기억해 두면(메모이제이션) 각 값을 한 번씩만 계산합니다.</li>
+            <li><span class="tag">연결</span>하노이의 탑, 다음 카드의 빠른 거듭제곱, 병합 정렬처럼 재귀가 잘 맞는 문제도 많습니다. 호출 횟수를 점화식으로 세우는 것이 알고리즘의 효율을 따지는 기본 방법입니다.</li>
+            <li><span class="tag">적용</span>\(n\)을 늘리며 호출 나무가 얼마나 빨리 커지는지 보세요. 같은 색 마디가 몇 번 나오나요? "기억하기"를 켜면 나무가 어떻게 바뀌나요? 아래에서 \(n = 30, 40\)일 때 호출 횟수를 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>기저 경우가 없거나 입력이 줄지 않으면 재귀는 끝나지 않습니다. 또 짧고 아름다운 코드가 빠른 코드는 아닙니다. 정의를 그대로 옮기기 전에 같은 계산이 반복되는지 따져 보세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">기억하기 없이 \(F(5)\)를 재귀로 구할 때 \(F(2)\)는 몇 번 불릴까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(3\)번<span class="why"><b>맞습니다.</b> \(F(5) \to F(4), F(3)\), \(F(4) \to F(3), F(2)\), 두 \(F(3)\)이 각각 \(F(2)\)를 부릅니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(1\)번<span class="why"><b>기억하기를 쓴 경우입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(2\)번<span class="why"><b>\(F(4)\)가 직접 부르는 것을 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(5\)번<span class="why"><b>\(F(5)\)의 값과 헷갈렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-3.html#card-dmath-euclid-flow"><small class="mono">이산 수학 2.3</small>최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?</a><a href="../../c/dmath/2-3.html#card-dmath-algo-bug"><small class="mono">이산 수학 2.3</small>이 알고리즘은 어떤 입력에서 틀릴까?</a><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-5.html#card-dmath-sort-race"><small class="mono">이산 수학 2.5</small>정렬 방법에 따라 비교 횟수는 얼마나 달라질까?</a><a href="../../c/dmath/2-5.html#card-dmath-updown"><small class="mono">이산 수학 2.5</small>1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-fast-power">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</h2><span class="kind">분할 정복 재귀 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">목표 지수 <select class="pick" aria-label="목표 지수"><option>13</option><option>27</option><option selected>100</option><option>255</option><option>1000</option></select></label></div>
+            <p>지금 가진 것: <span class="big cur">a¹</span></p>
+            <div class="presets">
+              <button class="chip go-sq" type="button">제곱하기 (곱셈 1번)</button>
+              <button class="chip go-mul" type="button">a를 한 번 더 곱하기 (곱셈 1번)</button>
+              <button class="chip go-undo" type="button">되돌리기</button>
+              <button class="chip go-show" type="button">재귀 알고리즘의 답</button>
+            </div>
+            <p class="chain" aria-label="지금까지의 과정"></p>
+            <p class="verdict" role="status"></p>
+            <p class="mono small calc"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(a^{100}\)을 \(a \times a \times \cdots\)로 구하면 곱셈이 99번 필요합니다. 그런데 \(a^{100} = (a^{50})^2\)이고 \(a^{50} = (a^{25})^2\)입니다. 이렇게 하면 곱셈을 얼마나 줄일 수 있을까요?</li>
+            <li><span class="tag">복원</span>\(a^{m}\cdot a^{n} = a^{m+n}\), \((a^m)^2 = a^{2m}\)입니다.</li>
+            <li><span class="tag">설명</span>재귀적 알고리즘 \(\mathrm{pow}(a, n)\): \(n = 0\)이면 1, \(n\)이 짝수이면 \(\mathrm{pow}(a, n/2)^2\), 홀수이면 \(a \cdot \mathrm{pow}(a, n - 1)\). 문제를 절반 크기로 줄이므로(분할 정복) 곱셈 횟수는 \(n\)의 이진법 자릿수와 1의 개수 정도, 약 \(2\log_2 n\)번 이하입니다. \(n = 100\)이면 8번, \(n = 1000\)이면 14번이면 됩니다.</li>
+            <li><span class="tag">연결</span>인터넷 보안의 RSA 암호는 수백 자리 수의 거듭제곱을 나머지 계산으로 하는데, 이 빠른 거듭제곱 없이는 불가능합니다. 고급 대수에서 본 행렬의 거듭제곱 \(A^n\)에도 그대로 쓸 수 있습니다.</li>
+            <li><span class="tag">적용</span>"제곱하기"와 "a 곱하기"만으로 목표 지수에 정확히 도착해 보세요. 곱셈 횟수가 재귀 알고리즘보다 적거나 같으면 성공입니다. 목표를 이진법으로 쓰면 어떤 규칙이 보이나요?</li>
+            <li class="warn"><span class="tag">판단</span>재귀 알고리즘이 늘 가장 적은 곱셈을 쓰는 것은 아닙니다. 예를 들어 \(a^{15}\)는 재귀로 6번이지만, \(a^3\)을 먼저 만든 뒤 \((a^3)^5\)를 계산하는 등 다른 길로 5번에 할 수 있습니다. "충분히 빠른 방법"과 "가장 빠른 방법"은 다른 문제입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">재귀 알고리즘으로 \(a^{16}\)을 구할 때 곱셈 횟수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(4\)번<span class="why"><b>맞습니다.</b> \(a^2, a^4, a^8, a^{16}\)으로 제곱만 네 번입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(15\)번<span class="why"><b>하나씩 곱한 경우입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(8\)번<span class="why"><b>16의 절반이 아니라 \(\log_2 16\)입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(5\)번<span class="why"><b>처음에 \(a\)를 곱하는 단계는 필요 없습니다.</b> \(a^1\)에서 시작합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-3.html#card-dmath-euclid-flow"><small class="mono">이산 수학 2.3</small>최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?</a><a href="../../c/dmath/2-3.html#card-dmath-algo-bug"><small class="mono">이산 수학 2.3</small>이 알고리즘은 어떤 입력에서 틀릴까?</a><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-5.html#card-dmath-sort-race"><small class="mono">이산 수학 2.5</small>정렬 방법에 따라 비교 횟수는 얼마나 달라질까?</a><a href="../../c/dmath/2-5.html#card-dmath-updown"><small class="mono">이산 수학 2.5</small>1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/call-tree.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/fast-power.js"></script>
+</body>
+</html>

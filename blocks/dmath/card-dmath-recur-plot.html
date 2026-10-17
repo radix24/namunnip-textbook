@@ -1,0 +1,52 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/dmath/dm.js",
+    "js/cards/dmath/recur-plot.js"
+  ],
+  "short": "aₙ₊₁ = paₙ + q의 거미줄 그림"
+}
+-->
+<style>
+#card-dmath-recur-plot .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .5rem; }
+#card-dmath-recur-plot canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+#card-dmath-recur-plot .ctl-row > div { min-width: 7rem; }
+</style>
+<article class="card" id="card-dmath-recur-plot">
+  <header class="card-head">
+    <span class="no"></span><h2>점화식만 보고 수열이 어디로 갈지 알 수 있을까?</h2><span class="kind">점화 관계와 일반항 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="ctl-row">
+        <div><label class="mono">p = <output class="p-out">0.5</output></label><input class="p" type="range" min="-1.5" max="1.5" step="0.1" value="0.5" aria-label="p"></div>
+        <div><label class="mono">q = <output class="q-out">2</output></label><input class="q" type="range" min="-3" max="3" step="0.5" value="2" aria-label="q"></div>
+        <div><label class="mono">a₁ = <output class="a-out">0</output></label><input class="a" type="range" min="-4" max="8" step="0.5" value="0" aria-label="첫째항"></div>
+      </div>
+      <div class="two">
+        <canvas class="cw" aria-label="거미줄 그림: y = px + q와 y = x 사이를 오가는 선"></canvas>
+        <canvas class="sq" aria-label="n에 따른 aₙ의 그래프"></canvas>
+      </div>
+      <p class="mono small say" role="status"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(a_{n+1} = 0.5a_n + 2\)이면 수열은 커질까요, 작아질까요, 어느 값에 머물까요? 항을 하나하나 계산하지 않고 알 수 있을까요?</li>
+      <li><span class="tag">복원</span>등비수열 \(b_{n+1} = pb_n\)의 일반항은 \(b_n = b_1p^{n-1}\)이고, \(|p| < 1\)이면 0으로 수렴합니다.</li>
+      <li><span class="tag">설명</span>\(\alpha = p\alpha + q\)인 수 \(\alpha = \dfrac{q}{1 - p}\) (\(p \ne 1\))를 찾아 빼면 \(a_{n+1} - \alpha = p(a_n - \alpha)\)가 되어 등비수열이 나옵니다. 그래서 일반항은 \(a_n = \alpha + (a_1 - \alpha)p^{n-1}\)이고, \(|p| < 1\)이면 \(\alpha\)로 수렴, \(|p| > 1\)이면 \(\alpha\)에서 멀어지며, \(p < 0\)이면 \(\alpha\)의 양쪽을 번갈아 오갑니다. 거미줄 그림에서 \(\alpha\)는 두 직선 \(y = px + q\)와 \(y = x\)의 교점입니다. 이웃한 세 항의 관계 \(a_{n+2} = ra_{n+1} + sa_n\)은 특성방정식 \(t^2 = rt + s\)의 근으로 풉니다.</li>
+      <li><span class="tag">연결</span>약을 일정한 간격으로 먹을 때 몸속 약의 양(매번 일정 비율이 빠져나가고 일정량이 들어옴), 다음 카드의 대출 잔액이 모두 이 꼴의 점화식입니다.</li>
+      <li><span class="tag">적용</span>\(p\)를 0.5, −0.5, 1.2, −1.2로 바꾸며 거미줄이 교점으로 모이는지, 계단 모양인지, 소용돌이인지 보세요. \(a_1 = \alpha\)로 맞추면 어떻게 되나요?</li>
+      <li class="warn"><span class="tag">판단</span>\(p = 1\)이면 \(\alpha\)가 없고 수열은 공차 \(q\)인 등차수열입니다. 공식 \(\frac{q}{1 - p}\)에 그대로 넣으면 0으로 나누게 됩니다. 공식이 성립하는 조건을 먼저 확인하세요.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(a_1 = 1\), \(a_{n+1} = \frac{1}{3}a_n + 4\)인 수열의 극한값은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(6\)<span class="why"><b>맞습니다.</b> \(\alpha = \frac{4}{1 - 1/3} = 6\)이고 \(|p| < 1\)이라 수렴합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(4\)<span class="why"><b>\(q\)만 보았습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(3\)<span class="why"><b>\(\frac{q}{1 + p}\)로 계산했습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>발산한다<span class="why"><b>\(|p| = \frac{1}{3} < 1\)입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

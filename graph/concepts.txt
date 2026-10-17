@@ -1005,3 +1005,8 @@ dm-multichoose | 중복조합과 방정식의 정수해 | card-dmath-stars-bars 
 dm-incl-excl | 포함배제의 원리 | card-dmath-venn-count card-dmath-derange | dm-multichoose
 dm-partition | 집합의 분할과 자연수의 분할 | card-dmath-set-partition card-dmath-young | dm-multichoose dm-incl-excl
 dm-pigeonhole | 비둘기집의 원리 | card-dmath-birthday card-dmath-pigeon-pairs | dm-perm-var
+dm-recur-def | 수열의 귀납적 정의와 점화 관계 세우기 | card-dmath-hanoi card-dmath-domino | alg-recursive alg-induction
+dm-recur-solve | 점화 관계의 일반항 | card-dmath-recur-plot card-dmath-loan | dm-recur-def alg-geo-seq
+dm-algorithm | 알고리즘과 그 표현 | card-dmath-euclid-flow card-dmath-algo-bug | dm-recur-def
+dm-recursion | 재귀적 알고리즘 | card-dmath-call-tree card-dmath-fast-power | dm-algorithm dm-recur-def
+dm-sort-search | 정렬과 탐색 알고리즘 | card-dmath-sort-race card-dmath-updown | dm-recursion
