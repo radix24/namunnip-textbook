@@ -17804,36 +17804,91 @@ window.TOC = [
       "n": 1,
       "title": "비",
       "code": "12직수02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-mix-ratio",
+        "title": "배합비 1 : 2 : 4로 콘크리트 재료를 섞으려면 각각 얼마나 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-scale-drawing",
+        "title": "도면 위 6 cm는 실제로 몇 m일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "비율과 백분율",
       "code": "12직수02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-discount-chain",
+        "title": "\"20% 할인에 10% 추가 할인\"은 30% 할인과 같을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-margin-markup",
+        "title": "\"원가에 30%를 붙여 판다\"와 \"마진율 30%\"는 같은 말일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "대응 관계와 규칙",
       "code": "12직수02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tile-pattern",
+        "title": "정사각형 바닥 둘레에 까는 테두리 타일은 몇 장일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-pay-table",
+        "title": "밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "변화를 나타내는 그래프",
       "code": "12직수02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tank-graph",
+        "title": "모양이 다른 물통에 같은 빠르기로 물을 넣으면 수위 그래프는 어떻게 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-delivery-graph",
+        "title": "배달 기사의 거리–시간 그래프에서 무엇을 읽을 수 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "일차방정식과 일차부등식의 활용",
       "code": "12직수02-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-rent-or-buy",
+        "title": "장비를 며칠 이상 쓰면 빌리는 것보다 사는 것이 나을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-dilution",
+        "title": "원액을 물에 얼마나 섞어야 원하는 농도가 될까?"
+       }
+      ]
      }
     ]
    },

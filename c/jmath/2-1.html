@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>비 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="비와 비례배분(배합비로 재료량 나누기, 포대 수 올림), 축척과 실제 길이, 길이비와 넓이비(축척의 제곱). 콘크리트 배합 카드와, 축척 도면 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-mix-ratio .ctl-row > div { min-width: 12rem; }
+    #card-jmath-mix-ratio .bar { display: flex; height: 34px; border-radius: 6px; overflow: hidden; margin: .5rem 0; max-width: 560px; }
+    #card-jmath-mix-ratio .bar span { display: flex; align-items: center; justify-content: center; color: #fff; font-size: .8rem; overflow: hidden; white-space: nowrap; }
+    #card-jmath-scale-drawing canvas { aspect-ratio: 16 / 10; max-width: 560px; width: 100%; margin: 0 auto; display: block; }
+    #card-jmath-scale-drawing .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="2-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>비</h1>
+    <p class="lead">두 양을 나눗셈으로 비교한 것이 <em>비</em>입니다. 배합 지시서의 "1 : 2 : 4", 도면의 "1 : 50"처럼 일하는 곳에서는 비로 적힌 정보가 많습니다. 이 절에서는 비례배분으로 재료의 양을 정하고, 축척 도면에서 실제 길이와 넓이를 구합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button><button type="button" class="p p-basic" data-basic="b-l-similar" title="중학교 개념 설명 보기">닮음과 비례</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-mix-ratio"><span class="mono">2.1.1</span>콘크리트 배합비 1 : 2 : 4로 재료량 구하기</a></li>
+        <li><a href="#card-jmath-scale-drawing"><span class="mono">2.1.2</span>축척 1 : 50 도면에서 실제 길이 재기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-2-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-mix-ratio">
+        <header class="card-head">
+          <span class="no">2.1.1</span><h2>배합비 1 : 2 : 4로 콘크리트 재료를 섞으려면 각각 얼마나 필요할까?</h2><span class="kind">비와 비례배분 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">모래의 비 = <output class="s-out"></output></label><input class="s" type="range" min="1" max="4" step="0.5" value="2" aria-label="모래의 비"></div>
+              <div><label class="mono">자갈의 비 = <output class="g-out"></output></label><input class="g" type="range" min="2" max="6" step="0.5" value="4" aria-label="자갈의 비"></div>
+              <div><label class="mono">마른 재료 전체 = <output class="v-out"></output> m³</label><input class="v" type="range" min="0.1" max="2" step="0.05" value="0.5" aria-label="마른 재료 전체 부피"></div>
+            </div>
+            <p class="mono small ratio"></p>
+            <div class="bar" aria-hidden="true"></div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">배합비와 시멘트 1포대의 부피(약 0.03 m³로 가정)는 수업용 값입니다. 실제 시공은 설계 기준을 따릅니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>작업 지시서에 "시멘트 : 모래 : 자갈 = 1 : 2 : 4"라고만 적혀 있습니다. 마른 재료 0.5 m³가 필요하다면 각각 얼마나 섞어야 할까요?</li>
+            <li><span class="tag">복원</span>비의 각 항에 같은 수를 곱하거나 나누어도 비는 같습니다.</li>
+            <li><span class="tag">설명</span>전체를 비의 합 \(1 + 2 + 4 = 7\)조각으로 나누어 시멘트 1조각, 모래 2조각, 자갈 4조각을 씁니다. 한 조각은 \(0.5 \div 7 \approx 0.071\) m³이므로 시멘트 약 0.071 m³, 모래 약 0.143 m³, 자갈 약 0.286 m³입니다. 전체를 주어진 비로 나누는 것을 <em>비례배분</em>이라 합니다.</li>
+            <li><span class="tag">연결</span>페인트 조색, 염색약과 산화제, 비료 희석처럼 정해진 비율을 지켜야 품질이 나오는 일은 모두 비례배분입니다.</li>
+            <li><span class="tag">적용</span>배합비를 1 : 3 : 6으로 바꾸면 시멘트 양은 어떻게 되나요? 시멘트를 포대 단위로 사야 할 때 몇 포대가 필요한가요?</li>
+            <li class="warn"><span class="tag">판단</span>"1 : 2 : 4"를 시멘트가 전체의 \(\frac12\)이라고 읽으면 안 됩니다. 각 항은 전체(합 7)에 대한 몫입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">염색약과 산화제를 1 : 1.5로 섞어 총 150 g을 만들 때 염색약은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>60 g<span class="why"><b>맞습니다.</b> \(150 \times \frac{1}{2.5} = 60\) g, 산화제는 90 g입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>100 g<span class="why"><b>\(150 \div 1.5\)로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>75 g<span class="why"><b>반으로 나눴습니다.</b> 비가 1 : 1일 때입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>90 g<span class="why"><b>산화제의 양입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/2-2.html#card-jmath-discount-chain"><small class="mono">직무 수학 2.2</small>"20% 할인에 10% 추가 할인"은 30% 할인과 같을까?</a><a href="../../c/jmath/2-2.html#card-jmath-margin-markup"><small class="mono">직무 수학 2.2</small>"원가에 30%를 붙여 판다"와 "마진율 30%"는 같은 말일까?</a></div></nav>
+
+      <article class="card" id="card-jmath-scale-drawing">
+        <header class="card-head">
+          <span class="no">2.1.2</span><h2>도면 위 6 cm는 실제로 몇 m일까?</h2><span class="kind">축척과 비 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">축척 1 : <select class="sc" aria-label="축척"><option value="20">20</option><option value="50" selected>50</option><option value="100">100</option><option value="200">200</option></select></label></div></div>
+            <canvas aria-label="가상의 원룸 도면. 벽마다 도면 길이(cm)가 적혀 있다"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">원룸 평면도는 수업용 가상 도면입니다. 화면의 그림 크기는 기기마다 다르므로, 길이는 그림 옆에 적힌 도면 길이(cm)를 기준으로 합니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>인테리어 기사가 축척 1 : 50인 도면을 받았습니다. 도면에서 방의 가로가 8 cm라면 실제 가로는 몇 m이고, 바닥 넓이는 얼마일까요?</li>
+            <li><span class="tag">복원</span>\(a : b = c : d\)이면 \(ad = bc\)입니다(비례식).</li>
+            <li><span class="tag">설명</span><em>축척</em> 1 : 50은 도면의 1 cm가 실제 50 cm라는 뜻입니다. 도면 길이에 50을 곱하면 실제 길이이고, 8 cm는 \(8 \times 50 = 400\) cm \(= 4\) m입니다. 넓이는 가로와 세로가 모두 50배가 되므로 \(50^2 = 2500\)배입니다. 도면 넓이 \(8 \times 6 = 48\) cm²는 실제 \(48 \times 2500 = 120000\) cm² \(= 12\) m²입니다.</li>
+            <li><span class="tag">연결</span>지도의 축척, 모형 제작, 건축 도면은 모두 같은 원리입니다. 3단원의 닮음에서 넓이비가 닮음비의 제곱이 되는 이유를 다시 봅니다.</li>
+            <li><span class="tag">적용</span>축척을 바꿔 실제 길이와 넓이가 어떻게 달라지는지 보세요. 축척 1 : 100 도면이라면 같은 방이 도면에서 몇 cm로 그려질까요?</li>
+            <li class="warn"><span class="tag">판단</span>넓이를 계산할 때 축척의 수(50)를 한 번만 곱하면 안 됩니다. 길이 비가 50배이면 넓이 비는 2500배입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">축척 1 : 200인 도면에서 3 cm × 2 cm인 주차 칸의 실제 넓이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>24 m²<span class="why"><b>맞습니다.</b> 실제 6 m × 4 m이므로 24 m²입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>12 m²<span class="why"><b>계산을 다시 해 보세요.</b> 3 × 200 = 600 cm = 6 m입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0.12 m²<span class="why"><b>넓이에 200을 한 번만 곱했습니다.</b> 1200 cm²입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1200 m²<span class="why"><b>cm²를 m²로 바꾸지 않았습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/2-2.html#card-jmath-discount-chain"><small class="mono">직무 수학 2.2</small>"20% 할인에 10% 추가 할인"은 30% 할인과 같을까?</a><a href="../../c/jmath/2-2.html#card-jmath-margin-markup"><small class="mono">직무 수학 2.2</small>"원가에 30%를 붙여 판다"와 "마진율 30%"는 같은 말일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-2-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/mix-ratio.js"></script>
+<script src="../../js/cards/jmath/scale-drawing.js"></script>
+</body>
+</html>

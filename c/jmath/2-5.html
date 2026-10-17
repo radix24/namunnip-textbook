@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>일차방정식과 일차부등식의 활용 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="두 일차식의 비교로 세우는 일차부등식(빌리기와 사기, 정기권), 부등식의 답을 자연수로 읽기, 변하지 않는 성분의 양으로 세우는 희석 방정식 c₀x = c₁V, 물의 양과 전체 양의 구별. 장비 대여 카드와, 소독액 희석 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-rent-or-buy canvas { aspect-ratio: 16 / 9; max-width: 560px; width: 100%; margin: 0 auto; display: block; }
+    #card-jmath-rent-or-buy .ctl-row > div { min-width: 12rem; }
+    #card-jmath-dilution .ctl-row > div { min-width: 12rem; }
+    #card-jmath-dilution .cups { display: flex; gap: 1rem; align-items: flex-start; margin: .5rem 0; flex-wrap: wrap; }
+    #card-jmath-dilution .cup { width: 90px; border: 2px solid #5d5d61; border-top: 0; border-radius: 0 0 10px 10px; height: 120px; position: relative; overflow: hidden; }
+    #card-jmath-dilution .cup span { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(63,111,163,.5); }
+    #card-jmath-dilution .cupl { font-size: .8rem; text-align: center; max-width: 110px; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="2-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>일차방정식과 일차부등식의 활용</h1>
+    <p class="lead">일하며 마주치는 "며칠 이상이면 유리할까?", "얼마나 섞어야 할까?" 같은 질문은 일차부등식과 일차방정식으로 답할 수 있습니다. 모르는 양을 문자로 두고, 조건을 식으로 쓰는 것이 출발점입니다. 이 절에서는 장비 대여와 소독액 희석 문제를 식으로 풉니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-linear-equation" title="중학교 개념 설명 보기">일차방정식</button><a class="p p-card" href="../../c/cm1/2-9.html#card-cm1-lin-ineq" title="공통수학1 2.9 · 음수로 나누면 왜 부등호 방향이 바뀔까?">부등식의 성질</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-rent-or-buy"><span class="mono">2.5.1</span>장비를 빌릴까 살까 — 일차부등식</a></li>
+        <li><a href="#card-jmath-dilution"><span class="mono">2.5.2</span>소독액을 원하는 농도로 묽히기 — 일차방정식</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-2-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-rent-or-buy">
+        <header class="card-head">
+          <span class="no">2.5.1</span><h2>장비를 며칠 이상 쓰면 빌리는 것보다 사는 것이 나을까?</h2><span class="kind">일차부등식의 활용 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">빌리기 = 하루 <output class="r-out"></output>원</label><input class="r" type="range" min="10000" max="60000" step="1000" value="25000" aria-label="하루 대여료"></div>
+              <div><label class="mono">사기 = <output class="b-out"></output>원</label><input class="b" type="range" min="200000" max="1500000" step="10000" value="600000" aria-label="구입 가격"></div>
+              <div><label class="mono">사면 하루 관리비 = <output class="m-out"></output>원</label><input class="m" type="range" min="0" max="10000" step="500" value="3000" aria-label="하루 관리비"></div>
+            </div>
+            <canvas aria-label="사용 일수에 따른 빌리기와 사기의 총비용 그래프, 사는 것이 유리해지는 구간"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">타일 절단기 같은 시공 장비를 가정한 가상 가격입니다. 중고로 되파는 값은 생각하지 않았습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>작은 인테리어 업체가 타일 절단기를 하루 25000원에 빌려 씁니다. 60만 원에 사면 하루 관리비 3000원이 듭니다. 1년에 며칠 이상 쓰면 사는 편이 나을까요?</li>
+            <li><span class="tag">복원</span>일차부등식은 등식처럼 풀되, 양변에 음수를 곱하거나 나누면 부등호 방향이 바뀝니다.</li>
+            <li><span class="tag">설명</span>사용 일수를 \(x\)라 하면 빌리는 비용은 \(25000x\), 사는 비용은 \(600000 + 3000x\)입니다. 사는 것이 더 싸려면 \(600000 + 3000x < 25000x\), 곧 \(22000x > 600000\), \(x > 27.27\cdots\)입니다. 일수는 자연수이므로 28일 이상 쓰면 사는 것이 유리합니다. 두 직선의 교점이 판단의 기준점입니다.</li>
+            <li><span class="tag">연결</span>요금제 선택, 정기권과 일회권, 리스와 구입처럼 "기본 비용 + 단위 비용"을 비교하는 의사 결정은 모두 일차부등식입니다(경제 수학의 손익분기점).</li>
+            <li><span class="tag">적용</span>대여료, 구입 가격, 관리비를 바꿔 기준 일수가 어떻게 변하는지 보세요. 관리비가 대여료보다 비싸면 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>\(x > 27.27\)을 반올림해 27일이라고 하면 틀립니다. 27일에는 아직 빌리는 것이 쌉니다. 부등식의 답은 조건을 만족하는 자연수로 읽어야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">정기 주차권이 월 12만 원, 일반 주차가 하루 8000원입니다. 한 달에 며칠 이상 주차하면 정기권이 유리할까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>16일 이상<span class="why"><b>맞습니다.</b> \(8000x > 120000\)에서 \(x > 15\), 15일이면 같고 16일부터 정기권이 쌉니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>15일 이상<span class="why"><b>15일에는 두 비용이 같습니다.</b> "유리"하려면 더 싸야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>14일 이상<span class="why"><b>14일이면 일반 주차가 112000원으로 쌉니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>8일 이상<span class="why"><b>나눗셈을 잘못했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/2-3.html#card-jmath-tile-pattern"><small class="mono">직무 수학 2.3</small>정사각형 바닥 둘레에 까는 테두리 타일은 몇 장일까?</a><a href="../../c/jmath/2-3.html#card-jmath-pay-table"><small class="mono">직무 수학 2.3</small>밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?</a><a href="../../c/jmath/2-2.html#card-jmath-discount-chain"><small class="mono">직무 수학 2.2</small>"20% 할인에 10% 추가 할인"은 30% 할인과 같을까?</a><a href="../../c/jmath/2-2.html#card-jmath-margin-markup"><small class="mono">직무 수학 2.2</small>"원가에 30%를 붙여 판다"와 "마진율 30%"는 같은 말일까?</a></div></nav>
+
+      <article class="card" id="card-jmath-dilution">
+        <header class="card-head">
+          <span class="no">2.5.2</span><h2>원액을 물에 얼마나 섞어야 원하는 농도가 될까?</h2><span class="kind">일차방정식의 활용 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">원액 농도 = <output class="c0-out"></output>%</label><input class="c0" type="range" min="1" max="20" step="0.5" value="5" aria-label="원액 농도"></div>
+              <div><label class="mono">원하는 농도 = <output class="c1-out"></output>%</label><input class="c1" type="range" min="0.1" max="5" step="0.1" value="0.5" aria-label="원하는 농도"></div>
+              <div><label class="mono">만들 양 = <output class="v-out"></output> mL</label><input class="v" type="range" min="200" max="5000" step="100" value="2000" aria-label="만들 희석액의 양"></div>
+              <div><label class="mono">내가 넣을 원액 = <output class="x-out"></output> mL</label><input class="x" type="range" min="0" max="2000" step="10" value="100" aria-label="내가 넣을 원액의 양"></div>
+            </div>
+            <div class="cups" aria-hidden="true"><div><div class="cup"><span class="w1"></span></div><p class="cupl">원액</p></div><div><div class="cup"><span class="w2"></span></div><p class="cupl">물</p></div><div><div class="cup"><span class="w3"></span></div><p class="cupl mix"></p></div></div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">수업용 가상 예시입니다. 실제 소독제와 세제는 제품 설명서의 희석 방법을 따르고, 원액을 함께 섞지 않습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>청소 담당자가 5% 소독 원액으로 0.5% 소독액 2 L를 만들려고 합니다. 원액과 물을 각각 얼마나 섞어야 할까요?</li>
+            <li><span class="tag">복원</span>농도(%) = 녹아 있는 양 ÷ 전체 양 × 100. 물을 넣어도 녹아 있는 양은 그대로입니다.</li>
+            <li><span class="tag">설명</span>원액을 \(x\) mL 넣으면 소독 성분은 \(0.05x\) mL이고, 물을 섞어도 이 양은 변하지 않습니다. 완성된 2000 mL에 0.5%가 들어 있어야 하므로 \(0.05x = 0.005 \times 2000\), 곧 \(x = 200\) mL입니다. 물은 \(2000 - 200 = 1800\) mL입니다. "변하지 않는 양"을 찾아 등식을 세우는 것이 핵심입니다.</li>
+            <li><span class="tag">연결</span>약품 희석, 비료 물 타기, 음료 시럽 배합에 같은 방정식을 씁니다. 두 농도의 용액을 섞는 문제도 "성분의 양"으로 식을 세웁니다.</li>
+            <li><span class="tag">적용</span>원액 양 막대를 움직여 원하는 농도를 맞춰 보고, 방정식의 답과 비교하세요. 원액 농도가 두 배이면 필요한 원액은 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>"5%를 0.5%로 만들려면 물을 10배 넣는다"고 생각해 원액 200 mL에 물 2000 mL를 넣으면, 전체가 2200 mL가 되어 농도가 약 0.45%로 낮아집니다. 물의 양과 전체의 양을 구별해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">10% 원액으로 2% 용액 500 mL를 만들려면 원액은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>100 mL<span class="why"><b>맞습니다.</b> \(0.1x = 0.02 \times 500\)에서 \(x = 100\), 물은 400 mL입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>50 mL<span class="why"><b>농도 비를 거꾸로 썼습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>250 mL<span class="why"><b>계산을 다시 해 보세요.</b> 이때 농도는 5%입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>400 mL<span class="why"><b>물의 양입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/2-3.html#card-jmath-tile-pattern"><small class="mono">직무 수학 2.3</small>정사각형 바닥 둘레에 까는 테두리 타일은 몇 장일까?</a><a href="../../c/jmath/2-3.html#card-jmath-pay-table"><small class="mono">직무 수학 2.3</small>밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?</a><a href="../../c/jmath/2-2.html#card-jmath-discount-chain"><small class="mono">직무 수학 2.2</small>"20% 할인에 10% 추가 할인"은 30% 할인과 같을까?</a><a href="../../c/jmath/2-2.html#card-jmath-margin-markup"><small class="mono">직무 수학 2.2</small>"원가에 30%를 붙여 판다"와 "마진율 30%"는 같은 말일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-2-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/jmath/rent-or-buy.js"></script>
+<script src="../../js/cards/jmath/dilution.js"></script>
+</body>
+</html>

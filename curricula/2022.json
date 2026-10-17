@@ -9951,31 +9951,51 @@
        "n": 1,
        "title": "비",
        "code": "12직수02-01",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-2-1",
+        "card-jmath-mix-ratio",
+        "card-jmath-scale-drawing"
+       ]
       },
       {
        "n": 2,
        "title": "비율과 백분율",
        "code": "12직수02-02",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-2-2",
+        "card-jmath-discount-chain",
+        "card-jmath-margin-markup"
+       ]
       },
       {
        "n": 3,
        "title": "대응 관계와 규칙",
        "code": "12직수02-03",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-2-3",
+        "card-jmath-tile-pattern",
+        "card-jmath-pay-table"
+       ]
       },
       {
        "n": 4,
        "title": "변화를 나타내는 그래프",
        "code": "12직수02-04",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-2-4",
+        "card-jmath-tank-graph",
+        "card-jmath-delivery-graph"
+       ]
       },
       {
        "n": 5,
        "title": "일차방정식과 일차부등식의 활용",
        "code": "12직수02-05",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-2-5",
+        "card-jmath-rent-or-buy",
+        "card-jmath-dilution"
+       ]
       }
      ]
     },

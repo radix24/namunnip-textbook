@@ -1,0 +1,49 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/jmath/margin-markup.js"
+  ],
+  "short": "원가에 30% 붙인 값과 마진율 30%는 다르다"
+}
+-->
+<style>
+#card-jmath-margin-markup .ctl-row > div { min-width: 12rem; }
+#card-jmath-margin-markup .stack { display: flex; height: 36px; border-radius: 6px; overflow: hidden; max-width: 560px; margin: .5rem 0; }
+#card-jmath-margin-markup .stack span { display: flex; align-items: center; justify-content: center; color: #fff; font-size: .82rem; white-space: nowrap; overflow: hidden; }
+</style>
+<article class="card" id="card-jmath-margin-markup">
+  <header class="card-head">
+    <span class="no"></span><h2>"원가에 30%를 붙여 판다"와 "마진율 30%"는 같은 말일까?</h2><span class="kind">비율의 기준량 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="ctl-row">
+        <div><label class="mono">원가 = <output class="c-out"></output>원</label><input class="c" type="range" min="1000" max="30000" step="500" value="7000" aria-label="원가"></div>
+        <div><label class="mono">판매가 = <output class="p-out"></output>원</label><input class="p" type="range" min="1000" max="50000" step="500" value="10000" aria-label="판매가"></div>
+      </div>
+      <div class="stack" aria-hidden="true"><span class="sc" style="background:#8d8d92"></span><span class="sm" style="background:#3b7c2a"></span></div>
+      <p class="mono small say" role="status"></p>
+      <div class="presets"><button class="chip go-mk" type="button">원가에 30% 붙이기</button><button class="chip go-mg" type="button">마진율 30%로 맞추기</button></div>
+      <p class="fig-note">가격은 수업용 가상 값이고, 세금과 수수료는 생각하지 않습니다.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>사장님은 "원가에 30% 붙여서 팔면 마진이 30%지"라고 말합니다. 정말 그럴까요?</li>
+      <li><span class="tag">복원</span>비율 = 비교하는 양 ÷ 기준량. 기준량이 다르면 같은 양도 다른 비율이 됩니다.</li>
+      <li><span class="tag">설명</span>이익 = 판매가 − 원가입니다. <em>원가 대비 이익률</em>(가산율)은 이익 ÷ 원가, <em>마진율</em>은 이익 ÷ 판매가입니다. 원가 7000원에 30%를 붙이면 판매가 9100원, 이익 2100원이고, 마진율은 \(2100 \div 9100 \approx 23\%\)입니다. 마진율 30%를 원하면 판매가를 \(7000 \div (1 - 0.3) = 10000\)원으로 정해야 합니다.</li>
+      <li><span class="tag">연결</span>가게, 온라인 쇼핑몰, 식당의 메뉴 가격 결정에서 늘 쓰는 계산입니다. 할인 행사를 할 때도 마진율이 얼마 남는지 먼저 계산합니다(경제 수학의 비용과 수입).</li>
+      <li><span class="tag">적용</span>두 단추를 눌러 판매가와 두 비율을 비교하세요. 판매가를 움직여 원가 대비 이익률이 100%가 될 때 마진율은 얼마인가요?</li>
+      <li class="warn"><span class="tag">판단</span>마진율은 100%를 넘을 수 없지만 원가 대비 이익률은 넘을 수 있습니다. 두 숫자를 섞어 말하면 실제 이익을 크게 잘못 알게 됩니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">원가 6000원인 상품의 마진율을 40%로 하려면 판매가는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>10000원<span class="why"><b>맞습니다.</b> \(6000 \div (1 - 0.4) = 10000\)원, 이익 4000원은 판매가의 40%입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>8400원<span class="why"><b>원가에 40%를 붙였습니다.</b> 마진율은 약 28.6%가 됩니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>15000원<span class="why"><b>원가를 0.4로 나눴습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3600원<span class="why"><b>원가보다 싸게 팔면 손해입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

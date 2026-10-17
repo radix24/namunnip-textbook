@@ -43,6 +43,10 @@ h1, h2, h3, h4, p, ol, ul, dl, dd, figure { margin: 0; padding: 0; }
 ol, ul { list-style: none; }
 a { color: inherit; }
 canvas { display: block; }
+/* 카드 캔버스는 칸 폭을 따른다. CSS 폭이 없으면 화면 크기가 width 속성(= 화면 크기 × 화소 배율)을 따라가
+   배율이 1보다 큰 화면에서 그릴 때마다 커지며 칸 밖으로 넘친다(NM.fit의 되먹임). */
+.card canvas { max-width: 100%; }
+.card-fig canvas { width: 100%; }
 [hidden] { display: none !important; }
 button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; }

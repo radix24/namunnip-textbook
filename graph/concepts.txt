@@ -1075,3 +1075,8 @@ ai-explore | 인공지능 수학 주제 탐구 | card-aimath-explore-plan card-a
 jm-arith | 직무 속의 수와 사칙연산 | card-jmath-cafe-bill card-jmath-recipe-scale | 
 jm-estimate | 큰 수의 어림 | card-jmath-paint-estimate card-jmath-round-budget | jm-arith
 jm-units | 표준 단위와 단위 환산 | card-jmath-dose-convert card-jmath-unit-error | jm-arith
+jm-ratio | 비와 비례배분 | card-jmath-mix-ratio card-jmath-scale-drawing | jm-arith
+jm-percent | 비율과 백분율 | card-jmath-discount-chain card-jmath-margin-markup | jm-ratio
+jm-correspond | 대응 관계와 규칙 | card-jmath-tile-pattern card-jmath-pay-table | jm-arith
+jm-change-graph | 변화를 나타내는 그래프 | card-jmath-tank-graph card-jmath-delivery-graph | jm-correspond
+jm-linear | 일차방정식과 일차부등식의 활용 | card-jmath-rent-or-buy card-jmath-dilution | jm-correspond jm-percent
