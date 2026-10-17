@@ -10266,25 +10266,41 @@
        "n": 1,
        "title": "식생활과 수학",
        "code": "12수문04-01",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-4-1",
+        "card-mcult-nutrition-label",
+        "card-mcult-food-mileage"
+       ]
       },
       {
        "n": 2,
        "title": "대기 오염과 수학",
        "code": "12수문04-02",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-4-2",
+        "card-mcult-pm-average",
+        "card-mcult-emission-path"
+       ]
       },
       {
        "n": 3,
        "title": "사막화와 수학",
        "code": "12수문04-03",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-4-3",
+        "card-mcult-desert-automata",
+        "card-mcult-ndvi"
+       ]
       },
       {
        "n": 4,
        "title": "생물 다양성과 수학",
        "code": "12수문04-04",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-4-4",
+        "card-mcult-capture-recapture",
+        "card-mcult-simpson-index"
+       ]
       }
      ]
     }

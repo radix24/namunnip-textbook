@@ -1102,3 +1102,7 @@ mcu-folk | 민속 수학과 건축 | card-mcult-yut-probability card-mcult-friez
 mcu-braille | 점자와 수학 | card-mcult-braille-count card-mcult-braille-number |
 mcu-media | 대중매체와 데이터 | card-mcult-poll-margin card-mcult-relative-risk |
 mcu-consume | 가치소비와 의사 결정 | card-mcult-unit-price card-mcult-carbon-choice |
+mcu-food | 식생활과 수학 | card-mcult-nutrition-label card-mcult-food-mileage |
+mcu-air | 대기 오염과 수학 | card-mcult-pm-average card-mcult-emission-path |
+mcu-desert | 사막화와 수학 | card-mcult-desert-automata card-mcult-ndvi |
+mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcult-simpson-index |
