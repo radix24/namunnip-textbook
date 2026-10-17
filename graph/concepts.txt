@@ -11,7 +11,7 @@ error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-me
 estimate | 어림 | card-is1-fermi | units
 digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history | measure
 data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident | error
-diag-test | 진단 검사의 해석 | card-is2-test | data
+diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat | digital data
 robot | 로봇과 되먹임 제어 | card-is2-robot card-is2-robot-design | digital
 iot | 사물인터넷 | text-is2-iot | digital ai
@@ -29,7 +29,7 @@ bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-c
 silicate | 규산염 광물 | card-is1-silicate | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
 polymer | 생명체의 고분자 | card-is1-polymer | bonding
-bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands | bonding energy-level
+bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole | bonding
 lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes | bonding
@@ -50,10 +50,10 @@ titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-tit
 
 # ── 힘과 에너지 ──
 inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus |
-free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump | inertia
+free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump |
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
 newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
-impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop | newton2
+impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop | inertia free-fall
 torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss |
 action-reaction | 작용 반작용 | card-phy-horse | newton2
 momentum | 운동량 보존 | card-phy-rocket card-phy-collision | impulse action-reaction
@@ -62,7 +62,7 @@ mech-energy | 역학적 에너지 보존 | card-phy-coaster text-phy-spring card
 heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer | mech-energy
 heat-engine | 열기관과 효율 | card-phy-engine card-phy-wheel video-phy-engine | heat-energy
 efficiency | 에너지 효율과 신재생 에너지 | card-is2-efficiency card-is2-renewable card-is2-energy-design | power-gen heat-energy
-solar-cell | 태양 전지 | card-is2-solar-cell | semicond photon
+solar-cell | 태양 전지 | card-is2-solar-cell | semicond spectrum
 
 # ── 전기와 자기 ──
 e-field | 전기장과 전위차 | card-phy-field card-phy-potential |
@@ -71,7 +71,7 @@ capacitor | 축전기 | card-phy-capacitor card-phy-touch | e-field
 magnet | 자성체 | card-phy-magnet |
 current-mag | 전류의 자기 작용 | card-phy-oersted card-phy-motor video-phy-speaker | magnet
 em-induction | 전자기 유도 | card-phy-lenz card-phy-wireless card-is2-generator text-phy-induction-tech | current-mag
-power-gen | 발전소 | text-is2-power-plants | em-induction heat-engine
+power-gen | 발전소 | text-is2-power-plants | em-induction
 transmission | 송전과 전력 수송 | card-is2-transmission video-is2-grid | power-gen elec-power
 
 # ── 빛과 현대 물리 ──
@@ -295,7 +295,7 @@ sie-nature | 과학의 본성과 과학사 | text-sie1-nature |
 sie-induction | 귀납적 탐구 | card-sie1-pendulum | error
 sie-deduction | 가설 연역적 탐구 | card-sie1-pasteur | sci-method sie-induction
 sie-represent | 자료의 분석과 표현 | card-sie1-plot | error
-sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer | data sie-deduction
+sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer | error sie-deduction
 sie-everyday | 생활 속 과학 원리 탐구 (확산 시간) | card-sie2-egg | sie-represent
 sie-question | 탐구 문제와 탐구 계획 | text-sie2-question | sie-deduction
 sie-design | 공학적 설계 | card-sie2-column | impulse sie-question

@@ -685,6 +685,7 @@ y = xⁿ의 도함수 | card-calc1-power-rule
 알고리즘 설계 방법 | text-info-project-plan
 알베도 | card-clim-seaice
 알짜힘과 가속도 (a = F/m) | card-phy-video-track
+가속도와 알짜힘 | card-free-fall
 알케인·알켄·알카인 | card-adchem-isomer
 알코올 발효 | card-cell-ferment
 알코올의 산화 | card-labchem-alcohol-ox

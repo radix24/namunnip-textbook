@@ -422,9 +422,24 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-cell-organelles",
+        "title": "세포 속 방들은 각각 무슨 일을 하고, 어떻게 알아냈을까?"
+       },
+       {
         "kind": "card",
         "id": "card-is1-membrane",
         "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-cell-osmosis",
+        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-activation",
+        "title": "효소는 반응을 어떻게 빠르게 할까?"
        },
        {
         "kind": "card",
@@ -433,23 +448,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-is1-activation",
-        "title": "효소는 반응을 어떻게 빠르게 할까?"
+        "id": "card-is1-catalase",
+        "title": "감자 조각을 넣으면 과산화 수소가 왜 거품을 낼까?"
        },
        {
         "kind": "text",
         "id": "text-is1-enzymes-life",
         "title": "생활 속에서 효소는 어떤 화학 반응을 도울까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-cell-organelles",
-        "title": "세포 속 방들은 각각 무슨 일을 하고, 어떻게 알아냈을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-osmosis",
-        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
        },
        {
         "kind": "card",
@@ -460,16 +465,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-cell-coupling",
         "title": "에너지가 필요한 반응을 세포는 어떻게 일으킬까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-pulse",
-        "title": "세포 밖으로 나갈 단백질은 어떤 길을 지날까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-is1-catalase",
-        "title": "감자 조각을 넣으면 과산화 수소가 왜 거품을 낼까?"
        }
       ]
      },
@@ -771,14 +766,14 @@ window.TOC = [
         "title": "자석을 움직이면 왜 전류가 흐를까?"
        },
        {
-        "kind": "card",
-        "id": "card-is2-transmission",
-        "title": "송전은 왜 높은 전압으로 할까?"
-       },
-       {
         "kind": "text",
         "id": "text-is2-power-plants",
         "title": "화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is2-transmission",
+        "title": "송전은 왜 높은 전압으로 할까?"
        },
        {
         "kind": "video",
@@ -5489,13 +5484,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-sie1-pasteur",
-        "title": "고깃국물 속 미생물은 저절로 생길까?"
+        "id": "card-bio-control",
+        "title": "가설은 어떻게 검증할까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-control",
-        "title": "가설은 어떻게 검증할까?"
+        "id": "card-sie1-pasteur",
+        "title": "고깃국물 속 미생물은 저절로 생길까?"
        }
       ]
      },
@@ -5584,13 +5579,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-sie2-column",
-        "title": "종이 한 장으로 얼마나 무거운 것을 버틸 수 있을까?"
+        "id": "card-is1-egg-drop",
+        "title": "떨어뜨린 달걀이 깨지지 않게 하려면?"
        },
        {
         "kind": "card",
-        "id": "card-is1-egg-drop",
-        "title": "떨어뜨린 달걀이 깨지지 않게 하려면?"
+        "id": "card-sie2-column",
+        "title": "종이 한 장으로 얼마나 무거운 것을 버틸 수 있을까?"
        }
       ]
      }
@@ -5630,14 +5625,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-sie2-co2",
-        "title": "교실 공기, 숫자로 보면 무엇이 달라질까?"
-       },
-       {
         "kind": "text",
         "id": "text-is2-iot",
         "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-sie2-co2",
+        "title": "교실 공기, 숫자로 보면 무엇이 달라질까?"
        }
       ]
      },
@@ -5648,14 +5643,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-sie2-ethics",
-        "title": "숫자 하나 고치는 것이 왜 그렇게 큰 잘못일까?"
-       },
-       {
         "kind": "card",
         "id": "card-is2-ethics",
         "title": "확진자의 이동 경로, 어디까지 공개해야 할까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-sie2-ethics",
+        "title": "숫자 하나 고치는 것이 왜 그렇게 큰 잘못일까?"
        }
       ]
      }

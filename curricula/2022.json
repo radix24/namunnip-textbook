@@ -199,16 +199,15 @@
        "code": "10통과1-03-05",
        "blocks": [
         "intro-is1-3-5",
-        "card-is1-membrane",
-        "card-is1-enzyme-fit",
-        "card-is1-activation",
-        "text-is1-enzymes-life",
         "text-cell-organelles",
+        "card-is1-membrane",
         "card-cell-osmosis",
+        "card-is1-activation",
+        "card-is1-enzyme-fit",
+        "card-is1-catalase",
+        "text-is1-enzymes-life",
         "card-bio-atp",
-        "card-cell-coupling",
-        "card-cell-pulse",
-        "card-is1-catalase"
+        "card-cell-coupling"
        ]
       },
       {
@@ -356,8 +355,8 @@
        "blocks": [
         "intro-is2-2-5",
         "card-is2-generator",
-        "card-is2-transmission",
         "text-is2-power-plants",
+        "card-is2-transmission",
         "video-is2-grid"
        ]
       },
@@ -2890,8 +2889,8 @@
        "code": "10과탐1-02-02",
        "blocks": [
         "intro-sie1-2-2",
-        "card-sie1-pasteur",
-        "card-bio-control"
+        "card-bio-control",
+        "card-sie1-pasteur"
        ]
       },
       {
@@ -2953,8 +2952,8 @@
        "code": "10과탐2-01-03",
        "blocks": [
         "intro-sie2-1-3",
-        "card-sie2-column",
-        "card-is1-egg-drop"
+        "card-is1-egg-drop",
+        "card-sie2-column"
        ]
       }
      ]
@@ -2980,8 +2979,8 @@
        "code": "10과탐2-02-02",
        "blocks": [
         "intro-sie2-2-2",
-        "card-sie2-co2",
-        "text-is2-iot"
+        "text-is2-iot",
+        "card-sie2-co2"
        ]
       },
       {
@@ -2990,8 +2989,8 @@
        "code": "10과탐2-02-03",
        "blocks": [
         "intro-sie2-2-3",
-        "text-sie2-ethics",
-        "card-is2-ethics"
+        "card-is2-ethics",
+        "text-sie2-ethics"
        ]
       }
      ]
