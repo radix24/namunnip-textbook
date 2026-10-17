@@ -1563,3 +1563,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 함수의 증가와 감소 | card-calc1-incdec
 부등식의 영역 | card-econ-lp-production
 표본추출 | card-stat-random-sample
+집합의 연산 | card-cm2-set-ops
+벡터의 내적 | card-geo-dot-angle

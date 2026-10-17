@@ -9762,19 +9762,31 @@
        "n": 1,
        "title": "집합과 벡터로 나타낸 텍스트",
        "code": "12인수02-01",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-2-1",
+        "card-aimath-jaccard",
+        "card-aimath-onehot"
+       ]
       },
       {
        "n": 2,
        "title": "빈도수 벡터와 요약",
        "code": "12인수02-02",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-2-2",
+        "card-aimath-word-count",
+        "card-aimath-tfidf"
+       ]
       },
       {
        "n": 3,
        "title": "텍스트 분석의 수학",
        "code": "12인수02-03",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-2-3",
+        "card-aimath-cosine-doc",
+        "card-aimath-spam"
+       ]
       }
      ]
     },

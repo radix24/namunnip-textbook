@@ -17495,22 +17495,55 @@ window.TOC = [
       "n": 1,
       "title": "집합과 벡터로 나타낸 텍스트",
       "code": "12인수02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-jaccard",
+        "title": "두 문장이 얼마나 비슷한지 수로 나타낼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-onehot",
+        "title": "문장을 숫자들의 줄, 곧 벡터로 바꿀 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "빈도수 벡터와 요약",
       "code": "12인수02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-word-count",
+        "title": "낱말을 세기만 해도 글의 요점을 찾을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-tfidf",
+        "title": "가장 많이 나온 낱말이 그 글의 핵심어일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "텍스트 분석의 수학",
       "code": "12인수02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-cosine-doc",
+        "title": "짧은 글과 긴 글이 같은 주제인지 어떻게 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-spam",
+        "title": "\"무료\", \"당첨\"이 들어간 메일은 스팸일 확률이 얼마일까?"
+       }
+      ]
      }
     ]
    },

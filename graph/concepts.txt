@@ -1060,3 +1060,6 @@ econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-pric
 ai-learn | 인공지능의 학습과 수학 | card-aimath-teach-machine card-aimath-rule-vs-learn | 
 ai-history | 인공지능과 수학의 역사 | card-aimath-timeline card-aimath-perceptron-xor | ai-learn
 ai-bigdata | 빅데이터와 표본 | card-aimath-bigdata-sample card-aimath-data-bias | stat-sample-prop
+ai-text-set | 집합과 벡터로 나타낸 텍스트 | card-aimath-jaccard card-aimath-onehot | cm2-set-ops
+ai-text-freq | 빈도수 벡터와 요약 | card-aimath-word-count card-aimath-tfidf | ai-text-set alg-log
+ai-text-analysis | 텍스트 분석의 수학 | card-aimath-cosine-doc card-aimath-spam | ai-text-freq geo-dot

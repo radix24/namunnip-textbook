@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>텍스트 분석의 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="문서 벡터의 내적과 코사인 유사도, 거리와 코사인 유사도의 차이(글의 길이와 무관), 조건부확률과 베이즈 정리, 낱말 확률의 비를 곱하는 나이브 베이즈 스팸 분류. 두 글의 벡터 각을 보는 카드와, 스팸 확률을 계산하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-aimath-cosine-doc canvas { aspect-ratio: 1 / 1; max-width: 360px; width: 100%; margin: 0 auto; display: block; }
+    #card-aimath-cosine-doc .ctl-row > div { min-width: 9rem; }
+    #card-aimath-spam table { border-collapse: collapse; font-size: .84rem; margin: .4rem 0; width: 100%; }
+    #card-aimath-spam td, #card-aimath-spam th { border: 1px solid var(--rule, #d9dad2); padding: .2rem .4rem; text-align: right; font-family: var(--mono, monospace); }
+    #card-aimath-spam td:first-child, #card-aimath-spam th:first-child { text-align: left; font-family: inherit; }
+    #card-aimath-spam tr.on td { background: rgba(224,160,42,.18); }
+    #card-aimath-spam .meter { height: 16px; border-radius: 8px; background: rgba(141,141,146,.2); overflow: hidden; margin: .3rem 0; }
+    #card-aimath-spam .meter span { display: block; height: 100%; background: #b5532f; }
+    #card-aimath-spam .ctl-row > div { min-width: 13rem; }
+  </style>
+</head>
+<body data-course="aimath" data-sec="2-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>텍스트 분석의 수학</h1>
+    <p class="lead">글을 벡터로 나타내면 벡터 사이의 각으로 비슷함을 잴 수 있고, 낱말이 나올 확률을 알면 글이 어떤 종류인지 확률로 판단할 수 있습니다. 이 절에서는 코사인 유사도로 글을 비교하고, 베이즈 정리로 스팸 메일을 가려내 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/3-3.html#card-geo-dot-angle" title="기하 3.3 · 두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?">벡터의 내적</a><a class="p p-card" href="../../c/stat/2-4.html#card-stat-cond-table" title="확률과 통계 2.4 · 버스로 오는 학생만 보면 지각할 확률이 달라질까?">조건부확률</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-aimath-cosine-doc"><span class="mono">2.3.1</span>글의 길이와 상관없이 비슷함을 재는 코사인 유사도</a></li>
+        <li><a href="#card-aimath-spam"><span class="mono">2.3.2</span>낱말의 확률로 스팸 메일 가려내기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=aimath-2-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-aimath-cosine-doc">
+        <header class="card-head">
+          <span class="no">2.3.1</span><h2>짧은 글과 긴 글이 같은 주제인지 어떻게 알 수 있을까?</h2><span class="kind">코사인 유사도 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">두 낱말 "축구", "요리"의 횟수로 글 A, B를 2차원 벡터로 나타냅니다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">A의 축구 = <output class="a1-out"></output></label><input class="a1" type="range" min="0" max="10" step="1" value="3" aria-label="글 A의 축구 횟수"></div>
+              <div><label class="mono">A의 요리 = <output class="a2-out"></output></label><input class="a2" type="range" min="0" max="10" step="1" value="1" aria-label="글 A의 요리 횟수"></div>
+              <div><label class="mono">B의 축구 = <output class="b1-out"></output></label><input class="b1" type="range" min="0" max="10" step="1" value="2" aria-label="글 B의 축구 횟수"></div>
+              <div><label class="mono">B의 요리 = <output class="b2-out"></output></label><input class="b2" type="range" min="0" max="10" step="1" value="5" aria-label="글 B의 요리 횟수"></div>
+            </div>
+            <div class="presets"><button class="chip go-long" type="button">B를 A의 3배 길이로</button><button class="chip go-diff" type="button">다른 주제</button></div>
+            <canvas aria-label="두 글의 벡터와 사이의 각"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>축구 기사 한 문단과, 같은 내용을 세 배로 길게 쓴 기사는 낱말 횟수가 세 배씩 차이 납니다. 횟수 벡터의 거리로 비교하면 두 글이 아주 달라 보이는데, 이것이 맞을까요?</li>
+            <li><span class="tag">복원</span>벡터의 내적 \(\vec a \cdot \vec b = |\vec a||\vec b|\cos\theta\), 성분으로는 \(a_1b_1 + a_2b_2\)입니다.</li>
+            <li><span class="tag">설명</span>두 문서 벡터 사이의 각 \(\theta\)의 코사인 \(\cos\theta = \dfrac{\vec a \cdot \vec b}{|\vec a||\vec b|}\)를 <em>코사인 유사도</em>라 합니다. 벡터의 방향만 비교하므로 글의 길이(벡터의 크기)와 상관없이 "어떤 낱말을 어떤 비율로 쓰는지"를 비교합니다. 횟수는 0 이상이라 값은 0(공통 낱말 없음)과 1(비율이 같음) 사이입니다.</li>
+            <li><span class="tag">연결</span>실제로는 낱말 수천 개의 TF-IDF 벡터(앞 절)로 같은 계산을 합니다. 검색, 비슷한 뉴스 묶기, 추천(5단원)에서 쓰입니다.</li>
+            <li><span class="tag">적용</span>"B를 A의 3배 길이로"를 눌러 거리와 코사인 유사도를 비교하세요. 거리는 커졌는데 코사인 유사도는 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>코사인 유사도가 1이라도 두 글의 길이까지 같은 것은 아닙니다. 또 낱말 횟수만 보므로 "축구가 싫다"와 "축구가 좋다"처럼 뜻이 반대인 글도 비슷하다고 판단할 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\vec a = (3, 4)\), \(\vec b = (4, 3)\)의 코사인 유사도는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>0.96<span class="why"><b>맞습니다.</b> \(\frac{12 + 12}{5 \times 5} = \frac{24}{25}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>24<span class="why"><b>내적만 구했습니다.</b> 크기의 곱으로 나눠야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>1<span class="why"><b>크기가 같다고 방향이 같은 것은 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 1.41<span class="why"><b>두 벡터의 거리 \(\sqrt2\)입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/aimath/2-2.html#card-aimath-word-count"><small class="mono">인공지능 수학 2.2</small>낱말을 세기만 해도 글의 요점을 찾을 수 있을까?</a><a href="../../c/aimath/2-2.html#card-aimath-tfidf"><small class="mono">인공지능 수학 2.2</small>가장 많이 나온 낱말이 그 글의 핵심어일까?</a><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a></div></nav>
+
+      <article class="card" id="card-aimath-spam">
+        <header class="card-head">
+          <span class="no">2.3.2</span><h2>"무료", "당첨"이 들어간 메일은 스팸일 확률이 얼마일까?</h2><span class="kind">조건부확률과 텍스트 분류 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="예시 메일"><button class="chip" type="button" data-m="0">무료 당첨 링크</button><button class="chip" type="button" data-m="1">내일 회의 자료</button><button class="chip" type="button" data-m="2">할인 회의</button></div>
+            <p class="small">메일에 들어 있는 낱말을 표에서 눌러 고르세요. 확률은 지난 메일 기록에서 얻었다고 가정한 가상 값입니다.</p>
+            <table aria-label="낱말별로 스팸과 정상 메일에 나오는 확률"></table>
+            <div class="ctl-row"><div><label class="mono">전체 메일 중 스팸 비율 = <output class="pr-out"></output>%</label><input class="pr" type="range" min="5" max="90" step="5" value="40" aria-label="스팸의 사전 확률"></div></div>
+            <div class="meter" aria-hidden="true"><span></span></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>메일함은 스팸을 어떻게 알아서 걸러낼까요? "무료"라는 낱말이 들어 있다고 모두 스팸은 아닐 텐데, 얼마나 의심해야 할까요?</li>
+            <li><span class="tag">복원</span>베이즈 정리: \(P(A \mid B) = \dfrac{P(B \mid A)P(A)}{P(B)}\).</li>
+            <li><span class="tag">설명</span>지난 메일에서 "스팸 중 '무료'가 나온 비율" \(P(\text{무료} \mid \text{스팸})\)과 "정상 메일 중 '무료'가 나온 비율"을 셉니다. 새 메일에 낱말들이 있을 때, 낱말이 서로 독립이라고 단순하게 가정하면 \(\dfrac{P(\text{스팸} \mid \text{낱말})}{P(\text{정상} \mid \text{낱말})} = \dfrac{P(\text{스팸})}{P(\text{정상})} \times \prod \dfrac{P(w \mid \text{스팸})}{P(w \mid \text{정상})}\)입니다. 낱말마다 곱해지는 비가 1보다 크면 스팸 쪽으로, 작으면 정상 쪽으로 기웁니다. 이것을 <em>나이브 베이즈 분류</em>라 합니다.</li>
+            <li><span class="tag">연결</span>4단원의 "확률과 예측"에서 같은 베이즈 정리로 검사 결과를 해석합니다. 실제 스팸 필터는 수천 개 낱말의 확률을 자료로 학습합니다.</li>
+            <li><span class="tag">적용</span>예시 메일 세 개의 스팸 확률을 비교하세요. "할인 회의" 메일에서 두 낱말은 서로 반대 방향으로 작용합니다. 스팸 비율을 바꾸면 결과가 어떻게 달라지나요?</li>
+            <li class="warn"><span class="tag">판단</span>낱말끼리 독립이라는 가정은 사실이 아닙니다("무료"와 "당첨"은 함께 나오기 쉬움). 그래도 분류에는 꽤 잘 맞지만, 계산한 확률값을 그대로 믿기는 어렵습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">스팸 비율이 50%이고 \(P(\text{당첨} \mid \text{스팸}) = 0.2\), \(P(\text{당첨} \mid \text{정상}) = 0.01\)입니다. "당첨" 하나만 들어 있는 메일이 스팸일 확률은? (다른 낱말은 무시)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 95%<span class="why"><b>맞습니다.</b> 비가 \(1 \times \frac{0.2}{0.01} = 20\)이므로 확률은 \(\frac{20}{21} \approx 0.952\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>20%<span class="why"><b>\(P(\text{당첨} \mid \text{스팸})\)을 그대로 썼습니다.</b> 조건이 반대입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>99%<span class="why"><b>\(1 - 0.01\)로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>50%<span class="why"><b>낱말 정보를 쓰지 않은 사전 확률입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/aimath/2-2.html#card-aimath-word-count"><small class="mono">인공지능 수학 2.2</small>낱말을 세기만 해도 글의 요점을 찾을 수 있을까?</a><a href="../../c/aimath/2-2.html#card-aimath-tfidf"><small class="mono">인공지능 수학 2.2</small>가장 많이 나온 낱말이 그 글의 핵심어일까?</a><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=aimath-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/aimath/ai.js"></script>
+<script src="../../js/cards/aimath/cosine-doc.js"></script>
+<script src="../../js/cards/aimath/spam.js"></script>
+</body>
+</html>
