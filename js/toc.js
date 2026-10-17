@@ -18731,29 +18731,73 @@ window.TOC = [
       "n": 1,
       "title": "문헌 조사",
       "code": "12수과02-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-source-eval",
+        "title": "\"피보나치 수열과 자연\" 탐구에 쓸 자료, 어느 것을 믿고 인용할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-sequence-search",
+        "title": "탐구에서 1, 2, 4, 8, 16이 나왔다면, 이 수열은 이미 누가 연구했을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "사례 조사",
       "code": "12수과02-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-tiling-case",
+        "title": "보도블록, 욕실 타일, 벌집을 조사하면 왜 정삼각형·정사각형·정육각형만 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-paper-ratio",
+        "title": "A4 용지를 반으로 접으면 A5가 되는데, 모양은 왜 똑같을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "수학 실험",
       "code": "12수과02-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-buffon-needle",
+        "title": "평행선 위에 바늘을 떨어뜨리기만 해서 원주율 π를 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-trials-error",
+        "title": "주사위 두 개의 합이 7일 확률을 실험으로 구한다면, 몇 번 던져야 할까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "개발 연구",
       "code": "12수과02-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-fair-game-design",
+        "title": "주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-prime-algorithm",
+        "title": "N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?"
+       }
+      ]
      }
     ]
    },

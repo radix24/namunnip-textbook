@@ -1121,3 +1121,7 @@ pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat
 pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias | pst-test pst-collect
 mrs-meaning | 수학과제 탐구의 의미 | card-mres-collatz-explore card-mres-circle-regions |
 mrs-ethics | 연구 윤리 | card-mres-benford-check card-mres-citation-ethics | mrs-meaning
+mrs-literature | 문헌 조사 | card-mres-source-eval card-mres-sequence-search | mrs-ethics
+mrs-case | 사례 조사 | card-mres-tiling-case card-mres-paper-ratio | mrs-meaning
+mrs-experiment | 수학 실험 | card-mres-buffon-needle card-mres-trials-error | mrs-meaning
+mrs-develop | 개발 연구 | card-mres-fair-game-design card-mres-prime-algorithm | mrs-experiment

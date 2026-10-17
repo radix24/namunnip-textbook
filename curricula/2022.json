@@ -10510,25 +10510,41 @@
        "n": 1,
        "title": "문헌 조사",
        "code": "12수과02-01",
-       "blocks": []
+       "blocks": [
+        "intro-mres-2-1",
+        "card-mres-source-eval",
+        "card-mres-sequence-search"
+       ]
       },
       {
        "n": 2,
        "title": "사례 조사",
        "code": "12수과02-02",
-       "blocks": []
+       "blocks": [
+        "intro-mres-2-2",
+        "card-mres-tiling-case",
+        "card-mres-paper-ratio"
+       ]
       },
       {
        "n": 3,
        "title": "수학 실험",
        "code": "12수과02-03",
-       "blocks": []
+       "blocks": [
+        "intro-mres-2-3",
+        "card-mres-buffon-needle",
+        "card-mres-trials-error"
+       ]
       },
       {
        "n": 4,
        "title": "개발 연구",
        "code": "12수과02-04",
-       "blocks": []
+       "blocks": [
+        "intro-mres-2-4",
+        "card-mres-fair-game-design",
+        "card-mres-prime-algorithm"
+       ]
       }
      ]
     },
