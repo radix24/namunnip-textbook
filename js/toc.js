@@ -18560,29 +18560,73 @@ window.TOC = [
       "n": 1,
       "title": "정규분포와 t분포",
       "code": "12실통03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-t-vs-z",
+        "title": "t분포는 표준정규분포와 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-why-t",
+        "title": "표본 5개로 표준화하면 정말 95%가 ±1.96 안에 들어올까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "모평균의 추정",
       "code": "12실통03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ci-t-cover",
+        "title": "배터리 6개로 평균 수명을 추정할 때, 신뢰구간은 어떻게 만들어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-sample-size",
+        "title": "택배 배송 시간의 평균을 ±0.5시간 안으로 추정하려면 몇 건을 조사해야 할까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "모비율의 추정",
       "code": "12실통03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ci-prop-read",
+        "title": "\"찬성 54%, 95% 신뢰구간 50.9~57.1%\"를 보고 할 수 있는 말과 없는 말은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-lead-margin",
+        "title": "후보 A 47%, B 43%인 여론조사에서 A가 앞선다고 말할 수 있을까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "가설검정",
       "code": "12실통03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-coin-test",
+        "title": "동전을 100번 던져 앞면이 61번 나왔다면, 이 동전은 치우친 걸까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-p-hacking",
+        "title": "아무 효과 없는 영양제를 20가지 증상에 대해 검정하면 '효과 있음'이 나올까?"
+       }
+      ]
      }
     ]
    },

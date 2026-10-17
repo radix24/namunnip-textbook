@@ -1113,3 +1113,7 @@ pst-datatype | 자료의 종류(범주형·수치형) | card-pstat-data-types ca
 pst-collect | 자료의 수집 방법(설문·실험) | card-pstat-survey-wording card-pstat-random-assign | pst-sampling
 pst-graphs | 상자그림과 산점도 | card-pstat-boxplot-build card-pstat-scatter-r | pst-datatype
 pst-summary | 대푯값과 산포도 | card-pstat-mean-median card-pstat-sd-spread | pst-datatype
+pst-tdist | 정규분포와 t분포 | card-pstat-t-vs-z card-pstat-why-t | pst-summary
+pst-ci-mean | 모평균의 추정(t분포) | card-pstat-ci-t-cover card-pstat-sample-size | pst-tdist pst-sampling
+pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat-lead-margin | pst-sampling
+pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking | pst-ci-prop
