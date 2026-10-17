@@ -1574,3 +1574,8 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 산술평균과 기하평균 | card-cm2-amgm
 모비율의 추정 | card-stat-ci-prop
 \(\sum\) 기호 | card-stat-binom-expand
+복리와 원리합계 | card-econ-compound
+현재 가치 | card-econ-present-value
+미분계수와 한계비용 | card-econ-marginal-cost
+증가·감소와 극대·극소 | card-econ-revenue-shape
+같은 것이 있는 순열과 최단 경로 | card-dmath-grid-path
