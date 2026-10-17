@@ -1,0 +1,160 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>여러 가지 순열 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="원순열과 같은 것이 있는 순열, 중복순열. 원탁 배치를 돌려 같은 것끼리 묶는 카드와, 바둑판 도시의 최단 경로를 세는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-round-table canvas { aspect-ratio: 1 / 1; max-width: 300px; margin: 0 auto; display: block; }
+    #card-dmath-round-table .all { display: flex; flex-wrap: wrap; gap: .25rem; margin: .5rem 0; max-height: 14rem; overflow-y: auto; }
+    #card-dmath-round-table .all span { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78rem; padding: .1rem .35rem; border: 1px solid var(--rule); border-radius: 5px; background: var(--card); }
+    #card-dmath-round-table .all span.on { border-color: var(--forest); background: var(--right-bg); font-weight: 700; }
+    #card-dmath-grid-path canvas { aspect-ratio: 4 / 3; max-width: 480px; margin: 0 auto; display: block; touch-action: none; }
+    #card-dmath-grid-path .ctl-row > div { min-width: 8rem; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="1-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>여러 가지 순열</h1>
+    <p class="lead">순열은 늘어놓는 방법의 수였습니다. 그런데 둥근 탁자처럼 돌려서 같은 배치를 하나로 보거나, 같은 글자처럼 서로 바꿔도 같은 것이 섞여 있으면 셈이 달라집니다. 이 절에서는 같게 볼 것을 먼저 정하고 묶음의 크기로 나누는 생각으로 <em>원순열</em>과 <em>같은 것이 있는 순열</em>을 세어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/3-2.html#card-cm1-perm-slots" title="공통수학1 3.2 · 뽑아서 줄 세우는 방법은 왜 n(n − 1)(n − 2)…일까?">순열</a><a class="p p-card" href="../../c/cm1/3-3.html#card-cm1-comb-group" title="공통수학1 3.3 · 순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?">조합</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-round-table"><span class="mono">1.1.1</span>돌리면 같은 자리 배치 묶기</a></li>
+        <li><a href="#card-dmath-grid-path"><span class="mono">1.1.2</span>바둑판 길의 최단 경로 세기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-1-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-round-table">
+        <header class="card-head">
+          <span class="no">1.1.1</span><h2>원탁에 앉는 방법은 왜 n!보다 적을까?</h2><span class="kind">원순열 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">사람 수 <select class="pick" aria-label="사람 수"><option>3</option><option selected>4</option><option>5</option></select></label></div>
+            <canvas class="no-invert" aria-label="원탁과 자리에 앉은 사람들. 돌리기 버튼으로 원탁을 돌린다"></canvas>
+            <div class="presets">
+              <button class="chip go-l" type="button">↺ 한 칸 돌리기</button>
+              <button class="chip go-r" type="button">↻ 한 칸 돌리기</button>
+              <button class="chip go-new" type="button">다른 배치</button>
+              <button class="chip go-group" type="button">같은 것끼리 묶기</button>
+            </div>
+            <p class="mono small say" role="status"></p>
+            <div class="all" aria-label="한 줄로 늘어놓은 모든 배치. 초록은 지금 원탁과 같은 배치"></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>네 사람이 한 줄로 서는 방법은 \(4! = 24\)가지입니다. 그런데 둥근 탁자에 앉으면 모두가 한 칸씩 옆으로 옮겨 앉아도 "누구 옆에 누가 있는지"는 그대로입니다. 원탁에서 정말 다른 배치는 몇 가지일까요?</li>
+            <li><span class="tag">복원</span>서로 다른 \(n\)개를 한 줄로 늘어놓는 방법은 \(n!\)가지입니다.</li>
+            <li><span class="tag">설명</span>원탁의 배치 하나를 어느 자리부터 읽느냐에 따라 한 줄 배치가 \(n\)가지 나옵니다. 거꾸로 \(n!\)개의 한 줄 배치는 \(n\)개씩 묶여 원탁 배치 하나가 됩니다. 그래서 <em>원순열</em>의 수는 \(\dfrac{n!}{n} = (n - 1)!\)입니다. 한 사람을 고정해 놓고 나머지 \(n - 1\)명을 늘어놓는다고 생각해도 같은 답입니다.</li>
+            <li><span class="tag">연결</span>"돌려서 같으면 같은 것으로 본다"처럼 같게 볼 것을 정한 뒤 묶음의 크기로 나누는 생각은 목걸이 만들기(뒤집어도 같음, \(\frac{(n-1)!}{2}\)), 같은 것이 있는 순열 \(\frac{n!}{p!q!\cdots}\)에도 그대로 쓰입니다.</li>
+            <li><span class="tag">적용</span>원탁을 한 칸씩 돌리며 아래 목록에서 초록으로 표시되는 배치가 몇 개인지 세어 보세요. "같은 것끼리 묶기"를 누르면 목록이 몇 묶음으로 나뉘나요? 사람 수를 바꿔 \((n - 1)!\)과 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>자리마다 특징이 있으면(창가 자리, 주인 자리) 돌린 배치가 서로 다르므로 \(n!\)가지가 맞습니다. 무엇을 같은 것으로 볼지는 문제 상황이 정합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">6명이 원탁에 앉을 때 A와 B가 이웃하는 방법의 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(48\)<span class="why"><b>맞습니다.</b> A, B를 한 묶음으로 보면 5개의 원순열 \(4! = 24\), 묶음 안에서 자리 바꾸기 2가지입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(24\)<span class="why"><b>A와 B의 순서를 바꾸는 2가지를 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(240\)<span class="why"><b>한 줄로 세는 \(5! \times 2\)입니다.</b> 원탁이므로 돌려서 같은 것을 묶어야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(120\)<span class="why"><b>6명의 원순열 전체 \(5!\)입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/3-2.html#card-cm1-perm-slots"><small class="mono">공통수학1 3.2</small>뽑아서 줄 세우는 방법은 왜 n(n − 1)(n − 2)…일까?</a><a href="../../c/cm1/3-2.html#card-cm1-perm-tree"><small class="mono">공통수학1 3.2</small>조건이 붙은 줄 세우기는 어떻게 셀까?</a><a href="../../c/stat/1-1.html#card-stat-same-perm"><small class="mono">확률과 통계 1.1</small>같은 글자끼리 자리를 바꾸면 새 배열일까?</a><a href="../../c/stat/1-1.html#card-stat-grid-path"><small class="mono">확률과 통계 1.1</small>바둑판 길에서 가장 짧은 길은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-5.html#card-dmath-birthday"><small class="mono">이산 수학 1.5</small>몇 명이 모이면 생일이 같은 두 사람이 꼭 있을까?</a><a href="../../c/dmath/1-5.html#card-dmath-pigeon-pairs"><small class="mono">이산 수학 1.5</small>서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-grid-path">
+        <header class="card-head">
+          <span class="no">1.1.2</span><h2>바둑판 도시에서 가장 짧은 길은 몇 가지일까?</h2><span class="kind">같은 것이 있는 순열 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">가로 블록 m = <output class="m-out">5</output></label><input class="m" type="range" min="1" max="7" step="1" value="5" aria-label="가로 블록 수"></div>
+              <div><label class="mono">세로 블록 n = <output class="n-out">3</output></label><input class="n" type="range" min="1" max="5" step="1" value="3" aria-label="세로 블록 수"></div>
+            </div>
+            <canvas aria-label="격자 모양 도로, 왼쪽 아래 출발 S, 오른쪽 위 도착 T. 교차로를 누르면 공사 중으로 막는다"></canvas>
+            <div class="presets">
+              <button class="chip go-r" type="button">→ 동쪽</button>
+              <button class="chip go-u" type="button">↑ 북쪽</button>
+              <button class="chip go-clr" type="button">경로 지우기</button>
+              <button class="chip go-cnt" type="button" aria-pressed="false">교차로마다 경우의 수</button>
+            </div>
+            <p class="mono small path">—</p>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">교차로를 누르면 공사 중(×)으로 막거나 다시 엽니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>길이 바둑판처럼 난 도시에서 동쪽으로 5블록, 북쪽으로 3블록 떨어진 곳까지 돌아가지 않고 가는 길은 몇 가지일까요? 그려서 세기에는 너무 많습니다.</li>
+            <li><span class="tag">복원</span>서로 다른 \(n\)개를 늘어놓는 방법은 \(n!\)가지입니다. \({}_n\mathrm{C}_r\)은 \(n\)개에서 \(r\)개를 고르는 방법의 수입니다.</li>
+            <li><span class="tag">설명</span>가장 짧은 길은 → 5번, ↑ 3번을 어떤 순서로 하느냐로 정해집니다. 곧 → → → → → ↑ ↑ ↑ 를 늘어놓는 방법인데, 같은 것끼리 자리를 바꿔도 같은 길이므로 \(\dfrac{8!}{5!\,3!} = 56\)가지입니다. 이것을 <em>같은 것이 있는 순열</em>이라 하고, 8칸 중 ↑ 3칸의 자리를 고르는 \({}_8\mathrm{C}_3\)과 같습니다.</li>
+            <li><span class="tag">연결</span>교차로마다 "왼쪽에서 오는 수 + 아래에서 오는 수"를 적으면 파스칼의 삼각형이 비스듬히 나타납니다. 막힌 교차로가 있으면 그 칸을 0으로 두고 같은 방법으로 셉니다. 택배 경로, 로봇의 이동 계획에서 쓰는 셈법입니다.</li>
+            <li><span class="tag">적용</span>버튼으로 길 하나를 만들어 보고, 그 길이 →와 ↑의 순서 하나와 같다는 것을 확인하세요. 교차로 하나를 막으면 경우의 수가 얼마나 줄어드나요? 막힌 곳을 지나는 길의 수를 빼는 방법으로도 구해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>\(\frac{8!}{5!\,3!}\)은 "가장 짧은" 길만 셉니다. 돌아가는 길까지 세면 끝이 없습니다. 또 길이 바둑판이 아니면(대각선 길) 이 식을 그대로 쓸 수 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">MISSISSIPPI의 11개 글자를 한 줄로 늘어놓는 방법의 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\dfrac{11!}{4!\,4!\,2!}\)<span class="why"><b>맞습니다.</b> I 4개, S 4개, P 2개가 같은 글자입니다. 값은 34650입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(11!\)<span class="why"><b>같은 글자끼리 바꾼 것을 다르게 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\dfrac{11!}{4!\,4!}\)<span class="why"><b>P 2개를 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\({}_{11}\mathrm{C}_4\)<span class="why"><b>I의 자리만 골랐습니다.</b> S, P의 자리도 정해야 합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/3-2.html#card-cm1-perm-slots"><small class="mono">공통수학1 3.2</small>뽑아서 줄 세우는 방법은 왜 n(n − 1)(n − 2)…일까?</a><a href="../../c/cm1/3-2.html#card-cm1-perm-tree"><small class="mono">공통수학1 3.2</small>조건이 붙은 줄 세우기는 어떻게 셀까?</a><a href="../../c/stat/1-1.html#card-stat-same-perm"><small class="mono">확률과 통계 1.1</small>같은 글자끼리 자리를 바꾸면 새 배열일까?</a><a href="../../c/stat/1-1.html#card-stat-grid-path"><small class="mono">확률과 통계 1.1</small>바둑판 길에서 가장 짧은 길은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-5.html#card-dmath-birthday"><small class="mono">이산 수학 1.5</small>몇 명이 모이면 생일이 같은 두 사람이 꼭 있을까?</a><a href="../../c/dmath/1-5.html#card-dmath-pigeon-pairs"><small class="mono">이산 수학 1.5</small>서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/round-table.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/grid-path.js"></script>
+</body>
+</html>

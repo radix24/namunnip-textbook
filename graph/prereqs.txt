@@ -1528,3 +1528,8 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 고윳값과 고유벡터 | card-adalg-eigen-hunt
 행렬의 대각화 | card-adalg-diag-grid
 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse
+순열 | card-cm1-perm-slots
+조합 | card-cm1-comb-group
+여사건의 확률 | card-stat-add-rule
+중복조합 | card-dmath-stars-bars
+포함배제의 원리 | card-dmath-venn-count

@@ -16316,36 +16316,91 @@ window.TOC = [
       "n": 1,
       "title": "여러 가지 순열",
       "code": "12이수01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-round-table",
+        "title": "원탁에 앉는 방법은 왜 n!보다 적을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-grid-path",
+        "title": "바둑판 도시에서 가장 짧은 길은 몇 가지일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "중복조합",
       "code": "12이수01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-stars-bars",
+        "title": "같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-int-solutions",
+        "title": "조건이 붙은 방정식의 정수해는 몇 개일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "포함배제의 원리",
       "code": "12이수01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-venn-count",
+        "title": "세 집합을 합칠 때 왜 더하고 빼고 다시 더할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-derange",
+        "title": "모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "집합의 분할과 자연수의 분할",
       "code": "12이수01-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-set-partition",
+        "title": "다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-young",
+        "title": "점 그림을 뒤집으면 어떤 분할이 나올까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "비둘기집의 원리",
       "code": "12이수01-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-birthday",
+        "title": "몇 명이 모이면 생일이 같은 두 사람이 꼭 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-pigeon-pairs",
+        "title": "서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?"
+       }
+      ]
      }
     ]
    },

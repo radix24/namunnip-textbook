@@ -1000,3 +1000,8 @@ ada-diag | 행렬의 대각화 | card-adalg-diag-grid card-adalg-fibonacci | ada
 ada-orth-diag | 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse card-adalg-orth-diag-proof | ada-diag ada-orthonormal ada-rot-ref
 ada-quadric | 이차곡선의 표준형 | card-adalg-conic-rotate card-adalg-conic-classify | ada-orth-diag geo-ellipse geo-hyperbola
 ada-diag-apply | 대각화의 활용(마르코프 연쇄·개체군 모형) | card-adalg-markov card-adalg-population | ada-diag ada-eigen
+dm-perm-var | 원순열과 같은 것이 있는 순열 | card-dmath-round-table card-dmath-grid-path | cm1-permutation stat-same-perm pm-circular-perm
+dm-multichoose | 중복조합과 방정식의 정수해 | card-dmath-stars-bars card-dmath-int-solutions | stat-rep-comb cm1-combination dm-perm-var
+dm-incl-excl | 포함배제의 원리 | card-dmath-venn-count card-dmath-derange | dm-multichoose
+dm-partition | 집합의 분할과 자연수의 분할 | card-dmath-set-partition card-dmath-young | dm-multichoose dm-incl-excl
+dm-pigeonhole | 비둘기집의 원리 | card-dmath-birthday card-dmath-pigeon-pairs | dm-perm-var
