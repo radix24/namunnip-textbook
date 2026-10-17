@@ -97,7 +97,7 @@ select { padding: 4px 8px; border: 1px solid var(--rule); background: var(--card
 /* ═════════ 메인(목차) 페이지 ═════════ */
 .intro { padding: clamp(40px, 7vw, 88px) 0 clamp(28px, 4vw, 48px); display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; }
 .intro h1 { font-size: clamp(34px, 5vw, 64px); font-weight: 800; line-height: 1.15; letter-spacing: -.045em; }
-.intro h1 em { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--forest); }
+.intro h1 em { font-style: normal; color: var(--forest); }   /* 세리프 글꼴엔 한글이 없어 기울임이 가짜로 합성됨: 색으로만 강조 */
 .intro p { margin-top: 18px; color: var(--ink-2); max-width: 34em; font-size: clamp(15px, 1.2vw, 17px); }
 .legend-steps { border: 1px solid var(--ink); background: var(--card); }
 .legend-steps h2 { font-size: 13px; font-weight: 600; padding: 10px 14px; border-bottom: 1px solid var(--ink); display: flex; justify-content: space-between; }
@@ -277,9 +277,9 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 
 /* ───── 반응형 ───── */
 @media (max-width: 1000px) {
-  .card-body { grid-template-columns: 1fr; }
+  .card-body { grid-template-columns: minmax(0, 1fr); }
   .card-fig { border-right: 0; border-bottom: 1px solid var(--rule); }
-  .topic-layout { grid-template-columns: 1fr; }
+  .topic-layout { grid-template-columns: minmax(0, 1fr); }
   .toc { position: static; }
   .toc ol { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0 12px; }
   .intro { grid-template-columns: 1fr; }
