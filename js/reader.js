@@ -48,4 +48,58 @@
     });
   });
   addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+  /* 카드 글(질문·복원·설명·연결·적용·판단): '한 단계씩'이면 처음엔 질문만 펼치고 나머지는 첫 줄만 보인다.
+     '모두 보기'는 예전처럼 전부 펼친다. 고른 방식은 localStorage에 둔다. 노드는 옮기기만 해서 형광펜(notes.js)이 그대로 남는다 */
+  const STEP_KEY = "namunnip-steps";
+  let mode = "one";
+  try { mode = localStorage.getItem(STEP_KEY) === "all" ? "all" : "one"; } catch (e) { mode = "one"; }
+  const lists = [...document.querySelectorAll("article.card ol.steps")];
+  const setOpen = (li, on) => {
+    li.classList.toggle("open", on);
+    const tg = li.querySelector(".step-tg"); if (tg) tg.setAttribute("aria-expanded", String(on));
+  };
+  lists.forEach((ol) => {
+    const items = [...ol.children].filter((li) => li.tagName === "LI" && li.querySelector(":scope > .tag"));
+    items.forEach((li, k) => {
+      const tag = li.querySelector(":scope > .tag");
+      const body = document.createElement("div"); body.className = "step-body";
+      while (tag.nextSibling) body.appendChild(tag.nextSibling);
+      const tg = document.createElement("button"); tg.type = "button"; tg.className = "step-tg";
+      li.insertBefore(tg, tag); tg.appendChild(tag);
+      li.appendChild(body);
+      const nx = items[k + 1];
+      if (nx) {
+        const b = document.createElement("button"); b.type = "button"; b.className = "step-next";
+        b.textContent = `다음 · ${nx.querySelector(".tag").textContent.trim()} →`;
+        b.addEventListener("click", (e) => {
+          e.stopPropagation(); setOpen(li, false); setOpen(nx, true);
+          nx.querySelector(".step-tg").focus({ preventScroll: true });
+          nx.scrollIntoView({ block: "nearest" });
+        });
+        body.appendChild(b);
+      }
+      tg.addEventListener("click", (e) => { e.stopPropagation(); if (mode === "one") setOpen(li, !li.classList.contains("open")); });
+      li.addEventListener("click", (e) => {
+        if (mode !== "one" || li.classList.contains("open") || e.target.closest("a, button, input, mark")) return;
+        setOpen(li, true);
+      });
+    });
+    const bar = document.createElement("div"); bar.className = "steps-mode"; bar.setAttribute("role", "group"); bar.setAttribute("aria-label", "글 보기 방식");
+    bar.innerHTML = '<button type="button" data-m="one">한 단계씩</button><button type="button" data-m="all">모두 보기</button>';
+    const col = document.createElement("div"); col.className = "steps-col";   // 카드 본문 격자의 한 칸을 그대로 쓴다
+    ol.parentNode.insertBefore(col, ol); col.append(bar, ol);
+    bar.addEventListener("click", (e) => { const b = e.target.closest("[data-m]"); if (b) apply(b.dataset.m, true); });
+  });
+  function apply(m, save) {
+    mode = m === "all" ? "all" : "one";
+    document.querySelectorAll(".steps-mode [data-m]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.m === mode)));
+    lists.forEach((ol) => {
+      ol.classList.toggle("steps-fold", mode === "one");
+      const items = [...ol.querySelectorAll(":scope > li")].filter((li) => li.querySelector(":scope > .step-tg"));
+      items.forEach((li, k) => setOpen(li, mode === "all" || k === 0 || !!li.querySelector("mark.hl")));
+    });
+    if (save) try { localStorage.setItem(STEP_KEY, mode); } catch (e) { /* 저장 못 해도 동작은 한다 */ }
+  }
+  apply(mode, false);
 })();

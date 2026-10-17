@@ -22,24 +22,12 @@
 </header>
 
 <main class="wrap">
-  <section class="intro">
-    <div>
-      <h1>교과서가 건너뛴 계단을<br><em>다시</em> 놓는 교과서</h1>
-      <p>2022 개정 교육과정의 절마다 개념 카드가 몇 장씩 있습니다. 카드의 그림은 전부 브라우저가 그 자리에서 계산해서 그립니다.
-        값을 바꿔 보고, 공식이 언제 맞고 언제 틀리는지 직접 확인하세요.</p>
+  <section class="dash" aria-label="이어서 공부하기">
+    <div class="dash-intro">
+      <h1>교과서가 건너뛴 계단을 <em>다시</em> 놓는 교과서</h1>
       <p class="mono small dim" id="stat"></p>
     </div>
-    <aside class="legend-steps" aria-label="개념 카드의 여섯 단계">
-      <h2><span>모든 카드는 이 순서로 씁니다</span><span class="mono dim">6 steps</span></h2>
-      <ol>
-        <li><span class="mono">01</span><b>질문</b>일상의 현상과 통념에서 시작</li>
-        <li><span class="mono">02</span><b>복원</b>건너뛴 선수개념 되짚기</li>
-        <li><span class="mono">03</span><b>설명</b>정의보다 필요성을 먼저</li>
-        <li><span class="mono">04</span><b>연결</b>관계 → 식, 그리고 성립 조건</li>
-        <li><span class="mono">05</span><b>적용</b>조건이 달라진 상황에서</li>
-        <li><span class="mono">06</span><b>판단</b>오개념과 모형의 한계</li>
-      </ol>
-    </aside>
+    <div class="dash-go" id="dash-go"></div>
   </section>
 
   <div class="dom-tabs" id="dom-tabs" role="tablist" aria-label="분야">
@@ -56,6 +44,25 @@
 
   <div id="courses-list"></div>
   <p class="empty" id="empty">찾는 절이나 카드가 없습니다. 다른 말로 찾아보세요.</p>
+
+  <section class="intro about" aria-labelledby="about-h">
+    <div>
+      <h2 id="about-h">나뭇잎 교과서는</h2>
+      <p>2022 개정 교육과정의 절마다 개념 카드가 몇 장씩 있습니다. 카드의 그림은 전부 브라우저가 그 자리에서 계산해서 그립니다.
+        값을 바꿔 보고, 공식이 언제 맞고 언제 틀리는지 직접 확인하세요.</p>
+    </div>
+    <aside class="legend-steps" aria-label="개념 카드의 여섯 단계">
+      <h2><span>모든 카드는 이 순서로 씁니다</span><span class="mono dim">6 steps</span></h2>
+      <ol>
+        <li><span class="mono">01</span><b>질문</b>일상의 현상과 통념에서 시작</li>
+        <li><span class="mono">02</span><b>복원</b>건너뛴 선수개념 되짚기</li>
+        <li><span class="mono">03</span><b>설명</b>정의보다 필요성을 먼저</li>
+        <li><span class="mono">04</span><b>연결</b>관계 → 식, 그리고 성립 조건</li>
+        <li><span class="mono">05</span><b>적용</b>조건이 달라진 상황에서</li>
+        <li><span class="mono">06</span><b>판단</b>오개념과 모형의 한계</li>
+      </ol>
+    </aside>
+  </section>
 
   <footer class="site-foot">
     <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>

@@ -960,3 +960,46 @@ body[data-domain="math"] #chips .chip { display: none; }
   .px-item { padding: 12px; }
   .px-opt { min-width: 44px; padding: 7px 10px; }
 }
+
+/* ═════════ 메인 맨 위: 짧은 제목 + 이어서 공부하기 (소개와 6단계는 아래 .about) ═════════ */
+.dash { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 20px clamp(24px, 4vw, 56px); align-items: end; padding: clamp(28px, 4.5vw, 52px) 0 clamp(20px, 3vw, 32px); }
+.dash h1 { font-size: clamp(26px, 3.4vw, 40px); font-weight: 800; line-height: 1.2; letter-spacing: -.04em; }
+.dash h1 em { font-style: normal; color: var(--forest); }
+.dash .mono.small { margin-top: 12px; }
+.dash-go { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; min-width: 0; }
+.dash-go > .dash-h, .dash-go > .dash-boxes, .dash-go > .dash-next:only-of-type { grid-column: 1 / -1; }
+.dash-next { display: grid; gap: 3px; padding: 14px 18px; background: var(--card); border: 1px solid var(--ink); border-left: 5px solid var(--forest); text-decoration: none; color: var(--ink); }
+.dash-next:hover { border-color: var(--forest); }
+.dash-next .mono { font-size: 11.5px; color: var(--forest); }
+.dash-next b { font-size: 18px; letter-spacing: -.02em; }
+.dash-h { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.dash-boxes { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; }
+.dash-boxes .tbox { padding: 8px 10px 9px; }
+.dash-boxes .tbox b { font-size: 14px; }
+.about { border-top: 2px solid var(--ink); margin-top: 32px; padding-top: 32px; }
+.about h2 { font-size: clamp(20px, 2.2vw, 26px); font-weight: 800; letter-spacing: -.03em; }
+@media (max-width: 860px) { .dash { grid-template-columns: 1fr; align-items: start; } }
+
+/* ═════════ 카드: 그림은 화면에 고정, 글은 여섯 단계를 한 단계씩 펼친다 (js/reader.js) ═════════ */
+@media (min-width: 1001px) {
+  .card-body { align-items: start; }
+  .card-fig { position: sticky; top: 64px; }
+  .card.is-max .card-fig { top: 0; }
+  .card-body > .steps-col { border-left: 1px solid var(--rule); margin-left: -1px; }
+}
+.steps-mode { display: flex; justify-content: flex-end; gap: 4px; padding: 8px 14px 0; }
+.steps-mode button { font: inherit; font-size: 11.5px; padding: 2px 9px; color: var(--ink-3); background: none; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; }
+.steps-mode button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.step-tg { position: absolute; left: 22px; top: 12px; padding: 2px 0; font: inherit; background: none; border: 0; cursor: pointer; text-align: left; }
+.step-tg .tag { position: static; }
+.steps-fold li:not(.open) { cursor: pointer; }
+.steps-fold li:not(.open):hover { background: color-mix(in srgb, var(--forest) 5%, transparent); }
+.steps-fold li:not(.open) .step-body { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink-3); }
+.steps-fold li:not(.open) .step-body .katex-display { display: inline; margin: 0; }
+.steps-fold li:not(.open) .step-next { display: none; }
+.steps-fold li.open .step-tg .tag::after { content: " ▾"; }
+.steps-fold li:not(.open) .step-tg .tag::after { content: " ▸"; }
+.step-next { display: block; margin-top: 8px; font: inherit; font-size: 12.5px; color: var(--forest); background: none; border: 1px solid var(--rule); border-radius: 2px; padding: 3px 10px; cursor: pointer; }
+.step-next:hover { border-color: var(--forest); }
+@media (max-width: 640px) { .step-tg { position: static; display: block; margin-bottom: 1px; } }
+@media print { .steps-fold li .step-body { display: block !important; -webkit-line-clamp: none !important; color: inherit !important; } .step-next, .steps-mode { display: none !important; } }

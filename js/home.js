@@ -103,7 +103,7 @@
         if (save) try { localStorage.setItem(TREE_KEY, open ? "1" : "0"); } catch (e) { /* 저장 못 해도 동작은 한다 */ }
       };
       let open = false;
-      try { open = localStorage.getItem(TREE_KEY) === "1"; } catch (e) { open = false; }
+      try { open = localStorage.getItem(TREE_KEY) !== "0"; } catch (e) { open = true; }   // 처음에는 펼쳐 둔다(메인의 과목 고르기 자리)
       setOpen(open, false);
       tg.addEventListener("click", () => setOpen(!tree.classList.contains("open"), true));
       /* 보기 범위: 기본은 일반·진로선택만. 융합선택·과학계열 열과 과목 목록의 해당 과목을 숨긴다 */
@@ -234,6 +234,45 @@
     const stat = document.getElementById("stat");
     const live = TOC.filter((c) => c.id !== "extra" && count(c).open).length;
     if (stat) stat.textContent = `과목 ${live}/${TOC.length - 1} · 절 ${total.open} · 카드 ${total.cards} · 영상 ${total.vids}`;
+
+    /* 맨 위: 마지막으로 본 카드의 절에서 아직 안 본 다음 카드로, 그리고 최근에 공부한 과목.
+       기록이 없으면 공통 과목에서 시작하도록 권한다 */
+    const go = document.getElementById("dash-go");
+    function dash() {
+      if (!go) return;
+      const at = new Map();   // 카드 id → { c, ch, s, i }
+      TOC.forEach((c) => c.chapters.forEach((ch) => ch.sections.forEach((s) => { if (s.page) s.items.forEach((i) => at.set(i.id, { c, ch, s, i })); })));
+      const blocks = S ? S.all().blocks : {};
+      let last = null, lastT = 0;
+      const recent = new Map();   // 과목 id → 마지막으로 본 시각
+      for (const [id, b] of Object.entries(blocks)) {
+        const w = at.get(id), t = (b && b.seen) || 0;
+        if (!w || !t) continue;
+        if (t > lastT) { lastT = t; last = w; }
+        recent.set(w.c.id, Math.max(recent.get(w.c.id) || 0, t));
+      }
+      const href = (w) => `${base}${w.c.id}/${w.ch.n}-${w.s.n}.html#${w.i.id}`;
+      if (!last) {   // 분야마다 첫 공통 과목의 첫 카드
+        const first = (d) => [...at.values()].find((w) => w.c.level === "공통" && domainOf(w.c.track) === d);
+        go.innerHTML = `<p class="dash-h mono">처음이라면 공통 과목의 첫 절부터</p>` + [["sci", "과학"], ["math", "수학"]].map(([d, nm]) => {
+          const w = first(d);
+          return w ? `<a class="dash-next" href="${href(w)}"><span class="mono">${nm} 처음부터 · ${esc(w.c.name)}</span><b>${w.ch.n}.${w.s.n} ${esc(w.s.title)}</b></a>` : "";
+        }).join("");
+        return;
+      }
+      /* 같은 과목에서 마지막으로 본 카드 뒤의 첫 안 본 카드(없으면 과목 처음부터 첫 안 본 카드) */
+      const seq = [...at.values()].filter((w) => w.c === last.c);
+      const k = seq.findIndex((w) => w.i.id === last.i.id);
+      const unseen = (w) => !(blocks[w.i.id] || {}).seen;
+      const next = seq.slice(k + 1).find(unseen) || seq.find(unseen);
+      const tops = [...recent.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([id]) => TOC.find((c) => c.id === id));
+      go.innerHTML = (next
+        ? `<a class="dash-next" href="${href(next)}"><span class="mono">이어서 공부하기 · ${esc(next.c.name)}</span><b>${next.ch.n}.${next.s.n} ${esc(next.s.title)}</b><span class="dim small">다음 카드: ${esc(next.i.title)}</span></a>`
+        : `<a class="dash-next" href="${base}${last.c.id}/"><span class="mono">${esc(last.c.name)}</span><b>모든 카드를 공부했습니다</b><span class="dim small">과목 목차에서 복습하기</span></a>`) +
+        `<p class="dash-h mono">최근에 공부한 과목</p><div class="dash-boxes">${tops.map((c) => box(c, true)).join("")}</div>`;
+    }
+    dash();
+    if (S) S.onChange(dash);
   }
 
   /* ───── 과목 목차(책 목차형): 왼쪽에 과목 정보·진도·선수/다음 과목, 오른쪽에 대단원 → 절 → 카드 ───── */
