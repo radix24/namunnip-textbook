@@ -62,7 +62,7 @@
             const nv = s.items.filter((i) => i.kind === "video").length, nc = s.items.length - nv;
             const hay = esc([s.title, s.code, ...s.items.map((i) => i.title)].join(" ").toLowerCase());
             const label = `<span class="mono">${ch.n}.${s.n}</span><span class="t">${esc(s.title)}</span>`;
-            const tail = s.page ? `<span class="cnt mono">${nc}${nv ? `+${nv}` : ""}</span>` : `<span class="cnt mono dim">준비 중</span>`;
+            const tail = s.page ? `<span class="cnt mono">카드 ${nc}${nv ? ` · 영상 ${nv}` : ""}</span>` : `<span class="cnt mono dim">준비 중</span>`;
             const hits = `<ul class="hits">${s.items.map((i) => `<li data-hay="${esc(i.title.toLowerCase())}">${i.kind === "video" ? "영상 · " : i.kind === "text" ? "읽기 · " : ""}${esc(i.title)}</li>`).join("")}</ul>`;
             return s.page
               ? `<li data-hay="${hay}"><a href="${base}${c.id}/${ch.n}-${s.n}.html">${label}${tail}</a>${hits}</li>`

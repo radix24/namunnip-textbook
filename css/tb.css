@@ -314,7 +314,11 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 }
 
 /* ═════════ 목차 화면 (메인·과목) — js/home.js ═════════ */
-.chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px 24px; align-content: start; }
+/* 대단원을 신문 다단처럼 흘려 채운다(줄 맞춤 격자는 짧은 대단원 아래에 큰 빈칸이 생김) */
+.chapters { columns: 250px 3; column-gap: 28px; }
+.chapter { break-inside: avoid; display: inline-block; width: 100%; margin-bottom: 24px; }
+.course-head { position: sticky; top: 84px; align-self: start; }
+@media (max-width: 1000px) { .course-head { position: static; } }
 .course-head h2 a { text-decoration: none; }
 .course-head h2 a:hover { color: var(--forest); }
 .link { font-size: 14px; color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
@@ -324,7 +328,7 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 .chapter ol > li > a, .chapter ol > li > div { display: grid; grid-template-columns: 34px 1fr auto; gap: 6px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--rule); text-decoration: none; font-size: 14.5px; line-height: 1.4; }
 .chapter ol > li > a:hover .t { text-decoration: underline; }
 .chapter ol > li > a .mono { color: var(--ink-3); font-size: 11.5px; }
-.chapter .cnt { font-size: 11px; color: var(--forest); }
+.chapter .cnt { font-size: 11px; color: var(--ink-3); white-space: nowrap; }
 .chapter li.soon > div { color: var(--ink-3); }
 .chapter .hits { display: none; padding: 2px 0 6px 40px; font-size: 13px; color: var(--ink-2); }
 .searching .chapter .hits { display: block; }
