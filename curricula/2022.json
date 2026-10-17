@@ -9915,19 +9915,31 @@
        "n": 1,
        "title": "직무 속의 수와 사칙연산",
        "code": "12직수01-01",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-1-1",
+        "card-jmath-cafe-bill",
+        "card-jmath-recipe-scale"
+       ]
       },
       {
        "n": 2,
        "title": "큰 수의 어림",
        "code": "12직수01-02",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-1-2",
+        "card-jmath-paint-estimate",
+        "card-jmath-round-budget"
+       ]
       },
       {
        "n": 3,
        "title": "표준 단위와 단위 환산",
        "code": "12직수01-03",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-1-3",
+        "card-jmath-dose-convert",
+        "card-jmath-unit-error"
+       ]
       }
      ]
     },

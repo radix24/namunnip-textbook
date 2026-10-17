@@ -1072,3 +1072,6 @@ ai-loss | 손실함수 | card-aimath-loss-curve card-aimath-loss-outlier | ai-tr
 ai-gradient | 경사하강법 | card-aimath-gradient-descent card-aimath-gd-contour | ai-loss calc1-derivative-coef
 ai-cases | 인공지능의 문제 해결 사례 | card-aimath-recommend card-aimath-neuron | ai-text-analysis ai-gradient
 ai-explore | 인공지능 수학 주제 탐구 | card-aimath-explore-plan card-aimath-fairness | ai-bigdata ai-prob-predict
+jm-arith | 직무 속의 수와 사칙연산 | card-jmath-cafe-bill card-jmath-recipe-scale | 
+jm-estimate | 큰 수의 어림 | card-jmath-paint-estimate card-jmath-round-budget | jm-arith
+jm-units | 표준 단위와 단위 환산 | card-jmath-dose-convert card-jmath-unit-error | jm-arith

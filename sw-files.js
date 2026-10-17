@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "4d4c1698806a",
+"version": "3e0d16f9e2fb",
 "files": [
 "graph.html",
 "index.html",
@@ -588,6 +588,9 @@ self.PRECACHE = {
 "c/is2/3-3.html",
 "c/is2/3-4.html",
 "c/is2/index.html",
+"c/jmath/1-1.html",
+"c/jmath/1-2.html",
+"c/jmath/1-3.html",
 "c/jmath/index.html",
 "c/labbio/1-1.html",
 "c/labbio/1-10.html",
@@ -1958,6 +1961,12 @@ self.PRECACHE = {
 "js/cards/is2/v-reel-moth.js",
 "js/cards/is2/v-resistance.js",
 "js/cards/is2/v-selection.js",
+"js/cards/jmath/cafe-bill.js",
+"js/cards/jmath/dose-convert.js",
+"js/cards/jmath/paint-estimate.js",
+"js/cards/jmath/recipe-scale.js",
+"js/cards/jmath/round-budget.js",
+"js/cards/jmath/unit-error.js",
 "js/cards/labbio/bead-sim.js",
 "js/cards/labbio/bioinfo.js",
 "js/cards/labbio/cell-culture.js",

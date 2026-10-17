@@ -1566,3 +1566,5 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 집합의 연산 | card-cm2-set-ops
 벡터의 내적 | card-geo-dot-angle
 행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add
+큰 수 읽기 | basics/b-l-big-numbers
+단위의 접두어 | basics/b-l-unit-prefix

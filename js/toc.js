@@ -17744,22 +17744,55 @@ window.TOC = [
       "n": 1,
       "title": "직무 속의 수와 사칙연산",
       "code": "12직수01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-cafe-bill",
+        "title": "카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-recipe-scale",
+        "title": "4인분 레시피로 단체 손님 30명의 음식을 만들려면?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "큰 수의 어림",
       "code": "12직수01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-paint-estimate",
+        "title": "방 하나를 칠하려면 페인트를 몇 통 사야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-round-budget",
+        "title": "올림, 버림, 반올림 중 어느 것을 써야 일이 틀어지지 않을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "표준 단위와 단위 환산",
       "code": "12직수01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-dose-convert",
+        "title": "\"체중 1 kg당 15 mg\"을 주사기 눈금 몇 mL로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-unit-error",
+        "title": "이 작업 지시서의 단위 환산은 맞을까?"
+       }
+      ]
      }
     ]
    },

@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>표준 단위와 단위 환산 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="표준 단위와 국제단위계, 값이 1인 환산 인자를 곱해 단위를 약분하는 단위 분석, 처방량을 mL로 바꾸는 계산, inch·lb·평·°F 환산과 흔한 실수(곱셈/나눗셈 반대, 접두어 자릿수, 온도의 0점). 환산 사슬 카드와, 작업 지시서 오류 찾기 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-dose-convert .ctl-row > div { min-width: 12rem; }
+    #card-jmath-dose-convert .chain { line-height: 2.2; overflow-x: auto; }
+    #card-jmath-unit-error .cases { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+    #card-jmath-unit-error .cases > li { border: 1px solid var(--rule, #d9dad2); border-radius: 8px; padding: .5rem .65rem; }
+    #card-jmath-unit-error .row { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; }
+    #card-jmath-unit-error .fb { margin: .3rem 0 0; font-size: .88rem; }
+    #card-jmath-unit-error li.ok { border-color: #3b7c2a; }
+    #card-jmath-unit-error li.no { border-color: #b5532f; }
+    #card-jmath-unit-error table { border-collapse: collapse; font-size: .82rem; margin: .3rem 0; }
+    #card-jmath-unit-error td { border: 1px solid var(--rule, #d9dad2); padding: .1rem .45rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="1-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>표준 단위와 단위 환산</h1>
+    <p class="lead">단위가 다르면 같은 양도 다른 수로 적힙니다. 그래서 세계 공통의 <em>표준 단위</em>를 정해 쓰고, 다른 단위는 환산해서 씁니다. 이 절에서는 단위를 분수처럼 약분하며 환산하는 방법을 익히고, 단위 환산에서 자주 생기는 실수를 찾아봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-l-unit-prefix" title="중학교 개념 설명 보기">단위의 접두어</button><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-dose-convert"><span class="mono">1.3.1</span>단위를 분수처럼 약분하며 환산하기</a></li>
+        <li><a href="#card-jmath-unit-error"><span class="mono">1.3.2</span>단위를 잘못 바꾼 작업 지시서 찾기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-1-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-dose-convert">
+        <header class="card-head">
+          <span class="no">1.3.1</span><h2>"체중 1 kg당 15 mg"을 주사기 눈금 몇 mL로 바꿀까?</h2><span class="kind">단위 환산 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">수업용 가상 예시입니다. 실제 투약은 반드시 의료진의 처방과 확인 절차를 따릅니다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">체중 = <output class="w-out"></output> kg</label><input class="w" type="range" min="5" max="80" step="1" value="20" aria-label="체중"></div>
+              <div><label class="mono">처방 = 1 kg당 <output class="d-out"></output> mg</label><input class="d" type="range" min="5" max="30" step="1" value="15" aria-label="체중 1 kg당 처방량"></div>
+              <div><label class="mono">약 농도 = 5 mL에 <output class="c-out"></output> mg</label><input class="c" type="range" min="100" max="500" step="20" value="160" aria-label="약 5 mL에 든 양"></div>
+            </div>
+            <div class="chain" aria-live="polite"></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>처방은 "체중 1 kg당 15 mg", 약병에는 "5 mL에 160 mg", 주사기 눈금은 mL입니다. 서로 다른 단위를 어떻게 이어서 계산할까요?</li>
+            <li><span class="tag">복원</span>분수의 곱셈에서 분자와 분모의 같은 수는 약분됩니다.</li>
+            <li><span class="tag">설명</span>"5 mL에 160 mg"은 \(\dfrac{5\text{ mL}}{160\text{ mg}}\)이나 \(\dfrac{160\text{ mg}}{5\text{ mL}}\)처럼 값이 1인 분수(환산 인자)로 쓸 수 있습니다. 구하려는 단위가 남고 나머지 단위가 약분되도록 환산 인자를 이어 곱하면 됩니다: \(20\text{ kg} \times \dfrac{15\text{ mg}}{1\text{ kg}} \times \dfrac{5\text{ mL}}{160\text{ mg}}\). 단위가 약분되어 mL만 남으면 식을 바르게 세운 것입니다.</li>
+            <li><span class="tag">연결</span>요리(컵, g), 건설(평, m²), 운송(마일, km), 과학 실험의 농도 계산에 같은 방법을 씁니다. 이 방법을 단위 분석, 또는 차원 분석이라 합니다.</li>
+            <li><span class="tag">적용</span>체중, 처방량, 농도를 바꾸며 단위가 약분되는 모습을 확인하세요. 환산 인자를 거꾸로 쓰면 남는 단위는 무엇이 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>남은 단위가 mg²/mL처럼 이상하면 환산 인자를 뒤집어 쓴 것입니다. 계산 결과의 단위를 확인하는 습관이 큰 사고를 막습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">시속 90 km는 초속 몇 m일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>25 m<span class="why"><b>맞습니다.</b> \(\frac{90\text{ km}}{1\text{ h}} \times \frac{1000\text{ m}}{1\text{ km}} \times \frac{1\text{ h}}{3600\text{ s}} = 25\) m/s입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1.5 m<span class="why"><b>km를 m로 바꾸지 않았습니다(90 ÷ 60).</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>324 m<span class="why"><b>3600을 곱하고 1000으로 나눴습니다.</b> 인자를 뒤집었습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1500 m<span class="why"><b>시간을 분으로만 바꿨습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div></nav>
+
+      <article class="card" id="card-jmath-unit-error">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>이 작업 지시서의 단위 환산은 맞을까?</h2><span class="kind">표준 단위 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <table aria-label="환산표"><tr><td>1 inch = 2.54 cm</td><td>1 kg ≈ 2.2 lb</td><td>1 평 ≈ 3.3 m²</td></tr><tr><td>1 L = 1000 mL</td><td>1 g = 1000 mg</td><td>°F = °C × 1.8 + 32</td></tr></table>
+            <p class="small">가상의 작업 지시서 다섯 장입니다. 각각 환산이 맞는지 판단하세요.</p>
+            <ol class="cases"></ol>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>해외 도면은 인치, 레시피는 화씨, 부동산은 평으로 적혀 있곤 합니다. 단위를 바꾸다 생기는 실수는 어떻게 찾을 수 있을까요?</li>
+            <li><span class="tag">복원</span>환산 인자를 곱해 단위를 약분합니다(앞 카드).</li>
+            <li><span class="tag">설명</span>세계 공통으로 쓰는 <em>표준 단위</em>(미터, 킬로그램, 초 등 국제단위계)를 쓰면 혼란이 줄지만, 현장에서는 여전히 여러 단위가 섞여 쓰입니다. 환산할 때는 ① 곱해야 하는지 나눠야 하는지, ② 접두어(k, m)의 자릿수, ③ 온도처럼 곱셈만으로 바뀌지 않는 단위를 확인해야 합니다. 결과가 상식적인 크기인지 어림으로 검토하는 것도 중요합니다.</li>
+            <li><span class="tag">연결</span>단위 실수는 실제로 큰 사고를 일으키기도 했습니다. 예를 들어 1999년 미국의 화성 기후 탐사선은 팀마다 서로 다른 단위계를 써서 궤도 계산이 어긋나 임무에 실패했습니다.</li>
+            <li><span class="tag">적용</span>다섯 장을 모두 판단하고, 틀린 지시서는 바르게 고쳐 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>섭씨와 화씨는 0점이 달라 비례 관계가 아닙니다. "2배 뜨겁다"를 화씨로 바꾸면 2배가 되지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">오븐 온도 180 °C는 화씨로 몇 °F일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>356 °F<span class="why"><b>맞습니다.</b> \(180 \times 1.8 + 32 = 356\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>324 °F<span class="why"><b>32를 더하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 82 °F<span class="why"><b>화씨를 섭씨로 바꾸는 식을 썼습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>212 °F<span class="why"><b>물이 끓는 100 °C의 화씨값입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/dose-convert.js"></script>
+<script src="../../js/cards/jmath/unit-error.js"></script>
+</body>
+</html>
