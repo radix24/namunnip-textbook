@@ -49,25 +49,25 @@
     /* 수학: 분야로 행을 나누지 않고 선택 구분 열에 과목을 늘어놓는다(행 이름 칸 없음) */
     const MATH_COLS2 = [["일반", "일반선택", "수학의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"], ["고급", "과학계열 선택", "과학고·영재학교"]];
     const matrix = (cls, label, cols, rows) => `
-      <div class="mx ${cls}" role="table" aria-label="${label}" style="--cols:${cols.length}">
+      <div class="mx ${cls}" role="table" aria-label="${label}">
         <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([lv, nm, d]) => `<span class="mx-h" role="columnheader" data-lv="${lv}">${nm}<small>${d}</small></span>`).join("")}</div>
         ${rows.map(([t, nm, get]) => {
           const hs = cols.map(([lv]) => get(lv));
-          const advOnly = cols.every(([lv], i) => lv === "고급" || lv === "실험" || !hs[i]);   // 과학계열 과목만 있는 행은 일반 보기에서 숨긴다
+          const advOnly = cols.every(([lv], i) => lv === "고급" || lv === "실험" || lv === "융합" || !hs[i]);   // 과학계열 과목만 있는 행은 일반 보기에서 숨긴다
           return `<div class="mx-row" data-track="${t}" role="row"${advOnly ? " data-adv" : ""}><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn], i) =>
             `<div class="mx-cell${hs[i] ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${hs[i]}</div>`).join("")}</div>`;
         }).join("")}
       </div>`;
     const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
     const mathRows = [["math", "선택 과목", (lv) => cell("math", lv)]];
-    /* 보기 범위: 일반 고등학교(과학계열 과목 숨김) / 과학고·영재학교 과목까지 */
-    const ADV = (c) => c.level === "고급" || c.level === "실험";
+    /* 보기 범위: 기본(일반·진로선택) / 전체(융합선택·과학계열 과목까지) */
+    const ADV = (c) => c.level === "고급" || c.level === "실험" || c.level === "융합";   // 기본 보기에서 숨기는 과목
     const cnt2 = (f) => `<span class="for-basic">${TOC.filter((c) => f(c) && !ADV(c)).length}</span><span class="for-all">${TOC.filter(f).length}</span>`;
     const nSci = cnt2((c) => c.track !== "math" && c.track !== "extra"), nMath = cnt2((c) => c.track === "math");
     if (tree) tree.innerHTML = `
       <div class="tree-head"><h2>과목 체계도</h2>
         <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
-        <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반 고등학교</button><button type="button" data-scope="all" aria-pressed="false">과학고·영재학교 과목까지</button></span>
+        <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반·진로선택</button><button type="button" data-scope="all" aria-pressed="false">전체 과목</button></span>
         <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">행은 교과, </span>열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
       <div class="tree-body" id="tree-body">
       <div class="tree-sci">
@@ -94,7 +94,7 @@
       try { open = localStorage.getItem(TREE_KEY) === "1"; } catch (e) { open = false; }
       setOpen(open, false);
       tg.addEventListener("click", () => setOpen(!tree.classList.contains("open"), true));
-      /* 보기 범위: 일반 고등학교가 기본. 과학계열 열과 과목 목록의 과학계열 과목을 숨긴다 */
+      /* 보기 범위: 기본은 일반·진로선택만. 융합선택·과학계열 열과 과목 목록의 해당 과목을 숨긴다 */
       const SCOPE_KEY = "namunnip-scope";
       const setScope = (sc, save) => {
         document.body.dataset.scope = sc === "all" ? "all" : "basic";

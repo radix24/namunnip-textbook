@@ -674,14 +674,15 @@ a.nb-title:hover { text-decoration: underline; }
 .tree-tg .tg-t::after { content: " ▾"; }
 .tree.open .tree-tg .tg-t::after { content: " ▴"; }
 .tree:not(.open) .tree-body, .tree:not(.open) .tree-note, .tree:not(.open) .scope-seg { display: none; }
-/* 보기 범위: 일반 고등학교(과학계열 숨김) / 과학고·영재학교 과목까지 */
+/* 보기 범위: 기본(일반·진로선택) / 전체(융합선택·과학계열까지). 열 수는 여기서 정한다(인라인으로 두면 숨겨도 폭이 남음) */
 .scope-seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
 .scope-seg button { font: inherit; font-size: 12.5px; padding: 5px 12px; background: transparent; border: 0; color: var(--ink-2); cursor: pointer; }
 .scope-seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 .tree-head .tree-note { flex-basis: 100%; margin: 4px 0 0; }
-body[data-scope="basic"] .mx [data-lv="고급"], body[data-scope="basic"] .mx [data-lv="실험"],
+body[data-scope="basic"] .mx [data-lv="고급"], body[data-scope="basic"] .mx [data-lv="실험"], body[data-scope="basic"] .mx [data-lv="융합"],
 body[data-scope="basic"] section.course[data-adv], body[data-scope="basic"] .mx-row[data-adv], body[data-scope="basic"] .for-all, body[data-scope="all"] .for-basic { display: none; }
-body[data-scope="basic"] .sci-mx, body[data-scope="basic"] .math-mx { --cols: 3; }
+.sci-mx { --cols: 5; } .math-mx { --cols: 4; }
+body[data-scope="basic"] .sci-mx, body[data-scope="basic"] .math-mx { --cols: 2; }
 .tree:not(.open) { padding-bottom: 20px; }
 .tree:not(.open) .tree-head { margin-bottom: 0; }
 /* 선택 과목 표: 행 = 교과(과학)·영역(수학), 열 = 선택 구분(일반·진로·융합선택은 나란히, 과학계열은 오른쪽) */
