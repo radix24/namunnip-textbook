@@ -1542,3 +1542,7 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 진법 | card-dmath-base-convert
 이진수의 사칙연산 | card-dmath-binary-add
 부울 함수와 간소화 | card-dmath-karnaugh
+집합 | card-cm2-set-ops
+그래프와 실생활 문제 | card-dmath-konigsberg
+꼭짓점의 차수와 변의 개수 | card-dmath-handshake
+평면그래프 | card-dmath-untangle

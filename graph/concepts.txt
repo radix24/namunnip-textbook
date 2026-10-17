@@ -1014,3 +1014,10 @@ dm-base | 진법 | card-dmath-base-convert card-dmath-binary-cards |
 dm-binary-arith | 이진수의 사칙연산과 2의 보수 | card-dmath-binary-add card-dmath-twos-comp | dm-base
 dm-boolean | 부울 함수와 간소화 | card-dmath-truth-table card-dmath-karnaugh | dm-binary-arith cm2-prop
 dm-logic-circuit | 논리 회로와 가산기 | card-dmath-gate-lab card-dmath-adder | dm-boolean dm-binary-arith
+dm-graph | 그래프와 실생활 문제 | card-dmath-konigsberg card-dmath-graph-model | 
+dm-degree | 꼭짓점의 차수와 변의 개수 | card-dmath-handshake card-dmath-degree-seq | dm-graph
+dm-adjacency | 인접행렬 | card-dmath-adj-matrix card-dmath-walk-count | dm-degree cm1-matrix-mult if-graph-rep
+dm-planar | 평면그래프와 오일러 공식 | card-dmath-untangle card-dmath-euler-formula | dm-degree
+dm-euler-hamilton | 오일러그래프와 해밀턴그래프 | card-dmath-euler-trail card-dmath-hamilton | dm-degree
+dm-tree | 수형도와 생성수형도 | card-dmath-tree-facts card-dmath-kruskal | dm-degree
+dm-coloring | 채색수와 채색다항식 | card-dmath-map-color card-dmath-chromatic-poly | dm-planar cm1-product-rule

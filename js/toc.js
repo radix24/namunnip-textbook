@@ -16586,50 +16586,127 @@ window.TOC = [
       "n": 1,
       "title": "그래프와 실생활 문제",
       "code": "12이수04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-konigsberg",
+        "title": "일곱 다리를 한 번씩만 건너 산책할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-graph-model",
+        "title": "버스 노선 설명을 그래프로 그리면 무엇이 보일까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "꼭짓점의 차수와 변의 개수",
       "code": "12이수04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-handshake",
+        "title": "악수한 횟수를 모두 더하면 왜 늘 짝수일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-degree-seq",
+        "title": "차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "인접행렬",
       "code": "12이수04-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-adj-matrix",
+        "title": "그래프를 수의 표로 바꾸면 무엇을 계산할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-walk-count",
+        "title": "세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "평면그래프",
       "code": "12이수04-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-untangle",
+        "title": "엉킨 그래프를 선이 겹치지 않게 펼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-euler-formula",
+        "title": "평면그래프에서 점, 선, 면의 수 사이에는 어떤 관계가 있을까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "오일러그래프와 해밀턴그래프",
       "code": "12이수04-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-euler-trail",
+        "title": "한붓그리기가 되는 그림은 미리 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-hamilton",
+        "title": "모든 도시를 꼭 한 번씩 들르고 돌아오는 길이 있을까?"
+       }
+      ]
      },
      {
       "n": 6,
       "title": "수형도와 생성수형도",
       "code": "12이수04-06",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-tree-facts",
+        "title": "회로 없이 모든 점을 이으려면 선이 몇 개 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-kruskal",
+        "title": "모든 마을에 광케이블을 가장 싸게 연결하려면?"
+       }
+      ]
      },
      {
       "n": 7,
       "title": "채색수와 채색다항식",
       "code": "12이수04-07",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-map-color",
+        "title": "지도를 칠하는 데 색이 최소 몇 가지 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-chromatic-poly",
+        "title": "색이 k가지일 때 칠하는 방법은 몇 가지일까?"
+       }
+      ]
      }
     ]
    }

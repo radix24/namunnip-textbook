@@ -1,0 +1,164 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인접행렬 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="그래프의 인접행렬(방향 없는 그래프와 방향그래프), 행의 합과 차수, 인접행렬의 거듭제곱과 경로의 수. 그래프와 행렬을 함께 편집하는 카드와, 가상 항공 노선의 경로를 Aᵏ로 세는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-adj-matrix .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .6rem; align-items: center; }
+    #card-dmath-adj-matrix canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+    #card-dmath-adj-matrix table.am { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; margin: 0 auto; }
+    #card-dmath-adj-matrix table.am th { padding: .1rem .4rem; color: var(--ink-2); font-size: .85rem; }
+    #card-dmath-adj-matrix table.am td { padding: 0; }
+    #card-dmath-adj-matrix table.am button { width: 2.1rem; height: 2.1rem; border: 1px solid var(--rule); background: var(--card); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+    #card-dmath-adj-matrix table.am button.one { background: #3f6fa3; color: #fff; }
+    #card-dmath-adj-matrix table.am button:disabled { background: var(--paper-2); color: var(--ink-3); cursor: default; }
+    #card-dmath-adj-matrix table.am td.sum { padding: 0 .5rem; color: var(--forest); font-weight: 700; }
+    #card-dmath-walk-count .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .6rem; align-items: center; }
+    #card-dmath-walk-count canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+    #card-dmath-walk-count table.am { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; margin: 0 auto; }
+    #card-dmath-walk-count table.am th, #card-dmath-walk-count table.am td { padding: .2rem .5rem; text-align: center; }
+    #card-dmath-walk-count table.am th { color: var(--ink-2); font-size: .82rem; }
+    #card-dmath-walk-count table.am td { border: 1px solid var(--rule); }
+    #card-dmath-walk-count table.am td.hi { background: var(--hl); font-weight: 700; }
+    #card-dmath-walk-count .walks { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .8rem; line-height: 1.6; max-height: 9rem; overflow-y: auto; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="4-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>인접행렬</h1>
+    <p class="lead">그래프를 컴퓨터에 넣으려면 그림이 아니라 수의 표로 바꿔야 합니다. 이어진 두 꼭짓점의 자리에 1, 아니면 0을 적은 행렬이 <em>인접행렬</em>입니다. 행렬로 바꾸면 행렬의 계산으로 그래프의 성질을 알아낼 수 있습니다. 이 절에서는 그래프와 인접행렬을 오가며 바꿔 보고, 인접행렬의 거듭제곱이 경로의 수를 세어 주는 것을 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/4-2.html#card-cm1-matrix-mult" title="공통수학1 4.2 · 행렬의 곱은 왜 행과 열을 짝지어 계산할까?">행렬의 곱셈</a><a class="p p-card" href="../../c/dmath/4-2.html#card-dmath-handshake" title="이산 수학 4.2 · 악수한 횟수를 모두 더하면 왜 늘 짝수일까?">꼭짓점의 차수와 변의 개수</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-adj-matrix"><span class="mono">4.3.1</span>그래프와 인접행렬을 오가며 바꾸기</a></li>
+        <li><a href="#card-dmath-walk-count"><span class="mono">4.3.2</span>인접행렬의 거듭제곱으로 경로 세기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-4-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-adj-matrix">
+        <header class="card-head">
+          <span class="no">4.3.1</span><h2>그래프를 수의 표로 바꾸면 무엇을 계산할 수 있을까?</h2><span class="kind">인접행렬 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="그래프 종류"><button class="chip" type="button" data-d="0" aria-pressed="true">방향 없음</button><button class="chip" type="button" data-d="1">방향 있음</button></div>
+            <div class="two">
+              <canvas aria-label="그래프. 두 점을 차례로 누르면 변이 생기거나 지워진다"></canvas>
+              <table class="am" aria-label="인접행렬. 칸을 누르면 변이 생기거나 지워진다"></table>
+            </div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>컴퓨터는 그림을 볼 수 없습니다. 꼭짓점이 수천 개인 연결망을 컴퓨터에 넣으려면 그래프를 어떤 모양의 자료로 바꿔야 할까요?</li>
+            <li><span class="tag">복원</span>행렬의 \((i, j)\) 성분은 \(i\)행 \(j\)열의 수입니다.</li>
+            <li><span class="tag">설명</span>꼭짓점이 \(n\)개인 그래프에서 \(i\)와 \(j\)가 변으로 이어져 있으면 1, 아니면 0을 \((i, j)\) 성분으로 하는 \(n \times n\) 행렬을 <em>인접행렬</em>이라 합니다. 방향 없는 그래프의 인접행렬은 대각선에 대해 대칭이고, 대각성분은 0(고리 없음)이며, <b>\(i\)행의 합이 꼭짓점 \(i\)의 차수</b>입니다. 방향그래프에서는 \(i \to j\)일 때만 \((i, j)\) 성분이 1이라 대칭이 아닐 수 있고, 행의 합은 나가는 변, 열의 합은 들어오는 변의 수입니다.</li>
+            <li><span class="tag">연결</span>인접행렬을 거듭제곱하면 경로의 수를 셀 수 있습니다(다음 카드). 고급 대수의 페이지랭크도 방향그래프의 인접행렬에서 시작했습니다.</li>
+            <li><span class="tag">적용</span>그래프에서 변을 잇고 행렬이 어떻게 바뀌는지, 행렬의 칸을 눌러 그래프가 어떻게 바뀌는지 보세요. "방향 있음"으로 바꾸면 행렬의 대칭이 어떻게 되나요? 행의 합과 차수를 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>꼭짓점의 번호를 바꾸면 인접행렬의 모양은 달라지지만 그래프는 같습니다. 그래서 두 행렬이 다르게 생겼다고 두 그래프가 다르다고 단정할 수 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">방향 없는 그래프의 인접행렬에서 모든 성분의 합이 14입니다. 변은 몇 개일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(7\)개<span class="why"><b>맞습니다.</b> 변 하나가 \((i, j)\), \((j, i)\) 두 칸에 1을 씁니다. 차수의 합 = 2 × 변의 수와 같은 이야기입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(14\)개<span class="why"><b>대칭인 두 칸을 따로 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(28\)개<span class="why"><b>두 배를 한 번 더 했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>꼭짓점 수를 알아야 한다<span class="why"><b>성분의 합만으로 정해집니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/cm1/4-2.html#card-cm1-matrix-mult"><small class="mono">공통수학1 4.2</small>행렬의 곱은 왜 행과 열을 짝지어 계산할까?</a><a href="../../c/info/2-3.html#card-info-graphrep"><small class="mono">정보과학 2.3</small>같은 그래프를 표로 저장할까, 목록으로 저장할까?</a></div></nav>
+
+      <article class="card" id="card-dmath-walk-count">
+        <header class="card-head">
+          <span class="no">4.3.2</span><h2>세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?</h2><span class="kind">인접행렬의 거듭제곱 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">출발 <select class="s" aria-label="출발 도시"></select></label>
+              <label class="mono">도착 <select class="t" aria-label="도착 도시"></select></label>
+              <label class="mono">비행 횟수 k <select class="k" aria-label="비행 횟수"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+            </div>
+            <div class="two">
+              <canvas aria-label="가상 항공 노선. 출발 도시는 주황, 도착 도시는 초록"></canvas>
+              <div><p class="mono small cap"></p><table class="am" aria-label="인접행렬의 k제곱"></table></div>
+            </div>
+            <p class="mono small say" role="status"></p>
+            <div class="walks" aria-label="가능한 경로 목록"></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>다섯 도시 사이에 직항 노선이 있습니다. 서울에서 출발해 비행기를 정확히 세 번 타고 부산에 도착하는 경로(같은 도시를 다시 들러도 됨)는 몇 가지일까요? 하나하나 세지 않고 계산할 수 있을까요?</li>
+            <li><span class="tag">복원</span>인접행렬 \(A\)의 \((i, j)\) 성분은 \(i\)와 \(j\) 사이의 변의 수입니다. 행렬의 곱 \((AB)_{ij} = \sum_m A_{im}B_{mj}\)입니다.</li>
+            <li><span class="tag">설명</span>\((A^2)_{ij} = \sum_m A_{im}A_{mj}\)는 "\(i\)에서 \(m\)으로, \(m\)에서 \(j\)로" 가는 길을 중간 도시 \(m\)마다 세어 더한 것이므로 길이 2인 경로의 수입니다. 같은 이유로 <b>\((A^k)_{ij}\)는 \(i\)에서 \(j\)로 가는 길이 \(k\)인 경로(같은 꼭짓점을 다시 지나도 됨)의 수</b>입니다. 대각성분 \((A^2)_{ii}\)는 꼭짓점 \(i\)의 차수와 같습니다.</li>
+            <li><span class="tag">연결</span>\((A^3)_{ii}\)의 합을 6으로 나누면 그래프 속 삼각형의 개수가 됩니다. 사회 연결망 분석에서 "친구의 친구의 친구" 수를 세거나, 고급 대수의 마르코프 연쇄에서 여러 단계 뒤의 확률을 계산할 때 같은 원리를 씁니다.</li>
+            <li><span class="tag">적용</span>출발, 도착, \(k\)를 바꾸며 표의 강조된 수와 아래 경로 목록의 개수가 같은지 확인하세요. \(k = 2\)에서 대각선의 수는 각 도시의 노선 수와 같나요?</li>
+            <li class="warn"><span class="tag">판단</span>\((A^k)_{ij}\)는 같은 도시를 여러 번 지나는 경로까지 셉니다. 한 도시를 한 번만 지나는 경로(단순 경로)의 수는 이렇게 쉽게 구할 수 없습니다. 노선은 수업용으로 만든 가상의 것입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">삼각형 그래프(세 꼭짓점이 서로 모두 이어짐)에서 한 꼭짓점에서 출발해 길이 2로 같은 꼭짓점에 돌아오는 경로의 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(2\)<span class="why"><b>맞습니다.</b> 이웃 둘 중 하나에 갔다가 돌아오므로 차수와 같은 2입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(0\)<span class="why"><b>같은 변을 되돌아오는 것도 경로로 셉니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(1\)<span class="why"><b>이웃이 둘입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(3\)<span class="why"><b>길이 3인 경로와 헷갈렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/cm1/4-2.html#card-cm1-matrix-mult"><small class="mono">공통수학1 4.2</small>행렬의 곱은 왜 행과 열을 짝지어 계산할까?</a><a href="../../c/info/2-3.html#card-info-graphrep"><small class="mono">정보과학 2.3</small>같은 그래프를 표로 저장할까, 목록으로 저장할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-4-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/graph.js"></script>
+<script src="../../js/cards/dmath/adj-matrix.js"></script>
+<script src="../../js/cards/dmath/graph.js"></script>
+<script src="../../js/cards/dmath/walk-count.js"></script>
+</body>
+</html>
