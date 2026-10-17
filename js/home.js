@@ -57,19 +57,23 @@
     const extraMath = TOC.filter((c) => c.track === "math" && c.level !== "공통" && !placed.has(c.id));   // 표에 없는 새 과목은 마지막 행에
     const matrix = (cls, label, cols, rows) => `
       <div class="mx ${cls}" role="table" aria-label="${label}" style="--cols:${cols.length}">
-        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([, nm, d]) => `<span class="mx-h" role="columnheader">${nm}<small>${d}</small></span>`).join("")}</div>
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([lv, nm, d]) => `<span class="mx-h" role="columnheader" data-lv="${lv}">${nm}<small>${d}</small></span>`).join("")}</div>
         ${rows.map(([t, nm, get]) => `<div class="mx-row" data-track="${t}" role="row"><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn]) => {
           const h = get(lv);
-          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${cn}">${h}</div>`;
+          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${h}</div>`;
         }).join("")}</div>`).join("")}
       </div>`;
     const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
     const mathRows = MATH_ROWS.map(([nm, m]) => ["math", nm, (lv) => (m[lv] || []).map(byId).filter(Boolean).map((c) => box(c, true)).join("")]);
     if (extraMath.length) mathRows.push(["math", "그 밖의 과목", (lv) => extraMath.filter((c) => c.level === lv).map((c) => box(c, true)).join("")]);
-    const nSci = TOC.filter((c) => c.track !== "math" && c.track !== "extra").length, nMath = TOC.filter((c) => c.track === "math").length;
+    /* 보기 범위: 일반 고등학교(과학계열 과목 숨김) / 과학고·영재학교 과목까지 */
+    const ADV = (c) => c.level === "고급" || c.level === "실험";
+    const cnt2 = (f) => `<span class="for-basic">${TOC.filter((c) => f(c) && !ADV(c)).length}</span><span class="for-all">${TOC.filter(f).length}</span>`;
+    const nSci = cnt2((c) => c.track !== "math" && c.track !== "extra"), nMath = cnt2((c) => c.track === "math");
     if (tree) tree.innerHTML = `
       <div class="tree-head"><h2>과목 체계도</h2>
         <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
+        <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반 고등학교</button><button type="button" data-scope="all" aria-pressed="false">과학고·영재학교 과목까지</button></span>
         <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. 행은 ${"<span class=\"for-sci\">교과</span><span class=\"for-math\">영역</span>"}, 열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
       <div class="tree-body" id="tree-body">
       <div class="tree-sci">
@@ -96,6 +100,17 @@
       try { open = localStorage.getItem(TREE_KEY) === "1"; } catch (e) { open = false; }
       setOpen(open, false);
       tg.addEventListener("click", () => setOpen(!tree.classList.contains("open"), true));
+      /* 보기 범위: 일반 고등학교가 기본. 과학계열 열과 과목 목록의 과학계열 과목을 숨긴다 */
+      const SCOPE_KEY = "namunnip-scope";
+      const setScope = (sc, save) => {
+        document.body.dataset.scope = sc === "all" ? "all" : "basic";
+        tree.querySelectorAll("[data-scope]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.scope === document.body.dataset.scope)));
+        if (save) try { localStorage.setItem(SCOPE_KEY, document.body.dataset.scope); } catch (e) { /* 무시 */ }
+      };
+      let sc0 = "basic";
+      try { sc0 = localStorage.getItem(SCOPE_KEY) || "basic"; } catch (e) { sc0 = "basic"; }
+      setScope(sc0, false);
+      tree.querySelector(".scope-seg").addEventListener("click", (e) => { const b = e.target.closest("[data-scope]"); if (b) setScope(b.dataset.scope, true); });
     }
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
@@ -114,7 +129,7 @@
           }).join("")}</ol>
         </div>`).join("");
       return `
-      <section class="course" data-course="${c.id}" data-track="${c.track}">
+      <section class="course" data-course="${c.id}" data-track="${c.track}"${ADV(c) ? ' data-adv="1"' : ""}>
         <div class="course-head">
           <span class="mono">${esc(c.meta)}</span>
           <h2><a href="${base}${c.id}/">${esc(c.name)}</a></h2>
