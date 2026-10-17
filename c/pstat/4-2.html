@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통계적 탐구의 성찰 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="상태별로는 A 병원이 높지만 합치면 B 병원이 높은 심프슨의 역설(가상 자료)과 환자 구성의 가중 평균, 유의한 결과만 실릴 때 부풀려지는 효과(출판 편향)와 표본 크기, 결과를 모두 보고하는 태도. 심프슨의 역설 카드와, 출판 편향 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pstat-simpson-paradox table { border-collapse: collapse; font-size: .85rem; width: 100%; }
+    #card-pstat-simpson-paradox td, #card-pstat-simpson-paradox th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .25rem .35rem; text-align: right; }
+    #card-pstat-simpson-paradox td:first-child, #card-pstat-simpson-paradox th:first-child { text-align: left; }
+    #card-pstat-simpson-paradox td.win { font-weight: 700; color: #3b7c2a; }
+    #card-pstat-simpson-paradox tr.total td { border-top: 2px solid #8d8d92; }
+    #card-pstat-simpson-paradox .ctl-row > div { min-width: 13rem; }
+    #card-pstat-publication-bias canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-pstat-publication-bias .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="pstat" data-sec="4-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>통계적 탐구의 성찰</h1>
+    <p class="lead">탐구를 마치면 과정과 결과를 비판적으로 돌아봐야 합니다. 자료를 합치는 방식에 따라 결론이 뒤집히기도 하고, 유리한 결과만 보고하면 전체 그림이 왜곡됩니다. 이 절에서는 통계적 탐구를 <em>성찰</em>할 때 점검할 함정을 살펴봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/fusi/2-6.html#card-fusi-simpson" title="융합과학 탐구 2.6 · 모든 집단에서 더 나은 치료가 전체로는 더 나쁠 수 있을까?">비율과 가중 평균</a><a class="p p-card" href="../../c/stat/3-6.html#card-stat-xbar-dist" title="확률과 통계 3.6 · 표본을 크게 뽑으면 표본평균은 덜 흔들릴까?">표본평균의 분포</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pstat-simpson-paradox"><span class="mono">4.2.1</span>나눠 보면 A가 낫고 합쳐 보면 B가 낫다 — 심프슨의 역설</a></li>
+        <li><a href="#card-pstat-publication-bias"><span class="mono">4.2.2</span>유의한 결과만 발표되면 — 출판 편향과 부풀려진 효과</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pstat-4-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pstat-simpson-paradox">
+        <header class="card-head">
+          <span class="no">4.2.1</span><h2>두 병원 중 어디가 수술을 더 잘할까? 합쳐 본 결과와 나눠 본 결과가 반대라면?</h2><span class="kind">심프슨의 역설 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small"><b>가상</b> 자료: 두 병원의 수술 성공률을 환자의 상태(경증, 중증)별로 정리했습니다. 각 병원 환자는 500명입니다.</p>
+            <div class="ctl-row"><div><label class="mono">A 병원 환자 중 중증 비율 = <output class="s-out"></output>%</label><input class="s" type="range" min="10" max="90" step="5" value="80" aria-label="A 병원의 중증 환자 비율"></div></div>
+            <div style="overflow-x:auto"><table></table></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>전체 수술 성공률은 B 병원이 높습니다. 그런데 경증 환자끼리, 중증 환자끼리 비교하면 둘 다 A 병원이 높습니다. 어떻게 이런 일이 생길까요? 어느 병원을 골라야 할까요?</li>
+            <li><span class="tag">복원</span>가중 평균: 전체 비율은 집단별 비율을 각 집단의 크기로 가중 평균한 값입니다.</li>
+            <li><span class="tag">설명</span>A 병원은 성공률이 낮을 수밖에 없는 중증 환자를 훨씬 많이 맡습니다. 전체 성공률은 집단별 성공률을 <em>환자 구성</em>으로 가중 평균한 값이라, 각 집단에서 앞서도 어려운 환자가 많으면 전체에서는 뒤질 수 있습니다. 이처럼 집단을 합치면 비교의 방향이 뒤바뀌는 현상을 <em>심프슨의 역설</em>이라 합니다. 여기서 환자의 상태는 병원 선택과 결과에 함께 영향을 주는 변수이므로, 상태별로 나눠 비교하는 것이 알맞습니다.</li>
+            <li><span class="tag">연결</span>대학 입학 성차별 논쟁, 신약의 효과 분석에서 실제로 이런 사례가 논의되었습니다. 통계적 탐구를 마무리할 때 숨은 변수를 점검해야 하는 까닭입니다.</li>
+            <li><span class="tag">적용</span>A 병원의 중증 비율을 바꾸며 전체 성공률의 순서가 뒤집히는 지점을 찾아보세요.</li>
+            <li class="warn"><span class="tag">판단</span>나눠 보는 것이 언제나 옳은 것은 아닙니다. 어떤 변수로 나눌지는 그 변수가 원인과 결과 사이에서 어떤 역할을 하는지에 따라 정해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">심프슨의 역설이 생기는 가장 직접적인 까닭은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>두 집단의 구성(가중치)이 서로 다르기 때문<span class="why"><b>맞습니다.</b> 전체 비율은 구성 비율로 가중 평균됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>계산 실수 때문<span class="why"><b>계산은 모두 맞습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>표본이 작기 때문<span class="why"><b>표본이 커도 생깁니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>비율 대신 평균을 써야 하기 때문<span class="why"><b>평균에서도 같은 일이 생길 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/3-4.html#card-pstat-coin-test"><small class="mono">실용 통계 3.4</small>동전을 100번 던져 앞면이 61번 나왔다면, 이 동전은 치우친 걸까?</a><a href="../../c/pstat/3-4.html#card-pstat-p-hacking"><small class="mono">실용 통계 3.4</small>아무 효과 없는 영양제를 20가지 증상에 대해 검정하면 '효과 있음'이 나올까?</a><a href="../../c/pstat/2-2.html#card-pstat-survey-wording"><small class="mono">실용 통계 2.2</small>설문 문항을 어떻게 쓰느냐에 따라 응답이 달라질까?</a><a href="../../c/pstat/2-2.html#card-pstat-random-assign"><small class="mono">실용 통계 2.2</small>새 공부법을 고른 학생들의 점수가 높다면, 공부법의 효과일까?</a></div></nav>
+
+      <article class="card" id="card-pstat-publication-bias">
+        <header class="card-head">
+          <span class="no">4.2.2</span><h2>'효과 있음'만 발표된다면, 발표된 연구들의 평균 효과는 믿을 만할까?</h2><span class="kind">출판 편향과 탐구의 성찰 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small"><b>가상</b>: 연구팀 200곳이 같은 학습법의 효과를 각자 실험합니다(집단당 \(n\)명). 그중 효과가 양수이면서 유의한(\(p &lt; 0.05\)) 연구만 학술지에 실린다고 합시다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">실제 효과 = <output class="d-out"></output>(표준편차 단위)</label><input class="d" type="range" min="0" max="0.6" step="0.05" value="0.1" aria-label="실제 효과"></div>
+              <div><label class="mono">집단당 인원 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="10" max="200" step="10" value="30" aria-label="집단당 인원"></div>
+            </div>
+            <div class="presets"><button class="chip run" type="button">연구 200개 하기</button></div>
+            <canvas aria-label="연구 200개의 추정 효과 분포. 실린 연구와 실리지 않은 연구, 실제 효과 선"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>통계적 탐구를 마치고 결과를 발표할 때, 기대한 결과가 나온 것만 알리면 어떤 일이 생길까요?</li>
+            <li><span class="tag">복원</span>표본평균의 분포, 유의확률, 1종 오류.</li>
+            <li><span class="tag">설명</span>같은 실험이라도 표본마다 추정한 효과는 흩어집니다. 유의한 결과만 실리면 우연히 효과가 크게 나온 연구만 모이게 되어, 실린 연구들의 평균 효과는 실제보다 <em>부풀려집니다</em>(출판 편향). 실제 효과가 0이어도 몇몇 연구는 유의하게 나와 실립니다. 표본이 작을수록 크게 튄 결과만 유의해지므로 부풀림이 더 심합니다.</li>
+            <li><span class="tag">연결</span>여러 분야에서 유명한 연구를 다시 해 보았을 때 효과가 더 작거나 재현되지 않는 경우가 보고되어 왔고, 이를 줄이려고 연구 계획을 미리 등록하거나 유의하지 않은 결과도 발표하도록 권장하고 있습니다.</li>
+            <li><span class="tag">적용</span>실제 효과 0과 0.1에서 실린 연구의 평균 효과를 비교하세요. 집단당 인원을 늘리면 부풀림이 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>자신의 탐구를 돌아볼 때도 같습니다. 예상과 다른 결과, 유의하지 않은 결과도 함께 기록하고 보고해야 다른 사람이 결과를 바르게 판단할 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">유의한 결과만 발표될 때, 발표된 연구들의 평균 효과는 실제 효과와 비교해 대체로?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>더 크다<span class="why"><b>맞습니다.</b> 우연히 크게 나온 결과가 골라지기 때문입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>같다<span class="why"><b>모든 연구를 모으면 같지만, 고른 연구만 보면 다릅니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>더 작다<span class="why"><b>작게 나온 결과가 빠지므로 반대입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>알 수 없다<span class="why"><b>방향은 분명히 부풀리는 쪽입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/3-4.html#card-pstat-coin-test"><small class="mono">실용 통계 3.4</small>동전을 100번 던져 앞면이 61번 나왔다면, 이 동전은 치우친 걸까?</a><a href="../../c/pstat/3-4.html#card-pstat-p-hacking"><small class="mono">실용 통계 3.4</small>아무 효과 없는 영양제를 20가지 증상에 대해 검정하면 '효과 있음'이 나올까?</a><a href="../../c/pstat/2-2.html#card-pstat-survey-wording"><small class="mono">실용 통계 2.2</small>설문 문항을 어떻게 쓰느냐에 따라 응답이 달라질까?</a><a href="../../c/pstat/2-2.html#card-pstat-random-assign"><small class="mono">실용 통계 2.2</small>새 공부법을 고른 학생들의 점수가 높다면, 공부법의 효과일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pstat-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pstat/simpson-paradox.js"></script>
+<script src="../../js/cards/stat/stat-lib.js"></script>
+<script src="../../js/cards/pstat/pst.js"></script>
+<script src="../../js/cards/pstat/publication-bias.js"></script>
+</body>
+</html>

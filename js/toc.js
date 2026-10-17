@@ -18638,15 +18638,37 @@ window.TOC = [
       "n": 1,
       "title": "통계적 탐구와 의사 결정",
       "code": "12실통04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ab-test",
+        "title": "온라인 쇼핑몰이 새 화면을 쓸지, A/B 테스트 결과로 결정할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-error-cost",
+        "title": "불량품 검사의 기준선을 어디에 그어야 손해가 가장 적을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "통계적 탐구의 성찰",
       "code": "12실통04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-simpson-paradox",
+        "title": "두 병원 중 어디가 수술을 더 잘할까? 합쳐 본 결과와 나눠 본 결과가 반대라면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-publication-bias",
+        "title": "'효과 있음'만 발표된다면, 발표된 연구들의 평균 효과는 믿을 만할까?"
+       }
+      ]
      }
     ]
    }

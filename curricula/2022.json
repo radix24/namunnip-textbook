@@ -10449,13 +10449,21 @@
        "n": 1,
        "title": "통계적 탐구와 의사 결정",
        "code": "12실통04-01",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-4-1",
+        "card-pstat-ab-test",
+        "card-pstat-error-cost"
+       ]
       },
       {
        "n": 2,
        "title": "통계적 탐구의 성찰",
        "code": "12실통04-02",
-       "blocks": []
+       "blocks": [
+        "intro-pstat-4-2",
+        "card-pstat-simpson-paradox",
+        "card-pstat-publication-bias"
+       ]
       }
      ]
     }

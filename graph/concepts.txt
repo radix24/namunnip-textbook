@@ -1117,3 +1117,5 @@ pst-tdist | 정규분포와 t분포 | card-pstat-t-vs-z card-pstat-why-t | pst-s
 pst-ci-mean | 모평균의 추정(t분포) | card-pstat-ci-t-cover card-pstat-sample-size | pst-tdist pst-sampling
 pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat-lead-margin | pst-sampling
 pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking | pst-ci-prop
+pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat-error-cost | pst-test
+pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias | pst-test pst-collect
