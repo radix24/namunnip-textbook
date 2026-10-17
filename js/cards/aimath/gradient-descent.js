@@ -27,7 +27,7 @@
   function update() {
     $(".lr-out").textContent = (+lrIn.value).toFixed(3); $(".w0-out").textContent = (+w0In.value).toFixed(1);
     const k = path.length - 1, w = path[k], show = path.slice(-6);
-    $("table").innerHTML = `<tr><th>걸음</th><th>w</th><th>L'(w)</th><th>L(w)</th></tr>` + show.map((v, i) => `<tr><td>${k - show.length + 1 + i}</td><td>${Math.abs(v) > 1e5 ? "발산" : v.toFixed(4)}</td><td>${Math.abs(v) > 1e5 ? "—" : dL(v).toFixed(3)}</td><td>${Math.abs(v) > 1e5 ? "—" : L(v).toFixed(3)}</td></tr>`).join("");
+    $("table").innerHTML = `<tr><th>걸음</th><th>w</th><th>기울기</th><th>L(w)</th></tr>` + show.map((v, i) => `<tr><td>${k - show.length + 1 + i}</td><td>${Math.abs(v) > 1e5 ? "발산" : v.toFixed(4)}</td><td>${Math.abs(v) > 1e5 ? "—" : dL(v).toFixed(3)}</td><td>${Math.abs(v) > 1e5 ? "—" : L(v).toFixed(3)}</td></tr>`).join("");
     const lim = 2 / CURV;
     $(".say").textContent = `${k}걸음 뒤 w = ${Math.abs(w) > 1e5 ? "발산" : w.toFixed(4)} (목표 ${WS.toFixed(4)}) · 이 손실에서는 학습률이 ${lim.toFixed(4)}보다 크면 발산합니다`;
     draw();

@@ -58,8 +58,20 @@
             `<div class="mx-cell${hs[i] ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${hs[i]}</div>`).join("")}</div>`;
         }).join("")}
       </div>`;
-    const sciRows = SCI_ROWS.map(([t, nm]) => [t, nm, (lv) => cell(t, lv)]);
-    const mathRows = [["math", "선택 과목", (lv) => cell("math", lv)]];
+    /* 과학 표: 열 = 교과(물리·화학·생명과학·지구과학·교과 공통), 행 = 선택 구분 */
+    const sciMatrix = () => `
+      <div class="mx sci-mx" role="table" aria-label="과학 선택 과목: 선택 구분별, 교과별">
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${SCI_ROWS.map(([t, nm]) => `<span class="mx-h mx-tk" role="columnheader" data-track="${t}" data-tk="${t}">${nm}</span>`).join("")}</div>
+        ${SCI_COLS.map(([lv, nm, d]) => `<div class="mx-row" role="row" data-lv="${lv}"><span class="mx-lb mx-lv" role="rowheader">${nm}<small>${d}</small></span>${SCI_ROWS.map(([t, tn]) => {
+          const h = cell(t, lv);
+          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${tn}" data-tk="${t}" data-track="${t}">${h}</div>`;
+        }).join("")}</div>`).join("")}
+      </div>`;
+    /* 수학 표: 행 = 선택 구분, 행 안에서 과목 상자를 같은 폭으로 옆으로 늘어놓는다 */
+    const mathMatrix = () => `
+      <div class="mx math-mx" role="table" aria-label="수학 선택 과목: 선택 구분별">
+        ${MATH_COLS2.map(([lv, nm, d]) => { const h = cell("math", lv); return h ? `<div class="mx-row mx-flowrow" role="row" data-lv="${lv}" data-track="math"><span class="mx-lb mx-lv" role="rowheader">${nm}<small>${d}</small></span><div class="mx-cell mx-flow" role="cell" data-col="${nm}">${h}</div></div>` : ""; }).join("")}
+      </div>`;
     /* 보기 범위: 기본(일반·진로선택) / 전체(융합선택·과학계열 과목까지) */
     const ADV = (c) => c.level === "고급" || c.level === "실험" || c.level === "융합";   // 기본 보기에서 숨기는 과목
     const cnt2 = (f) => `<span class="for-basic">${TOC.filter((c) => f(c) && !ADV(c)).length}</span><span class="for-all">${TOC.filter(f).length}</span>`;
@@ -68,17 +80,17 @@
       <div class="tree-head"><h2>과목 체계도</h2>
         <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
         <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반·진로선택</button><button type="button" data-scope="all" aria-pressed="false">전체 과목</button></span>
-        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">행은 교과, </span>열은 선택 구분입니다. 흐린 상자는 아직 준비 중입니다.</p></div>
+        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">열은 교과, 행은 선택 구분입니다.</span><span class="for-math">행은 선택 구분입니다.</span> 흐린 상자는 아직 준비 중입니다.</p></div>
       <div class="tree-body" id="tree-body">
       <div class="tree-sci">
         <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
         <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
-        ${matrix("sci-mx", "과학 선택 과목: 교과별, 선택 구분별", SCI_COLS, sciRows)}
+        ${sciMatrix()}
       </div>
       <div class="tree-mth">
         <div class="tree-band" data-track="math"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div>
         <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
-        ${matrix("math-mx no-lb", "수학 선택 과목: 영역별, 선택 구분별", MATH_COLS2, mathRows)}
+        ${mathMatrix()}
       </div>
       </div>`;
     /* 체계도 접기: 처음엔 접힌 채로, 펼친 상태는 이 브라우저에 기억한다 */
@@ -106,9 +118,23 @@
       setScope(sc0, false);
       tree.querySelector(".scope-seg").addEventListener("click", (e) => { const b = e.target.closest("[data-scope]"); if (b) setScope(b.dataset.scope, true); });
     }
+    /* 대단원을 순서대로 k단에 나눈다: 각 단 높이(절 수 + 머리 2줄)의 최댓값이 가장 작게(연속 분할) */
+    const split = (chs, k) => {
+      const w = chs.map((ch) => ch.sections.length + 2), n = w.length;
+      k = Math.min(k, n);
+      const pre = [0]; w.forEach((x) => pre.push(pre.at(-1) + x));
+      const best = Array.from({ length: k + 1 }, () => new Array(n + 1).fill(Infinity)), cut = best.map(() => new Array(n + 1).fill(0));
+      best[0][0] = 0;
+      for (let j = 1; j <= k; j++) for (let i = 1; i <= n; i++) for (let p = j - 1; p < i; p++) {
+        const v = Math.max(best[j - 1][p], pre[i] - pre[p]); if (v < best[j][i]) { best[j][i] = v; cut[j][i] = p; }
+      }
+      const cols = []; let i = n;
+      for (let j = k; j > 0; j--) { const p = cut[j][i]; cols.unshift(chs.slice(p, i)); i = p; }
+      return cols;
+    };
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
-      const chapters = c.chapters.map((ch) => `
+      const chapterHtml = (ch) => `
         <div class="chapter">
           <h3><span class="mono">${R[ch.n]}</span>${esc(ch.title)}</h3>
           <ol>${ch.sections.map((s) => {
@@ -121,7 +147,8 @@
               ? `<li data-hay="${hay}"><a href="${base}${c.id}/${ch.n}-${s.n}.html">${label}${tail}</a>${hits}</li>`
               : `<li data-hay="${hay}" class="soon"><div>${label}${tail}</div></li>`;
           }).join("")}</ol>
-        </div>`).join("");
+        </div>`;
+      const chapters = split(c.chapters, 3).map((col) => `<div class="ch-col">${col.map(chapterHtml).join("")}</div>`).join("");
       return `
       <section class="course" data-course="${c.id}" data-track="${c.track}"${ADV(c) ? ' data-adv="1"' : ""}>
         <div class="course-head">

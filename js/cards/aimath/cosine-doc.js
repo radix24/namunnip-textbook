@@ -28,7 +28,7 @@
     const [a, b] = vecs();
     ["a1", "a2", "b1", "b2"].forEach((k, i) => ($(`.${k}-out`).textContent = ins[i].value));
     const c = A.cos(a, b), d = A.dist(a, b);
-    $(".say").textContent = A.norm(a) && A.norm(b) ? `내적 ${A.dot(a, b)} · |A| = ${A.n(A.norm(a))}, |B| = ${A.n(A.norm(b))} · 코사인 유사도 ${c.toFixed(3)}(각 ${E.n((Math.acos(Math.min(1, c)) * 180) / Math.PI, 1)}°) · 거리(점선) ${A.n(d)}` : "영벡터는 방향이 없어 코사인 유사도를 정할 수 없습니다.";
+    $(".say").textContent = A.norm(a) && A.norm(b) ? `같은 낱말끼리 곱한 합 ${A.dot(a, b)} · |A| = ${A.n(A.norm(a))}, |B| = ${A.n(A.norm(b))} · 코사인 유사도 ${c.toFixed(3)}(각 ${E.n((Math.acos(Math.min(1, c)) * 180) / Math.PI, 1)}°) · 거리(점선) ${A.n(d)}` : "영벡터는 방향이 없어 코사인 유사도를 정할 수 없습니다.";
     draw();
   }
   ins.forEach((el) => el.addEventListener("input", update));

@@ -33,7 +33,7 @@
   function update() {
     const w = +wIn.value;
     $(".w-out").textContent = w.toFixed(2);
-    $(".say").textContent = `L(${w.toFixed(2)}) = ${L(w).toFixed(3)} · 최소: w* = Σxy/Σx² = ${WS.toFixed(3)}, L(w*) = ${L(WS).toFixed(3)} · 기울기 L'(w) = ${((-2 / D.length) * D.reduce((s, [x, y]) => s + x * (y - w * x), 0)).toFixed(2)}`;
+    $(".say").textContent = `L(${w.toFixed(2)}) = ${L(w).toFixed(3)} · 최소: w* = (xy의 합)/(x²의 합) = ${WS.toFixed(3)}, L(w*) = ${L(WS).toFixed(3)} · 그 점의 기울기 ${((-2 / D.length) * D.reduce((s, [x, y]) => s + x * (y - w * x), 0)).toFixed(2)}`;
     drawFit(); drawLoss();
   }
   wIn.addEventListener("input", update);

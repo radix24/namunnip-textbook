@@ -17,7 +17,7 @@
 </style>
 <article class="card" id="card-aimath-gd-contour">
   <header class="card-head">
-    <span class="no"></span><h2>기울기와 절편을 함께 학습하면 어떤 길로 내려갈까?</h2><span class="kind">2변수 경사하강법 · 조작</span>
+    <span class="no"></span><h2>기울기와 절편을 함께 학습하면 어떤 길로 내려갈까?</h2><span class="kind">경사하강법 더 나아가기 · 조작</span>
   </header>
   <div class="card-body">
     <div class="card-fig">
@@ -32,8 +32,8 @@
     </div>
     <ol class="steps">
       <li><span class="tag">질문</span>실제 모델은 가중치가 여럿입니다. 기울기 \(a\)와 절편 \(b\)를 함께 바꿔야 할 때는 어느 방향으로 움직여야 손실이 가장 빨리 줄어들까요?</li>
-      <li><span class="tag">복원</span>등고선은 높이가 같은 점을 이은 선이고, 등고선 간격이 좁을수록 가파릅니다(고급 기하의 등위곡선).</li>
-      <li><span class="tag">설명</span>\(a\)만 조금 바꿀 때의 변화율 \(\frac{\partial L}{\partial a}\)와 \(b\)만 바꿀 때의 변화율 \(\frac{\partial L}{\partial b}\)를 모은 벡터를 <em>기울기 벡터</em> \(\nabla L\)라 합니다. 이 벡터는 손실이 가장 빠르게 커지는 방향이고 등고선에 수직입니다. 그 반대 방향으로 \((a, b) \leftarrow (a, b) - \eta\nabla L\)처럼 움직이면 손실이 가장 빠르게 줄어듭니다.</li>
+      <li><span class="tag">복원</span>지도의 등고선은 높이가 같은 점을 이은 선이고, 등고선 간격이 좁을수록 가파릅니다. 경사하강법은 \(w \leftarrow w - \eta L'(w)\)처럼 기울기의 반대쪽으로 움직입니다.</li>
+      <li><span class="tag">설명</span>\(b\)를 고정하면 손실은 \(a\)만의 함수가 되므로 \(a\) 방향의 기울기를 구할 수 있고, \(a\)를 고정하면 \(b\) 방향의 기울기를 구할 수 있습니다. 두 가중치를 각자 자기 기울기의 반대쪽으로 동시에 조금씩 움직이면, 등고선을 가로질러 골짜기 바닥으로 내려갑니다. 이 카드는 교육과정의 범위(가중치 하나)를 넘어 실제 인공지능이 가중치를 여럿 학습하는 모습을 미리 보는 것입니다.</li>
       <li><span class="tag">연결</span>신경망의 가중치 수백만 개도 같은 방법으로 학습하고, 여러 층의 기울기를 효율적으로 계산하는 방법이 역전파입니다(1단원 연표).</li>
       <li><span class="tag">적용</span>여러 시작점에서 내려가며 경로가 등고선과 어떤 각을 이루는지 보세요. 학습률을 1 가까이 올리면 경로가 어떻게 되나요?</li>
       <li class="warn"><span class="tag">판단</span>이 손실은 그릇 모양(골짜기가 하나)이라 어디서 시작해도 같은 곳에 도착합니다. 신경망의 손실은 골짜기가 여러 개일 수 있어, 시작점에 따라 다른 곳에 멈출 수 있습니다.</li>
@@ -41,11 +41,11 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">\(L(a, b) = a^2 + 4b^2\)에서 점 \((2, 1)\)의 기울기 벡터와, 학습률 0.1로 한 걸음 간 점은?</p>
+    <p class="q">\(L(a, b) = a^2 + 4b^2\)에서 점 \((2, 1)\)의 (a 방향 기울기, b 방향 기울기)와, 학습률 0.1로 한 걸음 간 점은?</p>
     <ol>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((4, 8)\), \((1.6, 0.2)\)<span class="why"><b>맞습니다.</b> \(\nabla L = (2a, 8b) = (4, 8)\), \((2, 1) - 0.1(4, 8) = (1.6, 0.2)\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((4, 8)\), \((1.6, 0.2)\)<span class="why"><b>맞습니다.</b> \(b\)를 고정하면 \(a^2\)의 기울기는 \(2a = 4\), \(a\)를 고정하면 \(4b^2\)의 기울기는 \(8b = 8\)입니다. \((2 - 0.1 \times 4,\ 1 - 0.1 \times 8) = (1.6, 0.2)\)입니다.</span></span></button></li>
       <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((4, 8)\), \((2.4, 1.8)\)<span class="why"><b>기울기 방향으로 올라갔습니다.</b></span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((2, 4)\), \((1.8, 0.6)\)<span class="why"><b>편미분에서 계수 2를 빠뜨렸습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((2, 4)\), \((1.8, 0.6)\)<span class="why"><b>기울기를 구할 때 계수 2를 빠뜨렸습니다.</b></span></span></button></li>
       <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((4, 8)\), \((0, 0)\)<span class="why"><b>한 걸음에 최솟값으로 가지는 않습니다.</b></span></span></button></li>
     </ol>
   </div>

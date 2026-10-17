@@ -38,7 +38,7 @@
     const [a, b] = path[path.length - 1], g = grad(a, b);
     $(".lr-out").textContent = (+lrIn.value).toFixed(2);
     const far = Math.abs(a) > 50 || Math.abs(b) > 50;
-    $(".say").textContent = far ? `${path.length - 1}걸음: 값이 너무 커져 발산했습니다. 학습률을 줄이세요.` : `${path.length - 1}걸음: (a, b) = (${a.toFixed(3)}, ${b.toFixed(3)}) · ∇L = (${g[0].toFixed(3)}, ${g[1].toFixed(3)}) · 손실 ${L(a, b).toFixed(4)}`;
+    $(".say").textContent = far ? `${path.length - 1}걸음: 값이 너무 커져 발산했습니다. 학습률을 줄이세요.` : `${path.length - 1}걸음: (a, b) = (${a.toFixed(3)}, ${b.toFixed(3)}) · (a 방향 기울기, b 방향 기울기) = (${g[0].toFixed(3)}, ${g[1].toFixed(3)}) · 손실 ${L(a, b).toFixed(4)}`;
     drawMap(); drawFit();
   }
   const step = () => { const [a, b] = path[path.length - 1]; if (Math.abs(a) > 50 || Math.abs(b) > 50) return; const g = grad(a, b), lr = +lrIn.value; path.push([a - lr * g[0], b - lr * g[1]]); };

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>확률과 예측 — 나뭇잎 디지털 교과서</title>
-  <meta name="description" content="기록으로 조건부확률을 추정해 예측하기, 가장 큰 확률을 고르는 예측과 정확도, 베이즈 정리와 기저율, 민감도·특이도, P(양성|병)과 P(병|양성)의 구별. 날씨 기록으로 내일을 예측하는 카드와, 진단 인공지능의 양성 결과를 해석하는 카드.">
+  <meta name="description" content="기록의 상대도수로 확률을 추정해 예측하기, 가장 큰 확률을 고르는 예측과 정확도, 기저율, 민감도·특이도, &#x27;병이 있는 사람 중 양성 비율&#x27;과 &#x27;양성인 사람 중 병이 있는 비율&#x27;의 구별. 날씨 기록으로 내일을 예측하는 카드와, 진단 인공지능의 양성 결과를 해석하는 카드.">
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="../../manifest.webmanifest">
@@ -45,10 +45,10 @@
   <section class="topic-hero">
     <div class="meta"></div>
     <h1>확률과 예측</h1>
-    <p class="lead">인공지능의 예측은 대부분 확률로 나옵니다. 지난 자료에서 조건부확률을 구하면 다음에 일어날 일을 확률로 예측할 수 있습니다. 그러나 확률을 잘못 해석하면 "정확도 99%"라는 말에 크게 속을 수 있습니다. 이 절에서는 조건부확률로 예측하고, 베이즈 정리로 예측 결과를 바르게 해석합니다.</p>
+    <p class="lead">인공지능의 예측은 대부분 확률로 나옵니다. 지난 자료에서 조건에 맞는 경우만 모아 비율을 구하면 다음에 일어날 일을 확률로 예측할 수 있습니다. 그러나 확률을 잘못 해석하면 "정확도 99%"라는 말에 크게 속을 수 있습니다. 이 절에서는 기록의 비율로 예측하고, 무엇을 전체로 삼는지 따져 예측 결과를 바르게 해석합니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/stat/2-4.html#card-stat-cond-table" title="확률과 통계 2.4 · 버스로 오는 학생만 보면 지각할 확률이 달라질까?">조건부확률</a>
+      <button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
     </div>
   </section>
 
@@ -66,7 +66,7 @@
     <div>
       <article class="card" id="card-aimath-weather-predict">
         <header class="card-head">
-          <span class="no">4.1.1</span><h2>오늘 비가 오면 내일도 비가 올 확률은 얼마일까?</h2><span class="kind">조건부확률과 예측 · 조작</span>
+          <span class="no">4.1.1</span><h2>오늘 비가 오면 내일도 비가 올 확률은 얼마일까?</h2><span class="kind">상대도수로 구한 확률과 예측 · 조작</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -78,8 +78,8 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>날씨 앱은 "내일 비 올 확률 60%"처럼 확률로 예보합니다. 지난 기록만 있다면 내일 날씨를 어떻게 확률로 예측할 수 있을까요?</li>
-            <li><span class="tag">복원</span>조건부확률 \(P(B \mid A) = \dfrac{n(A \cap B)}{n(A)}\)(같은 가능성일 때).</li>
-            <li><span class="tag">설명</span>기록에서 "오늘 비"였던 날만 모아, 그다음 날이 각 날씨였던 비율을 구하면 조건부확률 \(P(\text{내일 날씨} \mid \text{오늘 비})\)의 추정값이 됩니다. 확률이 가장 큰 날씨를 고르면 맞힐 가능성이 가장 높은 예측이 되고, 확률 자체를 알려 주면 불확실성까지 전할 수 있습니다. 자료가 많을수록 추정한 확률은 믿을 만해집니다.</li>
+            <li><span class="tag">복원</span>같은 일을 여러 번 되풀이할 때 어떤 일이 일어난 횟수의 비율(상대도수)은 그 일이 일어날 확률에 가까워집니다(중학교 2학년).</li>
+            <li><span class="tag">설명</span>기록에서 "오늘 비"였던 날만 모아, 그다음 날이 각 날씨였던 비율을 구하면 "오늘 비가 올 때 내일 그 날씨일 확률"의 추정값이 됩니다. 전체 날이 아니라 조건에 맞는 날만 모아 비율을 구한다는 점이 중요합니다. 확률이 가장 큰 날씨를 고르면 맞힐 가능성이 가장 높은 예측이 되고, 확률 자체를 알려 주면 불확실성까지 전할 수 있습니다. 자료가 많을수록 추정한 확률은 믿을 만해집니다.</li>
             <li><span class="tag">연결</span>인공지능의 분류 결과도 대부분 "고양이 92%, 강아지 8%"처럼 확률로 나옵니다. 다음 카드에서는 확률을 해석할 때 흔히 하는 실수를 봅니다.</li>
             <li><span class="tag">적용</span>오늘 날씨를 바꿔 가며 내일의 확률을 비교하세요. "확률이 가장 큰 날씨로 예측하기"와 "늘 맑음으로 예측하기" 중 60일 기록에서 더 많이 맞히는 방법은?</li>
             <li class="warn"><span class="tag">판단</span>"비 올 확률 30%"는 "비가 안 온다"는 뜻이 아닙니다. 확률이 가장 큰 쪽만 말하면 틀릴 가능성이 있다는 정보를 잃습니다.</li>
@@ -100,7 +100,7 @@
 
       <article class="card" id="card-aimath-base-rate">
         <header class="card-head">
-          <span class="no">4.1.2</span><h2>정확도 99%인 진단 인공지능이 "양성"이라고 하면 정말 병이 있을 확률은?</h2><span class="kind">베이즈 정리와 기저율 · 예측→확인</span>
+          <span class="no">4.1.2</span><h2>정확도 99%인 진단 인공지능이 "양성"이라고 하면 정말 병이 있을 확률은?</h2><span class="kind">기저율과 확률의 해석 · 예측→확인</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -120,11 +120,11 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>"정확도 99%"인 인공지능이 양성이라고 하면 병이 있을 확률도 99%일까요?</li>
-            <li><span class="tag">복원</span>베이즈 정리: \(P(A \mid B) = \dfrac{P(B \mid A)P(A)}{P(B \mid A)P(A) + P(B \mid A^c)P(A^c)}\).</li>
-            <li><span class="tag">설명</span>1000명으로 생각하면 병이 있는 10명 중 약 10명이 양성이고, 병이 없는 990명 중 5%인 약 50명도 양성입니다. 양성 약 60명 중 실제 환자는 10명이므로 \(P(\text{병} \mid \text{양성}) \approx \frac{10}{60} \approx 17\%\)입니다. 병이 드물면(<em>기저율</em>이 낮으면) 정확한 검사라도 양성 중 대부분이 잘못된 양성일 수 있습니다.</li>
-            <li><span class="tag">연결</span>인공지능의 성능은 정확도 하나가 아니라 "병이 있을 때 맞히는 비율(민감도)"과 "병이 없을 때 맞히는 비율(특이도)"로 함께 봐야 합니다. 스팸 필터(2단원)도 같은 계산입니다.</li>
+            <li><span class="tag">복원</span>확률은 전체 가운데 그 일이 일어나는 경우의 비율입니다. 무엇을 '전체'로 삼느냐에 따라 같은 사건의 확률도 달라집니다.</li>
+            <li><span class="tag">설명</span>1000명으로 생각하면 병이 있는 10명 중 약 10명이 양성이고, 병이 없는 990명 중 5%인 약 50명도 양성입니다. 이제 '양성이 나온 사람'을 전체로 삼으면, 양성 약 60명 중 실제 환자는 10명이므로 병이 있을 확률은 \(\frac{10}{60} \approx 17\%\)입니다. 병이 드물면(<em>기저율</em>이 낮으면) 정확한 검사라도 양성 중 대부분이 잘못된 양성일 수 있습니다.</li>
+            <li><span class="tag">연결</span>인공지능의 성능은 정확도 하나가 아니라 "병이 있을 때 맞히는 비율(민감도)"과 "병이 없을 때 맞히는 비율(특이도)"로 함께 봐야 합니다. 스팸 필터(2단원)도 같은 계산입니다. 확률과 통계 과목에서는 이 계산을 조건부확률과 베이즈 정리로 정리합니다.</li>
             <li><span class="tag">적용</span>예측한 뒤, 병이 있는 비율과 특이도를 바꿔 보세요. 양성의 신뢰도를 높이려면 어느 쪽을 바꾸는 것이 효과가 큰가요?</li>
-            <li class="warn"><span class="tag">판단</span>\(P(\text{양성} \mid \text{병})\)과 \(P(\text{병} \mid \text{양성})\)은 다릅니다. 이 둘을 바꿔 읽는 실수가 의료, 재판, 보안 검색에서 잘못된 판단을 낳습니다.</li>
+            <li class="warn"><span class="tag">판단</span>"병이 있는 사람 가운데 양성인 비율"과 "양성인 사람 가운데 병이 있는 비율"은 다릅니다. 이 둘을 바꿔 읽는 실수가 의료, 재판, 보안 검색에서 잘못된 판단을 낳습니다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -133,7 +133,7 @@
           <ol>
             <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 69%<span class="why"><b>맞습니다.</b> 1000명 중 환자 100명 → 양성 99명, 비환자 900명 → 양성 45명. \(\frac{99}{144} \approx 0.69\)입니다.</span></span></button></li>
             <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 17%<span class="why"><b>기저율이 1%일 때의 값입니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>99%<span class="why"><b>\(P(\text{양성} \mid \text{병})\)과 바꿔 읽었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>99%<span class="why"><b>"병이 있는 사람 가운데 양성인 비율"과 바꿔 읽었습니다.</b></span></span></button></li>
             <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>10%<span class="why"><b>검사 전 확률(기저율)입니다.</b></span></span></button></li>
           </ol>
         </div>

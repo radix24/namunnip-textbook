@@ -975,7 +975,7 @@ y = xⁿ의 도함수 | card-calc1-power-rule
 전류계·전압계 연결법 | card-phy-circuit-meter
 전류와 전압 | card-phy-circuit-meter
 전류의 자기 작용 | card-phy-oersted
-전류의 자기장과 오른손 법칙 | card-calc1-sum-rule
+전류의 자기장과 오른손 법칙 | card-phy-oersted
 전사 인자와 세포 분화 | card-gene-differentiation
 전사와 번역 | card-is1-dogma
 전사와 유전자 발현 | card-gene-lac
@@ -1573,3 +1573,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 원주율 | basics/b-m-pi
 산술평균과 기하평균 | card-cm2-amgm
 모비율의 추정 | card-stat-ci-prop
+\(\sum\) 기호 | card-stat-binom-expand
