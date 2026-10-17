@@ -17555,22 +17555,55 @@ window.TOC = [
       "n": 1,
       "title": "행렬로 나타낸 이미지",
       "code": "12인수03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-pixel-grid",
+        "title": "그림을 숫자로 된 표, 곧 행렬로 바꿀 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-rgb",
+        "title": "색이 있는 사진은 행렬 몇 개로 나타낼까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "행렬 연산과 이미지 변환",
       "code": "12인수03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-image-ops",
+        "title": "사진 편집 앱의 버튼은 행렬에 어떤 계산을 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-convolution",
+        "title": "주변 픽셀과 섞으면 사진에서 윤곽선을 찾을 수 있을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "이미지 분류의 수학",
       "code": "12인수03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-digit-distance",
+        "title": "손으로 쓴 숫자를 컴퓨터는 어떻게 알아볼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-knn",
+        "title": "가장 가까운 이웃 하나만 믿어도 될까, 여럿에게 물어볼까?"
+       }
+      ]
      }
     ]
    },

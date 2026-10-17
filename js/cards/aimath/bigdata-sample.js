@@ -14,7 +14,7 @@
   function draw() {
     if (!size.w) return;
     ctx.clearRect(0, 0, size.w, size.h);
-    const P = E.frame(ctx, size, { x0: 0, x1: 1, y0: 0, y1: 1, xt: [0, 0.2, 0.4, 0.6, 0.8, 1].map((v) => [v, `${v * 100}%`]), yt: [], xlab: "추정한 비율", L: 16 });
+    const P = E.frame(ctx, size, { x0: 0, x1: 1, y0: 0, y1: 1, xt: [0, 0.2, 0.4, 0.6, 0.8, 1].map((v) => [v, `${Math.round(v * 100)}%`]), yt: [], xlab: "추정한 비율", L: 16 });
     if (!est) { E.text(ctx, P.L + P.w / 2, P.T + P.h / 2, "표본을 뽑아 보세요", C.ink3, "center"); return; }
     const bins = 50, cnt = Array(bins).fill(0); est.forEach((p) => cnt[Math.min(bins - 1, Math.floor(p * bins))]++);
     const mx = Math.max(...cnt), bw = P.w / bins;

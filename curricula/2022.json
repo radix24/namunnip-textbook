@@ -9798,19 +9798,31 @@
        "n": 1,
        "title": "행렬로 나타낸 이미지",
        "code": "12인수03-01",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-3-1",
+        "card-aimath-pixel-grid",
+        "card-aimath-rgb"
+       ]
       },
       {
        "n": 2,
        "title": "행렬 연산과 이미지 변환",
        "code": "12인수03-02",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-3-2",
+        "card-aimath-image-ops",
+        "card-aimath-convolution"
+       ]
       },
       {
        "n": 3,
        "title": "이미지 분류의 수학",
        "code": "12인수03-03",
-       "blocks": []
+       "blocks": [
+        "intro-aimath-3-3",
+        "card-aimath-digit-distance",
+        "card-aimath-knn"
+       ]
       }
      ]
     },

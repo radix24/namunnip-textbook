@@ -1565,3 +1565,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 표본추출 | card-stat-random-sample
 집합의 연산 | card-cm2-set-ops
 벡터의 내적 | card-geo-dot-angle
+행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add

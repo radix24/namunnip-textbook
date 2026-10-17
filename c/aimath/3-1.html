@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>행렬로 나타낸 이미지 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="흑백 이미지를 0~255 밝기의 행렬로 나타내기, 행과 열의 수와 저장 크기, 색 이미지의 R·G·B 세 행렬, 빛의 더하기 혼합. 픽셀을 칠해 행렬을 만드는 카드와, 채널을 켜고 끄며 색을 만드는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-aimath-pixel-grid .wrap { display: flex; flex-wrap: wrap; gap: .8rem; align-items: flex-start; }
+    #card-aimath-pixel-grid .grid { display: grid; grid-template-columns: repeat(8, 2rem); gap: 1px; background: #8d8d92; border: 1px solid #8d8d92; }
+    #card-aimath-pixel-grid .grid button { width: 2rem; height: 2rem; border: 0; padding: 0; cursor: pointer; }
+    #card-aimath-pixel-grid .grid button:focus-visible { outline: 2px solid #e0a02a; outline-offset: -2px; }
+    #card-aimath-pixel-grid pre { font-size: .72rem; line-height: 1.35; margin: 0; overflow-x: auto; }
+    #card-aimath-rgb canvas { aspect-ratio: 1 / 1; max-width: 220px; width: 100%; display: block; image-rendering: pixelated; }
+    #card-aimath-rgb .wrap { display: flex; flex-wrap: wrap; gap: .8rem; align-items: flex-start; }
+    #card-aimath-rgb .ctl-row > div { min-width: 10rem; }
+    #card-aimath-rgb pre { font-size: .72rem; line-height: 1.35; margin: 0; }
+  </style>
+</head>
+<body data-course="aimath" data-sec="3-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>행렬로 나타낸 이미지</h1>
+    <p class="lead">디지털 이미지는 작은 네모 점(<em>픽셀</em>)이 바둑판처럼 늘어선 것입니다. 픽셀마다 밝기를 수로 적으면 이미지는 <em>행렬</em>이 되고, 색 이미지는 빨강·초록·파랑의 세 행렬이 됩니다. 이 절에서는 이미지를 행렬로 직접 만들어 보고, 인공지능이 사진을 어떤 수로 받는지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/4-1.html#card-cm1-matrix-entry" title="공통수학1 4.1 · 표의 칸 하나를 어떻게 정확히 가리킬까?">행렬의 뜻과 성분</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-aimath-pixel-grid"><span class="mono">3.1.1</span>픽셀을 칠해 이미지 행렬 만들기</a></li>
+        <li><a href="#card-aimath-rgb"><span class="mono">3.1.2</span>색 이미지는 빨강·초록·파랑 세 행렬</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=aimath-3-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-aimath-pixel-grid">
+        <header class="card-head">
+          <span class="no">3.1.1</span><h2>그림을 숫자로 된 표, 곧 행렬로 바꿀 수 있을까?</h2><span class="kind">행렬로 나타낸 이미지 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="칠할 밝기"><button class="chip" type="button" data-v="0" aria-pressed="true">검정 0</button><button class="chip" type="button" data-v="128">회색 128</button><button class="chip" type="button" data-v="255">흰색 255</button><button class="chip go-heart" type="button">하트 불러오기</button><button class="chip go-clear" type="button">모두 흰색</button></div>
+            <div class="wrap">
+              <div class="grid" role="grid" aria-label="8×8 픽셀. 누르면 고른 밝기로 칠해진다"></div>
+              <pre class="mono mat" aria-label="이미지를 나타내는 8×8 행렬"></pre>
+            </div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>사진을 확대하면 작은 네모 점(픽셀)이 보입니다. 컴퓨터는 이 점들을 어떻게 기억하고, 인공지능은 어떻게 사진을 "읽을까요"?</li>
+            <li><span class="tag">복원</span>\(m\)개의 행과 \(n\)개의 열로 수를 늘어놓은 것을 \(m \times n\) 행렬이라 하고, \(i\)행 \(j\)열의 수를 \((i, j)\) 성분이라 합니다.</li>
+            <li><span class="tag">설명</span>흑백 이미지는 픽셀마다 밝기를 0(검정)부터 255(흰색)까지의 정수로 나타내, 픽셀의 배치 그대로 <em>행렬</em>에 담습니다. 가로 8, 세로 8픽셀이면 \(8 \times 8\) 행렬이고, 성분 하나에 1바이트(\(2^8 = 256\)가지)를 쓰면 64바이트입니다. 인공지능은 이 행렬을 입력으로 받아 계산합니다.</li>
+            <li><span class="tag">연결</span>다음 카드에서는 색이 있는 이미지를 빨강, 초록, 파랑 세 행렬로 나타냅니다. 다음 절에서는 행렬 연산으로 이미지를 바꿉니다.</li>
+            <li><span class="tag">적용</span>픽셀을 칠해 글자나 무늬를 만들고 행렬이 어떻게 바뀌는지 보세요. 휴대폰 사진(가로 4000, 세로 3000픽셀)의 흑백 행렬은 성분이 몇 개일까요?</li>
+            <li class="warn"><span class="tag">판단</span>행렬의 행 번호는 위에서 아래로, 열 번호는 왼쪽에서 오른쪽으로 셉니다. 좌표평면의 \((x, y)\)와 순서와 방향이 다르므로 헷갈리지 않도록 해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">가로 640, 세로 480픽셀인 흑백 이미지를 행렬로 나타내면 크기와 성분 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(480 \times 640\) 행렬, 307200개<span class="why"><b>맞습니다.</b> 행은 세로(480), 열은 가로(640)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(640 \times 480\) 행렬, 307200개<span class="why"><b>행과 열을 바꿨습니다.</b> 행의 수는 세로 픽셀 수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(480 \times 640\) 행렬, 1120개<span class="why"><b>성분 수는 곱입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(1 \times 307200\) 행렬<span class="why"><b>한 줄로 펼칠 수도 있지만 이미지 행렬은 배치를 그대로 씁니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/4-1.html#card-cm1-matrix-entry"><small class="mono">공통수학1 4.1</small>표의 칸 하나를 어떻게 정확히 가리킬까?</a><a href="../../c/cm1/4-1.html#card-cm1-road-matrix"><small class="mono">공통수학1 4.1</small>도로 지도를 수의 표로 바꿀 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/aimath/3-2.html#card-aimath-image-ops"><small class="mono">인공지능 수학 3.2</small>사진 편집 앱의 버튼은 행렬에 어떤 계산을 할까?</a><a href="../../c/aimath/3-2.html#card-aimath-convolution"><small class="mono">인공지능 수학 3.2</small>주변 픽셀과 섞으면 사진에서 윤곽선을 찾을 수 있을까?</a><a href="../../c/aimath/3-3.html#card-aimath-digit-distance"><small class="mono">인공지능 수학 3.3</small>손으로 쓴 숫자를 컴퓨터는 어떻게 알아볼까?</a><a href="../../c/aimath/3-3.html#card-aimath-knn"><small class="mono">인공지능 수학 3.3</small>가장 가까운 이웃 하나만 믿어도 될까, 여럿에게 물어볼까?</a></div></nav>
+
+      <article class="card" id="card-aimath-rgb">
+        <header class="card-head">
+          <span class="no">3.1.2</span><h2>색이 있는 사진은 행렬 몇 개로 나타낼까?</h2><span class="kind">RGB 행렬 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="채널 켜고 끄기"><button class="chip" type="button" data-c="0" aria-pressed="true">빨강(R)</button><button class="chip" type="button" data-c="1" aria-pressed="true">초록(G)</button><button class="chip" type="button" data-c="2" aria-pressed="true">파랑(B)</button></div>
+            <div class="ctl-row">
+              <div><label class="mono">R = <output class="r-out"></output></label><input class="r" type="range" min="0" max="255" step="1" value="255" aria-label="고른 픽셀의 빨강"></div>
+              <div><label class="mono">G = <output class="g-out"></output></label><input class="g" type="range" min="0" max="255" step="1" value="200" aria-label="고른 픽셀의 초록"></div>
+              <div><label class="mono">B = <output class="b-out"></output></label><input class="b" type="range" min="0" max="255" step="1" value="0" aria-label="고른 픽셀의 파랑"></div>
+            </div>
+            <div class="wrap">
+              <canvas aria-label="6×6 색 이미지. 픽셀을 누르면 그 픽셀이 골라진다"></canvas>
+              <pre class="mono mats" aria-label="고른 픽셀이 있는 행의 R, G, B 값"></pre>
+            </div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">해바라기를 흉내 낸 6×6 가상 이미지입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>흑백 사진은 행렬 하나로 나타냈습니다. 노란 해바라기처럼 색이 있는 사진은 어떻게 수로 나타낼까요?</li>
+            <li><span class="tag">복원</span>같은 크기의 행렬끼리는 같은 위치의 성분끼리 비교하거나 더할 수 있습니다.</li>
+            <li><span class="tag">설명</span>화면의 색은 빛의 삼원색인 빨강(R), 초록(G), 파랑(B)을 섞어 만듭니다. 그래서 색 이미지는 픽셀마다 세 값(각 0~255)을 갖고, 같은 크기의 <em>세 행렬</em>로 나타냅니다. R과 G가 크고 B가 작으면 노랑, 셋 다 크면 흰색, 셋 다 0이면 검정입니다. 한 픽셀이 나타낼 수 있는 색은 \(256^3 \approx 1678\)만 가지입니다.</li>
+            <li><span class="tag">연결</span>인공지능의 이미지 입력은 보통 "세로 × 가로 × 3"의 수 묶음입니다. 사진 편집 앱의 채도·색온도 조절도 세 행렬을 계산으로 바꾸는 것입니다.</li>
+            <li><span class="tag">적용</span>채널을 하나씩 꺼 보세요. 파랑을 끄면 하늘은 어떻게 보이나요? 픽셀을 골라 세 값을 바꿔 원하는 색을 만들어 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>물감을 섞으면 어두워지지만(빼기 혼합), 빛을 섞으면 밝아집니다(더하기 혼합). 화면의 RGB는 빛의 혼합이라 R과 G를 섞으면 노랑이 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">가로 100, 세로 50픽셀인 색 이미지를 RGB 행렬로 나타낼 때 필요한 수의 개수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>15000개<span class="why"><b>맞습니다.</b> \(50 \times 100\) 행렬 3개이므로 \(5000 \times 3\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>5000개<span class="why"><b>흑백 이미지의 개수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 1280000개<span class="why"><b>5000에 256을 곱했습니다.</b> 성분 하나가 0~255 중 한 값입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>450개<span class="why"><b>\(150 \times 3\)으로 더해서 계산했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/4-1.html#card-cm1-matrix-entry"><small class="mono">공통수학1 4.1</small>표의 칸 하나를 어떻게 정확히 가리킬까?</a><a href="../../c/cm1/4-1.html#card-cm1-road-matrix"><small class="mono">공통수학1 4.1</small>도로 지도를 수의 표로 바꿀 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/aimath/3-2.html#card-aimath-image-ops"><small class="mono">인공지능 수학 3.2</small>사진 편집 앱의 버튼은 행렬에 어떤 계산을 할까?</a><a href="../../c/aimath/3-2.html#card-aimath-convolution"><small class="mono">인공지능 수학 3.2</small>주변 픽셀과 섞으면 사진에서 윤곽선을 찾을 수 있을까?</a><a href="../../c/aimath/3-3.html#card-aimath-digit-distance"><small class="mono">인공지능 수학 3.3</small>손으로 쓴 숫자를 컴퓨터는 어떻게 알아볼까?</a><a href="../../c/aimath/3-3.html#card-aimath-knn"><small class="mono">인공지능 수학 3.3</small>가장 가까운 이웃 하나만 믿어도 될까, 여럿에게 물어볼까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=aimath-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/aimath/pixel-grid.js"></script>
+<script src="../../js/cards/aimath/img.js"></script>
+<script src="../../js/cards/aimath/rgb.js"></script>
+</body>
+</html>
