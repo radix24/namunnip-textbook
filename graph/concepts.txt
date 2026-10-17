@@ -1106,3 +1106,6 @@ mcu-food | 식생활과 수학 | card-mcult-nutrition-label card-mcult-food-mile
 mcu-air | 대기 오염과 수학 | card-mcult-pm-average card-mcult-emission-path |
 mcu-desert | 사막화와 수학 | card-mcult-desert-automata card-mcult-ndvi |
 mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcult-simpson-index |
+pst-useful | 통계의 유용성과 통계적 질문 | card-pstat-cholera-map card-pstat-stat-question |
+pst-process | 통계적 문제해결 과정 | card-pstat-ppdac-order card-pstat-question-refine | pst-useful
+pst-sampling | 모집단과 표본추출 방법 | card-pstat-sampling-methods card-pstat-volunteer-bias | pst-process

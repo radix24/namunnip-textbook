@@ -18422,22 +18422,55 @@ window.TOC = [
       "n": 1,
       "title": "통계의 유용성",
       "code": "12실통01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-cholera-map",
+        "title": "목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-stat-question",
+        "title": "\"우리 반 학생들은 몇 시간 잘까?\"와 \"나는 어제 몇 시간 잤을까?\"는 무엇이 다를까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "통계적 문제해결 과정",
       "code": "12실통01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ppdac-order",
+        "title": "매점 줄을 줄이고 싶을 때, 통계 탐구는 어떤 순서로 해야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-question-refine",
+        "title": "\"학생들은 스마트폰을 많이 쓸까?\"를 통계로 답할 수 있는 질문으로 바꾸려면?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "모집단과 표본추출",
       "code": "12실통01-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-sampling-methods",
+        "title": "전교생 360명 중 36명만 조사한다면, 어떻게 뽑아야 전체를 잘 대표할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-volunteer-bias",
+        "title": "응답자가 수천 명인 온라인 투표와 100명 무작위 조사, 무엇을 믿어야 할까?"
+       }
+      ]
      }
     ]
    },

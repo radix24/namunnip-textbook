@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "7f1b355f0546",
+"version": "eda99052520f",
 "files": [
 "graph.html",
 "index.html",
@@ -850,6 +850,9 @@ self.PRECACHE = {
 "c/pmath/3-8.html",
 "c/pmath/3-9.html",
 "c/pmath/index.html",
+"c/pstat/1-1.html",
+"c/pstat/1-2.html",
+"c/pstat/1-3.html",
 "c/pstat/index.html",
 "c/resr/1-1.html",
 "c/resr/1-2.html",
@@ -2368,6 +2371,13 @@ self.PRECACHE = {
 "js/cards/pmath/trilateration.js",
 "js/cards/pmath/vec-puzzle.js",
 "js/cards/pmath/work-dot.js",
+"js/cards/pstat/cholera-map.js",
+"js/cards/pstat/ppdac-order.js",
+"js/cards/pstat/pst.js",
+"js/cards/pstat/question-refine.js",
+"js/cards/pstat/sampling-methods.js",
+"js/cards/pstat/stat-question.js",
+"js/cards/pstat/volunteer-bias.js",
 "js/cards/reel-apple.js",
 "js/cards/resr/r1-elements.js",
 "js/cards/resr/r1-hypo.js",
