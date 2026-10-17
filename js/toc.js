@@ -18809,29 +18809,73 @@ window.TOC = [
       "n": 1,
       "title": "주제 선정과 탐구 계획",
       "code": "12수과03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-topic-matrix",
+        "title": "탐구 주제 후보가 여러 개일 때, 무엇을 기준으로 골라야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-critical-path",
+        "title": "탐구 활동을 모두 끝내려면 최소 며칠이 걸릴까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "탐구 수행",
       "code": "12수과03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-magic-square-log",
+        "title": "1부터 9까지로 가로, 세로, 대각선의 합이 모두 같은 마방진을 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-border-tiles",
+        "title": "n×n 정사각형 테두리의 타일 수를 세는 방법은 몇 가지일까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "산출물과 발표",
       "code": "12수과03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-chart-redesign",
+        "title": "탐구 발표의 그래프, 어떻게 고치면 한눈에 읽힐까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-proof-order",
+        "title": "탐구 보고서에 증명을 쓸 때, 문장을 어떤 순서로 놓아야 할까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "반성과 평가",
       "code": "12수과03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-rubric-eval",
+        "title": "내 탐구를 스스로 평가한 점수와 친구들이 평가한 점수가 다르다면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-euler-polynomial",
+        "title": "n = 0, 1, 2, …, 39에서 모두 소수가 나온다면 \"n² + n + 41은 언제나 소수\"라고 써도 될까?"
+       }
+      ]
      }
     ]
    }

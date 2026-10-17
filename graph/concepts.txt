@@ -1125,3 +1125,7 @@ mrs-literature | 문헌 조사 | card-mres-source-eval card-mres-sequence-search
 mrs-case | 사례 조사 | card-mres-tiling-case card-mres-paper-ratio | mrs-meaning
 mrs-experiment | 수학 실험 | card-mres-buffon-needle card-mres-trials-error | mrs-meaning
 mrs-develop | 개발 연구 | card-mres-fair-game-design card-mres-prime-algorithm | mrs-experiment
+mrs-plan | 주제 선정과 탐구 계획 | card-mres-topic-matrix card-mres-critical-path | mrs-meaning
+mrs-perform | 탐구 수행 | card-mres-magic-square-log card-mres-border-tiles | mrs-plan
+mrs-present | 산출물과 발표 | card-mres-chart-redesign card-mres-proof-order | mrs-perform
+mrs-reflect | 반성과 평가 | card-mres-rubric-eval card-mres-euler-polynomial | mrs-present mrs-ethics

@@ -10556,25 +10556,41 @@
        "n": 1,
        "title": "주제 선정과 탐구 계획",
        "code": "12수과03-01",
-       "blocks": []
+       "blocks": [
+        "intro-mres-3-1",
+        "card-mres-topic-matrix",
+        "card-mres-critical-path"
+       ]
       },
       {
        "n": 2,
        "title": "탐구 수행",
        "code": "12수과03-02",
-       "blocks": []
+       "blocks": [
+        "intro-mres-3-2",
+        "card-mres-magic-square-log",
+        "card-mres-border-tiles"
+       ]
       },
       {
        "n": 3,
        "title": "산출물과 발표",
        "code": "12수과03-03",
-       "blocks": []
+       "blocks": [
+        "intro-mres-3-3",
+        "card-mres-chart-redesign",
+        "card-mres-proof-order"
+       ]
       },
       {
        "n": 4,
        "title": "반성과 평가",
        "code": "12수과03-04",
-       "blocks": []
+       "blocks": [
+        "intro-mres-3-4",
+        "card-mres-rubric-eval",
+        "card-mres-euler-polynomial"
+       ]
       }
      ]
     }

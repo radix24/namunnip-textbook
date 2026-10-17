@@ -1,0 +1,147 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>탐구 수행 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="1~9로 만드는 3×3 마방진에서 시도 기록과 규칙 발견(줄의 합 15, 가운데 5), n×n 테두리 타일을 네 가지 방법으로 세어 4n − 4, 4(n − 2) + 4, 2n + 2(n − 2), n² − (n − 2)²가 같음을 확인하기. 마방진 카드와, 테두리 타일 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mres-magic-square-log .grid { display: grid; grid-template-columns: repeat(3, 3.2rem); gap: .3rem; margin: .4rem 0; }
+    #card-mres-magic-square-log .grid input { width: 3.2rem; height: 3.2rem; text-align: center; font: 700 1.3rem var(--mono, monospace); box-sizing: border-box; }
+    #card-mres-magic-square-log .grid input.bad { border-color: #b5532f; }
+    #card-mres-magic-square-log .wrap { display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: flex-start; }
+    #card-mres-magic-square-log .sums { font: .8rem var(--mono, monospace); line-height: 1.6; }
+    #card-mres-magic-square-log ol.log { font: .78rem var(--mono, monospace); max-height: 7rem; overflow-y: auto; padding-left: 1.4rem; margin: .3rem 0 0; }
+    #card-mres-border-tiles canvas { aspect-ratio: 1 / 1; max-width: 300px; margin: .3rem auto 0; }
+    #card-mres-border-tiles .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="mres" data-sec="3-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>탐구 수행</h1>
+    <p class="lead"><em>탐구 수행</em>은 시도하고, 기록하고, 규칙을 찾고, 그 까닭을 설명하는 과정의 반복입니다. 실패한 시도도 기록해 두면 규칙을 찾는 단서가 되고, 같은 결과를 여러 방법으로 확인하면 결론을 더 믿을 수 있습니다. 이 절에서는 마방진과 타일 세기로 탐구 수행을 체험합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/1-1.html#card-cm1-poly-mult" title="공통수학1 1.1 · 다항식을 곱하면 왜 같은 차수끼리 모일까?">곱셈 공식</a><a class="p p-card" href="../../c/alg/3-6.html#card-alg-recur-rule" title="대수 3.6 · 첫째항과 규칙만으로 수열이 정해질까?">수열의 귀납적 정의</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mres-magic-square-log"><span class="mono">3.2.1</span>시행착오를 기록하며 마방진 완성하기 — 탐구 수행과 기록</a></li>
+        <li><a href="#card-mres-border-tiles"><span class="mono">3.2.2</span>같은 테두리를 여러 방법으로 세면 — 서로 다른 식이 같다는 발견</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mres-3-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mres-magic-square-log">
+        <header class="card-head">
+          <span class="no">3.2.1</span><h2>1부터 9까지로 가로, 세로, 대각선의 합이 모두 같은 마방진을 만들 수 있을까?</h2><span class="kind">탐구 수행과 기록 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="wrap">
+              <div class="grid" role="group" aria-label="3×3 마방진 칸"></div>
+              <div class="sums" aria-live="polite"></div>
+            </div>
+            <div class="presets"><button class="chip rec" type="button">이 시도 기록하기</button><button class="chip clear" type="button">비우기</button></div>
+            <p class="verdict" role="status"></p>
+            <ol class="log" aria-label="탐구 기록"></ol>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>1부터 9까지 한 번씩 써서 3×3 칸을 채울 때, 가로·세로·대각선 합이 모두 같아지게 할 수 있을까요? 무작정 해 보다가 막히면 무엇을 해야 할까요?</li>
+            <li><span class="tag">복원</span>1부터 9까지의 합 = 45.</li>
+            <li><span class="tag">설명</span>시행착오 중에도 <em>기록</em>하면 규칙이 보입니다. 세 가로줄의 합이 모두 같으므로 한 줄의 합은 \(45 \div 3 = 15\)입니다. 가운데 칸을 지나는 네 줄(가로, 세로, 두 대각선)을 더하면 가운데 수가 네 번, 나머지가 한 번씩 들어가 \(60 = 45 + 3 \times (\text{가운데})\), 곧 가운데는 <em>5</em>여야 합니다. 이렇게 시도 → 기록 → 규칙 발견 → 이유 설명의 순환이 <em>탐구 수행</em>입니다.</li>
+            <li><span class="tag">연결</span>탐구 일지에는 날짜, 한 일, 결과, 떠오른 생각, 다음에 할 일을 적습니다. 실패한 시도도 중요한 기록입니다.</li>
+            <li><span class="tag">적용</span>몇 번의 시도 끝에 완성했나요? 가운데가 5라는 것을 안 뒤에는 짝수가 어디에 와야 하는지도 찾아보세요.</li>
+            <li class="warn"><span class="tag">판단</span>답을 찾았다고 끝이 아닙니다. 다른 답은 몇 개인지, 회전·뒤집기로 같은 것은 어떻게 셀지 같은 새 질문이 탐구를 이어 갑니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">1부터 16까지로 4×4 마방진을 만들면 한 줄의 합은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>34<span class="why"><b>맞습니다.</b> 1부터 16까지의 합 136 ÷ 4 = 34입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>15<span class="why"><b>3×3의 합입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>136<span class="why"><b>전체 합입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>32<span class="why"><b>계산을 다시 보세요.</b> 136 ÷ 4입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/3-1.html#card-mres-topic-matrix"><small class="mono">수학과제 탐구 3.1</small>탐구 주제 후보가 여러 개일 때, 무엇을 기준으로 골라야 할까?</a><a href="../../c/mres/3-1.html#card-mres-critical-path"><small class="mono">수학과제 탐구 3.1</small>탐구 활동을 모두 끝내려면 최소 며칠이 걸릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/3-3.html#card-mres-chart-redesign"><small class="mono">수학과제 탐구 3.3</small>탐구 발표의 그래프, 어떻게 고치면 한눈에 읽힐까?</a><a href="../../c/mres/3-3.html#card-mres-proof-order"><small class="mono">수학과제 탐구 3.3</small>탐구 보고서에 증명을 쓸 때, 문장을 어떤 순서로 놓아야 할까?</a></div></nav>
+
+      <article class="card" id="card-mres-border-tiles">
+        <header class="card-head">
+          <span class="no">3.2.2</span><h2>n×n 정사각형 테두리의 타일 수를 세는 방법은 몇 가지일까?</h2><span class="kind">일반화와 식의 동치 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">\(n\) = <output class="n-out"></output></label><input class="n" type="range" min="3" max="12" step="1" value="6" aria-label="한 변의 타일 수"></div></div>
+            <div class="presets" role="group" aria-label="세는 방법"><button class="chip" type="button" data-m="0">한 변씩 겹치게</button><button class="chip" type="button" data-m="1">모서리 빼고 네 변</button><button class="chip" type="button" data-m="2">긴 변 2개 + 짧은 변 2개</button><button class="chip" type="button" data-m="3">전체 − 안쪽</button></div>
+            <canvas aria-label="n×n 정사각형 테두리 타일을 색으로 묶어 센 그림"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>한 변에 \(n\)개씩 놓인 정사각형 테두리의 타일 수를 친구들이 각자 다른 식으로 셌습니다. 식은 모두 다른데 답은 같을까요?</li>
+            <li><span class="tag">복원</span>다항식의 전개와 정리, 곱셈 공식 \(a^2 - b^2 = (a + b)(a - b)\).</li>
+            <li><span class="tag">설명</span>네 변을 각각 \(n\)개씩 세면 모서리 4개를 두 번 센 것이라 \(4n - 4\), 모서리를 빼고 세면 \(4(n - 2) + 4\), 긴 변 두 개와 짧은 변 두 개로 나누면 \(2n + 2(n - 2)\), 전체에서 안쪽을 빼면 \(n^2 - (n - 2)^2\)입니다. 모두 정리하면 \(4n - 4\)로 같습니다. 탐구를 수행할 때 여러 방법으로 접근하고, 결과가 같은 까닭을 식으로 확인하면 결론을 더 믿을 수 있습니다.</li>
+            <li><span class="tag">연결</span>이렇게 구체적인 예(특수화)에서 규칙을 찾아 일반식으로 나타내는 것(일반화)이 탐구 수행의 핵심 과정입니다.</li>
+            <li><span class="tag">적용</span>네 가지 방법을 눌러 색으로 묶인 모양을 보고, 각 식을 정리해 \(4n - 4\)가 되는지 확인하세요. 다섯째 방법을 찾을 수 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>\(n = 1, 2\)일 때는 그림의 뜻이 달라집니다(안쪽이 없거나 음수). 식이 성립하는 범위를 함께 밝혀야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">가로 \(a\)개, 세로 \(b\)개인 직사각형(\(a, b \ge 2\)) 테두리의 타일 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(2a + 2b - 4\)<span class="why"><b>맞습니다.</b> 모서리 4개를 두 번 센 만큼 뺍니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(2a + 2b\)<span class="why"><b>모서리를 두 번 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(ab - 4\)<span class="why"><b>안쪽은 \((a - 2)(b - 2)\)입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(4a - 4\)<span class="why"><b>정사각형일 때의 식입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/3-1.html#card-mres-topic-matrix"><small class="mono">수학과제 탐구 3.1</small>탐구 주제 후보가 여러 개일 때, 무엇을 기준으로 골라야 할까?</a><a href="../../c/mres/3-1.html#card-mres-critical-path"><small class="mono">수학과제 탐구 3.1</small>탐구 활동을 모두 끝내려면 최소 며칠이 걸릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/3-3.html#card-mres-chart-redesign"><small class="mono">수학과제 탐구 3.3</small>탐구 발표의 그래프, 어떻게 고치면 한눈에 읽힐까?</a><a href="../../c/mres/3-3.html#card-mres-proof-order"><small class="mono">수학과제 탐구 3.3</small>탐구 보고서에 증명을 쓸 때, 문장을 어떤 순서로 놓아야 할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=mres-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mres/magic-square-log.js"></script>
+<script src="../../js/cards/mres/border-tiles.js"></script>
+</body>
+</html>
