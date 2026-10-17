@@ -1098,3 +1098,7 @@ mcu-sports | 스포츠와 수학 | card-mcult-shot-angle card-mcult-elo-rating |
 mcu-games | 게임과 수학 | card-mcult-nim card-mcult-gacha |
 mcu-digital | 디지털 기술과 수학 | card-mcult-barcode-check card-mcult-run-length | mcu-games
 mcu-voting | 투표와 수학 | card-mcult-voting-methods card-mcult-apportionment |
+mcu-folk | 민속 수학과 건축 | card-mcult-yut-probability card-mcult-frieze |
+mcu-braille | 점자와 수학 | card-mcult-braille-count card-mcult-braille-number |
+mcu-media | 대중매체와 데이터 | card-mcult-poll-margin card-mcult-relative-risk |
+mcu-consume | 가치소비와 의사 결정 | card-mcult-unit-price card-mcult-carbon-choice |

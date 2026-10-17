@@ -1571,3 +1571,4 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 합동 | basics/b-m-congruence
 원주율 | basics/b-m-pi
 산술평균과 기하평균 | card-cm2-amgm
+모비율의 추정 | card-stat-ci-prop

@@ -10220,25 +10220,41 @@
        "n": 1,
        "title": "민속 수학과 건축",
        "code": "12수문03-01",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-3-1",
+        "card-mcult-yut-probability",
+        "card-mcult-frieze"
+       ]
       },
       {
        "n": 2,
        "title": "점자와 수학",
        "code": "12수문03-02",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-3-2",
+        "card-mcult-braille-count",
+        "card-mcult-braille-number"
+       ]
       },
       {
        "n": 3,
        "title": "대중매체와 데이터",
        "code": "12수문03-03",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-3-3",
+        "card-mcult-poll-margin",
+        "card-mcult-relative-risk"
+       ]
       },
       {
        "n": 4,
        "title": "가치소비와 의사 결정",
        "code": "12수문03-04",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-3-4",
+        "card-mcult-unit-price",
+        "card-mcult-carbon-choice"
+       ]
       }
      ]
     },

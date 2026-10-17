@@ -18257,29 +18257,73 @@ window.TOC = [
       "n": 1,
       "title": "민속 수학과 건축",
       "code": "12수문03-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-yut-probability",
+        "title": "윷을 던지면 도, 개, 걸, 윷, 모 중 무엇이 가장 잘 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-frieze",
+        "title": "처마 끝이나 옷깃의 띠 무늬는 몇 종류로 나눌 수 있을까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "점자와 수학",
       "code": "12수문03-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-braille-count",
+        "title": "점 여섯 개로 서로 다른 점자를 몇 가지 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-braille-number",
+        "title": "엘리베이터 버튼의 점자 숫자는 어떻게 읽을까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "대중매체와 데이터",
       "code": "12수문03-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-poll-margin",
+        "title": "뉴스 여론조사의 \"95% 신뢰수준에 오차범위 ±3.1%p\"는 무슨 뜻일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-relative-risk",
+        "title": "\"이것을 먹으면 병에 걸릴 위험이 2배!\" 기사는 얼마나 걱정해야 할까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "가치소비와 의사 결정",
       "code": "12수문03-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-unit-price",
+        "title": "1+1, 대용량, 할인 상품 중 어느 것이 가장 쌀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-carbon-choice",
+        "title": "텀블러는 몇 번 써야 일회용 컵보다 환경에 나을까?"
+       }
+      ]
      }
     ]
    },
