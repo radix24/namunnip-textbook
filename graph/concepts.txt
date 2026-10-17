@@ -1090,3 +1090,7 @@ jm-probability | 가능성의 수치화 | card-jmath-defect-sample card-jmath-ov
 jm-tables | 표와 그래프로 정리하기 | card-jmath-choose-chart card-jmath-class-width | 
 jm-interpret | 표와 그래프의 해석 | card-jmath-misleading-graph card-jmath-dashboard | jm-tables
 jm-decision | 목적에 맞는 표현과 의사 결정 | card-jmath-supplier-score card-jmath-stock-decision | jm-interpret jm-probability
+mcu-music | 음악과 수학 | card-mcult-string-ratio card-mcult-equal-temperament |
+mcu-art | 미술과 수학 | card-mcult-perspective card-mcult-golden-myth |
+mcu-literature | 문학과 수학 | card-mcult-fib-poem card-mcult-babel-library |
+mcu-film | 영화와 수학 | card-mcult-wagon-wheel card-mcult-bezier-path | mcu-art

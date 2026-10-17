@@ -10128,25 +10128,41 @@
        "n": 1,
        "title": "음악과 수학",
        "code": "12수문01-01",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-1-1",
+        "card-mcult-string-ratio",
+        "card-mcult-equal-temperament"
+       ]
       },
       {
        "n": 2,
        "title": "미술과 수학",
        "code": "12수문01-02",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-1-2",
+        "card-mcult-perspective",
+        "card-mcult-golden-myth"
+       ]
       },
       {
        "n": 3,
        "title": "문학과 수학",
        "code": "12수문01-03",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-1-3",
+        "card-mcult-fib-poem",
+        "card-mcult-babel-library"
+       ]
       },
       {
        "n": 4,
        "title": "영화와 수학",
        "code": "12수문01-04",
-       "blocks": []
+       "blocks": [
+        "intro-mcult-1-4",
+        "card-mcult-wagon-wheel",
+        "card-mcult-bezier-path"
+       ]
       }
      ]
     },
