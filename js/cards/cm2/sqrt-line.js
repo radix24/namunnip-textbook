@@ -32,7 +32,7 @@
     const k = +sk.value, pts = meets(k);
     $(".k-out").textContent = K.n(k);
     $(".eq").innerHTML = `${Y} = ${X}${k ? (k > 0 ? " + " : " − ") + K.n(Math.abs(k)) : ""}, ${Y} = √(${X} + 2)<br><i>u</i> = √(${X} + 2)로 놓으면 <i>u</i><sup>2</sup> − <i>u</i> ${k - 2 < 0 ? "−" : "+"} ${K.n(Math.abs(k - 2))} = 0 (<i>u</i> ≥ 0)`;
-    const n = $(".n-n"); n.textContent = `${pts.length}개`; n.className = pts.length === 2 ? "good" : pts.length ? "" : "bad";
+    const n = $(".n-n"); n.textContent = `${pts.length}개`; n.className = "n-n " + (pts.length === 2 ? "good" : pts.length ? "" : "bad");
     $(".n-d").textContent = K.n(9 - 4 * k);
     $(".n-p").textContent = pts.length ? pts.map((p) => `(${K.n(p[0])}, ${K.n(p[1])})`).join(" ") : "없음";
     draw();

@@ -54,7 +54,7 @@
     root.querySelectorAll(".guess .chip").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.g === guess)));
     draw();
   }
-  S.chips(root, ".presets .chip", (b) => { key = b.dataset.k; guess = null; shown = false; sk.value = "1"; update(); });
+  S.chips(root, ".presets:not(.guess) .chip", (b) => { key = b.dataset.k; guess = null; shown = false; sk.value = "1"; update(); });
   root.querySelectorAll(".guess .chip").forEach((b) => b.addEventListener("click", () => { guess = b.dataset.g; update(); }));
   $(".go-reveal").addEventListener("click", () => { shown = true; update(); });
   sk.addEventListener("input", update);

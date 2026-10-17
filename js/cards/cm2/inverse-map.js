@@ -35,7 +35,7 @@
 
   function update() {
     const A = analyze(), x = (i) => String(i + 1), y = (i) => YS[i];
-    const yes = (el, v) => { el.textContent = v ? "예" : "아니요"; el.className = v ? "good" : "bad"; };
+    const yes = (el, v) => { el.textContent = v ? "예" : "아니요"; el.classList.toggle("good", v); el.classList.toggle("bad", !v); };
     yes($(".n-i"), A.inj); yes($(".n-o"), A.onto); yes($(".n-v"), A.ok);
     let t = "<i>f</i>: " + [0, 1, 2].map((i) => `${x(i)}→${y(f[i])}`).join(", ");
     if (inv) {

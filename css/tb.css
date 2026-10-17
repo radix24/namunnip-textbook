@@ -190,6 +190,7 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 /* 그림 칸의 표·선택 상자·행렬 글자가 좁은 화면에서 카드 밖으로 밀어내지 않게 */
 .card-fig select, .card-fig input:not([type="checkbox"]):not([type="radio"]) { max-width: 100%; }
 .card-fig pre { max-width: 100%; overflow-x: auto; }
+.katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .card-fig mark { overflow-wrap: anywhere; }
 .ctl { margin-top: 10px; }
 .ctl label.mono { display: block; }
