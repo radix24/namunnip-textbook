@@ -17996,36 +17996,91 @@ window.TOC = [
       "n": 1,
       "title": "경우의 수",
       "code": "12직수04-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-shift-schedule",
+        "title": "직원 5명으로 오전·오후·야간 근무자를 정하는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-password",
+        "title": "비밀번호를 한 자리 늘리는 것과 특수문자를 넣는 것 중 무엇이 더 안전할까?"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "가능성의 수치화",
       "code": "12직수04-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-defect-sample",
+        "title": "불량률 2%인 공장에서 10개를 뽑아 검사하면 불량품이 하나도 안 나올 가능성은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-overbooking",
+        "title": "식당 좌석이 40석일 때 예약을 몇 팀까지 받아도 될까?"
+       }
+      ]
      },
      {
       "n": 3,
       "title": "표와 그래프로 정리하기",
       "code": "12직수04-03",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-choose-chart",
+        "title": "같은 매출 자료로 보고서를 쓸 때 어떤 그래프를 골라야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-class-width",
+        "title": "배달 시간 자료를 도수분포표로 정리할 때 계급을 몇 분 단위로 나눌까?"
+       }
+      ]
      },
      {
       "n": 4,
       "title": "표와 그래프의 해석",
       "code": "12직수04-04",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-misleading-graph",
+        "title": "이 홍보물의 그래프는 무엇을 부풀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-dashboard",
+        "title": "매장 대시보드를 보고 회의에서 무엇이라고 보고할까?"
+       }
+      ]
      },
      {
       "n": 5,
       "title": "목적에 맞는 표현과 의사 결정",
       "code": "12직수04-05",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-supplier-score",
+        "title": "세 납품 업체 중 어디를 고를까? 무엇을 중요하게 보느냐에 따라 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-stock-decision",
+        "title": "내일 비 올 확률이 30%일 때 우산을 몇 개 들여놓아야 할까?"
+       }
+      ]
      }
     ]
    }

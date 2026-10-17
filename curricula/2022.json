@@ -10063,31 +10063,51 @@
        "n": 1,
        "title": "경우의 수",
        "code": "12직수04-01",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-4-1",
+        "card-jmath-shift-schedule",
+        "card-jmath-password"
+       ]
       },
       {
        "n": 2,
        "title": "가능성의 수치화",
        "code": "12직수04-02",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-4-2",
+        "card-jmath-defect-sample",
+        "card-jmath-overbooking"
+       ]
       },
       {
        "n": 3,
        "title": "표와 그래프로 정리하기",
        "code": "12직수04-03",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-4-3",
+        "card-jmath-choose-chart",
+        "card-jmath-class-width"
+       ]
       },
       {
        "n": 4,
        "title": "표와 그래프의 해석",
        "code": "12직수04-04",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-4-4",
+        "card-jmath-misleading-graph",
+        "card-jmath-dashboard"
+       ]
       },
       {
        "n": 5,
        "title": "목적에 맞는 표현과 의사 결정",
        "code": "12직수04-05",
-       "blocks": []
+       "blocks": [
+        "intro-jmath-4-5",
+        "card-jmath-supplier-score",
+        "card-jmath-stock-decision"
+       ]
       }
      ]
     }

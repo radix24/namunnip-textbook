@@ -1085,3 +1085,8 @@ jm-views | 위, 앞, 옆에서 본 모양 | card-jmath-three-views card-jmath-vi
 jm-transform | 도형의 이동, 합동과 닮음 | card-jmath-tile-transform card-jmath-sign-enlarge | jm-ratio
 jm-area | 평면도형의 둘레와 넓이 | card-jmath-floor-area card-jmath-fence | jm-estimate
 jm-volume | 입체도형의 겉넓이와 부피 | card-jmath-tank-volume card-jmath-paint-surface | jm-net jm-area
+jm-counting | 경우의 수 | card-jmath-shift-schedule card-jmath-password | 
+jm-probability | 가능성의 수치화 | card-jmath-defect-sample card-jmath-overbooking | jm-counting
+jm-tables | 표와 그래프로 정리하기 | card-jmath-choose-chart card-jmath-class-width | 
+jm-interpret | 표와 그래프의 해석 | card-jmath-misleading-graph card-jmath-dashboard | jm-tables
+jm-decision | 목적에 맞는 표현과 의사 결정 | card-jmath-supplier-score card-jmath-stock-decision | jm-interpret jm-probability
