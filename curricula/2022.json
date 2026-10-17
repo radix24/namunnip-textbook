@@ -10484,13 +10484,21 @@
        "n": 1,
        "title": "수학과제 탐구의 의미",
        "code": "12수과01-01",
-       "blocks": []
+       "blocks": [
+        "intro-mres-1-1",
+        "card-mres-collatz-explore",
+        "card-mres-circle-regions"
+       ]
       },
       {
        "n": 2,
        "title": "연구 윤리",
        "code": "12수과01-02",
-       "blocks": []
+       "blocks": [
+        "intro-mres-1-2",
+        "card-mres-benford-check",
+        "card-mres-citation-ethics"
+       ]
       }
      ]
     },

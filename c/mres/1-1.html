@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>수학과제 탐구의 의미 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="콜라츠 수열 따라가기와 1~300 조사로 겪는 관찰 → 추측 → 검증, 확인한 범위와 증명의 구별, 원 위 n점을 이은 조각 수 1, 2, 4, 8, 16, 31(1 + nC2 + nC4)로 보는 성급한 일반화의 함정. 콜라츠 카드와, 원 나누기 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mres-collatz-explore canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-mres-collatz-explore .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    #card-mres-collatz-explore input[type=number] { width: 6rem; }
+    #card-mres-collatz-explore ol.log { font: .8rem var(--mono, monospace); max-height: 7rem; overflow-y: auto; margin: .3rem 0 0; padding-left: 1.4rem; }
+    #card-mres-circle-regions canvas { aspect-ratio: 1 / 1; max-width: 340px; margin: .3rem auto 0; }
+    #card-mres-circle-regions .ctl-row > div { min-width: 12rem; }
+    #card-mres-circle-regions table { border-collapse: collapse; font: .82rem var(--mono, monospace); margin: .4rem auto 0; }
+    #card-mres-circle-regions td, #card-mres-circle-regions th { border: 1px solid var(--rule, #d9dad2); padding: .1rem .45rem; text-align: center; }
+  </style>
+</head>
+<body data-course="mres" data-sec="1-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>수학과제 탐구의 의미</h1>
+    <p class="lead">수학과제 탐구는 스스로 질문을 세우고 관찰, 추측, 검증을 거쳐 답을 찾아가는 활동입니다. 몇 가지 예에서 찾은 규칙은 출발점일 뿐이며, 더 많은 경우로 확인하고 까닭을 설명해야 합니다. 이 절에서는 아직 풀리지 않은 문제와 규칙이 깨지는 문제로 <em>탐구의 의미</em>를 체험합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/3-6.html#card-alg-recur-rule" title="대수 3.6 · 첫째항과 규칙만으로 수열이 정해질까?">수열의 귀납적 정의</a><a class="p p-card" href="../../c/cm1/3-3.html#card-cm1-comb-group" title="공통수학1 3.3 · 순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?">조합</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mres-collatz-explore"><span class="mono">1.1.1</span>관찰하고, 추측하고, 아직 증명하지 못한 것 — 콜라츠 추측</a></li>
+        <li><a href="#card-mres-circle-regions"><span class="mono">1.1.2</span>1, 2, 4, 8, 16 다음은 32일까 — 규칙을 의심하는 습관</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mres-1-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mres-collatz-explore">
+        <header class="card-head">
+          <span class="no">1.1.1</span><h2>짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?</h2><span class="kind">관찰·추측·검증 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="row"><label class="mono">시작 수 <input type="number" class="n" min="1" max="1000000" value="27" aria-label="시작 수"></label><button class="chip go" type="button">따라가기</button><button class="chip scan" type="button">1~300 모두 조사</button></div>
+            <canvas aria-label="수열의 값 변화 그래프 또는 시작 수별 도착 단계 수"></canvas>
+            <p class="mono small say" role="status"></p>
+            <ol class="log" aria-label="탐구 기록"></ol>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>자연수 하나에서 시작해 짝수면 2로 나누고, 홀수면 3배 해서 1을 더하는 일을 되풀이합니다. 어떤 수에서 시작해도 결국 1에 도착할까요?</li>
+            <li><span class="tag">복원</span>수열의 귀납적 정의, 홀수와 짝수.</li>
+            <li><span class="tag">설명</span>이 문제는 <em>콜라츠 추측</em>으로, 컴퓨터로 아주 큰 수까지 확인되었지만 아직 증명되지 않았습니다. 수학 탐구는 이렇게 <em>관찰</em>(여러 수로 해 보기) → <em>추측</em>(규칙을 문장으로 쓰기) → <em>검증</em>(반례 찾기, 증명 시도)의 순서로 진행됩니다. 27처럼 작은 수가 111단계나 걸리고 9232까지 치솟는 것처럼, 관찰 중 생긴 놀라움이 새로운 질문으로 이어집니다.</li>
+            <li><span class="tag">연결</span>탐구 주제는 이렇게 쉽게 설명되지만 깊이가 있는 문제에서 찾을 수 있습니다. 여러분의 탐구 결과는 "1~300에서 확인했다"처럼 범위를 밝혀 써야 합니다.</li>
+            <li><span class="tag">적용</span>1~300을 조사해 단계 수가 가장 많은 수를 찾고, 단계 수에 대해 관찰한 규칙을 탐구 기록에 남겨 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>아무리 많은 수에서 확인해도 그것은 증명이 아닙니다. "확인한 범위에서 성립한다"와 "모든 자연수에서 성립한다"를 구별해 써야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">6에서 시작하면 몇 단계 만에 1에 도착할까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>8단계<span class="why"><b>맞습니다.</b> 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>3단계<span class="why"><b>3에서 다시 커집니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>9단계<span class="why"><b>시작 수까지 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>도착하지 않는다<span class="why"><b>직접 따라가 보면 도착합니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/mres/1-2.html#card-mres-benford-check"><small class="mono">수학과제 탐구 1.2</small>자연에서 모은 숫자와 지어낸 숫자, 첫 자리만 보고 구별할 수 있을까?</a><a href="../../c/mres/1-2.html#card-mres-citation-ethics"><small class="mono">수학과제 탐구 1.2</small>모둠 탐구 보고서를 쓰다 생긴 일들, 어디까지 괜찮을까?</a></div></nav>
+
+      <article class="card" id="card-mres-circle-regions">
+        <header class="card-head">
+          <span class="no">1.1.2</span><h2>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</h2><span class="kind">추측과 반례 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">원 위에 점을 찍고 모든 두 점을 선분으로 잇습니다(세 선분이 한 점에서 만나지 않게). 점 1~5개면 조각은 1, 2, 4, 8, 16개입니다. <b>예측</b>: 점이 6개면?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="32">32</button><button class="chip" type="button" data-g="31">31</button><button class="chip" type="button" data-g="30">30</button><button class="chip" type="button" data-g="36">36</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="ctl-row"><div><label class="mono">점의 수 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="1" max="9" step="1" value="5" aria-label="점의 수"></div></div>
+            <canvas aria-label="원 위의 점과 모든 현, 나뉜 조각"></canvas>
+            <table hidden></table>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>몇 개의 값을 보고 규칙을 찾는 것은 탐구의 좋은 출발점입니다. 1, 2, 4, 8, 16이 나오면 다음은 당연히 32일까요?</li>
+            <li><span class="tag">복원</span>조합 \({}_n\mathrm{C}_r\), 그래프의 꼭짓점·변·면 사이의 관계.</li>
+            <li><span class="tag">설명</span>점이 6개일 때 조각은 32가 아니라 <em>31</em>개입니다. 실제 규칙은 \(1 + {}_n\mathrm{C}_2 + {}_n\mathrm{C}_4\)로, 선분 하나가 생길 때마다 하나, 원 안의 교점 하나가 생길 때마다 하나씩 조각이 늘어나서 나옵니다. 처음 다섯 값이 우연히 2의 거듭제곱과 같았을 뿐입니다. 탐구에서 찾은 규칙은 더 많은 경우로 확인하고, 왜 그런지 설명(증명)할 수 있어야 합니다.</li>
+            <li><span class="tag">연결</span>탐구 보고서에서 "규칙을 찾았다"고 쓰려면 이렇게 반례를 찾아보는 과정과 근거가 함께 있어야 합니다.</li>
+            <li><span class="tag">적용</span>점의 수를 늘리며 조각 수 표를 완성하고, \(1 + {}_n\mathrm{C}_2 + {}_n\mathrm{C}_4\)와 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>점들을 정다각형처럼 고르게 찍으면 세 선분이 한 점에서 만나 조각 수가 줄어들 수 있습니다. 조건을 정확히 밝히는 것도 탐구의 일부입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">점이 7개일 때 조각 수 \(1 + {}_7\mathrm{C}_2 + {}_7\mathrm{C}_4\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>57<span class="why"><b>맞습니다.</b> 1 + 21 + 35 = 57입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>64<span class="why"><b>2의 거듭제곱 규칙을 계속 썼습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>62<span class="why"><b>31의 2배로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>36<span class="why"><b>\({}_7\mathrm{C}_4\)만 더했습니다(1 + 35).</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/mres/1-2.html#card-mres-benford-check"><small class="mono">수학과제 탐구 1.2</small>자연에서 모은 숫자와 지어낸 숫자, 첫 자리만 보고 구별할 수 있을까?</a><a href="../../c/mres/1-2.html#card-mres-citation-ethics"><small class="mono">수학과제 탐구 1.2</small>모둠 탐구 보고서를 쓰다 생긴 일들, 어디까지 괜찮을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=mres-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mres/collatz-explore.js"></script>
+<script src="../../js/cards/mres/circle-regions.js"></script>
+</body>
+</html>

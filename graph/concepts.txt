@@ -1119,3 +1119,5 @@ pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat
 pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking | pst-ci-prop
 pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat-error-cost | pst-test
 pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias | pst-test pst-collect
+mrs-meaning | 수학과제 탐구의 의미 | card-mres-collatz-explore card-mres-circle-regions |
+mrs-ethics | 연구 윤리 | card-mres-benford-check card-mres-citation-ethics | mrs-meaning

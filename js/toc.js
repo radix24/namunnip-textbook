@@ -18689,15 +18689,37 @@ window.TOC = [
       "n": 1,
       "title": "수학과제 탐구의 의미",
       "code": "12수과01-01",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-collatz-explore",
+        "title": "짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-circle-regions",
+        "title": "원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …"
+       }
+      ]
      },
      {
       "n": 2,
       "title": "연구 윤리",
       "code": "12수과01-02",
-      "page": false,
-      "items": []
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-benford-check",
+        "title": "자연에서 모은 숫자와 지어낸 숫자, 첫 자리만 보고 구별할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-citation-ethics",
+        "title": "모둠 탐구 보고서를 쓰다 생긴 일들, 어디까지 괜찮을까?"
+       }
+      ]
      }
     ]
    },

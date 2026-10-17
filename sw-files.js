@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "487a632ba58f",
+"version": "94e31339f675",
 "files": [
 "graph.html",
 "index.html",
@@ -805,6 +805,8 @@ self.PRECACHE = {
 "c/mech/3-4.html",
 "c/mech/3-5.html",
 "c/mech/index.html",
+"c/mres/1-1.html",
+"c/mres/1-2.html",
 "c/mres/index.html",
 "c/phy/1-1.html",
 "c/phy/1-2.html",
@@ -2267,6 +2269,10 @@ self.PRECACHE = {
 "js/cards/mech/w-shm.js",
 "js/cards/mech/w-standing.js",
 "js/cards/mech/w-two-speaker.js",
+"js/cards/mres/benford-check.js",
+"js/cards/mres/circle-regions.js",
+"js/cards/mres/citation-ethics.js",
+"js/cards/mres/collatz-explore.js",
 "js/cards/pendulum.js",
 "js/cards/photo-rate.js",
 "js/cards/phy/circuit-meter.js",
