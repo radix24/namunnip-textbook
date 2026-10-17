@@ -44,8 +44,8 @@
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
         <li><a href="#card-phy-lm-dslit"><span class="mono">3.2.1</span>이중 슬릿 무늬의 간격은 무엇이 정할까?</a></li>
-        <li><a href="#card-adphy-interferometer"><span class="mono">3.2.2</span>마이컬슨 간섭계와 뉴턴 링</a></li>
-        <li><a href="#card-phy-lm-film"><span class="mono">3.2.3</span>비눗방울은 왜 무지갯빛일까?</a></li>
+        <li><a href="#card-phy-lm-film"><span class="mono">3.2.2</span>비눗방울은 왜 무지갯빛일까?</a></li>
+        <li><a href="#card-adphy-interferometer"><span class="mono">3.2.3</span>마이컬슨 간섭계와 뉴턴 링</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../practice.html?sec=adphy-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
@@ -106,9 +106,57 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div></nav>
 
+      <article class="card" id="card-phy-lm-film">
+        <header class="card-head">
+          <span class="no">3.2.2</span><h2>비눗방울은 왜 무지갯빛일까?</h2><span class="kind">얇은 막 간섭 · 반사의 위상</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig fig-2">
+            <canvas class="cv-sq" aria-label="위는 얇고 아래로 갈수록 두꺼워지는 비누막의 반사 색. 끌어서 두께를 고를 수 있다."></canvas>
+            <canvas class="cv-sq" aria-label="고른 두께에서 파장별 반사 세기 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" data-t="10">10 nm</button>
+                <button class="chip" data-t="100">100 nm</button>
+                <button class="chip" data-t="300">300 nm</button>
+                <button class="chip" data-t="550">550 nm</button>
+                <button class="chip" data-t="1100">1100 nm</button>
+              </div>
+              <label class="mono">막 두께 t = <output class="t-out">300</output> nm <span class="dim">(왼쪽 막을 끌어도 됩니다)</span></label>
+              <input class="t" type="range" min="0" max="1200" step="5" value="300" aria-label="비누막 두께">
+              <div class="toggles"><label><input type="checkbox" class="nopi">앞면 반사의 반 파장 어긋남을 무시하기</label></div>
+              <dl class="nums">
+                <div><dt>경로차 2nt</dt><dd class="opt2">—</dd></div>
+                <div><dt>강해지는 파장</dt><dd class="strong">—</dd></div>
+                <div><dt>사라지는 파장</dt><dd class="weak">—</dd></div>
+              </dl>
+              <p class="fig-note">비눗물 굴절률 n = 1.33, 수직으로 볼 때, 햇빛을 모든 파장 세기가 같은 흰빛으로 둔 계산입니다(모식). 반사 세기는 가장 강할 때를 1로 둔 상대값입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>비눗물은 색이 없습니다. 그런데 비눗방울 막은 왜 무지갯빛으로 보이고, 터지기 직전 가장 얇아진 부분은 왜 검게 보일까요?</li>
+            <li><span class="tag">복원</span>두 빛이 겹칠 때 경로차가 파장의 정수배면 보강, 반 파장 더 어긋나면 상쇄됩니다.</li>
+            <li><span class="tag">설명</span>막의 앞면에서 반사한 빛과 뒷면에서 반사한 빛이 겹칩니다. 뒷면 반사광은 막 속을 한 번 왕복하므로 광학적 거리로 <span class="formula">2nt</span>만큼 더 갑니다. 여기에 한 가지가 더 있습니다. 공기에서 비눗물처럼 굴절률이 큰 쪽으로 부딪혀 반사할 때는 파동이 반 파장만큼 뒤집힙니다.</li>
+            <li><span class="tag">연결</span>그래서 비누막에서는 <span class="formula">2nt = (m + ½)λ</span>인 파장이 강해지고 <span class="formula">2nt = mλ</span>인 파장이 사라집니다(m = 0, 1, 2, …). 흰빛에서 몇몇 파장이 빠지면 남은 빛이 섞여 색으로 보입니다. 막 두께가 곳곳마다 다르니 색도 곳곳마다 다릅니다.</li>
+            <li><span class="tag">적용</span>두께를 0에서 1200 nm까지 천천히 옮겨 보세요. 두께가 1000 nm를 넘으면 강해지는 파장이 여럿이 되어 색이 옅어집니다. 두께를 10 nm에 두고 ‘반 파장 어긋남을 무시하기’를 켜 보세요. 무엇이 달라집니까?</li>
+            <li class="warn"><span class="tag">판단</span>아주 얇은 막이 검은 것은 빛을 흡수해서가 아닙니다. 경로차가 거의 0인데 한쪽만 반 파장 뒤집혀 두 반사광이 서로 지우기 때문입니다. 반 파장 뒤집힘은 굴절률이 작은 쪽에서 큰 쪽으로 반사할 때만 생기므로, 막과 양쪽 물질이 바뀌면 결론도 바뀝니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">안경 렌즈(유리, n = 1.52) 표면에 플루오린화 마그네슘(n = 1.38) 막을 입혀 초록빛(550 nm) 반사를 줄이려 합니다. 이번에는 막의 앞면과 뒷면 모두 굴절률이 큰 쪽으로의 반사입니다. 알맞은 막 두께는?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>가능한 한 얇게, 0에 가깝게<span class="why"><b>비누막의 결론을 그대로 옮긴 답입니다.</b> 여기서는 두 반사가 모두 반 파장 뒤집혀 그 효과가 서로 상쇄됩니다. 두께가 0에 가까우면 두 반사광이 오히려 보강됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>약 100 nm<span class="why"><b>맞습니다.</b> 뒤집힘 효과가 상쇄되므로 2nt = λ/2일 때 상쇄됩니다. t = 550 / (4 × 1.38) ≈ 100 nm. 안경알이 비스듬히 보랏빛으로 비치는 것은 이 코팅이 초록을 덜 반사하기 때문입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 200 nm<span class="why"><b>이때 2nt ≈ 550 nm = λ입니다.</b> 두 반사가 모두 뒤집히는 경우에는 경로차가 한 파장이면 보강되어, 초록 반사가 가장 강해집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div></nav>
+
       <article class="card" id="card-adphy-interferometer">
         <header class="card-head">
-          <span class="no">3.2.2</span><h2>빛의 파장으로 1만분의 1 mm를 잴 수 있을까?</h2><span class="kind">간섭계 · 마이컬슨 간섭계와 뉴턴 링</span>
+          <span class="no">3.2.3</span><h2>빛의 파장으로 1만분의 1 mm를 잴 수 있을까?</h2><span class="kind">간섭계 · 마이컬슨 간섭계와 뉴턴 링</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -156,54 +204,6 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-1.html#card-phy-superpose"><small class="mono">물리학 3.1</small>마주 오던 두 파동이 만나면 부서질까, 그냥 지나갈까?</a></div></nav>
 
-      <article class="card" id="card-phy-lm-film">
-        <header class="card-head">
-          <span class="no">3.2.3</span><h2>비눗방울은 왜 무지갯빛일까?</h2><span class="kind">얇은 막 간섭 · 반사의 위상</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig fig-2">
-            <canvas class="cv-sq" aria-label="위는 얇고 아래로 갈수록 두꺼워지는 비누막의 반사 색. 끌어서 두께를 고를 수 있다."></canvas>
-            <canvas class="cv-sq" aria-label="고른 두께에서 파장별 반사 세기 그래프"></canvas>
-            <div class="ctl">
-              <div class="presets">
-                <button class="chip" data-t="10">10 nm</button>
-                <button class="chip" data-t="100">100 nm</button>
-                <button class="chip" data-t="300">300 nm</button>
-                <button class="chip" data-t="550">550 nm</button>
-                <button class="chip" data-t="1100">1100 nm</button>
-              </div>
-              <label class="mono">막 두께 t = <output class="t-out">300</output> nm <span class="dim">(왼쪽 막을 끌어도 됩니다)</span></label>
-              <input class="t" type="range" min="0" max="1200" step="5" value="300" aria-label="비누막 두께">
-              <div class="toggles"><label><input type="checkbox" class="nopi">앞면 반사의 반 파장 어긋남을 무시하기</label></div>
-              <dl class="nums">
-                <div><dt>경로차 2nt</dt><dd class="opt2">—</dd></div>
-                <div><dt>강해지는 파장</dt><dd class="strong">—</dd></div>
-                <div><dt>사라지는 파장</dt><dd class="weak">—</dd></div>
-              </dl>
-              <p class="fig-note">비눗물 굴절률 n = 1.33, 수직으로 볼 때, 햇빛을 모든 파장 세기가 같은 흰빛으로 둔 계산입니다(모식). 반사 세기는 가장 강할 때를 1로 둔 상대값입니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>비눗물은 색이 없습니다. 그런데 비눗방울 막은 왜 무지갯빛으로 보이고, 터지기 직전 가장 얇아진 부분은 왜 검게 보일까요?</li>
-            <li><span class="tag">복원</span>앞 카드에서 본 것처럼 두 빛이 겹칠 때 경로차가 파장의 정수배면 보강, 반 파장 더 어긋나면 상쇄됩니다.</li>
-            <li><span class="tag">설명</span>막의 앞면에서 반사한 빛과 뒷면에서 반사한 빛이 겹칩니다. 뒷면 반사광은 막 속을 한 번 왕복하므로 광학적 거리로 <span class="formula">2nt</span>만큼 더 갑니다. 여기에 한 가지가 더 있습니다. 공기에서 비눗물처럼 굴절률이 큰 쪽으로 부딪혀 반사할 때는 파동이 반 파장만큼 뒤집힙니다.</li>
-            <li><span class="tag">연결</span>그래서 비누막에서는 <span class="formula">2nt = (m + ½)λ</span>인 파장이 강해지고 <span class="formula">2nt = mλ</span>인 파장이 사라집니다(m = 0, 1, 2, …). 흰빛에서 몇몇 파장이 빠지면 남은 빛이 섞여 색으로 보입니다. 막 두께가 곳곳마다 다르니 색도 곳곳마다 다릅니다.</li>
-            <li><span class="tag">적용</span>두께를 0에서 1200 nm까지 천천히 옮겨 보세요. 두께가 1000 nm를 넘으면 강해지는 파장이 여럿이 되어 색이 옅어집니다. 두께를 10 nm에 두고 ‘반 파장 어긋남을 무시하기’를 켜 보세요. 무엇이 달라집니까?</li>
-            <li class="warn"><span class="tag">판단</span>아주 얇은 막이 검은 것은 빛을 흡수해서가 아닙니다. 경로차가 거의 0인데 한쪽만 반 파장 뒤집혀 두 반사광이 서로 지우기 때문입니다. 반 파장 뒤집힘은 굴절률이 작은 쪽에서 큰 쪽으로 반사할 때만 생기므로, 막과 양쪽 물질이 바뀌면 결론도 바뀝니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">안경 렌즈(유리, n = 1.52) 표면에 플루오린화 마그네슘(n = 1.38) 막을 입혀 초록빛(550 nm) 반사를 줄이려 합니다. 이번에는 막의 앞면과 뒷면 모두 굴절률이 큰 쪽으로의 반사입니다. 알맞은 막 두께는?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>가능한 한 얇게, 0에 가깝게<span class="why"><b>비누막의 결론을 그대로 옮긴 답입니다.</b> 여기서는 두 반사가 모두 반 파장 뒤집혀 그 효과가 서로 상쇄됩니다. 두께가 0에 가까우면 두 반사광이 오히려 보강됩니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>약 100 nm<span class="why"><b>맞습니다.</b> 뒤집힘 효과가 상쇄되므로 2nt = λ/2일 때 상쇄됩니다. t = 550 / (4 × 1.38) ≈ 100 nm. 안경알이 비스듬히 보랏빛으로 비치는 것은 이 코팅이 초록을 덜 반사하기 때문입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 200 nm<span class="why"><b>이때 2nt ≈ 550 nm = λ입니다.</b> 두 반사가 모두 뒤집히는 경우에는 경로차가 한 파장이면 보강되어, 초록 반사가 가장 강해집니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div></nav>
-
       <a class="px-go" href="../../practice.html?sec=adphy-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
@@ -222,7 +222,7 @@
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
 <script src="../../js/cards/phy/lm-double-slit.js"></script>
-<script src="../../js/cards/adphy/opt-interferometer.js"></script>
 <script src="../../js/cards/phy/lm-thin-film.js"></script>
+<script src="../../js/cards/adphy/opt-interferometer.js"></script>
 </body>
 </html>

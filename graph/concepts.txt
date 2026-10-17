@@ -102,13 +102,13 @@ front | 전선과 중위도 저기압 | card-earth-front text-earth-satellite ca
 typhoon | 태풍과 악기상 | card-earth-typhoon-energy card-earth-danger card-earth-thunder text-earth-severe-weather card-earth-typhoon-track | wind
 enso | 용승과 엘니뇨 | card-earth-upwelling card-earth-enso text-is2-enso-desert card-earth-oni | seawater wind
 greenhouse | 온실 효과와 지구 온난화 | card-is2-greenhouse card-is2-co2 card-is2-sea-level video-is2-keeling card-is2-ssp | earth-system
-climate-factor | 기후 변화의 요인 | card-earth-milankovitch card-earth-forcing card-earth-attrib card-earth-mitigate | greenhouse paleoclimate
+climate-factor | 기후 변화의 요인 | card-earth-milankovitch card-earth-forcing card-earth-attrib card-earth-mitigate | greenhouse
 
 # ── 우주 ──
 eclipse | 일식과 월식 | card-earth-eclipse text-earth-eclipse-types |
 retro | 행성의 겉보기 운동 | card-earth-retro |
 blackbody | 흑체 복사와 별의 온도 | card-earth-blackbody | spectrum
-stellar-spec | 별의 분광형 | card-earth-spectral | blackbody energy-level
+stellar-spec | 별의 분광형 | card-earth-spectral | blackbody spectrum
 hrd | H–R도 | card-earth-hrd | stellar-spec
 star-evol | 별의 진화 | card-earth-evolve text-earth-star-life card-earth-star-core | hrd fusion
 galaxy | 은하의 분류와 특이 은하 | card-earth-hubble card-earth-quasar text-earth-active-galaxy card-earth-galaxy-ai | star-evol
@@ -622,36 +622,36 @@ rs-report | 연구 보고서 작성과 인용 | card-resr-abstract text-resr-rep
 rs-present | 구두·포스터 발표 | card-resr-poster text-resr-present | rs-report
 
 # ── 융합선택: 융합과학 탐구 ──
-fs-convergence | 융합 탐구의 사례: X선 회절과 DNA 구조 | card-fusi-helix text-fusi-dna | emq-diffraction gene-material
+fs-convergence | 융합 탐구의 사례: X선 회절과 DNA 구조 | card-fusi-helix text-fusi-dna |
 fs-inquiry-compare | 예술·사회과학·과학 탐구의 비교 | text-fusi-compare card-fusi-pointil | sci-method
 fs-data-types | 데이터의 종류와 측정 척도 | card-fusi-scale text-fusi-data | data error
-fs-digital-ai | 디지털 탐구 도구와 기계 학습 | card-fusi-power card-fusi-knn text-fusi-ai | digital elec-power le-mineral
+fs-digital-ai | 디지털 탐구 도구와 기계 학습 | card-fusi-power card-fusi-knn text-fusi-ai | digital elec-power
 fs-data-question | 공개 데이터 가공과 탐구 문제 발견 | card-fusi-quake | plate fs-data-types sie-represent
-fs-hypo-design | 가설·모형과 판별 가능한 탐구 설계 | card-fusi-cooling | sci-method heat-transfer lp-lsq
+fs-hypo-design | 가설·모형과 판별 가능한 탐구 설계 | card-fusi-cooling | sci-method
 fs-data-quality | 표집 편향과 데이터의 신뢰성·타당성 | card-fusi-sampling card-fusi-pmsensor | error digital sie-calib
 fs-visual | 목적에 맞는 시각화와 왜곡된 그래프 | card-fusi-misgraph | sie-represent
 fs-mean-sd | 평균·표준편차·표준오차로 가설 평가 | card-fusi-meansd | error sci-method
 fs-conclude | 결론 평가: 교란 변수와 심슨의 역설 | card-fusi-simpson | data fs-mean-sd
 fs-present | 탐구 결과 발표와 토론 | text-fusi-present | sie-evidence fs-conclude
 fs-tech-forecast | 미래 융합과학기술의 예측 | card-fusi-moore text-fusi-future | semicond
-fs-grand-challenge | 인류 난제의 융합적 해결 | card-fusi-desal text-fusi-challenges | mateng-osmosis
+fs-grand-challenge | 인류 난제의 융합적 해결 | card-fusi-desal text-fusi-challenges | cell-transport
 fs-ethics | 융합과학 탐구의 윤리와 쟁점 | text-fusi-ethics card-fusi-fairness | sie-ethics ethics ai diag-test
-fs-citizen-sci | 시민 참여와 시민 과학 | card-fusi-crowd text-fusi-citizen | galaxy data
+fs-citizen-sci | 시민 참여와 시민 과학 | card-fusi-crowd text-fusi-citizen | data
 
 # ── 융합선택: 기후변화와 환경생태 ──
 cl-weather-climate | 날씨와 기후, 평년값 | card-clim-normals |
-cl-climate-factor | 기후 요소와 기후 인자 | card-clim-factors | cl-weather-climate latent-heat
+cl-climate-factor | 기후 요소와 기후 인자 | card-clim-factors | cl-weather-climate
 cl-feedback | 기후 되먹임과 기후 민감도 | card-clim-feedback | greenhouse
 cl-biosphere-feedback | 생물권과 기후의 상호 작용 | card-clim-daisy | cl-feedback earth-system
 cl-impacts | 기후변화가 생태계와 생활에 준 영향 | card-clim-seaice text-clim-impacts | cl-feedback biodiversity
 cl-causes | 기후위기의 원인과 심각성 | card-clim-keeling text-clim-crisis | carbon-cycle greenhouse
-cl-sea-level | 해수면 상승: 열팽창과 빙상 융해 | card-clim-slr card-clim-meltheat | heat-transfer latent-heat cl-causes
-cl-extremes | 극한 기상 현상과 기온 분포의 꼬리 | card-clim-extremes text-clim-extreme-cases | greenhouse typhoon le-humidity
+cl-sea-level | 해수면 상승: 열팽창과 빙상 융해 | card-clim-slr card-clim-meltheat | cl-causes
+cl-extremes | 극한 기상 현상과 기온 분포의 꼬리 | card-clim-extremes text-clim-extreme-cases | greenhouse
 cl-range-shift | 기후변화 시나리오와 생물 분포 이동 | card-clim-range-shift text-clim-future-reports | greenhouse climate-factor biodiversity
 cl-phenology | 생물 계절과 개화 시기 변화 | card-clim-flowering text-clim-phenology-life | enzyme photosyn
-cl-pollinator | 꽃가루 매개 곤충의 감소와 원인 | card-clim-pollinator text-clim-insect-decline | cl-phenology food-web population
+cl-pollinator | 꽃가루 매개 곤충의 감소와 원인 | card-clim-pollinator text-clim-insect-decline | cl-phenology food-web
 cl-algal-bloom | 물꽃 현상과 수생태계 생물다양성 | card-clim-algal text-clim-water-bloom | photosyn eco-parts biodiversity
-cl-vector | 곤충 매개 감염병과 기후 | card-clim-vector text-clim-vector-cases | immunity population
+cl-vector | 곤충 매개 감염병과 기후 | card-clim-vector text-clim-vector-cases |
 cl-coral | 산호 백화와 바다 사막화 | card-clim-dhw text-clim-barren | seawater food-web
 cl-land-hazard | 사막화·대형 산불·가뭄과 홍수 | card-clim-wildfire text-clim-land-response | greenhouse
 cl-neutral | 탄소 예산과 탄소중립 기술 | card-clim-budget text-clim-tech | carbon-cycle greenhouse efficiency
@@ -684,22 +684,22 @@ if-evaluate | 산출물의 기능적·윤리적 평가와 공유 | card-info-eva
 hs-calendar | 고대 문명의 역법과 측량 | card-hist-calendar text-hist-ancient |
 hs-greek | 고대 그리스의 우주관과 자연관 | card-hist-eratosthenes text-hist-greek | hs-calendar
 hs-medieval | 중세 이슬람·유럽·조선의 과학 | card-hist-aljabr text-hist-medieval text-hist-sejong | hs-greek
-hs-revolution | 과학혁명과 과학·예술의 융합 | card-hist-venus card-hist-perspective text-hist-revolution | hs-greek retro lens
-hs-belief | 과학자의 신념과 세계관 | card-hist-kepler-solids text-hist-belief | hs-revolution kepler sie-nature
+hs-revolution | 과학혁명과 과학·예술의 융합 | card-hist-venus card-hist-perspective text-hist-revolution | hs-greek
+hs-belief | 과학자의 신념과 세계관 | card-hist-kepler-solids text-hist-belief | hs-revolution sie-nature
 hs-modern-society | 현대 과학의 등장과 사회문화 | card-hist-eclipse text-hist-modern-culture | relativity
 hs-communication | 과학자의 논쟁과 과학적 의사소통 규범 | card-hist-pasteur text-hist-debates | sci-method ethics
-hs-art-science | 예술·건축 속 과학 원리 | card-hist-catenary text-hist-art-science | torque
-hs-epidemic-society | 감염병과 사회, 역학 조사 | card-hist-snow text-hist-epidemics | immunity vaccine data
-hs-transport | 교통수단의 발달과 미래 사회 | card-hist-transport-energy text-hist-transport | heat-engine work-energy
-hs-dual-use | 산업혁명 이후 과학기술의 명암 | card-hist-chain text-hist-dual-use | ethics heat-engine
+hs-art-science | 예술·건축 속 과학 원리 | card-hist-catenary text-hist-art-science |
+hs-epidemic-society | 감염병과 사회, 역학 조사 | card-hist-snow text-hist-epidemics | vaccine data
+hs-transport | 교통수단의 발달과 미래 사회 | card-hist-transport-energy text-hist-transport |
+hs-dual-use | 산업혁명 이후 과학기술의 명암 | card-hist-chain text-hist-dual-use | ethics
 hs-tech-culture | 과학기술과 문화의 상호 작용 | text-hist-newculture |
-hs-pointillism | 점묘법·화소와 눈의 분해능 | card-hist-pixel | lens
-hs-sci-terms | 과학 용어의 일상적 쓰임과 오용 | text-hist-terms card-hist-quantum-leap | energy-level
-hs-temperament | 음률: 삼분손익법·피타고라스 음률·평균율 | card-hist-tuning | standing-wave
-hs-timbre | 배음과 음색, 소리 합성 | card-hist-synth | standing-wave
+hs-pointillism | 점묘법·화소와 눈의 분해능 | card-hist-pixel |
+hs-sci-terms | 과학 용어의 일상적 쓰임과 오용 | text-hist-terms card-hist-quantum-leap | spectrum
+hs-temperament | 음률: 삼분손익법·피타고라스 음률·평균율 | card-hist-tuning |
+hs-timbre | 배음과 음색, 소리 합성 | card-hist-synth |
 hs-ai-music | 인공지능 작곡과 음악 기술의 역사 | card-hist-markov text-hist-music-tech | ai hs-temperament
 hs-network | 연결망과 좁은 세상 | card-hist-smallworld text-hist-connected | iot
-hs-xr | 가상·증강 현실의 원리와 활용 | card-hist-stereo card-hist-latency text-hist-xr | lens digital
+hs-xr | 가상·증강 현실의 원리와 활용 | card-hist-stereo card-hist-latency text-hist-xr | digital
 hs-citizen | 과학기술 쟁점의 집단적 의사결정 | card-hist-values text-hist-citizen | ethics
 
 # ── 수학 (자동 병합: .omo/math/merge.py) ──
@@ -866,7 +866,7 @@ geo-conic-uses | 이차곡선의 활용 | text-geo-conic-uses | geo-parabola geo
 # geo-2
 geo-plane-determine | 평면의 결정 조건 | text-geo-plane-determine | 
 geo-line-line | 두 직선의 위치 관계와 꼬인 위치 | card-geo-line-pos | geo-plane-determine
-geo-line-plane | 직선과 평면의 위치 관계와 수직 | card-geo-line-plane text-geo-plane-determine | geo-line-line
+geo-line-plane | 직선과 평면의 위치 관계와 수직 | card-geo-line-plane | geo-line-line geo-plane-determine
 geo-plane-plane | 두 평면의 위치 관계와 교선 | card-geo-plane-cut | geo-plane-determine geo-line-line
 geo-three-perp | 삼수선 정리 | card-geo-three-perp | geo-line-plane
 geo-dihedral | 이면각과 두 평면이 이루는 각 | card-geo-dihedral | geo-plane-plane geo-three-perp

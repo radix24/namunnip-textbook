@@ -56,10 +56,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-gene-nondisjunction"><span class="mono">1.4.1</span>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></li>
-        <li><a href="#text-gene-disorders"><span class="mono">1.4.2</span>유전병은 원인에 따라 어떻게 나눌까?</a></li>
-        <li><a href="#card-is1-mutation"><span class="mono">1.4.3</span>염기 하나가 바뀌면 무슨 일이 생길까?</a></li>
-        <li><a href="#card-bio-division"><span class="mono">1.4.4</span>체세포 분열과 감수 분열은 무엇이 다를까?</a></li>
+        <li><a href="#card-is1-mutation"><span class="mono">1.4.1</span>염기 하나가 바뀌면 무슨 일이 생길까?</a></li>
+        <li><a href="#card-bio-division"><span class="mono">1.4.2</span>체세포 분열과 감수 분열은 무엇이 다를까?</a></li>
+        <li><a href="#card-gene-nondisjunction"><span class="mono">1.4.3</span>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></li>
+        <li><a href="#text-gene-disorders"><span class="mono">1.4.4</span>유전병은 원인에 따라 어떻게 나눌까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../practice.html?sec=gene-1-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">120문항 →</span></a>
@@ -67,94 +67,9 @@
     </aside>
 
     <div>
-      <article class="card" id="card-gene-nondisjunction">
-        <header class="card-head">
-          <span class="no">1.4.1</span><h2>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</h2><span class="kind">염색체 비분리와 염색체 수 이상</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="감수 1분열과 2분열을 거쳐 만들어지는 생식세포 네 개의 염색체 구성"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="비분리 시기">
-                <button type="button" class="chip" data-n="0" aria-pressed="false">정상 분리</button>
-                <button type="button" class="chip" data-n="1" aria-pressed="true">감수 1분열에서 비분리</button>
-                <button type="button" class="chip" data-n="2" aria-pressed="false">감수 2분열에서 비분리</button>
-              </div>
-              <div class="presets" role="group" aria-label="염색체">
-                <button type="button" class="chip" data-c="21" aria-pressed="true">21번 염색체 (난자)</button>
-                <button type="button" class="chip" data-c="xx" aria-pressed="false">성염색체 X (난자)</button>
-                <button type="button" class="chip" data-c="xy" aria-pressed="false">성염색체 XY (정자)</button>
-              </div>
-              <dl class="nums">
-                <div><dt>생식세포 네 개의 염색체 수</dt><dd class="n-g">—</dd></div>
-                <div><dt>정상 생식세포와 수정했을 때</dt><dd class="n-o">—</dd></div>
-              </dl>
-              <p class="fig-note">한 쌍의 상동 염색체만 그렸습니다(두 색은 각각 부모에게서 받은 염색체). 감수 2분열의 비분리는 둘로 나뉜 세포 중 한쪽에서만 일어났다고 두었습니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>다운 증후군은 21번 염색체가 세 개(47개)인 경우로, 어머니의 나이가 많을수록 빈도가 높아집니다. 염색체 하나가 어떻게 더 들어가게 될까요?</li>
-            <li><span class="tag">복원</span>감수 1분열에서는 상동 염색체가 나뉘고, 감수 2분열에서는 염색 분체가 나뉘어 염색체 수가 절반(n)인 생식세포 네 개가 생깁니다(생명과학).</li>
-            <li><span class="tag">설명</span>감수 분열에서 염색체가 제대로 나뉘지 않고 한쪽으로 함께 가는 것을 <em>비분리</em>라 합니다. 감수 1분열에서 상동 염색체가 비분리되면 네 생식세포가 모두 비정상(n+1 둘, n−1 둘)이고, 감수 2분열에서 염색 분체가 비분리되면 절반만 비정상(n+1, n−1 하나씩)입니다. n+1 생식세포가 정상 생식세포와 수정하면 2n+1(트리소미), n−1이면 2n−1(모노소미)이 됩니다.</li>
-            <li><span class="tag">연결</span>대부분의 상염색체 모노소미와 트리소미는 발생을 멈추게 하지만, 21번(다운), 18번(에드워드), 13번(파타우) 트리소미는 태어날 수 있습니다. 성염색체 이상으로는 터너 증후군(45,X), 클라인펠터 증후군(47,XXY), 47,XXX, 47,XYY 등이 있습니다. 난자는 태아 때 감수 1분열을 시작해 수십 년 뒤 배란 때 마치기 때문에, 나이가 많을수록 비분리가 늘어나는 것으로 봅니다.</li>
-            <li><span class="tag">적용</span>1분열 비분리와 2분열 비분리에서 생식세포의 염색체 수를 비교하세요. 정자의 XY 비분리(1분열)로 생긴 정자가 정상 난자(X)와 만나면 어떤 핵형이 되나요? 2분열 비분리로 XX 정자가 생기면요?</li>
-            <li class="warn"><span class="tag">판단</span>염색체 수 이상은 대부분 부모의 유전자가 ‘나빠서’가 아니라 생식세포를 만드는 과정에서 우연히 생깁니다. 또 같은 진단명이라도 사람마다 나타나는 특성과 정도가 크게 다르므로, 진단명만으로 한 사람의 능력이나 삶을 판단해서는 안 됩니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">색맹 유전자가 없는 부모(XᴿXᴿ × XᴿY) 사이에서 클라인펠터 증후군(XXY)이면서 색맹인 아들이 태어날 수 없는 까닭은?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>부모 누구에게도 색맹 대립유전자 Xʳ가 없기 때문<span class="why"><b>맞습니다.</b> 비분리는 염색체 수만 바꿀 뿐 없는 대립유전자를 만들지 않습니다(돌연변이 제외).</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>XXY는 여자이기 때문<span class="why"><b>Y가 있으면 남자로 발생합니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>비분리는 정자에서만 일어나기 때문<span class="why"><b>비분리는 난자와 정자 모두에서 일어날 수 있습니다.</b></span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/3-2.html#card-bio-assort"><small class="mono">생명과학 3.2</small>형제는 왜 서로 다르게 생길까?</a><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a><a href="../../c/labbio/5-8.html#text-labbio-genome-med"><small class="mono">생명과학 실험 5.8</small>유전체 분석은 실제로 어떤 환자를 도왔을까?</a></div></nav>
-
-      <article class="card reading" id="text-gene-disorders">
-        <header class="card-head">
-          <span class="no">1.4.2</span><h2>유전병은 원인에 따라 어떻게 나눌까?</h2><span class="kind">읽기 · 염색체 이상과 유전자 이상</span>
-        </header>
-        <div class="reading-body">
-          <p class="ask">유전병은 ‘유전자가 잘못된 병’이라고 흔히 말하지만, 원인이 되는 변화의 크기는 염색체 한 개 전체에서 염기 한 개까지 다양합니다. 원인을 알면 검사 방법도 달라집니다.</p>
-          <div class="tbl"><table>
-            <thead><tr><th>원인</th><th>예</th><th>무엇이 바뀌었나</th><th>확인 방법</th></tr></thead>
-            <tbody>
-              <tr><th rowspan="2">염색체 수 이상</th><td>다운 증후군 (47,+21)</td><td>21번 염색체가 3개</td><td rowspan="4">핵형 분석 (염색체 사진), 염색체 마이크로어레이</td></tr>
-              <tr><td>터너 증후군 (45,X), 클라인펠터 증후군 (47,XXY)</td><td>성염색체 수 이상</td></tr>
-              <tr><th rowspan="2">염색체 구조 이상</th><td>고양이 울음 증후군 (묘성 증후군)</td><td>5번 염색체 일부 결실</td></tr>
-              <tr><td>만성 골수성 백혈병 (필라델피아 염색체)</td><td>9번과 22번 염색체의 일부가 서로 자리를 바꿈(전좌) → 비정상 융합 유전자</td></tr>
-              <tr><th rowspan="4">유전자 이상</th><td>낫 모양 적혈구 빈혈증</td><td>헤모글로빈 유전자의 염기 하나 치환 (글루탐산 → 발린)</td><td rowspan="4">DNA 염기 서열 분석, 효소·단백질 검사</td></tr>
-              <tr><td>페닐케톤뇨증</td><td>페닐알라닌 분해 효소 유전자 이상 (상염색체 열성) — 신생아 검사 뒤 식이 조절로 증상을 막을 수 있음</td></tr>
-              <tr><td>헌팅턴 무도병</td><td>CAG 반복 서열이 비정상적으로 길어짐 (상염색체 우성)</td></tr>
-              <tr><td>혈우병 A</td><td>혈액 응고 인자 유전자 이상 (X 연관 열성)</td></tr>
-            </tbody>
-          </table></div>
-          <h3><span class="mono">조사 계획 세우기</span>유전병 하나를 골라 조사할 때</h3>
-          <ul class="dots">
-            <li>원인 수준(염색체 수·구조, 유전자)과 유전 방식(상염색체·X 연관, 우성·열성)을 먼저 정리합니다.</li>
-            <li>발생 빈도, 진단 방법, 치료와 관리 방법, 환자와 가족을 돕는 제도를 찾습니다.</li>
-            <li>자료는 질병관리청, 대한의학유전학회, 환자 단체처럼 근거와 출처가 분명한 곳에서 찾고, 날짜를 확인합니다.</li>
-          </ul>
-          <p class="judge"><b>판단</b>유전병을 조사하고 발표할 때는 실제 그 질환을 가진 사람이 듣는다고 생각하고 표현을 고르세요. ‘비정상’, ‘결함’ 같은 말은 생물학적 설명에서는 쓰이지만, 사람을 가리킬 때는 ‘○○ 증후군이 있는 사람’처럼 사람을 먼저 쓰는 표현이 권장됩니다.</p>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">낫 모양 적혈구 빈혈증을 가진 사람의 핵형 사진을 보면 어떻게 보일까요?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>정상인과 구별되지 않는다<span class="why"><b>맞습니다.</b> 염기 하나의 치환은 현미경으로 보는 염색체 모양에 나타나지 않으므로 DNA 분석이 필요합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>11번 염색체가 하나 더 있다<span class="why"><b>염색체 수 이상이 아닙니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>11번 염색체 일부가 없다<span class="why"><b>결실이 아니라 염기 하나가 바뀐 것입니다.</b></span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/3-2.html#card-bio-assort"><small class="mono">생명과학 3.2</small>형제는 왜 서로 다르게 생길까?</a><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a><a href="../../c/labbio/5-8.html#text-labbio-genome-med"><small class="mono">생명과학 실험 5.8</small>유전체 분석은 실제로 어떤 환자를 도왔을까?</a></div></nav>
-
       <article class="card" id="card-is1-mutation">
         <header class="card-head">
-          <span class="no">1.4.3</span><h2>염기 하나가 바뀌면 무슨 일이 생길까?</h2><span class="kind">돌연변이 · 읽는 틀 · 실제 유전자</span>
+          <span class="no">1.4.1</span><h2>염기 하나가 바뀌면 무슨 일이 생길까?</h2><span class="kind">돌연변이 · 읽는 틀 · 실제 유전자</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -205,7 +120,7 @@
 
       <article class="card" id="card-bio-division">
         <header class="card-head">
-          <span class="no">1.4.4</span><h2>체세포 분열과 감수 분열은 무엇이 다를까?</h2><span class="kind">염색체 수 · DNA 양 추적</span>
+          <span class="no">1.4.2</span><h2>체세포 분열과 감수 분열은 무엇이 다를까?</h2><span class="kind">염색체 수 · DNA 양 추적</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -251,6 +166,91 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/3-1.html#card-bio-dna-pack"><small class="mono">생명과학 3.1</small>2 m나 되는 DNA가 어떻게 핵 속에 들어갈까?</a><a href="../../c/bio/3-1.html#card-bio-gene-chromo"><small class="mono">생명과학 3.1</small>유전자, DNA, 염색체는 서로 어떤 관계일까?</a><a href="../../c/bio/3-1.html#card-bio-karyotype"><small class="mono">생명과학 3.1</small>흩어진 염색체 사진으로 핵형을 맞출 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/gene/1-1.html#card-gene-sexlinked"><small class="mono">생물의 유전 1.1</small>색맹은 왜 남자에게 더 많을까?</a><a href="../../c/gene/1-3.html#card-gene-polygenic"><small class="mono">생물의 유전 1.3</small>키는 왜 ‘크다·작다’ 두 가지가 아니라 고르게 이어질까?</a><a href="../../c/labbio/3-7.html#card-labbio-fly-cross"><small class="mono">생명과학 실험 3.7</small>초파리를 교배해 세어 보면 정말 3 : 1이 나올까?</a><a href="../../c/labbio/3-1.html#card-labbio-mitosis"><small class="mono">생명과학 실험 3.1</small>양파 뿌리 끝 세포를 세어서 분열 단계마다 걸리는 시간을 알 수 있을까?</a></div></nav>
 
+      <article class="card" id="card-gene-nondisjunction">
+        <header class="card-head">
+          <span class="no">1.4.3</span><h2>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</h2><span class="kind">염색체 비분리와 염색체 수 이상</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="감수 1분열과 2분열을 거쳐 만들어지는 생식세포 네 개의 염색체 구성"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="비분리 시기">
+                <button type="button" class="chip" data-n="0" aria-pressed="false">정상 분리</button>
+                <button type="button" class="chip" data-n="1" aria-pressed="true">감수 1분열에서 비분리</button>
+                <button type="button" class="chip" data-n="2" aria-pressed="false">감수 2분열에서 비분리</button>
+              </div>
+              <div class="presets" role="group" aria-label="염색체">
+                <button type="button" class="chip" data-c="21" aria-pressed="true">21번 염색체 (난자)</button>
+                <button type="button" class="chip" data-c="xx" aria-pressed="false">성염색체 X (난자)</button>
+                <button type="button" class="chip" data-c="xy" aria-pressed="false">성염색체 XY (정자)</button>
+              </div>
+              <dl class="nums">
+                <div><dt>생식세포 네 개의 염색체 수</dt><dd class="n-g">—</dd></div>
+                <div><dt>정상 생식세포와 수정했을 때</dt><dd class="n-o">—</dd></div>
+              </dl>
+              <p class="fig-note">한 쌍의 상동 염색체만 그렸습니다(두 색은 각각 부모에게서 받은 염색체). 감수 2분열의 비분리는 둘로 나뉜 세포 중 한쪽에서만 일어났다고 두었습니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>다운 증후군은 21번 염색체가 세 개(47개)인 경우로, 어머니의 나이가 많을수록 빈도가 높아집니다. 염색체 하나가 어떻게 더 들어가게 될까요?</li>
+            <li><span class="tag">복원</span>감수 1분열에서는 상동 염색체가 나뉘고, 감수 2분열에서는 염색 분체가 나뉘어 염색체 수가 절반(n)인 생식세포 네 개가 생깁니다(생명과학).</li>
+            <li><span class="tag">설명</span>감수 분열에서 염색체가 제대로 나뉘지 않고 한쪽으로 함께 가는 것을 <em>비분리</em>라 합니다. 감수 1분열에서 상동 염색체가 비분리되면 네 생식세포가 모두 비정상(n+1 둘, n−1 둘)이고, 감수 2분열에서 염색 분체가 비분리되면 절반만 비정상(n+1, n−1 하나씩)입니다. n+1 생식세포가 정상 생식세포와 수정하면 2n+1(트리소미), n−1이면 2n−1(모노소미)이 됩니다.</li>
+            <li><span class="tag">연결</span>대부분의 상염색체 모노소미와 트리소미는 발생을 멈추게 하지만, 21번(다운), 18번(에드워드), 13번(파타우) 트리소미는 태어날 수 있습니다. 성염색체 이상으로는 터너 증후군(45,X), 클라인펠터 증후군(47,XXY), 47,XXX, 47,XYY 등이 있습니다. 난자는 태아 때 감수 1분열을 시작해 수십 년 뒤 배란 때 마치기 때문에, 나이가 많을수록 비분리가 늘어나는 것으로 봅니다.</li>
+            <li><span class="tag">적용</span>1분열 비분리와 2분열 비분리에서 생식세포의 염색체 수를 비교하세요. 정자의 XY 비분리(1분열)로 생긴 정자가 정상 난자(X)와 만나면 어떤 핵형이 되나요? 2분열 비분리로 XX 정자가 생기면요?</li>
+            <li class="warn"><span class="tag">판단</span>염색체 수 이상은 대부분 부모의 유전자가 ‘나빠서’가 아니라 생식세포를 만드는 과정에서 우연히 생깁니다. 또 같은 진단명이라도 사람마다 나타나는 특성과 정도가 크게 다르므로, 진단명만으로 한 사람의 능력이나 삶을 판단해서는 안 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">색맹 유전자가 없는 부모(XᴿXᴿ × XᴿY) 사이에서 클라인펠터 증후군(XXY)이면서 색맹인 아들이 태어날 수 없는 까닭은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>부모 누구에게도 색맹 대립유전자 Xʳ가 없기 때문<span class="why"><b>맞습니다.</b> 비분리는 염색체 수만 바꿀 뿐 없는 대립유전자를 만들지 않습니다(돌연변이 제외).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>XXY는 여자이기 때문<span class="why"><b>Y가 있으면 남자로 발생합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>비분리는 정자에서만 일어나기 때문<span class="why"><b>비분리는 난자와 정자 모두에서 일어날 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/3-2.html#card-bio-assort"><small class="mono">생명과학 3.2</small>형제는 왜 서로 다르게 생길까?</a><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a><a href="../../c/labbio/5-8.html#text-labbio-genome-med"><small class="mono">생명과학 실험 5.8</small>유전체 분석은 실제로 어떤 환자를 도왔을까?</a></div></nav>
+
+      <article class="card reading" id="text-gene-disorders">
+        <header class="card-head">
+          <span class="no">1.4.4</span><h2>유전병은 원인에 따라 어떻게 나눌까?</h2><span class="kind">읽기 · 염색체 이상과 유전자 이상</span>
+        </header>
+        <div class="reading-body">
+          <p class="ask">유전병은 ‘유전자가 잘못된 병’이라고 흔히 말하지만, 원인이 되는 변화의 크기는 염색체 한 개 전체에서 염기 한 개까지 다양합니다. 원인을 알면 검사 방법도 달라집니다.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>원인</th><th>예</th><th>무엇이 바뀌었나</th><th>확인 방법</th></tr></thead>
+            <tbody>
+              <tr><th rowspan="2">염색체 수 이상</th><td>다운 증후군 (47,+21)</td><td>21번 염색체가 3개</td><td rowspan="4">핵형 분석 (염색체 사진), 염색체 마이크로어레이</td></tr>
+              <tr><td>터너 증후군 (45,X), 클라인펠터 증후군 (47,XXY)</td><td>성염색체 수 이상</td></tr>
+              <tr><th rowspan="2">염색체 구조 이상</th><td>고양이 울음 증후군 (묘성 증후군)</td><td>5번 염색체 일부 결실</td></tr>
+              <tr><td>만성 골수성 백혈병 (필라델피아 염색체)</td><td>9번과 22번 염색체의 일부가 서로 자리를 바꿈(전좌) → 비정상 융합 유전자</td></tr>
+              <tr><th rowspan="4">유전자 이상</th><td>낫 모양 적혈구 빈혈증</td><td>헤모글로빈 유전자의 염기 하나 치환 (글루탐산 → 발린)</td><td rowspan="4">DNA 염기 서열 분석, 효소·단백질 검사</td></tr>
+              <tr><td>페닐케톤뇨증</td><td>페닐알라닌 분해 효소 유전자 이상 (상염색체 열성) — 신생아 검사 뒤 식이 조절로 증상을 막을 수 있음</td></tr>
+              <tr><td>헌팅턴 무도병</td><td>CAG 반복 서열이 비정상적으로 길어짐 (상염색체 우성)</td></tr>
+              <tr><td>혈우병 A</td><td>혈액 응고 인자 유전자 이상 (X 연관 열성)</td></tr>
+            </tbody>
+          </table></div>
+          <h3><span class="mono">조사 계획 세우기</span>유전병 하나를 골라 조사할 때</h3>
+          <ul class="dots">
+            <li>원인 수준(염색체 수·구조, 유전자)과 유전 방식(상염색체·X 연관, 우성·열성)을 먼저 정리합니다.</li>
+            <li>발생 빈도, 진단 방법, 치료와 관리 방법, 환자와 가족을 돕는 제도를 찾습니다.</li>
+            <li>자료는 질병관리청, 대한의학유전학회, 환자 단체처럼 근거와 출처가 분명한 곳에서 찾고, 날짜를 확인합니다.</li>
+          </ul>
+          <p class="judge"><b>판단</b>유전병을 조사하고 발표할 때는 실제 그 질환을 가진 사람이 듣는다고 생각하고 표현을 고르세요. ‘비정상’, ‘결함’ 같은 말은 생물학적 설명에서는 쓰이지만, 사람을 가리킬 때는 ‘○○ 증후군이 있는 사람’처럼 사람을 먼저 쓰는 표현이 권장됩니다.</p>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">낫 모양 적혈구 빈혈증을 가진 사람의 핵형 사진을 보면 어떻게 보일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>정상인과 구별되지 않는다<span class="why"><b>맞습니다.</b> 염기 하나의 치환은 현미경으로 보는 염색체 모양에 나타나지 않으므로 DNA 분석이 필요합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>11번 염색체가 하나 더 있다<span class="why"><b>염색체 수 이상이 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>11번 염색체 일부가 없다<span class="why"><b>결실이 아니라 염기 하나가 바뀐 것입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/3-2.html#card-bio-assort"><small class="mono">생명과학 3.2</small>형제는 왜 서로 다르게 생길까?</a><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a><a href="../../c/labbio/5-8.html#text-labbio-genome-med"><small class="mono">생명과학 실험 5.8</small>유전체 분석은 실제로 어떤 환자를 도왔을까?</a></div></nav>
+
       <a class="px-go" href="../../practice.html?sec=gene-1-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">120문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
@@ -268,8 +268,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/gene/g-nondisjunction.js"></script>
 <script src="../../js/cards/is1/s-mutation.js"></script>
 <script src="../../js/cards/bio/c-division.js"></script>
+<script src="../../js/cards/gene/g-nondisjunction.js"></script>
 </body>
 </html>

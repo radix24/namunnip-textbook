@@ -15,11 +15,11 @@
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
   <style>
+    #card-is1-fusion .presets .lab { font-size: 11px; color: var(--ink-3); align-self: center; margin-right: 2px; }
     #card-earth-star-core .sc-main { width: 100%; aspect-ratio: 16 / 9; display: block; }
     #card-earth-star-core .sc-rxn { width: 100%; aspect-ratio: 16 / 9; display: block; margin-top: 6px; }
     #card-earth-star-core .nums dd { font-size: 14px; }
     #card-earth-star-core .fig-note { line-height: 1.5; }
-    #card-is1-fusion .presets .lab { font-size: 11px; color: var(--ink-3); align-self: center; margin-right: 2px; }
     #text-adearth-stellar-fates .tbl td, #text-adearth-stellar-fates .tbl th { vertical-align: top; }
     #text-adearth-stellar-fates svg text { font-family: inherit; }
     #text-adearth-stellar-fates figure svg { display: block; max-width: 640px; margin: 0 auto; }
@@ -49,10 +49,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-earth-star-core"><span class="mono">3.6.1</span>무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?</a></li>
-        <li><a href="#card-is1-fusion"><span class="mono">3.6.2</span>별은 왜 철에서 핵융합을 멈출까?</a></li>
-        <li><a href="#text-adearth-stellar-fates"><span class="mono">3.6.3</span>핵융합 단계 · 맥동 · 특이성</a></li>
-        <li><a href="#card-space-variables"><span class="mono">3.6.4</span>별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?</a></li>
+        <li><a href="#card-is1-fusion"><span class="mono">3.6.1</span>별은 왜 철에서 핵융합을 멈출까?</a></li>
+        <li><a href="#card-earth-star-core"><span class="mono">3.6.2</span>무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?</a></li>
+        <li><a href="#card-space-variables"><span class="mono">3.6.3</span>별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?</a></li>
+        <li><a href="#text-adearth-stellar-fates"><span class="mono">3.6.4</span>핵융합 단계 · 맥동 · 특이성</a></li>
         <li><a href="#card-adearth-compact"><span class="mono">3.6.5</span>밀집성과 찬드라세카르 한계</a></li>
       </ol>
       <p class="progress mono small"></p>
@@ -61,9 +61,55 @@
     </aside>
 
     <div>
+      <article class="card" id="card-is1-fusion">
+        <header class="card-head">
+          <span class="no">3.6.1</span><h2>별은 왜 철에서 핵융합을 멈출까?</h2><span class="kind">핵융합 단계 · 핵자당 결합 에너지</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="왼쪽은 별 중심부의 층 구조 모식도, 오른쪽은 질량수에 따른 핵자 1개당 결합 에너지 그래프와 현재 단계의 핵융합 화살표"></canvas>
+            <div class="ctl">
+              <div class="presets mass">
+                <span class="lab mono">별의 질량</span>
+                <button class="chip" data-m="0.3" aria-pressed="false">태양의 0.3배</button>
+                <button class="chip" data-m="1" aria-pressed="false">태양 (1배)</button>
+                <button class="chip" data-m="25" aria-pressed="true">태양의 25배</button>
+              </div>
+              <label class="mono">핵융합 단계 = <output class="s-out">—</output></label>
+              <input class="stage" type="range" min="0" max="6" step="1" value="0" aria-label="핵융합 단계">
+              <dl class="nums n4">
+                <div><dt>중심 온도</dt><dd class="temp">—</dd></div>
+                <div><dt>이 단계의 기간</dt><dd class="dur">—</dd></div>
+                <div><dt>핵자 1개당 에너지</dt><dd class="en">—</dd></div>
+                <div><dt>남는 것</dt><dd class="fate">—</dd></div>
+              </dl>
+              <p class="fig-note">결합 에너지는 실측 원자 질량으로 계산한 값입니다. 태양 25배 별의 온도와 기간은 별 진화 계산(Woosley 외, 2002)의 대략값이고, 질량 경계와 층의 두께는 모식입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>무거운 별은 수소를 태워 헬륨을, 헬륨을 태워 탄소를 만듭니다. 그런데 철에 이르면 더 나아가지 못하고 무너집니다. 왜 하필 철일까요?</li>
+            <li><span class="tag">복원</span>원자핵이 합쳐질 때 나오는 에너지는, 합쳐진 뒤 핵자들이 얼마나 더 단단히 묶이는지로 정해집니다. 이 단단함을 <em>핵자 1개당 결합 에너지</em>로 나타냅니다. 핵융합은 그래프의 오르막을 오를 때만 에너지를 냅니다.</li>
+            <li><span class="tag">설명</span>별 중심은 연료가 바닥나면 수축하며 더 뜨거워지고, 전하가 더 큰 원자핵끼리도 부딪혀 붙을 수 있게 됩니다. 그래서 헬륨 → 탄소 → 네온 → 산소 → 규소 순으로 연료가 바뀌고, 다 쓴 재는 양파 껍질처럼 층을 이룹니다.</li>
+            <li><span class="tag">연결</span>결합 에너지 곡선은 철과 니켈 근처(질량수 56~62)에서 꼭대기입니다. 규소가 타서 철족 원소가 되면 더 이상 오를 곳이 없습니다. 에너지를 못 만드는 중심은 자기 무게를 버티지 못하고 1초도 안 되는 사이에 무너집니다. 이것이 초신성 폭발의 시작입니다.</li>
+            <li><span class="tag">적용</span>‘태양의 25배’에서 단계를 하나씩 올려 보세요. 핵자 1개당 에너지와 기간이 어떻게 줄어드나요? 수소 단계와 비교하면 얼마나 차이가 나나요? 그다음 ‘태양’으로 바꿔 어디서 멈추는지 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>“철은 핵융합을 전혀 못 한다”는 말은 정확하지 않습니다. 철이 헬륨을 하나 붙잡는 반응은 여전히 에너지를 조금 냅니다. 문제는 곡선의 꼭대기라 <em>남은 오르막이 거의 없다</em>는 것, 그리고 철끼리 합치면 오히려 에너지를 흡수한다는 것입니다. 또 태양 같은 별은 중심이 충분히 뜨거워지지 않아 탄소·산소에서 멈춥니다. 모든 별이 철을 만드는 것은 아닙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">무거운 별에서 산소 연소(약 5개월)가 수소 연소(약 700만 년)보다 훨씬 짧게 끝나는 까닭으로 가장 알맞은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>중심에 산소가 수소보다 훨씬 적게 있어서<span class="why"><b>양만 보면 그럴듯합니다.</b> 하지만 산소 연소 단계의 중심은 이미 거의 다 산소입니다. 연료가 모자란 것이 아니라, 연료 1 kg이 내는 에너지가 작고 쓰는 속도가 빠릅니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 질량의 연료가 내는 에너지가 수소보다 훨씬 작은데, 중심이 훨씬 뜨거워 에너지를 빠르게 잃어서<span class="why"><b>맞습니다.</b> 그래프에서 수소 → 헬륨은 핵자당 약 6.7 MeV, 산소 → 규소는 약 0.3 MeV입니다. 20배 넘게 작습니다. 게다가 온도가 높아지면 중성미자가 에너지를 빠르게 가지고 나갑니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>산소 원자핵은 무거워서 핵융합할 때 에너지가 더 많이 나와 빨리 타 버려서<span class="why"><b>반대입니다.</b> 무거운 핵일수록 곡선의 경사가 완만해 나오는 에너지가 작습니다. ‘핵자 1개당 에너지’ 칸을 단계마다 비교해 보세요.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-1.html#card-is1-bbn"><small class="mono">통합과학1 2.1</small>우주는 왜 대부분 수소와 헬륨일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/2-4.html#card-is2-sun-fusion"><small class="mono">통합과학2 2.4</small>태양은 무엇을 태워서 빛날까?</a><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-2.html#card-is1-ncap"><small class="mono">통합과학1 2.2</small>철보다 무거운 금은 어디서 왔을까?</a><a href="../../c/earth/3-3.html#card-earth-evolve"><small class="mono">지구과학 3.3</small>무거운 별은 왜 더 빨리 죽을까?</a><a href="../../c/earth/3-3.html#text-earth-star-life"><small class="mono">지구과학 3.3</small>별은 어떻게 태어나고, 무엇을 남기고 죽을까?</a><a href="../../c/emq/3-5.html#card-emq-star-spectrum"><small class="mono">전자기와 양자 3.5</small>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</a></div></nav>
+
       <article class="card" id="card-earth-star-core">
         <header class="card-head">
-          <span class="no">3.6.1</span><h2>무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?</h2><span class="kind">p–p 연쇄 · CNO 순환 · 별의 내부 구조</span>
+          <span class="no">3.6.2</span><h2>무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?</h2><span class="kind">p–p 연쇄 · CNO 순환 · 별의 내부 구조</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -112,55 +158,58 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/3-3.html#card-earth-hrd"><small class="mono">지구과학 3.3</small>H–R도는 어떻게 읽을까?</a><a href="../../c/is2/2-4.html#card-is2-sun-fusion"><small class="mono">통합과학2 2.4</small>태양은 무엇을 태워서 빛날까?</a><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/earth/3-4.html#card-earth-hubble"><small class="mono">지구과학 3.4</small>은하는 모양으로 어떻게 나눌까?</a><a href="../../c/earth/3-4.html#card-earth-quasar"><small class="mono">지구과학 3.4</small>퀘이사는 왜 특이 은하일까?</a><a href="../../c/earth/3-4.html#text-earth-active-galaxy"><small class="mono">지구과학 3.4</small>은하의 유형에 따라 별과 가스는 어떻게 다를까?</a><a href="../../c/earth/3-4.html#card-earth-galaxy-ai"><small class="mono">지구과학 3.4</small>은하 사진 수천 장을 인공지능은 어떻게 분류할까?</a></div></nav>
 
-      <article class="card" id="card-is1-fusion">
+      <article class="card" id="card-space-variables">
         <header class="card-head">
-          <span class="no">3.6.2</span><h2>별은 왜 철에서 핵융합을 멈출까?</h2><span class="kind">핵융합 단계 · 핵자당 결합 에너지</span>
+          <span class="no">3.6.3</span><h2>별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?</h2><span class="kind">맥동 변광성, 식쌍성, 신성과 초신성의 광도 곡선</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <canvas class="cv-wide" aria-label="왼쪽은 별 중심부의 층 구조 모식도, 오른쪽은 질량수에 따른 핵자 1개당 결합 에너지 그래프와 현재 단계의 핵융합 화살표"></canvas>
+            <canvas class="cv-wide" aria-label="고른 변광성의 시간에 따른 밝기 변화(광도 곡선)"></canvas>
             <div class="ctl">
-              <div class="presets mass">
-                <span class="lab mono">별의 질량</span>
-                <button class="chip" data-m="0.3" aria-pressed="false">태양의 0.3배</button>
-                <button class="chip" data-m="1" aria-pressed="false">태양 (1배)</button>
-                <button class="chip" data-m="25" aria-pressed="true">태양의 25배</button>
+              <div class="presets" role="group" aria-label="변광성 종류">
+                <button type="button" class="chip" data-v="ceph" aria-pressed="true">세페이드 변광성</button>
+                <button type="button" class="chip" data-v="rr" aria-pressed="false">거문고자리 RR형</button>
+                <button type="button" class="chip" data-v="ecl" aria-pressed="false">식쌍성</button>
+                <button type="button" class="chip" data-v="nova" aria-pressed="false">신성</button>
+                <button type="button" class="chip" data-v="sn1a" aria-pressed="false">Ia형 초신성</button>
+                <button type="button" class="chip" data-v="sn2" aria-pressed="false">II형 초신성</button>
               </div>
-              <label class="mono">핵융합 단계 = <output class="s-out">—</output></label>
-              <input class="stage" type="range" min="0" max="6" step="1" value="0" aria-label="핵융합 단계">
-              <dl class="nums n4">
-                <div><dt>중심 온도</dt><dd class="temp">—</dd></div>
-                <div><dt>이 단계의 기간</dt><dd class="dur">—</dd></div>
-                <div><dt>핵자 1개당 에너지</dt><dd class="en">—</dd></div>
-                <div><dt>남는 것</dt><dd class="fate">—</dd></div>
+              <label class="mono x-p">변광 주기 = <output class="p-out">10</output>일</label>
+              <input class="p x-p" type="range" min="0" max="2" step="0.01" value="1" aria-label="변광 주기 (로그 눈금)">
+              <label class="mono x-m">관측된 (평균 또는 최대) 겉보기 등급 = <output class="m-out">15.0</output></label>
+              <input class="m x-m" type="range" min="4" max="24" step="0.1" value="15" aria-label="겉보기 등급">
+              <dl class="nums">
+                <div><dt>분류 · 밝기가 변하는 까닭</dt><dd class="n-k">—</dd></div>
+                <div><dt>절대 등급 (알려진 관계로)</dt><dd class="n-M">—</dd></div>
+                <div><dt>거리</dt><dd class="n-d">—</dd></div>
               </dl>
-              <p class="fig-note">결합 에너지는 실측 원자 질량으로 계산한 값입니다. 태양 25배 별의 온도와 기간은 별 진화 계산(Woosley 외, 2002)의 대략값이고, 질량 경계와 층의 두께는 모식입니다.</p>
+              <p class="fig-note">광도 곡선의 모양은 대표적인 경향을 그린 모식입니다. 세페이드의 주기–광도 관계는 M ≈ −2.43(log P − 1) − 4.05, Ia형 초신성의 최대 밝기는 M ≈ −19.3으로 두었고, 성간 소광은 무시했습니다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>무거운 별은 수소를 태워 헬륨을, 헬륨을 태워 탄소를 만듭니다. 그런데 철에 이르면 더 나아가지 못하고 무너집니다. 왜 하필 철일까요?</li>
-            <li><span class="tag">복원</span>원자핵이 합쳐질 때 나오는 에너지는, 합쳐진 뒤 핵자들이 얼마나 더 단단히 묶이는지로 정해집니다. 이 단단함을 <em>핵자 1개당 결합 에너지</em>로 나타냅니다. 핵융합은 그래프의 오르막을 오를 때만 에너지를 냅니다.</li>
-            <li><span class="tag">설명</span>별 중심은 연료가 바닥나면 수축하며 더 뜨거워지고, 전하가 더 큰 원자핵끼리도 부딪혀 붙을 수 있게 됩니다. 그래서 헬륨 → 탄소 → 네온 → 산소 → 규소 순으로 연료가 바뀌고, 다 쓴 재는 양파 껍질처럼 층을 이룹니다.</li>
-            <li><span class="tag">연결</span>결합 에너지 곡선은 철과 니켈 근처(질량수 56~62)에서 꼭대기입니다. 규소가 타서 철족 원소가 되면 더 이상 오를 곳이 없습니다. 에너지를 못 만드는 중심은 자기 무게를 버티지 못하고 1초도 안 되는 사이에 무너집니다. 이것이 초신성 폭발의 시작입니다.</li>
-            <li><span class="tag">적용</span>‘태양의 25배’에서 단계를 하나씩 올려 보세요. 핵자 1개당 에너지와 기간이 어떻게 줄어드나요? 수소 단계와 비교하면 얼마나 차이가 나나요? 그다음 ‘태양’으로 바꿔 어디서 멈추는지 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>“철은 핵융합을 전혀 못 한다”는 말은 정확하지 않습니다. 철이 헬륨을 하나 붙잡는 반응은 여전히 에너지를 조금 냅니다. 문제는 곡선의 꼭대기라 <em>남은 오르막이 거의 없다</em>는 것, 그리고 철끼리 합치면 오히려 에너지를 흡수한다는 것입니다. 또 태양 같은 별은 중심이 충분히 뜨거워지지 않아 탄소·산소에서 멈춥니다. 모든 별이 철을 만드는 것은 아닙니다.</li>
+            <li><span class="tag">질문</span>밤하늘의 별 가운데에는 며칠 주기로 밝아졌다 어두워지기를 되풀이하는 별, 몇 시간 동안 푹 어두워졌다 돌아오는 별, 어느 날 갑자기 나타나 몇 주 동안 빛나다 사라지는 별이 있습니다. 밝기의 변화에서 무엇을 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>별의 광도는 반지름의 제곱과 표면 온도의 네제곱에 비례합니다. 무거운 별은 진화의 마지막에 초신성으로 폭발합니다(지구과학).</li>
+            <li><span class="tag">설명</span>시간에 따른 밝기 변화를 그린 것이 <em>광도 곡선</em>입니다. <em>맥동 변광성</em>(세페이드, 거문고자리 RR형)은 별이 부풀었다 줄어들기를 되풀이하며 규칙적으로 밝기가 변하고, 빨리 밝아졌다 천천히 어두워지는 톱니 모양을 보입니다. <em>식쌍성</em>은 별 자체가 아니라 두 별이 서로를 가리며 어두워지는 것이고, 가린 동안만 평평하게 어두워집니다. <em>폭발 변광성</em> 가운데 <em>신성</em>은 백색 왜성 표면에 쌓인 수소가 폭발하는 것이고, <em>초신성</em>은 별 전체가 폭발해 은하 하나만큼 밝아집니다.</li>
+            <li><span class="tag">연결</span>세페이드는 주기가 길수록 밝다는 <em>주기–광도 관계</em>가 있어(리비트, 1912), 주기만 재면 절대 등급을 알 수 있는 표준 촛불입니다. 백색 왜성이 한계 질량에 이르러 폭발하는 Ia형 초신성은 최대 밝기가 거의 같아, 수십억 광년 떨어진 은하까지의 거리를 재는 데 쓰이며, 이 관측으로 우주의 가속 팽창이 발견되었습니다(2011년 노벨상). 초신성은 철보다 무거운 원소를 만들어 우주에 퍼뜨립니다.</li>
+            <li><span class="tag">적용</span>여섯 종류의 광도 곡선 모양을 비교하세요. 세페이드의 주기를 3일, 30일로 바꾸며 절대 등급과 거리를 계산해 보세요. Ia형 초신성의 최대 겉보기 등급이 20등급이면 얼마나 멀리 있을까요?</li>
+            <li class="warn"><span class="tag">판단</span>‘신성(nova)’은 새로 태어난 별이라는 뜻이지만, 실제로는 원래 있던 어두운 별이 갑자기 밝아진 것입니다. 또 세페이드에도 종류가 둘 있는데, 이를 구별하지 못해 20세기 중반까지 안드로메다은하까지의 거리를 절반쯤으로 잘못 알았습니다. 표준 촛불은 보정이 정확할 때만 믿을 수 있습니다.</li>
           </ol>
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">무거운 별에서 산소 연소(약 5개월)가 수소 연소(약 700만 년)보다 훨씬 짧게 끝나는 까닭으로 가장 알맞은 것은?</p>
+          <p class="q">같은 은하에서 주기가 30일인 세페이드와 3일인 세페이드를 발견했습니다. 두 별의 평균 겉보기 등급을 비교하면?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>중심에 산소가 수소보다 훨씬 적게 있어서<span class="why"><b>양만 보면 그럴듯합니다.</b> 하지만 산소 연소 단계의 중심은 이미 거의 다 산소입니다. 연료가 모자란 것이 아니라, 연료 1 kg이 내는 에너지가 작고 쓰는 속도가 빠릅니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 질량의 연료가 내는 에너지가 수소보다 훨씬 작은데, 중심이 훨씬 뜨거워 에너지를 빠르게 잃어서<span class="why"><b>맞습니다.</b> 그래프에서 수소 → 헬륨은 핵자당 약 6.7 MeV, 산소 → 규소는 약 0.3 MeV입니다. 20배 넘게 작습니다. 게다가 온도가 높아지면 중성미자가 에너지를 빠르게 가지고 나갑니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>산소 원자핵은 무거워서 핵융합할 때 에너지가 더 많이 나와 빨리 타 버려서<span class="why"><b>반대입니다.</b> 무거운 핵일수록 곡선의 경사가 완만해 나오는 에너지가 작습니다. ‘핵자 1개당 에너지’ 칸을 단계마다 비교해 보세요.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>주기 30일인 별이 더 밝게(등급이 작게) 보인다<span class="why"><b>맞습니다.</b> 거리가 같으므로 절대 등급 차이가 그대로 나타나고, 주기가 긴 세페이드가 더 밝습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>주기 3일인 별이 더 밝게 보인다<span class="why"><b>주기–광도 관계를 거꾸로 적용했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>같은 은하에 있으므로 밝기가 같다<span class="why"><b>거리는 같아도 절대 등급이 다릅니다.</b></span></span></button></li>
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-1.html#card-is1-bbn"><small class="mono">통합과학1 2.1</small>우주는 왜 대부분 수소와 헬륨일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/2-4.html#card-is2-sun-fusion"><small class="mono">통합과학2 2.4</small>태양은 무엇을 태워서 빛날까?</a><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-2.html#card-is1-ncap"><small class="mono">통합과학1 2.2</small>철보다 무거운 금은 어디서 왔을까?</a><a href="../../c/earth/3-3.html#card-earth-evolve"><small class="mono">지구과학 3.3</small>무거운 별은 왜 더 빨리 죽을까?</a><a href="../../c/earth/3-3.html#text-earth-star-life"><small class="mono">지구과학 3.3</small>별은 어떻게 태어나고, 무엇을 남기고 죽을까?</a><a href="../../c/emq/3-5.html#card-emq-star-spectrum"><small class="mono">전자기와 양자 3.5</small>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/3-3.html#card-earth-evolve"><small class="mono">지구과학 3.3</small>무거운 별은 왜 더 빨리 죽을까?</a><a href="../../c/earth/3-3.html#text-earth-star-life"><small class="mono">지구과학 3.3</small>별은 어떻게 태어나고, 무엇을 남기고 죽을까?</a><a href="../../c/earth/3-2.html#card-space-distance"><small class="mono">지구과학 3.2</small>별까지의 거리는 어떤 사다리를 타고 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/3-1.html#card-space-cluster"><small class="mono">행성우주과학 3.1</small>성단 사진 한 장으로 나이와 거리를 알 수 있을까?</a><a href="../../c/adearth/3-3.html#card-labearth-msfit"><small class="mono">고급 지구과학 3.3</small>성단의 주계열을 표준 주계열에 겹치면 거리가 나올까?</a><a href="../../c/adearth/3-3.html#card-labearth-cepheid"><small class="mono">고급 지구과학 3.3</small>깜빡이는 별의 주기를 재면 다른 은하까지의 거리가 나올까?</a></div></nav>
 
       <article class="card reading" id="text-adearth-stellar-fates">
         <header class="card-head">
-          <span class="no">3.6.3</span><h2>무거운 별은 왜 마지막 연료를 하루 만에 다 태울까?</h2><span class="kind">읽기 · 핵융합 단계와 에너지 · κ 메커니즘 · 밀집성과 특이성</span>
+          <span class="no">3.6.4</span><h2>무거운 별은 왜 마지막 연료를 하루 만에 다 태울까?</h2><span class="kind">읽기 · 핵융합 단계와 에너지 · κ 메커니즘 · 밀집성과 특이성</span>
         </header>
         <div class="reading-body">
           <p class="ask">태양 질량의 25배인 별은 수소를 약 700만 년 동안 태웁니다. 그런데 같은 별이 마지막 단계인 규소 연소는 하루도 안 되어 끝냅니다. 연료가 바뀔 때마다 무엇이 달라지기에 이렇게 빨라질까요? 그리고 그 사이에 별은 왜 밝기가 변하거나, 이상한 스펙트럼을 보이기도 할까요?</p>
@@ -243,55 +292,6 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/2-4.html#card-is2-sun-fusion"><small class="mono">통합과학2 2.4</small>태양은 무엇을 태워서 빛날까?</a><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a><a href="../../c/earth/3-3.html#card-earth-evolve"><small class="mono">지구과학 3.3</small>무거운 별은 왜 더 빨리 죽을까?</a><a href="../../c/earth/3-3.html#text-earth-star-life"><small class="mono">지구과학 3.3</small>별은 어떻게 태어나고, 무엇을 남기고 죽을까?</a></div></nav>
 
-      <article class="card" id="card-space-variables">
-        <header class="card-head">
-          <span class="no">3.6.4</span><h2>별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?</h2><span class="kind">맥동 변광성, 식쌍성, 신성과 초신성의 광도 곡선</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="고른 변광성의 시간에 따른 밝기 변화(광도 곡선)"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="변광성 종류">
-                <button type="button" class="chip" data-v="ceph" aria-pressed="true">세페이드 변광성</button>
-                <button type="button" class="chip" data-v="rr" aria-pressed="false">거문고자리 RR형</button>
-                <button type="button" class="chip" data-v="ecl" aria-pressed="false">식쌍성</button>
-                <button type="button" class="chip" data-v="nova" aria-pressed="false">신성</button>
-                <button type="button" class="chip" data-v="sn1a" aria-pressed="false">Ia형 초신성</button>
-                <button type="button" class="chip" data-v="sn2" aria-pressed="false">II형 초신성</button>
-              </div>
-              <label class="mono x-p">변광 주기 = <output class="p-out">10</output>일</label>
-              <input class="p x-p" type="range" min="0" max="2" step="0.01" value="1" aria-label="변광 주기 (로그 눈금)">
-              <label class="mono x-m">관측된 (평균 또는 최대) 겉보기 등급 = <output class="m-out">15.0</output></label>
-              <input class="m x-m" type="range" min="4" max="24" step="0.1" value="15" aria-label="겉보기 등급">
-              <dl class="nums">
-                <div><dt>분류 · 밝기가 변하는 까닭</dt><dd class="n-k">—</dd></div>
-                <div><dt>절대 등급 (알려진 관계로)</dt><dd class="n-M">—</dd></div>
-                <div><dt>거리</dt><dd class="n-d">—</dd></div>
-              </dl>
-              <p class="fig-note">광도 곡선의 모양은 대표적인 경향을 그린 모식입니다. 세페이드의 주기–광도 관계는 M ≈ −2.43(log P − 1) − 4.05, Ia형 초신성의 최대 밝기는 M ≈ −19.3으로 두었고, 성간 소광은 무시했습니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>밤하늘의 별 가운데에는 며칠 주기로 밝아졌다 어두워지기를 되풀이하는 별, 몇 시간 동안 푹 어두워졌다 돌아오는 별, 어느 날 갑자기 나타나 몇 주 동안 빛나다 사라지는 별이 있습니다. 밝기의 변화에서 무엇을 알 수 있을까요?</li>
-            <li><span class="tag">복원</span>별의 광도는 반지름의 제곱과 표면 온도의 네제곱에 비례합니다. 무거운 별은 진화의 마지막에 초신성으로 폭발합니다(지구과학).</li>
-            <li><span class="tag">설명</span>시간에 따른 밝기 변화를 그린 것이 <em>광도 곡선</em>입니다. <em>맥동 변광성</em>(세페이드, 거문고자리 RR형)은 별이 부풀었다 줄어들기를 되풀이하며 규칙적으로 밝기가 변하고, 빨리 밝아졌다 천천히 어두워지는 톱니 모양을 보입니다. <em>식쌍성</em>은 별 자체가 아니라 두 별이 서로를 가리며 어두워지는 것이고, 가린 동안만 평평하게 어두워집니다. <em>폭발 변광성</em> 가운데 <em>신성</em>은 백색 왜성 표면에 쌓인 수소가 폭발하는 것이고, <em>초신성</em>은 별 전체가 폭발해 은하 하나만큼 밝아집니다.</li>
-            <li><span class="tag">연결</span>세페이드는 주기가 길수록 밝다는 <em>주기–광도 관계</em>가 있어(리비트, 1912), 주기만 재면 절대 등급을 알 수 있는 표준 촛불입니다. 백색 왜성이 한계 질량에 이르러 폭발하는 Ia형 초신성은 최대 밝기가 거의 같아, 수십억 광년 떨어진 은하까지의 거리를 재는 데 쓰이며, 이 관측으로 우주의 가속 팽창이 발견되었습니다(2011년 노벨상). 초신성은 철보다 무거운 원소를 만들어 우주에 퍼뜨립니다.</li>
-            <li><span class="tag">적용</span>여섯 종류의 광도 곡선 모양을 비교하세요. 세페이드의 주기를 3일, 30일로 바꾸며 절대 등급과 거리를 계산해 보세요. Ia형 초신성의 최대 겉보기 등급이 20등급이면 얼마나 멀리 있을까요?</li>
-            <li class="warn"><span class="tag">판단</span>‘신성(nova)’은 새로 태어난 별이라는 뜻이지만, 실제로는 원래 있던 어두운 별이 갑자기 밝아진 것입니다. 또 세페이드에도 종류가 둘 있는데, 이를 구별하지 못해 20세기 중반까지 안드로메다은하까지의 거리를 절반쯤으로 잘못 알았습니다. 표준 촛불은 보정이 정확할 때만 믿을 수 있습니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">같은 은하에서 주기가 30일인 세페이드와 3일인 세페이드를 발견했습니다. 두 별의 평균 겉보기 등급을 비교하면?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>주기 30일인 별이 더 밝게(등급이 작게) 보인다<span class="why"><b>맞습니다.</b> 거리가 같으므로 절대 등급 차이가 그대로 나타나고, 주기가 긴 세페이드가 더 밝습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>주기 3일인 별이 더 밝게 보인다<span class="why"><b>주기–광도 관계를 거꾸로 적용했습니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>같은 은하에 있으므로 밝기가 같다<span class="why"><b>거리는 같아도 절대 등급이 다릅니다.</b></span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/3-3.html#card-earth-evolve"><small class="mono">지구과학 3.3</small>무거운 별은 왜 더 빨리 죽을까?</a><a href="../../c/earth/3-3.html#text-earth-star-life"><small class="mono">지구과학 3.3</small>별은 어떻게 태어나고, 무엇을 남기고 죽을까?</a><a href="../../c/earth/3-2.html#card-space-distance"><small class="mono">지구과학 3.2</small>별까지의 거리는 어떤 사다리를 타고 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/3-1.html#card-space-cluster"><small class="mono">행성우주과학 3.1</small>성단 사진 한 장으로 나이와 거리를 알 수 있을까?</a><a href="../../c/adearth/3-3.html#card-labearth-msfit"><small class="mono">고급 지구과학 3.3</small>성단의 주계열을 표준 주계열에 겹치면 거리가 나올까?</a><a href="../../c/adearth/3-3.html#card-labearth-cepheid"><small class="mono">고급 지구과학 3.3</small>깜빡이는 별의 주기를 재면 다른 은하까지의 거리가 나올까?</a></div></nav>
-
       <article class="card" id="card-adearth-compact">
         <header class="card-head">
           <span class="no">3.6.5</span><h2>별이 남긴 중심핵은 얼마나 무거워질 수 있을까?</h2><span class="kind">밀집성 · 질량–반지름 관계 · 찬드라세카르 한계</span>
@@ -356,8 +356,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/earth/star-core.js"></script>
 <script src="../../js/cards/is1/m-fusion.js"></script>
+<script src="../../js/cards/earth/star-core.js"></script>
 <script src="../../js/cards/space/s-var.js"></script>
 <script src="../../js/cards/adearth/ae-compact.js"></script>
 </body>

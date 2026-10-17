@@ -28,14 +28,14 @@ window.TOC = [
         "title": "1초는 누가, 어떻게 정할까?"
        },
        {
-        "kind": "card",
-        "id": "card-is1-gps",
-        "title": "GPS는 어떻게 시간으로 위치를 찾을까?"
-       },
-       {
         "kind": "video",
         "id": "video-is1-meter",
         "title": "1미터의 역사"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-gps",
+        "title": "GPS는 어떻게 시간으로 위치를 찾을까?"
        }
       ]
      },
@@ -79,11 +79,6 @@ window.TOC = [
         "title": "계산기에 나온 숫자를 다 적어도 될까?"
        },
        {
-        "kind": "card",
-        "id": "card-is1-fermi",
-        "title": "운동장의 모래알은 몇 개일까?"
-       },
-       {
         "kind": "text",
         "id": "text-is1-standards",
         "title": "왜 온 세계가 똑같은 1 kg을 써야 할까?"
@@ -97,6 +92,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-standard",
         "title": "모두가 자기 발걸음으로 재면 무슨 일이 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-fermi",
+        "title": "운동장의 모래알은 몇 개일까?"
        }
       ]
      },
@@ -377,6 +377,11 @@ window.TOC = [
        },
        {
         "kind": "card",
+        "id": "card-is1-moon-jump",
+        "title": "달에서 뛰면 얼마나 높이, 얼마나 오래 떠 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-inverse-square",
         "title": "우주정거장에는 중력이 없을까?"
        },
@@ -384,11 +389,6 @@ window.TOC = [
         "kind": "video",
         "id": "video-apple-moon",
         "title": "달도 떨어지고 있다"
-       },
-       {
-        "kind": "card",
-        "id": "card-is1-moon-jump",
-        "title": "달에서 뛰면 얼마나 높이, 얼마나 오래 떠 있을까?"
        }
       ]
      },
@@ -561,14 +561,14 @@ window.TOC = [
         "title": "기린은 필요해서 목이 길어졌을까?"
        },
        {
-        "kind": "text",
-        "id": "text-is2-biodiversity",
-        "title": "생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?"
-       },
-       {
         "kind": "video",
         "id": "video-is2-moth",
         "title": "흰 나방, 검은 나방"
+       },
+       {
+        "kind": "text",
+        "id": "text-is2-biodiversity",
+        "title": "생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?"
        }
       ]
      },
@@ -973,6 +973,11 @@ window.TOC = [
         "title": "힘을 주지 않으면 물체는 멈출까?"
        },
        {
+        "kind": "video",
+        "id": "video-phy-bus",
+        "title": "급정거한 버스 안에서"
+       },
+       {
         "kind": "card",
         "id": "card-phy-vt",
         "title": "속도–시간 그래프 한 장에서 무엇을 읽을 수 있을까?"
@@ -981,11 +986,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-stopping",
         "title": "속력이 2배면 정지 거리는 몇 배가 될까?"
-       },
-       {
-        "kind": "video",
-        "id": "video-phy-bus",
-        "title": "급정거한 버스 안에서"
        },
        {
         "kind": "card",
@@ -1063,6 +1063,11 @@ window.TOC = [
        },
        {
         "kind": "card",
+        "id": "card-phy-heat-transfer",
+        "title": "난로의 열은 어떤 길로 나에게 올까?"
+       },
+       {
+        "kind": "card",
         "id": "card-mech-heating-curve",
         "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
        },
@@ -1070,11 +1075,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-mech-insulation",
         "title": "단열재를 두껍게 하면 빠져나가는 열이 얼마나 줄까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-heat-transfer",
-        "title": "난로의 열은 어떤 길로 나에게 올까?"
        }
       ]
      },
@@ -1294,11 +1294,6 @@ window.TOC = [
         "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
        {
-        "kind": "card",
-        "id": "card-phy-lm-emicro",
-        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
-       },
-       {
         "kind": "text",
         "id": "text-phy-image-sensor",
         "title": "디지털카메라는 빛을 어떻게 숫자로 저장할까?"
@@ -1312,6 +1307,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-compton",
         "title": "X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-phy-lm-emicro",
+        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        }
       ]
      },
@@ -1356,16 +1356,6 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-emq-semis",
-        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-is2-solar-cell",
-        "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-diode-iv",
         "title": "다이오드는 왜 한쪽으로만 전류를 흘릴까?"
        },
@@ -1373,6 +1363,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-solar-panel",
         "title": "작은 태양 전지 12장으로 휴대 전화를 충전하려면 어떻게 이어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-semis",
+        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is2-solar-cell",
+        "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
        }
       ]
      },
@@ -2281,6 +2281,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-key",
+        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-bio-tree-read",
         "title": "계통수는 어떻게 읽을까?"
        },
@@ -2288,11 +2293,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-tree-build",
         "title": "형질 표로 계통수를 그릴 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-key",
-        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
        },
        {
         "kind": "card",
@@ -2550,11 +2550,6 @@ window.TOC = [
         "title": "지층에 남은 무늬로 옛 환경을 어떻게 읽을까?"
        },
        {
-        "kind": "text",
-        "id": "text-earth-paleoclimate",
-        "title": "온도계가 없던 시대의 기후는 어떻게 알아낼까?"
-       },
-       {
         "kind": "video",
         "id": "video-earth-day",
         "title": "지구 46억 년을 하루로"
@@ -2578,6 +2573,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-fossil-map",
         "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-earth-paleoclimate",
+        "title": "온도계가 없던 시대의 기후는 어떻게 알아낼까?"
        }
       ]
      },
@@ -2799,13 +2799,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-incline",
-        "title": "빗면 위의 상자는 어느 쪽으로 움직일까?"
+        "id": "card-phy-truss",
+        "title": "다리의 뼈대는 왜 삼각형으로 짤까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-truss",
-        "title": "다리의 뼈대는 왜 삼각형으로 짤까?"
+        "id": "card-mech-incline",
+        "title": "빗면 위의 상자는 어느 쪽으로 움직일까?"
        }
       ]
      },
@@ -2817,13 +2817,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-projectile",
-        "title": "비스듬히 던진 공은 몇 도에서 가장 멀리 갈까?"
+        "id": "card-is1-projectile",
+        "title": "수평으로 던진 공은 왜 포물선을 그릴까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-projectile",
-        "title": "수평으로 던진 공은 왜 포물선을 그릴까?"
+        "id": "card-mech-projectile",
+        "title": "비스듬히 던진 공은 몇 도에서 가장 멀리 갈까?"
        }
       ]
      },
@@ -2876,13 +2876,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-escape",
-        "title": "달에는 왜 대기가 없을까?"
+        "id": "card-phy-rocket",
+        "title": "로켓은 무엇을 밀고 나아갈까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-rocket",
-        "title": "로켓은 무엇을 밀고 나아갈까?"
+        "id": "card-mech-escape",
+        "title": "달에는 왜 대기가 없을까?"
        }
       ]
      },
@@ -2893,14 +2893,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-mech-gr",
-        "title": "중력은 힘일까, 휘어진 시공간일까?"
-       },
-       {
         "kind": "card",
         "id": "card-phy-lm-gps",
         "title": "GPS 위성의 시계는 왜 보정해야 할까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-mech-gr",
+        "title": "중력은 힘일까, 휘어진 시공간일까?"
        }
       ]
      }
@@ -2954,11 +2954,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-first-law",
-        "title": "기체에 준 열은 어디에 쓰일까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-joule",
         "title": "물을 저어서 데울 수 있을까?"
        },
@@ -2966,6 +2961,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-brake",
         "title": "멈춘 자동차의 운동 에너지는 어디로 갔을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-first-law",
+        "title": "기체에 준 열은 어디에 쓰일까?"
        }
       ]
      },
@@ -2975,11 +2975,6 @@ window.TOC = [
       "code": "12역학02-04",
       "page": true,
       "items": [
-       {
-        "kind": "card",
-        "id": "card-mech-cycle",
-        "title": "한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?"
-       },
        {
         "kind": "card",
         "id": "card-phy-engine",
@@ -2999,6 +2994,11 @@ window.TOC = [
         "kind": "video",
         "id": "video-phy-engine",
         "title": "증기 기관에서 자동차 엔진까지"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-cycle",
+        "title": "한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?"
        }
       ]
      },
@@ -3033,11 +3033,6 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-mech-shm",
-        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
-       },
-       {
         "kind": "text",
         "id": "text-phy-spring",
         "title": "눌린 용수철에는 에너지가 얼마나 저장될까?"
@@ -3046,6 +3041,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-pendulum",
         "title": "진자 공식은 언제 틀릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-shm",
+        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
        }
       ]
      },
@@ -3088,13 +3088,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-two-speaker",
-        "title": "스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?"
+        "id": "card-phy-lm-dslit",
+        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-dslit",
-        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
+        "id": "card-mech-two-speaker",
+        "title": "스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?"
        }
       ]
      },
@@ -3134,11 +3134,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-equipotential",
-        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-field",
         "title": "보이지 않는 전기장을 어떻게 그릴까?"
        },
@@ -3146,6 +3141,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-potential",
         "title": "전위차는 ‘전기의 높이’일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-equipotential",
+        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
        }
       ]
      },
@@ -3180,8 +3180,8 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-bfield",
-        "title": "도선을 둥글게 감으면 자기장은 어떻게 달라질까?"
+        "id": "card-phy-magnet",
+        "title": "철은 자석에 붙는데 알루미늄은 왜 안 붙을까?"
        },
        {
         "kind": "card",
@@ -3190,8 +3190,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-phy-magnet",
-        "title": "철은 자석에 붙는데 알루미늄은 왜 안 붙을까?"
+        "id": "card-emq-bfield",
+        "title": "도선을 둥글게 감으면 자기장은 어떻게 달라질까?"
        }
       ]
      },
@@ -3221,11 +3221,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-transformer",
-        "title": "변압기는 왜 교류에서만 작동할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lenz",
         "title": "자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?"
        },
@@ -3243,6 +3238,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-wireless",
         "title": "무선 충전기는 선 없이 어떻게 전기를 보낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-transformer",
+        "title": "변압기는 왜 교류에서만 작동할까?"
        }
       ]
      },
@@ -3267,18 +3267,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-semis",
-        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
+        "id": "card-phy-lm-bands",
+        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
         "id": "card-is1-doping",
         "title": "반도체에 불순물을 넣으면 왜 전기가 잘 통할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-bands",
-        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
@@ -3289,6 +3284,11 @@ window.TOC = [
         "kind": "video",
         "id": "video-is1-chip",
         "title": "모래에서 반도체 칩까지"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-semis",
+        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
        }
       ]
      }
@@ -3306,16 +3306,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-diffraction",
-        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-emq-hologram",
-        "title": "홀로그램은 어떻게 입체 영상을 기록할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-dslit",
         "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
        },
@@ -3323,6 +3313,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-lm-film",
         "title": "비눗방울은 왜 무지갯빛일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-diffraction",
+        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-emq-hologram",
+        "title": "홀로그램은 어떻게 입체 영상을 기록할까?"
        }
       ]
      },
@@ -3334,11 +3334,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-aberration",
-        "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-refract",
         "title": "볼록 렌즈는 왜 빛을 한 점에 모을까?"
        },
@@ -3346,6 +3341,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-lm-image",
         "title": "렌즈를 반쯤 가리면 상도 반만 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-aberration",
+        "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
        }
       ]
      },
@@ -3370,11 +3370,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-pixels",
-        "title": "어두운 곳에서 찍은 사진은 왜 자글자글할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-photo",
         "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
@@ -3382,6 +3377,11 @@ window.TOC = [
         "kind": "text",
         "id": "text-phy-image-sensor",
         "title": "디지털카메라는 빛을 어떻게 숫자로 저장할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-pixels",
+        "title": "어두운 곳에서 찍은 사진은 왜 자글자글할까?"
        },
        {
         "kind": "card",
@@ -3422,13 +3422,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-single-photon",
-        "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
+        "id": "card-phy-lm-emicro",
+        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-emicro",
-        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
+        "id": "card-emq-single-photon",
+        "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
        }
       ]
      },
@@ -3494,11 +3494,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-star-spectrum",
-        "title": "별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-sun-fusion",
         "title": "태양은 무엇을 태워서 빛날까?"
        },
@@ -3511,6 +3506,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-spectrum",
         "title": "별빛에서 원소를 어떻게 읽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-star-spectrum",
+        "title": "별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?"
        },
        {
         "kind": "card",
@@ -3542,11 +3542,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-gas-use",
-        "title": "에어백을 부풀리려면 기체가 몇 몰 필요할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-mech-ideal-gas",
         "title": "기체를 데우면 압력은 왜 커질까?"
        },
@@ -3554,6 +3549,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-molvol",
         "title": "기체 1몰의 부피는 왜 기체 종류와 상관없을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-gas-use",
+        "title": "에어백을 부풀리려면 기체가 몇 몰 필요할까?"
        }
       ]
      },
@@ -3578,11 +3578,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-bp-data",
-        "title": "극성이 없는 분자도 서로 끌어당길까?"
-       },
-       {
-        "kind": "card",
         "id": "card-chem-bp",
         "title": "물의 끓는점은 왜 100 °C나 될까?"
        },
@@ -3590,6 +3585,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-mix",
         "title": "기름과 물은 왜 섞이지 않을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-bp-data",
+        "title": "극성이 없는 분자도 서로 끌어당길까?"
        }
       ]
      },
@@ -3619,11 +3619,6 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-mateng-water",
-        "title": "물은 왜 그렇게 특별한 액체일까?"
-       },
-       {
         "kind": "card",
         "id": "card-chem-ice",
         "title": "물이 얼면 왜 부피가 커질까?"
@@ -3632,6 +3627,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-bp",
         "title": "물의 끓는점은 왜 100 °C나 될까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-mateng-water",
+        "title": "물은 왜 그렇게 특별한 액체일까?"
        }
       ]
      },
@@ -3656,13 +3656,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-osmosis",
-        "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
+        "id": "card-is1-membrane",
+        "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-membrane",
-        "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
+        "id": "card-mateng-osmosis",
+        "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
        }
       ]
      }
@@ -3680,11 +3680,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-thermo-eq",
-        "title": "반응식을 두 배로 하면 ΔH는 어떻게 될까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-hand-warmer",
         "title": "손난로는 어떻게 뜨거워질까?"
        },
@@ -3692,6 +3687,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is2-cold-pack",
         "title": "냉찜질 팩은 어떻게 차가워질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-thermo-eq",
+        "title": "반응식을 두 배로 하면 ΔH는 어떻게 될까?"
        }
       ]
      },
@@ -3716,13 +3716,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-spont",
-        "title": "열을 흡수하는 변화도 저절로 일어날 수 있을까?"
+        "id": "card-mech-entropy",
+        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-entropy",
-        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
+        "id": "card-mateng-spont",
+        "title": "열을 흡수하는 변화도 저절로 일어날 수 있을까?"
        }
       ]
      }
@@ -3753,13 +3753,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-half-life",
-        "title": "약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?"
+        "id": "card-earth-half-life",
+        "title": "방사성 동위 원소 시계는 어떻게 읽을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-half-life",
-        "title": "방사성 동위 원소 시계는 어떻게 읽을까?"
+        "id": "card-mateng-half-life",
+        "title": "약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?"
        }
       ]
      },
@@ -3817,11 +3817,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-conjugate",
-        "title": "OH⁻가 없는 암모니아는 어떻게 염기일까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-ion-migration",
         "title": "여러 가지 산에 공통으로 들어 있는 것은?"
        },
@@ -3829,6 +3824,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is2-neutral",
         "title": "산과 염기를 섞으면 무엇이 사라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-rxn-conjugate",
+        "title": "OH⁻가 없는 암모니아는 어떻게 염기일까?"
        }
       ]
      },
@@ -3840,8 +3840,8 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-weak-acid",
-        "title": "같은 농도의 산인데 pH는 왜 다를까?"
+        "id": "card-is2-ph-log",
+        "title": "pH는 왜 로그 눈금일까?"
        },
        {
         "kind": "card",
@@ -3855,8 +3855,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-is2-ph-log",
-        "title": "pH는 왜 로그 눈금일까?"
+        "id": "card-rxn-weak-acid",
+        "title": "같은 농도의 산인데 pH는 왜 다를까?"
        }
       ]
      },
@@ -3868,13 +3868,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-titration",
-        "title": "적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?"
+        "id": "card-chem-eq-point",
+        "title": "중화점에서 용액은 언제나 중성일까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-eq-point",
-        "title": "중화점에서 용액은 언제나 중성일까?"
+        "id": "card-rxn-titration",
+        "title": "적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?"
        },
        {
         "kind": "card",
@@ -3919,13 +3919,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-buffer",
-        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
+        "id": "card-chem-lechat",
+        "title": "평형을 흔들면 어떻게 될까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-lechat",
-        "title": "평형을 흔들면 어떻게 될까?"
+        "id": "card-rxn-buffer",
+        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
        }
       ]
      }
@@ -3943,13 +3943,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-oxnum",
-        "title": "복잡한 산화·환원 반응식의 계수는 어떻게 맞출까?"
+        "id": "card-is2-redox-electron",
+        "title": "산화는 산소와의 반응일까, 전자의 이동일까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-redox-electron",
-        "title": "산화는 산소와의 반응일까, 전자의 이동일까?"
+        "id": "card-rxn-oxnum",
+        "title": "복잡한 산화·환원 반응식의 계수는 어떻게 맞출까?"
        }
       ]
      },
@@ -3960,14 +3960,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-rxn-battery-history",
-        "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
-       },
-       {
         "kind": "card",
         "id": "card-is2-reactivity",
         "title": "철은 왜 녹슬고 금은 녹슬지 않을까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-rxn-battery-history",
+        "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
        }
       ]
      },
@@ -4070,13 +4070,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-polymer",
-        "title": "작은 분자를 이으면 어떻게 비닐과 나일론이 될까?"
+        "id": "card-is1-polymer",
+        "title": "단백질과 DNA는 작은 단위를 어떻게 이어 붙일까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-polymer",
-        "title": "단백질과 DNA는 작은 단위를 어떻게 이어 붙일까?"
+        "id": "card-rxn-polymer",
+        "title": "작은 분자를 이으면 어떻게 비닐과 나일론이 될까?"
        }
       ]
      },
@@ -4341,13 +4341,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-cell-carbon",
-        "title": "포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?"
+        "id": "card-bio-resp",
+        "title": "세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-resp",
-        "title": "세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?"
+        "id": "card-cell-carbon",
+        "title": "포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?"
        }
       ]
      },
@@ -4390,13 +4390,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-cell-chloroplast",
-        "title": "엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?"
+        "id": "card-leaf-color",
+        "title": "잎은 왜 초록색일까?"
        },
        {
         "kind": "card",
-        "id": "card-leaf-color",
-        "title": "잎은 왜 초록색일까?"
+        "id": "card-cell-chloroplast",
+        "title": "엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?"
        }
       ]
      },
@@ -4477,11 +4477,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-sexlinked",
-        "title": "색맹은 왜 남자에게 더 많을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-bio-gene-chromo",
         "title": "유전자, DNA, 염색체는 서로 어떤 관계일까?"
        },
@@ -4489,6 +4484,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-assort",
         "title": "형제는 왜 서로 다르게 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-gene-sexlinked",
+        "title": "색맹은 왜 남자에게 더 많을까?"
        }
       ]
      },
@@ -4500,13 +4500,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-pedigree",
-        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
+        "id": "card-bio-blood",
+        "title": "ABO식 혈액형은 어떻게 판정할까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-blood",
-        "title": "ABO식 혈액형은 어떻게 판정할까?"
+        "id": "card-gene-pedigree",
+        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
        }
       ]
      },
@@ -4531,16 +4531,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-nondisjunction",
-        "title": "염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-gene-disorders",
-        "title": "유전병은 원인에 따라 어떻게 나눌까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-mutation",
         "title": "염기 하나가 바뀌면 무슨 일이 생길까?"
        },
@@ -4548,6 +4538,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-division",
         "title": "체세포 분열과 감수 분열은 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-gene-nondisjunction",
+        "title": "염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-gene-disorders",
+        "title": "유전병은 원인에 따라 어떻게 나눌까?"
        }
       ]
      },
@@ -4559,6 +4559,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-cell-chargaff",
+        "title": "생물마다 DNA는 다른데, 왜 A와 T의 양은 늘 같을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-gene-hershey",
         "title": "바이러스가 세균 속으로 들여보내는 것은 단백질일까, DNA일까?"
        },
@@ -4566,11 +4571,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-gene-dna-history",
         "title": "DNA가 유전 물질이고 이중 나선이라는 것은 어떻게 밝혀졌을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-chargaff",
-        "title": "생물마다 DNA는 다른데, 왜 A와 T의 양은 늘 같을까?"
        }
       ]
      },
@@ -4582,13 +4582,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-genome",
-        "title": "사람의 DNA 가운데 유전자는 얼마나 될까?"
+        "id": "card-bio-dna-pack",
+        "title": "2 m나 되는 DNA가 어떻게 핵 속에 들어갈까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-dna-pack",
-        "title": "2 m나 되는 DNA가 어떻게 핵 속에 들어갈까?"
+        "id": "card-gene-genome",
+        "title": "사람의 DNA 가운데 유전자는 얼마나 될까?"
        },
        {
         "kind": "text",
@@ -4624,13 +4624,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-central",
-        "title": "핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?"
+        "id": "card-is1-dogma",
+        "title": "DNA의 정보는 어떻게 단백질이 될까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-dogma",
-        "title": "DNA의 정보는 어떻게 단백질이 될까?"
+        "id": "card-gene-central",
+        "title": "핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?"
        }
       ]
      },
@@ -4809,6 +4809,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-is1-spheres",
+        "title": "지구시스템의 각 권역은 어떤 층으로 이루어져 있을까?"
+       },
+       {
         "kind": "card",
         "id": "card-esys-snowline",
         "title": "안쪽 행성은 왜 암석으로, 바깥 행성은 왜 기체로 되어 있을까?"
@@ -4817,11 +4822,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-early-earth",
         "title": "녹은 암석 덩어리가 어떻게 바다와 대기를 가진 행성이 되었을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-is1-spheres",
-        "title": "지구시스템의 각 권역은 어떤 층으로 이루어져 있을까?"
        }
       ]
      },
@@ -4833,13 +4833,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-oxygen",
-        "title": "공기 중의 산소는 언제, 어떻게 늘어났을까?"
+        "id": "card-bio-carbon",
+        "title": "탄소는 생태계를 어떻게 돌까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-carbon",
-        "title": "탄소는 생태계를 어떻게 돌까?"
+        "id": "card-esys-oxygen",
+        "title": "공기 중의 산소는 언제, 어떻게 늘어났을까?"
        },
        {
         "kind": "card",
@@ -4856,11 +4856,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-hotspot",
-        "title": "하와이 섬들의 나이로 판의 속도를 잴 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-seafloor",
         "title": "바다 밑 줄무늬는 무엇을 기록하고 있을까?"
        },
@@ -4868,6 +4863,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-plate-boundary",
         "title": "판 경계마다 지진과 화산은 어떻게 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-hotspot",
+        "title": "하와이 섬들의 나이로 판의 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -4877,11 +4877,6 @@ window.TOC = [
       "code": "12지시01-04",
       "page": true,
       "items": [
-       {
-        "kind": "card",
-        "id": "card-esys-volcano",
-        "title": "어떤 화산은 흐르고, 어떤 화산은 터지는 까닭은?"
-       },
        {
         "kind": "card",
         "id": "card-earth-magma",
@@ -4896,6 +4891,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-columnar",
         "title": "용암은 어떻게 육각기둥이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-volcano",
+        "title": "어떤 화산은 흐르고, 어떤 화산은 터지는 까닭은?"
        }
       ]
      },
@@ -4926,13 +4926,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-ekman",
-        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
+        "id": "card-earth-upwelling",
+        "title": "바람이 불면 왜 해안에 찬물이 올라올까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-upwelling",
-        "title": "바람이 불면 왜 해안에 찬물이 올라올까?"
+        "id": "card-esys-ekman",
+        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
        }
       ]
      },
@@ -4957,6 +4957,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-danger",
+        "title": "태풍 진로의 오른쪽은 왜 더 위험할까?"
+       },
+       {
+        "kind": "card",
         "id": "card-esys-tsunami",
         "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
        },
@@ -4964,11 +4969,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-surge",
         "title": "해일은 무엇 때문에 생기고, 어떻게 대비할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-danger",
-        "title": "태풍 진로의 오른쪽은 왜 더 위험할까?"
        }
       ]
      },
@@ -4999,11 +4999,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-absorb",
-        "title": "공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-greenhouse",
         "title": "온실 효과는 나쁜 것일까?"
        },
@@ -5011,6 +5006,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-blackbody",
         "title": "별의 색으로 온도를 어떻게 알까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-absorb",
+        "title": "공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?"
        }
       ]
      },
@@ -5040,6 +5040,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-updown",
+        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-esys-stability",
         "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
        },
@@ -5047,11 +5052,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-precip",
         "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-updown",
-        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
        },
        {
         "kind": "card",
@@ -5081,13 +5081,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-winds",
-        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
+        "id": "card-earth-isobar",
+        "title": "등압선만 보고 바람을 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-isobar",
-        "title": "등압선만 보고 바람을 알 수 있을까?"
+        "id": "card-esys-winds",
+        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
        }
       ]
      },
@@ -5099,13 +5099,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-rossby",
-        "title": "굽이치는 편서풍 아래에서 저기압은 어디에 생길까?"
+        "id": "card-earth-front",
+        "title": "온대 저기압이 지나가면 날씨는 어떤 순서로 바뀔까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-front",
-        "title": "온대 저기압이 지나가면 날씨는 어떤 순서로 바뀔까?"
+        "id": "card-esys-rossby",
+        "title": "굽이치는 편서풍 아래에서 저기압은 어디에 생길까?"
        }
       ]
      }
@@ -5168,13 +5168,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-kepler3",
-        "title": "위성의 궤도만 보고 목성의 질량을 잴 수 있을까?"
+        "id": "card-mech-kepler",
+        "title": "행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-kepler",
-        "title": "행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?"
+        "id": "card-space-kepler3",
+        "title": "위성의 궤도만 보고 목성의 질량을 잴 수 있을까?"
        },
        {
         "kind": "card",
@@ -5204,13 +5204,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-exoplanet",
-        "title": "보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?"
+        "id": "card-mech-doppler",
+        "title": "다가오는 사이렌은 왜 더 높게 들릴까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-doppler",
-        "title": "다가오는 사이렌은 왜 더 높게 들릴까?"
+        "id": "card-space-exoplanet",
+        "title": "보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?"
        }
       ]
      }
@@ -5228,13 +5228,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-sun",
-        "title": "같은 태양이 파장마다 왜 전혀 다르게 보일까?"
+        "id": "card-earth-blackbody",
+        "title": "별의 색으로 온도를 어떻게 알까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-blackbody",
-        "title": "별의 색으로 온도를 어떻게 알까?"
+        "id": "card-space-sun",
+        "title": "같은 태양이 파장마다 왜 전혀 다르게 보일까?"
        }
       ]
      },
@@ -5272,13 +5272,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-binary",
-        "title": "서로를 도는 두 별은 어떻게 별의 저울이 될까?"
+        "id": "card-earth-hrd",
+        "title": "H–R도는 어떻게 읽을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hrd",
-        "title": "H–R도는 어떻게 읽을까?"
+        "id": "card-space-binary",
+        "title": "서로를 도는 두 별은 어떻게 별의 저울이 될까?"
        }
       ]
      },
@@ -5290,11 +5290,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-variables",
-        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-evolve",
         "title": "무거운 별은 왜 더 빨리 죽을까?"
        },
@@ -5302,6 +5297,11 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-star-life",
         "title": "별은 어떻게 태어나고, 무엇을 남기고 죽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-space-variables",
+        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        }
       ]
      }
@@ -5345,13 +5345,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-rotation",
-        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
+        "id": "card-earth-hubble",
+        "title": "은하는 모양으로 어떻게 나눌까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hubble",
-        "title": "은하는 모양으로 어떻게 나눌까?"
+        "id": "card-space-rotation",
+        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
        }
       ]
      },
@@ -5363,13 +5363,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-redshift-survey",
-        "title": "하늘 사진에서는 안 보이던 우주의 구조가 스펙트럼으로 어떻게 드러날까?"
+        "id": "card-earth-hlaw",
+        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hlaw",
-        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
+        "id": "card-space-redshift-survey",
+        "title": "하늘 사진에서는 안 보이던 우주의 구조가 스펙트럼으로 어떻게 드러날까?"
        }
       ]
      },
@@ -5381,16 +5381,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-cosmic-web",
-        "title": "거의 고르던 초기 우주에서 어떻게 거미줄 같은 구조가 생겼을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-space-large-structure",
-        "title": "은하 너머에는 어떤 구조가 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-nocenter",
         "title": "우주에는 중심이 있을까?"
        },
@@ -5398,6 +5388,16 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-cosmology",
         "title": "우주에 대한 생각은 어떤 증거로 바뀌어 왔을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-space-cosmic-web",
+        "title": "거의 고르던 초기 우주에서 어떻게 거미줄 같은 구조가 생겼을까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-space-large-structure",
+        "title": "은하 너머에는 어떤 구조가 있을까?"
        }
       ]
      }
@@ -5608,13 +5608,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-sie2-calib",
-        "title": "센서가 보낸 숫자를 어떻게 온도로 바꿀까?"
+        "id": "card-is1-sampling",
+        "title": "소리는 어떻게 숫자가 될까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-sampling",
-        "title": "소리는 어떻게 숫자가 될까?"
+        "id": "card-sie2-calib",
+        "title": "센서가 보낸 숫자를 어떻게 온도로 바꿀까?"
        }
       ]
      },
@@ -5787,6 +5787,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-phy-relativity-society",
+        "title": "상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?"
+       },
+       {
         "kind": "card",
         "id": "card-hist-eclipse",
         "title": "일식 사진 몇 장이 어떻게 아인슈타인을 세계적 유명인으로 만들었을까?"
@@ -5795,11 +5800,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-hist-modern-culture",
         "title": "시간과 공간이 바뀌자 예술과 생각도 바뀌었을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-phy-relativity-society",
-        "title": "상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?"
        }
       ]
      },
@@ -5852,6 +5852,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-herd",
+        "title": "집단 면역은 몇 %가 접종해야 생길까?"
+       },
+       {
+        "kind": "card",
         "id": "card-hist-snow",
         "title": "1854년 런던의 콜레라는 어디에서 왔을까?"
        },
@@ -5859,11 +5864,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-hist-epidemics",
         "title": "감염병은 사회를 어떻게 바꾸었고, 과학은 무엇을 해냈을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-herd",
-        "title": "집단 면역은 몇 %가 접종해야 생길까?"
        }
       ]
      },
@@ -5981,6 +5981,11 @@ window.TOC = [
       "items": [
        {
         "kind": "text",
+        "id": "text-is2-iot",
+        "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
+       },
+       {
+        "kind": "text",
         "id": "text-hist-connected",
         "title": "사람에서 기계로, 기계에서 사물로 연결이 넓어지면 사회는 어떻게 달라질까?"
        },
@@ -5988,11 +5993,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-hist-smallworld",
         "title": "80억 명이 사는 세상은 왜 몇 다리만 건너면 이어질까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-is2-iot",
-        "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
        }
       ]
      },
@@ -6504,13 +6504,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-fusi-misgraph",
-        "title": "같은 숫자로 그린 그래프가 왜 다른 인상을 줄까?"
+        "id": "card-sie1-plot",
+        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
        },
        {
         "kind": "card",
-        "id": "card-sie1-plot",
-        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
+        "id": "card-fusi-misgraph",
+        "title": "같은 숫자로 그린 그래프가 왜 다른 인상을 줄까?"
        }
       ]
      },
@@ -6540,13 +6540,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-fusi-simpson",
-        "title": "모든 집단에서 더 나은 치료가 전체로는 더 나쁠 수 있을까?"
+        "id": "card-is2-confound",
+        "title": "자료가 많으면 결론도 항상 옳을까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-confound",
-        "title": "자료가 많으면 결론도 항상 옳을까?"
+        "id": "card-fusi-simpson",
+        "title": "모든 집단에서 더 나은 치료가 전체로는 더 나쁠 수 있을까?"
        }
       ]
      },
@@ -6733,13 +6733,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-orbit",
-        "title": "인공위성은 얼마나 빨리 던져야 지구를 돌까?"
+        "id": "card-mech-escape",
+        "title": "달에는 왜 대기가 없을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-escape",
-        "title": "달에는 왜 대기가 없을까?"
+        "id": "card-adphy-orbit",
+        "title": "인공위성은 얼마나 빨리 던져야 지구를 돌까?"
        }
       ]
      },
@@ -6774,13 +6774,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-carnot",
-        "title": "열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?"
+        "id": "card-mech-entropy",
+        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-entropy",
-        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
+        "id": "card-adphy-carnot",
+        "title": "열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?"
        }
       ]
      }
@@ -6798,13 +6798,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-equipotential",
-        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
+        "id": "card-phy-field",
+        "title": "보이지 않는 전기장을 어떻게 그릴까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-field",
-        "title": "보이지 않는 전기장을 어떻게 그릴까?"
+        "id": "card-emq-equipotential",
+        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
        },
        {
         "kind": "card",
@@ -6990,13 +6990,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-interferometer",
-        "title": "빛의 파장으로 1만분의 1 mm를 잴 수 있을까?"
+        "id": "card-phy-lm-film",
+        "title": "비눗방울은 왜 무지갯빛일까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-film",
-        "title": "비눗방울은 왜 무지갯빛일까?"
+        "id": "card-adphy-interferometer",
+        "title": "빛의 파장으로 1만분의 1 mm를 잴 수 있을까?"
        }
       ]
      },
@@ -7013,13 +7013,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-rayleigh",
-        "title": "망원경은 왜 클수록 더 가까이 붙은 두 별을 가를까?"
+        "id": "card-phy-lm-litho",
+        "title": "반도체 회로는 왜 더 짧은 파장의 빛으로 새길까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-litho",
-        "title": "반도체 회로는 왜 더 짧은 파장의 빛으로 새길까?"
+        "id": "card-adphy-rayleigh",
+        "title": "망원경은 왜 클수록 더 가까이 붙은 두 별을 가를까?"
        }
       ]
      },
@@ -7072,6 +7072,16 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "card",
+        "id": "card-phy-lm-clock",
+        "title": "빠르게 움직이면 정말 시간이 느리게 갈까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-phy-lm-gps",
+        "title": "GPS 위성의 시계는 왜 보정해야 할까?"
+       },
+       {
         "kind": "text",
         "id": "text-adphy-sr",
         "title": "상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?"
@@ -7083,18 +7093,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-clock",
-        "title": "빠르게 움직이면 정말 시간이 느리게 갈까?"
-       },
-       {
-        "kind": "card",
         "id": "card-adphy-mass-energy",
         "title": "가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-gps",
-        "title": "GPS 위성의 시계는 왜 보정해야 할까?"
        },
        {
         "kind": "text",
@@ -7126,13 +7126,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-davisson",
-        "title": "니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?"
+        "id": "card-phy-lm-emicro",
+        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-emicro",
-        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
+        "id": "card-adphy-davisson",
+        "title": "니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?"
        }
       ]
      },
@@ -7182,13 +7182,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-bands",
-        "title": "원자가 많이 모이면 에너지 준위는 왜 띠가 될까?"
+        "id": "card-phy-lm-bands",
+        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-bands",
-        "title": "규소는 도체일까, 절연체일까?"
+        "id": "card-adphy-bands",
+        "title": "원자가 많이 모이면 에너지 준위는 왜 띠가 될까?"
        },
        {
         "kind": "text",
@@ -7413,13 +7413,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adchem-stopcock",
-        "title": "콕을 열어 두 기체를 섞으면 각 기체의 압력은 어떻게 될까?"
+        "id": "card-mateng-partial",
+        "title": "깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-partial",
-        "title": "깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?"
+        "id": "card-adchem-stopcock",
+        "title": "콕을 열어 두 기체를 섞으면 각 기체의 압력은 어떻게 될까?"
        }
       ]
      },
@@ -7449,13 +7449,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-capillary",
-        "title": "가는 유리관 속 물은 왜 저절로 올라가고, 수은은 내려갈까?"
+        "id": "card-labchem-vapor",
+        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-labchem-vapor",
-        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
+        "id": "card-adchem-capillary",
+        "title": "가는 유리관 속 물은 왜 저절로 올라가고, 수은은 내려갈까?"
        }
       ]
      },
@@ -7495,13 +7495,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-solubility",
-        "title": "온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?"
+        "id": "card-chem-soda",
+        "title": "탄산음료 뚜껑을 열면 왜 거품이 날까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-soda",
-        "title": "탄산음료 뚜껑을 열면 왜 거품이 날까?"
+        "id": "card-adchem-solubility",
+        "title": "온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?"
        }
       ]
      },
@@ -7740,13 +7740,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-vanthoff",
-        "title": "온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?"
+        "id": "card-chem-haber-eq",
+        "title": "암모니아 합성은 왜 높은 압력에서 할까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-haber-eq",
-        "title": "암모니아 합성은 왜 높은 압력에서 할까?"
+        "id": "card-adchem-vanthoff",
+        "title": "온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?"
        }
       ]
      },
@@ -7822,13 +7822,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-polyprotic",
-        "title": "인산을 적정하면 pH는 왜 두 번 뛸까?"
+        "id": "card-rxn-buffer",
+        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-buffer",
-        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
+        "id": "card-adchem-polyprotic",
+        "title": "인산을 적정하면 pH는 왜 두 번 뛸까?"
        }
       ]
      },
@@ -7991,13 +7991,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adbio-benson",
-        "title": "방사성 탄소를 몇 초만 주면 어디에 먼저 나타날까?"
+        "id": "card-cell-calvin",
+        "title": "불을 끄면 캘빈 회로의 어떤 물질이 쌓일까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-calvin",
-        "title": "불을 끄면 캘빈 회로의 어떤 물질이 쌓일까?"
+        "id": "card-adbio-benson",
+        "title": "방사성 탄소를 몇 초만 주면 어디에 먼저 나타날까?"
        }
       ]
      },
@@ -8115,6 +8115,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-saltatory",
+        "title": "말이집이 있으면 왜 신호가 더 빠를까?"
+       },
+       {
+        "kind": "card",
         "id": "card-adbio-ghk",
         "title": "휴지 전위는 왜 −70 mV 근처에 머물까?"
        },
@@ -8122,11 +8127,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adbio-hh",
         "title": "활동 전위 직후에 준 두 번째 자극은 왜 통하지 않을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-saltatory",
-        "title": "말이집이 있으면 왜 신호가 더 빠를까?"
        },
        {
         "kind": "text",
@@ -8148,13 +8148,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adbio-psp",
-        "title": "시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?"
+        "id": "card-bio-syndrug",
+        "title": "약물은 시냅스의 어느 단계에 끼어들까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-syndrug",
-        "title": "약물은 시냅스의 어느 단계에 끼어들까?"
+        "id": "card-adbio-psp",
+        "title": "시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?"
        }
       ]
      },
@@ -8290,13 +8290,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adbio-hox",
-        "title": "초파리의 날개를 네 장으로 만드는 유전자가 생쥐의 척추뼈도 정할까?"
+        "id": "card-gene-differentiation",
+        "title": "같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-differentiation",
-        "title": "같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?"
+        "id": "card-adbio-hox",
+        "title": "초파리의 날개를 네 장으로 만드는 유전자가 생쥐의 척추뼈도 정할까?"
        }
       ]
      }
@@ -8457,13 +8457,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adearth-dynamo",
-        "title": "지구 자기장은 왜 수십억 년 동안 사라지지 않을까?"
+        "id": "card-labearth-apwp",
+        "title": "옛날에는 자북극이 두 개였을까, 대륙이 움직였을까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-apwp",
-        "title": "옛날에는 자북극이 두 개였을까, 대륙이 움직였을까?"
+        "id": "card-adearth-dynamo",
+        "title": "지구 자기장은 왜 수십억 년 동안 사라지지 않을까?"
        }
       ]
      },
@@ -8544,16 +8544,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rock-id",
-        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-adearth-crystallize",
-        "title": "같은 마그마에서 왜 서로 다른 암석이 여러 가지 나올까?"
-       },
-       {
-        "kind": "card",
         "id": "card-adearth-facies",
         "title": "같은 현무암이 어디서는 녹색 편암, 어디서는 청색 편암이 되는 까닭은?"
        },
@@ -8561,6 +8551,16 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-sediment",
         "title": "지층에 남은 무늬로 옛 환경을 어떻게 읽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labearth-rock-id",
+        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adearth-crystallize",
+        "title": "같은 마그마에서 왜 서로 다른 암석이 여러 가지 나올까?"
        },
        {
         "kind": "text",
@@ -8646,6 +8646,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-fossil-map",
+        "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
+       },
+       {
+        "kind": "card",
         "id": "card-adearth-korea-map",
         "title": "한반도의 땅덩이들은 언제, 어떤 순서로 만들어졌을까?"
        },
@@ -8653,11 +8658,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-adearth-korea-history",
         "title": "한반도는 어떤 판구조 환경을 거쳐 지금의 모습이 되었을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-fossil-map",
-        "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
        }
       ]
      }
@@ -8674,6 +8674,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-esys-precip",
+        "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
+       },
+       {
         "kind": "card",
         "id": "card-labearth-humidity",
         "title": "공기를 압축하면 수증기량은 늘어날까, 그대로일까?"
@@ -8687,11 +8692,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adearth-droplet",
         "title": "구름 물방울이 빗방울로 자라는 데는 얼마나 걸릴까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-esys-precip",
-        "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
        }
       ]
      },
@@ -8822,14 +8822,14 @@ window.TOC = [
         "title": "심해파와 천해파의 속도 공식은 어디까지 맞을까?"
        },
        {
-        "kind": "card",
-        "id": "card-adearth-surge",
-        "title": "같은 태풍인데 왜 어떤 해안에서만 해일이 클까?"
-       },
-       {
         "kind": "text",
         "id": "text-esys-surge",
         "title": "해일은 무엇 때문에 생기고, 어떻게 대비할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adearth-surge",
+        "title": "같은 태풍인데 왜 어떤 해안에서만 해일이 클까?"
        }
       ]
      },
@@ -8930,13 +8930,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-enso-osc",
-        "title": "엘니뇨는 왜 2~7년마다 저절로 되풀이될까?"
+        "id": "card-earth-oni",
+        "title": "실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-oni",
-        "title": "실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?"
+        "id": "card-adearth-enso-osc",
+        "title": "엘니뇨는 왜 2~7년마다 저절로 되풀이될까?"
        },
        {
         "kind": "text",
@@ -8964,13 +8964,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-sidereal",
-        "title": "오늘 밤 9시에 남중한 별은 한 달 뒤 몇 시에 남중할까?"
+        "id": "card-labearth-equation-time",
+        "title": "해시계의 정오와 시계의 정오는 왜 날마다 다르게 어긋날까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-equation-time",
-        "title": "해시계의 정오와 시계의 정오는 왜 날마다 다르게 어긋날까?"
+        "id": "card-adearth-sidereal",
+        "title": "오늘 밤 9시에 남중한 별은 한 달 뒤 몇 시에 남중할까?"
        },
        {
         "kind": "card",
@@ -9089,23 +9089,23 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-is1-fusion",
+        "title": "별은 왜 철에서 핵융합을 멈출까?"
+       },
+       {
+        "kind": "card",
         "id": "card-earth-star-core",
         "title": "무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-fusion",
-        "title": "별은 왜 철에서 핵융합을 멈출까?"
+        "id": "card-space-variables",
+        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        },
        {
         "kind": "text",
         "id": "text-adearth-stellar-fates",
         "title": "무거운 별은 왜 마지막 연료를 하루 만에 다 태울까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-space-variables",
-        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        },
        {
         "kind": "card",
@@ -9165,13 +9165,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-hi21",
-        "title": "21 cm 전파 한 줄로 우리은하의 나선팔과 회전 곡선을 그릴 수 있을까?"
+        "id": "card-labearth-rotation-mass",
+        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-rotation-mass",
-        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
+        "id": "card-adearth-hi21",
+        "title": "21 cm 전파 한 줄로 우리은하의 나선팔과 회전 곡선을 그릴 수 있을까?"
        }
       ]
      },
@@ -9187,14 +9187,14 @@ window.TOC = [
         "title": "은하는 모양으로 어떻게 나눌까?"
        },
        {
-        "kind": "text",
-        "id": "text-adearth-galaxy-agn",
-        "title": "은하는 빛으로 어림한 것보다 왜 무겁고, 중심은 왜 그렇게 밝을까?"
-       },
-       {
         "kind": "card",
         "id": "card-earth-quasar",
         "title": "퀘이사는 왜 특이 은하일까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-adearth-galaxy-agn",
+        "title": "은하는 빛으로 어림한 것보다 왜 무겁고, 중심은 왜 그렇게 밝을까?"
        },
        {
         "kind": "card",
@@ -9216,13 +9216,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-cmb",
-        "title": "하늘 전체에서 오는 희미한 전파는 왜 대폭발의 증거일까?"
+        "id": "card-is1-bbn",
+        "title": "우주는 왜 대부분 수소와 헬륨일까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-bbn",
-        "title": "우주는 왜 대부분 수소와 헬륨일까?"
+        "id": "card-adearth-cmb",
+        "title": "하늘 전체에서 오는 희미한 전파는 왜 대폭발의 증거일까?"
        }
       ]
      },
@@ -9394,6 +9394,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-sie1-plot",
+        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
+       },
+       {
+        "kind": "card",
         "id": "card-resr-graph",
         "title": "기포 수를 세어 적은 표를 어떤 그래프로 바꿔야 관계가 드러날까?"
        },
@@ -9401,11 +9406,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-resr-logbook",
         "title": "연구 일지에는 무엇을 적고, 표는 어떻게 만들까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-sie1-plot",
-        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
        }
       ]
      }
@@ -9829,13 +9829,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-info-eval-groups",
-        "title": "정확도 95 %인 프로그램은 모두에게 잘 동작할까?"
+        "id": "card-is2-reident",
+        "title": "이름을 지운 자료로도 나를 찾아낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-reident",
-        "title": "이름을 지운 자료로도 나를 찾아낼 수 있을까?"
+        "id": "card-info-eval-groups",
+        "title": "정확도 95 %인 프로그램은 모두에게 잘 동작할까?"
        },
        {
         "kind": "text",
@@ -9906,11 +9906,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-logger",
-        "title": "센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-sampling",
         "title": "소리는 어떻게 숫자가 될까?"
        },
@@ -9918,6 +9913,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-sensor",
         "title": "온도계는 정말 온도를 잴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labphy-logger",
+        "title": "센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?"
        },
        {
         "kind": "card",
@@ -10041,13 +10041,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-spring-energy",
-        "title": "오르내리는 추의 에너지를 모두 더하면 정말 일정할까?"
+        "id": "card-mech-shm",
+        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-shm",
-        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
+        "id": "card-labphy-spring-energy",
+        "title": "오르내리는 추의 에너지를 모두 더하면 정말 일정할까?"
        }
       ]
      },
@@ -10059,13 +10059,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-ice-fusion",
-        "title": "따뜻한 물이 식은 만큼으로 얼음의 융해열을 잴 수 있을까?"
+        "id": "card-mech-heating-curve",
+        "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-heating-curve",
-        "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
+        "id": "card-labphy-ice-fusion",
+        "title": "따뜻한 물이 식은 만큼으로 얼음의 융해열을 잴 수 있을까?"
        }
       ]
      },
@@ -10247,13 +10247,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-standing",
-        "title": "물높이만 바꿔서 소리의 속력을 잴 수 있을까?"
+        "id": "card-mech-standing",
+        "title": "기타 줄과 리코더는 왜 정해진 음만 낼까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-standing",
-        "title": "기타 줄과 리코더는 왜 정해진 음만 낼까?"
+        "id": "card-labphy-standing",
+        "title": "물높이만 바꿔서 소리의 속력을 잴 수 있을까?"
        }
       ]
      },
@@ -10322,13 +10322,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-slit-pattern",
-        "title": "줄무늬 간격과 밝기 봉우리의 폭은 각각 무엇이 정할까?"
+        "id": "card-emq-diffraction",
+        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
        },
        {
         "kind": "card",
-        "id": "card-emq-diffraction",
-        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
+        "id": "card-labphy-slit-pattern",
+        "title": "줄무늬 간격과 밝기 봉우리의 폭은 각각 무엇이 정할까?"
        }
       ]
      },
@@ -10340,13 +10340,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-polarization",
-        "title": "편광판을 돌리면 빛의 세기는 어떤 규칙으로 줄어들까?"
+        "id": "card-emq-polarizer",
+        "title": "편광판 두 장 사이에 한 장을 더 끼우면 왜 빛이 다시 나올까?"
        },
        {
         "kind": "card",
-        "id": "card-emq-polarizer",
-        "title": "편광판 두 장 사이에 한 장을 더 끼우면 왜 빛이 다시 나올까?"
+        "id": "card-labphy-polarization",
+        "title": "편광판을 돌리면 빛의 세기는 어떤 규칙으로 줄어들까?"
        }
       ]
      }
@@ -10364,13 +10364,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-photoelectric",
-        "title": "정지 전압과 진동수의 그래프에서 플랑크 상수를 읽을 수 있을까?"
+        "id": "card-phy-lm-photo",
+        "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-photo",
-        "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
+        "id": "card-labphy-photoelectric",
+        "title": "정지 전압과 진동수의 그래프에서 플랑크 상수를 읽을 수 있을까?"
        }
       ]
      },
@@ -10499,13 +10499,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-spectrum",
-        "title": "분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?"
+        "id": "card-phy-lm-hyd",
+        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-hyd",
-        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
+        "id": "card-labchem-spectrum",
+        "title": "분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?"
        }
       ]
      },
@@ -10697,13 +10697,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-calorimetry",
-        "title": "두 단계로 잰 반응열의 합은 한 번에 잰 반응열과 같을까?"
+        "id": "card-mateng-hess",
+        "title": "잴 수 없는 반응의 열을 어떻게 알아낼까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-hess",
-        "title": "잴 수 없는 반응의 열을 어떻게 알아낼까?"
+        "id": "card-labchem-calorimetry",
+        "title": "두 단계로 잰 반응열의 합은 한 번에 잰 반응열과 같을까?"
        }
       ]
      },
@@ -10715,13 +10715,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-fescn",
-        "title": "섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?"
+        "id": "card-chem-shift-lab",
+        "title": "세 시험관의 색은 조건을 바꾸면 어느 쪽으로 변할까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-shift-lab",
-        "title": "세 시험관의 색은 조건을 바꾸면 어느 쪽으로 변할까?"
+        "id": "card-labchem-fescn",
+        "title": "섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?"
        }
       ]
      },
@@ -10764,13 +10764,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-cell-emf",
-        "title": "전지의 전압은 금속이 정할까, 용액이 정할까?"
+        "id": "card-rxn-cell",
+        "title": "두 금속을 고르면 전지의 전압을 미리 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-cell",
-        "title": "두 금속을 고르면 전지의 전압을 미리 알 수 있을까?"
+        "id": "card-labchem-cell-emf",
+        "title": "전지의 전압은 금속이 정할까, 용액이 정할까?"
        }
       ]
      },
@@ -10782,13 +10782,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-electrolysis",
-        "title": "흘린 전하량으로 전극에 생길 물질의 양을 미리 맞힐 수 있을까?"
+        "id": "card-rxn-electrolysis",
+        "title": "전기를 얼마나 흘리면 금속을 얼마나 얻을까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-electrolysis",
-        "title": "전기를 얼마나 흘리면 금속을 얼마나 얻을까?"
+        "id": "card-labchem-electrolysis",
+        "title": "흘린 전하량으로 전극에 생길 물질의 양을 미리 맞힐 수 있을까?"
        }
       ]
      },
@@ -10800,13 +10800,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-clock",
-        "title": "용액이 갑자기 남색으로 바뀌는 시간으로 반응 속도식을 구할 수 있을까?"
+        "id": "card-mateng-rate-law",
+        "title": "농도를 2배로 하면 반응은 몇 배 빨라질까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-rate-law",
-        "title": "농도를 2배로 하면 반응은 몇 배 빨라질까?"
+        "id": "card-labchem-clock",
+        "title": "용액이 갑자기 남색으로 바뀌는 시간으로 반응 속도식을 구할 수 있을까?"
        }
       ]
      },
@@ -10818,13 +10818,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-rate-design",
-        "title": "무엇을 고정해야 \"이 요인이 속도를 바꿨다\"고 말할 수 있을까?"
+        "id": "card-mateng-rate-factors",
+        "title": "냉장고, 잘게 썬 장작, 촉매 장치는 각각 무엇을 바꿀까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-rate-factors",
-        "title": "냉장고, 잘게 썬 장작, 촉매 장치는 각각 무엇을 바꿀까?"
+        "id": "card-labchem-rate-design",
+        "title": "무엇을 고정해야 \"이 요인이 속도를 바꿨다\"고 말할 수 있을까?"
        }
       ]
      }
@@ -10873,13 +10873,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-labchem-functional-tests",
-        "title": "이름표가 떨어진 시약병 여섯 개, 시험관 반응만으로 무엇인지 알아낼 수 있을까?"
+        "id": "card-rxn-reaction-map",
+        "title": "와인은 어떻게 식초가 되고, 식초는 어떻게 과일 향이 될까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-reaction-map",
-        "title": "와인은 어떻게 식초가 되고, 식초는 어떻게 과일 향이 될까?"
+        "id": "card-labchem-functional-tests",
+        "title": "이름표가 떨어진 시약병 여섯 개, 시험관 반응만으로 무엇인지 알아낼 수 있을까?"
        }
       ]
      },
@@ -10916,14 +10916,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-labchem-aspirin",
-        "title": "버드나무 껍질의 약을 실험실에서 만들면, 얼마나 얻고 얼마나 순수할까?"
-       },
-       {
         "kind": "text",
         "id": "text-rxn-society",
         "title": "새로운 탄소 화합물은 사회를 어떻게 바꾸었을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labchem-aspirin",
+        "title": "버드나무 껍질의 약을 실험실에서 만들면, 얼마나 얻고 얼마나 순수할까?"
        }
       ]
      }
@@ -10976,13 +10976,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-plasmolysis",
-        "title": "양파 세포가 원형질 분리를 시작하는 설탕물 농도는 얼마일까?"
+        "id": "card-cell-osmosis",
+        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-osmosis",
-        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
+        "id": "card-labbio-plasmolysis",
+        "title": "양파 세포가 원형질 분리를 시작하는 설탕물 농도는 얼마일까?"
        }
       ]
      },
@@ -11046,13 +11046,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-enzyme-rate",
-        "title": "거름종이 원판이 떠오르는 시간으로 효소의 반응 속도를 잴 수 있을까?"
+        "id": "card-cell-enzyme-lab",
+        "title": "효소가 가장 잘 일하는 조건은 어떻게 찾을까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-enzyme-lab",
-        "title": "효소가 가장 잘 일하는 조건은 어떻게 찾을까?"
+        "id": "card-labbio-enzyme-rate",
+        "title": "거름종이 원판이 떠오르는 시간으로 효소의 반응 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -11064,13 +11064,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-photosynthesis",
-        "title": "검정말이 내는 기포 수로 광합성 속도를 비교할 수 있을까?"
+        "id": "card-photo-rate",
+        "title": "빛을 늘리면 광합성도 계속 빨라질까?"
        },
        {
         "kind": "card",
-        "id": "card-photo-rate",
-        "title": "빛을 늘리면 광합성도 계속 빨라질까?"
+        "id": "card-labbio-photosynthesis",
+        "title": "검정말이 내는 기포 수로 광합성 속도를 비교할 수 있을까?"
        }
       ]
      },
@@ -11255,13 +11255,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-sex-linked",
-        "title": "흰 눈 초파리는 암수를 바꿔 교배하면 왜 결과가 달라질까?"
+        "id": "card-gene-sexlinked",
+        "title": "색맹은 왜 남자에게 더 많을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-sexlinked",
-        "title": "색맹은 왜 남자에게 더 많을까?"
+        "id": "card-labbio-sex-linked",
+        "title": "흰 눈 초파리는 암수를 바꿔 교배하면 왜 결과가 달라질까?"
        }
       ]
      },
@@ -11273,13 +11273,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-survey",
-        "title": "우리 반과 가족을 조사하면 사람 형질의 유전 방식을 알 수 있을까?"
+        "id": "card-gene-pedigree",
+        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-pedigree",
-        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
+        "id": "card-labbio-survey",
+        "title": "우리 반과 가족을 조사하면 사람 형질의 유전 방식을 알 수 있을까?"
        }
       ]
      },
@@ -11291,13 +11291,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-bead-sim",
-        "title": "콩 주머니에서 짝을 뽑아 세대를 넘기면 대립유전자 빈도는 어떻게 변할까?"
+        "id": "card-bio-genepool",
+        "title": "작은 섬의 생물 집단에서는 왜 우연이 진화를 이끌까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-genepool",
-        "title": "작은 섬의 생물 집단에서는 왜 우연이 진화를 이끌까?"
+        "id": "card-labbio-bead-sim",
+        "title": "콩 주머니에서 짝을 뽑아 세대를 넘기면 대립유전자 빈도는 어떻게 변할까?"
        }
       ]
      },
@@ -11309,13 +11309,13 @@ window.TOC = [
       "items": [
        {
         "kind": "text",
-        "id": "text-labbio-evo-cases",
-        "title": "날개, 부리, 목, 눈은 어떻게 지금의 모습이 되었을까?"
+        "id": "text-bio-evo-methods",
+        "title": "진화는 어떤 증거와 방법으로 연구할까?"
        },
        {
         "kind": "text",
-        "id": "text-bio-evo-methods",
-        "title": "진화는 어떤 증거와 방법으로 연구할까?"
+        "id": "text-labbio-evo-cases",
+        "title": "날개, 부리, 목, 눈은 어떻게 지금의 모습이 되었을까?"
        }
       ]
      },
@@ -11327,13 +11327,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-specimen",
-        "title": "채집한 곤충과 풀을 연구에 쓸 수 있는 표본으로 만들려면 무엇이 필요할까?"
+        "id": "card-bio-key",
+        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-key",
-        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
+        "id": "card-labbio-specimen",
+        "title": "채집한 곤충과 풀을 연구에 쓸 수 있는 표본으로 만들려면 무엇이 필요할까?"
        }
       ]
      }
@@ -11489,13 +11489,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-electrophoresis",
-        "title": "젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?"
+        "id": "card-gene-gel",
+        "title": "머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-gel",
-        "title": "머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?"
+        "id": "card-labbio-electrophoresis",
+        "title": "젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?"
        }
       ]
      },
@@ -11533,13 +11533,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-pcr",
-        "title": "온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?"
+        "id": "card-is2-pcr",
+        "title": "PCR은 아주 적은 양의 바이러스를 어떻게 찾아낼까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-pcr",
-        "title": "PCR은 아주 적은 양의 바이러스를 어떻게 찾아낼까?"
+        "id": "card-labbio-pcr",
+        "title": "온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?"
        }
       ]
      },
@@ -11551,6 +11551,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-seq-tree",
+        "title": "DNA 서열의 차이로 계통수를 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-labbio-bioinfo",
         "title": "염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?"
        },
@@ -11558,11 +11563,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-labbio-genome-med",
         "title": "유전체 분석은 실제로 어떤 환자를 도왔을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-seq-tree",
-        "title": "DNA 서열의 차이로 계통수를 그릴 수 있을까?"
        }
       ]
      }
@@ -11680,11 +11680,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rock-id",
-        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-igneous",
         "title": "현무암과 화강암은 왜 알갱이 크기가 다를까?"
        },
@@ -11697,6 +11692,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-sedrock",
         "title": "모래가 어떻게 단단한 사암이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labearth-rock-id",
+        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
        }
       ]
      },
@@ -11817,13 +11817,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-stability",
-        "title": "여름 오후와 겨울 아침, 대기는 얼마나 다르게 쌓여 있을까?"
+        "id": "card-esys-stability",
+        "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-stability",
-        "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
+        "id": "card-labearth-stability",
+        "title": "여름 오후와 겨울 아침, 대기는 얼마나 다르게 쌓여 있을까?"
        }
       ]
      },
@@ -11848,13 +11848,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-geowind",
-        "title": "일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?"
+        "id": "card-esys-winds",
+        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-winds",
-        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
+        "id": "card-labearth-geowind",
+        "title": "일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?"
        }
       ]
      },
@@ -11897,13 +11897,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-wave-tank",
-        "title": "물이 얕아지면 파도는 왜 느려지고 높아질까?"
+        "id": "card-esys-tsunami",
+        "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-tsunami",
-        "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
+        "id": "card-labearth-wave-tank",
+        "title": "물이 얕아지면 파도는 왜 느려지고 높아질까?"
        }
       ]
      },
@@ -11915,13 +11915,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-geostrophic",
-        "title": "바닷물의 온도 단면만으로 구로시오의 속도를 잴 수 있을까?"
+        "id": "card-esys-ekman",
+        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-ekman",
-        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
+        "id": "card-labearth-geostrophic",
+        "title": "바닷물의 온도 단면만으로 구로시오의 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -11933,13 +11933,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-thermohaline",
-        "title": "차갑거나 짠 물은 수조 바닥을 얼마나 빨리 퍼져 나갈까?"
+        "id": "card-earth-amoc",
+        "title": "빙하가 녹으면 심층 순환이 멈출 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-amoc",
-        "title": "빙하가 녹으면 심층 순환이 멈출 수 있을까?"
+        "id": "card-labearth-thermohaline",
+        "title": "차갑거나 짠 물은 수조 바닥을 얼마나 빨리 퍼져 나갈까?"
        }
       ]
      },
@@ -11951,13 +11951,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-tide",
-        "title": "바닷가마다 물때의 모양이 다른 까닭은 무엇일까?"
+        "id": "card-esys-tide",
+        "title": "밀물과 썰물은 왜 하루에 두 번일까, 그리고 왜 매일 달라질까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-tide",
-        "title": "밀물과 썰물은 왜 하루에 두 번일까, 그리고 왜 매일 달라질까?"
+        "id": "card-labearth-tide",
+        "title": "바닷가마다 물때의 모양이 다른 까닭은 무엇일까?"
        }
       ]
      }
@@ -12084,13 +12084,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-stellar-spectrum",
-        "title": "분광기로 찍은 별빛에서 표면 온도를 어떻게 읽을까?"
+        "id": "card-earth-spectral",
+        "title": "별빛의 흡수선으로 무엇을 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-spectral",
-        "title": "별빛의 흡수선으로 무엇을 알 수 있을까?"
+        "id": "card-labearth-stellar-spectrum",
+        "title": "분광기로 찍은 별빛에서 표면 온도를 어떻게 읽을까?"
        }
       ]
      },
@@ -12115,13 +12115,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-cluster-hr",
-        "title": "네 성단의 H–R도를 겹치면 어느 성단이 가장 늙었는지 보일까?"
+        "id": "card-space-cluster",
+        "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-cluster",
-        "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
+        "id": "card-labearth-cluster-hr",
+        "title": "네 성단의 H–R도를 겹치면 어느 성단이 가장 늙었는지 보일까?"
        }
       ]
      },
@@ -12133,13 +12133,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-extinction",
-        "title": "별빛이 얼마나 붉어졌는지 재면 티끌에 가린 별의 거리를 바로잡을 수 있을까?"
+        "id": "card-space-extinction",
+        "title": "은하수의 검은 틈에는 정말 별이 없을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-extinction",
-        "title": "은하수의 검은 틈에는 정말 별이 없을까?"
+        "id": "card-labearth-extinction",
+        "title": "별빛이 얼마나 붉어졌는지 재면 티끌에 가린 별의 거리를 바로잡을 수 있을까?"
        }
       ]
      },
@@ -12164,13 +12164,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rotation-mass",
-        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
+        "id": "card-space-rotation",
+        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-rotation",
-        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
+        "id": "card-labearth-rotation-mass",
+        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
        }
       ]
      },
@@ -12182,13 +12182,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-hubble-age",
-        "title": "은하의 거리와 후퇴 속도로 우주의 나이를 계산할 수 있을까?"
+        "id": "card-earth-hlaw",
+        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hlaw",
-        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
+        "id": "card-labearth-hubble-age",
+        "title": "은하의 거리와 후퇴 속도로 우주의 나이를 계산할 수 있을까?"
        }
       ]
      }
@@ -14668,6 +14668,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-geo-plane-determine",
+        "title": "평면 하나를 정하려면 무엇이 주어져야 할까?"
+       },
+       {
         "kind": "card",
         "id": "card-geo-line-pos",
         "title": "만나지 않는 두 직선은 언제나 평행할까?"
@@ -14681,11 +14686,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-geo-plane-cut",
         "title": "평행한 두 평면을 한 평면으로 자르면 교선은 어떻게 놓일까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-geo-plane-determine",
-        "title": "평면 하나를 정하려면 무엇이 주어져야 할까?"
        }
       ]
      },
@@ -14854,13 +14854,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-geo-line-normal",
-        "title": "방향 대신 수직인 벡터로 직선을 정할 수 있을까?"
+        "id": "card-geo-line-space",
+        "title": "공간의 직선도 같은 식으로 나타낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-geo-line-space",
-        "title": "공간의 직선도 같은 식으로 나타낼 수 있을까?"
+        "id": "card-geo-line-normal",
+        "title": "방향 대신 수직인 벡터로 직선을 정할 수 있을까?"
        }
       ]
      },
@@ -15033,13 +15033,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-pmath-trig-sub",
-        "title": "∫₀a√(1 − x²) dx를 원의 그림만으로 계산할 수 있을까?"
+        "id": "card-pmath-partial-frac",
+        "title": "복잡한 분수식을 간단한 분수 두 개로 쪼갤 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-pmath-partial-frac",
-        "title": "복잡한 분수식을 간단한 분수 두 개로 쪼갤 수 있을까?"
+        "id": "card-pmath-trig-sub",
+        "title": "∫₀a√(1 − x²) dx를 원의 그림만으로 계산할 수 있을까?"
        }
       ]
      }

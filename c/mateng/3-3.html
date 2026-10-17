@@ -38,8 +38,8 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-mateng-spont"><span class="mono">3.3.1</span>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a></li>
-        <li><a href="#card-mech-entropy"><span class="mono">3.3.2</span>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a></li>
+        <li><a href="#card-mech-entropy"><span class="mono">3.3.1</span>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a></li>
+        <li><a href="#card-mateng-spont"><span class="mono">3.3.2</span>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../practice.html?sec=mateng-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">103문항 →</span></a>
@@ -47,44 +47,9 @@
     </aside>
 
     <div>
-      <article class="card" id="card-mateng-spont">
-        <header class="card-head">
-          <span class="no">3.3.1</span><h2>열을 흡수하는 변화도 저절로 일어날 수 있을까?</h2><span class="kind">자발성 · 엔탈피와 엔트로피의 방향</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-sq" aria-label="가로축 엔탈피 변화의 부호, 세로축 엔트로피 변화의 부호로 나눈 네 칸에 여러 변화를 놓은 그림"></canvas>
-            <div class="ctl">
-              <label class="mono">온도 = <output class="t-out">25</output> °C</label>
-              <input class="t" type="range" min="-50" max="1200" step="5" value="25" aria-label="온도">
-              <p class="fig-note">점을 누르면 설명이 나옵니다. 초록 점은 지금 온도에서 저절로 일어나는 변화, 회색 점은 저절로 일어나지 않는 변화입니다. 1기압 기준이며, 온도 기준값은 실제로 관측되는 녹는점·끓는점·분해 온도의 대략값입니다.</p>
-              <p class="sp-msg"></p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>공은 저절로 굴러 내려가고, 뜨거운 커피는 저절로 식습니다. 그래서 에너지가 낮아지는 쪽(발열)으로 저절로 간다고 생각하기 쉽습니다. 그런데 얼음은 열을 흡수하면서도 방 안에서 저절로 녹습니다. 왜일까요?</li>
-            <li><span class="tag">복원</span>퍼진 기체가 다시 모이지 않는 것처럼, 입자와 에너지는 흩어질 수 있는 방법의 수가 많은 쪽으로 저절로 변합니다. 이 흩어진 정도를 나타내는 양이 <em>엔트로피</em> S입니다.</li>
-            <li><span class="tag">설명</span>변화가 저절로 일어나는지는 두 가지를 함께 봐야 합니다. 에너지를 내놓는가(ΔH &lt; 0)와 더 흩어지는가(ΔS &gt; 0)입니다. 고체 → 액체 → 기체, 기체 분자 수가 늘어나는 반응, 물질이 녹아 섞이는 변화는 대개 엔트로피가 커집니다.</li>
-            <li><span class="tag">연결</span>두 조건이 모두 유리하면(ΔH &lt; 0, ΔS &gt; 0) 온도와 관계없이 저절로 일어나고, 모두 불리하면(ΔH &gt; 0, ΔS &lt; 0) 저절로 일어나지 않습니다. 둘이 엇갈리면 온도가 정합니다. 온도가 높을수록 흩어지려는 경향의 영향이 커져서, ΔS &gt; 0인 흡열 변화(얼음이 녹음)는 높은 온도에서, ΔS &lt; 0인 발열 변화(물이 얼음)는 낮은 온도에서 저절로 일어납니다.</li>
-            <li><span class="tag">적용</span>온도를 −50 °C에서 천천히 올리며 점의 색이 바뀌는 변화를 찾아보세요. 어느 칸의 변화만 색이 바뀌나요? 광합성은 왜 어떤 온도에서도 저절로 일어나지 않을까요?</li>
-            <li class="warn"><span class="tag">판단</span>“저절로 일어난다”는 “빨리 일어난다”는 뜻이 아닙니다. 다이아몬드가 흑연으로 바뀌는 변화나 종이가 타는 반응은 저절로 일어나는 방향이지만, 실온에서는 매우 느려 거의 보이지 않습니다. 빠르기는 반응 속도에서 다룹니다. 또 저절로 일어나지 않는 변화도 광합성처럼 바깥에서 에너지를 넣어 주면 일어날 수 있습니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">질산 암모늄이 물에 녹을 때는 열을 흡수하는데도(ΔH &gt; 0) 실온에서 저절로 녹습니다. 그 까닭으로 가장 알맞은 것은?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>이온이 물속에 흩어져 엔트로피가 크게 늘어나기 때문<span class="why"><b>맞습니다.</b> 에너지로는 불리하지만 흩어지는 경향이 더 크게 작용합니다. 냉찜질 팩이 이 원리를 씁니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>사실은 발열 반응이기 때문<span class="why"><b>흡열이 맞습니다.</b> 그래서 녹으면서 주변이 차가워집니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>흔들어 주는 에너지가 흡수한 열을 채우기 때문<span class="why"><b>흔드는 것은 빠르기를 도울 뿐입니다.</b> 저절로 일어나는 방향은 엔탈피와 엔트로피로 정해집니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mateng/3-1.html#card-mateng-thermo-eq"><small class="mono">물질과 에너지 3.1</small>반응식을 두 배로 하면 ΔH는 어떻게 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/3-4.html#card-adchem-gibbs-t"><small class="mono">고급 화학 3.4</small>석회석은 몇 도부터 저절로 분해될까?</a><a href="../../c/adchem/4-2.html#card-adchem-vanthoff"><small class="mono">고급 화학 4.2</small>온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?</a></div></nav>
-
       <article class="card" id="card-mech-entropy">
         <header class="card-head">
-          <span class="no">3.3.2</span><h2>퍼진 기체는 왜 저절로 다시 모이지 않을까?</h2><span class="kind">엔트로피 · 경우의 수</span>
+          <span class="no">3.3.1</span><h2>퍼진 기체는 왜 저절로 다시 모이지 않을까?</h2><span class="kind">엔트로피 · 경우의 수</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -123,6 +88,41 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/2-12.html#card-labchem-raoult"><small class="mono">화학 실험 2.12</small>설탕물의 증기압은 맹물보다 얼마나 낮을까?</a><a href="../../c/adphy/1-6.html#card-adphy-carnot"><small class="mono">고급 물리학 1.6</small>열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?</a><a href="../../c/adchem/3-3.html#card-adchem-suniv"><small class="mono">고급 화학 3.3</small>물이 얼면 질서가 생기는데, 왜 저절로 얼까?</a></div></nav>
 
+      <article class="card" id="card-mateng-spont">
+        <header class="card-head">
+          <span class="no">3.3.2</span><h2>열을 흡수하는 변화도 저절로 일어날 수 있을까?</h2><span class="kind">자발성 · 엔탈피와 엔트로피의 방향</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-sq" aria-label="가로축 엔탈피 변화의 부호, 세로축 엔트로피 변화의 부호로 나눈 네 칸에 여러 변화를 놓은 그림"></canvas>
+            <div class="ctl">
+              <label class="mono">온도 = <output class="t-out">25</output> °C</label>
+              <input class="t" type="range" min="-50" max="1200" step="5" value="25" aria-label="온도">
+              <p class="fig-note">점을 누르면 설명이 나옵니다. 초록 점은 지금 온도에서 저절로 일어나는 변화, 회색 점은 저절로 일어나지 않는 변화입니다. 1기압 기준이며, 온도 기준값은 실제로 관측되는 녹는점·끓는점·분해 온도의 대략값입니다.</p>
+              <p class="sp-msg"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공은 저절로 굴러 내려가고, 뜨거운 커피는 저절로 식습니다. 그래서 에너지가 낮아지는 쪽(발열)으로 저절로 간다고 생각하기 쉽습니다. 그런데 얼음은 열을 흡수하면서도 방 안에서 저절로 녹습니다. 왜일까요?</li>
+            <li><span class="tag">복원</span>퍼진 기체가 다시 모이지 않는 것처럼, 입자와 에너지는 흩어질 수 있는 방법의 수가 많은 쪽으로 저절로 변합니다. 이 흩어진 정도를 나타내는 양이 <em>엔트로피</em> S입니다.</li>
+            <li><span class="tag">설명</span>변화가 저절로 일어나는지는 두 가지를 함께 봐야 합니다. 에너지를 내놓는가(ΔH &lt; 0)와 더 흩어지는가(ΔS &gt; 0)입니다. 고체 → 액체 → 기체, 기체 분자 수가 늘어나는 반응, 물질이 녹아 섞이는 변화는 대개 엔트로피가 커집니다.</li>
+            <li><span class="tag">연결</span>두 조건이 모두 유리하면(ΔH &lt; 0, ΔS &gt; 0) 온도와 관계없이 저절로 일어나고, 모두 불리하면(ΔH &gt; 0, ΔS &lt; 0) 저절로 일어나지 않습니다. 둘이 엇갈리면 온도가 정합니다. 온도가 높을수록 흩어지려는 경향의 영향이 커져서, ΔS &gt; 0인 흡열 변화(얼음이 녹음)는 높은 온도에서, ΔS &lt; 0인 발열 변화(물이 얼음)는 낮은 온도에서 저절로 일어납니다.</li>
+            <li><span class="tag">적용</span>온도를 −50 °C에서 천천히 올리며 점의 색이 바뀌는 변화를 찾아보세요. 어느 칸의 변화만 색이 바뀌나요? 광합성은 왜 어떤 온도에서도 저절로 일어나지 않을까요?</li>
+            <li class="warn"><span class="tag">판단</span>“저절로 일어난다”는 “빨리 일어난다”는 뜻이 아닙니다. 다이아몬드가 흑연으로 바뀌는 변화나 종이가 타는 반응은 저절로 일어나는 방향이지만, 실온에서는 매우 느려 거의 보이지 않습니다. 빠르기는 반응 속도에서 다룹니다. 또 저절로 일어나지 않는 변화도 광합성처럼 바깥에서 에너지를 넣어 주면 일어날 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">질산 암모늄이 물에 녹을 때는 열을 흡수하는데도(ΔH &gt; 0) 실온에서 저절로 녹습니다. 그 까닭으로 가장 알맞은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>이온이 물속에 흩어져 엔트로피가 크게 늘어나기 때문<span class="why"><b>맞습니다.</b> 에너지로는 불리하지만 흩어지는 경향이 더 크게 작용합니다. 냉찜질 팩이 이 원리를 씁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>사실은 발열 반응이기 때문<span class="why"><b>흡열이 맞습니다.</b> 그래서 녹으면서 주변이 차가워집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>흔들어 주는 에너지가 흡수한 열을 채우기 때문<span class="why"><b>흔드는 것은 빠르기를 도울 뿐입니다.</b> 저절로 일어나는 방향은 엔탈피와 엔트로피로 정해집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mateng/3-1.html#card-mateng-thermo-eq"><small class="mono">물질과 에너지 3.1</small>반응식을 두 배로 하면 ΔH는 어떻게 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/3-4.html#card-adchem-gibbs-t"><small class="mono">고급 화학 3.4</small>석회석은 몇 도부터 저절로 분해될까?</a><a href="../../c/adchem/4-2.html#card-adchem-vanthoff"><small class="mono">고급 화학 4.2</small>온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?</a></div></nav>
+
       <a class="px-go" href="../../practice.html?sec=mateng-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">103문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
@@ -140,7 +140,7 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/mateng/e-spont.js"></script>
 <script src="../../js/cards/mech/t-entropy.js"></script>
+<script src="../../js/cards/mateng/e-spont.js"></script>
 </body>
 </html>
