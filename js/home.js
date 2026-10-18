@@ -235,8 +235,7 @@
     const live = TOC.filter((c) => c.id !== "extra" && count(c).open).length;
     if (stat) stat.textContent = `과목 ${live}/${TOC.length - 1} · 절 ${total.open} · 카드 ${total.cards} · 영상 ${total.vids}`;
 
-    /* 맨 위: 마지막으로 본 카드의 절에서 아직 안 본 다음 카드로, 그리고 최근에 공부한 과목.
-       기록이 없으면 비워 둔다 */
+    /* 소개 아래 한 줄: 마지막으로 본 카드의 과목에서 아직 안 본 다음 카드로. 기록이 없으면 비워 둔다 */
     const go = document.getElementById("dash-go");
     function dash() {
       if (!go) return;
@@ -244,25 +243,21 @@
       TOC.forEach((c) => c.chapters.forEach((ch) => ch.sections.forEach((s) => { if (s.page) s.items.forEach((i) => at.set(i.id, { c, ch, s, i })); })));
       const blocks = S ? S.all().blocks : {};
       let last = null, lastT = 0;
-      const recent = new Map();   // 과목 id → 마지막으로 본 시각
       for (const [id, b] of Object.entries(blocks)) {
         const w = at.get(id), t = (b && b.seen) || 0;
         if (!w || !t) continue;
         if (t > lastT) { lastT = t; last = w; }
-        recent.set(w.c.id, Math.max(recent.get(w.c.id) || 0, t));
       }
       const href = (w) => `${base}${w.c.id}/${w.ch.n}-${w.s.n}.html#${w.i.id}`;
-      if (!last) { go.innerHTML = ""; return; }   // 기록이 없으면 비워 둔다(여백)
+      if (!last) { go.innerHTML = ""; return; }
       /* 같은 과목에서 마지막으로 본 카드 뒤의 첫 안 본 카드(없으면 과목 처음부터 첫 안 본 카드) */
       const seq = [...at.values()].filter((w) => w.c === last.c);
       const k = seq.findIndex((w) => w.i.id === last.i.id);
       const unseen = (w) => !(blocks[w.i.id] || {}).seen;
       const next = seq.slice(k + 1).find(unseen) || seq.find(unseen);
-      const tops = [...recent.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([id]) => TOC.find((c) => c.id === id));
-      go.innerHTML = (next
+      go.innerHTML = next
         ? `<a class="dash-next" href="${href(next)}"><span class="mono">이어서 공부하기 · ${esc(next.c.name)}</span><b>${next.ch.n}.${next.s.n} ${esc(next.s.title)}</b><span class="dim small">다음 카드: ${esc(next.i.title)}</span></a>`
-        : `<a class="dash-next" href="${base}${last.c.id}/"><span class="mono">${esc(last.c.name)}</span><b>모든 카드를 공부했습니다</b><span class="dim small">과목 목차에서 복습하기</span></a>`) +
-        `<p class="dash-h mono">최근에 공부한 과목</p><div class="dash-boxes">${tops.map((c) => box(c, true)).join("")}</div>`;
+        : `<a class="dash-next" href="${base}${last.c.id}/"><span class="mono">${esc(last.c.name)}</span><b>모든 카드를 공부했습니다</b><span class="dim small">과목 목차에서 복습하기</span></a>`;
     }
     dash();
     if (S) S.onChange(dash);
