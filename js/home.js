@@ -236,7 +236,7 @@
     if (stat) stat.textContent = `과목 ${live}/${TOC.length - 1} · 절 ${total.open} · 카드 ${total.cards} · 영상 ${total.vids}`;
 
     /* 맨 위: 마지막으로 본 카드의 절에서 아직 안 본 다음 카드로, 그리고 최근에 공부한 과목.
-       기록이 없으면 공통 과목에서 시작하도록 권한다 */
+       기록이 없으면 비워 둔다 */
     const go = document.getElementById("dash-go");
     function dash() {
       if (!go) return;
@@ -252,14 +252,7 @@
         recent.set(w.c.id, Math.max(recent.get(w.c.id) || 0, t));
       }
       const href = (w) => `${base}${w.c.id}/${w.ch.n}-${w.s.n}.html#${w.i.id}`;
-      if (!last) {   // 분야마다 첫 공통 과목의 첫 카드
-        const first = (d) => [...at.values()].find((w) => w.c.level === "공통" && domainOf(w.c.track) === d);
-        go.innerHTML = `<p class="dash-h mono">처음이라면 공통 과목의 첫 절부터</p>` + [["sci", "과학"], ["math", "수학"]].map(([d, nm]) => {
-          const w = first(d);
-          return w ? `<a class="dash-next" href="${href(w)}"><span class="mono">${nm} 처음부터 · ${esc(w.c.name)}</span><b>${w.ch.n}.${w.s.n} ${esc(w.s.title)}</b></a>` : "";
-        }).join("");
-        return;
-      }
+      if (!last) { go.innerHTML = ""; return; }   // 기록이 없으면 비워 둔다(여백)
       /* 같은 과목에서 마지막으로 본 카드 뒤의 첫 안 본 카드(없으면 과목 처음부터 첫 안 본 카드) */
       const seq = [...at.values()].filter((w) => w.c === last.c);
       const k = seq.findIndex((w) => w.i.id === last.i.id);
