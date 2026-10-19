@@ -2,8 +2,10 @@
    bank.html?c=<과목>                 시험지 고르기(중간고사·기말고사 범위, 절별 연습)
    bank.html?c=<과목>&r=mid|fin&s=2   그 범위의 2번 시험지(r=all은 전 범위). &s=x면 무작위로 새로 뽑은 시험지
    bank.html?c=<과목>&sec=1-2         그 절의 문항만, 한 문항씩 바로 채점
+   &lv=b|ah|h                         무작위 시험지와 절별 연습에서 난이도 고르기(기본 / 응용·심화 / 심화)
    문항: exams/bank/<과목>.json (형식은 tools/bank.py 머리말). 중간고사 범위는 목차 순서로 앞쪽 절 TOC[c].split개(tools/build.py exam_split), 기말고사는 나머지.
    시험지: 범위의 문항을 절 순서대로 늘어놓고 차례로 1, 2, …, n번 시험지에 나눠 담는다(장마다 문항이 겹치지 않고 모든 절이 고루 들어간다).
+           서술형(free)은 따로 이어서 나눠 담아 장마다 고르게 들어가고 시험지 끝에 온다. 서술형은 모범 답안과 채점 기준을 보고 학생이 스스로 채점한다.
    기록: 문항마다 NMStore.recordAnswer(id, 0, …) — 처음에 틀린 문항은 오답노트(notes.html)에 모인다.
          시험지 점수는 localStorage "namunnip-bank-v1" = { "<과목>/<범위>/<장>": { n, ok, at } } (없어도 화면은 돈다). */
 (() => {
@@ -43,13 +45,24 @@
   try { scores = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { scores = {}; }
   const saveScore = (k, v) => { scores[k] = v; try { localStorage.setItem(KEY, JSON.stringify(scores)); } catch (e) { /* 저장 못 해도 채점은 된다 */ } };
 
+  const bySec = (a, b) => secOrder[a.sec].i - secOrder[b.sec].i || (a.id < b.id ? -1 : 1);
+  const freeLast = (a, b) => (a.type === "free") - (b.type === "free");
   function sheets(items, r) {
-    const pool = items.filter(inRange(r)).sort((a, b) => secOrder[a.sec].i - secOrder[b.sec].i || (a.id < b.id ? -1 : 1));
+    const pool = items.filter(inRange(r)).sort(bySec);
     const n = pool.length ? Math.max(1, Math.round(pool.length / PER)) : 0;
     const out = Array.from({ length: n }, () => []);
-    pool.forEach((it, i) => out[i % n].push(it));
+    const obj = pool.filter((it) => it.type !== "free"), fr = pool.filter((it) => it.type === "free");
+    obj.forEach((it, i) => out[i % n].push(it));
+    fr.forEach((it, i) => out[(obj.length + i) % n].push(it));   // 이어서 돌려 담아 장마다 문항 수가 고르다
     return out;
   }
+  /* 난이도 거르기: lv=b 기본, ah 응용·심화, h 심화 */
+  const LVF = { b: ["기본"], ah: ["응용", "심화"], h: ["심화"] };
+  const LVN = { b: "기본", ah: "응용·심화", h: "심화" };
+  const lvKey = LVF[P.get("lv")] ? P.get("lv") : "";
+  const lvOk = (it) => !lvKey || LVF[lvKey].includes(it.lv);
+  const lvCount = (xs) => { const n = { 기본: 0, 응용: 0, 심화: 0, free: 0 }; xs.forEach((it) => { if (n[it.lv] != null) n[it.lv]++; if (it.type === "free") n.free++; }); return n; };
+  const lvLinks = (base) => `<span class="bk-lvs">${[["", "전체"], ["b", "기본"], ["ah", "응용·심화"], ["h", "심화"]].map(([k, t]) => `<a href="${base}${k ? `&lv=${k}` : ""}"${k === lvKey ? ' aria-current="true"' : ""}>${t}</a>`).join("")}</span>`;
   function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
   const crumbs = document.querySelector(".crumbs");
@@ -66,18 +79,40 @@
   }
   const shown = (it) => (it.type === "mc" ? CIRCLE[+it.answer - 1] : it.answer);
 
+  const fullPt = (it) => (it.rubric || []).reduce((s, x) => s + x.pt, 0);
   function itemHtml(it, k, instant) {
-    const r = recOf(it), o = secOrder[it.sec];
+    const r = recOf(it), o = secOrder[it.sec], free = it.type === "free";
     const ans = it.type === "mc"
       ? `<div class="px-opts long" role="group" aria-label="답 고르기">${it.choices.map((t, i) => `<button type="button" class="px-opt" data-v="${i + 1}" aria-pressed="false"><span class="n">${CIRCLE[i]}</span><span class="c">${t}</span></button>`).join("")}</div>`
+      : free ? `<div class="bk-free"><textarea rows="6" aria-label="풀이 과정과 답 쓰기" placeholder="풀이 과정과 답을 쓰세요(종이에 써도 됩니다)"></textarea>${instant ? `<button type="button" class="btn bk-show">모범 답안 보고 채점하기</button>` : ""}</div>`
       : `<form class="px-short"><input type="text" aria-label="답 쓰기" placeholder="답" autocomplete="off">${instant ? `<button type="submit" class="btn">확인</button>` : ""}</form>`;
-    return `<article class="px-item bk-item" id="${esc(it.id)}" data-id="${esc(it.id)}">
-      <header><span class="bk-no">${k}</span><a class="mono dim" href="c/${c.id}/${o.ch.n}-${o.s.n}.html">${esc(secName(it.sec))}</a>${it.type === "short" ? `<span class="mono dim">단답형</span>` : ""}${r ? `<span class="mono px-prev ${r.firstOk ? "ok" : "bad"}">${r.firstOk ? "전에 맞힘" : "오답노트에 있음"}</span>` : ""}</header>
+    const hints = it.hints && it.hints.length ? `<details class="bk-hint"><summary>힌트</summary>${it.hints.map((h, i) => `<p><span class="mono">${i + 1}</span> ${h}</p>`).join("")}</details>` : "";
+    const rub = free ? `<div class="bk-rub"><b>채점 기준</b><span class="small dim"> 내 답안에 들어 있는 요소를 고르세요.</span>
+        ${it.rubric.map((x, i) => `<label><input type="checkbox" data-pt="${x.pt}" data-i="${i}"> <span>${x.t}</span> <span class="mono">${x.pt}점</span></label>`).join("")}
+        <p class="bk-self mono">자기 채점 <b>0</b> / ${fullPt(it)}점</p></div>` : "";
+    return `<article class="px-item bk-item${free ? " free" : ""}" id="${esc(it.id)}" data-id="${esc(it.id)}">
+      <header><span class="bk-no">${k}</span><a class="mono dim" href="c/${c.id}/${o.ch.n}-${o.s.n}.html">${esc(secName(it.sec))}</a>${it.lv ? `<span class="bk-lv lv-${esc(it.lv)}">${esc(it.lv)}</span>` : ""}${it.type === "short" ? `<span class="mono dim">단답형</span>` : free ? `<span class="mono dim">서술형 ${fullPt(it)}점</span>` : ""}${r ? `<span class="mono px-prev ${r.firstOk ? "ok" : "bad"}">${r.firstOk ? "전에 맞힘" : "오답노트에 있음"}</span>` : ""}</header>
       <div class="px-text"><div class="px-stem">${it.q}</div></div>
-      ${ans}
+      ${hints}${ans}
       <p class="px-result" aria-live="polite"></p>
-      <div class="bk-sol" hidden><b>풀이</b>${it.sol}<p class="mono small"><a href="c/${c.id}/${o.ch.n}-${o.s.n}.html">이 절 다시 보기 · ${esc(secName(it.sec))}</a></p></div>
+      <div class="bk-sol" hidden><b>${free ? "모범 답안" : "풀이"}</b>${it.sol}${rub}<p class="mono small"><a href="c/${c.id}/${o.ch.n}-${o.s.n}.html">이 절 다시 보기 · ${esc(secName(it.sec))}</a></p></div>
     </article>`;
+  }
+
+  /* 서술형: 답안을 잠그고 모범 답안·채점 기준을 연다. 점수는 학생이 기준을 골라 매긴다 */
+  function openFree(card, it) {
+    const ta = card.querySelector("textarea"); if (ta) ta.readOnly = true;
+    const b = card.querySelector(".bk-show"); if (b) b.remove();
+    card.querySelector(".px-result").innerHTML = `<b>결론</b> ${it.answer}`;
+    card.querySelector(".bk-sol").hidden = false;
+    if (S) S.markSeen(it.id);
+  }
+  const selfPt = (card) => [...card.querySelectorAll(".bk-rub input:checked")].reduce((s, x) => s + +x.dataset.pt, 0);
+  function onRubric(e, after) {
+    const box = e.target.closest(".bk-rub input"); if (!box) return;
+    const card = box.closest(".bk-item");
+    card.querySelector(".bk-self b").textContent = selfPt(card);
+    if (after) after();
   }
 
   function mark(card, it, v) {
@@ -120,12 +155,13 @@
         <p class="small dim">${RANGES[r].chs.map((ch) => { const n = RANGES[r].fs.filter((f) => f.ch === ch).length; return `${R[ch.n]}. ${esc(ch.title)}${n < ch.sections.length ? ` (${n}절)` : ""}`; }).join(" · ")}</p>
         <div class="bk-sheets">${sh.map((s, i) => { const sc = scores[`${c.id}/${r}/${i + 1}`]; return `<a class="bk-sheet" href="bank.html?c=${c.id}&r=${r}&s=${i + 1}"><b>시험지 ${i + 1}</b><span class="mono">${s.length}문항</span><span class="mono ${sc ? "ok" : "dim"}">${sc ? `최근 ${sc.ok}/${sc.n}` : "아직 안 풂"}</span></a>`; }).join("")}
           <a class="bk-sheet rand" href="bank.html?c=${c.id}&r=${r}&s=x"><b>무작위 시험지</b><span class="mono">${Math.min(PER, items.filter(inRange(r)).length)}문항</span><span class="mono dim">풀 때마다 새로 뽑음</span></a></div>
+        <p class="small bk-lvrow">${(() => { const n = lvCount(items.filter(inRange(r))); return `<span class="mono dim">기본 ${n.기본} · 응용 ${n.응용} · 심화 ${n.심화}${n.free ? ` · 서술형 ${n.free}` : ""}</span>`; })()} 난이도를 골라 무작위로 풀기 ${lvLinks(`bank.html?c=${c.id}&r=${r}&s=x`)}</p>
       </section>`;
     };
-    const bySec = {}; items.forEach((it) => { bySec[it.sec] = (bySec[it.sec] || 0) + 1; });
+    const perSec = {}; items.forEach((it) => { perSec[it.sec] = (perSec[it.sec] || 0) + 1; });
     body.innerHTML = range("mid") + (RANGES.fin ? range("fin") : "") + `
       <section class="bk-range"><h2>절별 연습 <span class="mono dim">한 문항씩 바로 채점</span></h2>
-        ${c.chapters.map((ch) => `<h3 class="bk-ch">${R[ch.n]}. ${esc(ch.title)}</h3><ul class="bk-secs">${ch.sections.map((s) => { const k = `${ch.n}-${s.n}`, n = bySec[k] || 0;
+        ${c.chapters.map((ch) => `<h3 class="bk-ch">${R[ch.n]}. ${esc(ch.title)}</h3><ul class="bk-secs">${ch.sections.map((s) => { const k = `${ch.n}-${s.n}`, n = perSec[k] || 0;
           return `<li>${n ? `<a href="bank.html?c=${c.id}&sec=${k}">` : "<span class=\"dim\">"}<span class="mono">${ch.n}.${s.n}</span> ${esc(s.title)}${n ? "</a>" : "</span>"}<span class="mono dim">${n ? `${n}문항` : "준비 중"}${s.ex ? ` · <a href="practice.html?sec=${c.id}-${k}">기출 ${s.ex}</a>` : ""}</span></li>`; }).join("")}</ul>`).join("")}
       </section>`;
   }
@@ -136,15 +172,15 @@
     const sh = sheets(items, r);
     const rand = sNo === "x";
     const k = rand ? 0 : Math.min(Math.max(1, +sNo || 1), sh.length || 1);
-    const list = rand ? shuffle(items.filter(inRange(r))).slice(0, PER).sort((a, b) => secOrder[a.sec].i - secOrder[b.sec].i) : sh[k - 1] || [];
-    const title = `${RANGES[r].name} ${rand ? "무작위 시험지" : `시험지 ${k}`}`;
+    const list = rand ? shuffle(items.filter(inRange(r)).filter(lvOk)).slice(0, PER).sort(bySec).sort(freeLast) : sh[k - 1] || [];
+    const title = `${RANGES[r].name} ${rand ? `무작위 시험지${lvKey ? ` · ${LVN[lvKey]}` : ""}` : `시험지 ${k}`}`;
     crumb(title);
     document.title = `${title} · ${c.name} — 나뭇잎 교과서`;
     head.innerHTML = `<span class="mono dim">${esc(c.name)} · ${RANGES[r].name} 범위 ${r === "all" ? "" : rangeLabel(r)}</span>
       <h1>${esc(c.name)} <em>${esc(title)}</em></h1>
-      <p class="lead">${AI} ${list.length}문항입니다. 객관식은 번호를 고르고, 단답형은 답을 적으세요. 다 풀면 맨 아래 <b>채점하기</b>를 누릅니다.</p>
+      <p class="lead">${AI} ${list.length}문항입니다. 객관식은 번호를 고르고, 단답형은 답을 적으세요.${list.some((it) => it.type === "free") ? " 서술형은 풀이 과정을 쓰고, 채점 뒤 모범 답안과 채점 기준을 보고 스스로 점수를 매깁니다." : ""} 다 풀면 맨 아래 <b>채점하기</b>를 누릅니다.</p>
       <p class="mono small dim">실제 시험 문항이 아닙니다. 고등학교 교육과정 범위에서 AI가 출제했습니다.</p>`;
-    const nav = rand ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=x">다른 무작위 시험지</a>`
+    const nav = rand ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=x${lvKey ? `&lv=${lvKey}` : ""}">다른 무작위 시험지</a>`
       : `${k > 1 ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=${k - 1}">← 시험지 ${k - 1}</a>` : ""}${k < sh.length ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=${k + 1}">시험지 ${k + 1} →</a>` : ""}`;
     body.innerHTML = `<div class="px-list bk-list">${list.map((it, i) => itemHtml(it, i + 1, false)).join("")}</div>
       <div class="bk-submit"><button type="button" class="btn" id="bk-grade">채점하기</button><span class="mono small dim" id="bk-left"></span></div>
@@ -171,13 +207,24 @@
         return;
       }
       let ok = 0;
-      const wrong = [];
-      list.forEach((it, i) => { if (mark(body.querySelector(`[data-id="${it.id}"]`), it, pick[it.id] ?? "")) ok++; else wrong.push(i + 1); });
+      const wrong = [], obj = list.filter((it) => it.type !== "free"), fr = list.filter((it) => it.type === "free");
+      list.forEach((it, i) => {
+        const card = body.querySelector(`[data-id="${it.id}"]`);
+        if (it.type === "free") openFree(card, it);
+        else if (mark(card, it, pick[it.id] ?? "")) ok++;
+        else wrong.push(i + 1);
+      });
       e.target.disabled = true;
-      if (!rand) saveScore(`${c.id}/${r}/${k}`, { n: list.length, ok, at: Date.now() });
+      const fmax = fr.reduce((s, it) => s + fullPt(it), 0);
       const box = document.getElementById("bk-score");
+      const show = () => {
+        const fp = fr.reduce((s, it) => s + selfPt(body.querySelector(`[data-id="${it.id}"]`)), 0);
+        if (!rand) saveScore(`${c.id}/${r}/${k}`, { n: obj.length, ok, ...(fr.length ? { fp, fmax } : {}), at: Date.now() });
+        box.innerHTML = `<b>${ok} / ${obj.length}</b><span>${obj.length ? `${Math.round((100 * ok) / obj.length)}점 환산` : ""}${fr.length ? ` · 서술형 자기 채점 ${fp} / ${fmax}점` : ""}</span>${wrong.length ? `<p class="small">틀린 문항: ${wrong.map((w) => `<a href="#${list[w - 1].id}">${w}번</a>`).join(" · ")}. 문항마다 풀이와 해당 절 링크가 열렸습니다. 처음 풀 때 틀린 문항은 <a href="notes.html#wrong">오답노트</a>에 모입니다.</p>` : obj.length ? `<p class="small">객관식·단답형을 모두 맞았습니다.</p>` : ""}${fr.length ? `<p class="small">서술형 ${fr.length}문항은 모범 답안 아래 채점 기준에서 내 답안에 있는 요소를 고르면 점수가 더해집니다.</p>` : ""}`;
+      };
       box.hidden = false;
-      box.innerHTML = `<b>${ok} / ${list.length}</b><span>${Math.round((100 * ok) / (list.length || 1))}점 환산</span>${wrong.length ? `<p class="small">틀린 문항: ${wrong.map((w) => `<a href="#${list[w - 1].id}">${w}번</a>`).join(" · ")}. 문항마다 풀이와 해당 절 링크가 열렸습니다. 처음 풀 때 틀린 문항은 <a href="notes.html#wrong">오답노트</a>에 모입니다.</p>` : `<p class="small">모두 맞았습니다.</p>`}`;
+      show();
+      body.addEventListener("change", (ev) => onRubric(ev, show));
       box.scrollIntoView({ block: "center" });
       if (window.NMMath) NMMath.render(body);
     });
@@ -187,13 +234,15 @@
   function section(items, sec) {
     const o = secOrder[sec];
     if (!o) return hub(items);
-    const list = items.filter((it) => it.sec === sec);
+    const all = items.filter((it) => it.sec === sec);
+    const list = all.filter(lvOk).sort(freeLast);
     crumb(`${o.ch.n}.${o.s.n} ${o.s.title}`);
     document.title = `연습문제 · ${o.s.title} — 나뭇잎 교과서`;
     const rng = o.i < split ? "mid" : "fin";
     head.innerHTML = `<span class="mono dim">${esc(c.name)} · ${o.ch.n}.${o.s.n}${/\d/.test(o.s.code || "") ? ` · [${esc(o.s.code)}]` : ""}</span>
       <h1>${esc(o.s.title)} <em>연습문제</em></h1>
-      <p class="lead">${AI} 이 절의 문항 ${list.length}개입니다. 답을 고르면 바로 채점하고 풀이를 보여 줍니다. 범위 전체를 시험처럼 풀려면 <a href="bank.html?c=${c.id}">${RANGES[rng] ? RANGES[rng].name : ""} 시험지</a>로 가세요.</p>
+      <p class="lead">${AI} 이 절의 문항 ${list.length}개입니다${lvKey ? `(${LVN[lvKey]}만, 전체 ${all.length}개)` : ""}. 답을 고르면 바로 채점하고 풀이를 보여 줍니다. 서술형은 답안을 쓴 뒤 모범 답안을 보고 스스로 채점합니다. 범위 전체를 시험처럼 풀려면 <a href="bank.html?c=${c.id}">${RANGES[rng] ? RANGES[rng].name : ""} 시험지</a>로 가세요.</p>
+      <p class="small bk-lvrow">난이도 ${lvLinks(`bank.html?c=${c.id}&sec=${sec}`)}</p>
       <p class="mono small dim"><a href="c/${c.id}/${o.ch.n}-${o.s.n}.html">← 이 절로 돌아가기</a>${o.s.ex ? ` · <a href="practice.html?sec=${c.id}-${sec}">이 절의 기출문제 ${o.s.ex}문항</a>` : ""}</p>`;
     document.getElementById("px-back").href = `c/${c.id}/${o.ch.n}-${o.s.n}.html`;
     document.getElementById("px-back").textContent = "← 절로 돌아가기";
@@ -202,9 +251,12 @@
     if (window.NMMath) NMMath.render(body);
     const find = (card) => list.find((x) => x.id === card.dataset.id);
     body.addEventListener("click", (e) => {
+      const f = e.target.closest(".bk-show");
+      if (f) { const card = f.closest(".bk-item"); openFree(card, find(card)); if (window.NMMath) NMMath.render(card); return; }
       const b = e.target.closest(".px-opt"); if (!b || b.disabled) return;
       const card = b.closest(".bk-item"); mark(card, find(card), b.dataset.v); if (window.NMMath) NMMath.render(card);
     });
+    body.addEventListener("change", (e) => onRubric(e));
     body.addEventListener("submit", (e) => {
       e.preventDefault();
       const v = e.target.querySelector("input").value.trim(); if (!v) return;

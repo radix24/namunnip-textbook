@@ -8,10 +8,14 @@
 
 JSON 형식 (exams/bank/<과목>.json) — 카드 HTML과 따로 두어 나중에 문항 DB로 옮기기 쉽게 한다:
   { "course": "dmath", "kind": "ai", "note": "...",
-    "items": [ { "id": "ai-dmath-1-1-01", "sec": "1-1", "type": "mc" | "short",
+    "items": [ { "id": "ai-dmath-1-1-01", "sec": "1-1", "type": "mc" | "short" | "free", "lv": "기본" | "응용" | "심화",
                  "q": "<p>문제 HTML(수식은 \\( … \\))</p>", "choices": ["…" ×5](mc만), "answer": "3",
-                 "alt": ["다른 표기의 정답", …](short 선택), "sol": "<p>풀이 HTML</p>" } ] }
+                 "alt": ["다른 표기의 정답", …](short 선택), "rubric": [{"pt": 2, "t": "채점 요소"}, …](free만),
+                 "hints": ["힌트", …](선택), "sol": "<p>풀이(free는 모범 답안) HTML</p>" } ] }
   - mc의 answer는 "1"~"5", short는 숫자나 짧은 글. 채점은 js/bank.js가 한다(공백 무시, 분수·소수는 값으로 비교).
+  - free(서술형)는 풀이 과정을 쓰는 문항이다. answer는 최종 결론 한 줄, sol은 모범 답안, rubric은 부분 점수 요소이며
+    화면에서 학생이 요소마다 스스로 채점한다.
+  - 필드 이름(type, lv, q, choices, answer, hints, sol)은 QURI 시험 전용 문항 형식(qcard/1)과 같다.
 
 원고 형식 (줄 단위, 빈 줄은 무시):
   # dmath                과목 코드 (첫 줄)
@@ -21,7 +25,12 @@ JSON 형식 (exams/bank/<과목>.json) — 카드 HTML과 따로 두어 나중�
   | a | b |              표 한 줄(첫 줄은 머리)
   1) … ~ 5) …            선택지(있으면 객관식, 없으면 단답형)
   = 3                    정답. 단답형은 '= 12 | 12.0'처럼 다른 표기를 |로 더할 수 있다
-  > 풀이 문단            풀이(여러 줄이면 문단 여러 개)
+  > 풀이 문단            풀이(여러 줄이면 문단 여러 개). 서술형이면 모범 답안
+  ?* 문제 첫 문단        서술형(free) 문항 시작. '= 결론'과 '+2 채점 요소' 줄(점수와 설명)이 있어야 한다
+  @ 응용                 난이도(기본·응용·심화, 첫 글자만 써도 된다). 모든 문항에 있어야 한다
+  * 힌트                 힌트(여러 줄이면 여러 개)
+
+  python3 tools/bank.py lv <원고.txt> 기기응심…   난이도 줄이 없는 문항에 차례로 '@ …' 줄을 넣는다(옛 원고에 난이도를 붙일 때)
 """
 import json, re, sys, pathlib
 
@@ -29,6 +38,11 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BANK = ROOT / "exams" / "bank"
 NOTE = "AI가 고등학교 교육과정 범위에서 출제한 연습 문항입니다. 실제 시험에 나온 문항이 아닙니다."
 SHEET = 20   # 시험지 한 장의 문항 수(대략)
+LV = {"기": "기본", "응": "응용", "심": "심화"}
+
+
+def is_item(line):
+    return line.startswith("? ") or line.startswith("?* ")
 
 
 def rd(p):
@@ -81,11 +95,13 @@ def parse(path):
                 raise SystemExit(f"{where}: 절 표기는 '## 1-2' 꼴이어야 합니다")
         elif line.startswith("# "):
             close(); cid = line[2:].strip()
-        elif line.startswith("? "):
+        elif is_item(line):
             close()
             if not (cid and sec):
                 raise SystemExit(f"{where}: 과목(# …)과 절(## …)을 먼저 적어야 합니다")
-            cur = {"sec": sec, "q": [line[2:].strip()], "gana": [], "table": [], "choices": [], "answer": None, "sol": [], "ln": where}
+            free = line.startswith("?* ")
+            cur = {"sec": sec, "q": [line[3 if free else 2:].strip()], "gana": [], "table": [], "choices": [], "answer": None, "sol": [],
+                   "ln": where, "free": free, "lv": None, "hints": [], "rubric": []}
         elif cur is None:
             raise SystemExit(f"{where}: 문항(? …) 밖의 줄입니다: {line[:40]}")
         elif re.match(r"^[ㄱㄴㄷㄹ]\. ", line):
@@ -94,6 +110,16 @@ def parse(path):
             cur["table"].append([x.strip() for x in line.strip().strip("|").split("|")])
         elif re.match(r"^[1-5]\) ", line):
             cur["choices"].append(line[3:].strip())
+        elif line.startswith("@ "):
+            v = line[2:].strip()
+            cur["lv"] = LV.get(v, v)
+        elif line.startswith("* "):
+            cur["hints"].append(line[2:].strip())
+        elif re.match(r"^\+\d+ ", line):
+            pt, t = line[1:].split(" ", 1)
+            cur["rubric"].append({"pt": int(pt), "t": t.strip()})
+        elif line.startswith("= ") and cur["free"]:
+            cur["answer"] = [line[2:].strip()]
         elif line.startswith("= "):
             cur["answer"] = [x.strip() for x in line[2:].split("|") if x.strip()]
         elif line.startswith("> "):
@@ -110,8 +136,8 @@ def parse(path):
     out, seen = [], {}
     for it in items:
         k = seen[it["sec"]] = seen.get(it["sec"], 0) + 1
-        o = {"id": f'ai-{cid}-{it["sec"]}-{k:02d}', "sec": it["sec"], "type": "mc" if it["choices"] else "short",
-             "q": "".join(x if x.startswith("<") else f"<p>{x}</p>" for x in it["q"])}
+        o = {"id": f'ai-{cid}-{it["sec"]}-{k:02d}', "sec": it["sec"], "type": "free" if it["free"] else "mc" if it["choices"] else "short",
+             "lv": it["lv"], "q": "".join(x if x.startswith("<") else f"<p>{x}</p>" for x in it["q"])}
         if it["choices"]:
             o["choices"] = it["choices"]
         if not it["answer"]:
@@ -119,6 +145,10 @@ def parse(path):
         o["answer"] = it["answer"][0]
         if len(it["answer"]) > 1:
             o["alt"] = it["answer"][1:]
+        if it["rubric"]:
+            o["rubric"] = it["rubric"]
+        if it["hints"]:
+            o["hints"] = it["hints"]
         o["sol"] = "".join(f"<p>{x}</p>" for x in it["sol"])
         o["_ln"] = it["ln"]
         out.append(o)
@@ -196,9 +226,17 @@ def check_items(cid, items, cs):
                 errs.append(f"{w}: 객관식 정답은 1~5 ({it['answer']})")
             if len(set(it.get("choices", []))) != len(it.get("choices", [])):
                 errs.append(f"{w}: 같은 선택지가 두 번 있음")
+        if it.get("lv") not in ("기본", "응용", "심화"):
+            errs.append(f"{w}: 난이도(@ 기본·응용·심화)가 없거나 틀림 ({it.get('lv')})")
+        if it["type"] == "free":
+            rb = it.get("rubric") or []
+            if sum(r["pt"] for r in rb) < 2 or any(r["pt"] < 1 or not r["t"] for r in rb):
+                errs.append(f"{w}: 서술형은 채점 요소(+점수 설명)가 있어야 하고 만점이 2점 이상이어야 함")
+        elif it.get("rubric"):
+            errs.append(f"{w}: 채점 요소는 서술형에만 씀")
         if not it.get("sol"):
             errs.append(f"{w}: 풀이가 없음")
-        text = it["q"] + "".join(it.get("choices", [])) + it.get("sol", "")
+        text = it["q"] + "".join(it.get("choices", [])) + it.get("sol", "") + "".join(it.get("hints", [])) + "".join(r["t"] for r in it.get("rubric", []))
         if text.count("\\(") != text.count("\\)") or text.count("\\[") != text.count("\\]"):
             errs.append(f"{w}: 수식 괄호 \\( \\) 짝이 맞지 않음")
         if re.search(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", text):
@@ -220,17 +258,36 @@ def load(cid):
 def stat_line(c, items):
     order = [f'{ch["n"]}-{s["n"]}' for ch in c["chapters"] for s in ch["sections"]]
     k = split(c)
-    mid = sum(1 for it in items if order.index(it["sec"]) < k)
-    fin = len(items) - mid
-    sh = lambda n: max(1, round(n / SHEET)) if n else 0
-    return f'{c["id"]:9} {c["name"]:14} 문항 {len(items):4}  중간 {mid:3}({sh(mid)}장)  기말 {fin:3}({sh(fin)}장)'
+    mid = [it for it in items if order.index(it["sec"]) < k]
+    fin = [it for it in items if order.index(it["sec"]) >= k]
+    sh = lambda xs: max(1, round(len(xs) / SHEET)) if xs else 0
+    fr = lambda xs: sum(1 for it in xs if it["type"] == "free")
+    hi = sum(1 for it in items if it.get("lv") in ("응용", "심화"))
+    return (f'{c["id"]:9} {c["name"]:14} 문항 {len(items):4}  중간 {len(mid):3}({sh(mid)}장, 서술 {fr(mid):2})'
+            f'  기말 {len(fin):3}({sh(fin)}장, 서술 {fr(fin):2})  응용·심화 {round(100 * hi / max(1, len(items))):3}%')
 
 
 def main():
     a = sys.argv[1:]
     cs = courses()
-    if not a or a[0] not in ("import", "check", "stat"):
+    if not a or a[0] not in ("import", "check", "stat", "lv"):
         print(__doc__); return
+    if a[0] == "lv":
+        f, marks = pathlib.Path(a[1]), [m for m in "".join(a[2:]) if m in LV]
+        lines = rd(f).split("\n")
+        need = []   # 난이도 줄이 없는 문항의 줄 번호
+        for i, line in enumerate(lines):
+            if is_item(line):
+                j = i + 1
+                while j < len(lines) and not (is_item(lines[j]) or lines[j].startswith("#") or lines[j].startswith("@ ")):
+                    j += 1
+                if not (j < len(lines) and lines[j].startswith("@ ")):
+                    need.append(i)
+        if len(need) != len(marks):
+            raise SystemExit(f"난이도가 없는 문항 {len(need)}개, 받은 표시 {len(marks)}개 — 고치지 않았습니다")
+        for i, m in sorted(zip(need, marks), reverse=True):
+            lines.insert(i + 1, f"@ {LV[m]}")
+        wr(f, "\n".join(lines)); print(f"{f.name}: 난이도 {len(marks)}개를 넣었습니다"); return
     if a[0] == "import":
         bad = False
         for f in a[1:]:
@@ -244,6 +301,8 @@ def main():
             print(stat_line(cs[cid], items))
         sys.exit(1 if bad else 0)
     files = sorted(BANK.glob("*.json")) if BANK.exists() else []
+    if a[1:]:   # check cm1 cm2 …처럼 과목을 주면 그 과목만
+        files = [f for f in files if f.stem in a[1:]]
     bad, total = False, 0
     for f in files:
         d = json.loads(rd(f))
