@@ -911,6 +911,8 @@ body[data-domain="math"] #chips .chip { display: none; }
 .px-go + .px-go { margin-top: 8px; }
 .toc-px + .toc-px { margin-top: 8px; }
 /* ───── 연습 시험 (bank.html, js/bank.js): AI 출제 연습 문항 ───── */
+.px-text pre.code, .nb-exam-text pre.code { margin: 8px 0; padding: 10px 14px; background: var(--paper-2); border: 1px solid var(--rule); font: 14px/1.6 var(--f-mono); white-space: pre; overflow-x: auto; }
+.px-text code, .px-opt code, .nb-exam-text code { font-family: var(--f-mono); font-size: .92em; }
 .bk-ai { display: inline-block; margin-right: 6px; padding: 1px 8px; border: 1px solid var(--forest); border-radius: 999px; color: var(--forest); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
 .bk-range { padding: 22px 0 8px; border-bottom: 1px solid var(--rule); }
 .bk-range h2 { font-size: 21px; letter-spacing: -.02em; }

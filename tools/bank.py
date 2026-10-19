@@ -122,7 +122,57 @@ def parse(path):
         o["sol"] = "".join(f"<p>{x}</p>" for x in it["sol"])
         o["_ln"] = it["ln"]
         out.append(o)
+    balance(out)
     return cid, out
+
+
+CIRCLED = "①②③④⑤"
+
+
+def _num(s):
+    """선택지가 '수(와 단위)'뿐이면 그 값, 아니면 None. 수로만 된 선택지는 작은 것부터 늘어놓는 관례라 순서를 바꾸지 않는다."""
+    t = re.sub(r"\\[()]|\\[,;!\s]|\s", "", s)
+    m = re.fullmatch(r"-?\\dfrac\{(-?[\d.]+)\}\{([\d.]+)\}", t)
+    if m:
+        return float(m.group(1)) / float(m.group(2))
+    m = re.match(r"(?:약)?(-?\d[\d,]*(?:\.\d+)?)", t)
+    if m and not re.search(r"[가-힣]", re.sub(r"배|년|명|개|번|원|장|일|분|시간|초|가지|회|쌍|층|만|억", "", t[m.end():])):
+        return float(m.group(1).replace(",", ""))   # 뒤에 단위(영문, 배·년·개 등)만 붙은 수
+    return None
+
+
+def fixed_order(it):
+    """선택지 순서를 그대로 두어야 하는 문항: 수 선택지(오름차순 관례), ㄱㄴㄷ 조합, 선택지 글이 다른 선택지 번호를 가리키는 경우."""
+    ch = it["choices"]
+    if all(re.fullmatch(r"[ㄱㄴㄷㄹ](, [ㄱㄴㄷㄹ])*", c.strip()) for c in ch):
+        return True
+    if any(x in s for s in ch + [it["q"]] for x in CIRCLED):   # 문제 속 ①②는 대개 절차 번호라 바꾸면 안 된다
+        return True
+    return all(_num(c) is not None for c in ch)
+
+
+def balance(items):
+    """원고를 쓸 때 정답이 ②에 몰리기 쉬워, 순서를 바꿔도 되는 객관식은 정답 자리를 과목 안에서 고르게 옮긴다.
+    정답 선택지만 목표 자리로 옮기고 나머지는 원래 순서를 지킨다. 문제·풀이 속 ①~⑤ 표기도 새 번호로 바꾼다. 같은 원고면 결과도 같다."""
+    mcs = [it for it in items if it["type"] == "mc"]
+    count = [0] * 5
+    movable = []
+    for it in mcs:
+        if fixed_order(it):
+            count[int(it["answer"]) - 1] += 1
+        else:
+            movable.append(it)
+    for it in movable:
+        old = int(it["answer"]) - 1
+        target = min(range(5), key=lambda k: (count[k], (k - old) % 5))   # 가장 적게 쓰인 자리(같으면 원래 자리에서 가까운 쪽)
+        count[target] += 1
+        order = [i for i in range(5) if i != old]
+        order.insert(target, old)                                          # order[새 자리] = 옛 자리
+        it["choices"] = [it["choices"][i] for i in order]
+        new_of = {o: n for n, o in enumerate(order)}
+        remap = lambda s: re.sub("[①②③④⑤]", lambda m: CIRCLED[new_of[CIRCLED.index(m.group(0))]], s)
+        it["q"], it["sol"] = remap(it["q"]), remap(it["sol"])
+        it["answer"] = str(target + 1)
 
 
 def check_items(cid, items, cs):
