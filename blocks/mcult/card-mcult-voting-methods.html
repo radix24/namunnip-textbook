@@ -1,0 +1,48 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/mcult/voting-methods.js"
+  ],
+  "short": "같은 표, 다른 당선자 — 투표 방법에 따라 달라지는 결과"
+}
+-->
+<style>
+#card-mcult-voting-methods .prefs { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .35rem .6rem; margin: .4rem 0; }
+#card-mcult-voting-methods .prefs label { display: flex; align-items: center; justify-content: space-between; gap: .4rem; font: .85rem var(--mono, monospace); }
+#card-mcult-voting-methods .prefs input { width: 3.6rem; }
+#card-mcult-voting-methods table { border-collapse: collapse; font-size: .84rem; width: 100%; }
+#card-mcult-voting-methods td, #card-mcult-voting-methods th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .25rem .35rem; text-align: left; vertical-align: top; }
+#card-mcult-voting-methods td b { color: #b5532f; }
+</style>
+<article class="card" id="card-mcult-voting-methods">
+  <header class="card-head">
+    <span class="no"></span><h2>똑같은 표로 뽑았는데, 세는 방법을 바꾸면 당선자가 달라질까?</h2><span class="kind">선호 투표와 집계 방법 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <p class="small">학급 회장 후보 A, B, C. 투표자는 좋아하는 순서대로 적어 냈습니다(가상 자료). 순서별 인원을 바꿔 보세요.</p>
+      <div class="prefs"></div>
+      <table></table>
+      <p class="mono small say" role="status"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>18명이 후보 3명에 대해 좋아하는 순서를 적어 냈습니다. 가장 많은 1순위를 받은 사람, 결선 투표의 승자, 순위 점수의 1등은 모두 같은 사람일까요?</li>
+      <li><span class="tag">복원</span>순서쌍과 경우의 수(3명을 줄 세우는 방법 \(3! = 6\)가지).</li>
+      <li><span class="tag">설명</span><em>다수 득표제</em>는 1순위 표만 셉니다. <em>결선 투표제</em>는 1순위 상위 두 명 중에서 각 투표자가 더 좋아하는 쪽을 셉니다. <em>보르다 방식</em>은 1순위에 2점, 2순위에 1점을 주어 더합니다. <em>콩도르세 승자</em>는 다른 모든 후보와 일대일로 겨뤄 이기는 후보입니다. 기본 자료에서는 이 방법들이 A, B, C로 서로 다른 당선자를 냅니다. 어떤 방법이 공정한지는 수학만으로 정할 수 없고, 사회가 고른 가치에 달려 있습니다.</li>
+      <li><span class="tag">연결</span>합리적인 조건을 모두 만족하는 순위 투표 방법은 없다는 애로의 불가능성 정리가 알려져 있습니다. 나라와 단체마다 다른 선거 방법을 씁니다.</li>
+      <li><span class="tag">적용</span>인원을 바꿔 네 방법이 모두 같은 당선자를 내는 경우를 만들어 보세요. 콩도르세 승자가 없는 경우(순환)도 만들 수 있나요?</li>
+      <li class="warn"><span class="tag">판단</span>투표 결과를 볼 때는 "누가 이겼나"와 함께 "어떤 방법으로 셌나"를 확인해야 합니다. 방법을 정하는 쪽이 결과에 영향을 줄 수 있습니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">A&gt;B&gt;C 5명, B&gt;C&gt;A 3명, C&gt;B&gt;A 2명입니다. 다수 득표제로는 A가 당선됩니다. 보르다 방식(1순위 2점, 2순위 1점)의 당선자는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>B(13점)<span class="why"><b>맞습니다.</b> A = 2×5 = 10, B = 1×5 + 2×3 + 1×2 = 13, C = 1×3 + 2×2 = 7입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>A(10점)<span class="why"><b>1순위 표가 가장 많아도 나머지 5명에게 A는 꼴찌입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>C(7점)<span class="why"><b>C는 점수가 가장 적습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>B(17점)<span class="why"><b>점수를 거꾸로 주었습니다.</b> 1순위 1점, 2순위 2점으로 세면 B가 17점이 됩니다. 보르다 방식은 1순위에 더 큰 점수(2점)를 줍니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

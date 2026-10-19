@@ -1,0 +1,53 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/adc.js",
+    "js/cards/adcalc/hyp-unit.js"
+  ],
+  "short": "원과 쌍곡선 위의 점"
+}
+-->
+<style>
+#card-adcalc-hyp-unit canvas { aspect-ratio: 16 / 9; }
+</style>
+<article class="card" id="card-adcalc-hyp-unit">
+  <header class="card-head">
+    <span class="no"></span><h2>원 위의 점이 \((\cos t, \sin t)\)라면, 쌍곡선 위의 점은?</h2><span class="kind">쌍곡선함수 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="왼쪽: 단위원 위의 점 (cos t, sin t)와 넓이가 t/2인 부채꼴. 오른쪽: 쌍곡선 x² − y² = 1 위의 점 (cosh t, sinh t)와 넓이가 t/2인 쌍곡 부채꼴"></canvas>
+      <div class="ctl">
+        <label class="mono">\(t\) = <output class="t-out">0.8</output></label>
+        <input class="st" type="range" min="-2.2" max="2.2" step="0.01" value="0.8" aria-label="매개변수 t">
+        <dl class="nums n4">
+          <div><dt>\(\cosh t\)</dt><dd class="n-c">—</dd></div>
+          <div><dt>\(\sinh t\)</dt><dd class="n-s">—</dd></div>
+          <div><dt>\(\cosh^2 t - \sinh^2 t\)</dt><dd class="n-i">—</dd></div>
+          <div><dt>칠한 넓이 (쌍곡선)</dt><dd class="n-a">—</dd></div>
+        </dl>
+        <p class="fig-note">두 그림 모두 칠한 부분의 넓이는 \(\frac{t}{2}\)입니다. 오른쪽 넓이는 경계를 따라 수치로 잰 값입니다. 음의 \(t\)는 \(x\)축 아래쪽 넓이로 셉니다.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>단위원 \(x^2 + y^2 = 1\) 위의 점은 \((\cos t, \sin t)\)로 나타냅니다. 쌍곡선 \(x^2 - y^2 = 1\) 위의 점도 이렇게 한 변수 \(t\)의 함수 두 개로 나타낼 수 있을까요?</li>
+      <li><span class="tag">복원</span>\(\cos^2 t + \sin^2 t = 1\)이고, 단위원에서 각 \(t\)의 부채꼴 넓이는 \(\frac{t}{2}\)입니다. \(e^x\)는 늘 양수이고 \(e^{-x} = \frac{1}{e^x}\)입니다.</li>
+      <li><span class="tag">설명</span>다음 두 함수를 <em>쌍곡선함수</em>라고 합니다. \[\cosh x = \frac{e^x + e^{-x}}{2}\] \[\sinh x = \frac{e^x - e^{-x}}{2}\] 또 \(\tanh x = \frac{\sinh x}{\cosh x}\)입니다. 두 식을 제곱해서 빼면 교차항 \(e^x e^{-x} = 1\)만 남아 \(\cosh^2 x - \sinh^2 x = 1\)이므로 점 \((\cosh t, \sinh t)\)는 쌍곡선 \(x^2 - y^2 = 1\)의 오른쪽 가지 위에 있습니다. 게다가 원점, \((1, 0)\), 이 점이 쌍곡선과 함께 둘러싸는 넓이도 원처럼 정확히 \(\frac{t}{2}\)입니다. 그래서 \(t\)를 "쌍곡선의 각"처럼 볼 수 있습니다.</li>
+      <li><span class="tag">연결</span>\(\cosh\)는 짝함수(\(\cosh(-x) = \cosh x\))이고 \(\sinh\)는 홀함수입니다. \(\cosh x \ge 1\)이고, \(\tanh x\)는 \(-1\)과 1 사이에 갇힙니다. 원의 \(\cos t\)는 주기함수이지만 \(\cosh t\)는 \(t\)가 커지면 \(\frac{e^t}{2}\)처럼 끝없이 커집니다.</li>
+      <li><span class="tag">적용</span>\(t\)를 움직이며 두 점을 비교하세요. \(\cosh^2 t - \sinh^2 t\)는 언제나 1인가요? 칠한 넓이가 \(\frac{t}{2}\)와 같은가요? \(t\)를 음수로 하면 쌍곡선 위의 점은 어디로 가나요? 왼쪽 점은 한 바퀴 돌아 제자리로 오지만 오른쪽 점은 어떤가요?</li>
+      <li class="warn"><span class="tag">판단</span>쌍곡선함수의 \(t\)는 각의 크기가 아닙니다. 원점에서 점 \((\cosh t, \sinh t)\)로 그은 선분이 \(x\)축과 이루는 각은 \(45^\circ\)를 넘지 못하지만 \(t\)는 얼마든지 커집니다. \(t\)는 넓이의 두 배로 정한 수입니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(x &gt; 0\)이고 \(\cosh x = \frac{5}{4}\)일 때 \(\sinh x\)의 값은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{3}{4}\)<span class="why"><b>맞습니다.</b> \(\sinh^2 x = \cosh^2 x - 1 = \frac{9}{16}\)이고, \(x &gt; 0\)이면 \(\sinh x &gt; 0\)입니다. 실제로 \(x = \ln 2\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\frac{3}{4}\)<span class="why"><b>부호를 잘못 골랐습니다.</b> \(\sinh x\)는 \(x\)와 부호가 같습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{\sqrt{41}}{4}\)<span class="why"><b>원의 공식처럼 더했습니다.</b> 쌍곡선함수는 \(\cosh^2 - \sinh^2 = 1\)로 <b>뺍니다</b>.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{1}{4}\)<span class="why"><b>제곱하지 않고 뺐습니다.</b> \(\cosh x - 1\)이 아니라 \(\cosh^2 x - 1\)의 제곱근입니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

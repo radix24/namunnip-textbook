@@ -1,0 +1,84 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/hyp-deriv-spot.js"
+  ],
+  "short": "쌍곡선함수 미분의 오류 찾기"
+}
+-->
+<style>
+#card-adcalc-hyp-deriv-spot canvas { aspect-ratio: 16 / 9; }
+#card-adcalc-hyp-deriv-spot .sol[hidden] { display: none; }
+</style>
+<article class="card" id="card-adcalc-hyp-deriv-spot">
+  <header class="card-head">
+    <span class="no"></span><h2>이 미분 풀이, 어디가 틀렸을까?</h2><span class="kind">쌍곡선함수의 도함수 · 오류 찾기</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="presets">
+        <button class="chip" type="button" data-s="0" aria-pressed="true">풀이 1</button>
+        <button class="chip" type="button" data-s="1">풀이 2</button>
+        <button class="chip" type="button" data-s="2">풀이 3</button>
+        <button class="chip" type="button" data-s="3">풀이 4</button>
+      </div>
+      <canvas aria-label="실선: 풀이가 낸 도함수의 그래프. 점선: 원래 함수의 접선 기울기를 수치로 잰 그래프. 두 그래프가 다르면 풀이 어딘가가 틀렸다"></canvas>
+      <div class="ctl">
+        <p class="mono small">처음 틀린 줄을 누르세요. 틀린 곳이 없으면 마지막 줄을 누르세요. 두 그래프가 겹치는지가 단서입니다.</p>
+        <div class="sol" data-s="0">
+          <ol class="spot">
+            <li>\(f(x) = x\cosh x\)를 곱의 미분법으로 미분한다.<span class="why">방법은 맞습니다.</span></li>
+            <li data-bad>\(f'(x) = \cosh x + x(\cosh x)' = \cosh x - x\sinh x\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \((\cosh x)' = \sinh x\)이고 음의 부호가 없습니다. \(\cos x\)의 공식을 흉내 냈습니다. 바른 답은 \(\cosh x + x\sinh x\)입니다.</span></li>
+            <li>따라서 \(f'(0) = 1\)이다.<span class="why">\(x = 0\)에서는 둘째 항이 0이라 우연히 맞았습니다. 다른 점에서는 틀린 값이 나옵니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">두 그래프가 \(x = 0\)에서만 만나는 것을 보세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="1" hidden>
+          <ol class="spot">
+            <li>\(f(x) = \sinh 3x\)는 \(\sinh u\)와 \(u = 3x\)의 합성함수이다.<span class="why">맞습니다.</span></li>
+            <li data-bad>\((\sinh u)' = \cosh u\)이므로 \(f'(x) = \cosh 3x\)이다.<span class="why"><b>여기가 틀렸습니다.</b> 합성함수의 미분법에서 \(\frac{du}{dx} = 3\)을 곱해야 합니다. 바른 답은 \(3\cosh 3x\)입니다.</span></li>
+            <li>\(f'(0) = \cosh 0 = 1\)이다.<span class="why">앞 줄의 잘못을 이어받았습니다. 실제 \(f'(0) = 3\)입니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">원점에서 두 그래프의 높이를 비교하세요.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="2" hidden>
+          <ol class="spot">
+            <li>\(\tanh x = \frac{\sinh x}{\cosh x}\)에 몫의 미분법을 쓴다.<span class="why">맞습니다.</span></li>
+            <li>\((\tanh x)' = \frac{\cosh x \cdot \cosh x - \sinh x \cdot \sinh x}{\cosh^2 x}\)이다.<span class="why">맞습니다. \((\sinh x)' = \cosh x\), \((\cosh x)' = \sinh x\)를 바르게 넣었습니다.</span></li>
+            <li>\(\cosh^2 x - \sinh^2 x = 1\)이므로 \((\tanh x)' = \frac{1}{\cosh^2 x}\)이다.<span class="why">맞습니다.</span></li>
+            <li data-bad>이 풀이에는 틀린 곳이 없다.<span class="why"><b>맞습니다.</b> 두 그래프가 완전히 겹칩니다. \(\frac{1}{\cosh^2 x} = 1 - \tanh^2 x\)로 쓸 수도 있습니다.</span></li>
+          </ol>
+        </div>
+        <div class="sol" data-s="3" hidden>
+          <ol class="spot">
+            <li>\(y = \sinh^{-1} x\)로 놓으면 \(x = \sinh y\)이다.<span class="why">맞습니다.</span></li>
+            <li>양변을 \(y\)로 미분하면 \(\frac{dx}{dy} = \cosh y\)이므로 \(\frac{dy}{dx} = \frac{1}{\cosh y}\)이다.<span class="why">역함수의 미분법을 바르게 썼습니다.</span></li>
+            <li data-bad>\(\cosh^2 y = \sinh^2 y - 1 = x^2 - 1\)이므로 \(\frac{dy}{dx} = \frac{1}{\sqrt{x^2 - 1}}\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(\cosh^2 y - \sinh^2 y = 1\)이므로 \(\cosh^2 y = 1 + \sinh^2 y = 1 + x^2\)입니다. 바른 답은 \(\frac{1}{\sqrt{x^2 + 1}}\)입니다. 이 풀이의 답은 \(|x| &lt; 1\)에서 정의되지도 않습니다.</span></li>
+            <li>이 풀이에는 틀린 곳이 없다.<span class="why">풀이의 그래프가 \(-1 &lt; x &lt; 1\)에서 끊긴 것을 보세요. 원래 함수는 실수 전체에서 미분가능합니다.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>쌍곡선함수의 미분 공식은 삼각함수와 닮아서 빨리 익숙해집니다. 그런데 닮았기 때문에 생기는 실수도 있습니다. 어디에서 틀리기 쉬울까요?</li>
+      <li><span class="tag">복원</span>\((\sinh x)' = \cosh x\), \((\cosh x)' = \sinh x\), \(\cosh^2 x - \sinh^2 x = 1\). 합성함수의 미분법 \(\{f(g(x))\}' = f'(g(x))g'(x)\)와 역함수의 미분법 \(\frac{dy}{dx} = \frac{1}{dx/dy}\).</li>
+      <li><span class="tag">설명</span>틀리기 쉬운 곳은 세 군데입니다. ① \(\cos\)처럼 \((\cosh x)'\)에 음의 부호를 붙인다(풀이 1). ② 합성함수의 속미분을 빠뜨린다(풀이 2). ③ \(\cos^2 + \sin^2 = 1\)을 흉내 내 \(\cosh^2 y\)를 잘못 바꾼다(풀이 4). 계산이 맞는지 의심스러우면 \(x = 0\) 한 점이 아니라 여러 점에서 기울기를 확인해야 합니다. 풀이 1은 \(x = 0\)에서만 우연히 맞습니다.</li>
+      <li><span class="tag">연결</span>풀이 4의 바른 결과 \((\sinh^{-1} x)' = \frac{1}{\sqrt{x^2 + 1}}\)을 거꾸로 읽으면 \(\int \frac{dx}{\sqrt{x^2 + 1}} = \sinh^{-1} x + C\)입니다. 다음 절의 적분에서 바로 씁니다.</li>
+      <li><span class="tag">적용</span>네 풀이에서 처음 틀린 줄을 찾으세요. 실선(풀이의 답)과 점선(실제 기울기)이 어디에서 갈라지나요? 풀이 3에서는 두 선이 겹치나요?</li>
+      <li class="warn"><span class="tag">판단</span>한 점에서 값이 맞는다고 도함수가 맞는 것은 아닙니다. 반대로 그래프 두 개가 그림의 범위에서 겹쳐 보여도 증명은 아닙니다. 그래프는 틀린 곳을 찾는 단서이고, 맞다는 근거는 계산의 각 단계입니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(f(x) = \ln(\cosh x)\)의 도함수는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\tanh x\)<span class="why"><b>맞습니다.</b> \(\frac{(\cosh x)'}{\cosh x} = \frac{\sinh x}{\cosh x}\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(-\tanh x\)<span class="why"><b>\((\cosh x)'\)에 음의 부호를 붙였습니다.</b> \(\ln(\cos x)\)라면 \(-\tan x\)가 맞습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{\cosh x}\)<span class="why"><b>속미분 \((\cosh x)' = \sinh x\)를 빠뜨렸습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{1}{\sinh x}\)<span class="why"><b>분자와 분모를 바꾸었습니다.</b> \((\ln u)' = \frac{u'}{u}\)입니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

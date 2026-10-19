@@ -59,7 +59,7 @@
 
   function update() {
     const r = rel(), pl = $(".n-plane"), rl = $(".n-rel"), an = $(".n-ang");
-    if (r.bad) { pl.textContent = "—"; rl.textContent = "두 점을 다르게"; an.textContent = "—"; pl.className = rl.className = "n-plane"; draw(); return; }
+    if (r.bad) { pl.textContent = "—"; rl.textContent = "두 점을 다르게"; an.textContent = "—"; pl.className = "n-plane"; rl.className = "n-rel"; draw(); return; }
     const kind = { same: "일치", par: "평행", meet: "한 점에서 만남", skew: "꼬인 위치" }[r.kind];
     pl.textContent = r.kind === "skew" ? "아니요" : "예";
     rl.textContent = kind; rl.className = `n-rel ${r.kind === "skew" ? "bad" : "good"}`;

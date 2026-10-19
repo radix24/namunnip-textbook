@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>여러 가지 알고리즘 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="정렬 알고리즘(버블 정렬, 병합 정렬)과 탐색 알고리즘(순차 탐색, 이진 탐색), 연산 횟수로 효율 비교하기. 두 정렬의 비교 횟수 경주 카드와, 업다운 게임으로 이진 탐색을 익히는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-sort-race .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .6rem; }
+    #card-dmath-sort-race .two canvas { aspect-ratio: 16 / 10; width: 100%; display: block; }
+    #card-dmath-sort-race .cmp { aspect-ratio: 16 / 7; max-width: 560px; width: 100%; margin: .6rem auto 0; display: block; }
+    #card-dmath-sort-race .two p { margin: .2rem 0 0; }
+    #card-dmath-updown canvas { aspect-ratio: 8 / 1; max-width: 560px; margin: .4rem auto; display: block; }
+    #card-dmath-updown .ctl-row input { width: 6rem; font: inherit; padding: .2rem .3rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); }
+  </style>
+</head>
+<body data-course="dmath" data-sec="2-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>여러 가지 알고리즘</h1>
+    <p class="lead">같은 문제라도 알고리즘에 따라 걸리는 시간이 크게 다릅니다. 자료를 순서대로 늘어놓는 정렬과, 원하는 자료를 찾는 탐색은 컴퓨터가 가장 많이 하는 일입니다. 이 절에서는 버블 정렬과 병합 정렬의 비교 횟수를 경주로 비교하고, 업다운 게임에서 가운데를 묻는 이진 탐색이 왜 강력한지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/dmath/2-4.html#card-dmath-call-tree" title="이산 수학 2.4 · 재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?">재귀적 알고리즘</a><a class="p p-card" href="../../c/alg/1-4.html#card-alg-log-def" title="대수 1.4 · 2를 몇 제곱하면 5가 될까?">로그</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-sort-race"><span class="mono">2.5.1</span>버블 정렬과 병합 정렬의 경주</a></li>
+        <li><a href="#card-dmath-updown"><span class="mono">2.5.2</span>업다운 게임과 이진 탐색</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-2-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-2-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-sort-race">
+        <header class="card-head">
+          <span class="no">2.5.1</span><h2>정렬 방법에 따라 비교 횟수는 얼마나 달라질까?</h2><span class="kind">정렬 알고리즘 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">자료 수 n = <output class="n-out">32</output></label><input class="n" type="range" min="8" max="64" step="8" value="32" aria-label="자료 수"></div></div>
+            <div class="two">
+              <div><canvas class="cb no-invert" aria-label="버블 정렬 진행"></canvas><p class="mono small sb">버블 정렬</p></div>
+              <div><canvas class="cm no-invert" aria-label="병합 정렬 진행"></canvas><p class="mono small sm">병합 정렬</p></div>
+            </div>
+            <div class="presets"><button class="chip go" type="button">경주 시작</button><button class="chip go-new" type="button">새 자료</button></div>
+            <canvas class="cmp" aria-label="n에 따른 비교 횟수: 버블 정렬 n(n−1)/2와 병합 정렬(실측)"></canvas>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>시험지 32장을 번호순으로 정리할 때, 이웃한 두 장을 비교해 바꾸기를 반복하는 방법과 반씩 나눠 정리한 뒤 합치는 방법 중 어느 쪽이 빠를까요? 장수가 1000장, 100만 장이 되면 차이는 얼마나 커질까요?</li>
+            <li><span class="tag">복원</span>\(1 + 2 + \cdots + (n - 1) = \frac{n(n - 1)}{2}\). \(n\)을 계속 반으로 나누면 \(\log_2 n\)번 만에 1이 됩니다.</li>
+            <li><span class="tag">설명</span><em>버블 정렬</em>은 이웃한 두 수를 비교해 큰 수를 뒤로 보내는 일을 되풀이하므로 비교가 \(\frac{n(n-1)}{2}\)번, \(n^2\)에 비례합니다. <em>병합 정렬</em>은 재귀적으로 반씩 나누어 정렬한 뒤 두 정렬된 목록을 앞에서부터 비교하며 합칩니다. 비교 횟수 \(T(n)\)은 \(T(n) \le 2T(n/2) + n\)을 만족해 약 \(n\log_2 n\)입니다. \(n = 1000\)이면 약 50만 번 대 약 1만 번입니다.</li>
+            <li><span class="tag">연결</span>알고리즘의 효율은 입력 크기 \(n\)에 대한 연산 횟수의 증가 빠르기로 비교합니다. 빠른 거듭제곱 카드의 곱셈 횟수(\(n\) 대 \(\log n\)), 다음 카드의 이진 탐색도 같은 관점입니다.</li>
+            <li><span class="tag">적용</span>경주를 시작하고 두 방법의 비교 횟수를 보세요. 자료 수를 두 배로 하면 버블 정렬의 비교 횟수는 몇 배가 되나요? 병합 정렬은요? 아래 그래프에서 두 곡선이 벌어지는 모습을 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>자료가 아주 적거나 이미 거의 정렬되어 있으면 단순한 방법이 더 빠를 수 있습니다. 실제 프로그램은 상황에 따라 여러 정렬을 섞어 씁니다. 비교 횟수만이 아니라 필요한 메모리(병합 정렬은 추가 공간이 필요)도 따져야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">버블 정렬로 \(n\)개를 정렬하는 데 1초가 걸렸다면, \(10n\)개는 대략 얼마나 걸릴까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 100초<span class="why"><b>맞습니다.</b> 비교 횟수가 \(n^2\)에 비례하므로 \(10^2\)배입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 10초<span class="why"><b>\(n\)에 비례한다고 보았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 1000초<span class="why"><b>\(n^3\)에 비례한다고 보았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 20초<span class="why"><b>\(n\log n\)에 가까운 병합 정렬의 경우에 더 가깝습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-updown">
+        <header class="card-head">
+          <span class="no">2.5.2</span><h2>1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?</h2><span class="kind">이진 탐색 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">범위 1 ~ <select class="pick" aria-label="범위"><option>100</option><option selected>1000</option><option>1000000</option></select></label>
+            </div>
+            <p class="small">예측: 가장 운이 나빠도 몇 번이면 반드시 맞힐까요?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="10">10번</button><button class="chip" type="button" data-g="50">50번</button><button class="chip" type="button" data-g="100">100번</button><button class="chip" type="button" data-g="500">500번</button></div>
+            <div class="ctl-row"><label class="mono">내 추측 <input class="guess" type="number" min="1" aria-label="추측한 수"></label><button class="chip go-guess" type="button">확인</button><button class="chip go-new" type="button">새 게임</button><button class="chip go-auto" type="button">이진 탐색으로 풀기</button></div>
+            <canvas aria-label="남은 후보 범위. 회색은 지워진 범위"></canvas>
+            <p class="mono small log" role="status"></p>
+            <p class="verdict"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>친구가 1부터 1000 사이의 수를 하나 정했습니다. 수를 말하면 "업"(더 큼) 또는 "다운"(더 작음)을 알려 줍니다. 가장 운이 나쁜 경우에도 반드시 맞히려면 최소 몇 번 물어야 할까요?</li>
+            <li><span class="tag">복원</span>\(2^{10} = 1024\). 반씩 나누기를 \(k\)번 하면 후보가 \(\frac{1}{2^k}\)로 줄어듭니다.</li>
+            <li><span class="tag">설명</span>남은 후보의 가운데 수를 묻으면 어떤 답이 와도 후보가 절반 이하로 줄어듭니다. 이것이 <em>이진 탐색</em>입니다. 후보 \(N\)개는 \(k\)번 만에 \(N/2^k\)개 이하가 되므로 \(2^k > N\), 곧 \(k = \lceil\log_2(N + 1)\rceil\)번이면 반드시 맞힙니다. 1000개면 10번, 100만 개라도 20번입니다. 반대로 하나씩 차례로 묻는 <em>순차 탐색</em>은 최악에 \(N\)번이 걸립니다.</li>
+            <li><span class="tag">연결</span>이진 탐색은 자료가 정렬되어 있을 때만 쓸 수 있습니다. 그래서 앞 카드의 정렬이 먼저 필요합니다. 사전에서 단어를 찾을 때, 데이터베이스가 기록을 찾을 때 같은 원리를 씁니다.</li>
+            <li><span class="tag">적용</span>먼저 최악의 횟수를 예측하고 게임을 해 보세요. 내가 쓴 횟수와 "이진 탐색으로 풀기"의 횟수를 비교하세요. 범위를 100만으로 바꾸면 몇 번이 필요한가요?</li>
+            <li class="warn"><span class="tag">판단</span>운이 좋으면 한 번에 맞힐 수도 있지만, 알고리즘의 성능은 보통 "가장 나쁜 경우"로 보장합니다. 또 가운데가 아닌 곳을 물으면 나쁜 답이 왔을 때 후보가 절반보다 많이 남아 최악의 횟수가 늘어납니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">정렬된 자료 5000개에서 이진 탐색으로 찾을 때 최악의 비교 횟수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(13\)번<span class="why"><b>맞습니다.</b> \(2^{12} = 4096 < 5001 \le 2^{13} = 8192\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(12\)번<span class="why"><b>\(2^{12} = 4096\)개까지만 보장됩니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(2500\)번<span class="why"><b>순차 탐색의 평균에 가깝습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(50\)번<span class="why"><b>\(\sqrt{5000}\)에 가까운 수로 짐작했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-2-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/sort-race.js"></script>
+<script src="../../js/cards/dmath/updown.js"></script>
+</body>
+</html>

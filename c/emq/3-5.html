@@ -48,65 +48,21 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-emq-star-spectrum"><span class="mono">3.5.1</span>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</a></li>
-        <li><a href="#card-is2-sun-fusion"><span class="mono">3.5.2</span>태양은 무엇을 태워서 빛날까?</a></li>
-        <li><a href="#card-is1-fusion"><span class="mono">3.5.3</span>별은 왜 철에서 핵융합을 멈출까?</a></li>
-        <li><a href="#card-is1-spectrum"><span class="mono">3.5.4</span>별빛에서 원소를 어떻게 읽을까?</a></li>
+        <li><a href="#card-is2-sun-fusion"><span class="mono">3.5.1</span>태양은 무엇을 태워서 빛날까?</a></li>
+        <li><a href="#card-is1-fusion"><span class="mono">3.5.2</span>별은 왜 철에서 핵융합을 멈출까?</a></li>
+        <li><a href="#card-is1-spectrum"><span class="mono">3.5.3</span>별빛에서 원소를 어떻게 읽을까?</a></li>
+        <li><a href="#card-emq-star-spectrum"><span class="mono">3.5.4</span>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</a></li>
         <li><a href="#card-phy-lm-spec"><span class="mono">3.5.5</span>빛만 보고 무엇이 빛나는지 알 수 있을까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=emq-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">90문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=emq-3-5">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
-      <article class="card" id="card-emq-star-spectrum">
-        <header class="card-head">
-          <span class="no">3.5.1</span><h2>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</h2><span class="kind">별의 흡수 스펙트럼 · 분광형</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="별의 표면 온도에 따른 가시광선 흡수 스펙트럼과 세기 그래프"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="별 예시">
-                <button type="button" class="chip" data-t="3300">베텔게우스 (M)</button>
-                <button type="button" class="chip" data-t="5800">태양 (G)</button>
-                <button type="button" class="chip" data-t="9900">시리우스 (A)</button>
-                <button type="button" class="chip" data-t="22000">스피카 (B)</button>
-              </div>
-              <label class="mono">표면 온도 = <output class="t-out">5800</output> K</label>
-              <input class="t" type="range" min="3.45" max="4.5" step="0.005" value="3.763" aria-label="표면 온도 (로그 눈금)">
-              <dl class="nums">
-                <div><dt>분광형</dt><dd class="n-c">—</dd></div>
-                <div><dt>가장 센 복사의 파장 (빈 법칙)</dt><dd class="n-w">—</dd></div>
-                <div><dt>두드러진 흡수선</dt><dd class="n-l">—</dd></div>
-              </dl>
-              <p class="fig-note">흡수선의 위치는 실제 파장이고, 세기의 온도 변화는 경향만 보인 모식입니다. 연속 스펙트럼은 흑체 복사로 계산했습니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>태양 빛을 분광기로 펼치면 무지개 속에 검은 선이 수천 개 있습니다(프라운호퍼선). 수소는 우주에서 가장 흔한 원소인데, 태양 스펙트럼의 수소선은 시리우스보다 훨씬 약합니다. 태양에 수소가 적은 걸까요?</li>
-            <li><span class="tag">복원</span>원자는 에너지 준위 차이에 해당하는 파장의 빛만 흡수하거나 방출하므로, 선의 위치는 원소마다 다른 지문입니다(선 스펙트럼). 뜨거운 물체일수록 짧은 파장에서 가장 밝습니다(빈 법칙).</li>
-            <li><span class="tag">설명</span>별의 중심에서는 수소 원자핵 네 개가 헬륨 원자핵 하나로 바뀌는 <em>수소 핵융합</em>이 일어나며, 줄어든 질량이 에너지(E = mc²)로 나옵니다. 이 에너지는 오랜 시간에 걸쳐 표면으로 전달되어 흑체에 가까운 연속 스펙트럼으로 방출되고, 그 빛이 더 차가운 바깥 대기를 지나면서 원소들이 특정 파장을 흡수해 <em>흡수선</em>이 생깁니다. 흡수선의 세기는 원소의 양뿐 아니라 온도에 크게 좌우됩니다. 수소 발머선은 전자가 둘째 준위에 있어야 생기는데, 약 1만 K에서 가장 많고, 더 차가우면 대부분 바닥 상태에, 더 뜨거우면 이온화되어 버립니다.</li>
-            <li><span class="tag">연결</span>그래서 별을 흡수선의 모습으로 O, B, A, F, G, K, M으로 나누는 <em>분광형</em>은 곧 표면 온도의 순서입니다. 뜨거운 O·B형에는 헬륨선, A형에는 수소선, G·K형에는 칼슘·철 같은 금속선, 차가운 M형에는 산화 타이타늄 같은 분자띠가 두드러집니다. 1925년 세실리아 페인은 이 온도 효과를 고려해 별이 대부분 수소와 헬륨으로 이루어졌음을 밝혔습니다.</li>
-            <li><span class="tag">적용</span>온도를 3000 K에서 30000 K까지 올리며 수소선(Hα, Hβ)이 언제 가장 진해지는지 보세요. 태양(5800 K)에서 가장 두드러진 선은 무엇인가요? 스펙트럼 색의 밝기 분포는 온도에 따라 어떻게 바뀌나요?</li>
-            <li class="warn"><span class="tag">판단</span>“흡수선이 약하면 그 원소가 적다”는 판단은 틀릴 수 있습니다. 태양에도 수소가 약 73 %(질량)나 있지만 온도 때문에 발머선이 약합니다. 원소의 양을 구하려면 온도와 압력에 따른 원자의 상태를 함께 계산해야 합니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">어떤 별의 스펙트럼에 헬륨 흡수선이 뚜렷하고 금속선은 거의 없습니다. 이 별에 대해 가장 알맞은 추론은?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>표면 온도가 매우 높은 O형이나 B형 별이다<span class="why"><b>맞습니다.</b> 헬륨선은 약 2만 K 이상에서 강하고, 금속은 이런 온도에서 대부분 이온화되어 가시광선 흡수선이 약합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>금속 원소가 전혀 없는 별이다<span class="why"><b>선이 약한 것은 주로 온도 때문입니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>표면 온도가 낮은 M형 별이다<span class="why"><b>M형에는 분자띠와 금속선이 두드러집니다.</b></span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a><a href="../../c/earth/3-2.html#card-earth-blackbody"><small class="mono">지구과학 3.2</small>별의 색으로 온도를 어떻게 알까?</a></div></nav>
-
       <article class="card" id="card-is2-sun-fusion">
         <header class="card-head">
-          <span class="no">3.5.2</span><h2>태양은 무엇을 태워서 빛날까?</h2><span class="kind">핵융합 · 질량 결손 · 수명 계산</span>
+          <span class="no">3.5.1</span><h2>태양은 무엇을 태워서 빛날까?</h2><span class="kind">핵융합 · 질량 결손 · 수명 계산</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -150,7 +106,7 @@
 
       <article class="card" id="card-is1-fusion">
         <header class="card-head">
-          <span class="no">3.5.3</span><h2>별은 왜 철에서 핵융합을 멈출까?</h2><span class="kind">핵융합 단계 · 핵자당 결합 에너지</span>
+          <span class="no">3.5.2</span><h2>별은 왜 철에서 핵융합을 멈출까?</h2><span class="kind">핵융합 단계 · 핵자당 결합 에너지</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -196,7 +152,7 @@
 
       <article class="card" id="card-is1-spectrum">
         <header class="card-head">
-          <span class="no">3.5.4</span><h2>별빛에서 원소를 어떻게 읽을까?</h2><span class="kind">선 스펙트럼 · 방출과 흡수 · 맞추기</span>
+          <span class="no">3.5.3</span><h2>별빛에서 원소를 어떻게 읽을까?</h2><span class="kind">선 스펙트럼 · 방출과 흡수 · 맞추기</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -229,8 +185,8 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>태양까지 가 보지 않고도, 태양에 나트륨과 철이 있다는 것을 어떻게 알 수 있을까요?</li>
-            <li><span class="tag">복원</span>원자 속 전자는 정해진 에너지 준위에만 있을 수 있습니다. 전자가 준위 사이를 옮겨 갈 때, 두 준위의 차이만큼 에너지를 가진 빛을 내거나 흡수합니다. 빛의 에너지와 파장은 <span class="formula">E = hc / λ</span>로 이어져 있습니다.</li>
-            <li><span class="tag">설명</span>원소마다 준위의 간격이 다르므로 선이 생기는 파장도 다릅니다. 뜨거운 기체는 그 파장에서 밝은 선(방출선)을 내고, 연속광이 차가운 기체를 지나오면 <em>같은 파장</em>이 빠져 어두운 선(흡수선)이 됩니다. 선의 배열은 원소의 지문입니다.</li>
+            <li><span class="tag">복원</span>햇빛을 프리즘에 통과시키면 빨강부터 보라까지 무지개 색의 띠로 나뉩니다(중학교). 빛의 색은 파장에 따라 정해지고, 파장이 짧을수록 빛 알갱이 하나의 에너지가 큽니다.</li>
+            <li><span class="tag">설명</span>원자 속 전자는 아무 에너지나 가질 수 없고, 정해진 몇 가지 값(<em>에너지 준위</em>)에만 있을 수 있습니다. 전자가 준위 사이를 옮겨 갈 때, 두 준위의 차이만큼 에너지를 가진 빛을 내거나 흡수합니다(빛의 에너지와 파장: <span class="formula">E = hc / λ</span>). 원소마다 준위의 간격이 다르므로 선이 생기는 파장도 다릅니다. 뜨거운 기체는 그 파장에서 밝은 선(방출선)을 내고, 연속광이 차가운 기체를 지나오면 <em>같은 파장</em>이 빠져 어두운 선(흡수선)이 됩니다. 선의 배열은 원소의 지문입니다.</li>
             <li><span class="tag">연결</span>태양 안쪽에서 나온 연속광이 바깥 대기를 지나면서 일부 파장을 빼앗깁니다. 1814년 프라운호퍼가 이 검은 선들을 꼼꼼히 기록했고, 1859년 키르히호프와 분젠이 실험실 불꽃의 방출선과 위치가 같다는 것을 보여 그 원인을 밝혔습니다.</li>
             <li><span class="tag">적용</span>‘태양’을 고르고 원소를 하나씩 켜 보세요. 기준 선이 모두 관측 선과 겹치는 원소는 무엇인가요? 맞는 원소를 다 켜도 설명되지 않는 선이 하나 남습니다. 그다음 ‘미지의 방전관’에 든 기체 두 가지를 찾아보세요.</li>
             <li class="warn"><span class="tag">판단</span>남는 686.7 nm 선은 태양이 아니라 <em>지구 대기의 산소 분자</em>가 만든 선입니다. 흡수선은 빛이 지나온 길 전체의 기록이라, 어디서 흡수됐는지까지 따져야 합니다. 거꾸로, 선이 안 보인다고 원소가 없는 것도 아닙니다. 태양 표면 온도에서 헬륨은 가시광 흡수선을 거의 만들지 않아서, 1868년 일식 때 태양 가장자리의 방출선(587.6 nm)으로 처음 발견되었습니다.</li>
@@ -246,7 +202,52 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-1.html#card-is1-bbn"><small class="mono">통합과학1 2.1</small>우주는 왜 대부분 수소와 헬륨일까?</a><a href="../../c/phy/3-4.html#card-phy-lm-hyd"><small class="mono">물리학 3.4</small>수소는 왜 몇 가지 색의 빛만 낼까?</a><a href="../../c/phy/3-4.html#card-phy-prism"><small class="mono">물리학 3.4</small>프리즘은 하얀빛 속에 숨은 무지개를 어떻게 꺼낼까?</a><a href="../../c/earth/3-2.html#card-earth-blackbody"><small class="mono">지구과학 3.2</small>별의 색으로 온도를 어떻게 알까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-1.html#card-is1-bbn"><small class="mono">통합과학1 2.1</small>우주는 왜 대부분 수소와 헬륨일까?</a><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/phy/3-5.html#card-phy-lm-bands"><small class="mono">물리학 3.5</small>규소는 도체일까, 절연체일까?</a><a href="../../c/is2/2-6.html#card-is2-solar-cell"><small class="mono">통합과학2 2.6</small>태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-emq-star-spectrum">
+        <header class="card-head">
+          <span class="no">3.5.4</span><h2>별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?</h2><span class="kind">별의 흡수 스펙트럼 · 분광형</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="별의 표면 온도에 따른 가시광선 흡수 스펙트럼과 세기 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="별 예시">
+                <button type="button" class="chip" data-t="3300">베텔게우스 (M)</button>
+                <button type="button" class="chip" data-t="5800">태양 (G)</button>
+                <button type="button" class="chip" data-t="9900">시리우스 (A)</button>
+                <button type="button" class="chip" data-t="22000">스피카 (B)</button>
+              </div>
+              <label class="mono">표면 온도 = <output class="t-out">5800</output> K</label>
+              <input class="t" type="range" min="3.45" max="4.5" step="0.005" value="3.763" aria-label="표면 온도 (로그 눈금)">
+              <dl class="nums">
+                <div><dt>분광형</dt><dd class="n-c">—</dd></div>
+                <div><dt>가장 센 복사의 파장 (빈 법칙)</dt><dd class="n-w">—</dd></div>
+                <div><dt>두드러진 흡수선</dt><dd class="n-l">—</dd></div>
+              </dl>
+              <p class="fig-note">흡수선의 위치는 실제 파장이고, 세기의 온도 변화는 경향만 보인 모식입니다. 연속 스펙트럼은 흑체 복사로 계산했습니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>태양 빛을 분광기로 펼치면 무지개 속에 검은 선이 수천 개 있습니다(프라운호퍼선). 수소는 우주에서 가장 흔한 원소인데, 태양 스펙트럼의 수소선은 시리우스보다 훨씬 약합니다. 태양에 수소가 적은 걸까요?</li>
+            <li><span class="tag">복원</span>원자는 에너지 준위 차이에 해당하는 파장의 빛만 흡수하거나 방출하므로, 선의 위치는 원소마다 다른 지문입니다(선 스펙트럼). 뜨거운 물체일수록 짧은 파장에서 가장 밝습니다(빈 법칙).</li>
+            <li><span class="tag">설명</span>별의 중심에서는 수소 원자핵 네 개가 헬륨 원자핵 하나로 바뀌는 <em>수소 핵융합</em>이 일어나며, 줄어든 질량이 에너지(E = mc²)로 나옵니다. 이 에너지는 오랜 시간에 걸쳐 표면으로 전달되어 흑체에 가까운 연속 스펙트럼으로 방출되고, 그 빛이 더 차가운 바깥 대기를 지나면서 원소들이 특정 파장을 흡수해 <em>흡수선</em>이 생깁니다. 흡수선의 세기는 원소의 양뿐 아니라 온도에 크게 좌우됩니다. 수소 발머선은 전자가 둘째 준위에 있어야 생기는데, 약 1만 K에서 가장 많고, 더 차가우면 대부분 바닥 상태에, 더 뜨거우면 이온화되어 버립니다.</li>
+            <li><span class="tag">연결</span>그래서 별을 흡수선의 모습으로 O, B, A, F, G, K, M으로 나누는 <em>분광형</em>은 곧 표면 온도의 순서입니다. 뜨거운 O·B형에는 헬륨선, A형에는 수소선, G·K형에는 칼슘·철 같은 금속선, 차가운 M형에는 산화 타이타늄 같은 분자띠가 두드러집니다. 1925년 세실리아 페인은 이 온도 효과를 고려해 별이 대부분 수소와 헬륨으로 이루어졌음을 밝혔습니다.</li>
+            <li><span class="tag">적용</span>온도를 3000 K에서 30000 K까지 올리며 수소선(Hα, Hβ)이 언제 가장 진해지는지 보세요. 태양(5800 K)에서 가장 두드러진 선은 무엇인가요? 스펙트럼 색의 밝기 분포는 온도에 따라 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>“흡수선이 약하면 그 원소가 적다”는 판단은 틀릴 수 있습니다. 태양에도 수소가 약 73 %(질량)나 있지만 온도 때문에 발머선이 약합니다. 원소의 양을 구하려면 온도와 압력에 따른 원자의 상태를 함께 계산해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">어떤 별의 스펙트럼에 헬륨 흡수선이 뚜렷하고 금속선은 거의 없습니다. 이 별에 대해 가장 알맞은 추론은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>표면 온도가 매우 높은 O형이나 B형 별이다<span class="why"><b>맞습니다.</b> 헬륨선은 약 2만 K 이상에서 강하고, 금속은 이런 온도에서 대부분 이온화되어 가시광선 흡수선이 약합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>금속 원소가 전혀 없는 별이다<span class="why"><b>선이 약한 것은 주로 온도 때문입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>표면 온도가 낮은 M형 별이다<span class="why"><b>M형에는 분자띠와 금속선이 두드러집니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/2-4.html#text-is2-sun-path"><small class="mono">통합과학2 2.4</small>바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?</a><a href="../../c/earth/3-2.html#card-earth-blackbody"><small class="mono">지구과학 3.2</small>별의 색으로 온도를 어떻게 알까?</a></div></nav>
 
       <article class="card" id="card-phy-lm-spec">
         <header class="card-head">
@@ -280,7 +281,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>네온사인은 주황빛, 옛 나트륨 가로등은 노란빛입니다. 빛만 보고 무엇이 빛나는지 알 수 있을까요? 수백 광년 떨어진 별이 무엇으로 되어 있는지는요?</li>
-            <li><span class="tag">복원</span>앞 카드에서 원자가 내는 빛의 파장은 에너지 준위 사이의 차이로 정해졌습니다.</li>
+            <li><span class="tag">복원</span>원자가 내는 빛의 파장은 에너지 준위 사이의 차이로 정해졌습니다.</li>
             <li><span class="tag">설명</span>원소마다 원자핵의 전하와 전자 수가 달라 에너지 준위가 다르고, 그래서 선의 위치도 다릅니다. 선 스펙트럼은 원소마다 다른 지문입니다. 네온은 빨강·주황 선이 많아 주황빛으로, 나트륨은 589 nm 근처의 두 선이 강해 노란빛으로 보입니다.</li>
             <li><span class="tag">연결</span>차가운 기체는 자신이 내는 것과 같은 파장의 빛을 흡수합니다. 그래서 햇빛에는 어두운 선(흡수선)이 있고, 이것을 원소의 지문과 맞추면 태양 대기의 성분을 알 수 있습니다. 헬륨은 1868년 일식 때 태양 빛에서 587.6 nm 선으로 먼저 발견되었고, 지구에서는 1895년에야 찾았습니다.</li>
             <li><span class="tag">적용</span>‘수수께끼 방전관’을 고르고 후보 원소를 하나씩 켜 보세요. 관측선을 모두 설명하는 조합은 무엇인가요? 587.6 nm 선은 나트륨의 589 nm 선과 같은 선일까요? 햇빛에서도 찾아보세요.</li>
@@ -297,13 +298,17 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/phy/3-5.html#card-phy-lm-bands"><small class="mono">물리학 3.5</small>규소는 도체일까, 절연체일까?</a><a href="../../c/earth/3-2.html#card-earth-spectral"><small class="mono">지구과학 3.2</small>별빛의 흡수선으로 무엇을 알 수 있을까?</a><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a><a href="../../c/labchem/2-1.html#card-labchem-spectrum"><small class="mono">화학 실험 2.1</small>분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?</a><a href="../../c/adphy/4-5.html#card-adphy-well"><small class="mono">고급 물리학 4.5</small>상자에 갇힌 전자는 왜 아무 에너지나 가질 수 없을까?</a></div></nav>
 
       <a class="px-go" href="../../practice.html?sec=emq-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">90문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -312,10 +317,10 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/emq/q-starspec.js"></script>
 <script src="../../js/cards/is2/e-sun-fusion.js"></script>
 <script src="../../js/cards/is1/m-fusion.js"></script>
 <script src="../../js/cards/is1/m-spectrum.js"></script>
+<script src="../../js/cards/emq/q-starspec.js"></script>
 <script src="../../js/cards/phy/lm-spectra.js"></script>
 </body>
 </html>

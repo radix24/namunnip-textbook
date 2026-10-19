@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
   <style>
+    #card-is1-sensor canvas { aspect-ratio: 4 / 3; }
     #card-labphy-logger .lg-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0; }
     #card-labphy-logger .lg-row .mono { min-width: 6.5em; }
     #card-labphy-logger .lg-truth { font-size: 12px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 4px; margin-left: 4px; }
-    #card-is1-sensor canvas { aspect-ratio: 4 / 3; }
   </style>
 </head>
 <body data-course="labphy" data-sec="1-4">
@@ -44,66 +44,20 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-labphy-logger"><span class="mono">1.4.1</span>센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?</a></li>
-        <li><a href="#card-is1-sampling"><span class="mono">1.4.2</span>소리는 어떻게 숫자가 될까?</a></li>
-        <li><a href="#card-is1-sensor"><span class="mono">1.4.3</span>온도계는 정말 온도를 잴까?</a></li>
+        <li><a href="#card-is1-sampling"><span class="mono">1.4.1</span>소리는 어떻게 숫자가 될까?</a></li>
+        <li><a href="#card-is1-sensor"><span class="mono">1.4.2</span>온도계는 정말 온도를 잴까?</a></li>
+        <li><a href="#card-labphy-logger"><span class="mono">1.4.3</span>센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?</a></li>
         <li><a href="#card-sie2-calib"><span class="mono">1.4.4</span>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=labphy-1-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=labphy-1-4">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
-      <article class="card" id="card-labphy-logger">
-        <header class="card-head">
-          <span class="no">1.4.1</span><h2>센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?</h2><span class="kind">실험 · 운동 센서 · 표본화 빈도 · ADC 분해능</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="용수철에 매달려 위아래로 진동하는 추, 그 아래의 초음파 운동 센서, 기록된 거리–시간 그래프"></canvas>
-            <div class="ctl">
-              <div><label class="mono">추 질량 m = <output class="m-out">250</output> g</label>
-                <input class="m" type="range" min="100" max="500" step="50" value="250" aria-label="추 질량"></div>
-              <div class="lg-row fs" role="group" aria-label="표본화 빈도">
-                <span class="mono small dim">표본화 빈도</span>
-                <button class="chip" data-fs="1" aria-pressed="false">1</button><button class="chip" data-fs="1.5" aria-pressed="false">1.5</button><button class="chip" data-fs="2" aria-pressed="false">2</button><button class="chip" data-fs="2.5" aria-pressed="false">2.5</button><button class="chip" data-fs="3" aria-pressed="false">3</button><button class="chip" data-fs="4" aria-pressed="false">4</button><button class="chip" data-fs="5" aria-pressed="false">5</button><button class="chip" data-fs="10" aria-pressed="true">10</button><span class="mono small dim">Hz</span>
-              </div>
-              <div class="lg-row bits" role="group" aria-label="ADC 비트 수">
-                <span class="mono small dim">ADC 비트</span>
-                <button class="chip" data-b="6" aria-pressed="false">6</button><button class="chip" data-b="8" aria-pressed="false">8</button><button class="chip" data-b="10" aria-pressed="true">10</button><button class="chip" data-b="12" aria-pressed="false">12</button>
-                <label class="lg-truth"><input type="checkbox" class="truth">실제 운동 겹쳐 보기</label>
-              </div>
-              <div class="lab-btns"><button class="chip go rec" type="button">10초 동안 기록</button><button class="chip clear" type="button">기록 지우기</button></div>
-              <dl class="nums"><div><dt>분해능 (1 LSB)</dt><dd class="n-lsb">—</dd></div><div><dt>표본 수 / 10 s</dt><dd class="n-n">—</dd></div><div><dt>나이퀴스트 진동수</dt><dd class="n-ny">—</dd></div></dl>
-              <div class="tbl-host"></div>
-              <canvas class="cv-plot" aria-label="표본화 빈도에 따른 기록 자료의 겉보기 진동수 그래프"></canvas>
-              <p class="fig-note">초음파 센서의 측정 범위는 0.15~4.00 m이고, 이 범위를 ADC 비트 수만큼의 단계로 나눠 기록합니다. 거리 자체의 우연 오차는 약 ±1 mm입니다. 표의 겉보기 주기는 기록된 점들이 평균선을 위로 지나는 시각 사이 간격의 평균입니다. 기록 10초 동안 두 번 이상 지나지 않으면 "—"로 표시합니다. 용수철 상수는 화면에 나타나지 않습니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">탐구 문제</span>운동 센서를 컴퓨터에 연결하면 거리–시간 그래프가 저절로 그려집니다. 그런데 이 그래프는 언제나 실제 운동을 보여 줄까요? 센서가 얼마나 자주, 얼마나 잘게 재야 용수철 진자의 주기를 믿을 수 있게 기록할 수 있을까요?</li>
-            <li><span class="tag">복원</span>센서는 물리량을 전압으로 바꾸고, 인터페이스의 <em>ADC</em>(아날로그–디지털 변환기)가 그 전압을 정해진 시간 간격마다 정수로 바꿉니다. 1초에 재는 횟수가 <em>표본화 빈도</em> f<sub>s</sub>, 나눌 수 있는 단계 수가 2<sup>n</sup>(n비트)입니다. 측정 범위를 2<sup>n</sup>으로 나눈 값(1 LSB)이 기록의 분해능입니다.</li>
-            <li><span class="tag">설계</span>추를 아래로 6 cm쯤 당겼다 놓고, 바로 아래 바닥에 둔 초음파 센서로 추까지의 거리를 10초 동안 기록합니다. 조작 변인은 표본화 빈도와 ADC 비트 수, 통제 변인은 추 질량과 진폭입니다. 종속 변인은 기록된 그래프에서 구한 겉보기 주기와 진폭입니다.</li>
-            <li><span class="tag">분석</span>주기적인 신호를 제대로 기록하려면 표본화 빈도가 신호 진동수의 2배보다 커야 합니다(<em>나이퀴스트 조건</em>, f &lt; f<sub>s</sub>/2). 이 조건을 어기면 실제보다 훨씬 느린 가짜 진동이 기록되는데, 이것을 <em>에일리어싱</em>이라고 합니다. 겉보기 진동수는 |f − k·f<sub>s</sub>| 꼴(k는 정수)이 됩니다. 그래프에서 점선(f<sub>s</sub>/2) 아래로 떨어지는 점들을 찾아보세요.</li>
-            <li><span class="tag">측정</span>10 Hz, 10비트로 먼저 기록해 주기를 구하세요. 그다음 표본화 빈도를 5, 3, 2.5, 2, 1.5, 1 Hz로 낮춰 가며 기록하고, "실제 운동 겹쳐 보기"로 확인하세요. 마지막으로 10 Hz에서 비트 수를 6으로 낮추면 그래프와 진폭이 어떻게 달라지나요?</li>
-            <li class="warn"><span class="tag">오차·안전</span>표본화 빈도가 낮으면 아무리 정밀한 센서도 엉뚱한 주기를 기록합니다(계통 오차). 반대로 너무 높이면 자료만 많아지고 정밀도는 센서 잡음에 묶입니다. 진동수의 10배 이상이면 모양까지 잘 보입니다. 초음파 센서 앞 15 cm 안쪽은 잴 수 없고, 다른 물체나 옆 모둠의 센서에서 반사된 소리가 섞이면 튀는 값이 생깁니다. 추가 떨어지지 않게 고리를 단단히 걸고, 센서 바로 위로 추가 떨어질 수 있으니 진폭을 크게 하지 않습니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">진동수 3.0 Hz로 진동하는 물체를 운동 센서로 표본화 빈도 4 Hz로 기록했습니다. 그래프에 나타나는 진동수는?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3.0 Hz<span class="why"><b>나이퀴스트 조건을 어겼습니다.</b> 4 Hz로 재면 2 Hz보다 빠른 진동은 제대로 기록되지 않습니다. 표본화 빈도가 신호보다 크기만 하면 된다고 생각하기 쉽습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1.0 Hz<span class="why"><b>맞습니다.</b> 겉보기 진동수는 |3.0 − 1×4| = 1.0 Hz입니다. 실제보다 느린 가짜 진동(에일리어싱)이 기록됩니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>7.0 Hz<span class="why"><b>더하는 쪽은 기록될 수 없습니다.</b> 4 Hz로 잰 자료에는 2 Hz보다 빠른 진동이 나타날 수 없습니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a></div></nav>
-
       <article class="card" id="card-is1-sampling">
         <header class="card-head">
-          <span class="no">1.4.2</span><h2>소리는 어떻게 숫자가 될까?</h2><span class="kind">아날로그–디지털 변환 · 표본화 · 양자화</span>
+          <span class="no">1.4.1</span><h2>소리는 어떻게 숫자가 될까?</h2><span class="kind">아날로그–디지털 변환 · 표본화 · 양자화</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -154,7 +108,7 @@
 
       <article class="card" id="card-is1-sensor">
         <header class="card-head">
-          <span class="no">1.4.3</span><h2>온도계는 정말 온도를 잴까?</h2><span class="kind">센서 · 서미스터 · 전압 나눔 · ADC</span>
+          <span class="no">1.4.2</span><h2>온도계는 정말 온도를 잴까?</h2><span class="kind">센서 · 서미스터 · 전압 나눔 · ADC</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -196,6 +150,53 @@
         </div>
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a><a href="../../c/is2/3-3.html#card-is2-robot-design"><small class="mono">통합과학2 3.3</small>생활 로봇이 할 일을 하려면 어떤 감각과 손발이 필요할까?</a></div></nav>
+
+      <article class="card" id="card-labphy-logger">
+        <header class="card-head">
+          <span class="no">1.4.3</span><h2>센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?</h2><span class="kind">실험 · 운동 센서 · 표본화 빈도 · ADC 분해능</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="용수철에 매달려 위아래로 진동하는 추, 그 아래의 초음파 운동 센서, 기록된 거리–시간 그래프"></canvas>
+            <div class="ctl">
+              <div><label class="mono">추 질량 m = <output class="m-out">250</output> g</label>
+                <input class="m" type="range" min="100" max="500" step="50" value="250" aria-label="추 질량"></div>
+              <div class="lg-row fs" role="group" aria-label="표본화 빈도">
+                <span class="mono small dim">표본화 빈도</span>
+                <button class="chip" data-fs="1" aria-pressed="false">1</button><button class="chip" data-fs="1.5" aria-pressed="false">1.5</button><button class="chip" data-fs="2" aria-pressed="false">2</button><button class="chip" data-fs="2.5" aria-pressed="false">2.5</button><button class="chip" data-fs="3" aria-pressed="false">3</button><button class="chip" data-fs="4" aria-pressed="false">4</button><button class="chip" data-fs="5" aria-pressed="false">5</button><button class="chip" data-fs="10" aria-pressed="true">10</button><span class="mono small dim">Hz</span>
+              </div>
+              <div class="lg-row bits" role="group" aria-label="ADC 비트 수">
+                <span class="mono small dim">ADC 비트</span>
+                <button class="chip" data-b="6" aria-pressed="false">6</button><button class="chip" data-b="8" aria-pressed="false">8</button><button class="chip" data-b="10" aria-pressed="true">10</button><button class="chip" data-b="12" aria-pressed="false">12</button>
+                <label class="lg-truth"><input type="checkbox" class="truth">실제 운동 겹쳐 보기</label>
+              </div>
+              <div class="lab-btns"><button class="chip go rec" type="button">10초 동안 기록</button><button class="chip clear" type="button">기록 지우기</button></div>
+              <dl class="nums"><div><dt>분해능 (1 LSB)</dt><dd class="n-lsb">—</dd></div><div><dt>표본 수 / 10 s</dt><dd class="n-n">—</dd></div><div><dt>나이퀴스트 진동수</dt><dd class="n-ny">—</dd></div></dl>
+              <div class="tbl-host"></div>
+              <canvas class="cv-plot" aria-label="표본화 빈도에 따른 기록 자료의 겉보기 진동수 그래프"></canvas>
+              <p class="fig-note">초음파 센서의 측정 범위는 0.15~4.00 m이고, 이 범위를 ADC 비트 수만큼의 단계로 나눠 기록합니다. 거리 자체의 우연 오차는 약 ±1 mm입니다. 표의 겉보기 주기는 기록된 점들이 평균선을 위로 지나는 시각 사이 간격의 평균입니다. 기록 10초 동안 두 번 이상 지나지 않으면 "—"로 표시합니다. 용수철 상수는 화면에 나타나지 않습니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">탐구 문제</span>운동 센서를 컴퓨터에 연결하면 거리–시간 그래프가 저절로 그려집니다. 그런데 이 그래프는 언제나 실제 운동을 보여 줄까요? 센서가 얼마나 자주, 얼마나 잘게 재야 용수철 진자의 주기를 믿을 수 있게 기록할 수 있을까요?</li>
+            <li><span class="tag">복원</span>센서는 물리량을 전압으로 바꾸고, 인터페이스의 <em>ADC</em>(아날로그–디지털 변환기)가 그 전압을 정해진 시간 간격마다 정수로 바꿉니다. 1초에 재는 횟수가 <em>표본화 빈도</em> f<sub>s</sub>, 나눌 수 있는 단계 수가 2<sup>n</sup>(n비트)입니다. 측정 범위를 2<sup>n</sup>으로 나눈 값(1 LSB)이 기록의 분해능입니다.</li>
+            <li><span class="tag">설계</span>추를 아래로 6 cm쯤 당겼다 놓고, 바로 아래 바닥에 둔 초음파 센서로 추까지의 거리를 10초 동안 기록합니다. 조작 변인은 표본화 빈도와 ADC 비트 수, 통제 변인은 추 질량과 진폭입니다. 종속 변인은 기록된 그래프에서 구한 겉보기 주기와 진폭입니다.</li>
+            <li><span class="tag">분석</span>주기적인 신호를 제대로 기록하려면 표본화 빈도가 신호 진동수의 2배보다 커야 합니다(<em>나이퀴스트 조건</em>, f &lt; f<sub>s</sub>/2). 이 조건을 어기면 실제보다 훨씬 느린 가짜 진동이 기록되는데, 이것을 <em>에일리어싱</em>이라고 합니다. 겉보기 진동수는 |f − k·f<sub>s</sub>| 꼴(k는 정수)이 됩니다. 그래프에서 점선(f<sub>s</sub>/2) 아래로 떨어지는 점들을 찾아보세요.</li>
+            <li><span class="tag">측정</span>10 Hz, 10비트로 먼저 기록해 주기를 구하세요. 그다음 표본화 빈도를 5, 3, 2.5, 2, 1.5, 1 Hz로 낮춰 가며 기록하고, "실제 운동 겹쳐 보기"로 확인하세요. 마지막으로 10 Hz에서 비트 수를 6으로 낮추면 그래프와 진폭이 어떻게 달라지나요?</li>
+            <li class="warn"><span class="tag">오차·안전</span>표본화 빈도가 낮으면 아무리 정밀한 센서도 엉뚱한 주기를 기록합니다(계통 오차). 반대로 너무 높이면 자료만 많아지고 정밀도는 센서 잡음에 묶입니다. 진동수의 10배 이상이면 모양까지 잘 보입니다. 초음파 센서 앞 15 cm 안쪽은 잴 수 없고, 다른 물체나 옆 모둠의 센서에서 반사된 소리가 섞이면 튀는 값이 생깁니다. 추가 떨어지지 않게 고리를 단단히 걸고, 센서 바로 위로 추가 떨어질 수 있으니 진폭을 크게 하지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">진동수 3.0 Hz로 진동하는 물체를 운동 센서로 표본화 빈도 4 Hz로 기록했습니다. 그래프에 나타나는 진동수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3.0 Hz<span class="why"><b>나이퀴스트 조건을 어겼습니다.</b> 4 Hz로 재면 2 Hz보다 빠른 진동은 제대로 기록되지 않습니다. 표본화 빈도가 신호보다 크기만 하면 된다고 생각하기 쉽습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1.0 Hz<span class="why"><b>맞습니다.</b> 겉보기 진동수는 |3.0 − 1×4| = 1.0 Hz입니다. 실제보다 느린 가짜 진동(에일리어싱)이 기록됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>7.0 Hz<span class="why"><b>더하는 쪽은 기록될 수 없습니다.</b> 4 Hz로 잰 자료에는 2 Hz보다 빠른 진동이 나타날 수 없습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a></div></nav>
 
       <article class="card" id="card-sie2-calib">
         <header class="card-head">
@@ -249,6 +250,10 @@
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -257,11 +262,10 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/lib/lab.js"></script>
-<script src="../../js/cards/labphy/logger.js"></script>
 <script src="../../js/cards/is1/sampling.js"></script>
 <script src="../../js/cards/is1/thermistor.js"></script>
 <script src="../../js/lib/lab.js"></script>
+<script src="../../js/cards/labphy/logger.js"></script>
 <script src="../../js/cards/sie2/calib.js"></script>
 </body>
 </html>

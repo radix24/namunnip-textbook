@@ -1,0 +1,215 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>회전체의 부피와 겉넓이 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="회전체의 부피(원판으로 쌓기)와 겉넓이(원뿔대 띠). 단면을 끌어 꽃병을 디자인하고 부피와 겉넓이를 구하는 카드, 겉넓이에 dx가 아니라 ds를 써야 하는 이유, 부피는 유한하고 겉넓이는 무한한 가브리엘의 나팔.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-vase canvas { aspect-ratio: 1 / 1; max-width: 400px; margin: 0 auto; display: block; }
+    #card-adcalc-band-area canvas { aspect-ratio: 16 / 10; }
+    #card-adcalc-gabriel canvas { aspect-ratio: 16 / 11.5; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="1-6">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>회전체의 부피와 겉넓이</h1>
+    <p class="lead">곡선을 축 둘레로 돌리면 회전체가 생깁니다. 부피는 얇은 원판을 쌓아 \(\int \pi y^2\,dx\)로 구합니다. 겉넓이는 조금 더 조심해야 합니다. 얇은 원기둥 띠로 쌓으면 기울어진 옆면을 무시하게 되어 틀린 값이 나옵니다. 이 절에서는 직접 디자인한 꽃병의 부피와 겉넓이를 구하고, 겉넓이 공식에 곡선의 길이 요소가 들어가는 이유를 구로 확인하고, 페인트로 채울 수는 있지만 칠할 수는 없다는 가브리엘의 나팔을 살펴봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/3-6.html#card-calc2-cross-section" title="미적분Ⅱ 3.6 · 얇게 썬 조각을 모으면 부피를 구할 수 있을까?">입체도형의 부피</a><a class="p p-card" href="../../c/calc2/3-6.html#card-calc2-cross-section" title="미적분Ⅱ 3.6 · 얇게 썬 조각을 모으면 부피를 구할 수 있을까?">기둥과 뿔의 부피</a><a class="p p-card" href="../../c/calc2/3-4.html#card-calc2-sum-read" title="미적분Ⅱ 3.4 · 항이 n개인 합의 극한을 넓이로 읽을 수 있을까?">정적분과 급수의 합</a><a class="p p-card" href="../../c/calc2/3-7.html#card-calc2-path-length" title="미적분Ⅱ 3.7 · 평면 위를 움직인 점은 얼마나 먼 길을 갔을까?">곡선의 길이</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-vase"><span class="mono">1.6.1</span>1 L 꽃병 디자인하기</a></li>
+        <li><a href="#card-adcalc-band-area"><span class="mono">1.6.2</span>구의 겉넓이를 띠로 어림하기</a></li>
+        <li><a href="#card-adcalc-gabriel"><span class="mono">1.6.3</span>가브리엘의 나팔</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adcalc-1-6"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-1-6">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-vase">
+        <header class="card-head">
+          <span class="no">1.6.1</span><h2>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</h2><span class="kind">회전체의 부피와 겉넓이 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="높이 30 cm인 꽃병의 옆모습. 오른쪽 윤곽의 점 다섯 개를 좌우로 끌어 모양을 바꾼다. 꽃병을 얇은 원판으로 잘라 쌓은 모습이 겹쳐 보인다"></canvas>
+            <div class="ctl">
+              <label class="mono">원판 수 \(n\) = <output class="n-out">8</output></label>
+              <input class="sn" type="range" min="2" max="60" step="1" value="8" aria-label="원판의 수">
+              <div class="presets">
+                <button class="chip" type="button" data-p="cyl">원기둥</button>
+                <button class="chip" type="button" data-p="vase">항아리</button>
+                <button class="chip" type="button" data-p="cone">원뿔</button>
+              </div>
+              <dl class="nums n4">
+                <div><dt>원판 \(n\)개의 부피</dt><dd class="n-d">—</dd></div>
+                <div><dt>부피 \(\int\pi r^2\,dh\)</dt><dd class="n-v">—</dd></div>
+                <div><dt>옆넓이</dt><dd class="n-s">—</dd></div>
+                <div><dt>목표 1 L와의 차</dt><dd class="n-t">—</dd></div>
+              </dl>
+              <p class="fig-note">윤곽의 점 다섯 개(높이 0, 7.5, 15, 22.5, 30 cm)를 끌면 그 사이를 매끄러운 곡선으로 잇습니다. 옆넓이는 바닥을 빼고 잽니다. 1 L = 1000 cm³.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>도자기 공방에서 높이 30 cm, 정확히 1 L가 들어가는 꽃병을 주문받았습니다. 물레 위에서 돌려 만드는 꽃병은 옆모습 곡선 하나로 모양이 정해집니다. 그 곡선만 보고 부피를 미리 계산할 수 있을까요?</li>
+            <li><span class="tag">복원</span>입체를 축에 수직으로 자른 단면의 넓이가 \(S(h)\)이면 부피는 \(\int_a^b S(h)\,dh\)입니다. 반지름 \(r\)인 원의 넓이는 \(\pi r^2\)입니다.</li>
+            <li><span class="tag">설명</span>곡선 \(r = f(h)\)를 축 둘레로 돌린 <em>회전체</em>는 높이 \(h\)에서 자른 단면이 반지름 \(f(h)\)인 원이므로 \[V = \int_a^b \pi\{f(h)\}^2\,dh\]입니다. 그림의 원판 \(n\)개는 이 적분의 구분구적 근삿값이고, \(n\)을 늘리면 적분값으로 다가갑니다. 겉의 옆넓이는 \(S = \int_a^b 2\pi f(h)\sqrt{1 + \{f'(h)\}^2}\,dh\)입니다. 다음 카드에서 이 식에 \(\sqrt{1 + \{f'\}^2}\)가 들어가는 이유를 봅니다.</li>
+            <li><span class="tag">연결</span>부피는 단면의 넓이, 곧 반지름의 <b>제곱</b>으로 정해지므로, 넓은 곳을 조금 더 넓히는 것이 좁은 곳을 넓히는 것보다 부피를 훨씬 많이 늘립니다. 유리병, 컵, 회전하는 기계 부품의 부피와 재료량도 같은 방법으로 계산합니다.</li>
+            <li><span class="tag">적용</span>원판 수를 늘려 원판 부피가 적분값에 다가가는지 보세요. 그다음 점을 끌어 부피가 1 L ± 2 %가 되는 꽃병을 만드세요. 같은 1 L라도 옆넓이(겉에 바를 유약의 양)가 가장 작은 모양은 어떤 모양인가요?</li>
+            <li class="warn"><span class="tag">판단</span>원판으로 부피를 어림하는 것은 잘 맞지만, 원기둥 띠로 겉넓이를 어림하면 기울어진 옆면을 무시해 값이 작게 나옵니다. 또 실제 꽃병은 벽에 두께가 있으므로, 안에 들어가는 양은 안쪽 곡선으로 계산해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">곡선 \(r = \sqrt{h}\ (0 \le h \le 4)\)를 \(h\)축 둘레로 돌린 회전체의 부피는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(8\pi\)<span class="why"><b>맞습니다.</b> \(\int_0^4\pi(\sqrt{h})^2dh = \pi\left[\frac{h^2}{2}\right]_0^4 = 8\pi\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{16\pi}{3}\)<span class="why"><b>제곱하지 않고 \(\pi\sqrt{h}\)를 적분했습니다.</b> 단면은 반지름이 \(\sqrt{h}\)인 원이라 넓이는 \(\pi h\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(16\pi\)<span class="why"><b>반지름 2인 원기둥의 부피입니다.</b> 위로 갈수록 넓어지는 모양이라 원기둥보다 작습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>8<span class="why"><b>\(\pi\)를 빠뜨렸습니다.</b> 단면이 원이므로 넓이에 \(\pi\)가 들어갑니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-6.html#card-calc2-cross-section"><small class="mono">미적분Ⅱ 3.6</small>얇게 썬 조각을 모으면 부피를 구할 수 있을까?</a><a href="../../c/calc2/3-6.html#card-calc2-cavalieri"><small class="mono">미적분Ⅱ 3.6</small>입체를 비스듬히 밀면 부피가 바뀔까?</a><a href="../../c/calc2/3-7.html#card-calc2-distance-area"><small class="mono">미적분Ⅱ 3.7</small>속도 그래프만 보고 얼마나 움직였는지 알 수 있을까?</a><a href="../../c/calc2/3-7.html#card-calc2-path-length"><small class="mono">미적분Ⅱ 3.7</small>평면 위를 움직인 점은 얼마나 먼 길을 갔을까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-band-area">
+        <header class="card-head">
+          <span class="no">1.6.2</span><h2>구의 겉넓이를 띠로 어림하면 \(4\pi r^2\)이 나올까?</h2><span class="kind">회전체의 겉넓이 · 예측 → 확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="반지름 1인 구의 옆모습을 n개의 띠로 나눈 그림. 왼쪽은 원기둥 띠(계단 모양), 오른쪽은 원뿔대 띠(꺾은선 모양)"></canvas>
+            <div class="ctl">
+              <p class="mono small">먼저 예측하세요. 띠를 아주 많이 하면 어느 방법이 \(4\pi \approx 12.566\)에 다가갈까요?</p>
+              <div class="presets guess">
+                <button class="chip" type="button" data-g="cyl">원기둥 띠</button>
+                <button class="chip" type="button" data-g="fru">원뿔대 띠</button>
+                <button class="chip" type="button" data-g="both">둘 다</button>
+              </div>
+              <p class="verdict" role="status"></p>
+              <label class="mono">띠의 수 \(n\) = <output class="n-out">6</output></label>
+              <input class="sn" type="range" min="2" max="200" step="1" value="6" aria-label="띠의 수" disabled>
+              <dl class="nums">
+                <div><dt>원기둥 띠 \(\sum 2\pi y\,\Delta x\)</dt><dd class="n-c">?</dd></div>
+                <div><dt>원뿔대 띠 \(\sum 2\pi \bar y\,\Delta s\)</dt><dd class="n-f">?</dd></div>
+                <div><dt>\(4\pi\)</dt><dd>12.566</dd></div>
+              </dl>
+              <p class="fig-note">예측을 고르면 띠의 수 막대가 풀립니다. \(\bar y\)는 띠 양 끝 반지름의 평균, \(\Delta s\)는 띠의 비스듬한 폭입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>부피는 얇은 원판(원기둥)을 쌓아 구했습니다. 겉넓이도 얇은 원기둥 띠의 옆넓이 \(2\pi y\,\Delta x\)를 더해서 구하면 될까요?</li>
+            <li><span class="tag">복원</span>반지름이 \(r_1, r_2\)이고 모선의 길이가 \(\ell\)인 원뿔대의 옆넓이는 \(\pi(r_1 + r_2)\ell\)입니다. 곡선의 짧은 조각의 길이는 \(\Delta s \approx \sqrt{1 + \{f'(x)\}^2}\,\Delta x\)입니다.</li>
+            <li><span class="tag">설명</span>원기둥 띠는 기울어진 옆면을 똑바로 세운 것이라, 아무리 얇게 잘라도 띠의 폭을 \(\Delta x\)로 셉니다. 실제 폭은 비스듬한 길이 \(\Delta s\)이므로 원기둥 띠의 합은 엉뚱한 값 \(\int_{-1}^{1}2\pi\sqrt{1 - x^2}\,dx = \pi^2 \approx 9.87\)로 갑니다. 원뿔대 띠는 폭을 \(\Delta s\)로 바르게 세므로 \(4\pi\)로 다가갑니다. 그래서 회전체의 겉넓이는 \[S = \int_a^b 2\pi f(x)\sqrt{1 + \{f'(x)\}^2}\,dx\]입니다. 구에서는 \(f(x)\sqrt{1 + f'(x)^2} = \sqrt{1 - x^2}\cdot\frac{1}{\sqrt{1 - x^2}} = 1\)이 되어 \(S = \int_{-1}^{1}2\pi\,dx = 4\pi\)입니다.</li>
+            <li><span class="tag">연결</span>부피는 원기둥으로 어림해도 되는 까닭은 원판과 실제 조각의 부피 차이가 \(\Delta x\)보다 훨씬 빨리 0으로 가기 때문입니다. 넓이는 기울기 때문에 생기는 비율 \(\frac{\Delta s}{\Delta x}\)이 사라지지 않습니다. 구의 결과 "같은 폭의 띠는 높이와 상관없이 겉넓이가 같다"는 아르키메데스가 이미 알았던 사실입니다.</li>
+            <li><span class="tag">적용</span>예측을 고른 뒤 띠의 수를 늘려 두 합이 각각 어디로 가는지 보세요. 원기둥 띠의 합이 \(\pi^2\)에 다가가나요? 그림에서 양 끝(극 근처)의 띠는 어느 방법에서 가장 많이 틀리나요?</li>
+            <li class="warn"><span class="tag">판단</span>"근사하는 도형을 잘게 나누면 언제나 참값에 다가간다"는 생각은 틀릴 수 있습니다. 계단 모양 꺾은선의 길이는 아무리 잘게 나누어도 대각선 길이로 다가가지 않는 것과 같은 이유입니다. 근사할 때는 재려는 양(길이, 넓이)이 바르게 근사되는지 따져야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">선분 \(y = x\ (0 \le x \le 1)\)을 \(x\)축 둘레로 돌린 원뿔의 옆넓이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\sqrt{2}\pi\)<span class="why"><b>맞습니다.</b> \(\int_0^1 2\pi x\sqrt{1 + 1}\,dx = \sqrt{2}\pi\)이고, 원뿔 공식 \(\pi r\ell = \pi \cdot 1 \cdot \sqrt{2}\)와 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\pi\)<span class="why"><b>원기둥 띠로 계산했습니다.</b> \(\int_0^1 2\pi x\,dx = \pi\)는 기울어진 폭 \(\sqrt{2}\)를 빠뜨린 값입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{\pi}{3}\)<span class="why"><b>부피를 구했습니다.</b> \(\int_0^1\pi x^2dx = \frac{\pi}{3}\)은 원뿔의 부피입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(2\pi\)<span class="why"><b>\(\sqrt{2}\) 대신 2를 곱했습니다.</b> \(\sqrt{1 + (y')^2} = \sqrt{2}\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-6.html#card-calc2-cross-section"><small class="mono">미적분Ⅱ 3.6</small>얇게 썬 조각을 모으면 부피를 구할 수 있을까?</a><a href="../../c/calc2/3-6.html#card-calc2-cavalieri"><small class="mono">미적분Ⅱ 3.6</small>입체를 비스듬히 밀면 부피가 바뀔까?</a><a href="../../c/calc2/3-7.html#card-calc2-distance-area"><small class="mono">미적분Ⅱ 3.7</small>속도 그래프만 보고 얼마나 움직였는지 알 수 있을까?</a><a href="../../c/calc2/3-7.html#card-calc2-path-length"><small class="mono">미적분Ⅱ 3.7</small>평면 위를 움직인 점은 얼마나 먼 길을 갔을까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-gabriel">
+        <header class="card-head">
+          <span class="no">1.6.3</span><h2>채울 수는 있는데 칠할 수는 없는 나팔이 있을까?</h2><span class="kind">이상적분 · 회전체 · 역설</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="y = 1/x (x ≥ 1)을 x축 둘레로 돌린 나팔 모양 입체. 아래에는 끝 b를 늘릴 때 부피와 겉넓이가 변하는 그래프"></canvas>
+            <div class="ctl">
+              <label class="mono">나팔의 끝 \(b\) = <output class="b-out">10</output></label>
+              <input class="sb" type="range" min="0" max="6" step="0.01" value="1" aria-label="나팔의 끝(로그 눈금)">
+              <dl class="nums">
+                <div><dt>부피 \(\pi\left(1 - \frac{1}{b}\right)\)</dt><dd class="n-v">—</dd></div>
+                <div><dt>겉넓이 (수치)</dt><dd class="n-s">—</dd></div>
+                <div><dt>\(2\pi\ln b\)</dt><dd class="n-l">—</dd></div>
+              </dl>
+              <p class="fig-note">막대는 로그 눈금이라 한 칸마다 \(b\)가 10배가 됩니다. 겉넓이는 \(\int_1^b 2\pi\frac{1}{x}\sqrt{1 + \frac{1}{x^4}}\,dx\)를 수치로 잰 값입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(y = \frac{1}{x}\ (x \ge 1)\)을 \(x\)축 둘레로 돌리면 끝없이 가늘어지는 나팔이 됩니다. 이 나팔의 부피와 겉넓이는 유한할까요?</li>
+            <li><span class="tag">복원</span>회전체의 부피 \(V = \int\pi y^2dx\), 겉넓이 \(S = \int 2\pi y\sqrt{1 + (y')^2}\,dx\). \(\int_1^{\infty}\frac{dx}{x^p}\)은 \(p &gt; 1\)일 때만 수렴합니다.</li>
+            <li><span class="tag">설명</span>부피는 \(\int_1^{\infty}\pi\frac{1}{x^2}dx = \pi\)로 <b>유한</b>합니다. 겉넓이는 \(\sqrt{1 + \frac{1}{x^4}} \ge 1\)이므로 \[S \ge \int_1^{b}\frac{2\pi}{x}\,dx = 2\pi\ln b \to \infty\]로 <b>무한</b>합니다. 지수가 \(p = 2\)인 적분과 \(p = 1\)인 적분의 차이가 그대로 나타난 것입니다. 이 입체를 <em>가브리엘의 나팔</em>(토리첼리의 나팔)이라고 하며, 17세기에 토리첼리가 처음 보였습니다.</li>
+            <li><span class="tag">연결</span>비교판정이 쓰였습니다. 구하기 어려운 \(S\)를 직접 계산하지 않고, 더 작으면서 발산하는 적분 \(2\pi\ln b\)와 비교해 발산을 보였습니다. 3대단원의 급수 판정법도 같은 생각을 씁니다.</li>
+            <li><span class="tag">적용</span>\(b\)를 늘리며 부피와 겉넓이를 보세요. 부피는 \(\pi \approx 3.14\)에서 멈추는데 겉넓이는 어떻게 되나요? \(b = 10^6\)일 때 겉넓이는 \(2\pi\ln b\)와 얼마나 가까운가요?</li>
+            <li class="warn"><span class="tag">판단</span>"페인트 \(\pi\)만큼으로 나팔을 채울 수 있으니 안쪽 면도 칠한 셈인데, 겉넓이가 무한하면 칠할 수 없다"는 역설은 수학의 넓이와 실제 페인트를 섞어서 생깁니다. 실제 페인트 층은 두께가 있어서, 나팔이 페인트 두께보다 가늘어지는 곳부터는 들어가지 못합니다. 수학의 넓이에는 두께가 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(y = \frac{1}{\sqrt{x}}\ (x \ge 1)\)을 \(x\)축 둘레로 돌린 입체의 부피는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>무한하다<span class="why"><b>맞습니다.</b> \(\int_1^{\infty}\pi\left(\frac{1}{\sqrt{x}}\right)^2dx = \int_1^{\infty}\frac{\pi}{x}dx\)는 발산합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(2\pi\)<span class="why"><b>제곱하지 않고 \(\int\frac{\pi}{\sqrt{x}}\)를 생각했습니다.</b> 그것도 사실 발산합니다. 단면 넓이는 \(\pi y^2 = \frac{\pi}{x}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\pi\)<span class="why"><b>\(y = \frac{1}{x}\)일 때의 답입니다.</b> 이 곡선은 더 천천히 가늘어집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>유한하다. 함숫값이 0으로 가니까<span class="why"><b>0으로 가는 빠르기를 보지 않았습니다.</b> 단면 넓이 \(\frac{\pi}{x}\)는 너무 느리게 줄어듭니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-5.html#card-adcalc-improper-p"><small class="mono">고급 미적분 1.5</small>끝없이 뻗은 꼬리 아래의 넓이는 유한할까?</a><a href="../../c/adcalc/1-5.html#card-adcalc-improper-spot"><small class="mono">고급 미적분 1.5</small>넓이가 음수로 나온 이 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-5.html#card-adcalc-escape"><small class="mono">고급 미적분 1.5</small>무한히 멀리 가는 데 드는 일은 유한할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-1-6"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/vase.js"></script>
+<script src="../../js/cards/adcalc/band-area.js"></script>
+<script src="../../js/cards/adcalc/gabriel.js"></script>
+</body>
+</html>

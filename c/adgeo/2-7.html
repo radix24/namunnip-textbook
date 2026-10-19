@@ -1,0 +1,189 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>단위속력곡선으로 재매개화 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="호의 길이 함수 s(t)와 그 역함수를 이용한 단위속력 재매개화, 나선의 재매개화, 계산에서 자주 하는 실수. 나선을 단위속력으로 바꾸는 카드와, 재매개화 풀이의 오류를 찾는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-reparam canvas { aspect-ratio: 4 / 3.2; max-width: 480px; margin: 0 auto; display: block; }
+    #card-adgeo-reparam .ctl-row > div { min-width: 8rem; }
+    #card-adgeo-reparam-spot .sol[hidden] { display: none; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="2-7">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>단위속력곡선으로 재매개화</h1>
+    <p class="lead">정칙곡선은 호의 길이 함수 \(s(t)\)가 증가함수이므로 역함수를 이용해 언제나 <em>단위속력곡선으로 재매개화</em>할 수 있습니다. 곡선의 모양은 그대로이고 "시간표"만 바뀝니다. 이 절에서는 나선의 매개변수를 조절해 속력이 1이 되게 만들고, 재매개화 풀이에서 흔한 실수를 찾아봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adgeo/2-6.html#card-adgeo-speed-param" title="고급 기하 2.6 · 같은 원을 그리는데 왜 점마다 빠르기가 다를까?">단위속력곡선과 호의 길이 매개변수</a><a class="p p-card" href="../../c/calc2/2-7.html#card-calc2-inverse-slope" title="미적분Ⅱ 2.7 · 식을 모르는 역함수의 기울기를 구할 수 있을까?">역함수의 미분</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-reparam"><span class="mono">2.7.1</span>나선을 단위속력곡선으로 바꾸기</a></li>
+        <li><a href="#card-adgeo-reparam-spot"><span class="mono">2.7.2</span>재매개화 풀이의 틀린 줄 찾기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adgeo-2-7"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-2-7">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-reparam">
+        <header class="card-head">
+          <span class="no">2.7.1</span><h2>나선 위를 속력 1로 움직이게 하려면 매개변수를 어떻게 바꿀까?</h2><span class="kind">단위속력곡선으로 재매개화 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">a = <output class="a-out">2</output></label><input class="a" type="range" min="0.5" max="3" step="0.5" value="2" aria-label="나선의 반지름 a"></div>
+              <div><label class="mono">b = <output class="b-out">1.5</output></label><input class="b" type="range" min="0.5" max="3" step="0.5" value="1.5" aria-label="나선의 b"></div>
+              <div><label class="mono">t = s / c, c = <output class="c-out">1</output></label><input class="c" type="range" min="0.5" max="4" step="0.05" value="1" aria-label="나눌 수 c"></div>
+            </div>
+            <canvas aria-label="나선 r(t) = (a cos t, a sin t, bt) 위에 s를 1씩 늘린 점들. 간격이 1이면 단위속력"></canvas>
+            <p class="verdict" role="status"></p>
+            <p class="fig-note">점은 s = 0, 1, 2, …인 곳이고 주황 큰 점은 5마다 찍었습니다. 그림의 높이 방향은 보기 좋게 절반으로 줄였습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>나선 \(\vec{r}(t) = (a\cos t, a\sin t, bt)\)의 속력은 \(\sqrt{a^2 + b^2}\)로 일정하지만 1은 아닙니다. 매개변수를 \(t = \frac{s}{c}\)로 바꾸면 속력이 1이 되게 할 수 있을까요? \(c\)는 얼마여야 할까요?</li>
+            <li><span class="tag">복원</span>연쇄법칙: \(\frac{d\vec{r}}{ds} = \frac{d\vec{r}}{dt}\cdot\frac{dt}{ds}\)입니다.</li>
+            <li><span class="tag">설명</span>정칙곡선 \(\vec{r}(t)\)의 호의 길이 함수 \(s(t) = \int_{t_0}^{t}|\vec{r}\,'(u)|\,du\)는 증가함수이므로 역함수 \(t = t(s)\)가 있고, \(\vec{r}(t(s))\)는 \(\left|\frac{d\vec{r}}{ds}\right| = \frac{|\vec{r}\,'(t)|}{ds/dt} = 1\)인 단위속력곡선이 됩니다. 이것을 <em>단위속력곡선으로 재매개화</em>한다고 합니다. 나선은 \(s = \sqrt{a^2 + b^2}\,t\)이므로 \(c = \sqrt{a^2 + b^2}\)이고, \(\vec{r}(s) = \left(a\cos\frac{s}{c}, a\sin\frac{s}{c}, \frac{bs}{c}\right)\)입니다.</li>
+            <li><span class="tag">연결</span>속력이 일정하지 않은 곡선은 \(s(t)\)의 역함수를 식으로 구하기 어려울 때가 많아, 앞 카드처럼 수치로 구합니다. 다음 절의 곡률은 단위속력곡선에서 \(\kappa = \left|\frac{d^2\vec{r}}{ds^2}\right|\)로 간단히 정의됩니다.</li>
+            <li><span class="tag">적용</span>\(c\)를 조절해 \(s\)를 1씩 늘린 점 사이의 곡선 거리가 1이 되게 하세요. \(a\), \(b\)를 바꾸면 필요한 \(c\)는 어떻게 바뀌나요? 식 \(\sqrt{a^2 + b^2}\)과 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>재매개화는 곡선(그림)을 바꾸지 않고 "시간표"만 바꿉니다. \(c\)를 아무 값으로 해도 같은 나선이 그려지지만, 단위속력이 되는 \(c\)는 하나뿐입니다. 또 \(s\)의 시작점을 어디로 잡느냐에 따라 식이 평행이동만큼 달라질 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\vec{r}(t) = (5\cos t, 5\sin t, 12t)\)를 단위속력곡선으로 재매개화하면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\left(5\cos\frac{s}{13}, 5\sin\frac{s}{13}, \frac{12s}{13}\right)\)<span class="why"><b>맞습니다.</b> 속력이 \(\sqrt{25 + 144} = 13\)이므로 \(t = \frac{s}{13}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\left(5\cos 13s, 5\sin 13s, 156s\right)\)<span class="why"><b>나누지 않고 곱했습니다.</b> 속력이 169가 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\left(5\cos\frac{s}{17}, 5\sin\frac{s}{17}, \frac{12s}{17}\right)\)<span class="why"><b>5 + 12를 썼습니다.</b> 속력은 제곱의 합의 제곱근입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((\cos s, \sin s, s)\)<span class="why"><b>다른 곡선이 되었습니다.</b> 재매개화는 모양을 바꾸지 않습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-reparam-spot">
+        <header class="card-head">
+          <span class="no">2.7.2</span><h2>이 재매개화 풀이는 어디서 틀렸을까?</h2><span class="kind">재매개화의 계산 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets">
+              <button class="chip" type="button" data-s="0" aria-pressed="true">풀이 1</button>
+              <button class="chip" type="button" data-s="1">풀이 2</button>
+              <button class="chip" type="button" data-s="2">풀이 3</button>
+              <button class="chip" type="button" data-s="3">풀이 4</button>
+            </div>
+            <div class="ctl">
+              <p class="mono small">처음 틀린 줄을 누르세요. 틀린 곳이 없으면 마지막 줄을 누르세요.</p>
+              <div class="sol" data-s="0">
+                <ol class="spot">
+                  <li>\(\vec{r}(t) = (3\cos t, 3\sin t, 4t)\), \(t \ge 0\)을 단위속력곡선으로 재매개화한다.<span class="why">문제입니다.</span></li>
+                  <li data-bad>\(\vec{r}\,'(t) = (-3\sin t, 3\cos t, 4)\)이므로 \(|\vec{r}\,'(t)| = 3 + 4 = 7\)이다.<span class="why"><b>여기가 틀렸습니다.</b> 크기는 \(\sqrt{9\sin^2t + 9\cos^2t + 16} = 5\)입니다.</span></li>
+                  <li>\(s = 7t\)이므로 \(t = \frac{s}{7}\), \(\vec{r}(s) = \left(3\cos\frac{s}{7}, 3\sin\frac{s}{7}, \frac{4s}{7}\right)\)이다.<span class="why">앞 줄의 잘못을 이어받았습니다. 바르게는 \(t = \frac{s}{5}\)입니다.</span></li>
+                  <li>틀린 곳이 없다.<span class="why">마지막 식의 속력을 직접 계산해 보세요.</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="1" hidden>
+                <ol class="spot">
+                  <li>\(\vec{r}(t) = (e^t\cos t, e^t\sin t)\), \(t \ge 0\)을 \(t = 0\)에서부터 잰 호의 길이로 재매개화한다.<span class="why">문제입니다.</span></li>
+                  <li>\(|\vec{r}\,'(t)| = \sqrt{2}\,e^t\)이다.<span class="why">맞습니다. \(\vec{r}\,' = e^t(\cos t - \sin t, \sin t + \cos t)\)의 크기입니다.</span></li>
+                  <li data-bad>\(s = \int\sqrt2\,e^t\,dt = \sqrt2\,e^t\)이므로 \(t = \ln\frac{s}{\sqrt2}\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(t = 0\)에서부터 잰 길이는 정적분 \(s = \int_0^t\sqrt2\,e^u\,du = \sqrt2(e^t - 1)\)입니다. 그래서 \(t = \ln\left(1 + \frac{s}{\sqrt2}\right)\)입니다.</span></li>
+                  <li>틀린 곳이 없다.<span class="why">\(t = 0\)일 때 \(s\)가 0이 되나요?</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="2" hidden>
+                <ol class="spot">
+                  <li>원 \(\vec{r}(t) = (2\cos 3t, 2\sin 3t)\)를 단위속력곡선으로 재매개화한다.<span class="why">문제입니다.</span></li>
+                  <li>\(|\vec{r}\,'(t)| = 6\)이므로 \(s = 6t\)이다.<span class="why">맞습니다.</span></li>
+                  <li data-bad>\(t = \frac{s}{6}\)을 넣으면 \(\vec{r}(s) = \left(2\cos\frac{s}{6}, 2\sin\frac{s}{6}\right)\)이다.<span class="why"><b>여기가 틀렸습니다.</b> \(3t = \frac{s}{2}\)이므로 \(\left(2\cos\frac{s}{2}, 2\sin\frac{s}{2}\right)\)입니다. 대입할 때 \(3t\) 전체를 바꿔야 합니다.</span></li>
+                  <li>틀린 곳이 없다.<span class="why">결과의 속력이 1인지 확인해 보세요.</span></li>
+                </ol>
+              </div>
+              <div class="sol" data-s="3" hidden>
+                <ol class="spot">
+                  <li>직선 \(\vec{r}(t) = (1 + 2t, 3 - t, 2t)\)를 단위속력곡선으로 재매개화한다.<span class="why">문제입니다.</span></li>
+                  <li>\(|\vec{r}\,'(t)| = \sqrt{4 + 1 + 4} = 3\)이므로 \(s = 3t\), \(t = \frac{s}{3}\)이다.<span class="why">맞습니다.</span></li>
+                  <li>\(\vec{r}(s) = \left(1 + \frac{2s}{3}, 3 - \frac{s}{3}, \frac{2s}{3}\right)\)이다.<span class="why">맞습니다. 방향 벡터가 단위벡터 \(\left(\frac{2}{3}, -\frac{1}{3}, \frac{2}{3}\right)\)가 되었습니다.</span></li>
+                  <li data-bad>틀린 곳이 없다.<span class="why"><b>맞습니다.</b> 직선의 재매개화는 방향 벡터를 단위벡터로 바꾸는 것과 같습니다.</span></li>
+                </ol>
+              </div>
+              <p class="mono small chk" role="status"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>재매개화는 "속력 구하기 → 호의 길이 적분 → 역함수 → 대입" 네 단계입니다. 단계는 단순하지만 실수가 자주 나옵니다. 어디서 틀리기 쉬울까요?</li>
+            <li><span class="tag">복원</span>\(|\vec{v}| = \sqrt{v_1^2 + v_2^2 + v_3^2}\), 정적분 \(\int_a^b f(u)\,du\)의 아래끝을 빼야 합니다.</li>
+            <li><span class="tag">설명</span>흔한 실수는 ① 속력을 성분의 합으로 계산하기, ② 호의 길이를 부정적분으로 써서 시작점을 놓치기(\(s(t_0) = 0\)이어야 함), ③ 역함수를 대입할 때 식의 일부만 바꾸기입니다. 마지막에 \(\left|\frac{d\vec{r}}{ds}\right| = 1\)인지 확인하면 대부분의 실수를 잡을 수 있습니다.</li>
+            <li><span class="tag">연결</span>재매개화한 곡선은 곡률 \(\kappa = \left|\frac{d^2\vec{r}}{ds^2}\right|\)을 바로 계산하는 데 씁니다(곡률).</li>
+            <li><span class="tag">적용</span>네 풀이에서 처음 틀린 줄을 찾으세요. 찾으면 아래에 바른 결과와 속력 확인이 나타납니다.</li>
+            <li class="warn"><span class="tag">판단</span>로그 나선처럼 \(s(t)\)의 역함수가 깔끔하게 나오는 경우는 드뭅니다. 역함수를 식으로 쓸 수 없을 때는 수치로 구하고, 이론에서는 "단위속력 재매개화가 존재한다"는 사실만 씁니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(t = 1\)에서부터 잰 호의 길이 \(s\)가 \(s = 2(t - 1)\)일 때, \(s = 6\)인 점의 \(t\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(4\)<span class="why"><b>맞습니다.</b> \(t = 1 + \frac{s}{2}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(3\)<span class="why"><b>시작점 \(t = 1\)을 더하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(12\)<span class="why"><b>곱했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(7\)<span class="why"><b>나누기를 빠뜨렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-2-7"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/curve3.js"></script>
+<script src="../../js/cards/adgeo/reparam.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adgeo/reparam-spot.js"></script>
+</body>
+</html>

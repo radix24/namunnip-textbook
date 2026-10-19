@@ -1,0 +1,166 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>구면코사인법칙과 구면사인법칙 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="구면 코사인법칙 cos a = cos b cos c + sin b sin c cos A와 구면 사인법칙, 작은 삼각형에서 평면 법칙으로의 근사, 위도·경도로 두 도시 사이 거리 구하기. 잰 값과 공식을 비교하는 카드와, 도시 사이 거리를 계산하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-spherical-law canvas { aspect-ratio: 1 / 1; max-width: 400px; margin: 0 auto; display: block; }
+    #card-adgeo-spherical-law .ctl-row > div { min-width: 9rem; }
+    #card-adgeo-spherical-law table { border-collapse: collapse; margin: .4rem auto; font-size: .9rem; }
+    #card-adgeo-spherical-law td, #card-adgeo-spherical-law th { border: 1px solid var(--line, #ccc); padding: .2rem .5rem; text-align: right; }
+    #card-adgeo-city-distance canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+    #card-adgeo-city-distance .calc { line-height: 1.9; }
+    #card-adgeo-city-distance .guess { width: 7rem; }
+    #card-adgeo-city-distance .go-calc { flex: 0 0 auto; align-self: center; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="3-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>구면코사인법칙과 구면사인법칙</h1>
+    <p class="lead">구면삼각형에서도 두 변과 끼인각으로 나머지 변을 구하는 공식이 있습니다. 벡터의 내적으로 유도하는 <em>구면 코사인법칙</em>과 <em>구면 사인법칙</em>입니다. 이 절에서는 공식을 그림 위에서 확인하고, 위도와 경도만으로 세계 여러 도시 사이의 거리를 계산합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/2-3.html#card-alg-cosine-law" title="대수 2.3 · 직각이 아닌 삼각형에서 피타고라스 정리는 어떻게 고쳐질까?">코사인법칙</a><a class="p p-card" href="../../c/alg/2-3.html#card-alg-sine-law" title="대수 2.3 · 큰 각과 마주 보는 변은 얼마나 길까?">사인법칙</a><a class="p p-card" href="../../c/geo/3-3.html#card-geo-dot-space" title="기하 3.3 · 공간에서 두 벡터가 수직인지 어떻게 알까?">벡터의 내적과 수직 조건</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-spherical-law"><span class="mono">3.4.1</span>구면 위의 코사인법칙과 사인법칙</a></li>
+        <li><a href="#card-adgeo-city-distance"><span class="mono">3.4.2</span>위도·경도로 두 도시 사이 거리 구하기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adgeo-3-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-3-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-spherical-law">
+        <header class="card-head">
+          <span class="no">3.4.1</span><h2>구면삼각형에서도 코사인법칙이 성립할까?</h2><span class="kind">구면 코사인법칙 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">b = <output class="b-out"></output>°</label><input class="b" type="range" min="1" max="150" step="1" value="60" aria-label="변 b(중심각)"></div>
+              <div><label class="mono">c = <output class="c-out"></output>°</label><input class="c" type="range" min="1" max="150" step="1" value="50" aria-label="변 c(중심각)"></div>
+              <div><label class="mono">A = <output class="A-out"></output>°</label><input class="A" type="range" min="1" max="179" step="1" value="70" aria-label="끼인각 A"></div>
+            </div>
+            <div class="presets"><button class="chip go-small" type="button">아주 작게(b, c = 2°)</button><button class="chip go-big" type="button">크게(b, c = 90°)</button></div>
+            <canvas aria-label="A를 북극에 둔 구면삼각형 ABC. 끌어서 돌려 볼 수 있다"></canvas>
+            <table aria-label="잰 값과 공식으로 구한 값 비교">
+              <thead><tr><th></th><th>잰 값</th><th>구면 코사인법칙</th><th>평면 코사인법칙</th></tr></thead>
+              <tbody><tr><th>a</th><td class="m-a"></td><td class="s-a"></td><td class="p-a"></td></tr></tbody>
+            </table>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>두 변과 끼인각을 알면 평면에서는 코사인법칙으로 나머지 변을 구합니다. 지구 위의 큰 삼각형에서도 같은 공식을 써도 될까요?</li>
+            <li><span class="tag">복원</span>평면 코사인법칙: \(a^2 = b^2 + c^2 - 2bc\cos A\). 벡터의 내적: \(\vec u \cdot \vec v = |\vec u||\vec v|\cos\theta\).</li>
+            <li><span class="tag">설명</span>단위구 위의 구면삼각형에서 변 \(a, b, c\)는 중심각입니다. A를 북극에 두면 B, C의 좌표를 \(b, c, A\)로 쓸 수 있고, 내적 \(\vec{OB}\cdot\vec{OC} = \cos a\)를 계산하면 <em>구면 코사인법칙</em> \(\cos a = \cos b\cos c + \sin b\sin c\cos A\)가 나옵니다. 같은 방법으로 <em>구면 사인법칙</em> \(\dfrac{\sin a}{\sin A} = \dfrac{\sin b}{\sin B} = \dfrac{\sin c}{\sin C}\)도 얻습니다.</li>
+            <li><span class="tag">연결</span>변이 아주 작으면 \(\cos x \approx 1 - \frac{x^2}{2}\), \(\sin x \approx x\)라서 구면 코사인법칙이 평면 코사인법칙으로 바뀝니다. 좁은 지역에서 평면 지도를 써도 되는 이유입니다. 다음 카드에서 이 공식으로 도시 사이 거리를 구합니다.</li>
+            <li><span class="tag">적용</span>"아주 작게"와 "크게"를 눌러 평면 공식의 오차를 비교하세요. 사인법칙의 세 비가 같은지도 표 아래에서 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>각을 라디안으로 쓴 평면 공식은 작은 삼각형에서만 근삿값입니다. 넓은 범위(대륙 사이)에서 평면 공식을 쓰면 오차가 커집니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">단위구 위에서 \(b = c = 90°\), \(A = 60°\)인 구면삼각형의 변 \(a\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(60°\)<span class="why"><b>맞습니다.</b> \(\cos a = 0 + 1\cdot1\cdot\cos 60°\)이므로 \(a = 60°\)입니다. 북극에서 적도까지 내려간 두 경선 사이의 적도 호와 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(90°\)<span class="why"><b>정삼각형이라 짐작했습니다.</b> 끼인각이 60°라 a는 60°입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(30°\)<span class="why"><b>\(\cos a = \frac12\)에서 각을 잘못 읽었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(120°\)<span class="why"><b>\(\cos a = -\frac12\)로 부호를 잘못 썼습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/3-3.html#card-adgeo-sphere-triangle"><small class="mono">고급 기하 3.3</small>지구 위의 삼각형은 세 각의 합이 왜 180°보다 클까?</a><a href="../../c/adgeo/3-3.html#card-adgeo-flight-route"><small class="mono">고급 기하 3.3</small>서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?</a><a href="../../c/alg/2-3.html#card-alg-cosine-law"><small class="mono">대수 2.3</small>직각이 아닌 삼각형에서 피타고라스 정리는 어떻게 고쳐질까?</a><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-city-distance">
+        <header class="card-head">
+          <span class="no">3.4.2</span><h2>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</h2><span class="kind">구면 거리 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">출발 <select class="p1" aria-label="출발 도시"></select></label>
+              <label class="mono">도착 <select class="p2" aria-label="도착 도시"></select></label>
+            </div>
+            <div class="ctl-row">
+              <label class="mono">먼저 짐작: <input class="guess" type="number" min="0" step="100" aria-label="짐작한 거리(km)"> km</label>
+              <button class="chip go-calc" type="button">계산해 보기</button>
+            </div>
+            <canvas aria-label="두 도시를 잇는 대원호와 북극 P가 만드는 구면삼각형. 끌어서 돌려 볼 수 있다"></canvas>
+            <div class="calc small" role="status"></div>
+            <p class="fig-note">도시의 위도·경도는 소수 둘째 자리까지 반올림한 대략값이고, 지구를 반지름 6371 km인 구로 본 계산입니다. 실제 지구는 약간 납작해서 정밀 측량 값과 0.5% 안팎 차이가 날 수 있습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>서울에서 파리까지는 몇 km일까요? 지도에 자를 대지 않고 위도와 경도만으로 계산할 수 있을까요?</li>
+            <li><span class="tag">복원</span>구면 코사인법칙: \(\cos a = \cos b\cos c + \sin b\sin c\cos A\). 대원 거리 = \(R \times\)(중심각, 라디안).</li>
+            <li><span class="tag">설명</span>북극 P와 두 도시 X, Y로 구면삼각형을 만듭니다. P에서 X, Y까지의 변은 여위도 \(90° - \varphi_1\), \(90° - \varphi_2\)이고, P의 각은 경도 차 \(\Delta\lambda\)입니다. 구면 코사인법칙에 넣으면 \(\cos d = \sin\varphi_1\sin\varphi_2 + \cos\varphi_1\cos\varphi_2\cos\Delta\lambda\)이고, 거리는 \(R \cdot d\)입니다.</li>
+            <li><span class="tag">연결</span>항공사의 운항 거리, 스마트폰 지도 앱의 "직선 거리", 위성 통신 범위 계산이 모두 이 공식(또는 같은 식을 바꾼 하버사인 공식)을 씁니다. 대원 항로 카드의 항로 길이도 이렇게 구했습니다.</li>
+            <li><span class="tag">적용</span>도시 쌍을 고르고 먼저 거리를 짐작해 적은 뒤 계산을 확인하세요. 위도·경도를 그대로 평면 좌표로 본 "지도 위 거리"와 얼마나 다른지도 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>경도 1°의 길이는 위도마다 다릅니다(적도에서 약 111 km, 위도 60°에서 그 절반). 위도·경도를 평면 좌표처럼 쓰면 고위도로 갈수록 오차가 커집니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">같은 경선 위의 두 도시가 북위 30°와 북위 60°에 있을 때, 둘 사이의 대원 거리는? (\(R = 6400\) km)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 3350 km<span class="why"><b>맞습니다.</b> 경선은 대원이라 중심각이 위도 차 30° \(= \frac{\pi}{6}\)이고, \(6400 \times \frac{\pi}{6} \approx 3351\) km입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 1675 km<span class="why"><b>위도 60°의 \(\cos 60° = \frac12\)을 곱했습니다.</b> 경선 방향은 줄어들지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 6700 km<span class="why"><b>중심각을 60°로 잡았습니다.</b> 위도 차는 30°입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 192000 km<span class="why"><b>도 단위로 곱했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/3-3.html#card-adgeo-sphere-triangle"><small class="mono">고급 기하 3.3</small>지구 위의 삼각형은 세 각의 합이 왜 180°보다 클까?</a><a href="../../c/adgeo/3-3.html#card-adgeo-flight-route"><small class="mono">고급 기하 3.3</small>서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?</a><a href="../../c/alg/2-3.html#card-alg-cosine-law"><small class="mono">대수 2.3</small>직각이 아닌 삼각형에서 피타고라스 정리는 어떻게 고쳐질까?</a><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-3-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/sphere.js"></script>
+<script src="../../js/cards/adgeo/spherical-law.js"></script>
+<script src="../../js/cards/adgeo/city-distance.js"></script>
+</body>
+</html>

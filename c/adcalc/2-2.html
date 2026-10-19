@@ -1,0 +1,232 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>극곡선의 대칭성과 그래프 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="극방정식 r = f(θ)의 그래프와 대칭성. θ–r 그래프와 극곡선을 함께 그리는 조작 카드, 장미 곡선의 꽃잎 수를 예측하는 도전 카드, 마이크 지향 특성(카디오이드) 활용 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-polar-trace canvas { aspect-ratio: 16 / 8.5; }
+    #card-adcalc-rose-predict canvas { aspect-ratio: 1 / 1; max-width: 340px; margin: 0 auto; display: block; }
+    #card-adcalc-mic-pattern canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>극곡선의 대칭성과 그래프</h1>
+    <p class="lead">\(r = f(\theta)\)꼴의 방정식이 나타내는 곡선을 <em>극곡선</em>이라고 합니다. 각 \(\theta\) 방향으로 \(f(\theta)\)만큼 간 점을 이으면 카디오이드, 장미, 나선 같은 모양이 생깁니다. 이 절에서는 보통의 그래프와 극곡선을 나란히 그려 두 그림을 잇고, 대칭성으로 그리는 수고를 줄이고, 장미 곡선의 꽃잎 수를 맞혀 보고, 무대용 마이크가 뒤쪽 소리를 덜 받는 까닭을 카디오이드로 설명합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/2-2.html#card-alg-trig-def" title="대수 2.2 · 150circ나 -60circ의 사인은 무엇일까?">삼각함수의 정의와 그래프</a><a class="p p-card" href="../../c/alg/2-1.html#card-alg-general-angle" title="대수 2.1 · 두 바퀴 돈 각은 720circ일까, 0circ일까?">일반각과 호도법</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-polar-trace"><span class="mono">2.2.1</span>θ–r 그래프로 극곡선 그리기</a></li>
+        <li><a href="#card-adcalc-rose-predict"><span class="mono">2.2.2</span>장미 곡선의 꽃잎 수 맞히기</a></li>
+        <li><a href="#card-adcalc-mic-pattern"><span class="mono">2.2.3</span>마이크의 지향 특성 곡선</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adcalc-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-polar-trace">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>\(r = f(\theta)\)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?</h2><span class="kind">극곡선의 그래프와 대칭성 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="왼쪽: 가로축 θ, 세로축 r인 보통의 그래프. 오른쪽: 같은 함수를 극좌표로 그린 극곡선. θ를 움직이면 두 그림에서 같은 점이 함께 움직인다. r이 음수인 부분은 주황색"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-p="card" aria-pressed="true">\(1 + \cos\theta\)</button>
+                <button class="chip" type="button" data-p="lima">\(1 + 2\cos\theta\)</button>
+                <button class="chip" type="button" data-p="rose2">\(\cos 2\theta\)</button>
+                <button class="chip" type="button" data-p="rose3">\(\sin 3\theta\)</button>
+                <button class="chip" type="button" data-p="spiral">\(\frac{\theta}{2}\)</button>
+                <button class="chip" type="button" data-p="sin2">\(\sin 2\theta\)</button>
+              </div>
+              <label class="mono">\(\theta\) = <output class="t-out">0</output></label>
+              <input class="st" type="range" min="0" max="1" step="0.001" value="1" aria-label="각 θ (구간에 대한 비율)">
+              <div class="presets"><button class="chip go-play" type="button">처음부터 그리기</button></div>
+              <dl class="nums">
+                <div><dt>극축(\(x\)축) 대칭</dt><dd class="n-x">—</dd></div>
+                <div><dt>\(\theta = \frac{\pi}{2}\)(\(y\)축) 대칭</dt><dd class="n-y">—</dd></div>
+                <div><dt>극(원점) 대칭</dt><dd class="n-o">—</dd></div>
+              </dl>
+              <p class="fig-note">대칭 칸의 앞 글자는 식 판정(\(f(-\theta) = f(\theta)\), \(f(\pi - \theta) = f(\theta)\), \(f(\theta + \pi) = f(\theta)\)), 뒤 글자는 그림을 실제로 뒤집어 겹쳐 본 결과입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(r = 1 + \cos\theta\)는 보통의 좌표평면에서는 물결 모양 그래프입니다. 이 식을 "각 \(\theta\) 방향으로 \(r\)만큼"이라고 읽어 극좌표로 그리면 어떤 모양이 될까요?</li>
+            <li><span class="tag">복원</span>극좌표 \((r, \theta)\)는 \(\theta\) 방향으로 \(r\)만큼 간 점이고, \(r &lt; 0\)이면 반대 방향입니다. 함수의 그래프를 그릴 때는 증가, 감소, 최댓값, 0이 되는 곳을 먼저 봅니다.</li>
+            <li><span class="tag">설명</span>\(\theta\)를 바늘처럼 돌리며, 왼쪽 그래프에서 읽은 높이 \(r\)만큼 바늘 끝을 늘였다 줄였다 하면 <em>극곡선</em>이 그려집니다. 왼쪽 그래프가 0이 되는 \(\theta\)에서 극곡선은 극을 지나고, \(r\)이 음수인 구간은 반대쪽에 그려집니다. 그래서 \(1 + 2\cos\theta\)는 안쪽에 작은 고리가 생깁니다. 대칭성을 먼저 알면 그리는 수고가 줄어듭니다. \(f(-\theta) = f(\theta)\)이면 극축에, \(f(\pi - \theta) = f(\theta)\)이면 \(\theta = \frac{\pi}{2}\)에, \(f(\theta + \pi) = f(\theta)\)이면 극에 대칭입니다.</li>
+            <li><span class="tag">연결</span>\(1 + \cos\theta\)처럼 하트 모양 곡선은 <em>카디오이드</em>(심장형), \(\cos 2\theta\), \(\sin 3\theta\)는 <em>장미 곡선</em>, \(\frac{\theta}{2}\)는 <em>아르키메데스 나선</em>이라고 부릅니다. 직교좌표로 쓰면 복잡한 이 곡선들이 극좌표에서는 짧은 식 하나입니다.</li>
+            <li><span class="tag">적용</span>보기마다 처음부터 그리기를 눌러, 왼쪽 그래프의 어느 부분이 오른쪽 곡선의 어느 부분이 되는지 따라가 보세요. \(1 + 2\cos\theta\)의 안쪽 고리는 \(\theta\)가 얼마일 때 그려지나요? \(\sin 3\theta\)는 \(\theta\)가 \(\pi\)를 넘으면 무슨 일이 생기나요?</li>
+            <li class="warn"><span class="tag">판단</span>대칭의 식 판정은 충분조건일 뿐입니다. \(\sin 2\theta\)는 \(f(-\theta) = -f(\theta)\)라서 식 판정은 "아니오"이지만, 그림은 극축에 대칭입니다. 같은 점을 \((r, \theta)\)와 \((-r, \theta + \pi)\)처럼 여러 이름으로 부를 수 있기 때문입니다. 식 판정이 실패하면 그림으로 다시 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">극곡선 \(r = 1 - \sin\theta\)에 대한 설명으로 옳은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\theta = \frac{\pi}{2}\)(\(y\)축)에 대칭인 카디오이드이고, \(\theta = \frac{\pi}{2}\)에서 극을 지난다<span class="why"><b>맞습니다.</b> \(f(\pi - \theta) = 1 - \sin\theta = f(\theta)\)이고, \(\theta = \frac{\pi}{2}\)에서 \(r = 0\)입니다. 아래쪽으로 부푼 하트 모양입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>극축에 대칭이다<span class="why"><b>\(\cos\)일 때의 성질입니다.</b> \(f(-\theta) = 1 + \sin\theta \ne f(\theta)\)이고, 그림도 극축에 대칭이 아닙니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(r\)이 음수가 되는 구간이 있어 안쪽 고리가 생긴다<span class="why"><b>\(1 - \sin\theta \ge 0\)입니다.</b> 안쪽 고리는 \(1 + 2\cos\theta\)처럼 상수항이 계수보다 작을 때 생깁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>극에 대칭이다<span class="why"><b>\(f(\theta + \pi) = 1 + \sin\theta\)라 판정이 성립하지 않고, 그림도 극에 대칭이 아닙니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-1.html#card-adcalc-radar"><small class="mono">고급 미적분 2.1</small>레이더는 왜 (x, y) 대신 거리와 방향으로 위치를 알려 줄까?</a><a href="../../c/adcalc/2-1.html#card-adcalc-polar-spot"><small class="mono">고급 미적분 2.1</small>θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?</a><a href="../../c/alg/2-2.html#card-alg-trig-graph"><small class="mono">대수 2.2</small>원을 도는 점의 높이를 옆으로 펼치면 어떤 모양일까?</a><a href="../../c/alg/2-2.html#card-alg-sin-param"><small class="mono">대수 2.2</small>식의 어느 수가 파동의 높이와 폭을 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/2-3.html#card-adcalc-polar-tangent"><small class="mono">고급 미적분 2.3</small>카디오이드에서 접선이 수평인 곳은 어디일까?</a><a href="../../c/adcalc/2-3.html#card-adcalc-log-spiral"><small class="mono">고급 미적분 2.3</small>목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-meet"><small class="mono">고급 미적분 2.4</small>두 극방정식을 연립하면 교점이 모두 나올까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-angle"><small class="mono">고급 미적분 2.4</small>마주 보는 두 카디오이드는 몇 도로 만날까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-rose-predict">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>\(r = \cos k\theta\)의 꽃잎은 몇 장일까?</h2><span class="kind">장미 곡선 · 예측 → 확인 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="장미 곡선 r = cos kθ를 그리는 그림. 예측을 고른 뒤 그리기를 누르면 θ가 0부터 커지며 꽃잎이 하나씩 그려진다"></canvas>
+            <div class="ctl">
+              <div class="presets ks">
+                <button class="chip" type="button" data-k="2" aria-pressed="true">\(k = 2\)</button>
+                <button class="chip" type="button" data-k="3">\(k = 3\)</button>
+                <button class="chip" type="button" data-k="4">\(k = 4\)</button>
+                <button class="chip" type="button" data-k="5">\(k = 5\)</button>
+                <button class="chip" type="button" data-k="6">\(k = 6\)</button>
+                <button class="chip" type="button" data-k="7">\(k = 7\)</button>
+              </div>
+              <div class="ctl-row">
+                <div><label class="mono">예측: 꽃잎 <output class="g-out">4</output>장</label>
+                <input class="sg" type="range" min="1" max="16" step="1" value="4" aria-label="예측한 꽃잎 수"></div>
+                <div><label class="mono">예측: 다 그리는 데 θ = <output class="p-out">2π</output></label>
+                <input class="sp" type="range" min="0" max="2" step="1" value="2" aria-label="다 그리는 데 필요한 θ의 범위"></div>
+              </div>
+              <div class="presets"><button class="chip go-draw" type="button">그려서 확인</button></div>
+              <p class="verdict" role="status"></p>
+              <dl class="nums">
+                <div><dt>지금 \(\theta\)</dt><dd class="n-t">—</dd></div>
+                <div><dt>그려진 꽃잎</dt><dd class="n-p">—</dd></div>
+                <div><dt>맞힌 문제</dt><dd class="n-s">0</dd></div>
+              </dl>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(r = \cos 2\theta\)는 꽃잎이 4장, \(r = \cos 3\theta\)는 3장입니다. \(k\)가 커질수록 꽃잎이 많아지는데, \(k\)장이 아니라 \(2k\)장일 때가 있습니다. 어떤 규칙일까요?</li>
+            <li><span class="tag">복원</span>\(\cos k\theta\)의 주기는 \(\frac{2\pi}{k}\)입니다. \((r, \theta)\)와 \((-r, \theta + \pi)\)는 같은 점입니다.</li>
+            <li><span class="tag">설명</span>\(|\cos k\theta|\)가 0에서 1로 올랐다 0으로 내려오는 한 번(길이 \(\frac{\pi}{k}\))이 꽃잎 하나를 그립니다. \(0 \le \theta &lt; 2\pi\)에서 이런 구간은 \(2k\)개입니다. 그런데 \(\cos k(\theta + \pi) = \cos(k\theta + k\pi)\)이므로 <b>\(k\)가 홀수</b>이면 \(r\)의 부호만 바뀌어, \(\theta + \pi\)일 때 \((-r, \theta + \pi)\), 곧 \(\theta\)일 때와 같은 점을 다시 그립니다. 그래서 \(k\)가 홀수이면 꽃잎 \(k\)장을 \(0 \le \theta \le \pi\)에서 다 그리고 나머지는 덧그립니다. \(k\)가 짝수이면 \(2k\)장이 모두 다른 곳에 생기고 \(2\pi\)까지 돌아야 다 그려집니다.</li>
+            <li><span class="tag">연결</span>이렇게 "같은 점을 여러 이름으로 부를 수 있다"는 극좌표의 성질이 그래프의 모양을 정합니다. 두 극곡선의 교점을 구할 때도 이 성질 때문에 식을 풀어서 나오지 않는 교점이 생깁니다.</li>
+            <li><span class="tag">적용</span>\(k\)를 고르고 꽃잎 수와 필요한 \(\theta\)의 범위를 예측한 뒤 그려서 확인하세요. 여섯 문제를 모두 맞히면 규칙을 찾은 것입니다. 홀수일 때 \(\pi\)를 넘어서 그리는 동안 곡선은 어떻게 움직이나요?</li>
+            <li class="warn"><span class="tag">판단</span>"\(\theta\)가 \(0\)부터 \(2\pi\)까지 돌면 곡선이 한 번 그려진다"는 생각은 극곡선에서 틀리기 쉽습니다. 홀수 장미는 두 번 그려지고, 나선 \(r = \theta\)는 \(2\pi\)를 넘어서도 계속 새로운 점을 그립니다. 넓이를 구할 때 이 차이를 놓치면 두 배로 셉니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(r = 2\sin 5\theta\)의 꽃잎 수와 꽃잎 하나의 길이(극에서 끝까지)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>5장, 2<span class="why"><b>맞습니다.</b> \(k = 5\)가 홀수이므로 \(k\)장이고, \(|r|\)의 최댓값이 2입니다. \(\sin\)이어도 꽃잎 수는 같고 방향만 돌아갑니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>10장, 2<span class="why"><b>짝수일 때의 규칙을 썼습니다.</b> 홀수 \(k\)는 꽃잎이 덧그려집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>5장, 1<span class="why"><b>계수 2를 빠뜨렸습니다.</b> 꽃잎 길이는 \(|r|\)의 최댓값입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>2장, 5<span class="why"><b>계수와 \(k\)의 역할을 바꾸었습니다.</b> \(k\)가 꽃잎 수를, 앞의 계수가 크기를 정합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-1.html#card-adcalc-radar"><small class="mono">고급 미적분 2.1</small>레이더는 왜 (x, y) 대신 거리와 방향으로 위치를 알려 줄까?</a><a href="../../c/adcalc/2-1.html#card-adcalc-polar-spot"><small class="mono">고급 미적분 2.1</small>θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?</a><a href="../../c/alg/2-2.html#card-alg-trig-graph"><small class="mono">대수 2.2</small>원을 도는 점의 높이를 옆으로 펼치면 어떤 모양일까?</a><a href="../../c/alg/2-2.html#card-alg-sin-param"><small class="mono">대수 2.2</small>식의 어느 수가 파동의 높이와 폭을 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/2-3.html#card-adcalc-polar-tangent"><small class="mono">고급 미적분 2.3</small>카디오이드에서 접선이 수평인 곳은 어디일까?</a><a href="../../c/adcalc/2-3.html#card-adcalc-log-spiral"><small class="mono">고급 미적분 2.3</small>목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-meet"><small class="mono">고급 미적분 2.4</small>두 극방정식을 연립하면 교점이 모두 나올까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-angle"><small class="mono">고급 미적분 2.4</small>마주 보는 두 카디오이드는 몇 도로 만날까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-mic-pattern">
+        <header class="card-head">
+          <span class="no">2.2.3</span><h2>무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?</h2><span class="kind">카디오이드 · 극곡선 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="마이크를 극에 두고 위쪽(θ = π/2)을 앞으로 한 감도 곡선 r = a + (1 − a)cos(θ − π/2). 소리 나는 곳(스피커)을 끌어 옮기면 그 방향의 감도가 표시된다"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-a="1">무지향 \(a = 1\)</button>
+                <button class="chip" type="button" data-a="0.5" aria-pressed="true">카디오이드 \(a = 0.5\)</button>
+                <button class="chip" type="button" data-a="0.37">슈퍼카디오이드 \(a = 0.37\)</button>
+                <button class="chip" type="button" data-a="0.25">하이퍼카디오이드 \(a = 0.25\)</button>
+                <button class="chip" type="button" data-a="0">양지향 \(a = 0\)</button>
+              </div>
+              <label class="mono">\(a\) = <output class="a-out">0.5</output></label>
+              <input class="sa" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="계수 a">
+              <dl class="nums">
+                <div><dt>소리 방향 (앞에서 잰 각)</dt><dd class="n-t">—</dd></div>
+                <div><dt>감도 \(|r|\)</dt><dd class="n-r">—</dd></div>
+                <div><dt>감도 (dB)</dt><dd class="n-db">—</dd></div>
+              </dl>
+              <p class="fig-note">주황 점(스피커)을 끌어 옮기세요. 감도는 앞(위쪽)에서 오는 소리를 1로 둔 값이고, dB는 \(20\log_{10}|r|\)입니다. 점선은 감도가 0인 방향입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공연장에서 가수 앞의 모니터 스피커 소리가 마이크로 다시 들어가면 "삐–" 하는 하울링이 생깁니다. 그래서 무대용 마이크는 앞소리는 잘 받고 뒷소리는 덜 받도록 만듭니다. 이 "방향에 따른 감도"를 어떻게 나타낼까요?</li>
+            <li><span class="tag">복원</span>극곡선 \(r = f(\theta)\)는 각 방향으로 \(f(\theta)\)만큼 간 점들입니다. \(r = 1 + \cos\theta\)는 카디오이드입니다.</li>
+            <li><span class="tag">설명</span>마이크의 감도를 방향마다 재어 극좌표로 그린 것을 <em>지향 특성</em>(polar pattern)이라고 합니다. 흔한 마이크들은 \[r = a + (1 - a)\cos\theta\ \ (0 \le a \le 1)\]꼴로 잘 나타납니다(\(\theta\)는 정면에서 잰 각). \(a = 1\)이면 원(모든 방향 같음), \(a = 0.5\)이면 카디오이드로 바로 뒤(\(\theta = \pi\))의 감도가 0입니다. \(a\)가 더 작으면 \(r\)이 음수가 되는 방향이 생겨 뒤쪽에 작은 고리가 생깁니다. 감도가 0인 방향은 \(\cos\theta = -\frac{a}{1 - a}\)에서 생깁니다.</li>
+            <li><span class="tag">연결</span>이 곡선은 극곡선의 대칭성으로 그리기 쉽습니다. \(\cos\)만 들어 있으므로 정면 방향 축에 대칭이고, 반쪽만 그리면 됩니다. \(r\)이 음수인 고리는 그 방향의 소리가 반대 위상으로 들어온다는 뜻입니다.</li>
+            <li><span class="tag">적용</span>카디오이드에서 스피커를 바로 뒤에 두어 감도가 0이 되는지 보세요. 하이퍼카디오이드로 바꾸면 감도가 0인 방향은 몇 도인가요? 무대에서 모니터 스피커를 마이크 바로 뒤가 아니라 비스듬히 뒤에 두는 경우가 있는 까닭을 설명해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>실제 마이크의 지향 특성은 소리의 높낮이(주파수)에 따라 달라지고, 이 식은 이상화한 모형입니다. 또 이 그림은 평면 단면일 뿐, 실제 감도는 마이크 축 둘레로 돌린 입체 모양입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(r = 0.25 + 0.75\cos\theta\)인 마이크의 감도가 0인 방향은 정면에서 약 몇 도인가요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 \(109.5^\circ\)<span class="why"><b>맞습니다.</b> \(\cos\theta = -\frac{0.25}{0.75} = -\frac{1}{3}\)이므로 \(\theta \approx 109.5^\circ\)입니다(양쪽 두 방향).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(180^\circ\)<span class="why"><b>카디오이드(\(a = 0.5\))의 답입니다.</b> \(a\)가 작아지면 0인 방향이 앞쪽으로 옵니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 \(70.5^\circ\)<span class="why"><b>\(\cos\theta = +\frac{1}{3}\)로 풀었습니다.</b> \(a + (1 - a)\cos\theta = 0\)이면 \(\cos\theta\)는 음수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(90^\circ\)<span class="why"><b>\(a = 0\)(양지향)일 때의 답입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-1.html#card-adcalc-radar"><small class="mono">고급 미적분 2.1</small>레이더는 왜 (x, y) 대신 거리와 방향으로 위치를 알려 줄까?</a><a href="../../c/adcalc/2-1.html#card-adcalc-polar-spot"><small class="mono">고급 미적분 2.1</small>θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?</a><a href="../../c/alg/2-2.html#card-alg-trig-graph"><small class="mono">대수 2.2</small>원을 도는 점의 높이를 옆으로 펼치면 어떤 모양일까?</a><a href="../../c/alg/2-2.html#card-alg-sin-param"><small class="mono">대수 2.2</small>식의 어느 수가 파동의 높이와 폭을 정할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/2-3.html#card-adcalc-polar-tangent"><small class="mono">고급 미적분 2.3</small>카디오이드에서 접선이 수평인 곳은 어디일까?</a><a href="../../c/adcalc/2-3.html#card-adcalc-log-spiral"><small class="mono">고급 미적분 2.3</small>목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-meet"><small class="mono">고급 미적분 2.4</small>두 극방정식을 연립하면 교점이 모두 나올까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-angle"><small class="mono">고급 미적분 2.4</small>마주 보는 두 카디오이드는 몇 도로 만날까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/polar-trace.js"></script>
+<script src="../../js/cards/adcalc/rose-predict.js"></script>
+<script src="../../js/cards/adcalc/mic-pattern.js"></script>
+</body>
+</html>

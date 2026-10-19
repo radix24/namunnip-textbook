@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통계적 문제해결 과정 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="문제 설정 → 자료 수집 계획 → 자료 수집 → 자료 분석 → 결과 해석의 순서와 순환, 매점 대기 시간 탐구로 순서 쌓기, 모호한 질문을 대상·측정·기간·비교가 분명한 질문으로 다듬기. 탐구 순서 카드와, 질문 다듬기 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pstat-ppdac-order .pool, #card-pstat-ppdac-order .done { display: grid; gap: .35rem; margin: .4rem 0; }
+    #card-pstat-ppdac-order .pool button { text-align: left; padding: .4rem .6rem; border: 1px dashed #8d8d92; border-radius: 8px; background: transparent; font: inherit; font-size: .86rem; }
+    #card-pstat-ppdac-order .done div { padding: .35rem .6rem; border-left: 4px solid #3b7c2a; background: rgba(116,171,102,.12); font-size: .86rem; }
+    #card-pstat-ppdac-order .done div b { display: inline-block; min-width: 6.6rem; }
+    #card-pstat-ppdac-order .shake { animation: ppdac-shake .3s; border-color: #b5532f !important; }
+    @keyframes ppdac-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+    @media (prefers-reduced-motion: reduce) { #card-pstat-ppdac-order .shake { animation: none; } }
+    #card-pstat-question-refine .opts { display: grid; gap: .5rem; margin: .4rem 0; }
+    #card-pstat-question-refine .opts fieldset { border: 1px solid var(--rule, #d9dad2); border-radius: 8px; padding: .3rem .6rem .45rem; margin: 0; }
+    #card-pstat-question-refine .opts legend { font-size: .8rem; font-weight: 700; padding: 0 .3rem; }
+    #card-pstat-question-refine .opts label { display: block; font-size: .85rem; margin: .1rem 0; }
+    #card-pstat-question-refine .final { font-weight: 700; border-left: 4px solid #3f6fa3; padding: .3rem .6rem; background: rgba(63,111,163,.08); }
+    #card-pstat-question-refine ul.crit { list-style: none; padding: 0; margin: .4rem 0; font-size: .85rem; }
+    #card-pstat-question-refine ul.crit li::before { content: "✕ "; color: #b5532f; }
+    #card-pstat-question-refine ul.crit li.ok::before { content: "✓ "; color: #3b7c2a; }
+  </style>
+</head>
+<body data-course="pstat" data-sec="1-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>통계적 문제해결 과정</h1>
+    <p class="lead">통계로 문제를 풀 때는 정해진 흐름이 있습니다. <em>문제 설정, 자료 수집 계획, 자료 수집, 자료 분석, 결과 해석</em>의 단계를 차례로 밟고, 해석에서 새 질문이 생기면 다시 시작합니다. 이 절에서는 이 과정을 익히고 첫 단계인 질문을 잴 수 있게 다듬어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/sie1/2-3.html#card-sie1-plot" title="과학탐구실험1 2.3 · 같은 자료인데 왜 그래프마다 다른 이야기를 할까?">그래프 해석</a><button type="button" class="p p-basic" data-basic="b-l-mean" title="중학교 개념 설명 보기">평균</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pstat-ppdac-order"><span class="mono">1.2.1</span>질문에서 결론까지 — 통계적 문제해결 과정의 순서</a></li>
+        <li><a href="#card-pstat-question-refine"><span class="mono">1.2.2</span>모호한 질문을 잴 수 있는 질문으로 다듬기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pstat-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pstat-1-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pstat-ppdac-order">
+        <header class="card-head">
+          <span class="no">1.2.1</span><h2>매점 줄을 줄이고 싶을 때, 통계 탐구는 어떤 순서로 해야 할까?</h2><span class="kind">통계적 문제해결 과정 · 증명 조립</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">상황: 점심시간 매점 줄이 너무 길다는 불만이 많습니다. 아래 활동을 <b>해야 할 순서대로</b> 눌러 쌓으세요.</p>
+            <div class="done" aria-live="polite"></div>
+            <div class="pool"></div>
+            <div class="presets"><button class="chip reset" type="button">처음부터</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>자료부터 모으고 나서 무엇을 알아볼지 정하면 어떤 문제가 생길까요? 통계로 문제를 해결할 때는 어떤 순서를 따라야 할까요?</li>
+            <li><span class="tag">복원</span>통계적 질문, 표와 그래프, 대푯값.</li>
+            <li><span class="tag">설명</span>통계적 문제해결은 <em>문제 설정 → 자료 수집 계획 → 자료 수집 → 자료 분석 → 결과 해석</em>의 순서로 진행합니다. 질문이 분명해야 어떤 자료를 어떻게 모을지 정할 수 있고, 계획대로 모은 자료여야 분석 결과를 믿을 수 있습니다. 결과를 해석하면서 새로운 질문이 생기면 과정을 다시 돌기도 합니다(순환).</li>
+            <li><span class="tag">연결</span>이 과정은 이 과목 전체의 뼈대이며, 마지막 단원의 통계적 탐구에서 직접 수행합니다.</li>
+            <li><span class="tag">적용</span>"우리 학교 학생들이 아침을 거르는 까닭"을 탐구한다면 다섯 단계에서 각각 무엇을 할지 써 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>이미 모인 자료로 이것저것 분석하다가 그럴듯한 결과만 골라 보고하면, 우연을 발견으로 착각하기 쉽습니다. 질문과 계획을 먼저 세워야 하는 까닭입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">"요일별로 몇 명이 몇 분 기다리는지 점심시간마다 2주 동안 기록하기로 한다"는 어느 단계일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>자료 수집 계획<span class="why"><b>맞습니다.</b> 무엇을, 언제, 어떻게 모을지 정하는 단계입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>문제 설정<span class="why"><b>질문은 이미 정해졌고, 이것은 모으는 방법입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>자료 수집<span class="why"><b>아직 기록하기로 정한 것이지 기록한 것은 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>자료 분석<span class="why"><b>분석은 모은 자료를 정리하는 단계입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/1-1.html#card-pstat-cholera-map"><small class="mono">실용 통계 1.1</small>목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?</a><a href="../../c/pstat/1-1.html#card-pstat-stat-question"><small class="mono">실용 통계 1.1</small>"우리 반 학생들은 몇 시간 잘까?"와 "나는 어제 몇 시간 잤을까?"는 무엇이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/1-3.html#card-pstat-sampling-methods"><small class="mono">실용 통계 1.3</small>전교생 360명 중 36명만 조사한다면, 어떻게 뽑아야 전체를 잘 대표할까?</a><a href="../../c/pstat/1-3.html#card-pstat-volunteer-bias"><small class="mono">실용 통계 1.3</small>응답자가 수천 명인 온라인 투표와 100명 무작위 조사, 무엇을 믿어야 할까?</a></div></nav>
+
+      <article class="card" id="card-pstat-question-refine">
+        <header class="card-head">
+          <span class="no">1.2.2</span><h2>"학생들은 스마트폰을 많이 쓸까?"를 통계로 답할 수 있는 질문으로 바꾸려면?</h2><span class="kind">통계적 질문 다듬기 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="opts">
+              <fieldset><legend>누구를(모집단)</legend>
+                <label><input type="radio" name="pq-who" value="0" checked> 학생들</label>
+                <label><input type="radio" name="pq-who" value="1"> 우리 학교 1학년 학생</label>
+                <label><input type="radio" name="pq-who" value="2"> 전 세계 청소년</label></fieldset>
+              <fieldset><legend>무엇을(측정)</legend>
+                <label><input type="radio" name="pq-what" value="0" checked> 스마트폰을 많이 쓰는지</label>
+                <label><input type="radio" name="pq-what" value="1"> 하루 화면 사용 시간(분, 설정 앱 기록)</label>
+                <label><input type="radio" name="pq-what" value="2"> 스마트폰이 좋은지 나쁜지</label></fieldset>
+              <fieldset><legend>언제(기간)</legend>
+                <label><input type="radio" name="pq-when" value="0" checked> 정하지 않음</label>
+                <label><input type="radio" name="pq-when" value="1"> 시험이 없는 평범한 한 주(7일)의 평균</label></fieldset>
+              <fieldset><legend>무엇과 비교(선택)</legend>
+                <label><input type="radio" name="pq-cmp" value="0" checked> 비교 없음</label>
+                <label><input type="radio" name="pq-cmp" value="1"> 평일과 주말</label></fieldset>
+            </div>
+            <p class="final" aria-live="polite"></p>
+            <ul class="crit"></ul>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>"많이"는 몇 시간일까요? "학생들"은 누구일까요? 모호한 질문으로는 자료를 모아도 답을 낼 수 없습니다. 질문을 어떻게 다듬어야 할까요?</li>
+            <li><span class="tag">복원</span>모집단, 변량, 통계적 질문.</li>
+            <li><span class="tag">설명</span>좋은 통계적 질문은 <em>대상</em>(누구에 대한 질문인지), <em>측정</em>(무엇을 어떤 단위로 잴지), <em>기간과 조건</em>이 분명하고, 실제로 자료를 모을 수 있어야 합니다. "많이", "좋다"처럼 사람마다 기준이 다른 말은 잴 수 있는 양으로 바꿉니다. 가치 판단("좋은지 나쁜지")은 자료만으로 답할 수 없으므로 측정할 수 있는 질문과 구별합니다.</li>
+            <li><span class="tag">연결</span>질문이 정해지면 다음 단계인 자료 수집 계획(표본, 측정 도구)을 세울 수 있습니다.</li>
+            <li><span class="tag">적용</span>네 기준을 모두 만족하는 질문을 만들고, 어떤 자료를 모으면 답할 수 있는지 말해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>측정 방법이 바뀌면 답도 바뀝니다. 자기 보고("하루에 몇 시간 쓰나요?")와 기기 기록은 다른 값을 줄 수 있으니 보고할 때 방법을 밝힙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 중 가장 잘 다듬어진 통계적 질문은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>우리 학교 2학년 학생의 지난주 하루 평균 수면 시간은 몇 시간인가?<span class="why"><b>맞습니다.</b> 대상, 측정, 기간이 분명합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>학생들은 잠을 충분히 잘까?<span class="why"><b>대상과 "충분히"의 기준이 모호합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>잠을 많이 자는 것은 좋은가?<span class="why"><b>가치 판단이라 자료만으로 답할 수 없습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>나는 어제 몇 시간 잤나?<span class="why"><b>답이 하나인 질문입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/1-1.html#card-pstat-cholera-map"><small class="mono">실용 통계 1.1</small>목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?</a><a href="../../c/pstat/1-1.html#card-pstat-stat-question"><small class="mono">실용 통계 1.1</small>"우리 반 학생들은 몇 시간 잘까?"와 "나는 어제 몇 시간 잤을까?"는 무엇이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/1-3.html#card-pstat-sampling-methods"><small class="mono">실용 통계 1.3</small>전교생 360명 중 36명만 조사한다면, 어떻게 뽑아야 전체를 잘 대표할까?</a><a href="../../c/pstat/1-3.html#card-pstat-volunteer-bias"><small class="mono">실용 통계 1.3</small>응답자가 수천 명인 온라인 투표와 100명 무작위 조사, 무엇을 믿어야 할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pstat-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pstat/ppdac-order.js"></script>
+<script src="../../js/cards/pstat/question-refine.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-seq-converge");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sL = $(".L"), sE = $(".e");
   const EPS = [0.5, 0.2, 0.1, 0.05, 0.02, 0.01];

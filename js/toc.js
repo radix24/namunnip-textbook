@@ -28,14 +28,14 @@ window.TOC = [
         "title": "1초는 누가, 어떻게 정할까?"
        },
        {
-        "kind": "card",
-        "id": "card-is1-gps",
-        "title": "GPS는 어떻게 시간으로 위치를 찾을까?"
-       },
-       {
         "kind": "video",
         "id": "video-is1-meter",
         "title": "1미터의 역사"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-gps",
+        "title": "GPS는 어떻게 시간으로 위치를 찾을까?"
        }
       ]
      },
@@ -79,11 +79,6 @@ window.TOC = [
         "title": "계산기에 나온 숫자를 다 적어도 될까?"
        },
        {
-        "kind": "card",
-        "id": "card-is1-fermi",
-        "title": "운동장의 모래알은 몇 개일까?"
-       },
-       {
         "kind": "text",
         "id": "text-is1-standards",
         "title": "왜 온 세계가 똑같은 1 kg을 써야 할까?"
@@ -97,6 +92,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-standard",
         "title": "모두가 자기 발걸음으로 재면 무슨 일이 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-fermi",
+        "title": "운동장의 모래알은 몇 개일까?"
        }
       ]
      },
@@ -377,6 +377,11 @@ window.TOC = [
        },
        {
         "kind": "card",
+        "id": "card-is1-moon-jump",
+        "title": "달에서 뛰면 얼마나 높이, 얼마나 오래 떠 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-inverse-square",
         "title": "우주정거장에는 중력이 없을까?"
        },
@@ -384,11 +389,6 @@ window.TOC = [
         "kind": "video",
         "id": "video-apple-moon",
         "title": "달도 떨어지고 있다"
-       },
-       {
-        "kind": "card",
-        "id": "card-is1-moon-jump",
-        "title": "달에서 뛰면 얼마나 높이, 얼마나 오래 떠 있을까?"
        }
       ]
      },
@@ -422,9 +422,24 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-cell-organelles",
+        "title": "세포 속 방들은 각각 무슨 일을 하고, 어떻게 알아냈을까?"
+       },
+       {
         "kind": "card",
         "id": "card-is1-membrane",
         "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-cell-osmosis",
+        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is1-activation",
+        "title": "효소는 반응을 어떻게 빠르게 할까?"
        },
        {
         "kind": "card",
@@ -433,23 +448,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-is1-activation",
-        "title": "효소는 반응을 어떻게 빠르게 할까?"
+        "id": "card-is1-catalase",
+        "title": "감자 조각을 넣으면 과산화 수소가 왜 거품을 낼까?"
        },
        {
         "kind": "text",
         "id": "text-is1-enzymes-life",
         "title": "생활 속에서 효소는 어떤 화학 반응을 도울까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-cell-organelles",
-        "title": "세포 속 방들은 각각 무슨 일을 하고, 어떻게 알아냈을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-osmosis",
-        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
        },
        {
         "kind": "card",
@@ -460,16 +465,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-cell-coupling",
         "title": "에너지가 필요한 반응을 세포는 어떻게 일으킬까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-pulse",
-        "title": "세포 밖으로 나갈 단백질은 어떤 길을 지날까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-is1-catalase",
-        "title": "감자 조각을 넣으면 과산화 수소가 왜 거품을 낼까?"
        }
       ]
      },
@@ -566,14 +561,14 @@ window.TOC = [
         "title": "기린은 필요해서 목이 길어졌을까?"
        },
        {
-        "kind": "text",
-        "id": "text-is2-biodiversity",
-        "title": "생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?"
-       },
-       {
         "kind": "video",
         "id": "video-is2-moth",
         "title": "흰 나방, 검은 나방"
+       },
+       {
+        "kind": "text",
+        "id": "text-is2-biodiversity",
+        "title": "생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?"
        }
       ]
      },
@@ -771,14 +766,14 @@ window.TOC = [
         "title": "자석을 움직이면 왜 전류가 흐를까?"
        },
        {
-        "kind": "card",
-        "id": "card-is2-transmission",
-        "title": "송전은 왜 높은 전압으로 할까?"
-       },
-       {
         "kind": "text",
         "id": "text-is2-power-plants",
         "title": "화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is2-transmission",
+        "title": "송전은 왜 높은 전압으로 할까?"
        },
        {
         "kind": "video",
@@ -978,6 +973,11 @@ window.TOC = [
         "title": "힘을 주지 않으면 물체는 멈출까?"
        },
        {
+        "kind": "video",
+        "id": "video-phy-bus",
+        "title": "급정거한 버스 안에서"
+       },
+       {
         "kind": "card",
         "id": "card-phy-vt",
         "title": "속도–시간 그래프 한 장에서 무엇을 읽을 수 있을까?"
@@ -986,11 +986,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-stopping",
         "title": "속력이 2배면 정지 거리는 몇 배가 될까?"
-       },
-       {
-        "kind": "video",
-        "id": "video-phy-bus",
-        "title": "급정거한 버스 안에서"
        },
        {
         "kind": "card",
@@ -1068,6 +1063,11 @@ window.TOC = [
        },
        {
         "kind": "card",
+        "id": "card-phy-heat-transfer",
+        "title": "난로의 열은 어떤 길로 나에게 올까?"
+       },
+       {
+        "kind": "card",
         "id": "card-mech-heating-curve",
         "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
        },
@@ -1075,11 +1075,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-mech-insulation",
         "title": "단열재를 두껍게 하면 빠져나가는 열이 얼마나 줄까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-heat-transfer",
-        "title": "난로의 열은 어떤 길로 나에게 올까?"
        }
       ]
      },
@@ -1299,11 +1294,6 @@ window.TOC = [
         "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
        {
-        "kind": "card",
-        "id": "card-phy-lm-emicro",
-        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
-       },
-       {
         "kind": "text",
         "id": "text-phy-image-sensor",
         "title": "디지털카메라는 빛을 어떻게 숫자로 저장할까?"
@@ -1317,6 +1307,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-compton",
         "title": "X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-phy-lm-emicro",
+        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        }
       ]
      },
@@ -1361,16 +1356,6 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-emq-semis",
-        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-is2-solar-cell",
-        "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-diode-iv",
         "title": "다이오드는 왜 한쪽으로만 전류를 흘릴까?"
        },
@@ -1378,6 +1363,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-solar-panel",
         "title": "작은 태양 전지 12장으로 휴대 전화를 충전하려면 어떻게 이어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-semis",
+        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-is2-solar-cell",
+        "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
        }
       ]
      },
@@ -2286,6 +2281,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-key",
+        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-bio-tree-read",
         "title": "계통수는 어떻게 읽을까?"
        },
@@ -2293,11 +2293,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-tree-build",
         "title": "형질 표로 계통수를 그릴 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-key",
-        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
        },
        {
         "kind": "card",
@@ -2555,11 +2550,6 @@ window.TOC = [
         "title": "지층에 남은 무늬로 옛 환경을 어떻게 읽을까?"
        },
        {
-        "kind": "text",
-        "id": "text-earth-paleoclimate",
-        "title": "온도계가 없던 시대의 기후는 어떻게 알아낼까?"
-       },
-       {
         "kind": "video",
         "id": "video-earth-day",
         "title": "지구 46억 년을 하루로"
@@ -2583,6 +2573,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-fossil-map",
         "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-earth-paleoclimate",
+        "title": "온도계가 없던 시대의 기후는 어떻게 알아낼까?"
        }
       ]
      },
@@ -2804,13 +2799,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-incline",
-        "title": "빗면 위의 상자는 어느 쪽으로 움직일까?"
+        "id": "card-phy-truss",
+        "title": "다리의 뼈대는 왜 삼각형으로 짤까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-truss",
-        "title": "다리의 뼈대는 왜 삼각형으로 짤까?"
+        "id": "card-mech-incline",
+        "title": "빗면 위의 상자는 어느 쪽으로 움직일까?"
        }
       ]
      },
@@ -2822,13 +2817,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-projectile",
-        "title": "비스듬히 던진 공은 몇 도에서 가장 멀리 갈까?"
+        "id": "card-is1-projectile",
+        "title": "수평으로 던진 공은 왜 포물선을 그릴까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-projectile",
-        "title": "수평으로 던진 공은 왜 포물선을 그릴까?"
+        "id": "card-mech-projectile",
+        "title": "비스듬히 던진 공은 몇 도에서 가장 멀리 갈까?"
        }
       ]
      },
@@ -2881,13 +2876,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-escape",
-        "title": "달에는 왜 대기가 없을까?"
+        "id": "card-phy-rocket",
+        "title": "로켓은 무엇을 밀고 나아갈까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-rocket",
-        "title": "로켓은 무엇을 밀고 나아갈까?"
+        "id": "card-mech-escape",
+        "title": "달에는 왜 대기가 없을까?"
        }
       ]
      },
@@ -2898,14 +2893,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-mech-gr",
-        "title": "중력은 힘일까, 휘어진 시공간일까?"
-       },
-       {
         "kind": "card",
         "id": "card-phy-lm-gps",
         "title": "GPS 위성의 시계는 왜 보정해야 할까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-mech-gr",
+        "title": "중력은 힘일까, 휘어진 시공간일까?"
        }
       ]
      }
@@ -2959,11 +2954,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-first-law",
-        "title": "기체에 준 열은 어디에 쓰일까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-joule",
         "title": "물을 저어서 데울 수 있을까?"
        },
@@ -2971,6 +2961,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-brake",
         "title": "멈춘 자동차의 운동 에너지는 어디로 갔을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-first-law",
+        "title": "기체에 준 열은 어디에 쓰일까?"
        }
       ]
      },
@@ -2980,11 +2975,6 @@ window.TOC = [
       "code": "12역학02-04",
       "page": true,
       "items": [
-       {
-        "kind": "card",
-        "id": "card-mech-cycle",
-        "title": "한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?"
-       },
        {
         "kind": "card",
         "id": "card-phy-engine",
@@ -3004,6 +2994,11 @@ window.TOC = [
         "kind": "video",
         "id": "video-phy-engine",
         "title": "증기 기관에서 자동차 엔진까지"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-cycle",
+        "title": "한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?"
        }
       ]
      },
@@ -3038,11 +3033,6 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-mech-shm",
-        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
-       },
-       {
         "kind": "text",
         "id": "text-phy-spring",
         "title": "눌린 용수철에는 에너지가 얼마나 저장될까?"
@@ -3051,6 +3041,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-pendulum",
         "title": "진자 공식은 언제 틀릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mech-shm",
+        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
        }
       ]
      },
@@ -3093,13 +3088,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mech-two-speaker",
-        "title": "스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?"
+        "id": "card-phy-lm-dslit",
+        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-dslit",
-        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
+        "id": "card-mech-two-speaker",
+        "title": "스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?"
        }
       ]
      },
@@ -3139,11 +3134,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-equipotential",
-        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-field",
         "title": "보이지 않는 전기장을 어떻게 그릴까?"
        },
@@ -3151,6 +3141,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-potential",
         "title": "전위차는 ‘전기의 높이’일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-equipotential",
+        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
        }
       ]
      },
@@ -3185,8 +3180,8 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-bfield",
-        "title": "도선을 둥글게 감으면 자기장은 어떻게 달라질까?"
+        "id": "card-phy-magnet",
+        "title": "철은 자석에 붙는데 알루미늄은 왜 안 붙을까?"
        },
        {
         "kind": "card",
@@ -3195,8 +3190,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-phy-magnet",
-        "title": "철은 자석에 붙는데 알루미늄은 왜 안 붙을까?"
+        "id": "card-emq-bfield",
+        "title": "도선을 둥글게 감으면 자기장은 어떻게 달라질까?"
        }
       ]
      },
@@ -3226,11 +3221,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-transformer",
-        "title": "변압기는 왜 교류에서만 작동할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lenz",
         "title": "자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?"
        },
@@ -3248,6 +3238,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-wireless",
         "title": "무선 충전기는 선 없이 어떻게 전기를 보낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-transformer",
+        "title": "변압기는 왜 교류에서만 작동할까?"
        }
       ]
      },
@@ -3261,11 +3256,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-emq-rlc",
         "title": "축전기에 담긴 에너지는 회로에서 어디로 갈까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-capacitor",
-        "title": "축전기는 전기 에너지를 어떻게 저장할까?"
        }
       ]
      },
@@ -3277,18 +3267,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-semis",
-        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
+        "id": "card-phy-lm-bands",
+        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
         "id": "card-is1-doping",
         "title": "반도체에 불순물을 넣으면 왜 전기가 잘 통할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-bands",
-        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
@@ -3299,6 +3284,11 @@ window.TOC = [
         "kind": "video",
         "id": "video-is1-chip",
         "title": "모래에서 반도체 칩까지"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-semis",
+        "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
        }
       ]
      }
@@ -3316,16 +3306,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-diffraction",
-        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-emq-hologram",
-        "title": "홀로그램은 어떻게 입체 영상을 기록할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-dslit",
         "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
        },
@@ -3333,6 +3313,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-lm-film",
         "title": "비눗방울은 왜 무지갯빛일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-diffraction",
+        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-emq-hologram",
+        "title": "홀로그램은 어떻게 입체 영상을 기록할까?"
        }
       ]
      },
@@ -3344,11 +3334,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-aberration",
-        "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-refract",
         "title": "볼록 렌즈는 왜 빛을 한 점에 모을까?"
        },
@@ -3356,6 +3341,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-phy-lm-image",
         "title": "렌즈를 반쯤 가리면 상도 반만 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-aberration",
+        "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
        }
       ]
      },
@@ -3380,11 +3370,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-pixels",
-        "title": "어두운 곳에서 찍은 사진은 왜 자글자글할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-photo",
         "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
@@ -3392,6 +3377,11 @@ window.TOC = [
         "kind": "text",
         "id": "text-phy-image-sensor",
         "title": "디지털카메라는 빛을 어떻게 숫자로 저장할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-pixels",
+        "title": "어두운 곳에서 찍은 사진은 왜 자글자글할까?"
        },
        {
         "kind": "card",
@@ -3415,11 +3405,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-emq-fiber",
         "title": "머리카락 굵기의 유리실로 어떻게 대륙 사이의 인터넷을 이을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-hyd",
-        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
        }
       ]
      }
@@ -3437,18 +3422,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-single-photon",
-        "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-dslit",
-        "title": "이중 슬릿 무늬의 간격은 무엇이 정할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-phy-lm-emicro",
         "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-single-photon",
+        "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
        }
       ]
      },
@@ -3514,11 +3494,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-star-spectrum",
-        "title": "별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-sun-fusion",
         "title": "태양은 무엇을 태워서 빛날까?"
        },
@@ -3531,6 +3506,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-spectrum",
         "title": "별빛에서 원소를 어떻게 읽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-emq-star-spectrum",
+        "title": "별빛의 검은 선으로 온도와 원소를 어떻게 알아낼까?"
        },
        {
         "kind": "card",
@@ -3562,11 +3542,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-gas-use",
-        "title": "에어백을 부풀리려면 기체가 몇 몰 필요할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-mech-ideal-gas",
         "title": "기체를 데우면 압력은 왜 커질까?"
        },
@@ -3574,6 +3549,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-molvol",
         "title": "기체 1몰의 부피는 왜 기체 종류와 상관없을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-gas-use",
+        "title": "에어백을 부풀리려면 기체가 몇 몰 필요할까?"
        }
       ]
      },
@@ -3598,11 +3578,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-bp-data",
-        "title": "극성이 없는 분자도 서로 끌어당길까?"
-       },
-       {
-        "kind": "card",
         "id": "card-chem-bp",
         "title": "물의 끓는점은 왜 100 °C나 될까?"
        },
@@ -3610,6 +3585,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-mix",
         "title": "기름과 물은 왜 섞이지 않을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-bp-data",
+        "title": "극성이 없는 분자도 서로 끌어당길까?"
        }
       ]
      },
@@ -3639,11 +3619,6 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-mateng-water",
-        "title": "물은 왜 그렇게 특별한 액체일까?"
-       },
-       {
         "kind": "card",
         "id": "card-chem-ice",
         "title": "물이 얼면 왜 부피가 커질까?"
@@ -3652,6 +3627,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-bp",
         "title": "물의 끓는점은 왜 100 °C나 될까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-mateng-water",
+        "title": "물은 왜 그렇게 특별한 액체일까?"
        }
       ]
      },
@@ -3676,13 +3656,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-osmosis",
-        "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
+        "id": "card-is1-membrane",
+        "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-membrane",
-        "title": "세포막은 무엇을 통과시키고 무엇을 막을까?"
+        "id": "card-mateng-osmosis",
+        "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
        }
       ]
      }
@@ -3700,11 +3680,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-thermo-eq",
-        "title": "반응식을 두 배로 하면 ΔH는 어떻게 될까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-hand-warmer",
         "title": "손난로는 어떻게 뜨거워질까?"
        },
@@ -3712,6 +3687,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is2-cold-pack",
         "title": "냉찜질 팩은 어떻게 차가워질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mateng-thermo-eq",
+        "title": "반응식을 두 배로 하면 ΔH는 어떻게 될까?"
        }
       ]
      },
@@ -3736,13 +3716,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-spont",
-        "title": "열을 흡수하는 변화도 저절로 일어날 수 있을까?"
+        "id": "card-mech-entropy",
+        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-entropy",
-        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
+        "id": "card-mateng-spont",
+        "title": "열을 흡수하는 변화도 저절로 일어날 수 있을까?"
        }
       ]
      }
@@ -3773,13 +3753,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-mateng-half-life",
-        "title": "약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?"
+        "id": "card-earth-half-life",
+        "title": "방사성 동위 원소 시계는 어떻게 읽을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-half-life",
-        "title": "방사성 동위 원소 시계는 어떻게 읽을까?"
+        "id": "card-mateng-half-life",
+        "title": "약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?"
        }
       ]
      },
@@ -3837,11 +3817,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-conjugate",
-        "title": "OH⁻가 없는 암모니아는 어떻게 염기일까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-ion-migration",
         "title": "여러 가지 산에 공통으로 들어 있는 것은?"
        },
@@ -3849,6 +3824,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is2-neutral",
         "title": "산과 염기를 섞으면 무엇이 사라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-rxn-conjugate",
+        "title": "OH⁻가 없는 암모니아는 어떻게 염기일까?"
        }
       ]
      },
@@ -3860,8 +3840,8 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-weak-acid",
-        "title": "같은 농도의 산인데 pH는 왜 다를까?"
+        "id": "card-is2-ph-log",
+        "title": "pH는 왜 로그 눈금일까?"
        },
        {
         "kind": "card",
@@ -3875,8 +3855,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-is2-ph-log",
-        "title": "pH는 왜 로그 눈금일까?"
+        "id": "card-rxn-weak-acid",
+        "title": "같은 농도의 산인데 pH는 왜 다를까?"
        }
       ]
      },
@@ -3888,13 +3868,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-titration",
-        "title": "적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?"
+        "id": "card-chem-eq-point",
+        "title": "중화점에서 용액은 언제나 중성일까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-eq-point",
-        "title": "중화점에서 용액은 언제나 중성일까?"
+        "id": "card-rxn-titration",
+        "title": "적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?"
        },
        {
         "kind": "card",
@@ -3939,13 +3919,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-buffer",
-        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
+        "id": "card-chem-lechat",
+        "title": "평형을 흔들면 어떻게 될까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-lechat",
-        "title": "평형을 흔들면 어떻게 될까?"
+        "id": "card-rxn-buffer",
+        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
        }
       ]
      }
@@ -3963,13 +3943,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-oxnum",
-        "title": "복잡한 산화·환원 반응식의 계수는 어떻게 맞출까?"
+        "id": "card-is2-redox-electron",
+        "title": "산화는 산소와의 반응일까, 전자의 이동일까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-redox-electron",
-        "title": "산화는 산소와의 반응일까, 전자의 이동일까?"
+        "id": "card-rxn-oxnum",
+        "title": "복잡한 산화·환원 반응식의 계수는 어떻게 맞출까?"
        }
       ]
      },
@@ -3980,14 +3960,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-rxn-battery-history",
-        "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
-       },
-       {
         "kind": "card",
         "id": "card-is2-reactivity",
         "title": "철은 왜 녹슬고 금은 녹슬지 않을까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-rxn-battery-history",
+        "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
        }
       ]
      },
@@ -4090,13 +4070,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-rxn-polymer",
-        "title": "작은 분자를 이으면 어떻게 비닐과 나일론이 될까?"
+        "id": "card-is1-polymer",
+        "title": "단백질과 DNA는 작은 단위를 어떻게 이어 붙일까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-polymer",
-        "title": "단백질과 DNA는 작은 단위를 어떻게 이어 붙일까?"
+        "id": "card-rxn-polymer",
+        "title": "작은 분자를 이으면 어떻게 비닐과 나일론이 될까?"
        }
       ]
      },
@@ -4361,13 +4341,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-cell-carbon",
-        "title": "포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?"
+        "id": "card-bio-resp",
+        "title": "세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-resp",
-        "title": "세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?"
+        "id": "card-cell-carbon",
+        "title": "포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?"
        }
       ]
      },
@@ -4410,13 +4390,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-cell-chloroplast",
-        "title": "엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?"
+        "id": "card-leaf-color",
+        "title": "잎은 왜 초록색일까?"
        },
        {
         "kind": "card",
-        "id": "card-leaf-color",
-        "title": "잎은 왜 초록색일까?"
+        "id": "card-cell-chloroplast",
+        "title": "엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?"
        }
       ]
      },
@@ -4497,11 +4477,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-sexlinked",
-        "title": "색맹은 왜 남자에게 더 많을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-bio-gene-chromo",
         "title": "유전자, DNA, 염색체는 서로 어떤 관계일까?"
        },
@@ -4509,6 +4484,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-assort",
         "title": "형제는 왜 서로 다르게 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-gene-sexlinked",
+        "title": "색맹은 왜 남자에게 더 많을까?"
        }
       ]
      },
@@ -4520,13 +4500,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-pedigree",
-        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
+        "id": "card-bio-blood",
+        "title": "ABO식 혈액형은 어떻게 판정할까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-blood",
-        "title": "ABO식 혈액형은 어떻게 판정할까?"
+        "id": "card-gene-pedigree",
+        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
        }
       ]
      },
@@ -4551,16 +4531,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-nondisjunction",
-        "title": "염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-gene-disorders",
-        "title": "유전병은 원인에 따라 어떻게 나눌까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-mutation",
         "title": "염기 하나가 바뀌면 무슨 일이 생길까?"
        },
@@ -4568,6 +4538,16 @@ window.TOC = [
         "kind": "card",
         "id": "card-bio-division",
         "title": "체세포 분열과 감수 분열은 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-gene-nondisjunction",
+        "title": "염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-gene-disorders",
+        "title": "유전병은 원인에 따라 어떻게 나눌까?"
        }
       ]
      },
@@ -4579,6 +4559,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-cell-chargaff",
+        "title": "생물마다 DNA는 다른데, 왜 A와 T의 양은 늘 같을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-gene-hershey",
         "title": "바이러스가 세균 속으로 들여보내는 것은 단백질일까, DNA일까?"
        },
@@ -4586,11 +4571,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-gene-dna-history",
         "title": "DNA가 유전 물질이고 이중 나선이라는 것은 어떻게 밝혀졌을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-cell-chargaff",
-        "title": "생물마다 DNA는 다른데, 왜 A와 T의 양은 늘 같을까?"
        }
       ]
      },
@@ -4602,13 +4582,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-genome",
-        "title": "사람의 DNA 가운데 유전자는 얼마나 될까?"
+        "id": "card-bio-dna-pack",
+        "title": "2 m나 되는 DNA가 어떻게 핵 속에 들어갈까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-dna-pack",
-        "title": "2 m나 되는 DNA가 어떻게 핵 속에 들어갈까?"
+        "id": "card-gene-genome",
+        "title": "사람의 DNA 가운데 유전자는 얼마나 될까?"
        },
        {
         "kind": "text",
@@ -4644,13 +4624,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-gene-central",
-        "title": "핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?"
+        "id": "card-is1-dogma",
+        "title": "DNA의 정보는 어떻게 단백질이 될까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-dogma",
-        "title": "DNA의 정보는 어떻게 단백질이 될까?"
+        "id": "card-gene-central",
+        "title": "핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?"
        }
       ]
      },
@@ -4829,6 +4809,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-is1-spheres",
+        "title": "지구시스템의 각 권역은 어떤 층으로 이루어져 있을까?"
+       },
+       {
         "kind": "card",
         "id": "card-esys-snowline",
         "title": "안쪽 행성은 왜 암석으로, 바깥 행성은 왜 기체로 되어 있을까?"
@@ -4837,11 +4822,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-early-earth",
         "title": "녹은 암석 덩어리가 어떻게 바다와 대기를 가진 행성이 되었을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-is1-spheres",
-        "title": "지구시스템의 각 권역은 어떤 층으로 이루어져 있을까?"
        }
       ]
      },
@@ -4853,13 +4833,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-oxygen",
-        "title": "공기 중의 산소는 언제, 어떻게 늘어났을까?"
+        "id": "card-bio-carbon",
+        "title": "탄소는 생태계를 어떻게 돌까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-carbon",
-        "title": "탄소는 생태계를 어떻게 돌까?"
+        "id": "card-esys-oxygen",
+        "title": "공기 중의 산소는 언제, 어떻게 늘어났을까?"
        },
        {
         "kind": "card",
@@ -4876,11 +4856,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-hotspot",
-        "title": "하와이 섬들의 나이로 판의 속도를 잴 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-seafloor",
         "title": "바다 밑 줄무늬는 무엇을 기록하고 있을까?"
        },
@@ -4888,6 +4863,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-plate-boundary",
         "title": "판 경계마다 지진과 화산은 어떻게 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-hotspot",
+        "title": "하와이 섬들의 나이로 판의 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -4897,11 +4877,6 @@ window.TOC = [
       "code": "12지시01-04",
       "page": true,
       "items": [
-       {
-        "kind": "card",
-        "id": "card-esys-volcano",
-        "title": "어떤 화산은 흐르고, 어떤 화산은 터지는 까닭은?"
-       },
        {
         "kind": "card",
         "id": "card-earth-magma",
@@ -4916,6 +4891,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-columnar",
         "title": "용암은 어떻게 육각기둥이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-volcano",
+        "title": "어떤 화산은 흐르고, 어떤 화산은 터지는 까닭은?"
        }
       ]
      },
@@ -4946,13 +4926,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-ekman",
-        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
+        "id": "card-earth-upwelling",
+        "title": "바람이 불면 왜 해안에 찬물이 올라올까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-upwelling",
-        "title": "바람이 불면 왜 해안에 찬물이 올라올까?"
+        "id": "card-esys-ekman",
+        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
        }
       ]
      },
@@ -4977,6 +4957,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-danger",
+        "title": "태풍 진로의 오른쪽은 왜 더 위험할까?"
+       },
+       {
+        "kind": "card",
         "id": "card-esys-tsunami",
         "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
        },
@@ -4984,11 +4969,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-surge",
         "title": "해일은 무엇 때문에 생기고, 어떻게 대비할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-danger",
-        "title": "태풍 진로의 오른쪽은 왜 더 위험할까?"
        }
       ]
      },
@@ -5019,11 +4999,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-absorb",
-        "title": "공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is2-greenhouse",
         "title": "온실 효과는 나쁜 것일까?"
        },
@@ -5031,6 +5006,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-blackbody",
         "title": "별의 색으로 온도를 어떻게 알까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-esys-absorb",
+        "title": "공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?"
        }
       ]
      },
@@ -5060,6 +5040,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-updown",
+        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-esys-stability",
         "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
        },
@@ -5067,11 +5052,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-esys-precip",
         "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-updown",
-        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
        },
        {
         "kind": "card",
@@ -5090,11 +5070,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-esys-hydro",
         "title": "공기는 왜 위로 떠오르지도, 가라앉지도 않을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-updown",
-        "title": "고기압 아래에서는 왜 날씨가 맑을까?"
        }
       ]
      },
@@ -5106,13 +5081,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-winds",
-        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
+        "id": "card-earth-isobar",
+        "title": "등압선만 보고 바람을 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-isobar",
-        "title": "등압선만 보고 바람을 알 수 있을까?"
+        "id": "card-esys-winds",
+        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
        }
       ]
      },
@@ -5124,13 +5099,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-esys-rossby",
-        "title": "굽이치는 편서풍 아래에서 저기압은 어디에 생길까?"
+        "id": "card-earth-front",
+        "title": "온대 저기압이 지나가면 날씨는 어떤 순서로 바뀔까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-front",
-        "title": "온대 저기압이 지나가면 날씨는 어떤 순서로 바뀔까?"
+        "id": "card-esys-rossby",
+        "title": "굽이치는 편서풍 아래에서 저기압은 어디에 생길까?"
        }
       ]
      }
@@ -5193,13 +5168,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-kepler3",
-        "title": "위성의 궤도만 보고 목성의 질량을 잴 수 있을까?"
+        "id": "card-mech-kepler",
+        "title": "행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-kepler",
-        "title": "행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?"
+        "id": "card-space-kepler3",
+        "title": "위성의 궤도만 보고 목성의 질량을 잴 수 있을까?"
        },
        {
         "kind": "card",
@@ -5229,13 +5204,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-exoplanet",
-        "title": "보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?"
+        "id": "card-mech-doppler",
+        "title": "다가오는 사이렌은 왜 더 높게 들릴까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-doppler",
-        "title": "다가오는 사이렌은 왜 더 높게 들릴까?"
+        "id": "card-space-exoplanet",
+        "title": "보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?"
        }
       ]
      }
@@ -5253,13 +5228,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-sun",
-        "title": "같은 태양이 파장마다 왜 전혀 다르게 보일까?"
+        "id": "card-earth-blackbody",
+        "title": "별의 색으로 온도를 어떻게 알까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-blackbody",
-        "title": "별의 색으로 온도를 어떻게 알까?"
+        "id": "card-space-sun",
+        "title": "같은 태양이 파장마다 왜 전혀 다르게 보일까?"
        }
       ]
      },
@@ -5297,13 +5272,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-binary",
-        "title": "서로를 도는 두 별은 어떻게 별의 저울이 될까?"
+        "id": "card-earth-hrd",
+        "title": "H–R도는 어떻게 읽을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hrd",
-        "title": "H–R도는 어떻게 읽을까?"
+        "id": "card-space-binary",
+        "title": "서로를 도는 두 별은 어떻게 별의 저울이 될까?"
        }
       ]
      },
@@ -5315,11 +5290,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-variables",
-        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-evolve",
         "title": "무거운 별은 왜 더 빨리 죽을까?"
        },
@@ -5327,6 +5297,11 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-star-life",
         "title": "별은 어떻게 태어나고, 무엇을 남기고 죽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-space-variables",
+        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        }
       ]
      }
@@ -5346,11 +5321,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-space-cluster",
         "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-hrd",
-        "title": "H–R도는 어떻게 읽을까?"
        }
       ]
      },
@@ -5375,13 +5345,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-rotation",
-        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
+        "id": "card-earth-hubble",
+        "title": "은하는 모양으로 어떻게 나눌까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hubble",
-        "title": "은하는 모양으로 어떻게 나눌까?"
+        "id": "card-space-rotation",
+        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
        }
       ]
      },
@@ -5393,13 +5363,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-redshift-survey",
-        "title": "하늘 사진에서는 안 보이던 우주의 구조가 스펙트럼으로 어떻게 드러날까?"
+        "id": "card-earth-hlaw",
+        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hlaw",
-        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
+        "id": "card-space-redshift-survey",
+        "title": "하늘 사진에서는 안 보이던 우주의 구조가 스펙트럼으로 어떻게 드러날까?"
        }
       ]
      },
@@ -5411,16 +5381,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-space-cosmic-web",
-        "title": "거의 고르던 초기 우주에서 어떻게 거미줄 같은 구조가 생겼을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-space-large-structure",
-        "title": "은하 너머에는 어떤 구조가 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-nocenter",
         "title": "우주에는 중심이 있을까?"
        },
@@ -5428,6 +5388,16 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-cosmology",
         "title": "우주에 대한 생각은 어떤 증거로 바뀌어 왔을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-space-cosmic-web",
+        "title": "거의 고르던 초기 우주에서 어떻게 거미줄 같은 구조가 생겼을까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-space-large-structure",
+        "title": "은하 너머에는 어떤 구조가 있을까?"
        }
       ]
      }
@@ -5514,13 +5484,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-sie1-pasteur",
-        "title": "고깃국물 속 미생물은 저절로 생길까?"
+        "id": "card-bio-control",
+        "title": "가설은 어떻게 검증할까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-control",
-        "title": "가설은 어떻게 검증할까?"
+        "id": "card-sie1-pasteur",
+        "title": "고깃국물 속 미생물은 저절로 생길까?"
        }
       ]
      },
@@ -5609,13 +5579,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-sie2-column",
-        "title": "종이 한 장으로 얼마나 무거운 것을 버틸 수 있을까?"
+        "id": "card-is1-egg-drop",
+        "title": "떨어뜨린 달걀이 깨지지 않게 하려면?"
        },
        {
         "kind": "card",
-        "id": "card-is1-egg-drop",
-        "title": "떨어뜨린 달걀이 깨지지 않게 하려면?"
+        "id": "card-sie2-column",
+        "title": "종이 한 장으로 얼마나 무거운 것을 버틸 수 있을까?"
        }
       ]
      }
@@ -5638,13 +5608,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-sie2-calib",
-        "title": "센서가 보낸 숫자를 어떻게 온도로 바꿀까?"
+        "id": "card-is1-sampling",
+        "title": "소리는 어떻게 숫자가 될까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-sampling",
-        "title": "소리는 어떻게 숫자가 될까?"
+        "id": "card-sie2-calib",
+        "title": "센서가 보낸 숫자를 어떻게 온도로 바꿀까?"
        }
       ]
      },
@@ -5655,14 +5625,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-sie2-co2",
-        "title": "교실 공기, 숫자로 보면 무엇이 달라질까?"
-       },
-       {
         "kind": "text",
         "id": "text-is2-iot",
         "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-sie2-co2",
+        "title": "교실 공기, 숫자로 보면 무엇이 달라질까?"
        }
       ]
      },
@@ -5673,14 +5643,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "text",
-        "id": "text-sie2-ethics",
-        "title": "숫자 하나 고치는 것이 왜 그렇게 큰 잘못일까?"
-       },
-       {
         "kind": "card",
         "id": "card-is2-ethics",
         "title": "확진자의 이동 경로, 어디까지 공개해야 할까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-sie2-ethics",
+        "title": "숫자 하나 고치는 것이 왜 그렇게 큰 잘못일까?"
        }
       ]
      }
@@ -5817,6 +5787,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-phy-relativity-society",
+        "title": "상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?"
+       },
+       {
         "kind": "card",
         "id": "card-hist-eclipse",
         "title": "일식 사진 몇 장이 어떻게 아인슈타인을 세계적 유명인으로 만들었을까?"
@@ -5825,11 +5800,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-hist-modern-culture",
         "title": "시간과 공간이 바뀌자 예술과 생각도 바뀌었을까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-phy-relativity-society",
-        "title": "상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?"
        }
       ]
      },
@@ -5882,6 +5852,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-herd",
+        "title": "집단 면역은 몇 %가 접종해야 생길까?"
+       },
+       {
+        "kind": "card",
         "id": "card-hist-snow",
         "title": "1854년 런던의 콜레라는 어디에서 왔을까?"
        },
@@ -5889,11 +5864,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-hist-epidemics",
         "title": "감염병은 사회를 어떻게 바꾸었고, 과학은 무엇을 해냈을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-herd",
-        "title": "집단 면역은 몇 %가 접종해야 생길까?"
        }
       ]
      },
@@ -6011,6 +5981,11 @@ window.TOC = [
       "items": [
        {
         "kind": "text",
+        "id": "text-is2-iot",
+        "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
+       },
+       {
+        "kind": "text",
         "id": "text-hist-connected",
         "title": "사람에서 기계로, 기계에서 사물로 연결이 넓어지면 사회는 어떻게 달라질까?"
        },
@@ -6018,11 +5993,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-hist-smallworld",
         "title": "80억 명이 사는 세상은 왜 몇 다리만 건너면 이어질까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-is2-iot",
-        "title": "사물인터넷은 무엇을 연결하고, 어디까지 믿을 수 있을까?"
        }
       ]
      },
@@ -6534,13 +6504,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-fusi-misgraph",
-        "title": "같은 숫자로 그린 그래프가 왜 다른 인상을 줄까?"
+        "id": "card-sie1-plot",
+        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
        },
        {
         "kind": "card",
-        "id": "card-sie1-plot",
-        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
+        "id": "card-fusi-misgraph",
+        "title": "같은 숫자로 그린 그래프가 왜 다른 인상을 줄까?"
        }
       ]
      },
@@ -6570,13 +6540,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-fusi-simpson",
-        "title": "모든 집단에서 더 나은 치료가 전체로는 더 나쁠 수 있을까?"
+        "id": "card-is2-confound",
+        "title": "자료가 많으면 결론도 항상 옳을까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-confound",
-        "title": "자료가 많으면 결론도 항상 옳을까?"
+        "id": "card-fusi-simpson",
+        "title": "모든 집단에서 더 나은 치료가 전체로는 더 나쁠 수 있을까?"
        }
       ]
      },
@@ -6763,13 +6733,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-orbit",
-        "title": "인공위성은 얼마나 빨리 던져야 지구를 돌까?"
+        "id": "card-mech-escape",
+        "title": "달에는 왜 대기가 없을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-escape",
-        "title": "달에는 왜 대기가 없을까?"
+        "id": "card-adphy-orbit",
+        "title": "인공위성은 얼마나 빨리 던져야 지구를 돌까?"
        }
       ]
      },
@@ -6804,13 +6774,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-carnot",
-        "title": "열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?"
+        "id": "card-mech-entropy",
+        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-entropy",
-        "title": "퍼진 기체는 왜 저절로 다시 모이지 않을까?"
+        "id": "card-adphy-carnot",
+        "title": "열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?"
        }
       ]
      }
@@ -6828,13 +6798,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-emq-equipotential",
-        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
+        "id": "card-phy-field",
+        "title": "보이지 않는 전기장을 어떻게 그릴까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-field",
-        "title": "보이지 않는 전기장을 어떻게 그릴까?"
+        "id": "card-emq-equipotential",
+        "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
        },
        {
         "kind": "card",
@@ -7020,13 +6990,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-interferometer",
-        "title": "빛의 파장으로 1만분의 1 mm를 잴 수 있을까?"
+        "id": "card-phy-lm-film",
+        "title": "비눗방울은 왜 무지갯빛일까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-film",
-        "title": "비눗방울은 왜 무지갯빛일까?"
+        "id": "card-adphy-interferometer",
+        "title": "빛의 파장으로 1만분의 1 mm를 잴 수 있을까?"
        }
       ]
      },
@@ -7043,13 +7013,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-rayleigh",
-        "title": "망원경은 왜 클수록 더 가까이 붙은 두 별을 가를까?"
+        "id": "card-phy-lm-litho",
+        "title": "반도체 회로는 왜 더 짧은 파장의 빛으로 새길까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-litho",
-        "title": "반도체 회로는 왜 더 짧은 파장의 빛으로 새길까?"
+        "id": "card-adphy-rayleigh",
+        "title": "망원경은 왜 클수록 더 가까이 붙은 두 별을 가를까?"
        }
       ]
      },
@@ -7102,6 +7072,16 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "card",
+        "id": "card-phy-lm-clock",
+        "title": "빠르게 움직이면 정말 시간이 느리게 갈까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-phy-lm-gps",
+        "title": "GPS 위성의 시계는 왜 보정해야 할까?"
+       },
+       {
         "kind": "text",
         "id": "text-adphy-sr",
         "title": "상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?"
@@ -7113,18 +7093,8 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-clock",
-        "title": "빠르게 움직이면 정말 시간이 느리게 갈까?"
-       },
-       {
-        "kind": "card",
         "id": "card-adphy-mass-energy",
         "title": "가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-phy-lm-gps",
-        "title": "GPS 위성의 시계는 왜 보정해야 할까?"
        },
        {
         "kind": "text",
@@ -7156,13 +7126,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-davisson",
-        "title": "니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?"
+        "id": "card-phy-lm-emicro",
+        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-emicro",
-        "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
+        "id": "card-adphy-davisson",
+        "title": "니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?"
        }
       ]
      },
@@ -7212,13 +7182,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adphy-bands",
-        "title": "원자가 많이 모이면 에너지 준위는 왜 띠가 될까?"
+        "id": "card-phy-lm-bands",
+        "title": "규소는 도체일까, 절연체일까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-bands",
-        "title": "규소는 도체일까, 절연체일까?"
+        "id": "card-adphy-bands",
+        "title": "원자가 많이 모이면 에너지 준위는 왜 띠가 될까?"
        },
        {
         "kind": "text",
@@ -7316,11 +7286,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adchem-potential",
         "title": "두 입자를 가까이 가져가면 에너지는 어떻게 변할까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-mateng-solids",
-        "title": "소금, 얼음, 다이아몬드, 구리는 무엇으로 붙잡혀 있을까?"
        }
       ]
      },
@@ -7448,13 +7413,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adchem-stopcock",
-        "title": "콕을 열어 두 기체를 섞으면 각 기체의 압력은 어떻게 될까?"
+        "id": "card-mateng-partial",
+        "title": "깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-partial",
-        "title": "깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?"
+        "id": "card-adchem-stopcock",
+        "title": "콕을 열어 두 기체를 섞으면 각 기체의 압력은 어떻게 될까?"
        }
       ]
      },
@@ -7484,13 +7449,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-capillary",
-        "title": "가는 유리관 속 물은 왜 저절로 올라가고, 수은은 내려갈까?"
+        "id": "card-labchem-vapor",
+        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-labchem-vapor",
-        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
+        "id": "card-adchem-capillary",
+        "title": "가는 유리관 속 물은 왜 저절로 올라가고, 수은은 내려갈까?"
        }
       ]
      },
@@ -7530,13 +7495,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-solubility",
-        "title": "온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?"
+        "id": "card-chem-soda",
+        "title": "탄산음료 뚜껑을 열면 왜 거품이 날까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-soda",
-        "title": "탄산음료 뚜껑을 열면 왜 거품이 날까?"
+        "id": "card-adchem-solubility",
+        "title": "온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?"
        }
       ]
      },
@@ -7775,13 +7740,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-vanthoff",
-        "title": "온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?"
+        "id": "card-chem-haber-eq",
+        "title": "암모니아 합성은 왜 높은 압력에서 할까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-haber-eq",
-        "title": "암모니아 합성은 왜 높은 압력에서 할까?"
+        "id": "card-adchem-vanthoff",
+        "title": "온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?"
        }
       ]
      },
@@ -7795,11 +7760,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-chem-phase",
         "title": "얼린 딸기는 어떻게 물을 녹이지 않고 바로 날려 보낼까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-labchem-vapor",
-        "title": "액체마다 증기압이 다른 까닭을 압력 센서로 잴 수 있을까?"
        },
        {
         "kind": "card",
@@ -7862,13 +7822,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adchem-polyprotic",
-        "title": "인산을 적정하면 pH는 왜 두 번 뛸까?"
+        "id": "card-rxn-buffer",
+        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-buffer",
-        "title": "혈액의 pH는 어떻게 7.4에 머물까?"
+        "id": "card-adchem-polyprotic",
+        "title": "인산을 적정하면 pH는 왜 두 번 뛸까?"
        }
       ]
      },
@@ -8031,13 +7991,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adbio-benson",
-        "title": "방사성 탄소를 몇 초만 주면 어디에 먼저 나타날까?"
+        "id": "card-cell-calvin",
+        "title": "불을 끄면 캘빈 회로의 어떤 물질이 쌓일까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-calvin",
-        "title": "불을 끄면 캘빈 회로의 어떤 물질이 쌓일까?"
+        "id": "card-adbio-benson",
+        "title": "방사성 탄소를 몇 초만 주면 어디에 먼저 나타날까?"
        }
       ]
      },
@@ -8155,6 +8115,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-saltatory",
+        "title": "말이집이 있으면 왜 신호가 더 빠를까?"
+       },
+       {
+        "kind": "card",
         "id": "card-adbio-ghk",
         "title": "휴지 전위는 왜 −70 mV 근처에 머물까?"
        },
@@ -8162,11 +8127,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adbio-hh",
         "title": "활동 전위 직후에 준 두 번째 자극은 왜 통하지 않을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-saltatory",
-        "title": "말이집이 있으면 왜 신호가 더 빠를까?"
        },
        {
         "kind": "text",
@@ -8188,13 +8148,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adbio-psp",
-        "title": "시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?"
+        "id": "card-bio-syndrug",
+        "title": "약물은 시냅스의 어느 단계에 끼어들까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-syndrug",
-        "title": "약물은 시냅스의 어느 단계에 끼어들까?"
+        "id": "card-adbio-psp",
+        "title": "시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?"
        }
       ]
      },
@@ -8330,13 +8290,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adbio-hox",
-        "title": "초파리의 날개를 네 장으로 만드는 유전자가 생쥐의 척추뼈도 정할까?"
+        "id": "card-gene-differentiation",
+        "title": "같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-differentiation",
-        "title": "같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?"
+        "id": "card-adbio-hox",
+        "title": "초파리의 날개를 네 장으로 만드는 유전자가 생쥐의 척추뼈도 정할까?"
        }
       ]
      }
@@ -8497,13 +8457,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-adearth-dynamo",
-        "title": "지구 자기장은 왜 수십억 년 동안 사라지지 않을까?"
+        "id": "card-labearth-apwp",
+        "title": "옛날에는 자북극이 두 개였을까, 대륙이 움직였을까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-apwp",
-        "title": "옛날에는 자북극이 두 개였을까, 대륙이 움직였을까?"
+        "id": "card-adearth-dynamo",
+        "title": "지구 자기장은 왜 수십억 년 동안 사라지지 않을까?"
        }
       ]
      },
@@ -8584,16 +8544,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rock-id",
-        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-adearth-crystallize",
-        "title": "같은 마그마에서 왜 서로 다른 암석이 여러 가지 나올까?"
-       },
-       {
-        "kind": "card",
         "id": "card-adearth-facies",
         "title": "같은 현무암이 어디서는 녹색 편암, 어디서는 청색 편암이 되는 까닭은?"
        },
@@ -8601,6 +8551,16 @@ window.TOC = [
         "kind": "text",
         "id": "text-earth-sediment",
         "title": "지층에 남은 무늬로 옛 환경을 어떻게 읽을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labearth-rock-id",
+        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adearth-crystallize",
+        "title": "같은 마그마에서 왜 서로 다른 암석이 여러 가지 나올까?"
        },
        {
         "kind": "text",
@@ -8686,6 +8646,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-earth-fossil-map",
+        "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
+       },
+       {
+        "kind": "card",
         "id": "card-adearth-korea-map",
         "title": "한반도의 땅덩이들은 언제, 어떤 순서로 만들어졌을까?"
        },
@@ -8693,11 +8658,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-adearth-korea-history",
         "title": "한반도는 어떤 판구조 환경을 거쳐 지금의 모습이 되었을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-earth-fossil-map",
-        "title": "우리나라 어디에서 어느 시대 화석이 나올까?"
        }
       ]
      }
@@ -8714,6 +8674,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-esys-precip",
+        "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
+       },
+       {
         "kind": "card",
         "id": "card-labearth-humidity",
         "title": "공기를 압축하면 수증기량은 늘어날까, 그대로일까?"
@@ -8727,11 +8692,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-adearth-droplet",
         "title": "구름 물방울이 빗방울로 자라는 데는 얼마나 걸릴까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-esys-precip",
-        "title": "구름 속 작은 물방울은 어떻게 빗방울이 될까?"
        }
       ]
      },
@@ -8862,14 +8822,14 @@ window.TOC = [
         "title": "심해파와 천해파의 속도 공식은 어디까지 맞을까?"
        },
        {
-        "kind": "card",
-        "id": "card-adearth-surge",
-        "title": "같은 태풍인데 왜 어떤 해안에서만 해일이 클까?"
-       },
-       {
         "kind": "text",
         "id": "text-esys-surge",
         "title": "해일은 무엇 때문에 생기고, 어떻게 대비할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adearth-surge",
+        "title": "같은 태풍인데 왜 어떤 해안에서만 해일이 클까?"
        }
       ]
      },
@@ -8970,13 +8930,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-enso-osc",
-        "title": "엘니뇨는 왜 2~7년마다 저절로 되풀이될까?"
+        "id": "card-earth-oni",
+        "title": "실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-oni",
-        "title": "실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?"
+        "id": "card-adearth-enso-osc",
+        "title": "엘니뇨는 왜 2~7년마다 저절로 되풀이될까?"
        },
        {
         "kind": "text",
@@ -9004,13 +8964,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-sidereal",
-        "title": "오늘 밤 9시에 남중한 별은 한 달 뒤 몇 시에 남중할까?"
+        "id": "card-labearth-equation-time",
+        "title": "해시계의 정오와 시계의 정오는 왜 날마다 다르게 어긋날까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-equation-time",
-        "title": "해시계의 정오와 시계의 정오는 왜 날마다 다르게 어긋날까?"
+        "id": "card-adearth-sidereal",
+        "title": "오늘 밤 9시에 남중한 별은 한 달 뒤 몇 시에 남중할까?"
        },
        {
         "kind": "card",
@@ -9129,23 +9089,23 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-is1-fusion",
+        "title": "별은 왜 철에서 핵융합을 멈출까?"
+       },
+       {
+        "kind": "card",
         "id": "card-earth-star-core",
         "title": "무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-fusion",
-        "title": "별은 왜 철에서 핵융합을 멈출까?"
+        "id": "card-space-variables",
+        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        },
        {
         "kind": "text",
         "id": "text-adearth-stellar-fates",
         "title": "무거운 별은 왜 마지막 연료를 하루 만에 다 태울까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-space-variables",
-        "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        },
        {
         "kind": "card",
@@ -9205,13 +9165,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-hi21",
-        "title": "21 cm 전파 한 줄로 우리은하의 나선팔과 회전 곡선을 그릴 수 있을까?"
+        "id": "card-labearth-rotation-mass",
+        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
        },
        {
         "kind": "card",
-        "id": "card-labearth-rotation-mass",
-        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
+        "id": "card-adearth-hi21",
+        "title": "21 cm 전파 한 줄로 우리은하의 나선팔과 회전 곡선을 그릴 수 있을까?"
        }
       ]
      },
@@ -9227,14 +9187,14 @@ window.TOC = [
         "title": "은하는 모양으로 어떻게 나눌까?"
        },
        {
-        "kind": "text",
-        "id": "text-adearth-galaxy-agn",
-        "title": "은하는 빛으로 어림한 것보다 왜 무겁고, 중심은 왜 그렇게 밝을까?"
-       },
-       {
         "kind": "card",
         "id": "card-earth-quasar",
         "title": "퀘이사는 왜 특이 은하일까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-adearth-galaxy-agn",
+        "title": "은하는 빛으로 어림한 것보다 왜 무겁고, 중심은 왜 그렇게 밝을까?"
        },
        {
         "kind": "card",
@@ -9256,13 +9216,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-adearth-cmb",
-        "title": "하늘 전체에서 오는 희미한 전파는 왜 대폭발의 증거일까?"
+        "id": "card-is1-bbn",
+        "title": "우주는 왜 대부분 수소와 헬륨일까?"
        },
        {
         "kind": "card",
-        "id": "card-is1-bbn",
-        "title": "우주는 왜 대부분 수소와 헬륨일까?"
+        "id": "card-adearth-cmb",
+        "title": "하늘 전체에서 오는 희미한 전파는 왜 대폭발의 증거일까?"
        }
       ]
      },
@@ -9434,6 +9394,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-sie1-plot",
+        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
+       },
+       {
+        "kind": "card",
         "id": "card-resr-graph",
         "title": "기포 수를 세어 적은 표를 어떤 그래프로 바꿔야 관계가 드러날까?"
        },
@@ -9441,11 +9406,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-resr-logbook",
         "title": "연구 일지에는 무엇을 적고, 표는 어떻게 만들까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-sie1-plot",
-        "title": "같은 자료인데 왜 그래프마다 다른 이야기를 할까?"
        }
       ]
      }
@@ -9869,13 +9829,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-info-eval-groups",
-        "title": "정확도 95 %인 프로그램은 모두에게 잘 동작할까?"
+        "id": "card-is2-reident",
+        "title": "이름을 지운 자료로도 나를 찾아낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-reident",
-        "title": "이름을 지운 자료로도 나를 찾아낼 수 있을까?"
+        "id": "card-info-eval-groups",
+        "title": "정확도 95 %인 프로그램은 모두에게 잘 동작할까?"
        },
        {
         "kind": "text",
@@ -9946,11 +9906,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-logger",
-        "title": "센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?"
-       },
-       {
-        "kind": "card",
         "id": "card-is1-sampling",
         "title": "소리는 어떻게 숫자가 될까?"
        },
@@ -9958,6 +9913,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-is1-sensor",
         "title": "온도계는 정말 온도를 잴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labphy-logger",
+        "title": "센서가 1초에 몇 번 재야 진자의 운동을 제대로 기록할까?"
        },
        {
         "kind": "card",
@@ -10081,13 +10041,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-spring-energy",
-        "title": "오르내리는 추의 에너지를 모두 더하면 정말 일정할까?"
+        "id": "card-mech-shm",
+        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-shm",
-        "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
+        "id": "card-labphy-spring-energy",
+        "title": "오르내리는 추의 에너지를 모두 더하면 정말 일정할까?"
        }
       ]
      },
@@ -10099,13 +10059,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-ice-fusion",
-        "title": "따뜻한 물이 식은 만큼으로 얼음의 융해열을 잴 수 있을까?"
+        "id": "card-mech-heating-curve",
+        "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-heating-curve",
-        "title": "물이 끓는 동안 가한 열은 어디로 갈까?"
+        "id": "card-labphy-ice-fusion",
+        "title": "따뜻한 물이 식은 만큼으로 얼음의 융해열을 잴 수 있을까?"
        }
       ]
      },
@@ -10287,13 +10247,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-standing",
-        "title": "물높이만 바꿔서 소리의 속력을 잴 수 있을까?"
+        "id": "card-mech-standing",
+        "title": "기타 줄과 리코더는 왜 정해진 음만 낼까?"
        },
        {
         "kind": "card",
-        "id": "card-mech-standing",
-        "title": "기타 줄과 리코더는 왜 정해진 음만 낼까?"
+        "id": "card-labphy-standing",
+        "title": "물높이만 바꿔서 소리의 속력을 잴 수 있을까?"
        }
       ]
      },
@@ -10362,13 +10322,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-slit-pattern",
-        "title": "줄무늬 간격과 밝기 봉우리의 폭은 각각 무엇이 정할까?"
+        "id": "card-emq-diffraction",
+        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
        },
        {
         "kind": "card",
-        "id": "card-emq-diffraction",
-        "title": "틈이 많아질수록 무늬는 왜 더 날카로워질까?"
+        "id": "card-labphy-slit-pattern",
+        "title": "줄무늬 간격과 밝기 봉우리의 폭은 각각 무엇이 정할까?"
        }
       ]
      },
@@ -10380,13 +10340,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-polarization",
-        "title": "편광판을 돌리면 빛의 세기는 어떤 규칙으로 줄어들까?"
+        "id": "card-emq-polarizer",
+        "title": "편광판 두 장 사이에 한 장을 더 끼우면 왜 빛이 다시 나올까?"
        },
        {
         "kind": "card",
-        "id": "card-emq-polarizer",
-        "title": "편광판 두 장 사이에 한 장을 더 끼우면 왜 빛이 다시 나올까?"
+        "id": "card-labphy-polarization",
+        "title": "편광판을 돌리면 빛의 세기는 어떤 규칙으로 줄어들까?"
        }
       ]
      }
@@ -10404,13 +10364,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labphy-photoelectric",
-        "title": "정지 전압과 진동수의 그래프에서 플랑크 상수를 읽을 수 있을까?"
+        "id": "card-phy-lm-photo",
+        "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-photo",
-        "title": "빛을 세게 비추면 전자가 더 빨리 튀어나올까?"
+        "id": "card-labphy-photoelectric",
+        "title": "정지 전압과 진동수의 그래프에서 플랑크 상수를 읽을 수 있을까?"
        }
       ]
      },
@@ -10539,13 +10499,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-spectrum",
-        "title": "분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?"
+        "id": "card-phy-lm-hyd",
+        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
        },
        {
         "kind": "card",
-        "id": "card-phy-lm-hyd",
-        "title": "수소는 왜 몇 가지 색의 빛만 낼까?"
+        "id": "card-labchem-spectrum",
+        "title": "분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?"
        }
       ]
      },
@@ -10737,13 +10697,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-calorimetry",
-        "title": "두 단계로 잰 반응열의 합은 한 번에 잰 반응열과 같을까?"
+        "id": "card-mateng-hess",
+        "title": "잴 수 없는 반응의 열을 어떻게 알아낼까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-hess",
-        "title": "잴 수 없는 반응의 열을 어떻게 알아낼까?"
+        "id": "card-labchem-calorimetry",
+        "title": "두 단계로 잰 반응열의 합은 한 번에 잰 반응열과 같을까?"
        }
       ]
      },
@@ -10755,13 +10715,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-fescn",
-        "title": "섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?"
+        "id": "card-chem-shift-lab",
+        "title": "세 시험관의 색은 조건을 바꾸면 어느 쪽으로 변할까?"
        },
        {
         "kind": "card",
-        "id": "card-chem-shift-lab",
-        "title": "세 시험관의 색은 조건을 바꾸면 어느 쪽으로 변할까?"
+        "id": "card-labchem-fescn",
+        "title": "섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?"
        }
       ]
      },
@@ -10804,13 +10764,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-cell-emf",
-        "title": "전지의 전압은 금속이 정할까, 용액이 정할까?"
+        "id": "card-rxn-cell",
+        "title": "두 금속을 고르면 전지의 전압을 미리 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-cell",
-        "title": "두 금속을 고르면 전지의 전압을 미리 알 수 있을까?"
+        "id": "card-labchem-cell-emf",
+        "title": "전지의 전압은 금속이 정할까, 용액이 정할까?"
        }
       ]
      },
@@ -10822,13 +10782,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-electrolysis",
-        "title": "흘린 전하량으로 전극에 생길 물질의 양을 미리 맞힐 수 있을까?"
+        "id": "card-rxn-electrolysis",
+        "title": "전기를 얼마나 흘리면 금속을 얼마나 얻을까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-electrolysis",
-        "title": "전기를 얼마나 흘리면 금속을 얼마나 얻을까?"
+        "id": "card-labchem-electrolysis",
+        "title": "흘린 전하량으로 전극에 생길 물질의 양을 미리 맞힐 수 있을까?"
        }
       ]
      },
@@ -10840,13 +10800,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-clock",
-        "title": "용액이 갑자기 남색으로 바뀌는 시간으로 반응 속도식을 구할 수 있을까?"
+        "id": "card-mateng-rate-law",
+        "title": "농도를 2배로 하면 반응은 몇 배 빨라질까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-rate-law",
-        "title": "농도를 2배로 하면 반응은 몇 배 빨라질까?"
+        "id": "card-labchem-clock",
+        "title": "용액이 갑자기 남색으로 바뀌는 시간으로 반응 속도식을 구할 수 있을까?"
        }
       ]
      },
@@ -10858,13 +10818,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labchem-rate-design",
-        "title": "무엇을 고정해야 \"이 요인이 속도를 바꿨다\"고 말할 수 있을까?"
+        "id": "card-mateng-rate-factors",
+        "title": "냉장고, 잘게 썬 장작, 촉매 장치는 각각 무엇을 바꿀까?"
        },
        {
         "kind": "card",
-        "id": "card-mateng-rate-factors",
-        "title": "냉장고, 잘게 썬 장작, 촉매 장치는 각각 무엇을 바꿀까?"
+        "id": "card-labchem-rate-design",
+        "title": "무엇을 고정해야 \"이 요인이 속도를 바꿨다\"고 말할 수 있을까?"
        }
       ]
      }
@@ -10913,13 +10873,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-labchem-functional-tests",
-        "title": "이름표가 떨어진 시약병 여섯 개, 시험관 반응만으로 무엇인지 알아낼 수 있을까?"
+        "id": "card-rxn-reaction-map",
+        "title": "와인은 어떻게 식초가 되고, 식초는 어떻게 과일 향이 될까?"
        },
        {
         "kind": "card",
-        "id": "card-rxn-reaction-map",
-        "title": "와인은 어떻게 식초가 되고, 식초는 어떻게 과일 향이 될까?"
+        "id": "card-labchem-functional-tests",
+        "title": "이름표가 떨어진 시약병 여섯 개, 시험관 반응만으로 무엇인지 알아낼 수 있을까?"
        }
       ]
      },
@@ -10956,14 +10916,14 @@ window.TOC = [
       "page": true,
       "items": [
        {
-        "kind": "card",
-        "id": "card-labchem-aspirin",
-        "title": "버드나무 껍질의 약을 실험실에서 만들면, 얼마나 얻고 얼마나 순수할까?"
-       },
-       {
         "kind": "text",
         "id": "text-rxn-society",
         "title": "새로운 탄소 화합물은 사회를 어떻게 바꾸었을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labchem-aspirin",
+        "title": "버드나무 껍질의 약을 실험실에서 만들면, 얼마나 얻고 얼마나 순수할까?"
        }
       ]
      }
@@ -11016,13 +10976,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-plasmolysis",
-        "title": "양파 세포가 원형질 분리를 시작하는 설탕물 농도는 얼마일까?"
+        "id": "card-cell-osmosis",
+        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-osmosis",
-        "title": "소금물에 담근 세포는 왜 쪼그라들까?"
+        "id": "card-labbio-plasmolysis",
+        "title": "양파 세포가 원형질 분리를 시작하는 설탕물 농도는 얼마일까?"
        }
       ]
      },
@@ -11086,13 +11046,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-enzyme-rate",
-        "title": "거름종이 원판이 떠오르는 시간으로 효소의 반응 속도를 잴 수 있을까?"
+        "id": "card-cell-enzyme-lab",
+        "title": "효소가 가장 잘 일하는 조건은 어떻게 찾을까?"
        },
        {
         "kind": "card",
-        "id": "card-cell-enzyme-lab",
-        "title": "효소가 가장 잘 일하는 조건은 어떻게 찾을까?"
+        "id": "card-labbio-enzyme-rate",
+        "title": "거름종이 원판이 떠오르는 시간으로 효소의 반응 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -11104,13 +11064,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-photosynthesis",
-        "title": "검정말이 내는 기포 수로 광합성 속도를 비교할 수 있을까?"
+        "id": "card-photo-rate",
+        "title": "빛을 늘리면 광합성도 계속 빨라질까?"
        },
        {
         "kind": "card",
-        "id": "card-photo-rate",
-        "title": "빛을 늘리면 광합성도 계속 빨라질까?"
+        "id": "card-labbio-photosynthesis",
+        "title": "검정말이 내는 기포 수로 광합성 속도를 비교할 수 있을까?"
        }
       ]
      },
@@ -11295,13 +11255,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-sex-linked",
-        "title": "흰 눈 초파리는 암수를 바꿔 교배하면 왜 결과가 달라질까?"
+        "id": "card-gene-sexlinked",
+        "title": "색맹은 왜 남자에게 더 많을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-sexlinked",
-        "title": "색맹은 왜 남자에게 더 많을까?"
+        "id": "card-labbio-sex-linked",
+        "title": "흰 눈 초파리는 암수를 바꿔 교배하면 왜 결과가 달라질까?"
        }
       ]
      },
@@ -11313,13 +11273,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-survey",
-        "title": "우리 반과 가족을 조사하면 사람 형질의 유전 방식을 알 수 있을까?"
+        "id": "card-gene-pedigree",
+        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-pedigree",
-        "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
+        "id": "card-labbio-survey",
+        "title": "우리 반과 가족을 조사하면 사람 형질의 유전 방식을 알 수 있을까?"
        }
       ]
      },
@@ -11331,13 +11291,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-bead-sim",
-        "title": "콩 주머니에서 짝을 뽑아 세대를 넘기면 대립유전자 빈도는 어떻게 변할까?"
+        "id": "card-bio-genepool",
+        "title": "작은 섬의 생물 집단에서는 왜 우연이 진화를 이끌까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-genepool",
-        "title": "작은 섬의 생물 집단에서는 왜 우연이 진화를 이끌까?"
+        "id": "card-labbio-bead-sim",
+        "title": "콩 주머니에서 짝을 뽑아 세대를 넘기면 대립유전자 빈도는 어떻게 변할까?"
        }
       ]
      },
@@ -11349,13 +11309,13 @@ window.TOC = [
       "items": [
        {
         "kind": "text",
-        "id": "text-labbio-evo-cases",
-        "title": "날개, 부리, 목, 눈은 어떻게 지금의 모습이 되었을까?"
+        "id": "text-bio-evo-methods",
+        "title": "진화는 어떤 증거와 방법으로 연구할까?"
        },
        {
         "kind": "text",
-        "id": "text-bio-evo-methods",
-        "title": "진화는 어떤 증거와 방법으로 연구할까?"
+        "id": "text-labbio-evo-cases",
+        "title": "날개, 부리, 목, 눈은 어떻게 지금의 모습이 되었을까?"
        }
       ]
      },
@@ -11367,13 +11327,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-specimen",
-        "title": "채집한 곤충과 풀을 연구에 쓸 수 있는 표본으로 만들려면 무엇이 필요할까?"
+        "id": "card-bio-key",
+        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-bio-key",
-        "title": "질문 몇 개로 처음 보는 생물의 문(門)을 알아낼 수 있을까?"
+        "id": "card-labbio-specimen",
+        "title": "채집한 곤충과 풀을 연구에 쓸 수 있는 표본으로 만들려면 무엇이 필요할까?"
        }
       ]
      }
@@ -11529,13 +11489,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-electrophoresis",
-        "title": "젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?"
+        "id": "card-gene-gel",
+        "title": "머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-gene-gel",
-        "title": "머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?"
+        "id": "card-labbio-electrophoresis",
+        "title": "젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?"
        }
       ]
      },
@@ -11573,13 +11533,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labbio-pcr",
-        "title": "온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?"
+        "id": "card-is2-pcr",
+        "title": "PCR은 아주 적은 양의 바이러스를 어떻게 찾아낼까?"
        },
        {
         "kind": "card",
-        "id": "card-is2-pcr",
-        "title": "PCR은 아주 적은 양의 바이러스를 어떻게 찾아낼까?"
+        "id": "card-labbio-pcr",
+        "title": "온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?"
        }
       ]
      },
@@ -11591,6 +11551,11 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
+        "id": "card-bio-seq-tree",
+        "title": "DNA 서열의 차이로 계통수를 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
         "id": "card-labbio-bioinfo",
         "title": "염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?"
        },
@@ -11598,11 +11563,6 @@ window.TOC = [
         "kind": "text",
         "id": "text-labbio-genome-med",
         "title": "유전체 분석은 실제로 어떤 환자를 도왔을까?"
-       },
-       {
-        "kind": "card",
-        "id": "card-bio-seq-tree",
-        "title": "DNA 서열의 차이로 계통수를 그릴 수 있을까?"
        }
       ]
      }
@@ -11720,11 +11680,6 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rock-id",
-        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
-       },
-       {
-        "kind": "card",
         "id": "card-earth-igneous",
         "title": "현무암과 화강암은 왜 알갱이 크기가 다를까?"
        },
@@ -11737,6 +11692,11 @@ window.TOC = [
         "kind": "card",
         "id": "card-earth-sedrock",
         "title": "모래가 어떻게 단단한 사암이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-labearth-rock-id",
+        "title": "암석 표본의 조직과 성분으로 그 암석이 생긴 과정을 알아낼 수 있을까?"
        }
       ]
      },
@@ -11857,13 +11817,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-stability",
-        "title": "여름 오후와 겨울 아침, 대기는 얼마나 다르게 쌓여 있을까?"
+        "id": "card-esys-stability",
+        "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-stability",
-        "title": "떠오른 공기 덩어리는 어디까지 올라갈까?"
+        "id": "card-labearth-stability",
+        "title": "여름 오후와 겨울 아침, 대기는 얼마나 다르게 쌓여 있을까?"
        }
       ]
      },
@@ -11888,13 +11848,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-geowind",
-        "title": "일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?"
+        "id": "card-esys-winds",
+        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-winds",
-        "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
+        "id": "card-labearth-geowind",
+        "title": "일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?"
        }
       ]
      },
@@ -11937,13 +11897,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-wave-tank",
-        "title": "물이 얕아지면 파도는 왜 느려지고 높아질까?"
+        "id": "card-esys-tsunami",
+        "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-tsunami",
-        "title": "먼바다에서 1 m였던 지진 해일이 해안에서는 왜 훨씬 높아질까?"
+        "id": "card-labearth-wave-tank",
+        "title": "물이 얕아지면 파도는 왜 느려지고 높아질까?"
        }
       ]
      },
@@ -11955,13 +11915,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-geostrophic",
-        "title": "바닷물의 온도 단면만으로 구로시오의 속도를 잴 수 있을까?"
+        "id": "card-esys-ekman",
+        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-ekman",
-        "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
+        "id": "card-labearth-geostrophic",
+        "title": "바닷물의 온도 단면만으로 구로시오의 속도를 잴 수 있을까?"
        }
       ]
      },
@@ -11973,13 +11933,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-thermohaline",
-        "title": "차갑거나 짠 물은 수조 바닥을 얼마나 빨리 퍼져 나갈까?"
+        "id": "card-earth-amoc",
+        "title": "빙하가 녹으면 심층 순환이 멈출 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-amoc",
-        "title": "빙하가 녹으면 심층 순환이 멈출 수 있을까?"
+        "id": "card-labearth-thermohaline",
+        "title": "차갑거나 짠 물은 수조 바닥을 얼마나 빨리 퍼져 나갈까?"
        }
       ]
      },
@@ -11991,13 +11951,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-tide",
-        "title": "바닷가마다 물때의 모양이 다른 까닭은 무엇일까?"
+        "id": "card-esys-tide",
+        "title": "밀물과 썰물은 왜 하루에 두 번일까, 그리고 왜 매일 달라질까?"
        },
        {
         "kind": "card",
-        "id": "card-esys-tide",
-        "title": "밀물과 썰물은 왜 하루에 두 번일까, 그리고 왜 매일 달라질까?"
+        "id": "card-labearth-tide",
+        "title": "바닷가마다 물때의 모양이 다른 까닭은 무엇일까?"
        }
       ]
      }
@@ -12124,13 +12084,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-stellar-spectrum",
-        "title": "분광기로 찍은 별빛에서 표면 온도를 어떻게 읽을까?"
+        "id": "card-earth-spectral",
+        "title": "별빛의 흡수선으로 무엇을 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-spectral",
-        "title": "별빛의 흡수선으로 무엇을 알 수 있을까?"
+        "id": "card-labearth-stellar-spectrum",
+        "title": "분광기로 찍은 별빛에서 표면 온도를 어떻게 읽을까?"
        }
       ]
      },
@@ -12155,13 +12115,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-cluster-hr",
-        "title": "네 성단의 H–R도를 겹치면 어느 성단이 가장 늙었는지 보일까?"
+        "id": "card-space-cluster",
+        "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-cluster",
-        "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
+        "id": "card-labearth-cluster-hr",
+        "title": "네 성단의 H–R도를 겹치면 어느 성단이 가장 늙었는지 보일까?"
        }
       ]
      },
@@ -12173,13 +12133,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-extinction",
-        "title": "별빛이 얼마나 붉어졌는지 재면 티끌에 가린 별의 거리를 바로잡을 수 있을까?"
+        "id": "card-space-extinction",
+        "title": "은하수의 검은 틈에는 정말 별이 없을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-extinction",
-        "title": "은하수의 검은 틈에는 정말 별이 없을까?"
+        "id": "card-labearth-extinction",
+        "title": "별빛이 얼마나 붉어졌는지 재면 티끌에 가린 별의 거리를 바로잡을 수 있을까?"
        }
       ]
      },
@@ -12204,13 +12164,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-rotation-mass",
-        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
+        "id": "card-space-rotation",
+        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
        },
        {
         "kind": "card",
-        "id": "card-space-rotation",
-        "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
+        "id": "card-labearth-rotation-mass",
+        "title": "은하의 바깥쪽 회전 속도로 잰 질량은 보이는 별과 가스의 질량과 같을까?"
        }
       ]
      },
@@ -12222,13 +12182,13 @@ window.TOC = [
       "items": [
        {
         "kind": "card",
-        "id": "card-labearth-hubble-age",
-        "title": "은하의 거리와 후퇴 속도로 우주의 나이를 계산할 수 있을까?"
+        "id": "card-earth-hlaw",
+        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
        },
        {
         "kind": "card",
-        "id": "card-earth-hlaw",
-        "title": "멀리 있는 은하일수록 왜 빨리 멀어질까?"
+        "id": "card-labearth-hubble-age",
+        "title": "은하의 거리와 후퇴 속도로 우주의 나이를 계산할 수 있을까?"
        }
       ]
      }
@@ -14048,7 +14008,7 @@ window.TOC = [
        {
         "kind": "card",
         "id": "card-stat-linear-rv",
-        "title": "점수를 두 배 하고 5점을 더하면 표준편차는?"
+        "title": "점수를 두 배 하고 5점을 빼면 표준편차는?"
        }
       ]
      },
@@ -14708,6 +14668,11 @@ window.TOC = [
       "page": true,
       "items": [
        {
+        "kind": "text",
+        "id": "text-geo-plane-determine",
+        "title": "평면 하나를 정하려면 무엇이 주어져야 할까?"
+       },
+       {
         "kind": "card",
         "id": "card-geo-line-pos",
         "title": "만나지 않는 두 직선은 언제나 평행할까?"
@@ -14721,11 +14686,6 @@ window.TOC = [
         "kind": "card",
         "id": "card-geo-plane-cut",
         "title": "평행한 두 평면을 한 평면으로 자르면 교선은 어떻게 놓일까?"
-       },
-       {
-        "kind": "text",
-        "id": "text-geo-plane-determine",
-        "title": "평면 하나를 정하려면 무엇이 주어져야 할까?"
        }
       ]
      },
@@ -14894,13 +14854,13 @@ window.TOC = [
        },
        {
         "kind": "card",
-        "id": "card-geo-line-normal",
-        "title": "방향 대신 수직인 벡터로 직선을 정할 수 있을까?"
+        "id": "card-geo-line-space",
+        "title": "공간의 직선도 같은 식으로 나타낼 수 있을까?"
        },
        {
         "kind": "card",
-        "id": "card-geo-line-space",
-        "title": "공간의 직선도 같은 식으로 나타낼 수 있을까?"
+        "id": "card-geo-line-normal",
+        "title": "방향 대신 수직인 벡터로 직선을 정할 수 있을까?"
        }
       ]
      },
@@ -14919,6 +14879,3961 @@ window.TOC = [
         "kind": "card",
         "id": "card-geo-sphere-vec",
         "title": "중심에서 거리가 같은 점을 벡터로 쓰면?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pmath",
+  "name": "전문 수학",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "삼각함수와 미적분",
+    "sections": [
+     {
+      "n": 1,
+      "title": "삼각함수의 여러 가지 공식",
+      "code": "12전수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-add-proof",
+        "title": "cos(α − β)의 공식은 어디에서 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-double-angle",
+        "title": "cos² x의 그래프는 왜 코사인 곡선과 똑같이 생겼을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-beats",
+        "title": "음이 조금 다른 두 소리를 함께 내면 왜 \"웅웅\" 울릴까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "코시컨트·시컨트·코탄젠트함수",
+      "code": "12전수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-recip-circle",
+        "title": "단위원에 접선 하나를 그으면 삼각함수 몇 개가 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-csc-predict",
+        "title": "사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "역삼각함수",
+      "code": "12전수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-arc-restrict",
+        "title": "사인함수의 어디를 잘라야 역함수가 생길까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-arc-sawtooth",
+        "title": "arcsin(sin x)는 언제나 x일까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "여러 가지 함수의 미분과 고계도함수",
+      "code": "12전수01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-deriv-trace",
+        "title": "접선의 기울기를 모으면 sec x의 도함수가 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-museum",
+        "title": "벽에 높이 걸린 그림은 몇 걸음 떨어져야 가장 크게 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-jerk",
+        "title": "엘리베이터가 덜컹거리지 않으려면 몇 번째 도함수까지 매끄러워야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "로피탈의 정리",
+      "code": "12전수01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-lhopital-zoom",
+        "title": "0/0 근처를 크게 확대하면 무엇이 남을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-lhopital-errors",
+        "title": "로피탈의 정리를 쓴 이 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-growth-race",
+        "title": "x¹⁰과 ex가 무한대까지 달리면 누가 이길까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "구분구적법과 정적분",
+      "code": "12전수01-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-riemann",
+        "title": "직사각형을 끝없이 잘게 쪼개면 곡선 아래 넓이가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-pyramid",
+        "title": "각뿔의 부피는 왜 각기둥의 1/3일까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "여러 가지 적분법",
+      "code": "12전수01-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-int-choose",
+        "title": "이 적분은 어떤 방법으로 풀어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-partial-frac",
+        "title": "복잡한 분수식을 간단한 분수 두 개로 쪼갤 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-trig-sub",
+        "title": "∫₀a√(1 − x²) dx를 원의 그림만으로 계산할 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "기하",
+    "sections": [
+     {
+      "n": 1,
+      "title": "이차곡선",
+      "code": "12전수02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-cone-cut",
+        "title": "원뿔을 자르는 칼을 기울이면 단면은 어떻게 바뀔까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-eccentricity",
+        "title": "포물선, 타원, 쌍곡선을 하나의 규칙으로 그릴 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "이차곡선의 접선",
+      "code": "12전수02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-parabolic-mirror",
+        "title": "위성 안테나는 왜 접시 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-ellipse-billiard",
+        "title": "타원 모양 당구대에서 초점을 지나게 친 공은 어디로 갈까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "직선과 평면에 관한 명제",
+      "code": "12전수02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-three-perp-proof",
+        "title": "평면 위에 그은 수선 하나로 공중의 수선을 어떻게 증명할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-space-counter",
+        "title": "평면에서 참인 명제가 공간에서도 참일까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "정사영",
+      "code": "12전수02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-disk-shadow",
+        "title": "동전을 기울이면 그림자의 넓이는 얼마나 줄어들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-solar-panel",
+        "title": "태양광 패널은 몇 도로 세워야 햇빛을 가장 많이 받을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "공간좌표와 구의 방정식",
+      "code": "12전수02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-treasure3d",
+        "title": "거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-section3d",
+        "title": "선분 밖에서도 선분을 m : n으로 나눌 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-trilateration",
+        "title": "위성까지의 거리만으로 내 위치를 어떻게 알아낼까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "벡터의 연산",
+      "code": "12전수02-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-river",
+        "title": "물살이 센 강에서 맞은편 선착장에 닿으려면 뱃머리를 어디로 돌려야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-vec-puzzle",
+        "title": "주어진 화살표 두 개만으로 목표점에 갈 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "위치벡터, 내적과 외적",
+      "code": "12전수02-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-work-dot",
+        "title": "썰매 줄을 비스듬히 당기면 힘의 얼마가 썰매를 끄는 데 쓰일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-cross",
+        "title": "두 벡터에 모두 수직인 벡터는 어느 쪽을 향하고, 길이는 얼마일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-torque",
+        "title": "녹슨 볼트를 풀려면 렌치의 어디를 어느 방향으로 밀어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-shading",
+        "title": "게임 속 3D 물체는 어떻게 그림자를 칠할까?"
+       }
+      ]
+     },
+     {
+      "n": 8,
+      "title": "벡터로 나타낸 도형의 방정식",
+      "code": "12전수02-08",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-param-line-plane",
+        "title": "매개변수 하나는 직선을, 둘은 평면을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-circle-sphere-vec",
+        "title": "원과 구는 같은 식 하나로 쓸 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-raytrace",
+        "title": "빛줄기와 구의 교점만 계산해서 3D 그림을 그릴 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "확률과 통계",
+    "sections": [
+     {
+      "n": 1,
+      "title": "여러 가지 순열과 중복조합",
+      "code": "12전수03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-round-table",
+        "title": "둥근 탁자에 둘러앉는 방법은 줄을 서는 방법보다 왜 적을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-necklace",
+        "title": "서로 다른 구슬 다섯 개로 목걸이를 몇 가지나 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-candy",
+        "title": "똑같은 사탕 6개를 세 사람에게 나누는 방법은 몇 가지일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "이항정리",
+      "code": "12전수03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-galton",
+        "title": "못이 박힌 판에 공을 떨어뜨리면 왜 가운데에 많이 쌓일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-binom-approx",
+        "title": "계산기 없이 1.01¹⁰을 소수 셋째 자리까지 구할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "통계적 확률과 수학적 확률",
+      "code": "12전수03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-buffon",
+        "title": "바늘을 바닥에 떨어뜨려 원주율을 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-thumbtack",
+        "title": "압정이 바늘 끝을 위로 하고 떨어질 확률은 계산할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "확률의 여러 가지 정리",
+      "code": "12전수03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-monty-hall",
+        "title": "사회자가 빈 문을 열어 주면, 고른 문을 바꾸는 게 나을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-bayes-area",
+        "title": "정확도 99 %인 검사에서 양성이 나오면, 병에 걸렸을 확률도 99 %일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-gambler",
+        "title": "동전이 다섯 번 연속 앞면이 나왔다면, 다음은 뒷면이 나올 차례일까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "확률변수와 확률분포",
+      "code": "12전수03-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-dice-dist",
+        "title": "두 주사위 눈의 합은 왜 7이 가장 잘 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-hist-density",
+        "title": "버스를 정확히 3분 기다릴 확률은 왜 0일까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "이산확률변수와 이항분포",
+      "code": "12전수03-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-fair-game",
+        "title": "학교 축제 주사위 게임, 상금을 얼마로 해야 공정할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-binom-slider",
+        "title": "자유투 성공률 70 %인 선수가 20번 던지면 몇 번쯤 넣을까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "연속확률변수와 정규분포",
+      "code": "12전수03-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-cont-expect",
+        "title": "밀도 곡선의 어디에 받침을 대면 수평이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-continuity-corr",
+        "title": "이항분포를 정규분포로 어림할 때 왜 0.5를 더하고 뺄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-height-normal",
+        "title": "우리 반의 키(또는 직접 잰 자료)는 정규분포를 따를까?"
+       }
+      ]
+     },
+     {
+      "n": 8,
+      "title": "모집단과 표본",
+      "code": "12전수03-08",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-sampling-methods",
+        "title": "학생 40명을 어떻게 뽑아야 전교생의 평균 통학 시간을 잘 맞힐까?"
+       },
+       {
+        "kind": "text",
+        "id": "text-pmath-literary-digest",
+        "title": "수백만 명에게 물은 여론조사가 왜 틀렸을까?"
+       }
+      ]
+     },
+     {
+      "n": 9,
+      "title": "모평균과 모비율의 추정",
+      "code": "12전수03-09",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pmath-ci-100",
+        "title": "\"신뢰도 95 %\"의 95 %는 무엇에 대한 확률일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pmath-sample-size",
+        "title": "오차 범위를 ±3 %p 안으로 하려면 몇 명에게 물어야 할까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adcalc",
+  "name": "고급 미적분",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "미적분의 활용",
+    "sections": [
+     {
+      "n": 1,
+      "title": "뉴턴의 방법",
+      "code": "12고미01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-tangent",
+        "title": "접선을 따라 내려가면 방정식의 근에 닿을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-sqrt",
+        "title": "계산기는 √a를 어떻게 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-newton-basin",
+        "title": "출발점에서 가장 가까운 근으로 갈까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "쌍곡선함수와 역쌍곡선함수",
+      "code": "12고미01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-unit",
+        "title": "원 위의 점이 (cos t, sin t)라면, 쌍곡선 위의 점은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-catenary",
+        "title": "두 끝을 잡고 늘어뜨린 사슬은 포물선일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-arsinh-proof",
+        "title": "sinh의 역함수는 왜 로그로 쓸 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "쌍곡선함수의 도함수",
+      "code": "12고미01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-slope",
+        "title": "cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-deriv-spot",
+        "title": "이 미분 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-skydiver",
+        "title": "스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "쌍곡선함수의 부정적분",
+      "code": "12고미01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-hyp-sub",
+        "title": "근호 속의 x² + 1을 없애는 치환은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-cable-length",
+        "title": "100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "이상적분",
+      "code": "12고미01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-improper-p",
+        "title": "끝없이 뻗은 꼬리 아래의 넓이는 유한할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-improper-spot",
+        "title": "넓이가 음수로 나온 이 풀이, 어디가 틀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-escape",
+        "title": "무한히 멀리 가는 데 드는 일은 유한할까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "회전체의 부피와 겉넓이",
+      "code": "12고미01-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-vase",
+        "title": "정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-band-area",
+        "title": "구의 겉넓이를 띠로 어림하면 4π r²이 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-gabriel",
+        "title": "채울 수는 있는데 칠할 수는 없는 나팔이 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "극좌표와 극곡선",
+    "sections": [
+     {
+      "n": 1,
+      "title": "극좌표",
+      "code": "12고미02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-radar",
+        "title": "레이더는 왜 (x, y) 대신 거리와 방향으로 위치를 알려 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-spot",
+        "title": "θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "극곡선의 대칭성과 그래프",
+      "code": "12고미02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-trace",
+        "title": "r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-rose-predict",
+        "title": "r = cos kθ의 꽃잎은 몇 장일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-mic-pattern",
+        "title": "무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "극곡선의 접선",
+      "code": "12고미02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-tangent",
+        "title": "카디오이드에서 접선이 수평인 곳은 어디일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-log-spiral",
+        "title": "목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "두 극곡선의 교점과 사잇각",
+      "code": "12고미02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-meet",
+        "title": "두 극방정식을 연립하면 교점이 모두 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-angle",
+        "title": "마주 보는 두 카디오이드는 몇 도로 만날까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "극곡선의 길이와 넓이",
+      "code": "12고미02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-polar-area",
+        "title": "극곡선의 넓이는 왜 직사각형이 아니라 부채꼴로 잘라 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-roll-length",
+        "title": "두루마리 휴지를 풀지 않고 길이를 잴 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "급수",
+    "sections": [
+     {
+      "n": 1,
+      "title": "단조수렴정리",
+      "code": "12고미03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-monotone",
+        "title": "계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-monotone-proof",
+        "title": "극한을 L로 놓고 방정식을 풀면 끝일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "양항급수의 판정법",
+      "code": "12고미03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-integral-test",
+        "title": "Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-test-pick",
+        "title": "이 급수에는 어떤 판정법이 통할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-overhang",
+        "title": "책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "교대급수와 절대수렴·조건수렴",
+      "code": "12고미03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-alt-zigzag",
+        "title": "더했다 뺐다를 되풀이하면 어디로 모일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-rearrange",
+        "title": "더하는 순서만 바꿨는데 합이 달라질 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "멱급수와 수렴반경",
+      "code": "12고미03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-radius",
+        "title": "멱급수는 x가 얼마일 때까지 수렴할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-radius-why",
+        "title": "어디서나 매끄러운 1/(1 + x²)의 급수는 왜 |x| < 1에서만 맞을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "멱급수의 성질과 함수의 표현",
+      "code": "12고미03-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-series-build",
+        "title": "1/(1 − x) 하나로 ln(1 + x)와 tan⁻¹x의 급수를 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-pi-race",
+        "title": "tan⁻¹x의 급수로 원주율을 몇 자리까지 구할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "테일러다항식과 테일러급수",
+      "code": "12고미03-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-taylor-fit",
+        "title": "이차식 하나로 cos x를 가장 잘 흉내 내려면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-taylor-build",
+        "title": "차수를 올리면 테일러다항식은 어디까지 함수를 따라갈까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "테일러급수의 활용",
+      "code": "12고미03-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-calc-sin",
+        "title": "계산기는 sin 1000circ를 어떻게 계산할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-pendulum",
+        "title": "진자의 주기 공식 2π√L/g는 언제까지 믿을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-relativity",
+        "title": "운동 에너지 1/2mv²은 상대성 이론의 어떤 근사일까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "미분방정식",
+    "sections": [
+     {
+      "n": 1,
+      "title": "미분방정식과 방향장",
+      "code": "12고미04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-slope-field",
+        "title": "풀지 않고도 미분방정식의 해를 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-field-match",
+        "title": "방향장만 보고 미분방정식을 알아맞힐 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "오일러의 방법",
+      "code": "12고미04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-euler-steps",
+        "title": "접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-euler-orbit",
+        "title": "원을 그려야 할 공이 왜 점점 멀어질까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "미분방정식의 풀이",
+      "code": "12고미04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-separable-proof",
+        "title": "y' = 2xy의 해를 식으로 구하려면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-separable-spot",
+        "title": "초기 조건을 넣었는데 해가 맞지 않는 이 풀이, 어디가 틀렸을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "미분방정식의 활용",
+      "code": "12고미04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adcalc-coffee",
+        "title": "커피를 빨리 식히려면 찬 우유를 언제 넣어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-carbon14",
+        "title": "원자 하나하나는 제멋대로 붕괴하는데 왜 전체는 지수함수를 따를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adcalc-logistic",
+        "title": "개체 수는 왜 끝없이 지수적으로 늘지 않을까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adalg",
+  "name": "고급 대수",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "벡터공간",
+    "sections": [
+     {
+      "n": 1,
+      "title": "n차원 벡터",
+      "code": "12고대01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-nutrition",
+        "title": "메뉴 세 가지로 목표 영양 식단을 정확히 맞출 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-rgb-mix",
+        "title": "색이 섞인 조명 세 개로 원하는 색을 만들 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "벡터공간",
+      "code": "12고대01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-axiom-test",
+        "title": "이 집합에서 마음대로 더하고 실수배해도 집합 안에 머물까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-poly-vector",
+        "title": "화살표가 아닌 다항식도 벡터처럼 더할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "부분공간",
+      "code": "12고대01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-subspace-3d",
+        "title": "좌표공간의 어떤 평면과 직선이 부분공간일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-intersect-proof",
+        "title": "두 부분공간이 겹치는 부분도 부분공간일까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "일차독립과 일차종속",
+      "code": "12고대01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-span-3d",
+        "title": "세 벡터가 공간을 채우지 못하고 평면에 갇히는 때는 언제일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-indep-predict",
+        "title": "계산하기 전에 일차독립인지 알아볼 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "기저",
+      "code": "12고대01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-basis-grid",
+        "title": "같은 점인데 기저를 바꾸면 왜 좌표가 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-basis-hunt",
+        "title": "비스듬한 두 방향만으로 목표점까지 안내할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "n차원 벡터의 내적",
+      "code": "12고대01-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-cosine-sim",
+        "title": "컴퓨터는 어떻게 비슷한 기사를 골라낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-cauchy",
+        "title": "내적은 두 크기의 곱보다 커질 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "벡터의 정사영",
+      "code": "12고대01-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-proj-shadow",
+        "title": "비탈에서 썰매를 끄는 힘 중 얼마가 일을 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-least-squares",
+        "title": "모든 점을 지나는 직선이 없을 때 가장 좋은 직선은?"
+       }
+      ]
+     },
+     {
+      "n": 8,
+      "title": "정규직교기저",
+      "code": "12고대01-08",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-gram-schmidt",
+        "title": "비스듬한 두 벡터로 직각 자를 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-ortho-coords",
+        "title": "정규직교기저의 좌표는 왜 내적 한 번이면 될까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "행렬과 선형변환",
+    "sections": [
+     {
+      "n": 1,
+      "title": "가우스 소거법",
+      "code": "12고대02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-row-puzzle",
+        "title": "행 연산 세 가지면 어떤 연립방정식도 풀릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-balance-eq",
+        "title": "화학 반응식의 계수는 어떻게 한 번에 정할까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "역행렬",
+      "code": "12고대02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-inverse-elim",
+        "title": "역행렬이 있는지 계산하기 전에 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-hill-cipher",
+        "title": "행렬로 잠근 암호는 어떤 열쇠로 열릴까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "행렬식",
+      "code": "12고대02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-det-area",
+        "title": "행렬식은 무엇을 재는 수일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-det-spot",
+        "title": "이 행렬식 계산, 어디서 틀렸을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "선형변환과 행렬",
+      "code": "12고대02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-grid-transform",
+        "title": "행렬 하나가 평면 전체를 어떻게 움직일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-match-matrix",
+        "title": "바뀐 그림만 보고 행렬을 알아낼 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "대칭변환·닮음변환·회전변환",
+      "code": "12고대02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-transform-target",
+        "title": "회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-pixel-rotate",
+        "title": "사진을 돌리면 왜 구멍이 뚫릴까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "선형변환의 합성과 역변환",
+      "code": "12고대02-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-compose-order",
+        "title": "두 변환의 순서를 바꾸면 결과도 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-undo",
+        "title": "뒤틀린 그림을 제자리로 되돌리는 행렬은?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "행렬의 대각화",
+    "sections": [
+     {
+      "n": 1,
+      "title": "고윳값과 고유벡터",
+      "code": "12고대03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-eigen-hunt",
+        "title": "행렬을 곱해도 방향이 그대로인 벡터가 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-pagerank",
+        "title": "검색 엔진은 어떤 페이지를 맨 위에 올릴까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "케일리-해밀턴 정리",
+      "code": "12고대03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-cayley-check",
+        "title": "A² + pA + qI = O가 되는 p, q는 무엇일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-power-reduce",
+        "title": "A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "행렬의 대각화",
+      "code": "12고대03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-diag-grid",
+        "title": "어떤 격자에서 보면 행렬이 늘이기만 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-fibonacci",
+        "title": "피보나치 수열의 일반항에 왜 √5가 나올까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "직교행렬과 직교대각화",
+      "code": "12고대03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-symmetric-ellipse",
+        "title": "대칭행렬은 원을 어떤 모양으로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-orth-diag-proof",
+        "title": "대칭행렬의 고유벡터는 왜 서로 수직일까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "이차곡선의 표준형",
+      "code": "12고대03-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-conic-rotate",
+        "title": "xy항이 있는 이차곡선은 어떻게 표준형으로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-conic-classify",
+        "title": "그리지 않고 이차곡선의 모양을 알 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "대각화의 활용",
+      "code": "12고대03-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adalg-markov",
+        "title": "공유 자전거는 며칠 뒤 어느 대여소에 모일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adalg-population",
+        "title": "멸종 위기종을 살리려면 어느 생존율을 높일까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dmath",
+  "name": "이산 수학",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "선택과 배열",
+    "sections": [
+     {
+      "n": 1,
+      "title": "여러 가지 순열",
+      "code": "12이수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-round-table",
+        "title": "원탁에 앉는 방법은 왜 n!보다 적을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-grid-path",
+        "title": "바둑판 도시에서 가장 짧은 길은 몇 가지일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "중복조합",
+      "code": "12이수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-stars-bars",
+        "title": "같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-int-solutions",
+        "title": "조건이 붙은 방정식의 정수해는 몇 개일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "포함배제의 원리",
+      "code": "12이수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-venn-count",
+        "title": "세 집합을 합칠 때 왜 더하고 빼고 다시 더할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-derange",
+        "title": "모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "집합의 분할과 자연수의 분할",
+      "code": "12이수01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-set-partition",
+        "title": "다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-young",
+        "title": "점 그림을 뒤집으면 어떤 분할이 나올까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "비둘기집의 원리",
+      "code": "12이수01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-birthday",
+        "title": "몇 명이 모이면 생일이 같은 두 사람이 꼭 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-pigeon-pairs",
+        "title": "서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "점화 관계와 알고리즘",
+    "sections": [
+     {
+      "n": 1,
+      "title": "수열의 귀납적 정의",
+      "code": "12이수02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-hanoi",
+        "title": "원판 n개를 옮기는 최소 횟수는 어떻게 구할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-domino",
+        "title": "2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "점화 관계와 일반항",
+      "code": "12이수02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-recur-plot",
+        "title": "점화식만 보고 수열이 어디로 갈지 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-loan",
+        "title": "매달 얼마씩 갚아야 24개월 만에 대출이 끝날까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "알고리즘과 그 표현",
+      "code": "12이수02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-euclid-flow",
+        "title": "최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-algo-bug",
+        "title": "이 알고리즘은 어떤 입력에서 틀릴까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "재귀적 알고리즘",
+      "code": "12이수02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-call-tree",
+        "title": "재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-fast-power",
+        "title": "a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "여러 가지 알고리즘",
+      "code": "12이수02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-sort-race",
+        "title": "정렬 방법에 따라 비교 횟수는 얼마나 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-updown",
+        "title": "1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "수의 표현과 부울 대수",
+    "sections": [
+     {
+      "n": 1,
+      "title": "진법",
+      "code": "12이수03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-base-convert",
+        "title": "같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-binary-cards",
+        "title": "카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "이진수의 사칙연산",
+      "code": "12이수03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-binary-add",
+        "title": "이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-twos-comp",
+        "title": "8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "부울 함수와 간소화",
+      "code": "12이수03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-truth-table",
+        "title": "\"셋 중 둘 이상이 찬성하면 통과\"를 식으로 쓸 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-karnaugh",
+        "title": "긴 부울 식을 그림으로 묶어 줄일 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "논리 회로",
+      "code": "12이수03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-gate-lab",
+        "title": "스위치와 게이트로 규칙을 회로로 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-adder",
+        "title": "게이트만으로 덧셈하는 기계를 만들 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "그래프",
+    "sections": [
+     {
+      "n": 1,
+      "title": "그래프와 실생활 문제",
+      "code": "12이수04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-konigsberg",
+        "title": "일곱 다리를 한 번씩만 건너 산책할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-graph-model",
+        "title": "버스 노선 설명을 그래프로 그리면 무엇이 보일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "꼭짓점의 차수와 변의 개수",
+      "code": "12이수04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-handshake",
+        "title": "악수한 횟수를 모두 더하면 왜 늘 짝수일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-degree-seq",
+        "title": "차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "인접행렬",
+      "code": "12이수04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-adj-matrix",
+        "title": "그래프를 수의 표로 바꾸면 무엇을 계산할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-walk-count",
+        "title": "세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "평면그래프",
+      "code": "12이수04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-untangle",
+        "title": "엉킨 그래프를 선이 겹치지 않게 펼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-euler-formula",
+        "title": "평면그래프에서 점, 선, 면의 수 사이에는 어떤 관계가 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "오일러그래프와 해밀턴그래프",
+      "code": "12이수04-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-euler-trail",
+        "title": "한붓그리기가 되는 그림은 미리 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-hamilton",
+        "title": "모든 도시를 꼭 한 번씩 들르고 돌아오는 길이 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "수형도와 생성수형도",
+      "code": "12이수04-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-tree-facts",
+        "title": "회로 없이 모든 점을 이으려면 선이 몇 개 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-kruskal",
+        "title": "모든 마을에 광케이블을 가장 싸게 연결하려면?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "채색수와 채색다항식",
+      "code": "12이수04-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-dmath-map-color",
+        "title": "지도를 칠하는 데 색이 최소 몇 가지 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-dmath-chromatic-poly",
+        "title": "색이 k가지일 때 칠하는 방법은 몇 가지일까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adgeo",
+  "name": "고급 기하",
+  "meta": "과학계열 선택",
+  "track": "math",
+  "level": "고급",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "작도와 평면기하",
+    "sections": [
+     {
+      "n": 1,
+      "title": "기초적인 작도",
+      "code": "12고기01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-construct-replay",
+        "title": "눈금 없는 자와 컴퍼스만으로 무엇을 그릴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-construct-challenge",
+        "title": "원과 직선 몇 번이면 목표 도형을 그릴 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "여러 가지 작도",
+      "code": "12고기01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-center-construct",
+        "title": "세 점을 모두 지나는 원은 어떻게 작도할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-regular-polygon",
+        "title": "원 안에 정육각형, 정사각형, 정팔각형을 작도할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "작도 가능성과 대수",
+      "code": "12고기01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-constructible-number",
+        "title": "길이 1만 주어지면 어떤 길이를 작도할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-gauss-polygon",
+        "title": "정칠각형은 작도할 수 있을까, 정십칠각형은?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "평면도형의 기초 성질과 증명",
+      "code": "12고기01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-isosceles-proof",
+        "title": "두 변이 같으면 두 밑각도 같다는 것을 어떻게 증명할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-fallacy",
+        "title": "\"모든 삼각형은 이등변삼각형이다\"의 증명은 어디가 틀렸을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "삼각형에 관한 정리",
+      "code": "12고기01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-ceva",
+        "title": "세 꼭짓점에서 그은 세 선분이 한 점에서 만날 조건은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-euler-line",
+        "title": "삼각형의 세 중심이 한 직선 위에 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "원에 관한 정리",
+      "code": "12고기01-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-power-point",
+        "title": "원을 지나는 직선을 아무렇게나 그어도 변하지 않는 곱은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-ptolemy",
+        "title": "원에 내접하는 사각형의 두 대각선의 곱은 무엇과 같을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "곡선의 성질",
+    "sections": [
+     {
+      "n": 1,
+      "title": "평면곡선의 매개변수 방정식",
+      "code": "12고기02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-cycloid",
+        "title": "굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-lissajous",
+        "title": "가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "점의 자취 탐구",
+      "code": "12고기02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-ladder",
+        "title": "벽에서 미끄러지는 사다리의 가운데 점은 어떤 길을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-apollonius",
+        "title": "두 점까지 거리의 비가 2 : 1인 점은 어디에 모일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "공간곡선의 매개변수 방정식",
+      "code": "12고기02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-helix",
+        "title": "용수철과 나사의 모양은 어떤 식으로 나타낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-curve-match",
+        "title": "식만 보고 공간곡선의 모양을 알아볼 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "공간에서의 속도와 가속도",
+      "code": "12고기02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-vel-acc",
+        "title": "나선을 따라 움직이는 점의 가속도는 어느 쪽을 향할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-drone",
+        "title": "8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "정칙곡선과 곡선의 길이",
+      "code": "12고기02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-regular-cusp",
+        "title": "매끄러운 매개변수 식이 왜 뾰족한 곡선을 그릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-arc-length",
+        "title": "휘어진 곡선의 길이는 어떻게 잴까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "단위속력곡선과 호의 길이 매개변수",
+      "code": "12고기02-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-speed-param",
+        "title": "같은 원을 그리는데 왜 점마다 빠르기가 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-milestones",
+        "title": "구불구불한 산길에 1 km마다 표지판을 세우려면?"
+       }
+      ]
+     },
+     {
+      "n": 7,
+      "title": "단위속력곡선으로 재매개화",
+      "code": "12고기02-07",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-reparam",
+        "title": "나선 위를 속력 1로 움직이게 하려면 매개변수를 어떻게 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-reparam-spot",
+        "title": "이 재매개화 풀이는 어디서 틀렸을까?"
+       }
+      ]
+     },
+     {
+      "n": 8,
+      "title": "곡률과 곡률반경",
+      "code": "12고기02-08",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-osculating",
+        "title": "곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-road-curve",
+        "title": "고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "곡면의 성질",
+    "sections": [
+     {
+      "n": 1,
+      "title": "등위곡선과 곡면",
+      "code": "12고기03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-contour",
+        "title": "지도의 등고선은 곡면을 어떻게 나타낸 것일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-level-match",
+        "title": "등고선 지도만 보고 함수를 알아맞힐 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "이차곡면",
+      "code": "12고기03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-quadric",
+        "title": "x², y², z²의 부호만 바꾸면 곡면은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-slice-predict",
+        "title": "이 곡면을 이 평면으로 자르면 어떤 모양이 나올까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "구면삼각형",
+      "code": "12고기03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-sphere-triangle",
+        "title": "지구 위의 삼각형은 세 각의 합이 왜 180°보다 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-flight-route",
+        "title": "서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "구면코사인법칙과 구면사인법칙",
+      "code": "12고기03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-adgeo-spherical-law",
+        "title": "구면삼각형에서도 코사인법칙이 성립할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-adgeo-city-distance",
+        "title": "위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "econ",
+  "name": "경제 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "수와 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제지표",
+      "code": "12경수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-cpi-basket",
+        "title": "내 장바구니로 물가지수를 만들면 얼마가 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-index-trap",
+        "title": "이 경제 기사 문장은 숫자를 바르게 읽었을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "환율",
+      "code": "12경수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-exchange",
+        "title": "환율이 오르면 누가 이득이고 누가 손해일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-cross-rate",
+        "title": "100만 원을 엔화로 바꿀 때 어느 길이 가장 유리할까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "세금",
+      "code": "12경수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-progressive-tax",
+        "title": "세율이 35%인 사람은 소득의 35%를 세금으로 낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-tax-myth",
+        "title": "세율 구간이 올라가면 오히려 손에 쥐는 돈이 줄어들까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "단리와 복리, 현재 가치",
+      "code": "12경수01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-compound",
+        "title": "이자에 이자가 붙으면 돈은 언제 두 배가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-present-value",
+        "title": "지금 100만 원과 5년 뒤 130만 원, 어느 쪽이 더 이득일까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "연금",
+      "code": "12경수01-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-annuity",
+        "title": "해마다 100만 원씩 20년 모으면 얼마가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-lump-or-annuity",
+        "title": "일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "함수와 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 현상과 함수",
+      "code": "12경수02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-cost-function",
+        "title": "빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-phone-plan",
+        "title": "한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "수요곡선과 공급곡선",
+      "code": "12경수02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-demand-shift",
+        "title": "가격이 올라 덜 사는 것과 덜 사고 싶어지는 것은 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-demand-fit",
+        "title": "설문 자료로 우리 학교 매점의 수요곡선을 만들 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "효용함수",
+      "code": "12경수02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-utility",
+        "title": "용돈 1만 원으로 떡볶이와 음료를 어떻게 사야 가장 만족스러울까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-indifference",
+        "title": "예산선 위에서 만족이 가장 큰 점은 어떻게 생겼을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "균형 가격",
+      "code": "12경수02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-equilibrium",
+        "title": "운동화 값은 왜 결국 한 가격에 자리 잡을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-cobweb",
+        "title": "배추값은 왜 해마다 폭등과 폭락을 되풀이할까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "세금·소득과 균형 가격",
+      "code": "12경수02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-tax-incidence",
+        "title": "판매자에게 1잔에 500원씩 세금을 매기면 누가 그 세금을 낼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-income-shift",
+        "title": "소득이 늘면 라면 값은 오를까 내릴까?"
+       }
+      ]
+     },
+     {
+      "n": 6,
+      "title": "부등식의 영역과 경제",
+      "code": "12경수02-06",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-lp-production",
+        "title": "책상과 의자를 몇 개씩 만들어야 이익이 가장 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-diet",
+        "title": "영양 기준을 채우는 가장 싼 아침 식단은?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "행렬과 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 현상과 행렬",
+      "code": "12경수03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-sales-matrix",
+        "title": "세 지점의 하루 매출을 한 번에 계산할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-market-share",
+        "title": "해마다 일부 고객이 갈아타면 점유율은 결국 어떻게 될까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "역행렬",
+      "code": "12경수03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-inverse-steps",
+        "title": "주문표의 개수와 금액으로 단가를 거꾸로 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-bundle-price",
+        "title": "세트 메뉴 가격만 보고 버거 하나의 값을 맞힐 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "행렬로 푸는 경제 문제",
+      "code": "12경수03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-leontief",
+        "title": "자동차 수요가 100억 원 늘면 철강은 얼마나 더 만들어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-two-market",
+        "title": "돼지고기 값이 오르면 닭고기 값은 왜 따라 오를까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "미분과 경제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경제 함수의 미분",
+      "code": "12경수04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-cost",
+        "title": "하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-marginal-revenue",
+        "title": "한 개를 더 팔면 수입이 그 가격만큼 늘어날까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "그래프의 개형과 해석",
+      "code": "12경수04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-avg-marginal",
+        "title": "개당 평균 비용이 가장 낮은 생산량은 어디일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-revenue-shape",
+        "title": "이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "탄력성",
+      "code": "12경수04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-elasticity",
+        "title": "기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-price-hike",
+        "title": "값을 10% 올리면 매출이 늘어날까 줄어들까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "최적화",
+      "code": "12경수04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-econ-profit-max",
+        "title": "몇 개를 만들어 팔아야 이윤이 가장 클까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-econ-ticket-price",
+        "title": "학교 축제 공연 티켓 값을 얼마로 정해야 수익이 가장 클까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "aimath",
+  "name": "인공지능 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "인공지능과 빅데이터",
+    "sections": [
+     {
+      "n": 1,
+      "title": "인공지능의 학습과 수학",
+      "code": "12인수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-teach-machine",
+        "title": "예시만 보여 주고 컴퓨터에게 사과와 귤을 구별하게 할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-rule-vs-learn",
+        "title": "불량품을 가려내는 기준 무게는 사람이 정하는 것이 좋을까, 자료가 정하는 것이 좋을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "인공지능과 수학의 역사",
+      "code": "12인수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-timeline",
+        "title": "인공지능을 만든 수학과 사건을 시간 순서로 놓을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-perceptron-xor",
+        "title": "인공 뉴런 하나로 \"둘 중 하나만 참\"을 판단할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "빅데이터",
+      "code": "12인수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-bigdata-sample",
+        "title": "자료를 100배 모으면 추정도 100배 정확해질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-data-bias",
+        "title": "자료가 많은데도 인공지능이 틀리는 이유는 무엇일까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "텍스트 데이터 처리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "집합과 벡터로 나타낸 텍스트",
+      "code": "12인수02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-jaccard",
+        "title": "두 문장이 얼마나 비슷한지 수로 나타낼 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-onehot",
+        "title": "문장을 숫자들의 줄, 곧 벡터로 바꿀 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "빈도수 벡터와 요약",
+      "code": "12인수02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-word-count",
+        "title": "낱말을 세기만 해도 글의 요점을 찾을 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-tfidf",
+        "title": "가장 많이 나온 낱말이 그 글의 핵심어일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "텍스트 분석의 수학",
+      "code": "12인수02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-cosine-doc",
+        "title": "짧은 글과 긴 글이 같은 주제인지 어떻게 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-spam",
+        "title": "\"무료\", \"당첨\"이 들어간 메일은 스팸일 확률이 얼마일까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "이미지 데이터 처리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "행렬로 나타낸 이미지",
+      "code": "12인수03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-pixel-grid",
+        "title": "그림을 숫자로 된 표, 곧 행렬로 바꿀 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-rgb",
+        "title": "색이 있는 사진은 행렬 몇 개로 나타낼까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "행렬 연산과 이미지 변환",
+      "code": "12인수03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-image-ops",
+        "title": "사진 편집 앱의 버튼은 행렬에 어떤 계산을 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-convolution",
+        "title": "주변 픽셀과 섞으면 사진에서 윤곽선을 찾을 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "이미지 분류의 수학",
+      "code": "12인수03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-digit-distance",
+        "title": "손으로 쓴 숫자를 컴퓨터는 어떻게 알아볼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-knn",
+        "title": "가장 가까운 이웃 하나만 믿어도 될까, 여럿에게 물어볼까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "예측과 최적화",
+    "sections": [
+     {
+      "n": 1,
+      "title": "확률과 예측",
+      "code": "12인수04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-weather-predict",
+        "title": "오늘 비가 오면 내일도 비가 올 확률은 얼마일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-base-rate",
+        "title": "정확도 99%인 진단 인공지능이 \"양성\"이라고 하면 정말 병이 있을 확률은?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "추세선",
+      "code": "12인수04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-trendline",
+        "title": "흩어진 점들을 가장 잘 나타내는 직선은 어떻게 고를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-extrapolate",
+        "title": "처음 몇 해의 추세로 10년 뒤를 예측해도 될까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "손실함수",
+      "code": "12인수04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-loss-curve",
+        "title": "모델이 틀린 정도를 함수로 나타내면 어떤 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-loss-outlier",
+        "title": "잘못 입력된 자료 하나가 들어오면 어떤 손실함수가 더 크게 흔들릴까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "경사하강법",
+      "code": "12인수04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-gradient-descent",
+        "title": "안개 낀 산에서 가장 낮은 곳을 찾아 내려가려면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-gd-contour",
+        "title": "기울기와 절편을 함께 학습하면 어떤 길로 내려갈까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "title": "인공지능과 수학 탐구",
+    "sections": [
+     {
+      "n": 1,
+      "title": "인공지능의 문제 해결 사례",
+      "code": "12인수05-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-recommend",
+        "title": "동영상 앱은 내가 볼 만한 영화를 어떻게 골라 줄까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-neuron",
+        "title": "인공 뉴런 하나는 입력을 어떻게 확률로 바꿀까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "인공지능 수학 주제 탐구",
+      "code": "12인수05-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-aimath-explore-plan",
+        "title": "내가 궁금한 것을 인공지능 수학 탐구 주제로 바꿀 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-aimath-fairness",
+        "title": "같은 기준 점수를 적용하면 공정한 인공지능일까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jmath",
+  "name": "직무 수학",
+  "meta": "진로선택",
+  "track": "math",
+  "level": "진로",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "수와 연산",
+    "sections": [
+     {
+      "n": 1,
+      "title": "직무 속의 수와 사칙연산",
+      "code": "12직수01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-cafe-bill",
+        "title": "카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-recipe-scale",
+        "title": "4인분 레시피로 단체 손님 30명의 음식을 만들려면?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "큰 수의 어림",
+      "code": "12직수01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-paint-estimate",
+        "title": "방 하나를 칠하려면 페인트를 몇 통 사야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-round-budget",
+        "title": "올림, 버림, 반올림 중 어느 것을 써야 일이 틀어지지 않을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "표준 단위와 단위 환산",
+      "code": "12직수01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-dose-convert",
+        "title": "\"체중 1 kg당 15 mg\"을 주사기 눈금 몇 mL로 바꿀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-unit-error",
+        "title": "이 작업 지시서의 단위 환산은 맞을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "변화와 관계",
+    "sections": [
+     {
+      "n": 1,
+      "title": "비",
+      "code": "12직수02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-mix-ratio",
+        "title": "배합비 1 : 2 : 4로 콘크리트 재료를 섞으려면 각각 얼마나 필요할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-scale-drawing",
+        "title": "도면 위 6 cm는 실제로 몇 m일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "비율과 백분율",
+      "code": "12직수02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-discount-chain",
+        "title": "\"20% 할인에 10% 추가 할인\"은 30% 할인과 같을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-margin-markup",
+        "title": "\"원가에 30%를 붙여 판다\"와 \"마진율 30%\"는 같은 말일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "대응 관계와 규칙",
+      "code": "12직수02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tile-pattern",
+        "title": "정사각형 바닥 둘레에 까는 테두리 타일은 몇 장일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-pay-table",
+        "title": "밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "변화를 나타내는 그래프",
+      "code": "12직수02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tank-graph",
+        "title": "모양이 다른 물통에 같은 빠르기로 물을 넣으면 수위 그래프는 어떻게 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-delivery-graph",
+        "title": "배달 기사의 거리–시간 그래프에서 무엇을 읽을 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "일차방정식과 일차부등식의 활용",
+      "code": "12직수02-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-rent-or-buy",
+        "title": "장비를 며칠 이상 쓰면 빌리는 것보다 사는 것이 나을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-dilution",
+        "title": "원액을 물에 얼마나 섞어야 원하는 농도가 될까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "도형과 측정",
+    "sections": [
+     {
+      "n": 1,
+      "title": "겨냥도와 전개도",
+      "code": "12직수03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-box-net",
+        "title": "정사각형 6개를 어떻게 이어 붙여야 접어서 상자가 될까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-package-board",
+        "title": "상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "위, 앞, 옆에서 본 모양",
+      "code": "12직수03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-three-views",
+        "title": "쌓기나무를 위, 앞, 옆에서 보면 어떤 모양일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-view-count",
+        "title": "앞과 옆에서 찍은 사진만 있을 때 상자는 몇 개일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "도형의 이동, 합동과 닮음",
+      "code": "12직수03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tile-transform",
+        "title": "한 가지 무늬 타일만으로 바닥에 여러 무늬를 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-sign-enlarge",
+        "title": "간판 시안을 3배로 키우면 페인트와 재료는 몇 배가 들까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "평면도형의 둘레와 넓이",
+      "code": "12직수03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-floor-area",
+        "title": "ㄱ자 모양 방에 장판을 깔려면 몇 m²를 주문해야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-fence",
+        "title": "울타리 24 m로 둘러싼 직사각형 텃밭은 어떤 모양일 때 가장 넓을까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "입체도형의 겉넓이와 부피",
+      "code": "12직수03-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-tank-volume",
+        "title": "원기둥 물탱크를 가득 채우려면 물이 몇 L 필요하고 몇 분이 걸릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-paint-surface",
+        "title": "창고 바깥을 칠하려면 칠할 넓이는 얼마일까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "자료와 가능성",
+    "sections": [
+     {
+      "n": 1,
+      "title": "경우의 수",
+      "code": "12직수04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-shift-schedule",
+        "title": "직원 5명으로 오전·오후·야간 근무자를 정하는 방법은 몇 가지일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-password",
+        "title": "비밀번호를 한 자리 늘리는 것과 특수문자를 넣는 것 중 무엇이 더 안전할까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "가능성의 수치화",
+      "code": "12직수04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-defect-sample",
+        "title": "불량률 2%인 공장에서 10개를 뽑아 검사하면 불량품이 하나도 안 나올 가능성은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-overbooking",
+        "title": "식당 좌석이 40석일 때 예약을 몇 팀까지 받아도 될까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "표와 그래프로 정리하기",
+      "code": "12직수04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-choose-chart",
+        "title": "같은 매출 자료로 보고서를 쓸 때 어떤 그래프를 골라야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-class-width",
+        "title": "배달 시간 자료를 도수분포표로 정리할 때 계급을 몇 분 단위로 나눌까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "표와 그래프의 해석",
+      "code": "12직수04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-misleading-graph",
+        "title": "이 홍보물의 그래프는 무엇을 부풀렸을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-dashboard",
+        "title": "매장 대시보드를 보고 회의에서 무엇이라고 보고할까?"
+       }
+      ]
+     },
+     {
+      "n": 5,
+      "title": "목적에 맞는 표현과 의사 결정",
+      "code": "12직수04-05",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-jmath-supplier-score",
+        "title": "세 납품 업체 중 어디를 고를까? 무엇을 중요하게 보느냐에 따라 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-jmath-stock-decision",
+        "title": "내일 비 올 확률이 30%일 때 우산을 몇 개 들여놓아야 할까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mcult",
+  "name": "수학과 문화",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "예술과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "음악과 수학",
+      "code": "12수문01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-string-ratio",
+        "title": "현의 길이를 어떻게 나누면 두 소리가 잘 어울릴까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-equal-temperament",
+        "title": "완전5도를 12번 쌓으면 정확히 7옥타브 위의 음이 될까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "미술과 수학",
+      "code": "12수문01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-perspective",
+        "title": "같은 간격으로 선 전봇대를 그림에서는 어떤 간격으로 그려야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-golden-myth",
+        "title": "네 직사각형 중 황금 직사각형은? 그리고 황금비는 정말 가장 아름다울까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "문학과 수학",
+      "code": "12수문01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-fib-poem",
+        "title": "줄마다 글자 수가 1, 1, 2, 3, 5, 8인 시를 지어 볼까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-babel-library",
+        "title": "세상의 모든 책이 있는 도서관에는 책이 몇 권 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "영화와 수학",
+      "code": "12수문01-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-wagon-wheel",
+        "title": "영화 속 마차 바퀴는 왜 가끔 거꾸로 돌아 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-bezier-path",
+        "title": "디자인 프로그램은 점 네 개로 어떻게 매끄러운 곡선을 그릴까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "생활과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "스포츠와 수학",
+      "code": "12수문02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-shot-angle",
+        "title": "측면으로 달려 들어가는 공격수는 어디에서 슛을 해야 골문이 가장 넓게 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-elo-rating",
+        "title": "약한 팀을 이기면 점수가 조금, 강한 팀을 이기면 많이 오르는 까닭은?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "게임과 수학",
+      "code": "12수문02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-nim",
+        "title": "돌 줍기 게임에서 컴퓨터를 이길 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-gacha",
+        "title": "당첨 확률 1%인 뽑기를 100번 하면 반드시 당첨될까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "디지털 기술과 수학",
+      "code": "12수문02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-barcode-check",
+        "title": "바코드의 마지막 숫자는 왜 있을까? 계산대는 잘못 읽은 것을 어떻게 알아챌까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-run-length",
+        "title": "흑백 그림을 더 짧은 숫자로 저장할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "투표와 수학",
+      "code": "12수문02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-voting-methods",
+        "title": "똑같은 표로 뽑았는데, 세는 방법을 바꾸면 당선자가 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-apportionment",
+        "title": "전체 의석을 하나 늘렸는데 어떤 지역의 의석은 줄어들 수 있을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "사회와 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "민속 수학과 건축",
+      "code": "12수문03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-yut-probability",
+        "title": "윷을 던지면 도, 개, 걸, 윷, 모 중 무엇이 가장 잘 나올까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-frieze",
+        "title": "처마 끝이나 옷깃의 띠 무늬는 몇 종류로 나눌 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "점자와 수학",
+      "code": "12수문03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-braille-count",
+        "title": "점 여섯 개로 서로 다른 점자를 몇 가지 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-braille-number",
+        "title": "엘리베이터 버튼의 점자 숫자는 어떻게 읽을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "대중매체와 데이터",
+      "code": "12수문03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-poll-margin",
+        "title": "뉴스 여론조사의 \"95% 신뢰수준에 오차범위 ±3.1%p\"는 무슨 뜻일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-relative-risk",
+        "title": "\"이것을 먹으면 병에 걸릴 위험이 2배!\" 기사는 얼마나 걱정해야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "가치소비와 의사 결정",
+      "code": "12수문03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-unit-price",
+        "title": "1+1, 대용량, 할인 상품 중 어느 것이 가장 쌀까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-carbon-choice",
+        "title": "텀블러는 몇 번 써야 일회용 컵보다 환경에 나을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "환경과 수학",
+    "sections": [
+     {
+      "n": 1,
+      "title": "식생활과 수학",
+      "code": "12수문04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-nutrition-label",
+        "title": "과자 한 봉지를 다 먹으면 하루 나트륨의 몇 %를 먹는 걸까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-food-mileage",
+        "title": "멀리서 온 먹거리는 언제나 배출량이 더 많을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "대기 오염과 수학",
+      "code": "12수문04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-pm-average",
+        "title": "창밖은 뿌연데 초미세먼지 등급은 왜 '보통'일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-emission-path",
+        "title": "배출량을 해마다 같은 비율로 줄이는 것과 같은 양씩 줄이는 것, 무엇이 남은 예산을 지킬까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "사막화와 수학",
+      "code": "12수문04-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-desert-automata",
+        "title": "비가 조금씩 줄어들면 초원도 조금씩 줄어들까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-ndvi",
+        "title": "인공위성 사진으로 사막이 넓어졌는지 어떻게 잴까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "생물 다양성과 수학",
+      "code": "12수문04-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mcult-capture-recapture",
+        "title": "연못의 물고기를 모두 잡지 않고 몇 마리인지 알 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mcult-simpson-index",
+        "title": "네 종이 사는 두 숲, 어느 숲의 생물 다양성이 더 높을까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pstat",
+  "name": "실용 통계",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "통계와 통계적 문제",
+    "sections": [
+     {
+      "n": 1,
+      "title": "통계의 유용성",
+      "code": "12실통01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-cholera-map",
+        "title": "목록으로는 안 보이던 전염병의 원인을 지도가 보여 줄 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-stat-question",
+        "title": "\"우리 반 학생들은 몇 시간 잘까?\"와 \"나는 어제 몇 시간 잤을까?\"는 무엇이 다를까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "통계적 문제해결 과정",
+      "code": "12실통01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ppdac-order",
+        "title": "매점 줄을 줄이고 싶을 때, 통계 탐구는 어떤 순서로 해야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-question-refine",
+        "title": "\"학생들은 스마트폰을 많이 쓸까?\"를 통계로 답할 수 있는 질문으로 바꾸려면?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "모집단과 표본추출",
+      "code": "12실통01-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-sampling-methods",
+        "title": "전교생 360명 중 36명만 조사한다면, 어떻게 뽑아야 전체를 잘 대표할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-volunteer-bias",
+        "title": "응답자가 수천 명인 온라인 투표와 100명 무작위 조사, 무엇을 믿어야 할까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "자료의 수집과 정리",
+    "sections": [
+     {
+      "n": 1,
+      "title": "자료의 종류",
+      "code": "12실통02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-data-types",
+        "title": "혈액형, 키, 만족도 점수, 형제 수는 각각 어떤 종류의 자료일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-number-not-number",
+        "title": "축구팀 선수들의 등번호 평균이 12.6이라는 것은 무슨 뜻일까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "자료의 수집 방법",
+      "code": "12실통02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-survey-wording",
+        "title": "설문 문항을 어떻게 쓰느냐에 따라 응답이 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-random-assign",
+        "title": "새 공부법을 고른 학생들의 점수가 높다면, 공부법의 효과일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "그래프의 종류",
+      "code": "12실통02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-boxplot-build",
+        "title": "점수 하나를 옮기면 상자그림은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-scatter-r",
+        "title": "상관계수가 0에 가까우면 두 변수는 아무 관계가 없는 걸까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "대푯값과 산포도",
+      "code": "12실통02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-mean-median",
+        "title": "동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-sd-spread",
+        "title": "평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "자료의 분석",
+    "sections": [
+     {
+      "n": 1,
+      "title": "정규분포와 t분포",
+      "code": "12실통03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-t-vs-z",
+        "title": "t분포는 표준정규분포와 무엇이 다를까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-why-t",
+        "title": "표본 5개로 표준화하면 정말 95%가 ±1.96 안에 들어올까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "모평균의 추정",
+      "code": "12실통03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ci-t-cover",
+        "title": "배터리 6개로 평균 수명을 추정할 때, 신뢰구간은 어떻게 만들어야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-sample-size",
+        "title": "택배 배송 시간의 평균을 ±0.5시간 안으로 추정하려면 몇 건을 조사해야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "모비율의 추정",
+      "code": "12실통03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ci-prop-read",
+        "title": "\"찬성 54%, 95% 신뢰구간 50.9~57.1%\"를 보고 할 수 있는 말과 없는 말은?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-lead-margin",
+        "title": "후보 A 47%, B 43%인 여론조사에서 A가 앞선다고 말할 수 있을까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "가설검정",
+      "code": "12실통03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-coin-test",
+        "title": "동전을 100번 던져 앞면이 61번 나왔다면, 이 동전은 치우친 걸까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-p-hacking",
+        "title": "아무 효과 없는 영양제를 20가지 증상에 대해 검정하면 '효과 있음'이 나올까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "title": "통계적 탐구",
+    "sections": [
+     {
+      "n": 1,
+      "title": "통계적 탐구와 의사 결정",
+      "code": "12실통04-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-ab-test",
+        "title": "온라인 쇼핑몰이 새 화면을 쓸지, A/B 테스트 결과로 결정할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-error-cost",
+        "title": "불량품 검사의 기준선을 어디에 그어야 손해가 가장 적을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "통계적 탐구의 성찰",
+      "code": "12실통04-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-pstat-simpson-paradox",
+        "title": "두 병원 중 어디가 수술을 더 잘할까? 합쳐 본 결과와 나눠 본 결과가 반대라면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-pstat-publication-bias",
+        "title": "'효과 있음'만 발표된다면, 발표된 연구들의 평균 효과는 믿을 만할까?"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mres",
+  "name": "수학과제 탐구",
+  "meta": "융합선택",
+  "track": "math",
+  "level": "융합",
+  "chapters": [
+   {
+    "n": 1,
+    "title": "과제 탐구의 이해",
+    "sections": [
+     {
+      "n": 1,
+      "title": "수학과제 탐구의 의미",
+      "code": "12수과01-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-collatz-explore",
+        "title": "짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-circle-regions",
+        "title": "원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "연구 윤리",
+      "code": "12수과01-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-benford-check",
+        "title": "자연에서 모은 숫자와 지어낸 숫자, 첫 자리만 보고 구별할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-citation-ethics",
+        "title": "모둠 탐구 보고서를 쓰다 생긴 일들, 어디까지 괜찮을까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "title": "과제 탐구의 방법과 절차",
+    "sections": [
+     {
+      "n": 1,
+      "title": "문헌 조사",
+      "code": "12수과02-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-source-eval",
+        "title": "\"피보나치 수열과 자연\" 탐구에 쓸 자료, 어느 것을 믿고 인용할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-sequence-search",
+        "title": "탐구에서 1, 2, 4, 8, 16이 나왔다면, 이 수열은 이미 누가 연구했을까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "사례 조사",
+      "code": "12수과02-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-tiling-case",
+        "title": "보도블록, 욕실 타일, 벌집을 조사하면 왜 정삼각형·정사각형·정육각형만 보일까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-paper-ratio",
+        "title": "A4 용지를 반으로 접으면 A5가 되는데, 모양은 왜 똑같을까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "수학 실험",
+      "code": "12수과02-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-buffon-needle",
+        "title": "평행선 위에 바늘을 떨어뜨리기만 해서 원주율 π를 구할 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-trials-error",
+        "title": "주사위 두 개의 합이 7일 확률을 실험으로 구한다면, 몇 번 던져야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "개발 연구",
+      "code": "12수과02-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-fair-game-design",
+        "title": "주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-prime-algorithm",
+        "title": "N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "title": "과제 탐구의 실행 및 평가",
+    "sections": [
+     {
+      "n": 1,
+      "title": "주제 선정과 탐구 계획",
+      "code": "12수과03-01",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-topic-matrix",
+        "title": "탐구 주제 후보가 여러 개일 때, 무엇을 기준으로 골라야 할까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-critical-path",
+        "title": "탐구 활동을 모두 끝내려면 최소 며칠이 걸릴까?"
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "title": "탐구 수행",
+      "code": "12수과03-02",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-magic-square-log",
+        "title": "1부터 9까지로 가로, 세로, 대각선의 합이 모두 같은 마방진을 만들 수 있을까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-border-tiles",
+        "title": "n×n 정사각형 테두리의 타일 수를 세는 방법은 몇 가지일까?"
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "title": "산출물과 발표",
+      "code": "12수과03-03",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-chart-redesign",
+        "title": "탐구 발표의 그래프, 어떻게 고치면 한눈에 읽힐까?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-proof-order",
+        "title": "탐구 보고서에 증명을 쓸 때, 문장을 어떤 순서로 놓아야 할까?"
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "title": "반성과 평가",
+      "code": "12수과03-04",
+      "page": true,
+      "items": [
+       {
+        "kind": "card",
+        "id": "card-mres-rubric-eval",
+        "title": "내 탐구를 스스로 평가한 점수와 친구들이 평가한 점수가 다르다면?"
+       },
+       {
+        "kind": "card",
+        "id": "card-mres-euler-polynomial",
+        "title": "n = 0, 1, 2, …, 39에서 모두 소수가 나온다면 \"n² + n + 41은 언제나 소수\"라고 써도 될까?"
        }
       ]
      }

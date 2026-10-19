@@ -38,61 +38,19 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-mech-first-law"><span class="mono">2.3.1</span>기체에 준 열은 어디에 쓰일까?</a></li>
-        <li><a href="#card-phy-joule"><span class="mono">2.3.2</span>물을 저어서 데울 수 있을까?</a></li>
-        <li><a href="#card-phy-brake"><span class="mono">2.3.3</span>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a></li>
+        <li><a href="#card-phy-joule"><span class="mono">2.3.1</span>물을 저어서 데울 수 있을까?</a></li>
+        <li><a href="#card-phy-brake"><span class="mono">2.3.2</span>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a></li>
+        <li><a href="#card-mech-first-law"><span class="mono">2.3.3</span>기체에 준 열은 어디에 쓰일까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mech-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">86문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=mech-2-3">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
-      <article class="card" id="card-mech-first-law">
-        <header class="card-head">
-          <span class="no">2.3.1</span><h2>기체에 준 열은 어디에 쓰일까?</h2><span class="kind">열역학 제1법칙 · Q = ΔU + W</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="P–V 그래프 위의 기체 과정 경로와 그 아래 넓이(한 일), 열·내부 에너지 변화·일 막대"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="과정">
-                <button class="chip" data-proc="v" aria-pressed="true">부피 일정</button><button class="chip" data-proc="p">압력 일정</button><button class="chip" data-proc="t">온도 일정</button><button class="chip" data-proc="a">단열</button>
-              </div>
-              <label class="mono"><span class="lab">가한 열 Q</span> = <output class="x-out">1000</output> <span class="unit">J</span></label>
-              <input class="x" type="range" min="-100" max="100" step="1" value="50" aria-label="가한 열 또는 부피 변화">
-              <dl class="nums n4">
-                <div><dt>가한 열 Q</dt><dd class="n-q">—</dd></div>
-                <div><dt>내부 에너지 변화 ΔU</dt><dd class="n-u">—</dd></div>
-                <div><dt>기체가 한 일 W</dt><dd class="n-w">—</dd></div>
-                <div><dt>나중 온도</dt><dd class="n-t">—</dd></div>
-              </dl>
-              <p class="fig-note">단원자 이상 기체 1 mol, 처음 상태 300 K, 약 100 kPa, 24.9 L. 내부 에너지 U = (3/2)nRT. W는 기체가 바깥에 한 일로, 부피가 늘면 양(+), 줄면 음(−)입니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>같은 1000 J의 열을 기체에 주어도, 피스톤을 고정했을 때와 피스톤이 자유롭게 움직일 때 기체의 온도는 똑같이 오를까요?</li>
-            <li><span class="tag">복원</span>기체 분자들의 운동 에너지를 모두 더한 것을 <em>내부 에너지</em>라고 하고, 이상 기체에서는 절대 온도에 비례합니다. 기체가 피스톤을 밀며 부피가 ΔV만큼 늘면 압력 P로 PΔV만큼 일을 합니다. 이 일은 P–V 그래프에서 경로 아래의 넓이입니다.</li>
-            <li><span class="tag">설명</span>에너지 보존에 따라 기체에 들어온 열 Q는 내부 에너지를 늘리는 데(ΔU)와 바깥에 일을 하는 데(W) 나뉘어 쓰입니다. <em>Q = ΔU + W</em>, 곧 열역학 제1법칙입니다. 부피가 일정하면 W = 0이라 열이 모두 온도를 올리고, 압력이 일정하면 일부가 일로 빠져나가 온도가 덜 오릅니다.</li>
-            <li><span class="tag">연결</span>온도가 일정한 과정에서는 ΔU = 0이라 받은 열이 모두 일로 바뀝니다. 열이 전혀 드나들지 않는 <em>단열</em> 과정에서는 Q = 0이라, 기체를 압축하면(W &lt; 0) 그만큼 내부 에너지가 늘어 온도가 오르고, 팽창하면 온도가 내려갑니다. 자전거 펌프가 뜨거워지고, 스프레이를 오래 뿌리면 캔이 차가워지는 까닭입니다.</li>
-            <li><span class="tag">적용</span>“부피 일정”과 “압력 일정”에서 같은 1000 J을 주고 나중 온도를 비교하세요. 두 온도 변화의 비는 얼마인가요? “단열”에서 부피를 절반으로 줄이면 온도는 몇 K가 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>“열을 받으면 반드시 온도가 오른다”는 오개념입니다. 온도 일정 과정에서는 열을 받아도 온도가 그대로이고, 단열 압축에서는 열을 받지 않아도 온도가 오릅니다. 온도를 바꾸는 것은 열이 아니라 내부 에너지의 변화이고, 내부 에너지는 열과 일 둘 다로 바뀝니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">기체에 열 500 J을 주었더니 기체가 피스톤을 밀어 바깥에 200 J의 일을 했습니다. 기체의 내부 에너지는?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>300 J 늘었다<span class="why"><b>맞습니다.</b> ΔU = Q − W = 500 − 200 = 300 J입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>700 J 늘었다<span class="why"><b>일의 부호를 거꾸로 본 답입니다.</b> 기체가 바깥에 일을 하면 그만큼 에너지가 빠져나갑니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>500 J 늘었다<span class="why"><b>일로 빠져나간 에너지를 빠뜨렸습니다.</b> 받은 열이 모두 내부 에너지로 가는 것은 부피가 일정할 때뿐입니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/mech/2-5.html#card-mech-entropy"><small class="mono">역학과 에너지 2.5</small>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a><a href="../../c/adphy/1-5.html#card-adphy-process"><small class="mono">고급 물리학 1.5</small>같은 부피만큼 팽창해도 필요한 열은 왜 다를까?</a><a href="../../c/adchem/3-1.html#card-adchem-path"><small class="mono">고급 화학 3.1</small>같은 곳에 도착해도 길에 따라 열과 일이 달라질까?</a></div></nav>
-
       <article class="card" id="card-phy-joule">
         <header class="card-head">
-          <span class="no">2.3.2</span><h2>물을 저어서 데울 수 있을까?</h2><span class="kind">줄의 실험 · 일과 열의 같은 단위</span>
+          <span class="no">2.3.1</span><h2>물을 저어서 데울 수 있을까?</h2><span class="kind">줄의 실험 · 일과 열의 같은 단위</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -146,7 +104,7 @@
 
       <article class="card" id="card-phy-brake">
         <header class="card-head">
-          <span class="no">2.3.3</span><h2>멈춘 자동차의 운동 에너지는 어디로 갔을까?</h2><span class="kind">마찰과 열 · 에너지 보존</span>
+          <span class="no">2.3.2</span><h2>멈춘 자동차의 운동 에너지는 어디로 갔을까?</h2><span class="kind">마찰과 열 · 에너지 보존</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -188,18 +146,65 @@
           <p class="q">같은 차가 시속 50 km에서 멈출 때와 시속 100 km에서 멈출 때, 브레이크가 받는 열을 비교하면?</p>
           <ol>
             <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>100 km/h일 때가 2배<span class="why"><b>속력에 비례한다고 본 답입니다.</b> 열은 잃은 운동 에너지와 같고, 운동 에너지는 속력의 제곱에 비례합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>100 km/h일 때가 4배<span class="why"><b>맞습니다.</b> ½mv²에서 v가 2배면 4배입니다. 앞 절 카드에서 제동 거리가 4배였던 것과 같은 이유입니다. 마찰력 × 거리가 4배이니까요.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>100 km/h일 때가 4배<span class="why"><b>맞습니다.</b> ½mv²에서 v가 2배면 4배입니다. 속력이 2배면 제동 거리가 4배인 것과 같은 이유입니다. 마찰력 × 거리가 4배이니까요.</span></span></button></li>
             <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>같다. 둘 다 결국 멈추므로<span class="why"><b>처음과 끝 속력만 본 답입니다.</b> 끝은 같아도 처음 에너지가 다르므로 사라진 운동 에너지, 곧 열도 다릅니다.</span></span></button></li>
           </ol>
         </div>
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-4.html#card-phy-coaster"><small class="mono">물리학 1.4</small>롤러코스터는 왜 첫 언덕이 가장 높을까?</a><a href="../../c/phy/1-4.html#text-phy-spring"><small class="mono">물리학 1.4</small>눌린 용수철에는 에너지가 얼마나 저장될까?</a><a href="../../c/phy/1-4.html#card-pendulum"><small class="mono">물리학 1.4</small>진자 공식은 언제 틀릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/1-6.html#card-phy-engine"><small class="mono">물리학 1.6</small>열기관의 효율은 왜 100%가 될 수 없을까?</a><a href="../../c/phy/1-6.html#card-phy-wheel"><small class="mono">물리학 1.6</small>이 영구 기관은 왜 멈출까?</a><a href="../../c/is2/2-6.html#card-is2-efficiency"><small class="mono">통합과학2 2.6</small>에너지는 보존되는데 왜 아껴야 할까?</a><a href="../../c/is2/2-6.html#card-is2-renewable"><small class="mono">통합과학2 2.6</small>태양광과 풍력만으로 하루 전기를 채울 수 있을까?</a></div></nav>
 
+      <article class="card" id="card-mech-first-law">
+        <header class="card-head">
+          <span class="no">2.3.3</span><h2>기체에 준 열은 어디에 쓰일까?</h2><span class="kind">열역학 제1법칙 · Q = ΔU + W</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="P–V 그래프 위의 기체 과정 경로와 그 아래 넓이(한 일), 열·내부 에너지 변화·일 막대"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="과정">
+                <button class="chip" data-proc="v" aria-pressed="true">부피 일정</button><button class="chip" data-proc="p">압력 일정</button><button class="chip" data-proc="t">온도 일정</button><button class="chip" data-proc="a">단열</button>
+              </div>
+              <label class="mono"><span class="lab">가한 열 Q</span> = <output class="x-out">1000</output> <span class="unit">J</span></label>
+              <input class="x" type="range" min="-100" max="100" step="1" value="50" aria-label="가한 열 또는 부피 변화">
+              <dl class="nums n4">
+                <div><dt>가한 열 Q</dt><dd class="n-q">—</dd></div>
+                <div><dt>내부 에너지 변화 ΔU</dt><dd class="n-u">—</dd></div>
+                <div><dt>기체가 한 일 W</dt><dd class="n-w">—</dd></div>
+                <div><dt>나중 온도</dt><dd class="n-t">—</dd></div>
+              </dl>
+              <p class="fig-note">단원자 이상 기체 1 mol, 처음 상태 300 K, 약 100 kPa, 24.9 L. 내부 에너지 U = (3/2)nRT. W는 기체가 바깥에 한 일로, 부피가 늘면 양(+), 줄면 음(−)입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>같은 1000 J의 열을 기체에 주어도, 피스톤을 고정했을 때와 피스톤이 자유롭게 움직일 때 기체의 온도는 똑같이 오를까요?</li>
+            <li><span class="tag">복원</span>기체 분자들의 운동 에너지를 모두 더한 것을 <em>내부 에너지</em>라고 하고, 이상 기체에서는 절대 온도에 비례합니다. 기체가 피스톤을 밀며 부피가 ΔV만큼 늘면 압력 P로 PΔV만큼 일을 합니다. 이 일은 P–V 그래프에서 경로 아래의 넓이입니다.</li>
+            <li><span class="tag">설명</span>에너지 보존에 따라 기체에 들어온 열 Q는 내부 에너지를 늘리는 데(ΔU)와 바깥에 일을 하는 데(W) 나뉘어 쓰입니다. <em>Q = ΔU + W</em>, 곧 열역학 제1법칙입니다. 부피가 일정하면 W = 0이라 열이 모두 온도를 올리고, 압력이 일정하면 일부가 일로 빠져나가 온도가 덜 오릅니다.</li>
+            <li><span class="tag">연결</span>온도가 일정한 과정에서는 ΔU = 0이라 받은 열이 모두 일로 바뀝니다. 열이 전혀 드나들지 않는 <em>단열</em> 과정에서는 Q = 0이라, 기체를 압축하면(W &lt; 0) 그만큼 내부 에너지가 늘어 온도가 오르고, 팽창하면 온도가 내려갑니다. 자전거 펌프가 뜨거워지고, 스프레이를 오래 뿌리면 캔이 차가워지는 까닭입니다.</li>
+            <li><span class="tag">적용</span>“부피 일정”과 “압력 일정”에서 같은 1000 J을 주고 나중 온도를 비교하세요. 두 온도 변화의 비는 얼마인가요? “단열”에서 부피를 절반으로 줄이면 온도는 몇 K가 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>“열을 받으면 반드시 온도가 오른다”는 오개념입니다. 온도 일정 과정에서는 열을 받아도 온도가 그대로이고, 단열 압축에서는 열을 받지 않아도 온도가 오릅니다. 온도를 바꾸는 것은 열이 아니라 내부 에너지의 변화이고, 내부 에너지는 열과 일 둘 다로 바뀝니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">기체에 열 500 J을 주었더니 기체가 피스톤을 밀어 바깥에 200 J의 일을 했습니다. 기체의 내부 에너지는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>300 J 늘었다<span class="why"><b>맞습니다.</b> ΔU = Q − W = 500 − 200 = 300 J입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>700 J 늘었다<span class="why"><b>일의 부호를 거꾸로 본 답입니다.</b> 기체가 바깥에 일을 하면 그만큼 에너지가 빠져나갑니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>500 J 늘었다<span class="why"><b>일로 빠져나간 에너지를 빠뜨렸습니다.</b> 받은 열이 모두 내부 에너지로 가는 것은 부피가 일정할 때뿐입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/mech/2-5.html#card-mech-entropy"><small class="mono">역학과 에너지 2.5</small>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a><a href="../../c/adphy/1-5.html#card-adphy-process"><small class="mono">고급 물리학 1.5</small>같은 부피만큼 팽창해도 필요한 열은 왜 다를까?</a><a href="../../c/adchem/3-1.html#card-adchem-path"><small class="mono">고급 화학 3.1</small>같은 곳에 도착해도 길에 따라 열과 일이 달라질까?</a></div></nav>
+
       <a class="px-go" href="../../practice.html?sec=mech-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">86문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -208,8 +213,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/mech/t-first-law.js"></script>
 <script src="../../js/cards/phy/f-joule.js"></script>
 <script src="../../js/cards/phy/f-brake.js"></script>
+<script src="../../js/cards/mech/t-first-law.js"></script>
 </body>
 </html>

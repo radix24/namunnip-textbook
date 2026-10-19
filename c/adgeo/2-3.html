@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공간곡선의 매개변수 방정식 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="공간곡선의 매개변수 방정식 r(t) = (x(t), y(t), z(t)), 원기둥 나선, 공간곡선이 놓인 곡면과 정사영. 나선과 그 그림자를 보는 카드와, 식과 공간곡선을 짝짓는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-helix canvas { aspect-ratio: 4 / 3.4; max-width: 500px; margin: 0 auto; display: block; }
+    #card-adgeo-helix .ctl-row > div { min-width: 8rem; }
+    #card-adgeo-curve-match .eqs { display: flex; flex-wrap: wrap; gap: .35rem; margin: .4rem 0; }
+    #card-adgeo-curve-match .eqs button { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    #card-adgeo-curve-match .eqs button.done { opacity: .45; }
+    #card-adgeo-curve-match .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+    #card-adgeo-curve-match .grid figure { margin: 0; border: 1px solid var(--rule); border-radius: 8px; padding: .25rem; background: var(--card); }
+    #card-adgeo-curve-match .grid figure.hit { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+    #card-adgeo-curve-match .grid canvas { width: 100%; aspect-ratio: 1 / 1; display: block; }
+    #card-adgeo-curve-match .grid figcaption { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .75rem; text-align: center; min-height: 1.2em; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="2-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>공간곡선의 매개변수 방정식</h1>
+    <p class="lead">공간의 곡선도 하나의 매개변수로 나타낼 수 있습니다. 세 좌표를 \(t\)의 함수로 쓴 \(\vec{r}(t) = (x(t), y(t), z(t))\)가 <em>공간곡선</em>의 매개변수 방정식입니다. 이 절에서는 용수철 모양의 나선을 위와 옆에서 보고, 여러 식이 어떤 모양의 곡선을 그리는지 짝지어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/adgeo/2-1.html#card-adgeo-cycloid" title="고급 기하 2.1 · 굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?">평면곡선의 매개변수 방정식</a><a class="p p-card" href="../../c/geo/2-4.html#card-geo-coord-point" title="기하 2.4 · 공간의 점 하나를 수 몇 개로 나타낼 수 있을까?">공간좌표</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-helix"><span class="mono">2.3.1</span>나선과 그 그림자</a></li>
+        <li><a href="#card-adgeo-curve-match"><span class="mono">2.3.2</span>식과 공간곡선 짝짓기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adgeo-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-2-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-helix">
+        <header class="card-head">
+          <span class="no">2.3.1</span><h2>용수철과 나사의 모양은 어떤 식으로 나타낼까?</h2><span class="kind">공간곡선의 매개변수 방정식 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">반지름 a = <output class="a-out">1.5</output></label><input class="a" type="range" min="0.5" max="2.5" step="0.1" value="1.5" aria-label="나선의 반지름"></div>
+              <div><label class="mono">b = <output class="b-out">0.25</output></label><input class="b" type="range" min="-0.5" max="0.5" step="0.05" value="0.25" aria-label="한 바퀴에 오르는 정도"></div>
+              <div><label class="mono">t = <output class="t-out">6.28</output></label><input class="t" type="range" min="0" max="18.85" step="0.05" value="6.28" aria-label="매개변수 t"></div>
+            </div>
+            <canvas aria-label="좌표공간의 나선과 xy평면, xz평면에 비친 그림자. 끌어서 돌려 볼 수 있다"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>용수철, 나사의 홈, DNA 이중 나선은 모두 같은 종류의 곡선입니다. 평면곡선처럼 하나의 매개변수로 공간의 곡선도 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>원 \(x = a\cos t\), \(y = a\sin t\)는 점이 각 \(t\)만큼 돈 위치입니다.</li>
+            <li><span class="tag">설명</span>공간곡선은 \(\vec{r}(t) = (x(t), y(t), z(t))\)처럼 세 좌표를 하나의 매개변수의 함수로 나타냅니다. <em>원기둥 나선</em>은 \(\vec{r}(t) = (a\cos t, a\sin t, bt)\)로, 위에서 보면 반지름 \(a\)인 원(xy평면의 그림자)이고, 옆에서 보면 코사인 곡선(xz평면의 그림자)이며, 한 바퀴(\(t\)가 \(2\pi\) 늘 때)마다 \(2\pi b\)씩 올라갑니다. \(b < 0\)이면 반대 방향으로 감깁니다.</li>
+            <li><span class="tag">연결</span>한 바퀴에 올라가는 높이 \(2\pi b\)를 나사에서는 "리드"라 부릅니다. DNA의 이중 나선은 한 바퀴에 약 3.4 nm 올라가는 두 나선이 엇갈려 감긴 구조입니다.</li>
+            <li><span class="tag">적용</span>그림을 끌어 돌리며 나선을 위와 옆에서 보세요. \(b\)를 0으로 하면 무엇이 되나요? 음수로 하면 감기는 방향이 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>공간곡선을 평면 그림 하나로만 보면 앞뒤가 헷갈립니다. 여러 방향의 그림자(투영)를 함께 보거나 돌려 보아야 모양을 바르게 알 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">나선 \(\vec{r}(t) = (2\cos t, 2\sin t, 3t)\)이 한 바퀴 돌 때 올라가는 높이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(6\pi\)<span class="why"><b>맞습니다.</b> \(t\)가 \(2\pi\) 늘면 \(z\)가 \(3 \times 2\pi\) 늡니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(3\)<span class="why"><b>\(t\)가 1 늘 때의 높이입니다.</b> 한 바퀴는 \(2\pi\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(4\pi\)<span class="why"><b>둘레의 길이입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(2\pi\)<span class="why"><b>\(b = 1\)일 때입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-4.html#card-adgeo-vel-acc"><small class="mono">고급 기하 2.4</small>나선을 따라 움직이는 점의 가속도는 어느 쪽을 향할까?</a><a href="../../c/adgeo/2-4.html#card-adgeo-drone"><small class="mono">고급 기하 2.4</small>8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-curve-match">
+        <header class="card-head">
+          <span class="no">2.3.2</span><h2>식만 보고 공간곡선의 모양을 알아볼 수 있을까?</h2><span class="kind">공간곡선 읽기 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">식을 하나 고른 뒤, 그 식이 나타내는 곡선 그림을 누르세요. 그림은 끌어서 돌려 볼 수 있습니다.</p>
+            <div class="eqs" role="group" aria-label="곡선의 식"></div>
+            <div class="grid" aria-label="곡선 그림 넷"></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\vec{r}(t) = (\cos t, \sin t, \cos 2t)\)처럼 세 좌표가 모두 바뀌는 곡선은 머릿속에 그리기 어렵습니다. 식에서 어떤 단서를 읽으면 모양을 짐작할 수 있을까요?</li>
+            <li><span class="tag">복원</span>\(\cos^2t + \sin^2t = 1\)이면 그 점은 원기둥 \(x^2 + y^2 = 1\) 위에 있습니다.</li>
+            <li><span class="tag">설명</span>공간곡선을 읽는 요령은 ① 좌표 사이의 관계식을 찾아 곡선이 놓인 <b>곡면</b>을 알아내고(\(x^2 + y^2 = 1\)이면 원기둥 위, \(z = x^2 + y^2\)이면 포물면 위), ② 한 좌표가 \(t\)에 따라 계속 늘어나는지(위로 감겨 올라감) 되돌아오는지(닫힌 곡선) 보고, ③ 두 좌표만 뽑은 그림자를 떠올리는 것입니다. 예를 들어 \((t\cos t, t\sin t, t)\)는 \(z = \sqrt{x^2 + y^2}\), 곧 원뿔 위를 감아 오르는 나선입니다.</li>
+            <li><span class="tag">연결</span>입자의 운동 궤적, 롤러코스터의 궤도, 로봇 팔 끝의 경로를 설계할 때 이렇게 공간곡선을 식으로 다룹니다. 다음 절에서는 이 식을 미분해 속도와 가속도를 구합니다.</li>
+            <li><span class="tag">적용</span>네 식을 모두 짝지어 보세요. 틀리면 무엇을 단서로 쓸 수 있었을지 생각해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>한 방향에서 본 그림만으로 판단하면 틀리기 쉽습니다. \((\cos t, \sin t, \cos 2t)\)은 위에서 보면 원이지만 옆에서 보면 위아래로 출렁이는 닫힌 곡선(감자칩 가장자리)입니다. 돌려 보세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">곡선 \(\vec{r}(t) = (t, t^2, t^3)\)을 \(xy\)평면에 정사영한 그림자는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>포물선 \(y = x^2\)<span class="why"><b>맞습니다.</b> \(z\)를 버리면 \((t, t^2)\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>삼차곡선 \(y = x^3\)<span class="why"><b>\(xz\)평면의 그림자입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>원<span class="why"><b>삼각함수가 없습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>직선<span class="why"><b>\(y = x^2\)은 직선이 아닙니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-4.html#card-adgeo-vel-acc"><small class="mono">고급 기하 2.4</small>나선을 따라 움직이는 점의 가속도는 어느 쪽을 향할까?</a><a href="../../c/adgeo/2-4.html#card-adgeo-drone"><small class="mono">고급 기하 2.4</small>8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/helix.js"></script>
+<script src="../../js/cards/adgeo/curve-match.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-seq-far");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sk = $(".k");
   const SUP = ["⁰", "¹", "²", "³", "⁴", "⁵", "⁶"];
@@ -54,7 +54,7 @@
     root.querySelectorAll(".guess .chip").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.g === guess)));
     draw();
   }
-  S.chips(root, ".presets .chip", (b) => { key = b.dataset.k; guess = null; shown = false; sk.value = "1"; update(); });
+  S.chips(root, ".presets:not(.guess) .chip", (b) => { key = b.dataset.k; guess = null; shown = false; sk.value = "1"; update(); });
   root.querySelectorAll(".guess .chip").forEach((b) => b.addEventListener("click", () => { guess = b.dataset.g; update(); }));
   $(".go-reveal").addEventListener("click", () => { shown = true; update(); });
   sk.addEventListener("input", update);

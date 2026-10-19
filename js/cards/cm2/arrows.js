@@ -18,7 +18,7 @@ window.NMMap = (() => {
       ctx.clearRect(0, 0, size.w, size.h);
       const R = M.r();
       M.cols.forEach((col, c) => {
-        const n = col.items.length, hh = (n - 1) * M.gap(c) / 2 + R + 9, rx = R * 2.3;
+        const n = col.items.length, hh = Math.max(0, n - 1) * M.gap(c) / 2 + R + 9, rx = R * 2.3;
         ctx.strokeStyle = C.ink3; ctx.lineWidth = 1.2;
         ctx.beginPath(); ctx.ellipse(M.cx(c), M.mid(), rx, hh, 0, 0, Math.PI * 2); ctx.stroke();
         ctx.fillStyle = C.ink2; ctx.font = `italic 600 15px ${F.serif}`; ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";

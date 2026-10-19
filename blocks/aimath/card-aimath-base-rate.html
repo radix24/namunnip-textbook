@@ -1,0 +1,59 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/aimath/base-rate.js"
+  ],
+  "short": "정확도 99% 진단 인공지능이 '양성'이라 할 때"
+}
+-->
+<style>
+#card-aimath-base-rate .dots { display: grid; grid-template-columns: repeat(50, 1fr); gap: 1px; max-width: 520px; margin: .4rem 0; }
+#card-aimath-base-rate .dots i { display: block; aspect-ratio: 1; border-radius: 50%; background: rgba(141,141,146,.25); }
+#card-aimath-base-rate .dots i.tp { background: #b5532f; }
+#card-aimath-base-rate .dots i.fp { background: #e0a02a; }
+#card-aimath-base-rate .dots i.fn { background: #7b5ea7; }
+#card-aimath-base-rate .ctl-row > div { min-width: 12rem; }
+#card-aimath-base-rate .legend span { display: inline-block; margin-right: .8rem; font-size: .82rem; }
+#card-aimath-base-rate .legend b { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin-right: .25rem; vertical-align: -1px; }
+</style>
+<article class="card" id="card-aimath-base-rate">
+  <header class="card-head">
+    <span class="no"></span><h2>정확도 99%인 진단 인공지능이 "양성"이라고 하면 정말 병이 있을 확률은?</h2><span class="kind">기저율과 확률의 해석 · 예측→확인</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <p class="small">어떤 병을 찾는 가상의 진단 인공지능: 병이 있는 사람의 99%를 양성으로, 병이 없는 사람의 95%를 음성으로 맞힙니다. 이 병은 1000명 중 10명(1%)에게 있습니다.</p>
+      <p class="small"><b>예측</b>: 양성이 나온 사람이 실제로 병이 있을 확률은?</p>
+      <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="99">약 99%</button><button class="chip" type="button" data-g="95">약 95%</button><button class="chip" type="button" data-g="50">약 50%</button><button class="chip" type="button" data-g="17">20%도 안 됨</button></div>
+      <p class="verdict" role="status"></p>
+      <div class="after" hidden>
+        <div class="ctl-row">
+          <div><label class="mono">병이 있는 비율 = <output class="p-out"></output>%</label><input class="p" type="range" min="0.5" max="30" step="0.5" value="1" aria-label="병이 있는 비율"></div>
+          <div><label class="mono">병 없는 사람을 음성으로 맞힘 = <output class="s-out"></output>%</label><input class="s" type="range" min="80" max="99.9" step="0.1" value="95" aria-label="특이도"></div>
+        </div>
+        <div class="legend"><span><b style="background:#b5532f"></b>병 있음·양성</span><span><b style="background:#e0a02a"></b>병 없음·양성</span><span><b style="background:#7b5ea7"></b>병 있음·음성</span></div>
+        <div class="dots" aria-label="1000명을 점으로 나타낸 그림"></div>
+        <p class="mono small say"></p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>"정확도 99%"인 인공지능이 양성이라고 하면 병이 있을 확률도 99%일까요?</li>
+      <li><span class="tag">복원</span>확률은 전체 가운데 그 일이 일어나는 경우의 비율입니다. 무엇을 '전체'로 삼느냐에 따라 같은 사건의 확률도 달라집니다.</li>
+      <li><span class="tag">설명</span>1000명으로 생각하면 병이 있는 10명 중 약 10명이 양성이고, 병이 없는 990명 중 5%인 약 50명도 양성입니다. 이제 '양성이 나온 사람'을 전체로 삼으면, 양성 약 60명 중 실제 환자는 10명이므로 병이 있을 확률은 \(\frac{10}{60} \approx 17\%\)입니다. 병이 드물면(<em>기저율</em>이 낮으면) 정확한 검사라도 양성 중 대부분이 잘못된 양성일 수 있습니다.</li>
+      <li><span class="tag">연결</span>인공지능의 성능은 정확도 하나가 아니라 "병이 있을 때 맞히는 비율(민감도)"과 "병이 없을 때 맞히는 비율(특이도)"로 함께 봐야 합니다. 스팸 필터(2단원)도 같은 계산입니다. 확률과 통계 과목에서는 이 계산을 조건부확률과 베이즈 정리로 정리합니다.</li>
+      <li><span class="tag">적용</span>예측한 뒤, 병이 있는 비율과 특이도를 바꿔 보세요. 양성의 신뢰도를 높이려면 어느 쪽을 바꾸는 것이 효과가 큰가요?</li>
+      <li class="warn"><span class="tag">판단</span>"병이 있는 사람 가운데 양성인 비율"과 "양성인 사람 가운데 병이 있는 비율"은 다릅니다. 이 둘을 바꿔 읽는 실수가 의료, 재판, 보안 검색에서 잘못된 판단을 낳습니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">병이 있는 비율이 10%라면(다른 조건은 같음) 양성일 때 병이 있을 확률은 대략?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 69%<span class="why"><b>맞습니다.</b> 1000명 중 환자 100명 → 양성 99명, 비환자 900명 → 양성 45명. \(\frac{99}{144} \approx 0.69\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 17%<span class="why"><b>기저율이 1%일 때의 값입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>99%<span class="why"><b>"병이 있는 사람 가운데 양성인 비율"과 바꿔 읽었습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>10%<span class="why"><b>검사 전 확률(기저율)입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

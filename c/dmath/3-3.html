@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>부울 함수와 간소화 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="부울 함수와 연산(곱·합·보수), 참값표, 최소항의 합, 부울 대수의 법칙과 카르노 맵을 이용한 간소화. 규칙을 참값표와 식으로 바꾸는 카드와, 카르노 맵에서 묶음을 찾아 식을 줄이는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-truth-table table.tt { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; margin: .4rem 0; }
+    #card-dmath-truth-table table.tt td, #card-dmath-truth-table table.tt th { padding: .15rem .7rem; border-bottom: 1px solid var(--rule); text-align: center; }
+    #card-dmath-truth-table table.tt button { width: 2.2rem; height: 1.7rem; border: 1px solid var(--rule); border-radius: 5px; background: var(--card); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+    #card-dmath-truth-table table.tt button.one { background: var(--forest); color: var(--on-accent); border-color: var(--forest); }
+    #card-dmath-truth-table table.tt tr.bad td { background: var(--warn-bg); }
+    #card-dmath-truth-table .task { font-weight: 600; }
+    #card-dmath-karnaugh table.km { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; margin: .5rem 0; }
+    #card-dmath-karnaugh table.km th { padding: .2rem .5rem; font-size: .8rem; color: var(--ink-2); }
+    #card-dmath-karnaugh table.km td { padding: 0; border: 1px solid var(--rule); }
+    #card-dmath-karnaugh table.km button { width: 3.2rem; height: 3rem; border: 0; background: var(--card); color: var(--ink); font: inherit; font-weight: 700; font-size: 1.1rem; cursor: pointer; position: relative; }
+    #card-dmath-karnaugh table.km button.one { background: var(--right-bg); }
+    #card-dmath-karnaugh table.km button .dots { position: absolute; left: 3px; bottom: 2px; display: flex; gap: 2px; }
+    #card-dmath-karnaugh table.km button .dots i { width: 7px; height: 7px; border-radius: 50%; display: block; }
+    #card-dmath-karnaugh .groups { display: flex; flex-wrap: wrap; gap: .3rem; }
+    #card-dmath-karnaugh .groups span { font-family: "IBM Plex Mono", ui-monospace, monospace; padding: .15rem .5rem; border-radius: 6px; color: #fff; font-weight: 700; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="3-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>부울 함수와 간소화</h1>
+    <p class="lead">0과 1만 가지는 변수로 이루어진 <em>부울 함수</em>는 논리를 계산으로 바꿉니다. 어떤 규칙이든 참값표를 만들면 AND, OR, NOT으로 된 식을 얻을 수 있지만, 그 식은 길어지기 쉽습니다. 이 절에서는 말로 된 규칙을 참값표와 식으로 옮기고, 카르노 맵에서 이웃한 1을 묶어 식을 간단히 만들어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm2/2-4.html#card-cm2-prop-truthset" title="공통수학2 2.4 · &#x27;p이면 q이다&#x27;가 참인지 집합으로 어떻게 판단할까?">명제와 조건</a><a class="p p-card" href="../../c/dmath/3-2.html#card-dmath-binary-add" title="이산 수학 3.2 · 이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?">이진수의 사칙연산</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-truth-table"><span class="mono">3.3.1</span>말로 된 규칙을 참값표와 식으로</a></li>
+        <li><a href="#card-dmath-karnaugh"><span class="mono">3.3.2</span>카르노 맵으로 묶어 식 줄이기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-3-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-truth-table">
+        <header class="card-head">
+          <span class="no">3.3.1</span><h2>"셋 중 둘 이상이 찬성하면 통과"를 식으로 쓸 수 있을까?</h2><span class="kind">부울 함수와 참값표 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">과제 <select class="pick" aria-label="과제 고르기"></select></label></div>
+            <p class="task"></p>
+            <table class="tt" aria-label="참값표. 출력 칸을 눌러 0과 1을 바꾼다"></table>
+            <div class="presets"><button class="chip go-check" type="button">확인</button></div>
+            <p class="verdict" role="status"></p>
+            <p class="mono small expr"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>세 심사위원 A, B, C가 각각 찬성(1) 또는 반대(0)를 누르면, 둘 이상 찬성할 때 불이 켜지는 장치를 만들려고 합니다. 이 규칙을 기계가 이해하는 식으로 어떻게 쓸까요?</li>
+            <li><span class="tag">복원</span>명제 \(p \wedge q\)(그리고)는 둘 다 참일 때만 참, \(p \vee q\)(또는)는 하나라도 참이면 참, \(\sim p\)는 참과 거짓을 바꿉니다.</li>
+            <li><span class="tag">설명</span>0과 1만 가지는 변수로 이루어진 함수를 <em>부울 함수</em>라 하고, 곱(AND) \(AB\), 합(OR) \(A + B\), 보수(NOT) \(A'\)로 나타냅니다. 모든 입력에 대한 출력을 적은 표가 <em>참값표</em>입니다. 참값표에서 출력이 1인 줄마다 "그 입력일 때만 1"인 곱(최소항, 예: \(ABC'\))을 만들어 모두 더하면 함수를 나타내는 식이 됩니다. 그래서 어떤 규칙이든 AND, OR, NOT만으로 쓸 수 있습니다.</li>
+            <li><span class="tag">연결</span>이렇게 얻은 식은 길어지기 쉬워서 다음 카드에서 간단히 만들고, 4절에서 실제 논리 회로로 바꿉니다. 부울 대수는 1854년 조지 불이 논리를 계산으로 다루려고 만들었습니다.</li>
+            <li><span class="tag">적용</span>과제마다 출력 칸을 채우고 확인하세요. 맞으면 참값표에서 얻은 식(최소항의 합)과 간단히 한 식이 나타납니다. 다수결 함수의 최소항은 몇 개인가요?</li>
+            <li class="warn"><span class="tag">판단</span>부울 대수의 \(1 + 1\)은 1입니다(또는). 이진수 덧셈의 \(1 + 1 = 10_{(2)}\)과 기호가 같지만 다른 연산입니다. 무엇을 계산하는지 늘 확인하세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">참값표에서 출력이 1인 입력이 \((A, B) = (0, 1)\), \((1, 0)\)뿐인 함수의 식은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(A'B + AB'\)<span class="why"><b>맞습니다.</b> 두 최소항의 합으로, 배타적 논리합(XOR)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(A + B\)<span class="why"><b>\((1, 1)\)에서도 1이 됩니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(AB + A'B'\)<span class="why"><b>반대로 같을 때 1인 함수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(A'B'\)<span class="why"><b>\((0, 0)\)에서만 1입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/3-2.html#card-dmath-binary-add"><small class="mono">이산 수학 3.2</small>이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?</a><a href="../../c/dmath/3-2.html#card-dmath-twos-comp"><small class="mono">이산 수학 3.2</small>8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?</a><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-4.html#card-dmath-gate-lab"><small class="mono">이산 수학 3.4</small>스위치와 게이트로 규칙을 회로로 만들 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-adder"><small class="mono">이산 수학 3.4</small>게이트만으로 덧셈하는 기계를 만들 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-karnaugh">
+        <header class="card-head">
+          <span class="no">3.3.2</span><h2>긴 부울 식을 그림으로 묶어 줄일 수 있을까?</h2><span class="kind">부울 함수의 간소화 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <label class="mono">변수 <select class="pn" aria-label="변수 개수"><option value="3">3개 (A, B, C)</option><option value="4" selected>4개 (A, B, C, D)</option></select></label>
+              <label class="mono">예 <select class="ex" aria-label="예시 함수"><option value="">직접 만들기</option><option value="a" selected>예 1</option><option value="b">예 2</option><option value="c">예 3</option></select></label>
+            </div>
+            <p class="small">칸을 누르면 그 입력의 출력이 0과 1로 바뀝니다. 칸 아래의 색 점은 그 칸을 덮는 묶음입니다.</p>
+            <table class="km" aria-label="카르노 맵"></table>
+            <div class="groups" aria-label="찾은 묶음"></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>참값표에서 최소항을 모두 더하면 식이 길어집니다. 예를 들어 \(A'BC'D + A'BCD + ABC'D + ABCD\)는 사실 \(BD\) 하나와 같습니다. 이런 줄임을 눈으로 빨리 찾는 방법이 있을까요?</li>
+            <li><span class="tag">복원</span>부울 대수에서 \(X + X' = 1\)이므로 \(ABC + ABC' = AB(C + C') = AB\)입니다. 한 변수만 다른 두 항은 그 변수를 지우고 하나로 합칠 수 있습니다.</li>
+            <li><span class="tag">설명</span><em>카르노 맵</em>은 참값표를 이웃한 칸끼리 한 변수만 다르도록(00, 01, 11, 10 순서) 배열한 표입니다. 그래서 이웃한 1을 2개, 4개, 8개처럼 2의 거듭제곱 개의 직사각형으로 묶으면 그 안에서 바뀌는 변수가 지워집니다. 표의 양 끝도 이웃합니다(위아래, 좌우가 이어짐). 1을 모두 덮되 묶음은 되도록 크게, 개수는 되도록 적게 하면 간단한 식이 됩니다.</li>
+            <li><span class="tag">연결</span>식이 간단하면 4절의 논리 회로에서 게이트 수가 줄어 회로가 싸고 빨라집니다. 변수가 많아지면 컴퓨터가 같은 원리(콰인-매클러스키 방법 등)로 간소화합니다.</li>
+            <li><span class="tag">적용</span>예 1~3을 불러 묶음이 어떻게 생기는지 보세요. 네 귀퉁이 칸만 1로 하면 어떤 식이 되나요? 직접 1을 놓으며, 처음 식(최소항의 합)과 간단한 식의 글자 수를 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>묶음은 반드시 1, 2, 4, 8개의 직사각형이어야 합니다. 3개나 ㄱ자 모양은 묶을 수 없습니다. 또 간단한 식이 하나뿐이 아닌 경우도 있어, 같은 글자 수의 다른 답이 있을 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(AB'C + AB'C' + ABC + ABC'\)를 간단히 하면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(A\)<span class="why"><b>맞습니다.</b> \(A = 1\)인 네 칸이 모두 1이라 B, C가 지워집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(AB + AB'\)<span class="why"><b>한 번 더 줄일 수 있습니다.</b> \(B + B' = 1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(AC\)<span class="why"><b>\(C' \)가 있는 항을 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(1\)<span class="why"><b>\(A = 0\)이면 0입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/3-2.html#card-dmath-binary-add"><small class="mono">이산 수학 3.2</small>이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?</a><a href="../../c/dmath/3-2.html#card-dmath-twos-comp"><small class="mono">이산 수학 3.2</small>8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?</a><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-4.html#card-dmath-gate-lab"><small class="mono">이산 수학 3.4</small>스위치와 게이트로 규칙을 회로로 만들 수 있을까?</a><a href="../../c/dmath/3-4.html#card-dmath-adder"><small class="mono">이산 수학 3.4</small>게이트만으로 덧셈하는 기계를 만들 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/bool.js"></script>
+<script src="../../js/cards/dmath/truth-table.js"></script>
+<script src="../../js/cards/dmath/karnaugh.js"></script>
+</body>
+</html>

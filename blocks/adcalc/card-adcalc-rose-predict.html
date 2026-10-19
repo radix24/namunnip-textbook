@@ -1,0 +1,65 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/adc.js",
+    "js/cards/adcalc/rose-predict.js"
+  ],
+  "short": "장미 곡선의 꽃잎 수 맞히기"
+}
+-->
+<style>
+#card-adcalc-rose-predict canvas { aspect-ratio: 1 / 1; max-width: 340px; margin: 0 auto; display: block; }
+</style>
+<article class="card" id="card-adcalc-rose-predict">
+  <header class="card-head">
+    <span class="no"></span><h2>\(r = \cos k\theta\)의 꽃잎은 몇 장일까?</h2><span class="kind">장미 곡선 · 예측 → 확인 · 도전</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="장미 곡선 r = cos kθ를 그리는 그림. 예측을 고른 뒤 그리기를 누르면 θ가 0부터 커지며 꽃잎이 하나씩 그려진다"></canvas>
+      <div class="ctl">
+        <div class="presets ks">
+          <button class="chip" type="button" data-k="2" aria-pressed="true">\(k = 2\)</button>
+          <button class="chip" type="button" data-k="3">\(k = 3\)</button>
+          <button class="chip" type="button" data-k="4">\(k = 4\)</button>
+          <button class="chip" type="button" data-k="5">\(k = 5\)</button>
+          <button class="chip" type="button" data-k="6">\(k = 6\)</button>
+          <button class="chip" type="button" data-k="7">\(k = 7\)</button>
+        </div>
+        <div class="ctl-row">
+          <div><label class="mono">예측: 꽃잎 <output class="g-out">4</output>장</label>
+          <input class="sg" type="range" min="1" max="16" step="1" value="4" aria-label="예측한 꽃잎 수"></div>
+          <div><label class="mono">예측: 다 그리는 데 θ = <output class="p-out">2π</output></label>
+          <input class="sp" type="range" min="0" max="2" step="1" value="2" aria-label="다 그리는 데 필요한 θ의 범위"></div>
+        </div>
+        <div class="presets"><button class="chip go-draw" type="button">그려서 확인</button></div>
+        <p class="verdict" role="status"></p>
+        <dl class="nums">
+          <div><dt>지금 \(\theta\)</dt><dd class="n-t">—</dd></div>
+          <div><dt>그려진 꽃잎</dt><dd class="n-p">—</dd></div>
+          <div><dt>맞힌 문제</dt><dd class="n-s">0</dd></div>
+        </dl>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>\(r = \cos 2\theta\)는 꽃잎이 4장, \(r = \cos 3\theta\)는 3장입니다. \(k\)가 커질수록 꽃잎이 많아지는데, \(k\)장이 아니라 \(2k\)장일 때가 있습니다. 어떤 규칙일까요?</li>
+      <li><span class="tag">복원</span>\(\cos k\theta\)의 주기는 \(\frac{2\pi}{k}\)입니다. \((r, \theta)\)와 \((-r, \theta + \pi)\)는 같은 점입니다.</li>
+      <li><span class="tag">설명</span>\(|\cos k\theta|\)가 0에서 1로 올랐다 0으로 내려오는 한 번(길이 \(\frac{\pi}{k}\))이 꽃잎 하나를 그립니다. \(0 \le \theta &lt; 2\pi\)에서 이런 구간은 \(2k\)개입니다. 그런데 \(\cos k(\theta + \pi) = \cos(k\theta + k\pi)\)이므로 <b>\(k\)가 홀수</b>이면 \(r\)의 부호만 바뀌어, \(\theta + \pi\)일 때 \((-r, \theta + \pi)\), 곧 \(\theta\)일 때와 같은 점을 다시 그립니다. 그래서 \(k\)가 홀수이면 꽃잎 \(k\)장을 \(0 \le \theta \le \pi\)에서 다 그리고 나머지는 덧그립니다. \(k\)가 짝수이면 \(2k\)장이 모두 다른 곳에 생기고 \(2\pi\)까지 돌아야 다 그려집니다.</li>
+      <li><span class="tag">연결</span>이렇게 "같은 점을 여러 이름으로 부를 수 있다"는 극좌표의 성질이 그래프의 모양을 정합니다. 두 극곡선의 교점을 구할 때도 이 성질 때문에 식을 풀어서 나오지 않는 교점이 생깁니다.</li>
+      <li><span class="tag">적용</span>\(k\)를 고르고 꽃잎 수와 필요한 \(\theta\)의 범위를 예측한 뒤 그려서 확인하세요. 여섯 문제를 모두 맞히면 규칙을 찾은 것입니다. 홀수일 때 \(\pi\)를 넘어서 그리는 동안 곡선은 어떻게 움직이나요?</li>
+      <li class="warn"><span class="tag">판단</span>"\(\theta\)가 \(0\)부터 \(2\pi\)까지 돌면 곡선이 한 번 그려진다"는 생각은 극곡선에서 틀리기 쉽습니다. 홀수 장미는 두 번 그려지고, 나선 \(r = \theta\)는 \(2\pi\)를 넘어서도 계속 새로운 점을 그립니다. 넓이를 구할 때 이 차이를 놓치면 두 배로 셉니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\(r = 2\sin 5\theta\)의 꽃잎 수와 꽃잎 하나의 길이(극에서 끝까지)는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>5장, 2<span class="why"><b>맞습니다.</b> \(k = 5\)가 홀수이므로 \(k\)장이고, \(|r|\)의 최댓값이 2입니다. \(\sin\)이어도 꽃잎 수는 같고 방향만 돌아갑니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>10장, 2<span class="why"><b>짝수일 때의 규칙을 썼습니다.</b> 홀수 \(k\)는 꽃잎이 덧그려집니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>5장, 1<span class="why"><b>계수 2를 빠뜨렸습니다.</b> 꽃잎 길이는 \(|r|\)의 최댓값입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>2장, 5<span class="why"><b>계수와 \(k\)의 역할을 바꾸었습니다.</b> \(k\)가 꽃잎 수를, 앞의 계수가 크기를 정합니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

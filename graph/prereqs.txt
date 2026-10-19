@@ -685,6 +685,7 @@ y = xⁿ의 도함수 | card-calc1-power-rule
 알고리즘 설계 방법 | text-info-project-plan
 알베도 | card-clim-seaice
 알짜힘과 가속도 (a = F/m) | card-phy-video-track
+가속도와 알짜힘 | card-free-fall
 알케인·알켄·알카인 | card-adchem-isomer
 알코올 발효 | card-cell-ferment
 알코올의 산화 | card-labchem-alcohol-ox
@@ -974,7 +975,7 @@ y = xⁿ의 도함수 | card-calc1-power-rule
 전류계·전압계 연결법 | card-phy-circuit-meter
 전류와 전압 | card-phy-circuit-meter
 전류의 자기 작용 | card-phy-oersted
-전류의 자기장과 오른손 법칙 | card-calc1-sum-rule
+전류의 자기장과 오른손 법칙 | card-phy-oersted
 전사 인자와 세포 분화 | card-gene-differentiation
 전사와 번역 | card-is1-dogma
 전사와 유전자 발현 | card-gene-lac
@@ -1503,3 +1504,78 @@ DNA와 유전 정보 | basics/b-l-dna-gene
 훅 법칙 | basics/b-p-hooke-law
 훅 법칙 F = kx | basics/b-p-hooke-law
 앙금 생성 반응 | basics/b-p-precipitation
+역함수의 미분법 | card-calc2-inverse-slope
+몫의 미분법 | card-calc2-quotient
+쌍곡선의 방정식 | card-geo-hyperbola-def
+이차곡선의 접선 | card-geo-tangent-point
+직선과 평면의 위치 관계 | card-geo-line-plane
+삼수선 정리 | card-geo-three-perp
+구의 방정식 | card-geo-sphere-eq
+사잇값 정리 | card-calc1-ivt
+입체도형의 부피 | card-calc2-cross-section
+곡선의 길이 | card-calc2-path-length
+등비급수 | card-calc2-geo-series
+일차독립과 일차종속 | card-adalg-indep-predict
+행렬의 곱셈 | card-cm1-matrix-mult
+가우스 소거법 | card-adalg-row-puzzle
+역행렬 | card-adalg-inverse-elim
+벡터의 외적 | card-pmath-cross
+기저와 좌표 | card-adalg-basis-grid
+행렬식 | card-adalg-det-area
+선형변환과 행렬 | card-adalg-grid-transform
+대칭변환·닮음변환·회전변환 | card-adalg-transform-target
+이차방정식 | card-cm1-discriminant
+정규직교기저 | card-adalg-gram-schmidt
+고윳값과 고유벡터 | card-adalg-eigen-hunt
+행렬의 대각화 | card-adalg-diag-grid
+직교행렬과 직교대각화 | card-adalg-symmetric-ellipse
+순열 | card-cm1-perm-slots
+조합 | card-cm1-comb-group
+여사건의 확률 | card-stat-add-rule
+중복조합 | card-dmath-stars-bars
+포함배제의 원리 | card-dmath-venn-count
+점화 관계 | card-dmath-hanoi
+최대공약수 | card-dmath-euclid-flow
+알고리즘과 순서도 | card-dmath-euclid-flow
+재귀적 알고리즘 | card-dmath-call-tree
+명제와 조건 | card-cm2-prop-truthset
+나눗셈의 몫과 나머지 | card-dmath-base-convert
+진법 | card-dmath-base-convert
+이진수의 사칙연산 | card-dmath-binary-add
+부울 함수와 간소화 | card-dmath-karnaugh
+집합 | card-cm2-set-ops
+그래프와 실생활 문제 | card-dmath-konigsberg
+꼭짓점의 차수와 변의 개수 | card-dmath-handshake
+평면그래프 | card-dmath-untangle
+기초적인 작도 | card-adgeo-construct-replay
+여러 가지 작도 | card-adgeo-center-construct
+삼각함수의 그래프 | card-alg-trig-graph
+매개변수로 나타낸 함수 | card-calc2-param-tangent
+평면곡선의 매개변수 방정식 | card-adgeo-cycloid
+공간곡선의 매개변수 방정식 | card-adgeo-helix
+평면 운동의 속도와 가속도 | card-calc2-distance-area
+공간에서의 속도와 가속도 | card-adgeo-vel-acc
+정칙곡선과 곡선의 길이 | card-adgeo-arc-length
+단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param
+단위속력곡선으로 재매개화 | card-adgeo-reparam
+역함수의 미분 | card-calc2-inverse-slope
+사인법칙 | card-alg-sine-law
+지수함수 | card-alg-exp-func-def
+함수의 증가와 감소 | card-calc1-incdec
+부등식의 영역 | card-econ-lp-production
+표본추출 | card-stat-random-sample
+집합의 연산 | card-cm2-set-ops
+벡터의 내적 | card-geo-dot-angle
+행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add
+큰 수 읽기 | basics/b-l-big-numbers
+단위의 접두어 | basics/b-l-unit-prefix
+합동 | basics/b-m-congruence
+원주율 | basics/b-m-pi
+산술평균과 기하평균 | card-cm2-amgm
+모비율의 추정 | card-stat-ci-prop
+\(\sum\) 기호 | card-stat-binom-expand
+복리와 원리합계 | card-econ-compound
+현재 가치 | card-econ-present-value
+미분계수와 한계비용 | card-econ-marginal-cost
+증가·감소와 극대·극소 | card-econ-revenue-shape
+같은 것이 있는 순열과 최단 경로 | card-dmath-grid-path

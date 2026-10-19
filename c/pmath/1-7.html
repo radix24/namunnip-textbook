@@ -1,0 +1,218 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>여러 가지 적분법 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="치환적분, 부분적분, 부분분수, 삼각치환으로 여러 가지 함수의 부정적분과 정적분을 구한다. 적분 방법 고르기 도전, 삼각치환을 원의 넓이로 읽기, 부분분수를 그래프로 맞추는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-int-choose .ic-q { margin: 6px 0 10px; padding: 18px 14px; text-align: center; font-size: 20px; background: var(--paper-2); border: 1px solid var(--rule); }
+    #card-pmath-int-choose .ic-q .katex { font-size: 1.15em; }
+    #card-pmath-int-choose .ic-head { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-3); }
+    #card-pmath-int-choose .ic-opts .chip.ok { background: var(--forest); border-color: var(--forest); color: var(--on-accent); }
+    #card-pmath-int-choose .ic-opts .chip.no { border-color: var(--warn); color: var(--warn); }
+    #card-pmath-int-choose .ic-step { margin-top: 8px; font-size: 13.5px; line-height: 1.7; }
+    #card-pmath-int-choose .ic-step:empty { display: none; }
+    #card-pmath-partial-frac canvas { aspect-ratio: 16 / 10; }
+    #card-pmath-trig-sub canvas { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body data-course="pmath" data-sec="1-7">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>여러 가지 적분법</h1>
+    <p class="lead">적분은 미분과 달리 정해진 순서대로 계산하면 끝나는 일이 아닙니다. 식의 모양을 보고 어떤 방법을 쓸지 먼저 골라야 합니다. 이 절에서는 여러 적분을 보고 방법을 고르는 도전을 하고, \(x = \sin\theta\)로 바꾸는 삼각치환이 원의 넓이를 구하는 일과 같다는 것을 그림으로 확인하고, 분수식을 간단한 분수의 합으로 쪼개는 부분분수를 그래프로 맞춰 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/3-2.html#card-calc2-substitution" title="미적분Ⅱ 3.2 · 속함수를 u로 바꾸면 넓이는 어디로 옮겨 갈까?">치환적분법</a><a class="p p-card" href="../../c/calc2/3-3.html#card-calc2-parts-choice" title="미적분Ⅱ 3.3 · 어느 쪽을 미분하고 어느 쪽을 적분해야 할까?">부분적분법</a><a class="p p-card" href="../../c/calc1/3-4.html#card-calc1-ftc-eval" title="미적분Ⅰ 3.4 · 넓이를 재지 않고 정적분을 구할 수 있을까?">정적분 F(b) − F(a)</a><a class="p p-card" href="../../c/alg/2-1.html#card-alg-radian" title="대수 2.1 · 각의 크기를 길이의 비로 잴 수 있을까?">호도법과 부채꼴의 넓이</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-int-choose"><span class="mono">1.7.1</span>적분 방법 고르기 도전</a></li>
+        <li><a href="#card-pmath-partial-frac"><span class="mono">1.7.2</span>부분분수를 그래프로 맞추기</a></li>
+        <li><a href="#card-pmath-trig-sub"><span class="mono">1.7.3</span>삼각치환과 원의 넓이</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pmath-1-7"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-1-7">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-int-choose">
+        <header class="card-head">
+          <span class="no">1.7.1</span><h2>이 적분은 어떤 방법으로 풀어야 할까?</h2><span class="kind">여러 가지 적분법 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="ic-head mono"><span class="ic-no">1 / 8</span><span class="ic-score">점수 0</span></p>
+            <div class="ic-q" aria-live="polite">—</div>
+            <div class="presets ic-opts">
+              <button class="chip" type="button" data-m="sub">치환적분</button>
+              <button class="chip" type="button" data-m="parts">부분적분</button>
+              <button class="chip" type="button" data-m="pf">부분분수</button>
+              <button class="chip" type="button" data-m="trig">삼각치환</button>
+              <button class="chip" type="button" data-m="basic">공식 그대로</button>
+            </div>
+            <p class="verdict" role="status"></p>
+            <div class="ic-step"></div>
+            <div class="presets"><button class="chip go-next" type="button" disabled>다음 문제</button><button class="chip go-again" type="button">처음부터</button></div>
+            <p class="fig-note">처음 고른 답으로 점수를 매깁니다. 방법이 둘 이상 통하는 문제는 가장 짧은 길을 정답으로 하고, 다른 길도 설명에 적었습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>미분은 규칙만 따르면 어떤 식이든 계산이 끝납니다. 그런데 적분은 같은 모양처럼 보이는 \(\int x e^{x^2}dx\)와 \(\int x e^x dx\)도 푸는 방법이 전혀 다릅니다. 무엇을 보고 방법을 고를까요?</li>
+            <li><span class="tag">복원</span>치환적분은 합성함수의 미분법을, 부분적분은 곱의 미분법을 거꾸로 쓴 것입니다. 분수식은 간단한 분수의 합으로 쪼갤 수 있고, \(\sqrt{a^2 - x^2}\)은 \(x = a\sin\theta\)로 바꾸면 근호가 사라집니다.</li>
+            <li><span class="tag">설명</span>식에서 먼저 찾을 신호는 네 가지입니다. ① <b>어떤 식과 그 도함수가 함께 있다</b> → 치환적분 (\(x e^{x^2}\)에서 \(x^2\)과 \(2x\)). ② <b>성격이 다른 두 함수의 곱이다</b> → 부분적분 (\(x e^x\), \(\ln x = 1 \cdot \ln x\)). ③ <b>분모가 인수분해되는 분수식이다</b> → 부분분수. ④ <b>\(\sqrt{a^2 - x^2}\)이 있다</b> → 삼각치환. 어느 신호도 없고 표의 꼴과 같으면 공식을 그대로 씁니다.</li>
+            <li><span class="tag">연결</span>방법을 고른 뒤에도 미분해서 원래 식이 나오는지 확인하는 습관이 중요합니다. 적분은 거꾸로 가는 계산이라 실수를 확인할 방법이 미분뿐입니다.</li>
+            <li><span class="tag">적용</span>여덟 문제에서 신호를 찾아 방법을 고르세요. 틀린 문제는 설명을 읽고 어떤 신호를 놓쳤는지 확인하세요. 문제 7은 분자가 분모의 도함수라는 신호가 숨어 있습니다.</li>
+            <li class="warn"><span class="tag">판단</span>신호가 둘 이상인 식도 있습니다. \(\int\frac{2x + 3}{x^2 + 3x + 2}dx\)는 부분분수로도 풀리지만 치환이 훨씬 짧습니다. 또 \(e^{x^2}\)처럼 어떤 방법으로도 기본 함수로 적분할 수 없는 식이 있다는 것도 알아 두어야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\int x^2 \ln x\,dx\)를 부분적분으로 풀 때, 미분할 쪽으로 고르기 좋은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\ln x\)<span class="why"><b>맞습니다.</b> 미분하면 \(\frac{1}{x}\)로 간단해지고, \(x^2\)은 적분해도 \(\frac{x^3}{3}\)으로 어렵지 않습니다. 남는 적분은 \(\int\frac{x^2}{3}dx\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(x^2\)<span class="why"><b>그러면 \(\ln x\)를 적분해야 합니다.</b> \(\int\ln x\,dx\) 자체가 부분적분이 필요한 식이라 더 복잡해집니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>어느 쪽이든 같다<span class="why"><b>답은 같아도 길이가 다릅니다.</b> 미분해서 간단해지는 쪽을 고르는 것이 부분적분의 요령입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>부분적분이 아니라 치환적분을 써야 한다<span class="why"><b>식과 그 도함수가 함께 있지 않습니다.</b> \(x^2\)과 \(\ln x\)는 서로의 도함수가 아닙니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-2.html#card-calc2-substitution"><small class="mono">미적분Ⅱ 3.2</small>속함수를 u로 바꾸면 넓이는 어디로 옮겨 갈까?</a><a href="../../c/calc2/3-2.html#card-calc2-sub-bounds"><small class="mono">미적분Ⅱ 3.2</small>치환할 때 적분 구간도 바꾸어야 할까?</a><a href="../../c/calc2/3-3.html#card-calc2-parts-area"><small class="mono">미적분Ⅱ 3.3</small>넓이 두 조각을 합치면 왜 직사각형이 될까?</a><a href="../../c/calc2/3-3.html#card-calc2-parts-choice"><small class="mono">미적분Ⅱ 3.3</small>어느 쪽을 미분하고 어느 쪽을 적분해야 할까?</a></div></nav>
+
+      <article class="card" id="card-pmath-partial-frac">
+        <header class="card-head">
+          <span class="no">1.7.2</span><h2>복잡한 분수식을 간단한 분수 두 개로 쪼갤 수 있을까?</h2><span class="kind">부분분수 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="회색: 원래 분수함수의 그래프. 색: 두 분수의 합 A/(x − a) + B/(x − b)의 그래프"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-p="0" aria-pressed="true">\(\frac{1}{(x - 1)(x + 1)}\)</button>
+                <button class="chip" type="button" data-p="1">\(\frac{x + 5}{(x - 1)(x + 2)}\)</button>
+                <button class="chip" type="button" data-p="2">\(\frac{3x}{(x - 2)(x + 1)}\)</button>
+              </div>
+              <div class="ctl-row">
+                <div><label class="mono">\(A\) = <output class="A-out">0</output></label>
+                <input class="sA" type="range" min="-3" max="3" step="0.25" value="0" aria-label="첫째 분수의 분자 A"></div>
+                <div><label class="mono">\(B\) = <output class="B-out">0</output></label>
+                <input class="sB" type="range" min="-3" max="3" step="0.25" value="0" aria-label="둘째 분수의 분자 B"></div>
+              </div>
+              <p class="mono small form">—</p>
+              <p class="verdict" role="status"></p>
+              <button class="chip go-hint" type="button">가림 방법으로 바로 구하기</button>
+              <p class="mono small hint"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\int\frac{1}{x^2 - 1}dx\)는 치환도 부분적분도 통하지 않습니다. 하지만 \(\int\frac{1}{x - 1}dx = \ln|x - 1| + C\)는 바로 할 수 있습니다. 복잡한 분수를 이런 간단한 분수의 합으로 바꿀 수 있다면 어떨까요?</li>
+            <li><span class="tag">복원</span>통분은 \(\frac{A}{x - a} + \frac{B}{x - b} = \frac{A(x - b) + B(x - a)}{(x - a)(x - b)}\)입니다. 항등식은 모든 \(x\)에서 성립하므로 아무 값이나 넣어도 됩니다.</li>
+            <li><span class="tag">설명</span>통분을 거꾸로 하는 것이 <em>부분분수 분해</em>입니다. \(\frac{px + q}{(x - a)(x - b)} = \frac{A}{x - a} + \frac{B}{x - b}\)에서 양변에 \((x - a)(x - b)\)를 곱하면 \(px + q = A(x - b) + B(x - a)\)이고, 이것은 항등식이므로 \(x = a\)를 넣으면 \(B\)가 사라져 <b>\(A = \frac{pa + q}{a - b}\)</b>, \(x = b\)를 넣으면 \(B = \frac{pb + q}{b - a}\)입니다. 원래 식에서 \(x - a\)를 손으로 가리고 나머지에 \(x = a\)를 넣는 것과 같아 "가림 방법"이라고도 합니다. 그러면 \(\int\frac{px + q}{(x - a)(x - b)}dx = A\ln|x - a| + B\ln|x - b| + C\)입니다.</li>
+            <li><span class="tag">연결</span>그래프로 보면 원래 함수의 점근선 \(x = a\), \(x = b\) 근처에서의 모양은 각각 \(\frac{A}{x - a}\), \(\frac{B}{x - b}\)가 정합니다. 분해는 "어느 점근선 근처에서 얼마나 세게 튀는가"를 나눠 적은 것입니다. 이 방법은 로지스틱 미분방정식을 풀 때도 다시 쓰입니다.</li>
+            <li><span class="tag">적용</span>\(A\)와 \(B\)를 움직여 색 곡선을 회색 곡선에 정확히 겹쳐 보세요. 먼저 한 점근선 근처만 맞추고 다른 쪽을 맞추면 쉽습니다. 겹친 뒤에는 가림 방법으로 구한 값과 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>이 방법은 분자의 차수가 분모보다 낮을 때만 바로 쓸 수 있습니다. \(\frac{x^2}{x^2 - 1}\)처럼 차수가 같거나 높으면 먼저 나눗셈으로 \(1 + \frac{1}{x^2 - 1}\)처럼 바꾸어야 합니다. 또 분모가 \((x - 1)^2\)처럼 겹치면 \(\frac{A}{x - 1} + \frac{B}{(x - 1)^2}\) 꼴로 둡니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\frac{5}{(x - 3)(x + 2)} = \frac{A}{x - 3} + \frac{B}{x + 2}\)일 때 \(A\)와 \(B\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(A = 1\), \(B = -1\)<span class="why"><b>맞습니다.</b> \(x - 3\)을 가리고 \(x = 3\)을 넣으면 \(\frac{5}{5} = 1\), \(x + 2\)를 가리고 \(x = -2\)를 넣으면 \(\frac{5}{-5} = -1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(A = -1\), \(B = 1\)<span class="why"><b>가린 인수와 넣은 값을 엇갈렸습니다.</b> \(A\)는 \(x - 3\)을 가리고 \(x = 3\)을 넣어 구합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(A = 5\), \(B = 5\)<span class="why"><b>분자를 그대로 나눠 주었습니다.</b> 통분해 보면 \(\frac{5(x + 2) + 5(x - 3)}{\cdots}\)이라 분자가 \(10x - 5\)가 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(A = \frac{5}{2}\), \(B = \frac{5}{2}\)<span class="why"><b>반씩 나누면 될 것이라 짐작했습니다.</b> 통분하면 분자가 \(5x - \frac{5}{2}\)가 되어 맞지 않습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-2.html#card-calc2-substitution"><small class="mono">미적분Ⅱ 3.2</small>속함수를 u로 바꾸면 넓이는 어디로 옮겨 갈까?</a><a href="../../c/calc2/3-2.html#card-calc2-sub-bounds"><small class="mono">미적분Ⅱ 3.2</small>치환할 때 적분 구간도 바꾸어야 할까?</a><a href="../../c/calc2/3-3.html#card-calc2-parts-area"><small class="mono">미적분Ⅱ 3.3</small>넓이 두 조각을 합치면 왜 직사각형이 될까?</a><a href="../../c/calc2/3-3.html#card-calc2-parts-choice"><small class="mono">미적분Ⅱ 3.3</small>어느 쪽을 미분하고 어느 쪽을 적분해야 할까?</a></div></nav>
+
+      <article class="card" id="card-pmath-trig-sub">
+        <header class="card-head">
+          <span class="no">1.7.3</span><h2>\(\int_0^a\sqrt{1 - x^2}\,dx\)를 원의 그림만으로 계산할 수 있을까?</h2><span class="kind">삼각치환 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="왼쪽: 단위원의 윗부분 아래 0부터 a까지의 넓이를 삼각형과 부채꼴로 나눈 그림. 오른쪽: x = sin θ로 바꾼 뒤 cos²θ 아래 넓이"></canvas>
+            <div class="ctl">
+              <label class="mono">\(a\) = <output class="a-out">0.6</output></label>
+              <input class="sa" type="range" min="0" max="1" step="0.01" value="0.6" aria-label="적분의 위끝 a">
+              <dl class="nums n4">
+                <div><dt>삼각형</dt><dd class="n-tri">—</dd></div>
+                <div><dt>부채꼴</dt><dd class="n-sec">—</dd></div>
+                <div><dt>합</dt><dd class="n-sum">—</dd></div>
+                <div><dt>수치 적분</dt><dd class="n-num">—</dd></div>
+              </dl>
+              <p class="fig-note">왼쪽의 초록 넓이와 오른쪽의 초록 넓이는 같은 적분입니다. 오른쪽은 \(x = \sin\theta\)로 바꾼 뒤의 모습이고, 가로축이 \(x\) 대신 \(\theta\)입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\sqrt{1 - x^2}\)의 원시함수는 표에 없고, 치환 \(u = 1 - x^2\)도 \(du = -2x\,dx\)라서 \(x\)가 남아 쓸 수 없습니다. 그런데 \(y = \sqrt{1 - x^2}\)은 단위원의 윗부분입니다. 원의 그림을 쓰면 어떨까요?</li>
+            <li><span class="tag">복원</span>반지름 1, 중심각 \(\theta\)인 부채꼴의 넓이는 \(\frac{1}{2}\theta\)입니다. \(1 - \sin^2\theta = \cos^2\theta\), \(\cos^2\theta = \frac{1 + \cos 2\theta}{2}\)입니다.</li>
+            <li><span class="tag">설명</span>그림으로 보면 넓이는 직각삼각형 \(\frac{1}{2}a\sqrt{1 - a^2}\)과 중심각 \(\arcsin a\)인 부채꼴 \(\frac{1}{2}\arcsin a\)의 합입니다. 계산으로는 <em>삼각치환</em> \(x = \sin\theta\)를 씁니다. \(dx = \cos\theta\,d\theta\), \(\sqrt{1 - \sin^2\theta} = \cos\theta\)이므로 \(\int_0^a\sqrt{1 - x^2}\,dx = \int_0^{\arcsin a}\cos^2\theta\,d\theta = \left[\frac{\theta}{2} + \frac{\sin 2\theta}{4}\right]_0^{\arcsin a}\)이고, \(\frac{\sin 2\theta}{4} = \frac{\sin\theta\cos\theta}{2} = \frac{1}{2}a\sqrt{1 - a^2}\)이 바로 삼각형입니다. 두 방법의 답이 <b>\(\frac{1}{2}a\sqrt{1 - a^2} + \frac{1}{2}\arcsin a\)</b>로 같습니다.</li>
+            <li><span class="tag">연결</span>\(\sqrt{a^2 - x^2}\)은 \(x = a\sin\theta\), \(\frac{1}{a^2 + x^2}\)은 \(x = a\tan\theta\)로 바꿉니다. 근호나 분모 속의 "\(a^2 \pm x^2\)"이 삼각함수의 관계식 \(1 - \sin^2\theta = \cos^2\theta\), \(1 + \tan^2\theta = \sec^2\theta\)로 한 항이 되기 때문입니다.</li>
+            <li><span class="tag">적용</span>\(a\)를 0부터 1까지 움직이며 삼각형과 부채꼴이 어떻게 나눠 갖는지 보세요. \(a = 1\)이면 삼각형이 사라지고 넓이는 사분원 \(\frac{\pi}{4}\)가 됩니다. 오른쪽 그림의 넓이가 왼쪽과 늘 같은지 표로 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>치환하면 적분 구간도 바꾸어야 합니다. \(x\)가 0에서 \(a\)까지 갈 때 \(\theta\)는 0에서 \(\arcsin a\)까지 갑니다. 또 \(\sqrt{\cos^2\theta} = \cos\theta\)로 쓸 수 있는 것은 이 구간에서 \(\cos\theta \ge 0\)이기 때문입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\int_0^3\sqrt{9 - x^2}\,dx\)의 값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{9\pi}{4}\)<span class="why"><b>맞습니다.</b> 반지름 3인 원의 사분원 넓이 \(\frac{1}{4}\pi \cdot 3^2\)입니다. \(x = 3\sin\theta\)로 계산해도 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{3\pi}{4}\)<span class="why"><b>반지름을 제곱하지 않았습니다.</b> 넓이는 반지름의 제곱에 비례합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{9\pi}{2}\)<span class="why"><b>반원의 넓이입니다.</b> 0부터 3까지는 원의 4분의 1입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>9<span class="why"><b>\(\int_0^3 (9 - x^2)\)처럼 근호를 지웠습니다.</b> 그 값은 18이고, 근호가 있으면 원이 됩니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pmath/1-3.html#card-pmath-arc-restrict"><small class="mono">전문 수학 1.3</small>사인함수의 어디를 잘라야 역함수가 생길까?</a><a href="../../c/pmath/1-3.html#card-pmath-arc-sawtooth"><small class="mono">전문 수학 1.3</small>arcsin(sin x)는 언제나 x일까?</a><a href="../../c/alg/2-1.html#card-alg-radian"><small class="mono">대수 2.1</small>각의 크기를 길이의 비로 잴 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-1-7"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/int-choose.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/partial-frac.js"></script>
+<script src="../../js/cards/pmath/trig-sub.js"></script>
+</body>
+</html>

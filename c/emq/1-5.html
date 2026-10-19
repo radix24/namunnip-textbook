@@ -50,65 +50,21 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-emq-transformer"><span class="mono">1.5.1</span>변압기는 왜 교류에서만 작동할까?</a></li>
-        <li><a href="#card-phy-lenz"><span class="mono">1.5.2</span>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a></li>
-        <li><a href="#card-is2-generator"><span class="mono">1.5.3</span>자석을 움직이면 왜 전류가 흐를까?</a></li>
-        <li><a href="#card-is2-transmission"><span class="mono">1.5.4</span>송전은 왜 높은 전압으로 할까?</a></li>
-        <li><a href="#card-phy-wireless"><span class="mono">1.5.5</span>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a></li>
+        <li><a href="#card-phy-lenz"><span class="mono">1.5.1</span>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a></li>
+        <li><a href="#card-is2-generator"><span class="mono">1.5.2</span>자석을 움직이면 왜 전류가 흐를까?</a></li>
+        <li><a href="#card-is2-transmission"><span class="mono">1.5.3</span>송전은 왜 높은 전압으로 할까?</a></li>
+        <li><a href="#card-phy-wireless"><span class="mono">1.5.4</span>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a></li>
+        <li><a href="#card-emq-transformer"><span class="mono">1.5.5</span>변압기는 왜 교류에서만 작동할까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=emq-1-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">90문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=emq-1-5">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
-      <article class="card" id="card-emq-transformer">
-        <header class="card-head">
-          <span class="no">1.5.1</span><h2>변압기는 왜 교류에서만 작동할까?</h2><span class="kind">자기 선속의 변화 · 변압기의 원리</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="철심에 감긴 1차·2차 코일과, 시간에 따른 1차 전압, 철심 속 자기 선속, 2차 전압"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="1차 코일에 넣는 전원">
-                <button type="button" class="chip" data-s="ac" aria-pressed="true">교류 220 V</button>
-                <button type="button" class="chip" data-s="dc" aria-pressed="false">직류 (전지)</button>
-              </div>
-              <label class="mono">1차 코일 감은 수 N₁ = <output class="n1-out">1000</output></label>
-              <input class="n1" type="range" min="100" max="2000" step="50" value="1000" aria-label="1차 코일 감은 수">
-              <label class="mono">2차 코일 감은 수 N₂ = <output class="n2-out">50</output></label>
-              <input class="n2" type="range" min="10" max="4000" step="10" value="50" aria-label="2차 코일 감은 수">
-              <dl class="nums">
-                <div><dt>2차 전압 V₂ = V₁ × N₂/N₁ (실효값)</dt><dd class="n-v">—</dd></div>
-                <div><dt>2차에 10 Ω을 연결하면 전류 (2차 · 1차)</dt><dd class="n-i">—</dd></div>
-                <div><dt>전력 (1차 = 2차, 이상적)</dt><dd class="n-p">—</dd></div>
-              </dl>
-              <p class="fig-note">손실이 없는 이상적인 변압기로 계산했습니다. 실제 변압기는 코일의 저항, 철심의 소용돌이 전류와 자기 이력 때문에 몇 % 손실이 있습니다. 직류는 스위치를 켠 순간의 짧은 변화 뒤 일정해집니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>휴대 전화 충전기에는 220 V를 5 V 정도로 낮추는 부품이 있고, 발전소는 전압을 수십만 V로 높여 보냅니다. 전지에 변압기를 연결하면 전압이 바뀔까요?</li>
-            <li><span class="tag">복원</span>코일을 지나는 자기장이 변하면 코일에 전류가 유도되고, 유도 전류는 그 변화를 방해하는 방향으로 흐릅니다(렌츠 법칙).</li>
-            <li><span class="tag">설명</span>어떤 면을 지나는 자기장의 양을 <em>자기 선속</em> Φ = BA라 합니다. 코일의 유도 기전력은 자기 선속이 변하는 빠르기와 감은 수에 비례합니다: V = −N ΔΦ/Δt (패러데이 법칙). 변압기는 철심에 두 코일을 감은 것으로, 1차 코일의 교류가 철심 속에 끊임없이 변하는 자기 선속을 만들고, 같은 선속이 2차 코일을 지나며 전압을 유도합니다. 두 코일이 같은 ΔΦ/Δt를 느끼므로 V₁ : V₂ = N₁ : N₂입니다.</li>
-            <li><span class="tag">연결</span>에너지는 보존되므로 이상적인 변압기에서 V₁I₁ = V₂I₂이고, 전압을 높이면 전류가 줄어 송전선의 열 손실(I²R)이 줄어듭니다. 코일 하나가 자기 자신의 전류 변화를 방해하는 성질(자체 유도)을 이용한 부품이 <em>인덕터</em>이며, 전류의 급한 변화를 막거나 전원 장치에서 에너지를 잠시 저장합니다. 무선 충전과 교통 카드도 두 코일 사이의 상호 유도를 씁니다.</li>
-            <li><span class="tag">적용</span>휴대 전화 충전기처럼 220 V를 약 11 V로 낮추려면 감은 수의 비를 어떻게 해야 하나요? 전원을 직류로 바꾸면 2차 전압 그래프는 어떻게 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>“변압기는 전압을 높여 에너지를 늘린다”는 오해입니다. 전압이 높아지면 그만큼 전류가 줄어 전력은 늘지 않고, 실제로는 조금 줄어듭니다. 또 요즘 충전기는 무거운 변압기 대신 전자 회로로 교류를 고주파로 바꾼 뒤 작은 변압기를 씁니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">N₁ = 100, N₂ = 2000인 이상적인 변압기의 1차에 12 V 전지를 연결했습니다. 스위치를 켜고 한참 뒤 2차 전압은?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>0 V<span class="why"><b>맞습니다.</b> 직류는 자기 선속이 변하지 않으므로 유도 전압이 없습니다. 켜는 순간에만 잠깐 전압이 생깁니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>240 V<span class="why"><b>감은 수의 비는 교류일 때만 적용됩니다.</b></span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0.6 V<span class="why"><b>비를 거꾸로 했을 뿐 아니라</b>, 직류에서는 유도 전압이 생기지 않습니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a></div></nav>
-
       <article class="card" id="card-phy-lenz">
         <header class="card-head">
-          <span class="no">1.5.2</span><h2>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</h2><span class="kind">패러데이 법칙 · 렌츠 법칙</span>
+          <span class="no">1.5.1</span><h2>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</h2><span class="kind">패러데이 법칙 · 렌츠 법칙</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -149,7 +105,7 @@
 
       <article class="card" id="card-is2-generator">
         <header class="card-head">
-          <span class="no">1.5.3</span><h2>자석을 움직이면 왜 전류가 흐를까?</h2><span class="kind">전자기 유도 · 발전기</span>
+          <span class="no">1.5.2</span><h2>자석을 움직이면 왜 전류가 흐를까?</h2><span class="kind">전자기 유도 · 발전기</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -184,7 +140,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>발전소는 석탄, 우라늄, 물, 바람처럼 서로 다른 에너지를 씁니다. 그런데 마지막 단계는 거의 모두 같습니다. 무엇인가를 <em>돌립니다</em>. 돌리면 왜 전기가 나올까요?</li>
-            <li><span class="tag">복원</span>자석 둘레에는 자기장이 있고, 코일의 면을 지나는 자기력선의 양을 <em>자기 선속</em>이라고 합니다. 자석이 가까울수록 코일을 지나는 자기 선속이 커집니다.</li>
+            <li><span class="tag">복원</span>자석 둘레에는 자기장이 있고, 코일 속으로 자석을 넣었다 뺐다 하면 코일에 전류가 흐릅니다(전자기 유도, 중학교). 코일의 면을 지나는 자기력선의 양을 <em>자기 선속</em>이라고 합니다. 자석이 가까울수록 코일을 지나는 자기 선속이 커집니다.</li>
             <li><span class="tag">설명</span>코일을 지나는 자기 선속이 <em>변하는 동안</em> 코일에 전압이 생겨 전류가 흐릅니다. 이것이 <em>전자기 유도</em>입니다. 전압의 크기는 코일의 감은 수와 자기 선속이 변하는 빠르기에 비례합니다(패러데이 법칙, <span class="formula">V = −N ΔΦ/Δt</span>).</li>
             <li><span class="tag">연결</span>발전기는 자석 사이에서 코일을 돌려 자기 선속을 쉬지 않고 바꿉니다. 한 바퀴마다 전류의 방향이 두 번 바뀌므로 교류가 나옵니다. 우리나라 발전기의 상당수는 1분에 3600바퀴(1초에 60바퀴) 돌아 60 Hz 교류를 만듭니다.</li>
             <li><span class="tag">적용</span>자석을 코일 속에 넣은 채 멈춰 보세요. 바늘은 어디를 가리키나요? 넣을 때와 뺄 때 바늘 방향을 비교하고, 감은 수를 200회로 바꿔 보세요. ‘발전기 돌리기’에서는 회전 속도를 절반으로 줄였을 때 그래프가 어떻게 바뀌는지 보세요.</li>
@@ -205,7 +161,7 @@
 
       <article class="card" id="card-is2-transmission">
         <header class="card-head">
-          <span class="no">1.5.4</span><h2>송전은 왜 높은 전압으로 할까?</h2><span class="kind">P = VI · I²R 손실 · 모식</span>
+          <span class="no">1.5.3</span><h2>송전은 왜 높은 전압으로 할까?</h2><span class="kind">P = VI · I²R 손실 · 모식</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -257,7 +213,7 @@
 
       <article class="card" id="card-phy-wireless">
         <header class="card-head">
-          <span class="no">1.5.5</span><h2>무선 충전기는 선 없이 어떻게 전기를 보낼까?</h2><span class="kind">상호 유도 · 결합 계수 · 교류</span>
+          <span class="no">1.5.4</span><h2>무선 충전기는 선 없이 어떻게 전기를 보낼까?</h2><span class="kind">상호 유도 · 결합 계수 · 교류</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -294,7 +250,7 @@
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
           <p class="q">충전 패드 코일에 교류 대신 같은 크기의 직류를 계속 흘리면, 패드 위에 올려 둔 휴대폰은?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>자기장이 생기지 않아서 충전되지 않는다.<span class="why"><b>직류도 자기장을 만듭니다.</b> 앞 절의 나침반처럼 직류 주위에도 자기장이 있습니다. 문제는 그 자기장이 변하지 않는다는 데 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>자기장이 생기지 않아서 충전되지 않는다.<span class="why"><b>직류도 자기장을 만듭니다.</b> 외르스테드 실험의 나침반처럼 직류 주위에도 자기장이 있습니다. 문제는 그 자기장이 변하지 않는다는 데 있습니다.</span></span></button></li>
             <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>자기장은 있지만 변하지 않아서 충전되지 않는다.<span class="why"><b>맞습니다.</b> 휴대폰 코일을 지나는 선속이 일정하므로 기전력이 0입니다. 전류를 켜고 끄는 순간에만 잠깐 기전력이 생깁니다.</span></span></button></li>
             <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>방향이 바뀌지 않아서 오히려 더 잘 충전된다.<span class="why"><b>배터리가 직류로 충전된다는 사실에서 나온 생각입니다.</b> 휴대폰은 받은 교류를 정류해서 직류로 바꿉니다. 받는 쪽 코일에 기전력이 생기려면 먼저 선속이 변해야 합니다.</span></span></button></li>
           </ol>
@@ -302,11 +258,60 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-5.html#card-phy-oersted"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a><a href="../../c/phy/2-5.html#card-phy-motor"><small class="mono">물리학 2.5</small>전동기는 어떻게 계속 돌까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a><a href="../../c/adphy/2-4.html#text-adphy-maxwell"><small class="mono">고급 물리학 2.4</small>맥스웰은 어떻게 전기와 자기의 식에서 빛의 속력을 꺼냈을까?</a></div></nav>
 
+      <article class="card" id="card-emq-transformer">
+        <header class="card-head">
+          <span class="no">1.5.5</span><h2>변압기는 왜 교류에서만 작동할까?</h2><span class="kind">자기 선속의 변화 · 변압기의 원리</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="철심에 감긴 1차·2차 코일과, 시간에 따른 1차 전압, 철심 속 자기 선속, 2차 전압"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="1차 코일에 넣는 전원">
+                <button type="button" class="chip" data-s="ac" aria-pressed="true">교류 220 V</button>
+                <button type="button" class="chip" data-s="dc" aria-pressed="false">직류 (전지)</button>
+              </div>
+              <label class="mono">1차 코일 감은 수 N₁ = <output class="n1-out">1000</output></label>
+              <input class="n1" type="range" min="100" max="2000" step="50" value="1000" aria-label="1차 코일 감은 수">
+              <label class="mono">2차 코일 감은 수 N₂ = <output class="n2-out">50</output></label>
+              <input class="n2" type="range" min="10" max="4000" step="10" value="50" aria-label="2차 코일 감은 수">
+              <dl class="nums">
+                <div><dt>2차 전압 V₂ = V₁ × N₂/N₁ (실효값)</dt><dd class="n-v">—</dd></div>
+                <div><dt>2차에 10 Ω을 연결하면 전류 (2차 · 1차)</dt><dd class="n-i">—</dd></div>
+                <div><dt>전력 (1차 = 2차, 이상적)</dt><dd class="n-p">—</dd></div>
+              </dl>
+              <p class="fig-note">손실이 없는 이상적인 변압기로 계산했습니다. 실제 변압기는 코일의 저항, 철심의 소용돌이 전류와 자기 이력 때문에 몇 % 손실이 있습니다. 직류는 스위치를 켠 순간의 짧은 변화 뒤 일정해집니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>휴대 전화 충전기에는 220 V를 5 V 정도로 낮추는 부품이 있고, 발전소는 전압을 수십만 V로 높여 보냅니다. 전지에 변압기를 연결하면 전압이 바뀔까요?</li>
+            <li><span class="tag">복원</span>코일을 지나는 자기장이 변하면 코일에 전류가 유도되고, 유도 전류는 그 변화를 방해하는 방향으로 흐릅니다(렌츠 법칙).</li>
+            <li><span class="tag">설명</span>어떤 면을 지나는 자기장의 양을 <em>자기 선속</em> Φ = BA라 합니다. 코일의 유도 기전력은 자기 선속이 변하는 빠르기와 감은 수에 비례합니다: V = −N ΔΦ/Δt (패러데이 법칙). 변압기는 철심에 두 코일을 감은 것으로, 1차 코일의 교류가 철심 속에 끊임없이 변하는 자기 선속을 만들고, 같은 선속이 2차 코일을 지나며 전압을 유도합니다. 두 코일이 같은 ΔΦ/Δt를 느끼므로 V₁ : V₂ = N₁ : N₂입니다.</li>
+            <li><span class="tag">연결</span>에너지는 보존되므로 이상적인 변압기에서 V₁I₁ = V₂I₂이고, 전압을 높이면 전류가 줄어 송전선의 열 손실(I²R)이 줄어듭니다. 코일 하나가 자기 자신의 전류 변화를 방해하는 성질(자체 유도)을 이용한 부품이 <em>인덕터</em>이며, 전류의 급한 변화를 막거나 전원 장치에서 에너지를 잠시 저장합니다. 무선 충전과 교통 카드도 두 코일 사이의 상호 유도를 씁니다.</li>
+            <li><span class="tag">적용</span>휴대 전화 충전기처럼 220 V를 약 11 V로 낮추려면 감은 수의 비를 어떻게 해야 하나요? 전원을 직류로 바꾸면 2차 전압 그래프는 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>“변압기는 전압을 높여 에너지를 늘린다”는 오해입니다. 전압이 높아지면 그만큼 전류가 줄어 전력은 늘지 않고, 실제로는 조금 줄어듭니다. 또 요즘 충전기는 무거운 변압기 대신 전자 회로로 교류를 고주파로 바꾼 뒤 작은 변압기를 씁니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">N₁ = 100, N₂ = 2000인 이상적인 변압기의 1차에 12 V 전지를 연결했습니다. 스위치를 켜고 한참 뒤 2차 전압은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>0 V<span class="why"><b>맞습니다.</b> 직류는 자기 선속이 변하지 않으므로 유도 전압이 없습니다. 켜는 순간에만 잠깐 전압이 생깁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>240 V<span class="why"><b>감은 수의 비는 교류일 때만 적용됩니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0.6 V<span class="why"><b>비를 거꾸로 했을 뿐 아니라</b>, 직류에서는 유도 전압이 생기지 않습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a></div></nav>
+
       <a class="px-go" href="../../practice.html?sec=emq-1-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">90문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -315,10 +320,10 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/emq/e-transformer.js"></script>
 <script src="../../js/cards/phy/em-lenz.js"></script>
 <script src="../../js/cards/is2/e-generator.js"></script>
 <script src="../../js/cards/is2/e-transmission.js"></script>
 <script src="../../js/cards/phy/em-wireless.js"></script>
+<script src="../../js/cards/emq/e-transformer.js"></script>
 </body>
 </html>

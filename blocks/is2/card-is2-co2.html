@@ -31,12 +31,12 @@
           <div><dt>가능성 높은 범위</dt><dd class="rng">—</dd></div>
         </dl>
         <p class="fig-note c-msg"></p>
-        <p class="fig-note">산업화 이전(280 ppm) 대비 값입니다. 강제력은 ΔF = 5.35 ln(C/C₀) W/m² 근사식을, 기온은 CO₂가 2배일 때 평형 기온 상승 3 °C(가능성 높은 범위 2.5~4 °C, IPCC 제6차 보고서)를 썼습니다. CO₂ 한 가지만 바꾼 계산입니다.</p>
+        <p class="fig-note">산업화 이전(280 ppm) 대비 값입니다. 강제력은 농도가 2배가 될 때마다 약 3.7 W/m²씩 늘어나는 근사식(ΔF = 5.35 ln(C/C₀) W/m², ln은 자연로그로 미적분Ⅱ에서 배웁니다)을, 기온은 CO₂가 2배일 때 평형 기온 상승 3 °C(가능성 높은 범위 2.5~4 °C, IPCC 제6차 보고서)를 썼습니다. CO₂ 한 가지만 바꾼 계산입니다.</p>
       </div>
     </div>
     <ol class="steps">
       <li><span class="tag">질문</span>공기 속 CO₂는 0.04%쯤입니다. 이렇게 적은 기체가 조금 더 늘었다고 지구 전체의 기온이 오를 수 있을까요?</li>
-      <li><span class="tag">복원</span>앞 카드에서 보았듯이 지표 온도는 대기가 적외선을 얼마나 붙잡는지에 따라 달라집니다. 적외선을 흡수하는 기체가 늘면 흡수율이 커집니다.</li>
+      <li><span class="tag">복원</span>온실 효과에서 보았듯이 지표 온도는 대기가 적외선을 얼마나 붙잡는지에 따라 달라집니다. 적외선을 흡수하는 기체가 늘면 흡수율이 커집니다.</li>
       <li><span class="tag">설명</span>공기의 99%를 차지하는 질소(N₂)와 산소(O₂)는 같은 원자 두 개로 된 분자라 적외선을 거의 흡수하지 않습니다. 그래서 적외선을 붙잡는 일은 수증기, CO₂, 메테인처럼 양은 적어도 적외선을 흡수하는 기체가 거의 다 맡습니다. 적은 양이라서 작은 변화도 비율로는 큰 변화가 됩니다.</li>
       <li><span class="tag">연결</span>CO₂가 늘어 추가로 붙잡는 에너지를 <em>복사 강제력</em>이라고 합니다. 농도가 2배가 되면 약 3.7 W/m²입니다. 지구가 이만큼 더 받는 상태가 이어지면 기온이 올라, 수증기 증가 같은 되먹임까지 더해져 약 3 °C 오른 곳에서 새 평형을 찾습니다.</li>
       <li><span class="tag">적용</span>280 → 560 ppm과 560 → 1120 ppm의 기온 상승을 비교해 보세요. 늘어난 ppm은 두 배 차이인데 결과는 어떤가요? 2024년 값에서 평형 기온 상승은 얼마인가요?</li>
@@ -47,9 +47,9 @@
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
     <p class="q">CO₂가 400 ppm에서 800 ppm으로 오를 때와 800 ppm에서 1200 ppm으로 오를 때, 늘어난 양은 400 ppm으로 같습니다. 복사 강제력의 증가는?</p>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>늘어난 양이 같으니 강제력 증가도 같다.<span class="why"><b>비례 관계를 가정한 답입니다.</b> 강제력은 농도의 로그에 비례하므로, 같은 양이 늘어도 처음 농도가 높을수록 효과가 작습니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>400 → 800 ppm 쪽이 더 크다.<span class="why"><b>맞습니다.</b> 400 → 800은 2배, 800 → 1200은 1.5배입니다. 5.35 ln2 ≈ 3.7 W/m², 5.35 ln1.5 ≈ 2.2 W/m²입니다. 효과가 줄어들 뿐 멈추지는 않습니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>800 ppm이면 이미 적외선을 다 흡수해 더 늘어도 변화가 없다.<span class="why"><b>흔한 반론이지만 틀렸습니다.</b> 흡수 띠의 가장자리와 대기 위층에서 흡수가 계속 늘기 때문에 효과는 로그로 줄어들 뿐 0이 되지 않습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>늘어난 양이 같으니 강제력 증가도 같다.<span class="why"><b>비례 관계를 가정한 답입니다.</b> 강제력은 농도가 같은 <em>비율</em>로 늘 때(예: 2배가 될 때마다) 같은 크기만큼 커집니다. 그래서 같은 양이 늘어도 처음 농도가 높을수록 효과가 작습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>400 → 800 ppm 쪽이 더 크다.<span class="why"><b>맞습니다.</b> 400 → 800은 2배, 800 → 1200은 1.5배입니다. 그림 아래 근사식으로 계산하면 2배일 때 약 3.7 W/m², 1.5배일 때 약 2.2 W/m²입니다. 효과가 줄어들 뿐 멈추지는 않습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>800 ppm이면 이미 적외선을 다 흡수해 더 늘어도 변화가 없다.<span class="why"><b>흔한 반론이지만 틀렸습니다.</b> 흡수 띠의 가장자리와 대기 위층에서 흡수가 계속 늘기 때문에 더 늘릴수록 효과가 점점 작아질 뿐 0이 되지는 않습니다.</span></span></button></li>
     </ol>
   </div>
 </article>

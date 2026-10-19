@@ -1,0 +1,161 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>목적에 맞는 표현과 의사 결정 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="목적에 따라 정하는 가중치와 가중 점수표, 가중치를 먼저 정해야 하는 이유, 경우별 이익과 확률로 계산하는 기댓값, 남으면 손해·모자라면 놓치는 재고 결정(신문 판매원 문제). 납품 업체 선택 카드와, 우산 재고 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-supplier-score table { border-collapse: collapse; font-size: .86rem; margin: .4rem 0; }
+    #card-jmath-supplier-score td, #card-jmath-supplier-score th { border: 1px solid var(--rule, #d9dad2); padding: .2rem .5rem; text-align: right; }
+    #card-jmath-supplier-score td:first-child, #card-jmath-supplier-score th:first-child { text-align: left; }
+    #card-jmath-supplier-score tr.best td { background: rgba(116,171,102,.2); }
+    #card-jmath-supplier-score .ctl-row > div { min-width: 9rem; }
+    #card-jmath-stock-decision canvas { aspect-ratio: 16 / 9; max-width: 560px; margin: 0 auto; }
+    #card-jmath-stock-decision .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="4-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>목적에 맞는 표현과 의사 결정</h1>
+    <p class="lead">자료를 정리하고 해석한 뒤에는 결정을 내려야 합니다. 여러 기준이 있을 때는 목적에 맞는 <em>가중치</em>로 점수를 매기고, 결과가 불확실할 때는 확률을 곱해 더한 <em>기댓값</em>으로 비교합니다. 이 절에서는 납품 업체 선택과 재고 주문을 수학으로 결정해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-l-mean" title="중학교 개념 설명 보기">평균</button><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-supplier-score"><span class="mono">4.5.1</span>가중치를 둔 점수표로 납품 업체 고르기</a></li>
+        <li><a href="#card-jmath-stock-decision"><span class="mono">4.5.2</span>비 올 확률 30%일 때 우산을 몇 개 들여놓을까 — 기댓값</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=jmath-4-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-4-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-supplier-score">
+        <header class="card-head">
+          <span class="no">4.5.1</span><h2>세 납품 업체 중 어디를 고를까? 무엇을 중요하게 보느냐에 따라 달라질까?</h2><span class="kind">목적에 맞는 의사 결정 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">식자재 납품 업체 세 곳의 항목별 점수(10점 만점, 가상)입니다. 항목마다 얼마나 중요한지(가중치)를 정하세요. 가중치의 합은 자동으로 100%가 되게 나눕니다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">가격 <output class="w0-out"></output>%</label><input class="w0" type="range" min="0" max="10" step="1" value="5" aria-label="가격 가중치"></div>
+              <div><label class="mono">품질 <output class="w1-out"></output>%</label><input class="w1" type="range" min="0" max="10" step="1" value="3" aria-label="품질 가중치"></div>
+              <div><label class="mono">배송 <output class="w2-out"></output>%</label><input class="w2" type="range" min="0" max="10" step="1" value="2" aria-label="배송 가중치"></div>
+            </div>
+            <table aria-label="업체별 항목 점수와 가중 점수"></table>
+            <div class="presets" role="group" aria-label="상황 예시"><button class="chip" type="button" data-p="0">값싼 분식점</button><button class="chip" type="button" data-p="1">고급 식당</button><button class="chip" type="button" data-p="2">새벽 배송이 중요한 급식소</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>업체 A는 싸고, B는 품질이 좋고, C는 배송이 정확합니다. 어느 업체가 "가장 좋은" 업체일까요?</li>
+            <li><span class="tag">복원</span>가중평균: 값마다 중요도(가중치)를 곱해 더한 뒤 가중치의 합으로 나눕니다.</li>
+            <li><span class="tag">설명</span>여러 기준으로 비교할 때는 항목 점수에 <em>가중치</em>를 곱해 더한 <em>가중 점수</em>를 비교합니다. 가중치는 일의 목적이 정합니다. 같은 점수표라도 값싼 분식점은 가격에, 고급 식당은 품질에 무게를 두므로 고르는 업체가 달라집니다. 목적을 먼저 정하고, 자료를 그 목적에 맞게 표현하는 것이 의사 결정의 순서입니다.</li>
+            <li><span class="tag">연결</span>입찰 심사, 장비 구매, 채용 평가도 가중 점수표를 씁니다. 다음 카드에서는 확률과 기댓값으로 결정합니다.</li>
+            <li><span class="tag">적용</span>세 상황 예시를 눌러 고르는 업체가 어떻게 바뀌는지 보세요. 가중치를 조금만 바꿔도 순위가 뒤바뀌는 지점을 찾아보세요.</li>
+            <li class="warn"><span class="tag">판단</span>가중치를 먼저 정하지 않고 결과를 본 뒤 바꾸면, 원하는 업체가 이기도록 숫자를 맞추는 셈이 됩니다. 가중치는 점수를 보기 전에 정해야 공정합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">가격 8점, 품질 6점인 업체의 가중 점수는? (가중치 가격 25%, 품질 75%)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>6.5점<span class="why"><b>맞습니다.</b> \(8 \times 0.25 + 6 \times 0.75 = 2 + 4.5 = 6.5\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>7점<span class="why"><b>단순 평균입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>7.5점<span class="why"><b>가중치를 거꾸로 적용했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>14점<span class="why"><b>가중치를 곱하지 않고 더했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/4-4.html#card-jmath-misleading-graph"><small class="mono">직무 수학 4.4</small>이 홍보물의 그래프는 무엇을 부풀렸을까?</a><a href="../../c/jmath/4-4.html#card-jmath-dashboard"><small class="mono">직무 수학 4.4</small>매장 대시보드를 보고 회의에서 무엇이라고 보고할까?</a><a href="../../c/jmath/4-2.html#card-jmath-defect-sample"><small class="mono">직무 수학 4.2</small>불량률 2%인 공장에서 10개를 뽑아 검사하면 불량품이 하나도 안 나올 가능성은?</a><a href="../../c/jmath/4-2.html#card-jmath-overbooking"><small class="mono">직무 수학 4.2</small>식당 좌석이 40석일 때 예약을 몇 팀까지 받아도 될까?</a></div></nav>
+
+      <article class="card" id="card-jmath-stock-decision">
+        <header class="card-head">
+          <span class="no">4.5.2</span><h2>내일 비 올 확률이 30%일 때 우산을 몇 개 들여놓아야 할까?</h2><span class="kind">기댓값과 의사 결정 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">편의점 우산(가상): 1개 4천 원에 들여와 1만 원에 팝니다. 비가 오면 50개, 안 오면 10개가 팔리고, 남은 우산은 2천 원에 처분합니다. <b>예측</b>: 비 올 확률 30%라면 몇 개를 들여놓는 것이 좋을까요?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="10">10개</button><button class="chip" type="button" data-g="30">30개</button><button class="chip" type="button" data-g="50">50개</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="after" hidden>
+              <div class="ctl-row">
+                <div><label class="mono">비 올 확률 = <output class="p-out"></output>%</label><input class="p" type="range" min="0" max="100" step="5" value="30" aria-label="비 올 확률"></div>
+                <div><label class="mono">들여놓는 수 = <output class="q-out"></output>개</label><input class="q" type="range" min="0" max="60" step="5" value="30" aria-label="들여놓는 우산 수"></div>
+              </div>
+              <canvas aria-label="들여놓는 수에 따른 비 올 때·안 올 때 이익과 기댓값"></canvas>
+              <p class="mono small say"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>우산을 많이 들여놓으면 비가 올 때 많이 팔지만, 안 오면 남은 우산이 손해입니다. 비 올 확률이 30%라면 "비가 안 올 가능성이 크니 조금만" 들여놓는 것이 맞을까요?</li>
+            <li><span class="tag">복원</span>기댓값 = (각 경우의 값 × 그 확률)의 합.</li>
+            <li><span class="tag">설명</span>들여놓는 수마다 비가 올 때와 안 올 때의 이익을 계산하고, 확률로 가중평균한 <em>기댓값</em>을 비교합니다. 10개를 넘는 우산 한 개는 비가 오면 6천 원을 벌고(1만 − 4천), 안 오면 2천 원을 잃습니다(2천 − 4천). 그 기댓값은 \(6000p - 2000(1 - p) = 8000p - 2000\)이라 \(p > 0.25\)이면 양수입니다. 그래서 비 올 확률이 30%여도 50개를 들여놓는 것이 기댓값으로는 가장 유리합니다.</li>
+            <li><span class="tag">연결</span>빵집의 빵 굽는 양, 신문 부수, 항공권 좌석처럼 남으면 손해, 모자라면 놓치는 문제를 "신문 판매원 문제"라 하며 같은 방법으로 풉니다.</li>
+            <li><span class="tag">적용</span>예측한 뒤 비 올 확률을 바꿔 가장 좋은 수량이 바뀌는 확률을 찾으세요. 처분 가격이 0원이면 그 기준 확률은 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>기댓값은 여러 날 되풀이할 때의 평균입니다. 한 번 손해를 크게 보면 버티기 어려운 가게라면 기댓값만으로 결정하지 않고 손해의 크기도 함께 봅니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">비가 오면 3만 원, 안 오면 −1만 원인 결정이 있습니다. 비 올 확률이 20%일 때 기댓값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>−2000원<span class="why"><b>맞습니다.</b> \(0.2 \times 30000 + 0.8 \times (-10000) = 6000 - 8000\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1만 원<span class="why"><b>두 값을 그냥 평균했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6000원<span class="why"><b>비 오는 경우만 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>2만 원<span class="why"><b>확률을 곱하지 않고 더했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/4-4.html#card-jmath-misleading-graph"><small class="mono">직무 수학 4.4</small>이 홍보물의 그래프는 무엇을 부풀렸을까?</a><a href="../../c/jmath/4-4.html#card-jmath-dashboard"><small class="mono">직무 수학 4.4</small>매장 대시보드를 보고 회의에서 무엇이라고 보고할까?</a><a href="../../c/jmath/4-2.html#card-jmath-defect-sample"><small class="mono">직무 수학 4.2</small>불량률 2%인 공장에서 10개를 뽑아 검사하면 불량품이 하나도 안 나올 가능성은?</a><a href="../../c/jmath/4-2.html#card-jmath-overbooking"><small class="mono">직무 수학 4.2</small>식당 좌석이 40석일 때 예약을 몇 팀까지 받아도 될까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-4-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/supplier-score.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/jmath/stock-decision.js"></script>
+</body>
+</html>

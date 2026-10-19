@@ -33,7 +33,7 @@
 
   function mark(sel, ok, skip) {
     const li = $(sel);
-    li.className = skip ? "skip" : ok ? "yes" : "no";
+    li.className = sel.slice(1) + " " + (skip ? "skip" : ok ? "yes" : "no");
     li.querySelector("b").textContent = skip ? "—" : ok ? "○" : "×";
   }
 

@@ -1,0 +1,52 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/jmath/dilution.js"
+  ],
+  "short": "소독액을 원하는 농도로 묽히기 — 일차방정식"
+}
+-->
+<style>
+#card-jmath-dilution .ctl-row > div { min-width: 12rem; }
+#card-jmath-dilution .cups { display: flex; gap: 1rem; align-items: flex-start; margin: .5rem 0; flex-wrap: wrap; }
+#card-jmath-dilution .cup { width: 90px; border: 2px solid #5d5d61; border-top: 0; border-radius: 0 0 10px 10px; height: 120px; position: relative; overflow: hidden; }
+#card-jmath-dilution .cup span { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(63,111,163,.5); }
+#card-jmath-dilution .cupl { font-size: .8rem; text-align: center; max-width: 110px; }
+</style>
+<article class="card" id="card-jmath-dilution">
+  <header class="card-head">
+    <span class="no"></span><h2>원액을 물에 얼마나 섞어야 원하는 농도가 될까?</h2><span class="kind">일차방정식의 활용 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="ctl-row">
+        <div><label class="mono">원액 농도 = <output class="c0-out"></output>%</label><input class="c0" type="range" min="1" max="20" step="0.5" value="5" aria-label="원액 농도"></div>
+        <div><label class="mono">원하는 농도 = <output class="c1-out"></output>%</label><input class="c1" type="range" min="0.1" max="5" step="0.1" value="0.5" aria-label="원하는 농도"></div>
+        <div><label class="mono">만들 양 = <output class="v-out"></output> mL</label><input class="v" type="range" min="200" max="5000" step="100" value="2000" aria-label="만들 희석액의 양"></div>
+        <div><label class="mono">내가 넣을 원액 = <output class="x-out"></output> mL</label><input class="x" type="range" min="0" max="2000" step="10" value="100" aria-label="내가 넣을 원액의 양"></div>
+      </div>
+      <div class="cups" aria-hidden="true"><div><div class="cup"><span class="w1"></span></div><p class="cupl">원액</p></div><div><div class="cup"><span class="w2"></span></div><p class="cupl">물</p></div><div><div class="cup"><span class="w3"></span></div><p class="cupl mix"></p></div></div>
+      <p class="mono small say" role="status"></p>
+      <p class="fig-note">수업용 가상 예시입니다. 실제 소독제와 세제는 제품 설명서의 희석 방법을 따르고, 원액을 함께 섞지 않습니다.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>청소 담당자가 5% 소독 원액으로 0.5% 소독액 2 L를 만들려고 합니다. 원액과 물을 각각 얼마나 섞어야 할까요?</li>
+      <li><span class="tag">복원</span>농도(%) = 녹아 있는 양 ÷ 전체 양 × 100. 물을 넣어도 녹아 있는 양은 그대로입니다.</li>
+      <li><span class="tag">설명</span>원액을 \(x\) mL 넣으면 소독 성분은 \(0.05x\) mL이고, 물을 섞어도 이 양은 변하지 않습니다. 완성된 2000 mL에 0.5%가 들어 있어야 하므로 \(0.05x = 0.005 \times 2000\), 곧 \(x = 200\) mL입니다. 물은 \(2000 - 200 = 1800\) mL입니다. "변하지 않는 양"을 찾아 등식을 세우는 것이 핵심입니다.</li>
+      <li><span class="tag">연결</span>약품 희석, 비료 물 타기, 음료 시럽 배합에 같은 방정식을 씁니다. 두 농도의 용액을 섞는 문제도 "성분의 양"으로 식을 세웁니다.</li>
+      <li><span class="tag">적용</span>원액 양 막대를 움직여 원하는 농도를 맞춰 보고, 방정식의 답과 비교하세요. 원액 농도가 두 배이면 필요한 원액은 어떻게 되나요?</li>
+      <li class="warn"><span class="tag">판단</span>"5%를 0.5%로 만들려면 물을 10배 넣는다"고 생각해 원액 200 mL에 물 2000 mL를 넣으면, 전체가 2200 mL가 되어 농도가 약 0.45%로 낮아집니다. 물의 양과 전체의 양을 구별해야 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">10% 원액으로 2% 용액 500 mL를 만들려면 원액은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>100 mL<span class="why"><b>맞습니다.</b> \(0.1x = 0.02 \times 500\)에서 \(x = 100\), 물은 400 mL입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>50 mL<span class="why"><b>농도 비를 거꾸로 썼습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>250 mL<span class="why"><b>계산을 다시 해 보세요.</b> 이때 농도는 5%입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>400 mL<span class="why"><b>물의 양입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

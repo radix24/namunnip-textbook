@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대푯값과 산포도 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="극단값 하나에 끌려가는 평균과 버티는 중앙값(가상 소득), 치우친 분포에서의 대푯값 선택, 편차·분산·표준편차의 뜻과 계산(n으로 나눔), 평균 60·표준편차 10인 자료 만들기 도전. 평균과 중앙값 카드와, 표준편차 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pstat-mean-median canvas { aspect-ratio: 16 / 5; max-width: 620px; margin: .3rem auto 0; }
+    #card-pstat-mean-median .ctl-row > div { min-width: 14rem; }
+    #card-pstat-sd-spread canvas { aspect-ratio: 16 / 6; max-width: 620px; margin: .3rem auto 0; }
+    #card-pstat-sd-spread .sl { display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); gap: .3rem .6rem; margin: .4rem 0; }
+    #card-pstat-sd-spread .sl label { font: .8rem var(--mono, monospace); display: block; }
+    #card-pstat-sd-spread .goal { font-weight: 700; }
+  </style>
+</head>
+<body data-course="pstat" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>대푯값과 산포도</h1>
+    <p class="lead">자료를 수 하나로 요약할 때는 가운데를 나타내는 <em>대푯값</em>과 퍼진 정도를 나타내는 <em>산포도</em>를 함께 씁니다. 자료의 모양에 따라 평균과 중앙값 중 알맞은 것이 다르고, 퍼짐은 표준편차로 나타냅니다. 이 절에서는 대푯값과 산포도를 목적에 맞게 고르고 해석합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-l-mean" title="중학교 개념 설명 보기">평균</button><a class="p p-card" href="../../c/stat/3-2.html#card-stat-balance" title="확률과 통계 3.2 · 확률분포의 &#x27;가운데&#x27;와 &#x27;퍼짐&#x27;은 어디서 읽을까?">자료의 평균과 분산</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pstat-mean-median"><span class="mono">2.4.1</span>부자 한 집이 이사 오면 '평균 소득'은 어떻게 될까 — 평균과 중앙값</a></li>
+        <li><a href="#card-pstat-sd-spread"><span class="mono">2.4.2</span>평균이 같은 두 반, 퍼진 정도는 표준편차로 — 직접 만들어 보기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pstat-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pstat-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pstat-mean-median">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?</h2><span class="kind">대푯값의 선택 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small"><b>가상</b> 마을 9가구의 월 소득(만 원). 소득이 아주 큰 한 가구가 더해지면?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="mean">평균이 훨씬 크게 변한다</button><button class="chip" type="button" data-g="med">중앙값이 훨씬 크게 변한다</button><button class="chip" type="button" data-g="same">둘 다 비슷하게 변한다</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="after" hidden>
+              <div class="ctl-row"><div><label class="mono">새 가구의 소득 = <output class="x-out"></output>만 원</label><input class="x" type="range" min="200" max="20000" step="100" value="5000" aria-label="새 가구의 소득"></div></div>
+              <canvas aria-label="소득을 점으로 찍은 수직선과 평균, 중앙값 표시"></canvas>
+              <p class="mono small say"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>뉴스에서 "평균 소득"이 올랐다고 하는데 주변 사람들의 형편은 그대로인 것 같을 때가 있습니다. 어떤 대푯값이 '보통'을 더 잘 나타낼까요?</li>
+            <li><span class="tag">복원</span>평균, 중앙값, 최빈값의 뜻.</li>
+            <li><span class="tag">설명</span><em>평균</em>은 모든 값을 더해 나누므로 아주 큰 값 하나에 크게 끌려갑니다. <em>중앙값</em>은 크기순으로 가운데 값이라, 극단값이 얼마나 크든 위치만 바뀌어 거의 영향을 받지 않습니다. 소득, 집값처럼 한쪽으로 길게 치우친 분포에서는 평균이 중앙값보다 크고, '보통 가구'를 나타내기에는 중앙값이 알맞은 경우가 많습니다.</li>
+            <li><span class="tag">연결</span>통계청 등은 가구 소득을 발표할 때 평균과 함께 중위소득(중앙값)을 쓰며, 여러 복지 제도의 기준에 기준 중위소득이 쓰입니다.</li>
+            <li><span class="tag">적용</span>새 가구의 소득을 바꾸며 평균과 중앙값의 변화를 비교하세요. 새 가구의 소득이 얼마일 때 평균이 원래 9가구 대부분의 소득보다 커지나요?</li>
+            <li class="warn"><span class="tag">판단</span>어느 대푯값이 옳다기보다 목적에 맞는 값을 골라야 합니다. 마을 전체의 총소득이 궁금하면 평균(×가구 수)이 필요합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">자료 2, 3, 3, 4, 100의 평균과 중앙값은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>평균 22.4, 중앙값 3<span class="why"><b>맞습니다.</b> 합 112 ÷ 5 = 22.4이고, 가운데 값은 3입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>평균 3, 중앙값 22.4<span class="why"><b>둘을 바꾸었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>평균 22.4, 중앙값 51<span class="why"><b>최솟값과 최댓값의 가운데를 구했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>평균 3, 중앙값 3<span class="why"><b>100을 빼고 계산했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/2-1.html#card-pstat-data-types"><small class="mono">실용 통계 2.1</small>혈액형, 키, 만족도 점수, 형제 수는 각각 어떤 종류의 자료일까?</a><a href="../../c/pstat/2-1.html#card-pstat-number-not-number"><small class="mono">실용 통계 2.1</small>축구팀 선수들의 등번호 평균이 12.6이라는 것은 무슨 뜻일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/3-1.html#card-pstat-t-vs-z"><small class="mono">실용 통계 3.1</small>t분포는 표준정규분포와 무엇이 다를까?</a><a href="../../c/pstat/3-1.html#card-pstat-why-t"><small class="mono">실용 통계 3.1</small>표본 5개로 표준화하면 정말 95%가 ±1.96 안에 들어올까?</a></div></nav>
+
+      <article class="card" id="card-pstat-sd-spread">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?</h2><span class="kind">분산과 표준편차 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small goal">도전: 다섯 점수의 평균이 60, 표준편차가 10이 되도록 만들어 보세요(각각 ±0.5 이내).</p>
+            <div class="sl"></div>
+            <canvas aria-label="다섯 점수와 평균, 편차 막대"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>두 반의 수학 평균이 똑같이 60점입니다. 한 반은 대부분 55~65점이고, 다른 반은 30점부터 90점까지 고루 있습니다. 이 차이를 수 하나로 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>편차 = 변량 − 평균, 편차의 합은 0.</li>
+            <li><span class="tag">설명</span>편차의 합은 늘 0이라 퍼짐을 나타내지 못합니다. 그래서 편차를 제곱해 평균한 <em>분산</em> \(\frac{1}{n}\sum (x_i - \bar x)^2\)을 쓰고, 단위를 변량과 맞추려고 제곱근을 씌운 <em>표준편차</em>를 씁니다. 표준편차가 클수록 자료가 평균에서 멀리 퍼져 있습니다. (이 카드는 자료 자체의 퍼짐을 나타내려고 \(n\)으로 나눕니다. 표본으로 모집단을 추정할 때는 \(n - 1\)로 나누기도 합니다.)</li>
+            <li><span class="tag">연결</span>표준편차는 정규분포와 표준화, 오차범위 계산의 바탕이 됩니다.</li>
+            <li><span class="tag">적용</span>평균은 그대로 두고 표준편차만 두 배로 만들려면 점수들을 어떻게 바꿔야 할까요? 모든 점수에 5점씩 더하면 표준편차는 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>표준편차도 극단값 하나에 크게 흔들립니다. 치우친 자료에서는 사분위수 범위(IQR)를 함께 보는 것이 좋습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">자료 2, 4, 6, 8의 표준편차(\(n\)으로 나눔)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\sqrt5\)<span class="why"><b>맞습니다.</b> 평균 5, 편차 −3, −1, 1, 3, 분산 \(\frac{9 + 1 + 1 + 9}{4} = 5\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>5<span class="why"><b>분산입니다.</b> 제곱근을 씌워야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0<span class="why"><b>편차의 합입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>2<span class="why"><b>편차 절댓값의 평균입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/2-1.html#card-pstat-data-types"><small class="mono">실용 통계 2.1</small>혈액형, 키, 만족도 점수, 형제 수는 각각 어떤 종류의 자료일까?</a><a href="../../c/pstat/2-1.html#card-pstat-number-not-number"><small class="mono">실용 통계 2.1</small>축구팀 선수들의 등번호 평균이 12.6이라는 것은 무슨 뜻일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/3-1.html#card-pstat-t-vs-z"><small class="mono">실용 통계 3.1</small>t분포는 표준정규분포와 무엇이 다를까?</a><a href="../../c/pstat/3-1.html#card-pstat-why-t"><small class="mono">실용 통계 3.1</small>표본 5개로 표준화하면 정말 95%가 ±1.96 안에 들어올까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pstat-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pstat/mean-median.js"></script>
+<script src="../../js/cards/pstat/sd-spread.js"></script>
+</body>
+</html>

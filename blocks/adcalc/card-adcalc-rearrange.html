@@ -1,0 +1,57 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/calc1/plot.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/rearrange.js"
+  ],
+  "short": "순서를 바꾸면 합이 바뀐다"
+}
+-->
+<style>
+#card-adcalc-rearrange canvas { aspect-ratio: 16 / 10; }
+</style>
+<article class="card" id="card-adcalc-rearrange">
+  <header class="card-head">
+    <span class="no"></span><h2>더하는 순서만 바꿨는데 합이 달라질 수 있을까?</h2><span class="kind">조건수렴 · 재배열 · 도전</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="같은 항들을 순서만 바꾸어 더한 부분합. 목표값보다 작으면 양수 항을, 크면 음수 항을 더해 목표값으로 다가간다"></canvas>
+      <div class="ctl">
+        <div class="presets pk">
+          <button class="chip" type="button" data-p="h" aria-pressed="true">\(1 - \frac{1}{2} + \frac{1}{3} - \cdots\) (조건수렴)</button>
+          <button class="chip" type="button" data-p="sq">\(1 - \frac{1}{4} + \frac{1}{9} - \cdots\) (절대수렴)</button>
+        </div>
+        <label class="mono">목표값 \(T\) = <output class="t-out">1.5</output></label>
+        <input class="st" type="range" min="-2" max="3" step="0.05" value="1.5" aria-label="목표값">
+        <dl class="nums">
+          <div><dt>쓴 항 수</dt><dd class="n-k">—</dd></div>
+          <div><dt>재배열한 부분합</dt><dd class="n-s">—</dd></div>
+          <div><dt>원래 순서의 합</dt><dd class="n-o">—</dd></div>
+        </dl>
+        <p class="verdict seq" aria-live="polite"></p>
+        <p class="fig-note">규칙: 부분합이 목표값 이하이면 아직 쓰지 않은 양수 항 가운데 가장 큰 것을, 크면 음수 항 가운데 절댓값이 가장 큰 것을 더합니다. 조건수렴 급수에서는 이 규칙만으로 모든 항이 언젠가 쓰입니다. 절대수렴 급수에서는 한쪽 부호의 항만 쓰다 끝날 수 있으므로, 같은 부호를 10번 이어 쓰면 다른 부호의 항을 하나 끼워 넣습니다. 항을 4000개 씁니다.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>유한 개의 수를 더할 때는 순서를 바꿔도 합이 같습니다. 무한히 많은 항을 더하는 급수에서도 그럴까요? \(1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots = \ln 2 \approx 0.693\)의 항들로 합이 1.5가 되게 할 수 있을까요?</li>
+      <li><span class="tag">복원</span>조건수렴: \(\sum a_n\)은 수렴하지만 \(\sum|a_n|\)은 발산합니다. 절대수렴: \(\sum|a_n|\)도 수렴합니다.</li>
+      <li><span class="tag">설명</span>\(\sum\frac{(-1)^{n+1}}{n}\)에서 양수 항만 더한 \(1 + \frac{1}{3} + \frac{1}{5} + \cdots\)도, 음수 항만 더한 것도 발산합니다. 그래서 양수 항을 아껴 두면 언제든 원하는 만큼 올라갈 수 있고, 음수 항으로 원하는 만큼 내려갈 수 있습니다. 목표값을 넘으면 내려오고 못 미치면 올라가기를 되풀이하면, 항이 0으로 가므로 흔들림이 줄어 목표값에 수렴합니다. <em>리만의 재배열 정리</em>: 조건수렴하는 급수는 항의 순서를 바꾸어 <b>어떤 실수</b>로도 수렴하게(또는 발산하게) 만들 수 있습니다.</li>
+      <li><span class="tag">연결</span>절대수렴하는 급수는 양수 항의 합과 음수 항의 합이 각각 유한하므로 어떻게 재배열해도 합이 같습니다. \(1 - \frac{1}{4} + \frac{1}{9} - \cdots\)의 양수 항의 합은 \(\frac{\pi^2}{8} \approx 1.234\)뿐이라, 1.5에는 결코 닿을 수 없습니다.</li>
+      <li><span class="tag">적용</span>목표값을 여러 값으로 바꾸어 조건수렴 급수가 정말 그 값에 다가가는지 보세요. 절대수렴 급수로 바꾸면 목표값을 바꿔도 결국 어디로 가나요?</li>
+      <li class="warn"><span class="tag">판단</span>"급수의 합"은 정해진 순서로 더한 부분합의 극한입니다. 조건수렴하는 급수를 다룰 때는 항을 묶거나 순서를 바꾸는 계산을 함부로 하면 안 됩니다. 절대수렴하면 그런 걱정 없이 자유롭게 바꿀 수 있습니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">급수 \(\sum a_n\)이 절대수렴하고 합이 5입니다. 항의 순서를 바꾼 급수의 합은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>언제나 5이다<span class="why"><b>맞습니다.</b> 절대수렴하는 급수는 어떻게 재배열해도 같은 합으로 수렴합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>어떤 실수든 될 수 있다<span class="why"><b>조건수렴일 때의 성질입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>발산할 수도 있다<span class="why"><b>절대수렴이면 재배열해도 발산하지 않습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>5보다 작아진다<span class="why"><b>근거가 없습니다.</b> 합은 그대로입니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

@@ -38,18 +38,118 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-mateng-gas-use"><span class="mono">1.1.1</span>에어백을 부풀리려면 기체가 몇 몰 필요할까?</a></li>
-        <li><a href="#card-mech-ideal-gas"><span class="mono">1.1.2</span>기체를 데우면 압력은 왜 커질까?</a></li>
-        <li><a href="#card-chem-molvol"><span class="mono">1.1.3</span>기체 1몰의 부피는 왜 종류와 상관없을까?</a></li>
+        <li><a href="#card-mech-ideal-gas"><span class="mono">1.1.1</span>기체를 데우면 압력은 왜 커질까?</a></li>
+        <li><a href="#card-chem-molvol"><span class="mono">1.1.2</span>기체 1몰의 부피는 왜 종류와 상관없을까?</a></li>
+        <li><a href="#card-mateng-gas-use"><span class="mono">1.1.3</span>에어백을 부풀리려면 기체가 몇 몰 필요할까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mateng-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">131문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=mateng-1-1">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
+      <article class="card" id="card-mech-ideal-gas">
+        <header class="card-head">
+          <span class="no">1.1.1</span><h2>기체를 데우면 압력은 왜 커질까?</h2><span class="kind">이상 기체 · PV = nRT</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="피스톤 달린 용기 속에서 움직이는 기체 분자와, 온도·부피에 따른 압력"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">온도 T = <output class="t-out">300</output> K</label>
+                  <input class="t" type="range" min="100" max="600" step="5" value="300" aria-label="절대 온도"></div>
+                <div><label class="mono">부피 V = <output class="v-out">24.9</output> L</label>
+                  <input class="v" type="range" min="5" max="50" step="0.1" value="24.9" aria-label="부피"></div>
+                <div><label class="mono">기체의 양 n = <output class="n-out">1.0</output> mol</label>
+                  <input class="n" type="range" min="0.2" max="2" step="0.1" value="1" aria-label="몰수"></div>
+              </div>
+              <dl class="nums">
+                <div><dt>압력 P</dt><dd class="n-p">—</dd></div>
+                <div><dt>분자의 평균 속력(질소)</dt><dd class="n-vr">—</dd></div>
+                <div><dt>PV ÷ T</dt><dd class="n-k">—</dd></div>
+              </dl>
+              <p class="fig-note">P = nRT/V, R = 8.314 J/(mol·K). 그림의 분자 수와 속력은 모식입니다(실제 1 mol은 6×10²³개). 평균 속력은 질소 분자의 √(3RT/M)입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>여름 햇볕 아래 둔 자동차 타이어는 공기압이 올라갑니다. 공기를 더 넣지도 않았는데 왜 압력이 커질까요?</li>
+            <li><span class="tag">복원</span>기체의 압력은 수많은 분자가 벽에 부딪치며 미는 힘을 넓이로 나눈 것입니다. 온도가 높을수록 분자는 빠르게 움직입니다.</li>
+            <li><span class="tag">설명</span>실험에 따르면 기체의 양이 일정할 때 압력은 부피에 반비례하고(보일 법칙), 부피가 일정하면 압력은 절대 온도에 비례합니다(샤를 법칙과 같은 관계). 이를 합치면 <em>PV = nRT</em>, 곧 이상 기체 상태 방정식입니다. 여기서 온도는 반드시 절대 온도(K = °C + 273)를 씁니다.</li>
+            <li><span class="tag">연결</span>분자 운동으로 보면, 부피를 줄이면 분자가 벽에 더 자주 부딪치고, 온도를 올리면 더 빠르게 더 세게 부딪칩니다. 분자의 평균 운동 에너지는 절대 온도에 비례하므로 평균 속력은 √T에 비례합니다. 0 K에서는 분자 운동이 가장 작아져 이상 기체의 압력이 0이 됩니다.</li>
+            <li><span class="tag">적용</span>부피를 그대로 두고 온도를 300 K에서 600 K로 올리면 압력은 몇 배가 되나요? 이때 분자의 평균 속력은 몇 배가 되나요? 그다음 온도를 고정하고 부피를 절반으로 줄여 압력을 비교해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>이상 기체는 분자 자체의 크기와 분자 사이 인력을 무시한 모형입니다. 상온·상압의 공기는 이 모형을 잘 따르지만, 압력이 아주 높거나 온도가 낮아 액체가 되기 직전에는 어긋납니다. 또 섭씨온도로 계산하면 0 °C에서 압력이 0이 되는 엉뚱한 결과가 나오므로, 반드시 절대 온도를 써야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">27 °C에서 공기압이 2.0기압인 타이어가 햇볕에 57 °C가 되었습니다. 부피가 거의 변하지 않는다면 공기압은 대략?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>약 4.2기압 — 온도가 2배 넘게 올랐으므로<span class="why"><b>섭씨온도로 비를 낸 답입니다.</b> 압력은 절대 온도에 비례합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>약 2.2기압<span class="why"><b>맞습니다.</b> 300 K에서 330 K로 1.1배가 되었으므로 2.0 × 1.1 = 2.2기압입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>2.0기압 그대로 — 공기를 넣지 않았으므로<span class="why"><b>기체의 양이 같아도</b> 온도가 오르면 분자가 더 세게 부딪쳐 압력이 커집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/labchem/2-2.html#card-labchem-gas-r"><small class="mono">화학 실험 2.2</small>마그네슘 리본 한 조각으로 기체 상수 R을 구할 수 있을까?</a><a href="../../c/adphy/1-5.html#card-adphy-process"><small class="mono">고급 물리학 1.5</small>같은 부피만큼 팽창해도 필요한 열은 왜 다를까?</a></div></nav>
+
+      <article class="card" id="card-chem-molvol">
+        <header class="card-head">
+          <span class="no">1.1.2</span><h2>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</h2><span class="kind">아보가드로 법칙 · 기체의 몰 부피</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="기체 1몰이 차지하는 정육면체와, 분자 크기와 간격을 같은 배율로 확대한 상자"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="기체 고르기">
+                <button class="chip" data-gas="H2" aria-pressed="false">H₂ 2</button>
+                <button class="chip" data-gas="He" aria-pressed="false">He 4</button>
+                <button class="chip" data-gas="NH3" aria-pressed="false">NH₃ 17</button>
+                <button class="chip" data-gas="N2" aria-pressed="true">N₂ 28</button>
+                <button class="chip" data-gas="O2" aria-pressed="false">O₂ 32</button>
+                <button class="chip" data-gas="CO2" aria-pressed="false">CO₂ 44</button>
+              </div>
+              <div class="ctl-row">
+                <div><label class="mono">온도 = <output class="temp-out">0</output> °C</label>
+                  <input class="temp" type="range" min="-50" max="100" step="1" value="0" aria-label="온도"></div>
+                <div><label class="mono">압력 = <output class="pres-out">1.00</output> atm</label>
+                  <input class="pres" type="range" min="0.5" max="2" step="0.05" value="1" aria-label="압력"></div>
+              </div>
+              <div class="presets"><button class="chip" data-tp="0,1">0 °C · 1 atm</button><button class="chip" data-tp="25,1">25 °C · 1 atm</button></div>
+              <dl class="nums n4">
+                <div><dt>1몰의 부피</dt><dd class="v-vol">—</dd></div>
+                <div><dt>1몰의 질량</dt><dd class="v-mass">—</dd></div>
+                <div><dt>밀도</dt><dd class="v-rho">—</dd></div>
+                <div><dt>분자 사이 거리</dt><dd class="v-gap">—</dd></div>
+              </dl>
+              <p class="fig-note real"></p>
+              <p class="fig-note">부피는 이상 기체로 계산했습니다. 확대 상자는 분자 크기와 간격을 같은 배율로 그렸고, 움직임은 실제보다 수천억 배 느립니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>수소 1몰은 2 g, 이산화 탄소 1몰은 44 g입니다. 20배 넘게 무거운데도, 같은 온도와 압력에서 두 기체 1몰의 부피는 거의 같습니다. 왜 그럴까요?</li>
+            <li><span class="tag">복원</span>1몰은 입자 6.02×10²³개입니다. 기체 분자는 쉬지 않고 날아다니며 벽에 부딪치고, 이 충돌이 압력이 됩니다.</li>
+            <li><span class="tag">설명</span>기체에서 분자 사이의 거리는 분자 지름의 약 10배입니다. 분자가 실제로 차지하는 부피는 전체의 0.1%도 되지 않습니다. 그래서 기체의 부피는 분자의 크기가 아니라 <em>분자의 개수와 온도, 압력</em>으로 정해집니다(아보가드로 법칙).</li>
+            <li><span class="tag">연결</span>0 °C, 1 atm에서 기체 1몰의 부피는 22.4 L입니다. 부피는 절대 온도에 비례하므로 25 °C, 1 atm에서는 <span class="formula">22.4 × 298/273 ≈ 24.5 L</span>입니다. 압력이 2배가 되면 부피는 절반이 됩니다.</li>
+            <li><span class="tag">적용</span>기체를 바꿔 보세요. 1몰의 부피와 확대 상자 속 분자 수는 그대로인데, 달라지는 것은 무엇인가요? 이번에는 온도를 25 °C로 올려 보세요. 상자 속 분자 수는 늘어나나요, 줄어드나요?</li>
+            <li class="warn"><span class="tag">판단</span>22.4 L는 <em>0 °C, 1 atm의 기체</em>에만 쓰는 값입니다. 실온(25 °C)에서는 24.5 L이고, 액체나 고체에는 쓸 수 없습니다(물 1몰은 18 mL). 또 실제 기체는 분자 사이의 인력 때문에 조금씩 다릅니다. 아래 실측값에서 CO₂와 NH₃를 확인해 보세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">25 °C, 1 atm에서 어떤 기체 2.45 L의 질량이 3.2 g이었습니다. 이 기체로 알맞은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>N₂ (몰 질량 28 g/mol)<span class="why"><b>0 °C의 22.4 L를 쓰면 이 답이 나옵니다.</b> 2.45 ÷ 22.4 = 0.109 mol이면 몰 질량이 약 29 g/mol이 되어 N₂에 가깝습니다. 하지만 지금은 25 °C입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>O₂ (몰 질량 32 g/mol)<span class="why"><b>맞습니다.</b> 25 °C, 1 atm에서 2.45 L ÷ 24.5 L/mol = 0.100 mol, 3.2 g ÷ 0.100 mol = 32 g/mol입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>기체마다 1몰의 부피가 달라서 알 수 없다.<span class="why"><b>액체나 고체라면 맞는 말입니다.</b> 기체는 분자 사이가 넓어서, 같은 온도와 압력이면 종류와 관계없이 1몰의 부피가 거의 같습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-2.html#card-is1-units"><small class="mono">통합과학1 1.2</small>모든 단위는 7개로 만들어질까?</a><a href="../../c/is1/1-2.html#card-is1-dimension"><small class="mono">통합과학1 1.2</small>단위만 보고 공식을 맞힐 수 있을까?</a><a href="../../c/is1/1-3.html#text-is1-standards"><small class="mono">통합과학1 1.3</small>왜 온 세계가 똑같은 1 kg을 써야 할까?</a><a href="../../c/is1/1-2.html#card-is1-new-unit"><small class="mono">통합과학1 1.2</small>두 양을 나누면 왜 쓸모 있는 새 단위가 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a><a href="../../c/chem/1-3.html#card-chem-gasvol"><small class="mono">화학 1.3</small>반응식만 보고 생길 기체의 부피를 미리 알 수 있을까?</a><a href="../../c/chem/1-3.html#card-chem-limit"><small class="mono">화학 1.3</small>반응물 하나가 먼저 바닥나면, 생성물은 얼마나 생길까?</a><a href="../../c/chem/1-3.html#card-chem-caco3"><small class="mono">화학 1.3</small>달걀 껍데기를 염산에 넣으면 날아간 기체로 반응식을 확인할 수 있을까?</a></div></nav>
+
       <article class="card" id="card-mateng-gas-use">
         <header class="card-head">
-          <span class="no">1.1.1</span><h2>에어백을 부풀리려면 기체가 몇 몰 필요할까?</h2><span class="kind">이상 기체 방정식 · 생활 속 계산</span>
+          <span class="no">1.1.3</span><h2>에어백을 부풀리려면 기체가 몇 몰 필요할까?</h2><span class="kind">이상 기체 방정식 · 생활 속 계산</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -97,110 +197,15 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/1-2.html#card-chem-mole"><small class="mono">화학 1.2</small>원자는 왜 ‘몰’이라는 묶음으로 셀까?</a><a href="../../c/chem/1-2.html#card-chem-cup"><small class="mono">화학 1.2</small>물 한 컵을 계속 반으로 나누면, 몇 번 만에 분자 하나가 남을까?</a><a href="../../c/chem/1-2.html#card-chem-molar-mass"><small class="mono">화학 1.2</small>물 1몰과 설탕 1몰은 왜 무게가 다를까?</a><a href="../../c/chem/1-2.html#text-chem-avogadro"><small class="mono">화학 1.2</small>보이지 않는 원자의 수를 사람들은 어떻게 세었을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/1-2.html#card-mateng-partial"><small class="mono">물질과 에너지 1.2</small>깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?</a><a href="../../c/labchem/2-3.html#card-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기의 질량으로 미지 액체의 분자량을 알 수 있을까?</a></div></nav>
 
-      <article class="card" id="card-mech-ideal-gas">
-        <header class="card-head">
-          <span class="no">1.1.2</span><h2>기체를 데우면 압력은 왜 커질까?</h2><span class="kind">이상 기체 · PV = nRT</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="피스톤 달린 용기 속에서 움직이는 기체 분자와, 온도·부피에 따른 압력"></canvas>
-            <div class="ctl">
-              <div class="ctl-row">
-                <div><label class="mono">온도 T = <output class="t-out">300</output> K</label>
-                  <input class="t" type="range" min="100" max="600" step="5" value="300" aria-label="절대 온도"></div>
-                <div><label class="mono">부피 V = <output class="v-out">24.9</output> L</label>
-                  <input class="v" type="range" min="5" max="50" step="0.1" value="24.9" aria-label="부피"></div>
-                <div><label class="mono">기체의 양 n = <output class="n-out">1.0</output> mol</label>
-                  <input class="n" type="range" min="0.2" max="2" step="0.1" value="1" aria-label="몰수"></div>
-              </div>
-              <dl class="nums">
-                <div><dt>압력 P</dt><dd class="n-p">—</dd></div>
-                <div><dt>분자의 평균 속력(질소)</dt><dd class="n-vr">—</dd></div>
-                <div><dt>PV ÷ T</dt><dd class="n-k">—</dd></div>
-              </dl>
-              <p class="fig-note">P = nRT/V, R = 8.314 J/(mol·K). 그림의 분자 수와 속력은 모식입니다(실제 1 mol은 6×10²³개). 평균 속력은 질소 분자의 √(3RT/M)입니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>여름 햇볕 아래 둔 자동차 타이어는 공기압이 올라갑니다. 공기를 더 넣지도 않았는데 왜 압력이 커질까요?</li>
-            <li><span class="tag">복원</span>기체의 압력은 수많은 분자가 벽에 부딪치며 미는 힘을 넓이로 나눈 것입니다. 온도가 높을수록 분자는 빠르게 움직입니다.</li>
-            <li><span class="tag">설명</span>실험에 따르면 기체의 양이 일정할 때 압력은 부피에 반비례하고(보일 법칙), 부피가 일정하면 압력은 절대 온도에 비례합니다(샤를 법칙과 같은 관계). 이를 합치면 <em>PV = nRT</em>, 곧 이상 기체 상태 방정식입니다. 여기서 온도는 반드시 절대 온도(K = °C + 273)를 씁니다.</li>
-            <li><span class="tag">연결</span>분자 운동으로 보면, 부피를 줄이면 분자가 벽에 더 자주 부딪치고, 온도를 올리면 더 빠르게 더 세게 부딪칩니다. 분자의 평균 운동 에너지는 절대 온도에 비례하므로 평균 속력은 √T에 비례합니다. 0 K에서는 분자 운동이 가장 작아져 이상 기체의 압력이 0이 됩니다.</li>
-            <li><span class="tag">적용</span>부피를 그대로 두고 온도를 300 K에서 600 K로 올리면 압력은 몇 배가 되나요? 이때 분자의 평균 속력은 몇 배가 되나요? 그다음 온도를 고정하고 부피를 절반으로 줄여 압력을 비교해 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>이상 기체는 분자 자체의 크기와 분자 사이 인력을 무시한 모형입니다. 상온·상압의 공기는 이 모형을 잘 따르지만, 압력이 아주 높거나 온도가 낮아 액체가 되기 직전에는 어긋납니다. 또 섭씨온도로 계산하면 0 °C에서 압력이 0이 되는 엉뚱한 결과가 나오므로, 반드시 절대 온도를 써야 합니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">27 °C에서 공기압이 2.0기압인 타이어가 햇볕에 57 °C가 되었습니다. 부피가 거의 변하지 않는다면 공기압은 대략?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>약 4.2기압 — 온도가 2배 넘게 올랐으므로<span class="why"><b>섭씨온도로 비를 낸 답입니다.</b> 압력은 절대 온도에 비례합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>약 2.2기압<span class="why"><b>맞습니다.</b> 300 K에서 330 K로 1.1배가 되었으므로 2.0 × 1.1 = 2.2기압입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>2.0기압 그대로 — 공기를 넣지 않았으므로<span class="why"><b>기체의 양이 같아도</b> 온도가 오르면 분자가 더 세게 부딪쳐 압력이 커집니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/labchem/2-2.html#card-labchem-gas-r"><small class="mono">화학 실험 2.2</small>마그네슘 리본 한 조각으로 기체 상수 R을 구할 수 있을까?</a><a href="../../c/adphy/1-5.html#card-adphy-process"><small class="mono">고급 물리학 1.5</small>같은 부피만큼 팽창해도 필요한 열은 왜 다를까?</a></div></nav>
-
-      <article class="card" id="card-chem-molvol">
-        <header class="card-head">
-          <span class="no">1.1.3</span><h2>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</h2><span class="kind">아보가드로 법칙 · 기체의 몰 부피</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="기체 1몰이 차지하는 정육면체와, 분자 크기와 간격을 같은 배율로 확대한 상자"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="기체 고르기">
-                <button class="chip" data-gas="H2" aria-pressed="false">H₂ 2</button>
-                <button class="chip" data-gas="He" aria-pressed="false">He 4</button>
-                <button class="chip" data-gas="NH3" aria-pressed="false">NH₃ 17</button>
-                <button class="chip" data-gas="N2" aria-pressed="true">N₂ 28</button>
-                <button class="chip" data-gas="O2" aria-pressed="false">O₂ 32</button>
-                <button class="chip" data-gas="CO2" aria-pressed="false">CO₂ 44</button>
-              </div>
-              <div class="ctl-row">
-                <div><label class="mono">온도 = <output class="temp-out">0</output> °C</label>
-                  <input class="temp" type="range" min="-50" max="100" step="1" value="0" aria-label="온도"></div>
-                <div><label class="mono">압력 = <output class="pres-out">1.00</output> atm</label>
-                  <input class="pres" type="range" min="0.5" max="2" step="0.05" value="1" aria-label="압력"></div>
-              </div>
-              <div class="presets"><button class="chip" data-tp="0,1">0 °C · 1 atm</button><button class="chip" data-tp="25,1">25 °C · 1 atm</button></div>
-              <dl class="nums n4">
-                <div><dt>1몰의 부피</dt><dd class="v-vol">—</dd></div>
-                <div><dt>1몰의 질량</dt><dd class="v-mass">—</dd></div>
-                <div><dt>밀도</dt><dd class="v-rho">—</dd></div>
-                <div><dt>분자 사이 거리</dt><dd class="v-gap">—</dd></div>
-              </dl>
-              <p class="fig-note real"></p>
-              <p class="fig-note">부피는 이상 기체로 계산했습니다. 확대 상자는 분자 크기와 간격을 같은 배율로 그렸고, 움직임은 실제보다 수천억 배 느립니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>수소 1몰은 2 g, 이산화 탄소 1몰은 44 g입니다. 20배 넘게 무거운데도, 같은 온도와 압력에서 두 기체 1몰의 부피는 거의 같습니다. 왜 그럴까요?</li>
-            <li><span class="tag">복원</span>1몰은 입자 6.02×10²³개입니다. 기체 분자는 쉬지 않고 날아다니며 벽에 부딪치고, 이 충돌이 압력이 됩니다.</li>
-            <li><span class="tag">설명</span>기체에서 분자 사이의 거리는 분자 지름의 약 10배입니다. 분자가 실제로 차지하는 부피는 전체의 0.1%도 되지 않습니다. 그래서 기체의 부피는 분자의 크기가 아니라 <em>분자의 개수와 온도, 압력</em>으로 정해집니다(아보가드로 법칙).</li>
-            <li><span class="tag">연결</span>0 °C, 1 atm에서 기체 1몰의 부피는 22.4 L입니다. 부피는 절대 온도에 비례하므로 25 °C, 1 atm에서는 <span class="formula">22.4 × 298/273 ≈ 24.5 L</span>입니다. 압력이 2배가 되면 부피는 절반이 됩니다.</li>
-            <li><span class="tag">적용</span>기체를 바꿔 보세요. 1몰의 부피와 확대 상자 속 분자 수는 그대로인데, 달라지는 것은 무엇인가요? 이번에는 온도를 25 °C로 올려 보세요. 상자 속 분자 수는 늘어나나요, 줄어드나요?</li>
-            <li class="warn"><span class="tag">판단</span>22.4 L는 <em>0 °C, 1 atm의 기체</em>에만 쓰는 값입니다. 실온(25 °C)에서는 24.5 L이고, 액체나 고체에는 쓸 수 없습니다(물 1몰은 18 mL). 또 실제 기체는 분자 사이의 인력 때문에 조금씩 다릅니다. 아래 실측값에서 CO₂와 NH₃를 확인해 보세요.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">25 °C, 1 atm에서 어떤 기체 2.45 L의 질량이 3.2 g이었다. 이 기체로 알맞은 것은?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>N₂ (몰 질량 28 g/mol)<span class="why"><b>0 °C의 22.4 L를 쓰면 이 답이 나옵니다.</b> 2.45 ÷ 22.4 = 0.109 mol이면 몰 질량이 약 29 g/mol이 되어 N₂에 가깝습니다. 하지만 지금은 25 °C입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>O₂ (몰 질량 32 g/mol)<span class="why"><b>맞습니다.</b> 25 °C, 1 atm에서 2.45 L ÷ 24.5 L/mol = 0.100 mol, 3.2 g ÷ 0.100 mol = 32 g/mol입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>기체마다 1몰의 부피가 달라서 알 수 없다.<span class="why"><b>액체나 고체라면 맞는 말입니다.</b> 기체는 분자 사이가 넓어서, 같은 온도와 압력이면 종류와 관계없이 1몰의 부피가 거의 같습니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-2.html#card-is1-units"><small class="mono">통합과학1 1.2</small>모든 단위는 7개로 만들어질까?</a><a href="../../c/is1/1-2.html#card-is1-dimension"><small class="mono">통합과학1 1.2</small>단위만 보고 공식을 맞힐 수 있을까?</a><a href="../../c/is1/1-3.html#text-is1-standards"><small class="mono">통합과학1 1.3</small>왜 온 세계가 똑같은 1 kg을 써야 할까?</a><a href="../../c/is1/1-2.html#card-is1-new-unit"><small class="mono">통합과학1 1.2</small>두 양을 나누면 왜 쓸모 있는 새 단위가 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a><a href="../../c/chem/1-3.html#card-chem-gasvol"><small class="mono">화학 1.3</small>반응식만 보고 생길 기체의 부피를 미리 알 수 있을까?</a><a href="../../c/chem/1-3.html#card-chem-limit"><small class="mono">화학 1.3</small>반응물 하나가 먼저 바닥나면, 생성물은 얼마나 생길까?</a><a href="../../c/chem/1-3.html#card-chem-caco3"><small class="mono">화학 1.3</small>달걀 껍데기를 염산에 넣으면 날아간 기체로 반응식을 확인할 수 있을까?</a></div></nav>
-
       <a class="px-go" href="../../practice.html?sec=mateng-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">131문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -209,8 +214,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/mateng/g-gas-use.js"></script>
 <script src="../../js/cards/mech/t-ideal-gas.js"></script>
 <script src="../../js/cards/chem/a-molvol.js"></script>
+<script src="../../js/cards/mateng/g-gas-use.js"></script>
 </body>
 </html>

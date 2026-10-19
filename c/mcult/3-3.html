@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대중매체와 데이터 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="여론조사의 오차범위 1.96√(p̂(1 − p̂)/n)과 95% 신뢰수준의 뜻, 표본 수를 4배로 해야 오차가 절반, 모의 조사 50번, 건강 기사의 상대 위험과 절대 위험 차이, 1만 명 점 그림. 여론조사 카드와, 위험 비교 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-poll-margin canvas { aspect-ratio: 16 / 9; max-width: 560px; margin: .3rem auto 0; }
+    #card-mcult-poll-margin .ctl-row > div { min-width: 12rem; }
+    #card-mcult-relative-risk canvas { aspect-ratio: 16 / 7; max-width: 600px; margin: .3rem auto 0; }
+    #card-mcult-relative-risk .ctl-row > div { min-width: 12rem; }
+    #card-mcult-relative-risk .headline { font-weight: 700; font-size: 1.05rem; border-left: 4px solid #b5532f; padding: .2rem .6rem; margin: .2rem 0 .5rem; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="3-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>대중매체와 데이터</h1>
+    <p class="lead">뉴스와 광고는 숫자로 사실을 전하지만, 숫자를 바르게 읽어야 뜻을 알 수 있습니다. 여론조사 결과에는 <em>오차범위</em>가 따라오고, 건강 기사의 "위험 2배"는 <em>원래의 발생률</em>을 알아야 판단할 수 있습니다. 이 절에서는 대중매체 속 통계를 비판적으로 읽습니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/stat/3-7.html#card-stat-ci-prop" title="확률과 통계 3.7 · 여론조사의 &#x27;오차 범위 ±3.1%p&#x27;는 어디서 나올까?">모비율의 추정</a><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-poll-margin"><span class="mono">3.3.1</span>여론조사의 '오차범위 ±3.1%p'는 무슨 뜻일까</a></li>
+        <li><a href="#card-mcult-relative-risk"><span class="mono">3.3.2</span>'위험 2배!' 기사 바로 읽기 — 상대 위험과 절대 위험</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mcult-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-3-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-poll-margin">
+        <header class="card-head">
+          <span class="no">3.3.1</span><h2>뉴스 여론조사의 "95% 신뢰수준에 오차범위 ±3.1%p"는 무슨 뜻일까?</h2><span class="kind">표본과 신뢰구간 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">실제 지지율(가상) = <output class="p-out"></output>%</label><input class="p" type="range" min="20" max="80" step="1" value="45" aria-label="실제 지지율"></div>
+              <div><label class="mono">조사 인원 \(n\) = <output class="n-out"></output>명</label><input class="n" type="range" min="100" max="3000" step="100" value="1000" aria-label="조사 인원"></div>
+            </div>
+            <div class="presets"><button class="chip run" type="button">여론조사 50번 하기(모의)</button></div>
+            <canvas aria-label="모의 여론조사 50번의 결과와 오차범위 막대, 실제 지지율 세로선"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>유권자 수천만 명 중 1000명만 물어보고 지지율을 발표합니다. 결과에 붙은 "오차범위 ±3.1%p"는 무엇을 뜻하고, 조사 인원을 늘리면 어떻게 달라질까요?</li>
+            <li><span class="tag">복원</span>표본비율 \(\hat p\)의 분포는 \(n\)이 클 때 평균 \(p\), 표준편차 \(\sqrt{\frac{p(1-p)}{n}}\)인 정규분포에 가깝습니다.</li>
+            <li><span class="tag">설명</span>오차범위는 \(1.96\sqrt{\frac{\hat p(1 - \hat p)}{n}}\)입니다. \(n = 1000\), \(\hat p = 0.5\)이면 약 \(0.031\), 곧 ±3.1%p입니다. "95% 신뢰수준"은 같은 방법으로 조사를 여러 번 하면 <em>약 95%의 조사에서</em> 결과 ± 오차범위가 실제 지지율을 포함한다는 뜻입니다. 오차범위는 \(\frac{1}{\sqrt n}\)에 비례해, 절반으로 줄이려면 인원을 4배로 늘려야 합니다.</li>
+            <li><span class="tag">연결</span>선거 여론조사 결과를 보도할 때는 조사 기관, 기간, 방법, 표본 수, 오차범위를 함께 밝히도록 정하고 있습니다.</li>
+            <li><span class="tag">적용</span>모의 조사를 여러 번 해서 실제 지지율(세로선)을 포함하지 못한 조사(빨간 막대)가 몇 개인지 세어 보세요. 인원을 바꾸면 막대 길이는 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>오차범위는 우연한 표본 추출의 오차만 다룹니다. 응답률이 낮거나 질문이 한쪽으로 치우치거나 특정 집단만 조사하면 생기는 오차는 오차범위에 들어 있지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">1000명 조사의 오차범위가 ±3.1%p였습니다. 같은 조건에서 4000명을 조사하면 오차범위는 약?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>±1.55%p<span class="why"><b>맞습니다.</b> 인원 4배 → \(\frac{1}{\sqrt4} = \frac12\)배입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>±0.78%p<span class="why"><b>인원에 반비례한다고 보았습니다.</b> \(\sqrt n\)에 반비례합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>±3.1%p 그대로<span class="why"><b>인원이 많을수록 오차범위는 줄어듭니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>±6.2%p<span class="why"><b>거꾸로 커진다고 보았습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-relative-risk">
+        <header class="card-head">
+          <span class="no">3.3.2</span><h2>"이것을 먹으면 병에 걸릴 위험이 2배!" 기사는 얼마나 걱정해야 할까?</h2><span class="kind">비율과 위험 비교 · 오류 찾기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="headline headline-text"></p>
+            <div class="ctl-row">
+              <div><label class="mono">먹지 않은 사람 1만 명 중 환자 = <output class="b-out"></output>명</label><input class="b" type="range" min="1" max="1000" step="1" value="10" aria-label="먹지 않은 사람 1만 명 중 환자 수"></div>
+              <div><label class="mono">상대 위험 = <output class="r-out"></output>배</label><input class="r" type="range" min="1" max="4" step="0.1" value="2" aria-label="상대 위험"></div>
+            </div>
+            <canvas aria-label="1만 명 중 환자 수를 점으로 나타낸 두 집단 비교 그림"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>건강 기사에서 "위험이 2배"라는 말을 자주 봅니다(이 카드의 수치는 가상). 2배라면 무척 위험해 보이는데, 실제로 몇 명이 더 병에 걸린다는 뜻일까요?</li>
+            <li><span class="tag">복원</span>비율과 백분율, 두 값의 차와 비.</li>
+            <li><span class="tag">설명</span><em>상대 위험</em>은 두 집단의 발생률의 비이고, <em>절대 위험 차이</em>는 발생률의 차입니다. 원래 1만 명 중 10명이 걸리는 병이 2배가 되면 20명이 되어 상대 위험은 2배지만, 절대적으로는 1만 명 중 <em>10명</em>이 늘어난 것입니다. 같은 "2배"라도 원래 1만 명 중 1000명이 걸리는 병이라면 1000명이 늘어나는 큰 차이입니다. 그래서 위험을 판단하려면 <em>원래의 발생률</em>을 함께 알아야 합니다.</li>
+            <li><span class="tag">연결</span>약의 효과를 "위험 50% 감소"로 말할 때도 같습니다. 한 사람에게 효과가 나타나려면 몇 명이 약을 먹어야 하는지(\(\frac{1}{\text{절대 위험 차이}}\))도 함께 봅니다.</li>
+            <li><span class="tag">적용</span>상대 위험을 2배로 두고 원래 환자 수를 바꾸며 늘어나는 환자 수를 비교하세요. 기사 제목을 사실에 맞게 다시 써 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>두 집단의 차이가 꼭 그 음식 때문이라는 보장도 없습니다. 함께 관찰된 것과 원인인 것은 다릅니다(상관과 인과).</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">어떤 병이 1만 명 중 4명에게 생기는데, 어떤 행동을 하면 위험이 1.5배가 된다고 합니다. 1만 명 중 몇 명이 더 걸리나요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>2명<span class="why"><b>맞습니다.</b> 4 × 1.5 = 6명, 차이 2명입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>6명<span class="why"><b>행동했을 때의 전체 환자 수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>5000명<span class="why"><b>50% 증가를 사람 수 50%로 읽었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1.5명<span class="why"><b>배율을 사람 수로 읽었습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/poll-margin.js"></script>
+<script src="../../js/cards/mcult/relative-risk.js"></script>
+</body>
+</html>

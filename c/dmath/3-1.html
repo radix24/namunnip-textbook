@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>진법 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="b진법의 뜻과 자리값, 십진법과 b진법 사이의 변환, 2진법과 16진법의 관계. 자리값 묶음과 나눗셈으로 진법을 바꾸는 카드와, 이진법으로 숫자 카드 마술의 비밀을 푸는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-base-convert canvas { aspect-ratio: 16 / 7; max-width: 580px; margin: 0 auto; display: block; }
+    #card-dmath-base-convert .digits { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 1.5rem; font-weight: 700; letter-spacing: .1em; }
+    #card-dmath-base-convert .ctl-row > div { min-width: 9rem; }
+    #card-dmath-base-convert .div { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .85rem; line-height: 1.6; }
+    #card-dmath-binary-cards .deck { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .5rem; margin: .5rem 0; }
+    #card-dmath-binary-cards .mc { border: 1px solid var(--rule); border-radius: 8px; padding: .4rem; background: var(--card); }
+    #card-dmath-binary-cards .mc .nums { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .7rem; line-height: 1.35; word-spacing: .15em; color: var(--ink-2); }
+    #card-dmath-binary-cards .mc .nums b { color: var(--forest); font-size: .85rem; }
+    #card-dmath-binary-cards .mc .yn { display: flex; gap: .3rem; margin-top: .3rem; }
+    #card-dmath-binary-cards .mc[data-a="1"] { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+    #card-dmath-binary-cards .mc[data-a="0"] { opacity: .6; }
+    #card-dmath-binary-cards .mc .nums span.me { background: var(--hl); color: var(--ink); }
+  </style>
+</head>
+<body data-course="dmath" data-sec="3-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>진법</h1>
+    <p class="lead">우리는 10개씩 묶어 세는 십진법을 쓰지만, 묶는 개수는 무엇이든 될 수 있습니다. 2개씩 묶으면 <em>이진법</em>, 16개씩 묶으면 16진법입니다. 이 절에서는 같은 수를 여러 진법으로 바꾸며 자리값의 뜻을 확인하고, 카드 몇 장으로 마음속의 수를 맞히는 마술에 숨은 이진법을 찾아봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/1-3.html#card-alg-exp-law-count" title="대수 1.3 · 거듭제곱끼리 곱하면 지수는 왜 더해질까?">지수법칙</a><a class="p p-card" href="../../c/dmath/3-1.html#card-dmath-base-convert" title="이산 수학 3.1 · 같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?">나눗셈의 몫과 나머지</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-base-convert"><span class="mono">3.1.1</span>자리 묶음으로 보는 진법 바꾸기</a></li>
+        <li><a href="#card-dmath-binary-cards"><span class="mono">3.1.2</span>숫자 카드 마술의 비밀은 이진법</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-3-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-base-convert">
+        <header class="card-head">
+          <span class="no">3.1.1</span><h2>같은 수를 2진법, 16진법으로 쓰면 왜 모양이 달라질까?</h2><span class="kind">진법 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">수 = <output class="n-out">45</output></label><input class="n" type="range" min="0" max="255" step="1" value="45" aria-label="십진법의 수"></div>
+              <div><label class="mono">진법 = <output class="b-out">2</output></label><input class="b" type="range" min="2" max="16" step="1" value="2" aria-label="밑"></div>
+            </div>
+            <p><span class="digits">—</span></p>
+            <canvas aria-label="자리마다 밑의 거듭제곱 묶음이 몇 개인지 보여 주는 블록 그림"></canvas>
+            <div class="presets"><button class="chip" type="button" data-b="2">2진법</button><button class="chip" type="button" data-b="8">8진법</button><button class="chip" type="button" data-b="10">10진법</button><button class="chip" type="button" data-b="16">16진법</button></div>
+            <p class="div" aria-label="나눗셈으로 바꾸는 과정"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>우리는 10개씩 묶어 세지만 컴퓨터는 2개씩, 색상 코드(#FF8800)는 16개씩 묶어 셉니다. 같은 수 45를 2개씩 묶어 세면 어떻게 쓰게 될까요?</li>
+            <li><span class="tag">복원</span>십진법의 \(345 = 3 \times 10^2 + 4 \times 10 + 5\). 자리마다 10의 거듭제곱이 몇 개인지를 적은 것입니다.</li>
+            <li><span class="tag">설명</span>밑 \(b\)를 써서 \(N = a_kb^k + \cdots + a_1b + a_0\) \((0 \le a_i < b)\)로 나타내는 것을 <em>\(b\)진법</em>이라 합니다. 십진법의 수를 \(b\)진법으로 바꾸려면 \(b\)로 나눈 나머지 \(a_0\)을 적고, 몫을 다시 \(b\)로 나누기를 반복한 뒤 나머지를 거꾸로 읽습니다. 16진법은 10~15를 A~F로 씁니다. 2진법 네 자리가 16진법 한 자리와 꼭 맞으므로(\(2^4 = 16\)) 둘 사이는 네 자리씩 끊어 바로 바꿀 수 있습니다.</li>
+            <li><span class="tag">연결</span>컴퓨터는 전기 신호의 있고 없음(1과 0)만 구별하므로 2진법을 씁니다. 사람이 읽기 쉽게 하려고 메모리 주소나 색상은 16진법으로 적습니다.</li>
+            <li><span class="tag">적용</span>수를 바꾸며 2진법 자리 수가 언제 하나 늘어나는지 보세요. 그 수들에는 어떤 공통점이 있나요? 255를 2진법과 16진법으로 쓰고 네 자리씩 끊어 비교하세요.</li>
+            <li class="warn"><span class="tag">판단</span>"\(101\)"은 진법을 밝히지 않으면 십진법 백일인지 이진법 5인지 알 수 없습니다. \(101_{(2)}\)처럼 밑을 함께 적어야 합니다. 또 \(b\)진법에는 \(b\) 이상의 숫자가 나올 수 없습니다(2진법에 2는 없음).</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(1101\,0110_{(2)}\)을 16진법으로 나타내면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\mathrm{D6}_{(16)}\)<span class="why"><b>맞습니다.</b> \(1101 = 13 = \mathrm{D}\), \(0110 = 6\)입니다. 십진법으로 214입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(136_{(16)}\)<span class="why"><b>13을 한 자리로 쓰지 않았습니다.</b> 16진법에서는 D입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\mathrm{6D}_{(16)}\)<span class="why"><b>순서가 바뀌었습니다.</b> 앞의 네 자리가 높은 자리입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(214_{(16)}\)<span class="why"><b>십진법 값을 그대로 썼습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-2.html#card-dmath-binary-add"><small class="mono">이산 수학 3.2</small>이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?</a><a href="../../c/dmath/3-2.html#card-dmath-twos-comp"><small class="mono">이산 수학 3.2</small>8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?</a></div></nav>
+
+      <article class="card" id="card-dmath-binary-cards">
+        <header class="card-head">
+          <span class="no">3.1.2</span><h2>카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?</h2><span class="kind">이진법의 활용 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">1부터 63까지의 수 하나를 마음속으로 정하세요. 그 수가 있는 카드에 "있다"를 누르세요.</p>
+            <div class="deck" role="group" aria-label="숫자 카드 여섯 장"></div>
+            <div class="presets"><button class="chip go-reveal" type="button">마음속의 수 맞히기</button><button class="chip go-why" type="button" aria-pressed="false">비밀 보기</button><button class="chip go-reset" type="button">다시</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>마술사가 카드 여섯 장을 보여 주며 "당신의 수가 이 카드에 있나요?"라고만 묻고는 수를 맞힙니다. 카드의 수는 어떻게 고른 것이고, 마술사는 무슨 계산을 했을까요?</li>
+            <li><span class="tag">복원</span>모든 자연수는 2의 거듭제곱 \(1, 2, 4, 8, \ldots\)의 합으로 한 가지로만 나타낼 수 있습니다. 이것이 이진법 표기입니다.</li>
+            <li><span class="tag">설명</span>\(k\)번째 카드에는 이진법으로 썼을 때 \(2^{k-1}\)의 자리가 1인 수만 모여 있습니다. 그래서 "있다/없다"는 그 자리의 숫자 1/0이고, 여섯 번의 대답이 수의 이진법 여섯 자리를 그대로 알려 줍니다. 마술사는 "있다"고 한 카드의 첫 수(1, 2, 4, 8, 16, 32)를 더하기만 하면 됩니다. 카드 여섯 장으로 \(2^6 - 1 = 63\)개의 수를 구별할 수 있습니다.</li>
+            <li><span class="tag">연결</span>질문 하나가 "예/아니요" 한 비트의 정보를 줍니다. 앞 단원의 이진 탐색, 컴퓨터가 수를 저장하는 방식이 모두 같은 원리입니다.</li>
+            <li><span class="tag">적용</span>수를 하나 정해 마술을 해 보세요. 그다음 "비밀 보기"로 각 카드의 첫 수와 이진법 자리를 확인하세요. 수를 127까지 맞히려면 카드가 몇 장 필요할까요?</li>
+            <li class="warn"><span class="tag">판단</span>대답을 하나라도 잘못하면 그 자리의 2의 거듭제곱만큼 틀린 수가 나옵니다. 정보를 옮길 때 한 비트의 오류가 결과를 크게 바꿀 수 있어서, 실제 통신에서는 오류를 찾아내는 여분의 비트를 덧붙입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">첫째, 셋째, 다섯째 카드(첫 수 1, 4, 16)에만 "있다"고 답했다면 마음속의 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(21\)<span class="why"><b>맞습니다.</b> \(1 + 4 + 16 = 21 = 10101_{(2)}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(135\)<span class="why"><b>카드 번호를 이어 붙였습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(64\)<span class="why"><b>곱했습니다.</b> 자리의 값은 더합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(42\)<span class="why"><b>"없다"고 한 카드의 수를 더했습니다.</b> \(2 + 8 + 32 = 42\).</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/3-2.html#card-dmath-binary-add"><small class="mono">이산 수학 3.2</small>이진수의 덧셈과 곱셈은 왜 이렇게 단순할까?</a><a href="../../c/dmath/3-2.html#card-dmath-twos-comp"><small class="mono">이산 수학 3.2</small>8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/base-convert.js"></script>
+<script src="../../js/cards/dmath/binary-cards.js"></script>
+</body>
+</html>

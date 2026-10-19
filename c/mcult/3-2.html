@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>점자와 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="점 6개 한 칸으로 만드는 점자 모양 2⁶ − 1 = 63가지와 볼록한 점 개수별 ₆Cₖ, 8점 점자 255가지, 훈맹정음, 수표(점 3·4·5·6)와 위쪽 네 점으로 쓰는 점자 숫자 읽고 쓰기. 점자 경우의 수 카드와, 점자 숫자 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-braille-count .cellbox { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin: .4rem 0; }
+    #card-mcult-braille-count .cell { display: grid; grid-template-columns: repeat(2, 2.4rem); grid-template-rows: repeat(3, 2.4rem); gap: .3rem; padding: .5rem; border: 1px solid var(--rule, #d9dad2); border-radius: 8px; }
+    #card-mcult-braille-count .cell button { border-radius: 50%; border: 2px solid #8d8d92; background: transparent; font: 600 .75rem var(--mono, monospace); color: #8d8d92; padding: 0; }
+    #card-mcult-braille-count .cell button[aria-pressed="true"] { background: #232326; border-color: #232326; color: #fbfbf8; }
+    #card-mcult-braille-count table { border-collapse: collapse; font: .84rem var(--mono, monospace); }
+    #card-mcult-braille-count td, #card-mcult-braille-count th { border: 1px solid var(--rule, #d9dad2); padding: .15rem .45rem; text-align: center; }
+    #card-mcult-braille-count tr.on td { background: rgba(116,171,102,.25); font-weight: 700; }
+    #card-mcult-braille-number .line { display: flex; flex-wrap: wrap; gap: .55rem; margin: .5rem 0; min-height: 4.6rem; }
+    #card-mcult-braille-number .bc { display: grid; grid-template-columns: repeat(2, .9rem); grid-template-rows: repeat(3, .9rem); gap: .22rem; padding: .35rem .4rem; border: 1px solid var(--rule, #d9dad2); border-radius: 6px; position: relative; }
+    #card-mcult-braille-number .bc i { border-radius: 50%; border: 1px solid #c4c4c8; }
+    #card-mcult-braille-number .bc i.on { background: #232326; border-color: #232326; }
+    #card-mcult-braille-number .bc small { position: absolute; bottom: -1.15rem; left: 0; right: 0; text-align: center; font: .7rem var(--mono, monospace); color: #5d5d61; }
+    #card-mcult-braille-number .bc.sign { border-color: #b5532f; }
+    #card-mcult-braille-number input.num { font: 1rem var(--mono, monospace); width: 10rem; }
+    #card-mcult-braille-number .row2 { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
+    #card-mcult-braille-number .q2 { margin: 1.4rem 0 0; }
+    #card-mcult-braille-number .q2 .chip { display: inline-flex; margin: 0 0 0 .4rem; vertical-align: middle; }
+    #card-mcult-braille-number .line { min-height: 0; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="3-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>점자와 수학</h1>
+    <p class="lead">점자는 손끝으로 읽는 글자로, 시각 장애인의 정보 접근을 돕습니다. 점 6개의 볼록함과 평평함으로 만들어지므로, 나타낼 수 있는 글자의 수는 <em>경우의 수</em>로 계산됩니다. 이 절에서는 점자의 구조를 세어 보고, 점자 숫자를 직접 쓰고 읽어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/3-3.html#card-cm1-comb-group" title="공통수학1 3.3 · 순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?">조합</a><a class="p p-card" href="../../c/stat/1-1.html#card-stat-rep-perm" title="확률과 통계 1.1 · 같은 것을 여러 번 골라도 되면 경우의 수는 어떻게 될까?">경우의 수</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-braille-count"><span class="mono">3.2.1</span>점 여섯 개로 만들 수 있는 점자는 몇 가지? — 조합과 2의 거듭제곱</a></li>
+        <li><a href="#card-mcult-braille-number"><span class="mono">3.2.2</span>점자로 숫자 쓰고 읽기 — 수표와 위쪽 네 점</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mcult-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-3-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-braille-count">
+        <header class="card-head">
+          <span class="no">3.2.1</span><h2>점 여섯 개로 서로 다른 점자를 몇 가지 만들 수 있을까?</h2><span class="kind">조합과 경우의 수 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small"><b>예측</b>: 세로 3줄, 가로 2줄의 점 6개 중 일부를 볼록하게 만듭니다. 아무 점도 없는 칸을 빼면 몇 가지일까요?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="6">6가지</button><button class="chip" type="button" data-g="36">36가지</button><button class="chip" type="button" data-g="63">63가지</button><button class="chip" type="button" data-g="720">720가지</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="cellbox">
+              <div class="cell" role="group" aria-label="점자 한 칸, 점 번호 1~6"></div>
+              <table></table>
+            </div>
+            <p class="mono small say"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>점자는 손끝으로 읽는 글자입니다. 한 칸에 점이 6개 있고 각 점은 볼록하거나 평평합니다. 이것만으로 글자를 얼마나 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>곱의 법칙, 조합 \({}_n\mathrm{C}_r\).</li>
+            <li><span class="tag">설명</span>점마다 볼록 또는 평평의 2가지이므로 모양은 \(2^6 = 64\)가지이고, 빈 칸을 빼면 <em>63가지</em>입니다. 볼록한 점이 \(k\)개인 모양은 \({}_6\mathrm{C}_k\)가지이므로 \(\sum_{k=1}^{6} {}_6\mathrm{C}_k = 63\)으로 세어도 같습니다. 한글은 자음, 모음, 받침을 합치면 63가지로는 부족해서, 한국 점자(1926년 박두성의 훈맹정음에서 시작)는 첫소리와 받침을 다른 모양으로 쓰고 자주 쓰는 글자를 줄인 약자를 둡니다.</li>
+            <li><span class="tag">연결</span>한 칸에 8개의 점을 쓰는 점자도 있어 \(2^8 - 1 = 255\)가지 모양을 씁니다. 컴퓨터가 글자를 비트로 나타내는 방법과 같은 생각입니다.</li>
+            <li><span class="tag">적용</span>점을 눌러 모양을 만들고, 볼록한 점의 개수별로 몇 가지가 있는지 표에서 확인하세요. 왜 점 3개일 때가 가장 많을까요?</li>
+            <li class="warn"><span class="tag">판단</span>모양의 수가 많다고 좋은 것은 아닙니다. 손끝으로 구별하기 쉬우려면 칸의 크기와 점 사이 간격이 알맞아야 해서 점을 무작정 늘릴 수 없습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">점 8개짜리 칸에서 볼록한 점이 정확히 2개인 모양은 몇 가지일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>28<span class="why"><b>맞습니다.</b> \({}_8\mathrm{C}_2 = 28\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>56<span class="why"><b>순서를 따지는 순열 \({}_8\mathrm{P}_2\)입니다.</b> 점을 고르는 순서는 상관없습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>16<span class="why"><b>8 × 2입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>255<span class="why"><b>빈 칸을 뺀 모든 모양의 수입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-braille-number">
+        <header class="card-head">
+          <span class="no">3.2.2</span><h2>엘리베이터 버튼의 점자 숫자는 어떻게 읽을까?</h2><span class="kind">부호와 경우의 수 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <label class="small">숫자를 입력하면 점자로 바뀝니다. <input class="num" inputmode="numeric" maxlength="8" value="2026" aria-label="점자로 바꿀 숫자"></label>
+            <div class="line write" aria-live="polite"></div>
+            <p class="small q2"><b>읽기 도전</b>: 아래 점자는 어떤 수일까요? <button class="chip next" type="button">새 문제</button></p>
+            <div class="line read"></div>
+            <div class="row2"><input class="num ans" inputmode="numeric" maxlength="6" aria-label="읽은 숫자"><button class="chip go" type="button">확인</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>엘리베이터 버튼, 약 상자, 계단 손잡이에서 점자 숫자를 볼 수 있습니다. 점자는 숫자 10개를 어떻게 나타내고, 글자와는 어떻게 구별할까요?</li>
+            <li><span class="tag">복원</span>점자 한 칸은 점 6개(왼쪽 세로줄 1·2·3, 오른쪽 4·5·6)로 이루어집니다.</li>
+            <li><span class="tag">설명</span>점자 숫자 1~9, 0은 위쪽 네 점(1, 2, 4, 5)만으로 만듭니다. 1은 점 1, 2는 점 1·2, 3은 점 1·4처럼 정해져 있습니다. 네 점으로는 빈 칸을 빼고 \(2^4 - 1 = 15\)가지를 만들 수 있어 10개의 숫자에 충분합니다. 다만 같은 모양이 다른 뜻(영문자 등)으로도 쓰이므로, 숫자 앞에 <em>수표</em>(점 3·4·5·6)를 붙여 "여기부터 숫자"임을 알립니다. 여러 자리 수는 수표 하나 뒤에 숫자를 이어 씁니다.</li>
+            <li><span class="tag">연결</span>같은 모양에 다른 뜻을 주고 앞에 표시를 붙이는 방법은 컴퓨터 부호, 모스 부호에서도 쓰입니다.</li>
+            <li><span class="tag">적용</span>여러분의 생일이나 교실 번호를 점자로 바꿔 보세요. 읽기 도전을 세 번 연속 맞혀 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>점자 표기는 나라와 규정에 따라 다를 수 있습니다. 실제로 점자를 만들 때는 한국 점자 규정을 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">점 1, 2, 4, 5 네 개만 쓴다면 빈 칸을 빼고 최대 몇 가지 모양을 만들 수 있을까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>15<span class="why"><b>맞습니다.</b> \(2^4 - 1 = 15\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>16<span class="why"><b>빈 칸까지 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>10<span class="why"><b>실제로 숫자에 쓰는 개수입니다.</b> 만들 수 있는 최대 개수는 더 많습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>24<span class="why"><b>4!로 계산했습니다.</b> 점마다 볼록·평평 2가지입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/braille-count.js"></script>
+<script src="../../js/cards/mcult/braille-number.js"></script>
+</body>
+</html>

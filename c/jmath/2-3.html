@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대응 관계와 규칙 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="대응표를 만들어 규칙 찾기, 테두리 타일 수 4n + 4를 여러 방법으로 세기, 근무 시간과 급여의 대응(야간 가산), 변수의 범위. 타일 규칙을 식으로 만드는 카드와, 급여 대응 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-tile-pattern canvas { aspect-ratio: 1 / 1; max-width: 320px; width: 100%; margin: 0 auto; display: block; }
+    #card-jmath-tile-pattern .ctl-row > div { min-width: 10rem; }
+    #card-jmath-tile-pattern table { border-collapse: collapse; font-size: .86rem; margin: .4rem 0; font-family: var(--mono, monospace); }
+    #card-jmath-tile-pattern td, #card-jmath-tile-pattern th { border: 1px solid var(--rule, #d9dad2); padding: .15rem .5rem; text-align: center; }
+    #card-jmath-tile-pattern .rule input { width: 3.5rem; }
+    #card-jmath-pay-table canvas { aspect-ratio: 16 / 9; max-width: 560px; width: 100%; margin: 0 auto; display: block; }
+    #card-jmath-pay-table .ctl-row > div { min-width: 11rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="2-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>대응 관계와 규칙</h1>
+    <p class="lead">한 양이 정해지면 다른 양이 하나씩 정해지는 관계를 <em>대응 관계</em>라 합니다. 대응표를 만들고 규칙을 찾아 식으로 나타내면, 표에 없는 경우도 바로 계산할 수 있습니다. 이 절에서는 타일 시공과 근무 급여에서 규칙을 찾아 식으로 만듭니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-linear-graph" title="중학교 개념 설명 보기">일차함수의 그래프</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-tile-pattern"><span class="mono">2.3.1</span>테두리 타일 수의 규칙을 식으로 만들기</a></li>
+        <li><a href="#card-jmath-pay-table"><span class="mono">2.3.2</span>근무 시간과 급여의 대응, 야간 1.5배</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=jmath-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-2-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-tile-pattern">
+        <header class="card-head">
+          <span class="no">2.3.1</span><h2>정사각형 바닥 둘레에 까는 테두리 타일은 몇 장일까?</h2><span class="kind">대응 관계와 규칙 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">가운데에 한 변이 \(n\)장인 정사각형 바닥 타일을 깔고, 그 둘레를 한 줄의 테두리 타일로 두릅니다(타일 시공 예시).</p>
+            <div class="ctl-row"><div><label class="mono">n = <output class="n-out"></output></label><input class="n" type="range" min="1" max="10" step="1" value="3" aria-label="가운데 정사각형 한 변의 타일 수"></div></div>
+            <canvas aria-label="가운데 바닥 타일(파랑)과 테두리 타일(주황)"></canvas>
+            <table aria-label="n과 테두리 타일 수의 대응표"></table>
+            <p class="rule small">내가 찾은 규칙: 테두리 타일 수 = <input type="number" class="ka" value="2" aria-label="n의 계수"> × n + <input type="number" class="kb" value="0" aria-label="상수항"> <button class="chip go-check" type="button">확인</button></p>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>타일 시공자는 바닥 크기만 듣고 테두리 타일 수를 바로 계산합니다. 한 변이 \(n\)장일 때 테두리 타일 수를 식으로 나타낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>두 양 \(x, y\)가 짝지어 변할 때, \(x\)의 값마다 \(y\)의 값이 하나씩 정해지면 대응 관계라 하고 \(y = ax + b\)처럼 식으로 나타낼 수 있습니다.</li>
+            <li><span class="tag">설명</span>표를 만들면 \(n = 1, 2, 3, \ldots\)일 때 테두리 타일이 8, 12, 16, …으로 4씩 늡니다. 네 변에 \(n\)장씩, 네 모서리에 1장씩이므로 \(4n + 4\)입니다. 같은 수를 \(4(n + 1)\)이나 \((n + 2)^2 - n^2\)처럼 다르게 셀 수도 있고, 모두 같은 식입니다. 일정하게 늘어나는 양은 일차식으로 나타낼 수 있습니다.</li>
+            <li><span class="tag">연결</span>의자 배치, 울타리 기둥 수, 계단 수처럼 규칙이 있는 배치는 대응표를 만든 뒤 식으로 일반화합니다. 다음 카드에서는 근무 시간과 급여의 대응을 다룹니다.</li>
+            <li><span class="tag">적용</span>규칙을 식으로 적어 확인해 보세요. 한 변이 25장인 바닥에는 테두리 타일이 몇 장 필요할까요?</li>
+            <li class="warn"><span class="tag">판단</span>모서리를 두 번 세거나 빼먹는 실수가 흔합니다. 작은 경우(\(n = 1\))를 직접 세어 식이 맞는지 확인하면 실수를 잡을 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">테두리를 두 줄로 두르면 한 변이 \(n\)장인 바닥에 필요한 테두리 타일 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(8n + 16\)<span class="why"><b>맞습니다.</b> \((n + 4)^2 - n^2 = 8n + 16\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(8n + 8\)<span class="why"><b>한 줄짜리를 두 배 했습니다.</b> 바깥 줄은 안쪽 줄보다 깁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(4n + 8\)<span class="why"><b>\(n = 1\)일 때 직접 세어 확인해 보세요(24장).</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(n^2 + 4\)<span class="why"><b>바닥 타일과 섞였습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/2-4.html#card-jmath-tank-graph"><small class="mono">직무 수학 2.4</small>모양이 다른 물통에 같은 빠르기로 물을 넣으면 수위 그래프는 어떻게 다를까?</a><a href="../../c/jmath/2-4.html#card-jmath-delivery-graph"><small class="mono">직무 수학 2.4</small>배달 기사의 거리–시간 그래프에서 무엇을 읽을 수 있을까?</a><a href="../../c/jmath/2-5.html#card-jmath-rent-or-buy"><small class="mono">직무 수학 2.5</small>장비를 며칠 이상 쓰면 빌리는 것보다 사는 것이 나을까?</a><a href="../../c/jmath/2-5.html#card-jmath-dilution"><small class="mono">직무 수학 2.5</small>원액을 물에 얼마나 섞어야 원하는 농도가 될까?</a></div></nav>
+
+      <article class="card" id="card-jmath-pay-table">
+        <header class="card-head">
+          <span class="no">2.3.2</span><h2>밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?</h2><span class="kind">대응 관계와 규칙 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">시급 = <output class="w-out"></output>원</label><input class="w" type="range" min="9000" max="15000" step="100" value="10000" aria-label="시급"></div>
+              <div><label class="mono">하루 근무 = <output class="h-out"></output>시간</label><input class="h" type="range" min="1" max="10" step="1" value="8" aria-label="하루 근무 시간"></div>
+              <div><label class="mono">그중 야간 = <output class="nt-out"></output>시간</label><input class="nt" type="range" min="0" max="10" step="1" value="2" aria-label="야간 근무 시간"></div>
+            </div>
+            <canvas aria-label="야간 시간 수에 따른 하루 급여 그래프(근무 시간 고정)"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">시급과 "야간 시간은 1.5배"라는 조건은 수업용 가정입니다. 실제 근로 조건은 법과 계약에 따릅니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>편의점에서 하루 8시간 일하는데 그중 일부가 야간 시간이면 1.5배를 받습니다. 야간 시간이 1시간 늘 때마다 하루 급여는 얼마씩 늘까요?</li>
+            <li><span class="tag">복원</span>\(y = ax + b\)에서 \(x\)가 1 늘면 \(y\)는 \(a\)만큼 늡니다.</li>
+            <li><span class="tag">설명</span>근무 시간 8시간 중 야간 \(x\)시간, 주간 \((8 - x)\)시간이면 급여는 \(y = 10000(8 - x) + 15000x = 80000 + 5000x\)입니다. 야간 1시간은 주간 1시간을 대신하므로 늘어나는 것은 15000원이 아니라 차이인 5000원입니다. 대응표를 만들어 보면 \(y\)가 5000원씩 일정하게 늘어 그래프가 직선이 됩니다.</li>
+            <li><span class="tag">연결</span>택시 요금, 주차 요금, 휴대폰 요금처럼 기본값과 단위당 값이 있는 대응은 모두 일차식입니다. 다음 절에서는 변화를 그래프로 읽습니다.</li>
+            <li><span class="tag">적용</span>시급과 근무 시간을 바꿔 가며 야간 1시간당 늘어나는 금액을 확인하세요. 그 금액은 무엇에 따라 정해지나요?</li>
+            <li class="warn"><span class="tag">판단</span>야간 시간이 하루 근무 시간을 넘을 수는 없습니다. 식은 \(0 \le x \le 8\)에서만 의미가 있습니다. 대응 관계의 식을 쓸 때는 변수의 범위도 함께 정해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">시급 12000원, 하루 6시간 중 야간 \(x\)시간(1.5배)일 때 하루 급여의 식은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(72000 + 6000x\)<span class="why"><b>맞습니다.</b> \(12000(6 - x) + 18000x\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(72000 + 18000x\)<span class="why"><b>주간 시간이 줄어드는 것을 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(108000x\)<span class="why"><b>모든 시간을 야간으로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(72000 + 1.5x\)<span class="why"><b>배율을 금액으로 썼습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/jmath/1-1.html#card-jmath-cafe-bill"><small class="mono">직무 수학 1.1</small>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</a><a href="../../c/jmath/1-1.html#card-jmath-recipe-scale"><small class="mono">직무 수학 1.1</small>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/2-4.html#card-jmath-tank-graph"><small class="mono">직무 수학 2.4</small>모양이 다른 물통에 같은 빠르기로 물을 넣으면 수위 그래프는 어떻게 다를까?</a><a href="../../c/jmath/2-4.html#card-jmath-delivery-graph"><small class="mono">직무 수학 2.4</small>배달 기사의 거리–시간 그래프에서 무엇을 읽을 수 있을까?</a><a href="../../c/jmath/2-5.html#card-jmath-rent-or-buy"><small class="mono">직무 수학 2.5</small>장비를 며칠 이상 쓰면 빌리는 것보다 사는 것이 나을까?</a><a href="../../c/jmath/2-5.html#card-jmath-dilution"><small class="mono">직무 수학 2.5</small>원액을 물에 얼마나 섞어야 원하는 농도가 될까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/tile-pattern.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/jmath/pay-table.js"></script>
+</body>
+</html>

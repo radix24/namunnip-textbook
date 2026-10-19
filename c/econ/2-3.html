@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>효용함수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="효용과 효용함수, 한계효용 체감, 예산 안에서 1원당 한계효용을 비교하는 선택, 무차별곡선과 예산선, 접점에서의 최적 소비 x* = aM/pₓ. 두 상품의 조합을 고르는 카드와, 예산선 위에서 접점을 찾는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-econ-marginal-utility .goods { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .5rem; }
+    #card-econ-marginal-utility .good { border: 1px solid var(--rule, #d9dad2); border-radius: 8px; padding: .45rem .6rem; }
+    #card-econ-marginal-utility .good .row { display: flex; align-items: center; gap: .4rem; margin: .3rem 0; }
+    #card-econ-marginal-utility .good .cnt { font-weight: 700; min-width: 1.5rem; text-align: center; }
+    #card-econ-marginal-utility canvas { aspect-ratio: 16 / 7; width: 100%; display: block; margin-top: .4rem; }
+    #card-econ-indifference canvas { aspect-ratio: 1 / 0.85; max-width: 460px; width: 100%; margin: 0 auto; display: block; }
+    #card-econ-indifference .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="econ" data-sec="2-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>효용함수</h1>
+    <p class="lead">소비에서 얻는 만족을 수로 나타낸 것을 <em>효용</em>이라 하고, 소비량과 효용의 관계를 <em>효용함수</em>라 합니다. 예산이 정해져 있을 때 효용을 가장 크게 하는 소비 조합을 찾는 것이 이 절의 문제입니다. 한계효용을 비교하는 방법과, 무차별곡선과 예산선의 접점을 찾는 방법을 함께 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm2/3-1.html#card-cm2-func-graph" title="공통수학2 3.1 · 그래프만 보고 함수인지 알 수 있을까?">함수와 그래프</a><button type="button" class="p p-basic" data-basic="b-p-inverse-proportion" title="중학교 개념 설명 보기">반비례 그래프</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-econ-marginal-utility"><span class="mono">2.3.1</span>용돈 1만 원으로 만족을 가장 크게</a></li>
+        <li><a href="#card-econ-indifference"><span class="mono">2.3.2</span>예산선과 무차별곡선이 맞닿는 점</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=econ-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=econ-2-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-econ-marginal-utility">
+        <header class="card-head">
+          <span class="no">2.3.1</span><h2>용돈 1만 원으로 떡볶이와 음료를 어떻게 사야 가장 만족스러울까?</h2><span class="kind">효용함수와 한계효용 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="goods"></div>
+            <canvas aria-label="두 상품의 한계효용 막대와 1000원당 한계효용"></canvas>
+            <p class="verdict" role="status"></p>
+            <p class="fig-note">만족도(효용) 점수는 한 학생을 가정해 정한 가상 값입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>떡볶이 1인분은 2000원, 음료 1잔은 1000원입니다. 용돈 1만 원을 다 쓸 때, 떡볶이만 5인분 사는 것보다 나은 방법이 있을까요?</li>
+            <li><span class="tag">복원</span>수열의 차 \(a_{n+1} - a_n\)이 점점 작아지면 수열은 증가하더라도 점점 느리게 증가합니다.</li>
+            <li><span class="tag">설명</span>소비에서 얻는 만족을 수로 나타낸 것을 <em>효용</em>, 소비량과 효용의 관계를 <em>효용함수</em>라 합니다. 하나 더 소비할 때 늘어나는 효용이 <em>한계효용</em>이고, 대부분 소비할수록 줄어듭니다(한계효용 체감). 예산이 정해져 있을 때는 <em>1원당 한계효용</em>이 큰 쪽부터 사는 것이 좋고, 최적일 때는 두 상품의 1원당 한계효용이 거의 같아집니다: \(\dfrac{MU_A}{P_A} \approx \dfrac{MU_B}{P_B}\).</li>
+            <li><span class="tag">연결</span>다음 카드에서는 효용함수를 연속인 식으로 놓고 같은 효용을 주는 조합(무차별곡선)과 예산선이 만나는 점을 찾습니다. 4단원의 미분을 쓰면 한계효용은 효용함수의 도함수입니다.</li>
+            <li><span class="tag">적용</span>+, − 단추로 1만 원 안에서 조합을 바꿔 총효용이 가장 큰 조합을 찾으세요. 그때 두 상품의 1000원당 한계효용을 비교해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>가장 좋아하는 것(첫 그릇의 효용이 가장 큰 것)만 사는 것이 최선은 아닙니다. 많이 살수록 한계효용이 줄어들기 때문입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">사과 1개 500원의 한계효용이 10, 배 1개 1000원의 한계효용이 30입니다. 다음 1000원은 어디에 쓰는 것이 좋을까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>배 1개<span class="why"><b>맞습니다.</b> 1000원당 한계효용이 사과는 20, 배는 30입니다(다음 사과의 한계효용은 더 작아질 수도 있습니다).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>사과 2개<span class="why"><b>개수가 많다고 효용이 큰 것은 아닙니다.</b> 많아야 20입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>차이 없음<span class="why"><b>1원당 한계효용이 다릅니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>알 수 없음<span class="why"><b>한계효용과 가격으로 비교할 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/3-1.html#card-cm2-func-map"><small class="mono">공통수학2 3.1</small>어떤 대응을 함수라고 부를까?</a><a href="../../c/cm2/3-1.html#card-cm2-func-graph"><small class="mono">공통수학2 3.1</small>그래프만 보고 함수인지 알 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-econ-indifference">
+        <header class="card-head">
+          <span class="no">2.3.2</span><h2>예산선 위에서 만족이 가장 큰 점은 어떻게 생겼을까?</h2><span class="kind">효용함수와 무차별곡선 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">한 달 문화비 6만 원으로 영화(편)와 책(권)을 삽니다. 효용함수는 \(U = x^{0.4}y^{0.6}\)(\(x\): 영화, \(y\): 책)이라고 가정합니다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">영화 <output class="x-out"></output>편 고르기</label><input class="x" type="range" min="0.2" max="5.8" step="0.1" value="1" aria-label="예산선 위에서 고른 영화 편수"></div>
+              <div><label class="mono">영화 가격 = <output class="px-out"></output>원</label><input class="px" type="range" min="5000" max="20000" step="500" value="10000" aria-label="영화 가격"></div>
+            </div>
+            <canvas aria-label="예산선과 고른 점을 지나는 무차별곡선"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">책 1권 1만 원, 효용함수의 지수는 가상의 값입니다. 편수와 권수는 평균으로 보아 소수도 허용합니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>영화만 6편, 책만 6권, 반반… 예산 안에서 고를 수 있는 조합은 많습니다. 그중 만족이 가장 큰 조합은 그래프에서 어떤 특징이 있을까요?</li>
+            <li><span class="tag">복원</span>두 상품의 가격이 \(p_x, p_y\), 예산이 \(M\)이면 예산선은 \(p_x x + p_y y = M\)인 직선입니다.</li>
+            <li><span class="tag">설명</span>효용이 같은 조합들을 이은 곡선을 <em>무차별곡선</em>이라 합니다. 오른쪽 위에 있는 무차별곡선일수록 효용이 큽니다. 예산선 위의 점 가운데 가장 바깥의 무차별곡선에 닿는 점, 곧 <em>예산선과 무차별곡선이 접하는 점</em>이 최적의 소비 조합입니다. \(U = x^a y^{1 - a}\)이면 이 점은 \(x^* = \dfrac{aM}{p_x}\), \(y^* = \dfrac{(1 - a)M}{p_y}\)이고, 예산의 \(a\)만큼을 \(x\)에 씁니다.</li>
+            <li><span class="tag">연결</span>접점에서는 무차별곡선의 기울기와 예산선의 기울기 \(-\frac{p_x}{p_y}\)가 같습니다. 앞 카드의 "1원당 한계효용이 같아진다"는 조건과 같은 내용입니다.</li>
+            <li><span class="tag">적용</span>막대로 예산선 위의 점을 움직여 무차별곡선이 예산선에 접하는 점을 찾으세요. 영화 가격을 올리면 최적의 영화 편수와 책 권수는 각각 어떻게 바뀌나요?</li>
+            <li class="warn"><span class="tag">판단</span>예산선이 무차별곡선을 가로지르는 점에서는 예산선을 따라 조금 움직이면 더 바깥의 곡선으로 갈 수 있으므로 최적이 아닙니다. 효용의 숫자 자체보다 순서(어느 쪽이 더 큰가)가 중요합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(U = x^{0.5}y^{0.5}\), 예산 4만 원, \(x\)의 가격 5000원, \(y\)의 가격 1만 원일 때 최적의 \(x\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4<span class="why"><b>맞습니다.</b> 예산의 절반 2만 원을 \(x\)에 쓰므로 \(20000 / 5000 = 4\)입니다(이때 \(y = 2\)).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>2<span class="why"><b>\(y\)의 값입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>8<span class="why"><b>예산을 모두 \(x\)에 썼습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{8}{3}\)<span class="why"><b>두 재화를 같은 개수로 샀습니다.</b> 이 효용함수에서는 같은 금액을 씁니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/3-1.html#card-cm2-func-map"><small class="mono">공통수학2 3.1</small>어떤 대응을 함수라고 부를까?</a><a href="../../c/cm2/3-1.html#card-cm2-func-graph"><small class="mono">공통수학2 3.1</small>그래프만 보고 함수인지 알 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=econ-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/econ/marginal-utility.js"></script>
+<script src="../../js/cards/econ/indifference.js"></script>
+</body>
+</html>

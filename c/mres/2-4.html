@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 연구 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="갑이 이기는 합의 경우의 수를 18/36으로 맞추는 공정한 주사위 게임 설계·1000판 모의 시험·기록, 소수 찾기 방법 1(모두 나누기)·방법 2(√n까지)·방법 3(에라토스테네스의 체)의 계산 횟수 비교. 게임 개발 카드와, 소수 알고리즘 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mres-fair-game-design .sums { display: grid; grid-template-columns: repeat(11, 1fr); gap: .25rem; margin: .4rem 0; }
+    #card-mres-fair-game-design .sums button { padding: .35rem 0; border: 1px solid var(--rule, #d9dad2); border-radius: 6px; background: transparent; font: 600 .9rem var(--mono, monospace); }
+    #card-mres-fair-game-design .sums button[aria-pressed="true"] { background: rgba(181,83,47,.2); border-color: #b5532f; }
+    #card-mres-fair-game-design .sums small { display: block; font-weight: 400; font-size: .68rem; color: #5d5d61; }
+    #card-mres-fair-game-design ol.log { font: .8rem var(--mono, monospace); max-height: 7rem; overflow-y: auto; padding-left: 1.4rem; margin: .3rem 0 0; }
+    #card-mres-prime-algorithm canvas { aspect-ratio: 16 / 7; max-width: 600px; margin: .3rem auto 0; }
+    #card-mres-prime-algorithm .ctl-row > div { min-width: 14rem; }
+  </style>
+</head>
+<body data-course="mres" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>개발 연구</h1>
+    <p class="lead"><em>개발 연구</em>는 게임, 교구, 프로그램, 계산 방법처럼 쓸모 있는 산출물을 만들고 성능을 확인해 고쳐 나가는 탐구입니다. 설계의 근거를 수학으로 세우고, 시험한 결과를 기록하며, 더 나은 방법과 비교합니다. 이 절에서는 공정한 게임과 빠른 소수 찾기 방법을 직접 개발해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/stat/1-1.html#card-stat-rep-perm" title="확률과 통계 1.1 · 같은 것을 여러 번 골라도 되면 경우의 수는 어떻게 될까?">경우의 수</a><a class="p p-card" href="../../c/cm1/1-2.html#card-cm1-remainder" title="공통수학1 1.2 · 나누어 보지 않고 나머지를 알 수 있을까?">나머지</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mres-fair-game-design"><span class="mono">2.4.1</span>설계 → 시험 → 수정 — 공정한 주사위 게임 개발하기</a></li>
+        <li><a href="#card-mres-prime-algorithm"><span class="mono">2.4.2</span>소수 찾기 방법을 개선하면 계산이 얼마나 줄까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mres-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mres-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mres-fair-game-design">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</h2><span class="kind">개발 연구 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">두 주사위의 합이 빨간색으로 고른 수이면 갑이, 아니면 을이 이깁니다. 합을 눌러 고르세요(아래 작은 수: 36가지 중 경우의 수).</p>
+            <div class="sums" role="group" aria-label="갑이 이기는 합"></div>
+            <div class="presets"><button class="chip test" type="button">1000판 시험하기</button><button class="chip clear" type="button">모두 지우기</button></div>
+            <p class="verdict" role="status"></p>
+            <ol class="log" aria-label="개발 기록"></ol>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>학급 행사에 쓸 공정한 주사위 게임을 만들려고 합니다. 규칙을 정하고, 시험해 보고, 고치는 과정을 어떻게 진행할까요?</li>
+            <li><span class="tag">복원</span>두 주사위의 합의 경우의 수: 2와 12는 1가지, 7은 6가지.</li>
+            <li><span class="tag">설명</span><em>개발 연구</em>는 쓸모 있는 산출물(게임, 교구, 프로그램, 계산 방법)을 만들고 그 성능을 확인해 고쳐 나가는 탐구입니다. 여기서는 갑이 이기는 합의 경우의 수가 정확히 \(\frac{36}{2} = 18\)이 되도록 고르면 공정한 게임이 됩니다. 예를 들어 {7, 8, 9, 10}은 6 + 5 + 4 + 3 = 18입니다. 이론으로 설계한 뒤 <em>모의 시험</em>으로 확인하고, 결과를 기록하며 고쳐 나갑니다.</li>
+            <li><span class="tag">연결</span>보드게임, 학습 앱, 측정 도구 만들기 같은 탐구가 개발 연구에 해당합니다. 산출물과 함께 설계 근거와 시험 결과를 보고합니다.</li>
+            <li><span class="tag">적용</span>공정한 규칙을 세 가지 이상 찾아 기록하세요. 7을 포함하지 않는 공정한 규칙도 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>1000판 시험에서 갑이 49%를 이겼다고 불공정한 것은 아닙니다. 모의 시험 결과는 흔들리므로 이론값과 함께 판단합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">갑이 이기는 합을 {2, 3, 4, 10, 11, 12}로 정했습니다. 갑이 이길 확률은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{12}{36} = \frac13\)<span class="why"><b>맞습니다.</b> 1 + 2 + 3 + 3 + 2 + 1 = 12입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{6}{11}\)<span class="why"><b>합 11가지가 똑같이 나온다고 보았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac12\)<span class="why"><b>합의 개수가 절반이라고 확률이 절반은 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{6}{36}\)<span class="why"><b>합마다 경우의 수가 다릅니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/2-3.html#card-mres-buffon-needle"><small class="mono">수학과제 탐구 2.3</small>평행선 위에 바늘을 떨어뜨리기만 해서 원주율 π를 구할 수 있을까?</a><a href="../../c/mres/2-3.html#card-mres-trials-error"><small class="mono">수학과제 탐구 2.3</small>주사위 두 개의 합이 7일 확률을 실험으로 구한다면, 몇 번 던져야 할까?</a></div></nav>
+
+      <article class="card" id="card-mres-prime-algorithm">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</h2><span class="kind">개발 연구와 효율 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">N = <output class="n-out"></output></label><input class="n" type="range" min="2" max="4.7" step="0.01" value="3" aria-label="N(로그 눈금)"></div></div>
+            <canvas aria-label="세 방법의 계산 횟수 막대(로그 눈금)"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>소수를 찾는 프로그램을 만들었는데 N이 커지자 너무 느립니다. 방법을 어떻게 고치면 계산 횟수를 줄일 수 있을까요?</li>
+            <li><span class="tag">복원</span>약수와 배수, 합성수 \(n = ab\)이면 \(a, b\) 중 하나는 \(\sqrt n\) 이하.</li>
+            <li><span class="tag">설명</span>방법 1은 각 수 \(n\)을 2부터 \(n - 1\)까지 모두 나누어 봅니다. 방법 2는 합성수라면 \(\sqrt n\) 이하의 약수가 반드시 있다는 성질을 써서 \(\sqrt n\)까지만, 약수를 찾으면 바로 멈춥니다. 방법 3인 <em>에라토스테네스의 체</em>는 나누는 대신 \(\sqrt N\) 이하의 각 소수의 배수를 지워 나갑니다. 같은 결과를 내면서 계산 횟수가 크게 줄어드는 것을 측정해 비교하는 것도 개발 연구입니다.</li>
+            <li><span class="tag">연결</span>암호(공개 키 암호)는 큰 소수를 빠르게 찾고, 큰 수를 소인수분해하기는 어렵다는 성질에 기대고 있습니다.</li>
+            <li><span class="tag">적용</span>N을 10배로 늘릴 때마다 세 방법의 계산 횟수는 각각 몇 배쯤 늘어나나요?</li>
+            <li class="warn"><span class="tag">판단</span>계산 횟수 비교는 '나눗셈 한 번', '지우기 한 번'을 같은 비용으로 본 단순한 모형입니다. 실제 실행 시간은 컴퓨터와 구현에 따라 다를 수 있음을 함께 밝힙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">97이 소수인지 방법 2로 확인하려면 어떤 수까지 나누어 보면 될까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>9까지(실제로는 2, 3, 5, 7)<span class="why"><b>맞습니다.</b> \(\sqrt{97} \approx 9.8\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>96까지<span class="why"><b>방법 1입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>48까지<span class="why"><b>절반까지는 필요 없습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3까지<span class="why"><b>5, 7로 나누어지는 수도 확인해야 합니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/2-3.html#card-mres-buffon-needle"><small class="mono">수학과제 탐구 2.3</small>평행선 위에 바늘을 떨어뜨리기만 해서 원주율 π를 구할 수 있을까?</a><a href="../../c/mres/2-3.html#card-mres-trials-error"><small class="mono">수학과제 탐구 2.3</small>주사위 두 개의 합이 7일 확률을 실험으로 구한다면, 몇 번 던져야 할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=mres-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mres/fair-game-design.js"></script>
+<script src="../../js/cards/mres/prime-algorithm.js"></script>
+</body>
+</html>

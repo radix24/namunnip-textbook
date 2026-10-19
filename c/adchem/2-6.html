@@ -47,10 +47,11 @@
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
         <li><a href="#card-labchem-solution"><span class="mono">2.6.1</span>0.100 M 용액 100 mL를 만들 때 어떤 실수가 농도를 가장 크게 바꿀까?</a></li>
-        <li><a href="#card-adchem-solubility"><span class="mono">2.6.2</span>농도 단위와 용해도의 온도 의존성</a></li>
-        <li><a href="#card-chem-soda"><span class="mono">2.6.3</span>탄산음료 뚜껑을 열면 왜 거품이 날까?</a></li>
+        <li><a href="#card-chem-soda"><span class="mono">2.6.2</span>탄산음료 뚜껑을 열면 왜 거품이 날까?</a></li>
+        <li><a href="#card-adchem-solubility"><span class="mono">2.6.3</span>농도 단위와 용해도의 온도 의존성</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adchem-2-6"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=adchem-2-6">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
@@ -104,9 +105,53 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/4-2.html#card-chem-molar-lab"><small class="mono">화학 4.2</small>정확히 0.100 M 용액을 만들려면?</a><a href="../../c/chem/4-2.html#card-chem-dilution"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/labchem/1-2.html#card-labchem-tools"><small class="mono">화학 실험 1.2</small>25 mL를 옮길 때 비커, 실린더, 피펫 가운데 무엇을 써야 할까?</a></div></nav>
 
+      <article class="card" id="card-chem-soda">
+        <header class="card-head">
+          <span class="no">2.6.2</span><h2>탄산음료 뚜껑을 열면 왜 거품이 날까?</h2><span class="kind">CO₂ 용해 평형 · 헨리 법칙</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="탄산음료 병과 녹아 있는 이산화 탄소 양의 시간 그래프"></canvas>
+            <div class="ctl">
+              <label class="mono">온도 = <output class="temp-out">5</output> °C</label>
+              <input class="temp" type="range" min="0" max="40" step="1" value="5" aria-label="온도">
+              <div class="presets">
+                <button class="btn lid" type="button">뚜껑 열기</button>
+                <button class="chip fresh" type="button">새 병</button>
+              </div>
+              <dl class="nums">
+                <div><dt>윗공간 CO₂ 압력</dt><dd class="p">—</dd></div>
+                <div><dt>녹아 있는 CO₂</dt><dd class="c">—</dd></div>
+                <div><dt>이 압력의 평형 용해량</dt><dd class="s">—</dd></div>
+              </dl>
+              <p class="fig-note msg" aria-live="polite"></p>
+              <p class="fig-note">500 mL 병(음료 475 mL)에 CO₂ 3.3 g을 넣은 경우. 헨리 상수는 실제 값(25 °C에서 0.034 mol/L·atm)과 온도 의존성을 썼습니다. 김이 빠지는 빠르기와 거품은 모식이며, 실제로는 몇 시간에 걸쳐 일어납니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>밀봉한 탄산음료에는 거품이 없습니다. 뚜껑을 여는 순간 거품이 솟는 까닭은 무엇일까요? 미지근한 음료가 더 요란한 까닭은요?</li>
+            <li><span class="tag">복원</span>기체는 물에 녹았다가 다시 빠져나오기도 합니다. <span class="formula">CO₂(g) ⇌ CO₂(aq)</span>. 닫힌 병에서는 이 둘이 동적 평형을 이룹니다.</li>
+            <li><span class="tag">설명</span>평형에서 녹는 양은 기체의 압력에 비례합니다(헨리 법칙). <span class="formula">[CO₂(aq)] = k<sub>H</sub> · P<sub>CO₂</sub></span>. 이것이 이 평형의 평형 상수 식입니다. 병 속은 2~4기압이지만, 뚜껑을 열면 CO₂ 분압이 공기 중의 0.0004기압으로 떨어집니다.</li>
+            <li><span class="tag">연결</span>압력이 떨어지면 지금 녹아 있는 양이 평형 용해량보다 훨씬 많아집니다. 평형이 CO₂(g) 쪽으로 이동하며 녹아 있던 CO₂가 기포로 나옵니다. 또 CO₂가 녹는 과정은 발열이라, 온도가 오르면 k<sub>H</sub>가 작아져 덜 녹습니다.</li>
+            <li><span class="tag">적용</span>5 °C에서 뚜껑을 열고 거품을 보세요. 새 병으로 바꾼 뒤 온도를 30 °C로 올리고 기다리면, 밀봉한 상태의 압력은 몇 기압까지 오르나요? 그 상태에서 열면 거품은 어떤가요?</li>
+            <li class="warn"><span class="tag">판단</span>“뚜껑을 열면 CO₂가 한꺼번에 다 빠진다”는 틀립니다. 평형으로 가는 데 시간이 걸리므로 열린 음료는 한동안 과포화 상태로 남습니다. 흔들면 기포가 생길 자리가 많아져 이 과정이 빨라질 뿐, 평형의 위치가 바뀌는 것은 아닙니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">김이 반쯤 빠진 탄산음료의 뚜껑을 꼭 닫아 두었습니다. 병 속에서 일어나는 일로 옳은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>닫는 순간 처음의 압력으로 되돌아간다.<span class="why"><b>이미 빠져나간 CO₂는 돌아오지 않습니다.</b> 남은 CO₂만으로 새 평형을 이루므로 압력은 처음보다 낮습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>CO₂가 조금 더 빠져나와 윗공간 압력이 오르다가, 녹는 속도와 빠져나오는 속도가 같아지면 멈춘다.<span class="why"><b>맞습니다.</b> 윗공간의 압력이 오를수록 다시 녹는 속도도 커져, 새 평형에서 멈춥니다. 카드에서 ‘다시 닫기’를 눌러 확인해 보세요.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>닫아도 계속 김이 빠져 결국 CO₂가 하나도 남지 않는다.<span class="why"><b>열린 병의 이야기입니다.</b> 닫힌 병에서는 빠져나온 CO₂가 윗공간에 쌓여 평형이 이루어집니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/3-2.html#card-chem-k-hi"><small class="mono">화학 3.2</small>평형 상수는 무엇을 알려 줄까?</a><a href="../../c/chem/3-2.html#card-chem-k-solid"><small class="mono">화학 3.2</small>평형 상수 식에는 왜 고체가 빠질까?</a><a href="../../c/chem/3-3.html#card-chem-qk"><small class="mono">화학 3.3</small>Q와 K를 비교하면 무엇을 알 수 있을까?</a><a href="../../c/chem/1-1.html#card-chem-haber"><small class="mono">화학 1.1</small>하버–보슈법은 어떻게 인류를 먹여 살렸을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/rxn/1-5.html#card-rxn-buffer"><small class="mono">화학 반응의 세계 1.5</small>혈액의 pH는 어떻게 7.4에 머물까?</a><a href="../../c/adchem/4-1.html#card-labchem-fescn"><small class="mono">고급 화학 4.1</small>섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?</a><a href="../../c/adchem/4-2.html#card-adchem-vanthoff"><small class="mono">고급 화학 4.2</small>온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?</a><a href="../../c/adchem/4-3.html#card-adchem-ksp"><small class="mono">고급 화학 4.3</small>Ksp가 작은 염이 언제나 덜 녹을까?</a></div></nav>
+
       <article class="card" id="card-adchem-solubility">
         <header class="card-head">
-          <span class="no">2.6.2</span><h2>온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?</h2><span class="kind">용해도 곡선 · 농도 단위 바꾸기 · 반트호프 그래프로 용해 엔탈피 읽기</span>
+          <span class="no">2.6.3</span><h2>온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?</h2><span class="kind">용해도 곡선 · 농도 단위 바꾸기 · 반트호프 그래프로 용해 엔탈피 읽기</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -154,55 +199,15 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/3-4.html#card-chem-lechat"><small class="mono">화학 3.4</small>평형을 흔들면 어떻게 될까?</a><a href="../../c/chem/3-4.html#card-chem-haber-eq"><small class="mono">화학 3.4</small>암모니아 합성은 왜 높은 압력에서 할까?</a><a href="../../c/chem/3-4.html#card-chem-shift-lab"><small class="mono">화학 3.4</small>세 시험관의 색은 조건을 바꾸면 어느 쪽으로 변할까?</a><a href="../../c/chem/3-4.html#text-chem-eq-cases"><small class="mono">화학 3.4</small>몸속, 바닷속, 공장 속의 평형은 어떻게 움직일까?</a></div></nav>
 
-      <article class="card" id="card-chem-soda">
-        <header class="card-head">
-          <span class="no">2.6.3</span><h2>탄산음료 뚜껑을 열면 왜 거품이 날까?</h2><span class="kind">CO₂ 용해 평형 · 헨리 법칙</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="탄산음료 병과 녹아 있는 이산화 탄소 양의 시간 그래프"></canvas>
-            <div class="ctl">
-              <label class="mono">온도 = <output class="temp-out">5</output> °C</label>
-              <input class="temp" type="range" min="0" max="40" step="1" value="5" aria-label="온도">
-              <div class="presets">
-                <button class="btn lid" type="button">뚜껑 열기</button>
-                <button class="chip fresh" type="button">새 병</button>
-              </div>
-              <dl class="nums">
-                <div><dt>윗공간 CO₂ 압력</dt><dd class="p">—</dd></div>
-                <div><dt>녹아 있는 CO₂</dt><dd class="c">—</dd></div>
-                <div><dt>이 압력의 평형 용해량</dt><dd class="s">—</dd></div>
-              </dl>
-              <p class="fig-note msg" aria-live="polite"></p>
-              <p class="fig-note">500 mL 병(음료 475 mL)에 CO₂ 3.3 g을 넣은 경우. 헨리 상수는 실제 값(25 °C에서 0.034 mol/L·atm)과 온도 의존성을 썼습니다. 김이 빠지는 빠르기와 거품은 모식이며, 실제로는 몇 시간에 걸쳐 일어납니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>밀봉한 탄산음료에는 거품이 없습니다. 뚜껑을 여는 순간 거품이 솟는 까닭은 무엇일까요? 미지근한 음료가 더 요란한 까닭은요?</li>
-            <li><span class="tag">복원</span>기체는 물에 녹았다가 다시 빠져나오기도 합니다. <span class="formula">CO₂(g) ⇌ CO₂(aq)</span>. 닫힌 병에서는 이 둘이 동적 평형을 이룹니다.</li>
-            <li><span class="tag">설명</span>평형에서 녹는 양은 기체의 압력에 비례합니다(헨리 법칙). <span class="formula">[CO₂(aq)] = k<sub>H</sub> · P<sub>CO₂</sub></span>. 이것이 이 평형의 평형 상수 식입니다. 병 속은 2~4기압이지만, 뚜껑을 열면 CO₂ 분압이 공기 중의 0.0004기압으로 떨어집니다.</li>
-            <li><span class="tag">연결</span>압력이 떨어지면 지금 녹아 있는 양이 평형 용해량보다 훨씬 많아집니다. 평형이 CO₂(g) 쪽으로 이동하며 녹아 있던 CO₂가 기포로 나옵니다. 또 CO₂가 녹는 과정은 발열이라, 온도가 오르면 k<sub>H</sub>가 작아져 덜 녹습니다.</li>
-            <li><span class="tag">적용</span>5 °C에서 뚜껑을 열고 거품을 보세요. 새 병으로 바꾼 뒤 온도를 30 °C로 올리고 기다리면, 밀봉한 상태의 압력은 몇 기압까지 오르나요? 그 상태에서 열면 거품은 어떤가요?</li>
-            <li class="warn"><span class="tag">판단</span>“뚜껑을 열면 CO₂가 한꺼번에 다 빠진다”는 틀립니다. 평형으로 가는 데 시간이 걸리므로 열린 음료는 한동안 과포화 상태로 남습니다. 흔들면 기포가 생길 자리가 많아져 이 과정이 빨라질 뿐, 평형의 위치가 바뀌는 것은 아닙니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">김이 반쯤 빠진 탄산음료의 뚜껑을 꼭 닫아 두었습니다. 병 속에서 일어나는 일로 옳은 것은?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>닫는 순간 처음의 압력으로 되돌아간다.<span class="why"><b>이미 빠져나간 CO₂는 돌아오지 않습니다.</b> 남은 CO₂만으로 새 평형을 이루므로 압력은 처음보다 낮습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>CO₂가 조금 더 빠져나와 윗공간 압력이 오르다가, 녹는 속도와 빠져나오는 속도가 같아지면 멈춘다.<span class="why"><b>맞습니다.</b> 윗공간의 압력이 오를수록 다시 녹는 속도도 커져, 새 평형에서 멈춥니다. 카드에서 ‘다시 닫기’를 눌러 확인해 보세요.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>닫아도 계속 김이 빠져 결국 CO₂가 하나도 남지 않는다.<span class="why"><b>열린 병의 이야기입니다.</b> 닫힌 병에서는 빠져나온 CO₂가 윗공간에 쌓여 평형이 이루어집니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/3-2.html#card-chem-k-hi"><small class="mono">화학 3.2</small>평형 상수는 무엇을 알려 줄까?</a><a href="../../c/chem/3-2.html#card-chem-k-solid"><small class="mono">화학 3.2</small>평형 상수 식에는 왜 고체가 빠질까?</a><a href="../../c/chem/3-3.html#card-chem-qk"><small class="mono">화학 3.3</small>Q와 K를 비교하면 무엇을 알 수 있을까?</a><a href="../../c/chem/1-1.html#card-chem-haber"><small class="mono">화학 1.1</small>하버–보슈법은 어떻게 인류를 먹여 살렸을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/rxn/1-5.html#card-rxn-buffer"><small class="mono">화학 반응의 세계 1.5</small>혈액의 pH는 어떻게 7.4에 머물까?</a><a href="../../c/adchem/4-1.html#card-labchem-fescn"><small class="mono">고급 화학 4.1</small>섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?</a><a href="../../c/adchem/4-2.html#card-adchem-vanthoff"><small class="mono">고급 화학 4.2</small>온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?</a><a href="../../c/adchem/4-3.html#card-adchem-ksp"><small class="mono">고급 화학 4.3</small>Ksp가 작은 염이 언제나 덜 녹을까?</a></div></nav>
-
       <a class="px-go" href="../../practice.html?sec=adchem-2-6"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -213,7 +218,7 @@
 <script src="../../js/prereq.js"></script>
 <script src="../../js/lib/lab.js"></script>
 <script src="../../js/cards/labchem/solution.js"></script>
-<script src="../../js/cards/adchem/s2-solubility.js"></script>
 <script src="../../js/cards/chem/b-soda.js"></script>
+<script src="../../js/cards/adchem/s2-solubility.js"></script>
 </body>
 </html>

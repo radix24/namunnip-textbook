@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>극곡선의 접선 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="극곡선의 접선의 기울기 dy/dx와 반지름과 접선의 각 ψ. 카디오이드의 수평·수직 접선을 찾는 조작 카드, 목표를 일정한 각으로 보며 다가가는 로그나선 시뮬레이션.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-polar-tangent canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+    #card-adcalc-log-spiral canvas { aspect-ratio: 1 / 1; max-width: 380px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="2-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>극곡선의 접선</h1>
+    <p class="lead">극곡선은 \(\theta\)를 매개변수로 하는 곡선 \(x = f(\theta)\cos\theta\), \(y = f(\theta)\sin\theta\)입니다. 그래서 매개변수로 나타낸 곡선의 미분법으로 접선의 기울기를 구합니다. 극곡선에서는 반지름과 접선이 이루는 각 \(\psi\)가 특히 쓸모 있습니다. 이 절에서는 카디오이드에서 가장 높은 점을 찾고, 목표를 늘 같은 각도로 보며 나는 새의 길이 로그나선이 되는 것을 시뮬레이션으로 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/2-6.html#card-calc2-param-tangent" title="미적분Ⅱ 2.6 · x와 y가 모두 t의 함수일 때 접선의 기울기는?">매개변수로 나타낸 함수의 미분</a><a class="p p-card" href="../../c/calc1/2-4.html#card-calc1-product-rule" title="미적분Ⅰ 2.4 · 곱의 미분은 왜 f&#x27;g + fg&#x27;일까?">곱의 미분법</a><a class="p p-card" href="../../c/calc1/2-3.html#card-calc1-deriv-graph" title="미적분Ⅰ 2.3 · 접선의 기울기를 모으면 어떤 그래프가 될까?">접선의 기울기</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-polar-tangent"><span class="mono">2.3.1</span>극곡선의 접선 기울기</a></li>
+        <li><a href="#card-adcalc-log-spiral"><span class="mono">2.3.2</span>같은 각으로 다가가는 로그나선</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adcalc-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-2-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-polar-tangent">
+        <header class="card-head">
+          <span class="no">2.3.1</span><h2>카디오이드에서 접선이 수평인 곳은 어디일까?</h2><span class="kind">극곡선의 접선 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="극곡선 위의 점과 그 점에서의 접선, 극에서 그 점으로 그은 선분과 접선 사이의 각 ψ. 접선이 수평·수직인 점이 표시된다"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-p="card" aria-pressed="true">\(1 + \cos\theta\)</button>
+                <button class="chip" type="button" data-p="circ">\(2\cos\theta\)</button>
+                <button class="chip" type="button" data-p="rose">\(\cos 2\theta\)</button>
+                <button class="chip" type="button" data-p="lima">\(1 + 2\cos\theta\)</button>
+              </div>
+              <label class="mono">\(\theta\) = <output class="t-out">60°</output></label>
+              <input class="st" type="range" min="0" max="360" step="0.5" value="60" aria-label="각 θ (도)">
+              <div class="presets"><button class="chip go-h" type="button" aria-pressed="true">수평 접선 표시</button><button class="chip go-v" type="button" aria-pressed="false">수직 접선 표시</button></div>
+              <dl class="nums">
+                <div><dt>\(\frac{dy}{dx}\)</dt><dd class="n-m">—</dd></div>
+                <div><dt>\(\frac{dr}{d\theta}\)</dt><dd class="n-d">—</dd></div>
+                <div><dt>\(\psi\) (반지름과 접선의 각)</dt><dd class="n-p">—</dd></div>
+              </dl>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>카디오이드 \(r = 1 + \cos\theta\)의 가장 높은 점은 어디일까요? \(r\)이 가장 큰 \(\theta = 0\)은 오른쪽 끝일 뿐 가장 높은 점이 아닙니다. 높이가 가장 큰 곳은 접선이 수평인 곳인데, 극곡선의 접선 기울기는 어떻게 구할까요?</li>
+            <li><span class="tag">복원</span>매개변수로 나타낸 곡선 \(x = x(\theta)\), \(y = y(\theta)\)의 접선 기울기는 \(\frac{dy}{dx} = \frac{dy/d\theta}{dx/d\theta}\)입니다.</li>
+            <li><span class="tag">설명</span>극곡선은 \(\theta\)를 매개변수로 하는 곡선 \(x = f(\theta)\cos\theta\), \(y = f(\theta)\sin\theta\)입니다. 곱의 미분법으로 \[\frac{dy}{dx} = \frac{f'(\theta)\sin\theta + f(\theta)\cos\theta}{f'(\theta)\cos\theta - f(\theta)\sin\theta}\]입니다. 분자가 0이면(분모는 0이 아닐 때) 수평 접선, 분모가 0이면 수직 접선입니다. 극에서 점으로 그은 선분과 접선이 이루는 각 \(\psi\)는 \(\tan\psi = \frac{r}{dr/d\theta}\)로 더 간단히 구할 수 있습니다.</li>
+            <li><span class="tag">연결</span>카디오이드에서 분자는 \(-\sin\theta\sin\theta + (1 + \cos\theta)\cos\theta = 2\cos^2\theta + \cos\theta - 1 = (2\cos\theta - 1)(\cos\theta + 1)\)이므로 \(\cos\theta = \frac{1}{2}\), 곧 \(\theta = \frac{\pi}{3}\)에서 가장 높습니다. \(\theta = \pi\)(극)에서는 분자와 분모가 모두 0이라 따로 살펴야 합니다. 이 각 \(\psi\)는 다음 절에서 두 극곡선이 만나는 각을 구할 때 씁니다.</li>
+            <li><span class="tag">적용</span>\(\theta\)를 움직여 접선이 수평이 되는 곳을 찾고 표시된 점과 비교하세요. 원 \(r = 2\cos\theta\)에서 \(\psi\)와 \(\theta\) 사이에 어떤 관계가 보이나요? 카디오이드의 극 근처에서 접선은 어느 방향을 향하나요?</li>
+            <li class="warn"><span class="tag">판단</span>\(\frac{dr}{d\theta}\)는 접선의 기울기가 아닙니다. \(\frac{dr}{d\theta} = 0\)인 곳은 극에서 가장 멀거나 가까운 점이지, 접선이 수평인 점이 아닙니다. 접선의 기울기는 언제나 \(\frac{dy}{dx}\)로 구합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">원 \(r = 2\sin\theta\) 위의 \(\theta = \frac{\pi}{4}\)인 점에서 접선의 기울기는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>정의되지 않는다(수직 접선)<span class="why"><b>맞습니다.</b> \(\frac{dx}{d\theta} = 2\cos\theta\cos\theta - 2\sin\theta\sin\theta = 2\cos 2\theta = 0\)입니다. 이 점 \((1, 1)\)은 원 \(x^2 + (y - 1)^2 = 1\)의 오른쪽 끝입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1<span class="why"><b>극에서 그 점으로 그은 선분의 기울기입니다.</b> 접선과 반지름은 다른 직선입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\sqrt{2}\)<span class="why"><b>\(\frac{dr}{d\theta} = 2\cos\frac{\pi}{4}\)를 기울기로 보았습니다.</b> \(\frac{dr}{d\theta}\)는 기울기가 아닙니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>0<span class="why"><b>분자와 분모를 바꾸었습니다.</b> 0이 되는 것은 \(\frac{dx}{d\theta}\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-2.html#card-adcalc-polar-trace"><small class="mono">고급 미적분 2.2</small>r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-rose-predict"><small class="mono">고급 미적분 2.2</small>r = cos kθ의 꽃잎은 몇 장일까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-mic-pattern"><small class="mono">고급 미적분 2.2</small>무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?</a><a href="../../c/calc2/2-6.html#card-calc2-param-tangent"><small class="mono">미적분Ⅱ 2.6</small>x와 y가 모두 t의 함수일 때 접선의 기울기는?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/2-4.html#card-adcalc-polar-meet"><small class="mono">고급 미적분 2.4</small>두 극방정식을 연립하면 교점이 모두 나올까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-angle"><small class="mono">고급 미적분 2.4</small>마주 보는 두 카디오이드는 몇 도로 만날까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-log-spiral">
+        <header class="card-head">
+          <span class="no">2.3.2</span><h2>목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?</h2><span class="kind">로그나선 · 접선과 반지름의 각 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="극에 놓인 목표와, 목표를 진행 방향에서 일정한 각 α만큼 옆으로 두고 나는 점의 경로. 이론 곡선 r = r0·e^(−θ cot α)가 겹쳐진다"></canvas>
+            <div class="ctl">
+              <label class="mono">목표를 보는 각 \(\alpha\) = <output class="a-out">40°</output></label>
+              <input class="sa" type="range" min="5" max="89" step="1" value="40" aria-label="진행 방향과 목표 방향 사이의 각">
+              <div class="presets"><button class="chip go-fly" type="button">날기</button><button class="chip ov" type="button" aria-pressed="true">이론 곡선 겹치기</button></div>
+              <dl class="nums">
+                <div><dt>날아간 거리 (시뮬레이션)</dt><dd class="n-s">—</dd></div>
+                <div><dt>\(\frac{r_0}{\cos\alpha}\)</dt><dd class="n-f">—</dd></div>
+                <div><dt>목표 둘레를 돈 바퀴 수</dt><dd class="n-k">—</dd></div>
+              </dl>
+              <p class="fig-note">출발점은 목표에서 \(r_0 = 1\)만큼 떨어져 있습니다. 시뮬레이션은 아주 짧은 걸음마다 방향을 다시 맞추며 나는 모형이고, 목표에서 \(0.001\) 안쪽에 들면 멈춥니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>먹이를 향해 똑바로 날려면 고개를 돌려 먹이를 정면에 두어야 합니다. 고개를 돌리면 공기 저항이 커지므로, 고개를 곧게 둔 채 먹이를 늘 같은 옆 방향(진행 방향에서 각 \(\alpha\))에 두고 날 수도 있습니다. 그러면 어떤 길로 다가가게 될까요?</li>
+            <li><span class="tag">복원</span>극곡선 위의 점에서 반지름 방향과 접선이 이루는 각 \(\psi\)는 \(\tan\psi = \frac{r}{dr/d\theta}\)를 만족합니다.</li>
+            <li><span class="tag">설명</span>진행 방향(접선)과 목표 방향(반지름의 반대 방향)이 늘 각 \(\alpha\)를 이루므로 \(\psi = \pi - \alpha\)가 일정합니다. 따라서 \(\frac{dr/d\theta}{r} = -\cot\alpha\), 곧 \[r = r_0 e^{-\theta\cot\alpha}\]이고 이 곡선을 <em>로그나선</em>(등각나선)이라고 합니다. 목표 둘레를 무한히 돌지만, 극에 이르기까지 날아간 거리는 \(\frac{r_0}{\cos\alpha}\)로 유한합니다. 한 걸음 \(ds\)마다 목표와의 거리가 \(\cos\alpha\,ds\)씩 줄기 때문입니다.</li>
+            <li><span class="tag">연결</span>터커(V. A. Tucker, 2000)는 송골매의 눈에서 가장 잘 보는 곳(중심와)이 머리 정면에서 약 \(40^\circ\) 옆을 향한다는 점을 들어, 매가 머리를 곧게 둔 채 먹이를 그 방향에 두고 날면 경로가 로그나선이 된다고 설명했습니다. 끝없이 감기는데도 거리가 유한하다는 계산은 이상적분(끝없이 뻗은 꼬리 아래의 넓이)과 같은 생각입니다.</li>
+            <li><span class="tag">적용</span>\(\alpha\)를 바꾸며 날려 보세요. \(\alpha\)가 \(90^\circ\)에 가까우면 길은 어떻게 되나요? 시뮬레이션의 거리가 \(\frac{r_0}{\cos\alpha}\)와 같은가요? \(\alpha = 40^\circ\)일 때 곧장 날아가는 거리 1보다 얼마나 더 나나요?</li>
+            <li class="warn"><span class="tag">판단</span>앵무조개 껍데기가 로그나선에 가까운 것은 맞지만, 흔히 말하는 "황금비 나선"은 아닙니다. 실제로 재어 보면 껍데기마다 나선의 비율이 다르고 대부분 황금비와 거리가 멉니다. 어떤 곡선에 가깝다는 말과 특정한 수와 같다는 말은 구분해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">로그나선 \(r = e^{\theta}\)에서 반지름 방향과 접선이 이루는 각 \(\psi\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(45^\circ\)로 일정하다<span class="why"><b>맞습니다.</b> \(\tan\psi = \frac{r}{dr/d\theta} = \frac{e^\theta}{e^\theta} = 1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\theta\)가 커질수록 커진다<span class="why"><b>나선이 커 보이는 것과 각을 혼동했습니다.</b> 로그나선은 확대해도 모양이 같아 각이 일정합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(90^\circ\)로 일정하다<span class="why"><b>원일 때의 답입니다.</b> \(dr/d\theta = 0\)일 때만 \(\psi = 90^\circ\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\tan^{-1}\theta\)<span class="why"><b>아르키메데스 나선 \(r = \theta\)의 답입니다.</b> 그때는 \(\tan\psi = \theta\)라 각이 변합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/2-2.html#card-adcalc-polar-trace"><small class="mono">고급 미적분 2.2</small>r = f(θ)의 그래프를 극좌표로 옮기면 어떤 모양이 될까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-rose-predict"><small class="mono">고급 미적분 2.2</small>r = cos kθ의 꽃잎은 몇 장일까?</a><a href="../../c/adcalc/2-2.html#card-adcalc-mic-pattern"><small class="mono">고급 미적분 2.2</small>무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?</a><a href="../../c/calc2/2-6.html#card-calc2-param-tangent"><small class="mono">미적분Ⅱ 2.6</small>x와 y가 모두 t의 함수일 때 접선의 기울기는?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/2-4.html#card-adcalc-polar-meet"><small class="mono">고급 미적분 2.4</small>두 극방정식을 연립하면 교점이 모두 나올까?</a><a href="../../c/adcalc/2-4.html#card-adcalc-polar-angle"><small class="mono">고급 미적분 2.4</small>마주 보는 두 카디오이드는 몇 도로 만날까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-2-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/polar-tangent.js"></script>
+<script src="../../js/cards/adcalc/log-spiral.js"></script>
+</body>
+</html>

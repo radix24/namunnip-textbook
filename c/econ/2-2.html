@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>수요곡선과 공급곡선 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="수요함수와 공급함수, 수량을 가로축·가격을 세로축으로 그리는 관례, 곡선 위의 이동(수요량 변화)과 곡선의 이동(수요 변화), 자료로 수요함수를 추정하는 최소제곱 직선. 사건 단추로 곡선을 옮기는 카드와, 설문 자료에 직선을 맞추는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-econ-demand-shift canvas { aspect-ratio: 1 / 0.8; max-width: 460px; width: 100%; margin: 0 auto; display: block; }
+    #card-econ-demand-shift .ctl-row > div { min-width: 12rem; }
+    #card-econ-demand-fit canvas { aspect-ratio: 1 / 0.8; max-width: 460px; width: 100%; margin: 0 auto; display: block; touch-action: none; cursor: grab; }
+  </style>
+</head>
+<body data-course="econ" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>수요곡선과 공급곡선</h1>
+    <p class="lead">가격에 따라 사려는 양을 나타낸 함수가 <em>수요함수</em>, 팔려는 양을 나타낸 함수가 <em>공급함수</em>입니다. 가격이 바뀌면 곡선 위의 점이 움직이고, 소득이나 원재료 값처럼 다른 조건이 바뀌면 곡선 자체가 이동합니다. 이 절에서는 두 변화를 구별하고, 조사 자료로 수요함수를 직접 만들어 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-slope-intercept" title="중학교 개념 설명 보기">일차함수의 기울기와 y절편</button><a class="p p-card" href="../../c/cm2/1-6.html#card-cm2-translate-point" title="공통수학2 1.6 · 도형을 옮기면 각 점의 좌표는 어떻게 바뀔까?">그래프의 평행이동</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-econ-demand-shift"><span class="mono">2.2.1</span>곡선 위의 이동과 곡선 자체의 이동</a></li>
+        <li><a href="#card-econ-demand-fit"><span class="mono">2.2.2</span>설문 자료로 수요곡선 만들기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=econ-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=econ-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-econ-demand-shift">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>가격이 올라 덜 사는 것과 덜 사고 싶어지는 것은 무엇이 다를까?</h2><span class="kind">수요곡선과 공급곡선 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="곡선 고르기"><button class="chip" type="button" data-k="d" aria-pressed="true">수요(떡볶이)</button><button class="chip" type="button" data-k="s">공급(떡볶이)</button></div>
+            <div class="ctl-row"><div><label class="mono">가격 = <output class="p-out"></output>원</label><input class="p" type="range" min="1000" max="6000" step="100" value="3000" aria-label="가격"></div></div>
+            <div class="presets ev" role="group" aria-label="가격 말고 다른 조건의 변화"></div>
+            <canvas aria-label="가로축 수량, 세로축 가격인 그래프에 원래 곡선(점선)과 지금 곡선, 현재 가격에서의 수량"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">한 동네 분식점의 하루 떡볶이 시장을 가정한 모의 함수입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>떡볶이 값이 올라서 덜 사 먹는 것과, 용돈이 줄어서 덜 사 먹는 것은 둘 다 "수요가 줄었다"고 말해도 될까요?</li>
+            <li><span class="tag">복원</span>\(y = f(x)\)의 그래프를 \(x\)축 방향으로 \(m\)만큼 평행이동하면 \(y = f(x - m)\)입니다.</li>
+            <li><span class="tag">설명</span>가격 \(P\)와 사려는 양 \(Q_d\)의 관계를 <em>수요함수</em>, 팔려는 양 \(Q_s\)와의 관계를 <em>공급함수</em>라 하고, 경제학에서는 가로축에 수량, 세로축에 가격을 두고 그립니다. 가격이 바뀌면 <em>곡선 위에서 점이 움직여</em> 수요량(공급량)이 바뀝니다. 소득, 다른 상품의 가격, 원재료 가격, 기호처럼 가격이 아닌 조건이 바뀌면 <em>곡선 자체가 이동</em>합니다(수요·공급의 변화).</li>
+            <li><span class="tag">연결</span>대체재(분식 대신 먹는 김밥)의 값이 오르면 떡볶이 수요곡선이 오른쪽으로, 원재료(떡) 값이 오르면 공급곡선이 왼쪽으로 이동합니다. 두 곡선이 만나는 균형은 4절에서 다룹니다.</li>
+            <li><span class="tag">적용</span>가격 막대를 움직일 때와 아래 사건 단추를 누를 때 그래프가 각각 어떻게 바뀌는지 비교하세요. 각 사건이 곡선을 어느 쪽으로 옮기는지 설명해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>"가격이 오르면 수요가 줄어든다"는 엄밀히 말하면 "수요량이 줄어든다"입니다. 수요 자체가 줄어드는 것은 곡선이 왼쪽으로 이동하는 경우입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">수요함수 \(Q = 500 - 0.1P\)에서 모든 가격에서 사려는 양이 50씩 늘었습니다. 새 수요함수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(Q = 550 - 0.1P\)<span class="why"><b>맞습니다.</b> 곡선이 수량 축 방향(오른쪽)으로 50만큼 평행이동했습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(Q = 500 - 0.1(P - 50)\)<span class="why"><b>가격 축 방향으로 50원 옮긴 것입니다.</b> 수량은 5만 늘어납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(Q = 500 - 0.05P\)<span class="why"><b>기울기가 바뀌었습니다.</b> 평행이동이 아닙니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(Q = 450 - 0.1P\)<span class="why"><b>방향이 반대입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/2-4.html#card-econ-equilibrium"><small class="mono">경제 수학 2.4</small>운동화 값은 왜 결국 한 가격에 자리 잡을까?</a><a href="../../c/econ/2-4.html#card-econ-cobweb"><small class="mono">경제 수학 2.4</small>배추값은 왜 해마다 폭등과 폭락을 되풀이할까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+
+      <article class="card" id="card-econ-demand-fit">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>설문 자료로 우리 학교 매점의 수요곡선을 만들 수 있을까?</h2><span class="kind">수요함수 추정 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">학생 400명에게 "이 가격이면 하루에 빵을 사겠는가"를 물은 가상의 설문 결과(점)입니다. 두 손잡이(●)를 끌어 자료에 가장 잘 맞는 직선을 만드세요.</p>
+            <canvas aria-label="가격별 판매 예상량 점과 끌어서 움직이는 수요 직선"></canvas>
+            <div class="ctl-row">
+              <div><label class="mono">1000원일 때 <output class="h0-out"></output>개</label><input class="h0" type="range" min="0" max="400" step="1" value="300" aria-label="직선이 가격 1000원에서 지나는 수량"></div>
+              <div><label class="mono">5000원일 때 <output class="h1-out"></output>개</label><input class="h1" type="range" min="0" max="400" step="1" value="200" aria-label="직선이 가격 5000원에서 지나는 수량"></div>
+            </div>
+            <div class="presets"><button class="chip go-ls" type="button">가장 잘 맞는 직선(최소제곱) 보기</button></div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">설문 자료는 수업용으로 만든 가상 값입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>매점에서 빵값을 3500원으로 올리면 하루에 몇 개쯤 팔릴까요? 가격마다 실제로 팔아 보지 않고 미리 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>두 점 \((x_1, y_1), (x_2, y_2)\)를 지나는 직선의 기울기는 \(\dfrac{y_2 - y_1}{x_2 - x_1}\)입니다.</li>
+            <li><span class="tag">설명</span>가격별로 사려는 양을 조사한 자료에 직선 \(Q = a - bP\)를 맞추면 수요함수를 <em>추정</em>할 수 있습니다. 같은 가격에서 자료의 수량과 직선의 수량의 차(그래프에서 가로 거리, 오차)를 제곱해 더한 값이 가장 작은 직선을 <em>최소제곱 직선</em>이라 합니다. 추정한 함수로 조사하지 않은 가격의 수요량도 예측할 수 있습니다.</li>
+            <li><span class="tag">연결</span>기업은 시장 조사와 판매 기록으로 수요함수를 추정해 가격을 정합니다. 4단원에서는 이렇게 얻은 수요함수로 수입이 최대가 되는 가격을 찾습니다.</li>
+            <li><span class="tag">적용</span>손잡이를 끌어 오차 제곱합을 가능한 한 줄인 뒤 최소제곱 직선과 비교하세요. 그 직선으로 가격 3500원일 때의 판매량을 예측해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>자료 범위(1000원~5000원) 밖의 가격, 예를 들어 9000원에서의 예측은 믿기 어렵습니다. 또 설문에서 "사겠다"고 답한 것과 실제 구매는 다를 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">가격 2000원일 때 300개, 4000원일 때 160개가 팔린다는 두 자료를 지나는 직선 수요함수에서, 3000원일 때 수요량은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>230개<span class="why"><b>맞습니다.</b> 기울기 \(-140/2000 = -0.07\)이므로 \(300 - 0.07 \times 1000 = 230\)개입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>200개<span class="why"><b>계산을 다시 해 보세요.</b> 두 값의 가운데가 230입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>460개<span class="why"><b>두 값을 더했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>370개<span class="why"><b>기울기의 부호를 반대로 썼습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/2-4.html#card-econ-equilibrium"><small class="mono">경제 수학 2.4</small>운동화 값은 왜 결국 한 가격에 자리 잡을까?</a><a href="../../c/econ/2-4.html#card-econ-cobweb"><small class="mono">경제 수학 2.4</small>배추값은 왜 해마다 폭등과 폭락을 되풀이할까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=econ-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/econ/demand-shift.js"></script>
+<script src="../../js/cards/econ/demand-fit.js"></script>
+</body>
+</html>

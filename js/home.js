@@ -31,41 +31,126 @@
       return { seen, total: ids.length, p: ids.length ? seen / ids.length : 0 };
     };
     const pct = (l) => `${Math.round(l.p * 100)}%`;
-    const box = (c) => {
+    const box = (c, bare) => {
       const n = count(c), l = learn(c);
       return `<a class="tbox${n.open ? "" : " soon"}" href="${base}${c.id}/" data-track="${c.track}" data-cid="${c.id}">
-        <span class="lv mono">${LV[c.level]}</span><b>${esc(c.name)}</b>
+        ${bare ? "" : `<span class="lv mono">${c.track === "math" && c.level === "고급" ? "과학계열 선택" : LV[c.level]}</span>`}<b>${esc(c.name)}</b>
         <span class="pg mono">${n.open ? `절 ${n.open} · 학습 <span class="lp-n">${pct(l)}</span>` : `준비 중 · 절 ${n.sec}`}</span>
         ${n.open ? `<span class="lp" aria-hidden="true"><i style="--p:${l.p.toFixed(3)}"></i></span>` : ""}</a>`;
     };
     const pick = (f) => TOC.filter(f).sort((a, b) => RANK.indexOf(a.level) - RANK.indexOf(b.level));
     const tree = document.getElementById("tree");
+    /* 과학: 공통 과목 띠 아래에 교과(행) × 선택 구분(열) 표. 일반·진로·융합선택은 나란히 고르는 구분이고,
+       과학계열 과목은 과학고·영재학교 등에서 여는 과목이라 맨 오른쪽 열에 둔다 */
+    const SCI_COLS = [["일반", "일반선택", "교과의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"],
+      ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
+    const SCI_ROWS = [...TRACKS, ["fusion", "교과 공통"]];
+    const cell = (t, lv) => pick((c) => c.track === t && c.level === lv).map((c) => box(c, true)).join("");
+    /* 수학: 분야로 행을 나누지 않고 선택 구분 열에 과목을 늘어놓는다(행 이름 칸 없음) */
+    const MATH_COLS2 = [["일반", "일반선택", "수학의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"], ["고급", "과학계열 선택", "과학고·영재학교"]];
+    const matrix = (cls, label, cols, rows) => `
+      <div class="mx ${cls}" role="table" aria-label="${label}">
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${cols.map(([lv, nm, d]) => `<span class="mx-h" role="columnheader" data-lv="${lv}">${nm}<small>${d}</small></span>`).join("")}</div>
+        ${rows.map(([t, nm, get]) => {
+          const hs = cols.map(([lv]) => get(lv));
+          const advOnly = cols.every(([lv], i) => lv === "고급" || lv === "실험" || lv === "융합" || !hs[i]);   // 과학계열 과목만 있는 행은 일반 보기에서 숨긴다
+          return `<div class="mx-row" data-track="${t}" role="row"${advOnly ? " data-adv" : ""}><span class="mx-lb" role="rowheader">${nm}</span>${cols.map(([lv, cn], i) =>
+            `<div class="mx-cell${hs[i] ? "" : " empty"}" role="cell" data-col="${cn}" data-lv="${lv}">${hs[i]}</div>`).join("")}</div>`;
+        }).join("")}
+      </div>`;
+    /* 과학 표: 열 = 교과(물리·화학·생명과학·지구과학·교과 공통), 행 = 선택 구분 */
+    const sciMatrix = () => `
+      <div class="mx sci-mx" role="table" aria-label="과학 선택 과목: 선택 구분별, 교과별">
+        <div class="mx-row mx-head" role="row"><span role="columnheader"></span>${SCI_ROWS.map(([t, nm]) => `<span class="mx-h mx-tk" role="columnheader" data-track="${t}" data-tk="${t}">${nm}</span>`).join("")}</div>
+        ${SCI_COLS.map(([lv, nm, d]) => `<div class="mx-row" role="row" data-lv="${lv}"><span class="mx-lb mx-lv" role="rowheader">${nm}<small>${d}</small></span>${SCI_ROWS.map(([t, tn]) => {
+          const h = cell(t, lv);
+          return `<div class="mx-cell${h ? "" : " empty"}" role="cell" data-col="${tn}" data-tk="${t}" data-track="${t}">${h}</div>`;
+        }).join("")}</div>`).join("")}
+      </div>`;
+    /* 수학 표: 행 = 선택 구분, 행 안에서 과목 상자를 같은 폭으로 옆으로 늘어놓는다 */
+    const mathMatrix = () => `
+      <div class="mx math-mx" role="table" aria-label="수학 선택 과목: 선택 구분별">
+        ${MATH_COLS2.map(([lv, nm, d]) => { const h = cell("math", lv); return h ? `<div class="mx-row mx-flowrow" role="row" data-lv="${lv}" data-track="math"><span class="mx-lb mx-lv" role="rowheader">${nm}<small>${d}</small></span><div class="mx-cell mx-flow" role="cell" data-col="${nm}">${h}</div></div>` : ""; }).join("")}
+      </div>`;
+    /* 보기 범위: 기본(일반·진로선택) / 전체(융합선택·과학계열 과목까지) */
+    const ADV = (c) => c.level === "고급" || c.level === "실험" || c.level === "융합";   // 기본 보기에서 숨기는 과목
+    const cnt2 = (f) => `<span class="for-basic">${TOC.filter((c) => f(c) && !ADV(c)).length}</span><span class="for-all">${TOC.filter(f).length}</span>`;
+    const nSci = cnt2((c) => c.track !== "math" && c.track !== "extra"), nMath = cnt2((c) => c.track === "math");
     if (tree) tree.innerHTML = `
-      <div class="tree-head"><h2>과목 체계도</h2><p class="mono small dim">열마다 위에서 아래로 일반선택 → 진로선택 → 고급 → 실험. 흐린 상자는 아직 준비 중입니다.</p></div>
-      <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map(box).join("")}</div></div>
-      <div class="tree-cols">${TRACKS.map(([t, nm]) => `
-        <div class="tree-col" data-track="${t}"><h3>${nm}</h3>${pick((c) => c.track === t).map(box).join("")}</div>`).join("")}
+      <div class="tree-head"><h2>과목 체계도</h2>
+        <button type="button" class="tree-tg" aria-expanded="false" aria-controls="tree-body"><span class="for-sci">과학 ${nSci}과목</span><span class="for-math">수학 ${nMath}과목</span> · <span class="tg-t">펼치기</span></button>
+        <span class="scope-seg" role="group" aria-label="보기 범위"><button type="button" data-scope="basic" aria-pressed="true">일반·진로선택</button><button type="button" data-scope="all" aria-pressed="false">전체 과목</button></span>
+        <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">열은 교과, 행은 선택 구분입니다.</span><span class="for-math">행은 선택 구분입니다.</span> 흐린 상자는 아직 준비 중입니다.</p></div>
+      <div class="tree-body" id="tree-body">
+      <div class="tree-sci">
+        <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
+        <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
+        ${sciMatrix()}
       </div>
-      <div class="tree-band" data-track="fusion"><span class="band-lb mono">융합</span><div>${pick((c) => c.track === "fusion").map(box).join("")}</div></div>
-      <div class="tree-band" data-track="math"><span class="band-lb mono">수학</span><div>${pick((c) => c.track === "math").map(box).join("")}</div></div>`;
+      <div class="tree-mth">
+        <div class="tree-band" data-track="math"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div>
+        <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
+        ${mathMatrix()}
+      </div>
+      </div>`;
+    /* 체계도 접기: 처음엔 접힌 채로, 펼친 상태는 이 브라우저에 기억한다 */
+    if (tree) {
+      const TREE_KEY = "namunnip-tree-open", tg = tree.querySelector(".tree-tg");
+      const setOpen = (open, save) => {
+        tree.classList.toggle("open", open);
+        tg.setAttribute("aria-expanded", String(open));
+        tg.querySelector(".tg-t").textContent = open ? "접기" : "펼치기";
+        if (save) try { localStorage.setItem(TREE_KEY, open ? "1" : "0"); } catch (e) { /* 저장 못 해도 동작은 한다 */ }
+      };
+      let open = false;
+      try { open = localStorage.getItem(TREE_KEY) !== "0"; } catch (e) { open = true; }   // 처음에는 펼쳐 둔다(메인의 과목 고르기 자리)
+      setOpen(open, false);
+      tg.addEventListener("click", () => setOpen(!tree.classList.contains("open"), true));
+      /* 보기 범위: 기본은 일반·진로선택만. 융합선택·과학계열 열과 과목 목록의 해당 과목을 숨긴다 */
+      const SCOPE_KEY = "namunnip-scope";
+      const setScope = (sc, save) => {
+        document.body.dataset.scope = sc === "all" ? "all" : "basic";
+        tree.querySelectorAll("[data-scope]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.scope === document.body.dataset.scope)));
+        if (save) try { localStorage.setItem(SCOPE_KEY, document.body.dataset.scope); } catch (e) { /* 무시 */ }
+      };
+      let sc0 = "basic";
+      try { sc0 = localStorage.getItem(SCOPE_KEY) || "basic"; } catch (e) { sc0 = "basic"; }
+      setScope(sc0, false);
+      tree.querySelector(".scope-seg").addEventListener("click", (e) => { const b = e.target.closest("[data-scope]"); if (b) setScope(b.dataset.scope, true); });
+    }
+    /* 대단원을 순서대로 k단에 나눈다: 각 단 높이(절 수 + 머리 2줄)의 최댓값이 가장 작게(연속 분할) */
+    const split = (chs, k) => {
+      const w = chs.map((ch) => ch.sections.length + 2), n = w.length;
+      k = Math.min(k, n);
+      const pre = [0]; w.forEach((x) => pre.push(pre.at(-1) + x));
+      const best = Array.from({ length: k + 1 }, () => new Array(n + 1).fill(Infinity)), cut = best.map(() => new Array(n + 1).fill(0));
+      best[0][0] = 0;
+      for (let j = 1; j <= k; j++) for (let i = 1; i <= n; i++) for (let p = j - 1; p < i; p++) {
+        const v = Math.max(best[j - 1][p], pre[i] - pre[p]); if (v < best[j][i]) { best[j][i] = v; cut[j][i] = p; }
+      }
+      const cols = []; let i = n;
+      for (let j = k; j > 0; j--) { const p = cut[j][i]; cols.unshift(chs.slice(p, i)); i = p; }
+      return cols;
+    };
     host.innerHTML = TOC.map((c) => {
       const n = count(c), l = learn(c);
-      const chapters = c.chapters.map((ch) => `
+      const chapterHtml = (ch) => `
         <div class="chapter">
           <h3><span class="mono">${R[ch.n]}</span>${esc(ch.title)}</h3>
           <ol>${ch.sections.map((s) => {
             const nv = s.items.filter((i) => i.kind === "video").length, nc = s.items.length - nv;
             const hay = esc([s.title, s.code, ...s.items.map((i) => i.title)].join(" ").toLowerCase());
             const label = `<span class="mono">${ch.n}.${s.n}</span><span class="t">${esc(s.title)}</span>`;
-            const tail = s.page ? `<span class="cnt mono">${nc}${nv ? `+${nv}` : ""}</span>` : `<span class="cnt mono dim">준비 중</span>`;
+            const tail = s.page ? `<span class="cnt mono">카드 ${nc}${nv ? ` · 영상 ${nv}` : ""}</span>` : `<span class="cnt mono dim">준비 중</span>`;
             const hits = `<ul class="hits">${s.items.map((i) => `<li data-hay="${esc(i.title.toLowerCase())}">${i.kind === "video" ? "영상 · " : i.kind === "text" ? "읽기 · " : ""}${esc(i.title)}</li>`).join("")}</ul>`;
             return s.page
               ? `<li data-hay="${hay}"><a href="${base}${c.id}/${ch.n}-${s.n}.html">${label}${tail}</a>${hits}</li>`
               : `<li data-hay="${hay}" class="soon"><div>${label}${tail}</div></li>`;
           }).join("")}</ol>
-        </div>`).join("");
+        </div>`;
+      const chapters = split(c.chapters, 3).map((col) => `<div class="ch-col">${col.map(chapterHtml).join("")}</div>`).join("");
       return `
-      <section class="course" data-course="${c.id}" data-track="${c.track}">
+      <section class="course" data-course="${c.id}" data-track="${c.track}"${ADV(c) ? ' data-adv="1"' : ""}>
         <div class="course-head">
           <span class="mono">${esc(c.meta)}</span>
           <h2><a href="${base}${c.id}/">${esc(c.name)}</a></h2>
@@ -149,33 +234,106 @@
     const stat = document.getElementById("stat");
     const live = TOC.filter((c) => c.id !== "extra" && count(c).open).length;
     if (stat) stat.textContent = `과목 ${live}/${TOC.length - 1} · 절 ${total.open} · 카드 ${total.cards} · 영상 ${total.vids}`;
+
+    /* 소개 아래 한 줄: 마지막으로 본 카드의 과목에서 아직 안 본 다음 카드로. 기록이 없으면 비워 둔다 */
+    const go = document.getElementById("dash-go");
+    function dash() {
+      if (!go) return;
+      const at = new Map();   // 카드 id → { c, ch, s, i }
+      TOC.forEach((c) => c.chapters.forEach((ch) => ch.sections.forEach((s) => { if (s.page) s.items.forEach((i) => at.set(i.id, { c, ch, s, i })); })));
+      const blocks = S ? S.all().blocks : {};
+      let last = null, lastT = 0;
+      for (const [id, b] of Object.entries(blocks)) {
+        const w = at.get(id), t = (b && b.seen) || 0;
+        if (!w || !t) continue;
+        if (t > lastT) { lastT = t; last = w; }
+      }
+      const href = (w) => `${base}${w.c.id}/${w.ch.n}-${w.s.n}.html#${w.i.id}`;
+      if (!last) { go.innerHTML = ""; return; }
+      /* 같은 과목에서 마지막으로 본 카드 뒤의 첫 안 본 카드(없으면 과목 처음부터 첫 안 본 카드) */
+      const seq = [...at.values()].filter((w) => w.c === last.c);
+      const k = seq.findIndex((w) => w.i.id === last.i.id);
+      const unseen = (w) => !(blocks[w.i.id] || {}).seen;
+      const next = seq.slice(k + 1).find(unseen) || seq.find(unseen);
+      go.innerHTML = next
+        ? `<a class="dash-next" href="${href(next)}"><span class="mono">이어서 공부하기 · ${esc(next.c.name)}</span><b>${next.ch.n}.${next.s.n} ${esc(next.s.title)}</b><span class="dim small">다음 카드: ${esc(next.i.title)}</span></a>`
+        : `<a class="dash-next" href="${base}${last.c.id}/"><span class="mono">${esc(last.c.name)}</span><b>모든 카드를 공부했습니다</b><span class="dim small">과목 목차에서 복습하기</span></a>`;
+    }
+    dash();
+    if (S) S.onChange(dash);
   }
 
-  /* ───── 과목 목차 ───── */
+  /* ───── 과목 목차(책 목차형): 왼쪽에 과목 정보·진도·선수/다음 과목, 오른쪽에 대단원 → 절 → 카드 ───── */
   if (view === "course") {
     const c = TOC.find((x) => x.id === document.body.dataset.course);
     if (!c) return;
+    const S = window.NMStore;
     const n = count(c);
+    const seen = (id) => !!(S && (S.get(id) || {}).seen);
+    /* 2022 개정 교육과정의 과목 위계(선택 과목의 권장 선수 과목). 다음 과목은 이 표를 뒤집어 구한다 */
+    const PRE = {
+      phy: ["is1", "is2"], chem: ["is1", "is2"], bio: ["is1", "is2"], earth: ["is1", "is2"],
+      mech: ["phy"], emq: ["phy"], mateng: ["chem"], rxn: ["chem"], cell: ["bio"], gene: ["bio"], esys: ["earth"], space: ["earth"],
+      hist: ["is1", "is2"], clim: ["is1", "is2"], fusi: ["is1", "is2"],
+      adphy: ["mech", "emq"], adchem: ["mateng", "rxn"], adbio: ["cell", "gene"], adearth: ["esys", "space"],
+      resr: ["sie1", "sie2"], labphy: ["phy"], labchem: ["chem"], labbio: ["bio"], labearth: ["earth"],
+      alg: ["cm1", "cm2"], stat: ["cm1", "cm2"], calc1: ["alg"], calc2: ["calc1"], geo: ["cm1", "cm2"],
+      pmath: ["alg", "calc1"], adcalc: ["calc2"], adalg: ["alg"], dmath: ["cm1", "cm2"], adgeo: ["geo"],
+      econ: ["alg", "calc1"], aimath: ["alg", "stat"], jmath: ["cm1", "cm2"], mcult: ["cm1", "cm2"], pstat: ["cm1", "cm2"], mres: ["cm1", "cm2"],
+    };
+    const FIRST = { is1: "중학교 과학", is2: "중학교 과학", sie1: "중학교 과학", sie2: "중학교 과학", cm1: "중학교 수학", cm2: "중학교 수학", info: "중학교 정보" };
+    const byId = (id) => TOC.find((x) => x.id === id);
+    const pre = (PRE[c.id] || []).map(byId).filter(Boolean);
+    const next = Object.keys(PRE).filter((k) => PRE[k].includes(c.id)).map(byId).filter(Boolean);
+    const link = (x) => `<a href="../${x.id}/">${esc(x.name)}</a>`;
+    const items = c.chapters.flatMap((ch) => ch.sections.filter((s) => s.page).flatMap((s) => s.items.map((i) => ({ ch, s, i }))));
+    const done = items.filter((x) => seen(x.i.id)).length;
+    const nextUp = items.find((x) => !seen(x.i.id));
+    const code = (c.chapters.flatMap((ch) => ch.sections).find((s) => /\d/.test(s.code || "")) || {}).code || "";
+    /* 성취기준 코드에서 과목 약칭만: 10공수1-01-01 → 10공수1, 12물리01-01 → 12물리 */
+    const subj = (k) => { const p = k.split("-"); return p.length === 2 ? p[0].replace(/\d{2}$/, "") : p[0]; };
+    const info = [["구분", c.meta], ["구성", `대단원 ${c.chapters.length} · 절 ${n.open}/${n.sec} · 카드 ${n.cards}${n.vids ? ` · 영상 ${n.vids}` : ""}`],
+      ["교육과정", code ? `2022 개정 [${subj(code)}]` : "교육과정 밖 교양"]];
+    const kindLb = (i) => (i.kind === "video" ? '<span class="cx-k mono">영상</span>' : i.kind === "text" ? '<span class="cx-k mono">읽기</span>' : "");
+
     document.title = `${c.name} — 나뭇잎 디지털 교과서`;
-    document.getElementById("c-meta").textContent = c.meta;
-    document.getElementById("c-name").textContent = c.name;
-    document.getElementById("c-stat").textContent = `대단원 ${c.chapters.length} · 절 ${n.open}/${n.sec} · 카드 ${n.cards} · 영상 ${n.vids}`;
     const crumbs = document.querySelector(".crumbs");
     if (crumbs) crumbs.innerHTML = `<span aria-hidden="true">/</span><b>${esc(c.name)}</b>`;
-    document.getElementById("c-body").innerHTML = c.chapters.map((ch) => `
-      <section class="c-chapter">
-        <h2><span class="mono">${R[ch.n]}</span>${esc(ch.title)}</h2>
-        <ol>${ch.sections.map((s) => {
-          const items = s.items.map((i) => `<li class="${i.kind}"><a href="${ch.n}-${s.n}.html#${i.id}">${i.kind === "video" ? '<span class="mono">영상</span>' : i.kind === "text" ? '<span class="mono">읽기</span>' : ""}${esc(i.title)}</a></li>`).join("");
-          return `<li class="c-sec${s.page ? "" : " soon"}">
-            <div class="c-sec-head">
-              <span class="mono num">${ch.n}.${s.n}</span>
-              ${s.page ? `<a href="${ch.n}-${s.n}.html"><b>${esc(s.title)}</b></a>` : `<b>${esc(s.title)}</b>`}
-              <span class="mono code">${/\d/.test(s.code) ? `[${esc(s.code)}]` : ""}</span>
-            </div>
-            ${s.page ? `<ul class="c-items">${items}</ul>` : `<p class="dim small">준비 중</p>`}
-          </li>`;
-        }).join("")}</ol>
-      </section>`).join("");
+    const hero = document.querySelector(".course-hero"); if (hero) hero.hidden = true;
+    const pct = items.length ? Math.round((100 * done) / items.length) : 0;
+    document.getElementById("c-body").innerHTML = `
+      <div class="cx">
+        <aside class="cx-side">
+          <span class="cx-pill">${esc(c.meta)}</span>
+          <h1>${esc(c.name)}</h1>
+          <p class="cx-lead">${c.chapters.map((ch) => esc(ch.title)).join(" · ")}</p>
+          <div class="cx-prog" aria-hidden="true"><i style="width:${pct}%"></i></div>
+          <p class="cx-prog-t mono small">카드 <span class="cx-done">${done}</span>/${items.length} 공부함 (<span class="cx-pct">${pct}</span>%)</p>
+          ${nextUp ? `<a class="cx-go" href="${nextUp.ch.n}-${nextUp.s.n}.html#${nextUp.i.id}">${done ? "이어서 공부하기" : "처음부터 공부하기"} · ${nextUp.ch.n}.${nextUp.s.n} ${esc(nextUp.s.title)}</a>` : items.length ? `<p class="cx-all small">모든 카드를 공부했습니다.</p>` : ""}
+          <dl class="cx-info">${info.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+          <div class="cx-path small">
+            <p><span class="dim">먼저 공부할 과목</span>${pre.length ? pre.map(link).join(" · ") : esc(FIRST[c.id] || "따로 없음")}</p>
+            ${next.length ? `<p><span class="dim">이어지는 과목</span>${next.map(link).join(" · ")}</p>` : ""}
+          </div>
+        </aside>
+        <div class="cx-main">${c.chapters.map((ch) => {
+          const its = ch.sections.filter((s) => s.page).flatMap((s) => s.items), dn = its.filter((i) => seen(i.id)).length;
+          return `
+          <section class="cx-ch">
+            <div class="cx-ch-head"><span class="cx-no">${R[ch.n] || ch.n}</span><h2>${esc(ch.title)}</h2><span class="cx-meta mono">절 ${ch.sections.length} · 카드 ${dn}/${its.length}</span></div>
+            ${ch.sections.map((s) => {
+              const sd = s.items.filter((i) => seen(i.id)).length, all = s.page && s.items.length && sd === s.items.length;
+              const head = s.page ? `<a href="${ch.n}-${s.n}.html">${esc(s.title)}</a>` : esc(s.title);
+              return `
+            <div class="cx-sec${s.page ? "" : " soon"}">
+              <span class="cx-n mono">${ch.n}.${s.n}</span>
+              <div class="cx-t"><b>${head}</b>${/\d/.test(s.code || "") ? `<span class="cx-code mono">[${esc(s.code)}]</span>` : ""}</div>
+              <span class="cx-badge mono${all ? " ok" : ""}">${!s.page ? "준비 중" : all ? "완료" : `${sd}/${s.items.length}`}</span>
+              ${s.page ? `<ul class="cx-qs">${s.items.map((i) => `<li class="${seen(i.id) ? "done" : ""}"><a href="${ch.n}-${s.n}.html#${i.id}">${kindLb(i)}${esc(i.title)}</a></li>`).join("")}</ul>` : ""}
+            </div>`;
+            }).join("")}
+          </section>`;
+        }).join("")}</div>
+      </div>`;
   }
 })();

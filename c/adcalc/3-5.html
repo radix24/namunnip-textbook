@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>멱급수의 성질과 함수의 표현 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="멱급수의 항별 미분과 항별 적분, 멱급수로 나타낸 함수. 등비급수에서 ln(1 + x), tan⁻¹x의 급수를 만드는 만들기 카드, 라이프니츠 급수와 마친의 공식으로 원주율을 계산하는 경주 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-series-build canvas { aspect-ratio: 16 / 9; }
+    #card-adcalc-series-build .ser { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.6; margin: 6px 0; word-break: break-all; }
+    #card-adcalc-series-build .tg .chip[data-done="1"] { border-color: var(--forest); color: var(--forest); }
+    #card-adcalc-pi-race canvas { aspect-ratio: 16 / 10; }
+    #card-adcalc-pi-race .pis { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.7; margin: 6px 0; }
+    #card-adcalc-pi-race .pis b { color: var(--forest); font-weight: 600; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="3-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>멱급수의 성질과 함수의 표현</h1>
+    <p class="lead">멱급수는 수렴 구간 안에서 다항식처럼 다룰 수 있습니다. 변수를 바꾸어 넣고, 항별로 미분하고 적분해도 됩니다. 그래서 이미 아는 등비급수 \(\frac{1}{1 - x} = \sum x^n\) 하나에서 여러 함수의 급수를 만들 수 있습니다. 이 절에서는 연산 단추를 눌러 \(\ln(1 + x)\)와 \(\tan^{-1}x\)의 급수를 직접 만들고, \(\tan^{-1}\)의 급수로 원주율을 계산하며 수렴 속도가 왜 중요한지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/calc2/1-5.html#card-calc2-geo-series" title="미적분Ⅱ 1.5 · 같은 비율로 줄어드는 수를 끝없이 더하면 얼마일까?">등비급수</a><a class="p p-card" href="../../c/calc2/3-1.html#card-calc2-xn-integral" title="미적분Ⅱ 3.1 · xⁿ의 적분 공식은 n = -1에서 왜 멈출까?">여러 가지 함수의 적분</a><a class="p p-card" href="../../c/calc2/2-1.html#card-calc2-exp-slope" title="미적분Ⅱ 2.1 · 접선의 기울기가 높이와 같은 지수함수의 밑은?">지수함수와 로그함수의 도함수</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-series-build"><span class="mono">3.5.1</span>등비급수에서 새 급수 만들기</a></li>
+        <li><a href="#card-adcalc-pi-race"><span class="mono">3.5.2</span>원주율 계산 경주</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adcalc-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-3-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-series-build">
+        <header class="card-head">
+          <span class="no">3.5.1</span><h2>\(\frac{1}{1 - x}\) 하나로 \(\ln(1 + x)\)와 \(\tan^{-1}x\)의 급수를 만들 수 있을까?</h2><span class="kind">멱급수의 성질 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="지금 만든 함수의 그래프와 그 멱급수의 8차까지의 부분합. 수렴 구간 밖에서는 둘이 갈라진다"></canvas>
+            <div class="ctl">
+              <p class="mono small">목표 (누르면 그 목표로 바뀝니다)</p>
+              <div class="presets tg">
+                <button class="chip" type="button" data-t="ln" aria-pressed="true">\(\ln(1 + x)\)</button>
+                <button class="chip" type="button" data-t="atan">\(\tan^{-1}x\)</button>
+                <button class="chip" type="button" data-t="sq">\(\frac{1}{(1 - x)^2}\)</button>
+                <button class="chip" type="button" data-t="x2">\(\frac{x}{1 + x^2}\)</button>
+              </div>
+              <p class="mono small">연산 (지금 함수에 차례로 적용)</p>
+              <div class="presets ops">
+                <button class="chip" type="button" data-o="neg">\(x \to -x\)</button>
+                <button class="chip" type="button" data-o="sq">\(x \to x^2\)</button>
+                <button class="chip" type="button" data-o="mul">\(\times\,x\)</button>
+                <button class="chip" type="button" data-o="d">미분</button>
+                <button class="chip" type="button" data-o="i">0부터 적분</button>
+                <button class="chip" type="button" data-o="reset">처음으로</button>
+              </div>
+              <p class="ser" aria-live="polite"></p>
+              <p class="verdict" role="status"></p>
+              <p class="fig-note">처음 함수는 \(\frac{1}{1 - x} = 1 + x + x^2 + \cdots\ (|x| &lt; 1)\)입니다. 굵은 선은 지금 함수, 파란 선은 급수의 8차까지 부분합입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\ln(1 + x)\)의 멱급수를 구하려고 도함수를 여러 번 구하는 것은 번거롭습니다. 이미 아는 등비급수 \(\frac{1}{1 - x} = \sum x^n\)을 변형해서 얻을 수는 없을까요?</li>
+            <li><span class="tag">복원</span>\((\ln(1 + x))' = \frac{1}{1 + x}\), \((\tan^{-1}x)' = \frac{1}{1 + x^2}\). 멱급수 \(\sum c_n x^n\)은 수렴반경 \(R\) 안에서 정의된 함수입니다.</li>
+            <li><span class="tag">설명</span>멱급수는 수렴 구간 안에서 다항식처럼 다룰 수 있습니다. 변수를 바꾸어 넣을 수 있고(\(x \to -x\), \(x \to x^2\)), \(x\)를 곱할 수 있고, <b>항별로 미분하고 적분할 수 있습니다</b>. \[\frac{d}{dx}\sum c_n x^n = \sum n c_n x^{n-1}\] \[\int_0^x\sum c_n t^n\,dt = \sum\frac{c_n}{n + 1}x^{n+1}\] 이때 수렴반경은 바뀌지 않습니다(끝점의 수렴 여부는 바뀔 수 있습니다). 예를 들어 \(x \to -x\)를 하고 적분하면 \(\ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots\)입니다.</li>
+            <li><span class="tag">연결</span>\(\tan^{-1}x = x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots\)에 \(x = 1\)을 넣으면 \(\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \cdots\)입니다(끝점에서도 수렴). 다음 카드에서 이 급수로 원주율을 계산합니다.</li>
+            <li><span class="tag">적용</span>네 목표를 연산 단추만으로 만들어 보세요. 순서가 중요합니다. 만든 급수의 그래프가 \(|x| &lt; 1\)에서는 함수와 겹치고 밖에서는 갈라지나요?</li>
+            <li class="warn"><span class="tag">판단</span>항별 적분은 0부터 하므로 상수항(적분상수)을 따로 맞추어야 합니다. \(\ln(1 + 0) = 0\), \(\tan^{-1}0 = 0\)이라 여기서는 상수가 0입니다. 또 이 급수들은 수렴 구간 밖(\(|x| &gt; 1\))에서는 쓸 수 없습니다. \(\ln 3\)을 \(x = 2\)로 계산하려 하면 발산합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\frac{1}{1 + x} = \sum(-1)^n x^n\)을 미분하면 어떤 함수의 급수가 나오나요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(-\frac{1}{(1 + x)^2} = -1 + 2x - 3x^2 + \cdots\)<span class="why"><b>맞습니다.</b> 항별로 미분하면 \(\sum(-1)^n n x^{n-1}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\ln(1 + x)\)<span class="why"><b>적분과 미분을 바꾸었습니다.</b> \(\ln(1 + x)\)는 적분해서 나옵니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{1}{(1 + x)^2}\)<span class="why"><b>부호를 놓쳤습니다.</b> \(\left(\frac{1}{1 + x}\right)' = -\frac{1}{(1 + x)^2}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>미분하면 수렴반경이 바뀌어 알 수 없다<span class="why"><b>항별 미분은 수렴반경을 바꾸지 않습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/3-4.html#card-adcalc-radius"><small class="mono">고급 미적분 3.4</small>멱급수는 x가 얼마일 때까지 수렴할까?</a><a href="../../c/adcalc/3-4.html#card-adcalc-radius-why"><small class="mono">고급 미적분 3.4</small>어디서나 매끄러운 1/(1 + x²)의 급수는 왜 |x| &lt; 1에서만 맞을까?</a><a href="../../c/pmath/1-3.html#card-pmath-arc-restrict"><small class="mono">전문 수학 1.3</small>사인함수의 어디를 잘라야 역함수가 생길까?</a><a href="../../c/pmath/1-3.html#card-pmath-arc-sawtooth"><small class="mono">전문 수학 1.3</small>arcsin(sin x)는 언제나 x일까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-pi-race">
+        <header class="card-head">
+          <span class="no">3.5.2</span><h2>\(\tan^{-1}x\)의 급수로 원주율을 몇 자리까지 구할 수 있을까?</h2><span class="kind">멱급수로 나타낸 함수 · 활용 · 경주</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="항의 수에 따라 맞는 자릿수가 늘어나는 모습. 라이프니츠 급수와 마친의 공식을 비교한다"></canvas>
+            <div class="ctl">
+              <label class="mono">항의 수 \(N\) = <output class="n-out">5</output></label>
+              <input class="sn" type="range" min="1" max="30" step="1" value="5" aria-label="항의 수">
+              <div class="pis" aria-live="polite"></div>
+              <p class="fig-note">맞는 자릿수는 소수점 아래에서 셉니다. 굵은 숫자가 참값 3.14159265358979…와 같은 자리입니다. 이 컴퓨터 계산은 약 15자리가 한계입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\tan^{-1}1 = \frac{\pi}{4}\)이므로 앞 카드의 급수에 \(x = 1\)을 넣으면 \(\pi = 4\left(1 - \frac{1}{3} + \frac{1}{5} - \cdots\right)\)입니다. 이 식으로 원주율을 열 자리까지 구하려면 몇 항이 필요할까요?</li>
+            <li><span class="tag">복원</span>\(\tan^{-1}x = x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots\ (|x| \le 1)\). 교대급수의 오차는 다음 항보다 작습니다.</li>
+            <li><span class="tag">설명</span>\(x = 1\)은 수렴 구간의 끝이라 항이 \(\frac{1}{2n + 1}\)처럼 아주 천천히 줄어듭니다. \(N\)항까지 더한 값의 오차가 약 \(\frac{1}{N}\)이므로, 소수점 아래 열 자리를 맞추려면 약 100억 항이 필요합니다. 반면 \(x\)가 작으면 항이 \(x^{2n+1}\)처럼 빨리 줄어듭니다. 마친(1706)은 덧셈정리로 \[\frac{\pi}{4} = 4\tan^{-1}\frac{1}{5} - \tan^{-1}\frac{1}{239}\]을 찾아, \(\frac{1}{5}\)과 \(\frac{1}{239}\)을 넣은 빠른 급수로 원주율을 100자리까지 손으로 계산했습니다. 항 하나에 약 1.4자리씩 늘어납니다.</li>
+            <li><span class="tag">연결</span>\(\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \cdots\)은 라이프니츠의 급수로 불리지만, 14세기 무렵 인도 케랄라의 마다바도 같은 급수를 알았다고 전합니다. 멱급수의 수렴 속도는 \(x\)가 중심에 가까울수록 빠르다는 점이 계산 방법을 고르는 기준이 됩니다.</li>
+            <li><span class="tag">적용</span>\(N\)을 늘리며 두 방법의 맞는 자릿수를 비교하세요. 마친의 공식은 몇 항이면 컴퓨터 계산의 한계(약 15자리)에 이르나요? 같은 항 수에서 라이프니츠 급수는 몇 자리인가요?</li>
+            <li class="warn"><span class="tag">판단</span>수렴한다는 것과 계산에 쓸 만하다는 것은 다릅니다. 라이프니츠 급수는 분명히 \(\frac{\pi}{4}\)로 수렴하지만 실제 계산에는 거의 쓰이지 않습니다. 오늘날 원주율을 수조 자리까지 구하는 계산에는 이보다 훨씬 빠른 급수가 쓰입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\tan^{-1}\frac{1}{5}\)의 급수에서 다음 항의 크기는 대략 앞 항의 몇 배씩 줄어드나요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 \(\frac{1}{25}\)배<span class="why"><b>맞습니다.</b> 항이 \(\frac{x^{2n+1}}{2n + 1}\)이므로 \(x^2 = \frac{1}{25}\)배씩 줄어듭니다. 그래서 항 하나에 \(\log_{10}25 \approx 1.4\)자리씩 늘어납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 \(\frac{1}{5}\)배<span class="why"><b>거듭제곱이 두 번씩 커진다는 것을 놓쳤습니다.</b> 지수가 \(1, 3, 5, \cdots\)로 2씩 늘어납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 \(\frac{1}{2}\)배<span class="why"><b>분모 \(2n + 1\)만 보았습니다.</b> 분모는 아주 천천히 커질 뿐입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>거의 줄지 않는다<span class="why"><b>\(x = 1\)일 때의 이야기입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/3-4.html#card-adcalc-radius"><small class="mono">고급 미적분 3.4</small>멱급수는 x가 얼마일 때까지 수렴할까?</a><a href="../../c/adcalc/3-4.html#card-adcalc-radius-why"><small class="mono">고급 미적분 3.4</small>어디서나 매끄러운 1/(1 + x²)의 급수는 왜 |x| &lt; 1에서만 맞을까?</a><a href="../../c/pmath/1-3.html#card-pmath-arc-restrict"><small class="mono">전문 수학 1.3</small>사인함수의 어디를 잘라야 역함수가 생길까?</a><a href="../../c/pmath/1-3.html#card-pmath-arc-sawtooth"><small class="mono">전문 수학 1.3</small>arcsin(sin x)는 언제나 x일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/series-build.js"></script>
+<script src="../../js/cards/adcalc/pi-race.js"></script>
+</body>
+</html>

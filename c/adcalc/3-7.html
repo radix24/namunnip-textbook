@@ -1,0 +1,209 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>테일러급수의 활용 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="테일러급수의 활용: 근삿값 계산, 근사식. 계산기가 각을 줄인 뒤 테일러다항식으로 sin을 계산하는 과정, 진자의 근사 sin θ ≈ θ와 실제 주기 비교 시뮬레이션, 상대론의 운동 에너지에서 ½mv²이 나오는 이항급수.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adcalc-calc-sin canvas { aspect-ratio: 16 / 9; }
+    #card-adcalc-calc-sin .stepsx { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.7; margin: 6px 0; }
+    #card-adcalc-pendulum canvas { aspect-ratio: 16 / 11; }
+    #card-adcalc-relativity canvas { aspect-ratio: 16 / 10; }
+  </style>
+</head>
+<body data-course="adcalc" data-sec="3-7">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>테일러급수의 활용</h1>
+    <p class="lead">테일러급수는 계산기 속의 계산, 물리 법칙의 근사, 오차의 크기를 어림하는 데 쓰입니다. 이 절에서는 계산기가 \(\sin 1000^\circ\)를 구하는 과정을 따라가 보고, 진자의 주기 공식이 \(\sin\theta \approx \theta\)라는 근사에서 나왔다는 것과 그 한계를 시뮬레이션으로 확인하고, 상대성 이론의 운동 에너지를 급수로 펼쳐 뉴턴의 \(\frac{1}{2}mv^2\)이 나오는 것을 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/2-2.html#card-alg-trig-def" title="대수 2.2 · 150circ나 -60circ의 사인은 무엇일까?">삼각함수의 정의와 그래프</a><a class="p p-card" href="../../c/alg/2-1.html#card-alg-general-angle" title="대수 2.1 · 두 바퀴 돈 각은 720circ일까, 0circ일까?">일반각과 호도법</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adcalc-calc-sin"><span class="mono">3.7.1</span>계산기가 sin을 구하는 법</a></li>
+        <li><a href="#card-adcalc-pendulum"><span class="mono">3.7.2</span>진자의 근사 sin θ ≈ θ</a></li>
+        <li><a href="#card-adcalc-relativity"><span class="mono">3.7.3</span>½mv²은 어디서 나왔을까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adcalc-3-7"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adcalc-3-7">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adcalc-calc-sin">
+        <header class="card-head">
+          <span class="no">3.7.1</span><h2>계산기는 \(\sin 1000^\circ\)를 어떻게 계산할까?</h2><span class="kind">테일러급수의 활용 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="단위원 위의 원래 각과, 대칭을 이용해 0도에서 45도 사이로 옮긴 각. 오른쪽에 옮기지 않고 계산했을 때와 옮겨서 계산했을 때의 오차 막대"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">각 = <output class="d-out">1000</output>°</label>
+                <input class="sd" type="range" min="0" max="3600" step="1" value="1000" aria-label="각(도)"></div>
+                <div><label class="mono">테일러 항 수 = <output class="k-out">4</output></label>
+                <input class="sk" type="range" min="1" max="8" step="1" value="4" aria-label="테일러급수의 항 수"></div>
+              </div>
+              <div class="stepsx" aria-live="polite"></div>
+              <dl class="nums">
+                <div><dt>참값</dt><dd class="n-t">—</dd></div>
+                <div><dt>옮겨서 계산한 오차</dt><dd class="n-r">—</dd></div>
+                <div><dt>옮기지 않은 오차</dt><dd class="n-d">—</dd></div>
+              </dl>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>\(\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots\)은 모든 \(x\)에서 성립합니다. 그러면 \(\sin 1000^\circ\)도 \(x = \frac{1000\pi}{180} \approx 17.45\)를 넣어 몇 항만 더하면 될까요?</li>
+            <li><span class="tag">복원</span>\(\sin(\theta + 360^\circ) = \sin\theta\), \(\sin(180^\circ + \theta) = -\sin\theta\), \(\sin(180^\circ - \theta) = \sin\theta\), \(\sin(90^\circ - \theta) = \cos\theta\). 테일러다항식의 오차는 대략 빠진 첫 항 \(\frac{|x|^{n+1}}{(n + 1)!}\) 크기입니다.</li>
+            <li><span class="tag">설명</span>\(x = 17.45\)이면 \(\frac{x^{n}}{n!}\)이 \(n = 17\) 근처까지 커져 수백만에 이릅니다. 몇 항만 더하면 터무니없는 값이 나오고, 많이 더해도 큰 수끼리 빼면서 반올림 오차가 커집니다. 그래서 먼저 <b>각을 줄입니다</b>. 360°의 배수를 빼고, 대칭으로 0°~90°로 옮기고, 45°보다 크면 \(\cos(90^\circ - \theta)\)로 바꿉니다. 그러면 \(|x| \le \frac{\pi}{4} \approx 0.785\)라서 테일러급수 4~5항이면 소수 여덟아홉째 자리까지 맞습니다.</li>
+            <li><span class="tag">연결</span>테일러급수의 오차 \(\frac{|x|^{n+1}}{(n + 1)!}\)는 \(|x|\)가 작을수록 빨리 줄어듭니다. 원주율 계산에서 \(\tan^{-1}\frac{1}{5}\)을 쓴 것과 같은 생각입니다. "중심 가까이로 옮긴 다음 급수를 쓴다"가 수치 계산의 기본 전략입니다.</li>
+            <li><span class="tag">적용</span>각을 바꾸며 줄인 각과 계산 과정을 보세요. 항 수를 1부터 늘리며 두 오차를 비교하세요. 옮기지 않은 계산은 몇 항이 되어야 쓸 만해지나요? 옮긴 계산은 몇 항이면 오차가 \(10^{-8}\)보다 작아지나요?</li>
+            <li class="warn"><span class="tag">판단</span>실제 계산기와 컴퓨터는 테일러다항식을 그대로 쓰기보다, 구간 전체에서 오차가 고르게 작도록 계수를 조정한 다항식이나 CORDIC 같은 다른 방법을 씁니다. 각을 줄이는 단계는 어느 방법에서나 공통입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\sin 600^\circ\)를 계산할 때 0°와 90° 사이의 각으로 바꾸면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(-\sin 60^\circ\)<span class="why"><b>맞습니다.</b> \(600^\circ = 360^\circ + 240^\circ\)이고 \(\sin 240^\circ = \sin(180^\circ + 60^\circ) = -\sin 60^\circ\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\sin 60^\circ\)<span class="why"><b>제3사분면의 부호를 놓쳤습니다.</b> \(240^\circ\)에서 사인은 음수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(-\sin 30^\circ\)<span class="why"><b>\(270^\circ\)에서 뺐습니다.</b> \(270^\circ - 240^\circ = 30^\circ\)를 쓰려면 \(\cos\)로 바꿔야 합니다(\(-\cos 30^\circ\)).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\sin 240^\circ\)<span class="why"><b>아직 90°보다 큽니다.</b> 한 번 더 옮겨야 합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-fit"><small class="mono">고급 미적분 3.6</small>이차식 하나로 cos x를 가장 잘 흉내 내려면?</a><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-build"><small class="mono">고급 미적분 3.6</small>차수를 올리면 테일러다항식은 어디까지 함수를 따라갈까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-pendulum">
+        <header class="card-head">
+          <span class="no">3.7.2</span><h2>진자의 주기 공식 \(2\pi\sqrt{L/g}\)는 언제까지 믿을 수 있을까?</h2><span class="kind">\(\sin\theta \approx \theta\) · 시뮬레이션 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="위: 같은 받침점에 매단 두 진자. 하나는 실제 운동(sin θ), 하나는 근사 운동(θ). 아래: 두 진자의 각을 시간에 따라 그린 그래프"></canvas>
+            <div class="ctl">
+              <label class="mono">처음 각(진폭) = <output class="a-out">30</output>°</label>
+              <input class="sa" type="range" min="2" max="170" step="1" value="30" aria-label="진폭(도)">
+              <div class="presets"><button class="chip go-play" type="button">흔들기</button></div>
+              <dl class="nums">
+                <div><dt>근사 주기 \(2\pi\sqrt{L/g}\)</dt><dd class="n-0">—</dd></div>
+                <div><dt>실제 주기</dt><dd class="n-1">—</dd></div>
+                <div><dt>10번 흔들린 뒤 어긋남</dt><dd class="n-d">—</dd></div>
+              </dl>
+              <p class="fig-note">\(L = 1\ \mathrm{m}\), \(g = 9.8\ \mathrm{m/s^2}\), 공기 저항과 줄의 무게는 무시합니다. 실제 운동은 \(\theta'' = -\frac{g}{L}\sin\theta\)를 수치로 풀고, 실제 주기는 산술기하평균을 이용한 정확한 공식으로 구합니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>진자의 주기는 진폭과 상관없이 \(T = 2\pi\sqrt{\frac{L}{g}}\)이라고 배웁니다(진자의 등시성). 그네를 아주 높이 밀어도 주기가 같을까요?</li>
+            <li><span class="tag">복원</span>\(\sin\theta = \theta - \frac{\theta^3}{3!} + \cdots\)이므로 \(\theta\)가 작으면 \(\sin\theta \approx \theta\)이고, 오차는 대략 \(\frac{\theta^3}{6}\)입니다. \(y'' = -\omega^2y\)의 해는 주기 \(\frac{2\pi}{\omega}\)인 사인 곡선입니다.</li>
+            <li><span class="tag">설명</span>진자의 운동 방정식은 \(\theta'' = -\frac{g}{L}\sin\theta\)로, 그대로는 풀기 어렵습니다. 테일러급수의 첫 항만 남겨 \(\sin\theta \approx \theta\)로 바꾸면 \(\theta'' = -\frac{g}{L}\theta\)가 되어, 주기 \(2\pi\sqrt{\frac{L}{g}}\)인 단진동이 됩니다. 이것이 등시성의 정체입니다. 실제 주기는 진폭 \(\theta_0\)에 따라 길어지며, 테일러급수의 다음 항까지 쓰면 \(T \approx 2\pi\sqrt{\frac{L}{g}}\left(1 + \frac{\theta_0^2}{16}\right)\)입니다.</li>
+            <li><span class="tag">연결</span>진폭 \(10^\circ\)에서 실제 주기는 근사 주기보다 약 0.2 % 길고, \(60^\circ\)에서 약 7 %, \(90^\circ\)에서 약 18 % 깁니다. 진자 시계가 진폭을 작게 유지하는 까닭입니다. 물리 공식 가운데 \(\sin\theta \approx \theta\), \(\sqrt{1 + x} \approx 1 + \frac{x}{2}\)처럼 테일러급수의 앞 항만 남긴 근사가 많습니다.</li>
+            <li><span class="tag">적용</span>진폭을 바꾸며 흔들어 보세요. 아래 그래프에서 두 진자가 몇 번 흔들린 뒤 눈에 띄게 어긋나나요? 근사 주기와 실제 주기의 차이가 1 %를 넘는 진폭은 대략 몇 도인가요?</li>
+            <li class="warn"><span class="tag">판단</span>근사가 "괜찮은지"는 얼마나 정확해야 하느냐에 달려 있습니다. 진폭 \(30^\circ\)에서 주기 오차는 약 1.7 %로 한 번 흔들릴 때는 작지만, 하루 동안 흔들리면 진자 시계로는 쓸 수 없을 만큼 쌓입니다. 근사식을 쓸 때는 오차의 크기를 함께 따져야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\sin\theta \approx \theta\)를 쓸 때 \(\theta = 0.2\)(약 \(11.5^\circ\))에서 상대 오차는 대략?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 0.7 %<span class="why"><b>맞습니다.</b> 오차는 \(\frac{\theta^3}{6} \approx 0.00133\)이고 \(\sin 0.2 \approx 0.1987\)로 나누면 약 0.67 %입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 20 %<span class="why"><b>\(\theta\) 자체를 오차로 보았습니다.</b> 오차는 다음 항 \(\frac{\theta^3}{6}\) 크기입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 4 %<span class="why"><b>\(\theta^2\)을 상대 오차로 썼습니다.</b> 상대 오차는 \(\frac{\theta^2}{6}\) 크기입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>0이다<span class="why"><b>근사는 같다는 뜻이 아닙니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-fit"><small class="mono">고급 미적분 3.6</small>이차식 하나로 cos x를 가장 잘 흉내 내려면?</a><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-build"><small class="mono">고급 미적분 3.6</small>차수를 올리면 테일러다항식은 어디까지 함수를 따라갈까?</a></div></nav>
+
+      <article class="card" id="card-adcalc-relativity">
+        <header class="card-head">
+          <span class="no">3.7.3</span><h2>운동 에너지 \(\frac{1}{2}mv^2\)은 상대성 이론의 어떤 근사일까?</h2><span class="kind">이항급수 · 테일러급수의 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="빛의 속력에 대한 비 β = v/c에 따른 운동 에너지. 상대론의 식, 뉴턴의 식 ½β², 다음 항까지 넣은 식을 비교한다"></canvas>
+            <div class="ctl">
+              <label class="mono">\(\beta = \frac{v}{c}\) = <output class="b-out">0.3</output></label>
+              <input class="sb" type="range" min="0.01" max="0.95" step="0.005" value="0.3" aria-label="속력의 비 β">
+              <dl class="nums">
+                <div><dt>상대론 \((\gamma - 1)mc^2\)</dt><dd class="n-e">—</dd></div>
+                <div><dt>\(\frac{1}{2}mv^2\)의 오차</dt><dd class="n-1">—</dd></div>
+                <div><dt>\(+\frac{3}{8}\frac{mv^4}{c^2}\)까지의 오차</dt><dd class="n-2">—</dd></div>
+              </dl>
+              <p class="fig-note">에너지는 \(mc^2\)을 1로 둔 값입니다. 오차는 상대론의 값에 대한 비율입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>특수 상대성 이론에서 물체의 운동 에너지는 \(K = (\gamma - 1)mc^2\), \(\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}\)입니다. 이 식에는 \(\frac{1}{2}mv^2\)이 보이지 않습니다. 그런데도 일상에서는 왜 \(\frac{1}{2}mv^2\)이 잘 맞을까요?</li>
+            <li><span class="tag">복원</span>\(f(x) = (1 + x)^{\alpha}\)의 테일러급수(이항급수)는 \(1 + \alpha x + \frac{\alpha(\alpha - 1)}{2!}x^2 + \cdots\ (|x| &lt; 1)\)입니다.</li>
+            <li><span class="tag">설명</span>\(\alpha = -\frac{1}{2}\), \(x = -\beta^2\)\((\beta = \frac{v}{c})\)을 넣으면 \[\gamma = (1 - \beta^2)^{-1/2} = 1 + \frac{1}{2}\beta^2 + \frac{3}{8}\beta^4 + \cdots\]이므로 \[K = (\gamma - 1)mc^2 = \frac{1}{2}mv^2 + \frac{3}{8}\frac{mv^4}{c^2} + \cdots\]입니다. 뉴턴의 운동 에너지는 이 급수의 첫 항입니다. 둘째 항은 첫 항의 \(\frac{3}{4}\beta^2\)배이므로, 빛보다 훨씬 느린 일상에서는 무시할 만큼 작습니다.</li>
+            <li><span class="tag">연결</span>\(\beta = 0.1\)(초속 3만 km)에서도 \(\frac{1}{2}mv^2\)의 오차는 약 0.75 %입니다. 입자 가속기의 전자처럼 \(\beta\)가 1에 가까우면 급수의 뒤 항들이 커져 뉴턴의 식은 전혀 맞지 않습니다. 새 이론이 옛 이론을 근사로 포함하는 모습을 테일러급수가 보여 줍니다.</li>
+            <li><span class="tag">적용</span>\(\beta\)를 키우며 세 곡선이 언제 갈라지는지 보세요. \(\frac{1}{2}mv^2\)의 오차가 1 %를 넘는 \(\beta\)는 대략 얼마인가요? 둘째 항까지 넣으면 같은 정확도를 얼마나 더 빠른 속력까지 유지하나요?</li>
+            <li class="warn"><span class="tag">판단</span>이항급수는 \(|x| &lt; 1\), 곧 \(\beta &lt; 1\)에서만 수렴합니다. \(\beta\)가 1에 가까우면 수렴은 하지만 아주 많은 항이 필요하므로, 이때는 근사 대신 원래 식 \((\gamma - 1)mc^2\)을 써야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\sqrt{1 + x} \approx 1 + \frac{x}{2}\)을 써서 \(\sqrt{1.02}\)를 어림하면?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>1.01<span class="why"><b>맞습니다.</b> 실제 값은 \(1.00995\cdots\)이고, 다음 항 \(-\frac{x^2}{8} = -0.00005\)만큼 차이 납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1.02<span class="why"><b>제곱근을 무시했습니다.</b> 일차 근사는 \(x\)의 절반만큼 늘어납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>1.001<span class="why"><b>소수점 자리를 잘못 옮겼습니다.</b> \(\frac{0.02}{2} = 0.01\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1.0002<span class="why"><b>\(x^2\)을 더했습니다.</b> 일차 근사에는 \(\frac{x}{2}\)만 들어갑니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-fit"><small class="mono">고급 미적분 3.6</small>이차식 하나로 cos x를 가장 잘 흉내 내려면?</a><a href="../../c/adcalc/3-6.html#card-adcalc-taylor-build"><small class="mono">고급 미적분 3.6</small>차수를 올리면 테일러다항식은 어디까지 함수를 따라갈까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adcalc-3-7"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adcalc/calc-sin.js"></script>
+<script src="../../js/cards/adcalc/adc.js"></script>
+<script src="../../js/cards/adcalc/pendulum.js"></script>
+<script src="../../js/cards/calc1/plot.js"></script>
+<script src="../../js/cards/adcalc/relativity.js"></script>
+</body>
+</html>

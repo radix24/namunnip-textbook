@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>빈도수 벡터와 요약 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="글 전체의 빈도수 벡터, 불용어 제거, 핵심어와 문장 점수로 요약 문장 고르기(추출 요약), 문서 빈도와 역문서 빈도(문서 수 ÷ 문서 빈도, 대수를 배웠다면 로그), TF-IDF로 낱말의 중요도 매기기. 학교 소식 글의 핵심어 카드와, 가장 많이 나온 낱말이 핵심어인지 예측하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-aimath-word-count .doc { border: 1px solid var(--rule, #d9dad2); border-radius: 8px; padding: .5rem .7rem; font-size: .9rem; line-height: 1.75; }
+    #card-aimath-word-count .doc .s { border-radius: 3px; }
+    #card-aimath-word-count .doc .s.top { background: rgba(224,160,42,.3); }
+    #card-aimath-word-count .doc mark { background: rgba(63,111,163,.18); color: inherit; padding: 0 .1rem; }
+    #card-aimath-word-count canvas { aspect-ratio: 16 / 7; width: 100%; display: block; margin-top: .4rem; }
+    #card-aimath-tfidf .docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .4rem; }
+    #card-aimath-tfidf .docs div { border: 1px solid var(--rule, #d9dad2); border-radius: 8px; padding: .35rem .5rem; font-size: .86rem; }
+    #card-aimath-tfidf .docs div.on { border-color: #3f6fa3; box-shadow: inset 0 0 0 1px #3f6fa3; }
+    #card-aimath-tfidf table { border-collapse: collapse; font-size: .84rem; margin: .4rem 0; }
+    #card-aimath-tfidf td, #card-aimath-tfidf th { border: 1px solid var(--rule, #d9dad2); padding: .15rem .45rem; text-align: right; font-family: var(--mono, monospace); }
+    #card-aimath-tfidf td:first-child { text-align: left; font-family: inherit; }
+    #card-aimath-tfidf tr.best td { background: rgba(116,171,102,.2); }
+  </style>
+</head>
+<body data-course="aimath" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>빈도수 벡터와 요약</h1>
+    <p class="lead">글에 나온 낱말의 횟수를 센 <em>빈도수 벡터</em>는 글의 내용을 간단히 보여 줍니다. 하지만 어디에나 많이 나오는 낱말은 핵심어가 아닐 수 있습니다. 이 절에서는 빈도로 핵심어와 요약 문장을 찾고, 여러 글을 함께 보며 낱말의 중요도를 TF-IDF로 계산합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-aimath-word-count"><span class="mono">2.2.1</span>낱말 빈도로 글의 핵심어와 요약 문장 찾기</a></li>
+        <li><a href="#card-aimath-tfidf"><span class="mono">2.2.2</span>많이 나와도 어디에나 나오면 덜 중요하다 — TF-IDF</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=aimath-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=aimath-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-aimath-word-count">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>낱말을 세기만 해도 글의 요점을 찾을 수 있을까?</h2><span class="kind">빈도수 벡터와 요약 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="설정"><button class="chip go-stop" type="button" aria-pressed="false">불용어 빼기</button><button class="chip go-sum" type="button">요약 문장 고르기</button></div>
+            <div class="doc" aria-label="가상의 학교 소식 글"></div>
+            <canvas aria-label="많이 나온 낱말 8개의 빈도 막대그래프"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">글은 수업용으로 지은 가상의 학교 소식입니다. 낱말 나누기는 띄어쓰기와 흔한 조사 떼기만 쓴 단순한 방법입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>긴 글을 다 읽지 않고도 무엇에 관한 글인지 알 수 있을까요? 컴퓨터는 뜻을 모르는데 어떻게 요약할 수 있을까요?</li>
+            <li><span class="tag">복원</span>문장은 낱말마다 나온 횟수를 적은 벡터(낱말 주머니)로 나타낼 수 있습니다.</li>
+            <li><span class="tag">설명</span>글 전체의 낱말 횟수를 센 <em>빈도수 벡터</em>에서 값이 큰 성분은 글의 주제와 관련된 핵심어일 가능성이 높습니다. 다만 "그리고", "것"처럼 어떤 글에나 많이 나오는 <em>불용어</em>는 먼저 뺍니다. 문장마다 핵심어 빈도를 더한 점수를 매겨 점수가 가장 높은 문장을 고르면, 글을 대표하는 <em>요약 문장</em>을 뽑을 수 있습니다(추출 요약).</li>
+            <li><span class="tag">연결</span>검색 엔진의 핵심어 추출, 뉴스의 자동 요약, 낱말 구름(워드 클라우드)이 모두 빈도에서 시작합니다. 다음 카드에서는 여러 글을 비교해 낱말의 중요도를 다르게 매깁니다.</li>
+            <li><span class="tag">적용</span>불용어를 빼기 전과 후의 막대그래프를 비교하세요. 요약 문장으로 뽑힌 문장이 글 전체를 잘 대표하나요?</li>
+            <li class="warn"><span class="tag">판단</span>많이 나온 낱말이 꼭 중요한 것은 아닙니다. 또 빈도만 쓰는 요약은 문장의 순서나 논리를 고려하지 않아서, 뽑힌 문장만 읽으면 오해할 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">불용어를 뺀 핵심어 빈도가 {축제: 5, 공연: 3, 동아리: 2}일 때, "축제 공연이 동아리 공연과 함께 열린다"의 문장 점수(핵심어 빈도의 합)는? (낱말: 축제, 공연, 동아리, 공연, 함께, 열린다)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>13<span class="why"><b>맞습니다.</b> \(5 + 3 + 2 + 3 = 13\)이고, 핵심어가 아닌 낱말은 0점입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>10<span class="why"><b>"공연"을 한 번만 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6<span class="why"><b>낱말 수를 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>4<span class="why"><b>핵심어 개수를 셌습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/aimath/2-1.html#card-aimath-jaccard"><small class="mono">인공지능 수학 2.1</small>두 문장이 얼마나 비슷한지 수로 나타낼 수 있을까?</a><a href="../../c/aimath/2-1.html#card-aimath-onehot"><small class="mono">인공지능 수학 2.1</small>문장을 숫자들의 줄, 곧 벡터로 바꿀 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/aimath/2-3.html#card-aimath-cosine-doc"><small class="mono">인공지능 수학 2.3</small>짧은 글과 긴 글이 같은 주제인지 어떻게 알 수 있을까?</a><a href="../../c/aimath/2-3.html#card-aimath-spam"><small class="mono">인공지능 수학 2.3</small>"무료", "당첨"이 들어간 메일은 스팸일 확률이 얼마일까?</a></div></nav>
+
+      <article class="card" id="card-aimath-tfidf">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>가장 많이 나온 낱말이 그 글의 핵심어일까?</h2><span class="kind">TF-IDF · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">학교 신문의 가상 기사 네 편을 낱말로 나눈 것입니다. <b>기사 1</b>의 핵심어로 가장 알맞은 낱말은 무엇일까요?</p>
+            <div class="docs"></div>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="학교">학교(3번)</button><button class="chip" type="button" data-g="축구">축구(2번)</button><button class="chip" type="button" data-g="학생">학생(2번)</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="presets"><button class="chip" type="button" data-d="0" aria-pressed="true">기사 1 표</button><button class="chip" type="button" data-d="1">기사 2 표</button><button class="chip" type="button" data-d="2">기사 3 표</button><button class="chip" type="button" data-d="3">기사 4 표</button></div>
+            <label class="mono small"><input type="checkbox" class="uselog"> IDF에 로그 씌우기(대수를 배운 학생)</label>
+            <table aria-label="고른 기사의 낱말별 TF, DF, IDF, TF-IDF" hidden></table>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>학교 신문 기사에는 "학교", "학생"이 어디에나 많이 나옵니다. 이런 낱말이 많이 나왔다고 그 기사의 핵심어라고 할 수 있을까요?</li>
+            <li><span class="tag">복원</span>글은 "낱말마다 나온 횟수"의 목록으로 나타낼 수 있습니다. 비율 \(\frac{N}{DF}\)는 분모가 작을수록 큽니다.</li>
+            <li><span class="tag">설명</span><em>TF</em>(낱말 빈도)는 그 문서 안에서 낱말이 나온 횟수입니다. <em>DF</em>(문서 빈도)는 전체 \(N\)개 문서 중 그 낱말이 나온 문서의 수이고, <em>IDF</em>는 \(\dfrac{N}{DF}\)처럼 드물게 나오는 낱말일수록 커지는 값입니다. 둘을 곱한 \(\text{TF-IDF} = TF \times IDF\)는 "이 문서에는 많이 나오지만 다른 문서에는 드문" 낱말에서 큽니다. 대수에서 로그를 배운 학생은 \(IDF = \log\dfrac{N}{DF}\)로 써서 값이 너무 커지지 않게 할 수 있고, 이때 모든 문서에 나오는 낱말은 IDF가 0이 됩니다.</li>
+            <li><span class="tag">연결</span>검색 엔진은 검색어의 TF-IDF가 큰 문서를 먼저 보여 주는 방식으로 시작했습니다. 다음 절에서는 TF-IDF 벡터 사이의 각으로 문서의 비슷함을 잽니다.</li>
+            <li><span class="tag">적용</span>먼저 예측한 뒤 확인하세요. 기사마다 TF-IDF가 가장 큰 낱말을 찾아 기사의 제목을 붙여 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>TF-IDF는 문서 묶음에 따라 달라집니다. 같은 기사라도 학교 신문 묶음 안에서는 "학교"가 덜 중요하지만, 여러 신문의 기사를 섞으면 "학교"가 중요한 낱말이 될 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">문서 10개 중 1개에만 나오는 낱말이 그 문서에 3번 나왔습니다. \(IDF = \frac{N}{DF}\)로 계산하면 TF-IDF는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>30<span class="why"><b>맞습니다.</b> \(3 \times \frac{10}{1} = 30\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>3<span class="why"><b>IDF를 곱하지 않고 TF만 썼습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>10<span class="why"><b>IDF만 쓰고 TF를 곱하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>0.3<span class="why"><b>\(\frac{3}{10}\)으로 계산했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/aimath/2-1.html#card-aimath-jaccard"><small class="mono">인공지능 수학 2.1</small>두 문장이 얼마나 비슷한지 수로 나타낼 수 있을까?</a><a href="../../c/aimath/2-1.html#card-aimath-onehot"><small class="mono">인공지능 수학 2.1</small>문장을 숫자들의 줄, 곧 벡터로 바꿀 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/aimath/2-3.html#card-aimath-cosine-doc"><small class="mono">인공지능 수학 2.3</small>짧은 글과 긴 글이 같은 주제인지 어떻게 알 수 있을까?</a><a href="../../c/aimath/2-3.html#card-aimath-spam"><small class="mono">인공지능 수학 2.3</small>"무료", "당첨"이 들어간 메일은 스팸일 확률이 얼마일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=aimath-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/econ/econ.js"></script>
+<script src="../../js/cards/aimath/text.js"></script>
+<script src="../../js/cards/aimath/word-count.js"></script>
+<script src="../../js/cards/aimath/tfidf.js"></script>
+</body>
+</html>

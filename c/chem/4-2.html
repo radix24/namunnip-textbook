@@ -33,7 +33,7 @@
     <p class="lead">용액의 진하기를 나타내는 방법은 여럿이지만, 화학 반응을 다룰 때는 입자 수를 곧바로 알려 주는 몰 농도가 가장 편리합니다. 이 절에서는 정해진 농도의 용액을 실제로 만드는 과정과, 그 용액을 묽힐 때 성립하는 관계를 다룹니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/chem/1-2.html#card-chem-molar-mass" title="화학 1.2 · 물 1몰과 설탕 1몰은 왜 무게가 다를까?">몰과 몰질량</a><a class="p p-card" href="../../c/chem/4-2.html#card-chem-molar-lab" title="화학 4.2 · 정확히 0.100 M 용액을 만들려면?">용질·용매·용액</a><a class="p p-card" href="../../c/chem/4-1.html#card-chem-kw-temp" title="화학 4.1 · pH 7은 언제나 중성일까?">pH (4.1절)</a>
+      <a class="p p-card" href="../../c/chem/1-2.html#card-chem-molar-mass" title="화학 1.2 · 물 1몰과 설탕 1몰은 왜 무게가 다를까?">몰과 몰질량</a><a class="p p-card" href="../../c/chem/4-2.html#card-chem-molar-lab" title="화학 4.2 · 정확히 0.100 M 용액을 만들려면?">용질·용매·용액</a><a class="p p-card" href="../../c/is2/1-4.html#card-is2-ph-log" title="통합과학2 1.4 · pH는 왜 로그 눈금일까?">pH</a>
     </div>
   </section>
 
@@ -45,6 +45,7 @@
         <li><a href="#card-chem-dilution"><span class="mono">4.2.2</span>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=chem-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">151문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=chem-4-2">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
@@ -97,7 +98,7 @@
           <p class="q">0.200 M NaOH 수용액 100 mL를 만들려면 NaOH(몰질량 40.0 g/mol)를 몇 g 달아야 할까?</p>
           <ol>
             <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>8.00 g<span class="why"><b>부피를 1 L로 계산한 값입니다.</b> 0.200 mol/L × 1 L × 40.0 g/mol = 8.00 g. 필요한 것은 100 mL입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>0.800 g<span class="why"><b>맞습니다.</b> 0.200 × 0.100 = 0.0200 mol, × 40.0 g/mol = 0.800 g. 다만 NaOH는 공기 중 수분과 CO₂를 흡수해 실제로 단 질량이 정확하지 않으므로, 만든 뒤 적정으로 농도를 다시 확인합니다(4.4절).</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>0.800 g<span class="why"><b>맞습니다.</b> 0.200 × 0.100 = 0.0200 mol, × 40.0 g/mol = 0.800 g. 다만 NaOH는 공기 중 수분과 CO₂를 흡수해 실제로 단 질량이 정확하지 않으므로, 만든 뒤 적정으로 농도를 다시 확인합니다(중화 적정).</span></span></button></li>
             <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>2.00 g<span class="why"><b>몰질량과 농도를 나누어 계산한 값입니다.</b> 40.0 × 0.100 / 0.200 = 20 … 단위를 따라가 보면 g = mol/L × L × g/mol이 되도록 곱해야 합니다.</span></span></button></li>
           </ol>
         </div>
@@ -136,7 +137,7 @@
             <li><span class="tag">질문</span>0.10 M 염산에 물을 계속 부으면 pH는 1, 2, 3…으로 커집니다. 끝없이 부으면 pH가 8, 9를 넘어 염기성이 될까요?</li>
             <li><span class="tag">복원</span>물을 부으면 부피는 커지지만 녹아 있는 용질의 몰수는 그대로입니다. 그래서 <span class="formula">MV = M′V′</span>. 10배로 묽히면 농도는 10분의 1이 됩니다.</li>
             <li><span class="tag">설명</span>HCl은 물에서 모두 이온화하므로 묽지 않을 때는 [H₃O⁺] = HCl 농도입니다. 10배 묽힐 때마다 pH가 1씩 커집니다. 그런데 HCl이 10⁻⁷ M 가까이로 묽어지면 물이 스스로 내놓는 H₃O⁺와 크기가 비슷해집니다.</li>
-            <li><span class="tag">연결</span>물의 몫까지 넣으면 [H₃O⁺]는 늘 1.0×10⁻⁷ M보다 큽니다. 그래서 산을 아무리 묽혀도 pH는 7에 다가갈 뿐, 7을 넘지 못합니다. 4.1절의 K<sub>w</sub>가 여기서 다시 쓰입니다.</li>
+            <li><span class="tag">연결</span>물의 몫까지 넣으면 [H₃O⁺]는 늘 1.0×10⁻⁷ M보다 큽니다. 그래서 산을 아무리 묽혀도 pH는 7에 다가갈 뿐, 7을 넘지 못합니다. 물의 이온화 상수 K<sub>w</sub>가 여기서 다시 쓰입니다.</li>
             <li><span class="tag">적용</span>10배, 100배를 차례로 눌러 몰수, 부피, 농도 가운데 무엇이 그대로인지 확인하세요. 그다음 10⁶배와 10⁸배를 눌러 두 pH 값을 비교해 보세요. 두 곡선은 어디서부터 갈라지나요?</li>
             <li class="warn"><span class="tag">판단</span>“pH = −log(산의 농도)”는 산이 충분히 진할 때만 쓸 수 있는 근사입니다. 10⁻⁶ M보다 묽은 산에서는 물의 이온화를 빼면 틀린 답이 나옵니다. 또 10⁸배 희석은 10 mL를 1,000 m³로 만드는 일이라 실제로는 단계적으로 묽힙니다.</li>
           </ol>
@@ -158,6 +159,10 @@
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>

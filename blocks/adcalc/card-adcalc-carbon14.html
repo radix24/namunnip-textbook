@@ -1,0 +1,53 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/lib/sim.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adcalc/carbon14.js"
+  ],
+  "short": "탄소 14 연대 측정"
+}
+-->
+<style>
+#card-adcalc-carbon14 canvas { aspect-ratio: 16 / 10; }
+</style>
+<article class="card" id="card-adcalc-carbon14">
+  <header class="card-head">
+    <span class="no"></span><h2>원자 하나하나는 제멋대로 붕괴하는데 왜 전체는 지수함수를 따를까?</h2><span class="kind">방사성 붕괴 · 시뮬레이션 · 활용</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="왼쪽: 탄소 14 원자 400개의 격자. 붕괴한 원자는 흐리게 바뀐다. 오른쪽: 남은 원자의 비율과 지수함수 2^(−t/5730)"></canvas>
+      <div class="ctl">
+        <div class="sim-btns"><button class="chip" type="button" data-sim="1">573년</button><button class="chip" type="button" data-sim="10">5730년</button><button class="chip go" type="button" data-sim="auto">계속 실행</button><button class="chip" type="button" data-sim="reset">처음부터</button></div>
+        <label class="mono">측정한 탄소 14의 비율 = <output class="f-out">50</output>%</label>
+        <input class="sf" type="range" min="1" max="100" step="0.5" value="50" aria-label="남아 있는 탄소 14의 비율">
+        <dl class="nums">
+          <div><dt>흐른 시간</dt><dd class="n-t">0년</dd></div>
+          <div><dt>남은 원자</dt><dd class="n-n">400</dd></div>
+          <div><dt>측정 비율로 구한 나이</dt><dd class="n-a">—</dd></div>
+        </dl>
+        <p class="fig-note">한 걸음(573년, 반감기의 \(\frac{1}{10}\))마다 각 원자가 확률 \(1 - 2^{-0.1} \approx 0.067\)로 붕괴합니다. 반감기 5730년.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>방사성 원자 하나가 언제 붕괴할지는 아무도 알 수 없습니다. 그런데 많은 원자를 모아 두면 남은 양이 정확히 지수함수를 따라 줄어듭니다. 제멋대로인 개별 사건에서 어떻게 정확한 법칙이 나올까요?</li>
+      <li><span class="tag">복원</span>\(y' = -\lambda y\)의 해는 \(y = y_0e^{-\lambda t}\)입니다. 확률이 \(p\)인 시행을 \(N\)번 하면 성공 횟수의 평균은 \(Np\)입니다.</li>
+      <li><span class="tag">설명</span>각 원자는 짧은 시간 \(\Delta t\) 동안 같은 확률 \(\lambda\Delta t\)로 붕괴합니다. 원자가 \(N\)개 있으면 그동안 평균 \(\lambda N\Delta t\)개가 붕괴하므로 \(\Delta N \approx -\lambda N\Delta t\), 곧 \[\frac{dN}{dt} = -\lambda N,\qquad N = N_0e^{-\lambda t}\]입니다. 줄어드는 빠르기가 남은 양에 비례한다는 것이 핵심입니다. 반감기 \(T\)는 \(e^{-\lambda T} = \frac{1}{2}\)에서 \(T = \frac{\ln 2}{\lambda}\)이고, 탄소 14는 약 5730년입니다.</li>
+      <li><span class="tag">연결</span><em>방사성 탄소 연대 측정</em>: 살아 있는 생물은 대기와 같은 비율의 탄소 14를 지니다가, 죽으면 더 받아들이지 않고 붕괴만 합니다. 남은 비율 \(f\)를 재면 나이는 \(t = -\frac{5730}{\ln 2}\ln f\)입니다. 반감기의 9~10배(약 5만 년)가 지나면 남은 양이 처음의 0.1~0.2 %뿐이라 재기 어려워집니다.</li>
+      <li><span class="tag">적용</span>한 걸음씩, 또 계속 실행으로 원자를 붕괴시키며 남은 비율의 점이 곡선을 따라가는지 보세요. 실행할 때마다 결과가 조금씩 다른가요? 측정 비율 막대로 25 %, 10 %일 때의 나이를 구해 보세요.</li>
+      <li class="warn"><span class="tag">판단</span>원자 400개로는 점이 곡선에서 눈에 띄게 흔들립니다. 실제 시료에는 원자가 수조 개 이상이라 지수함수에 아주 잘 맞습니다. 또 대기 중 탄소 14의 비율이 시대마다 조금씩 달랐으므로, 실제 연대 측정에서는 나이테 등으로 만든 보정 곡선을 함께 씁니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">어떤 나무 조각의 탄소 14 비율이 살아 있는 나무의 \(\frac{1}{8}\)입니다. 나무가 죽은 지 약 몇 년이 지났나요?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 17190년<span class="why"><b>맞습니다.</b> \(\frac{1}{8} = \left(\frac{1}{2}\right)^3\)이므로 반감기 3번, \(3 \times 5730 = 17190\)년입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 45840년<span class="why"><b>8을 반감기의 횟수로 보았습니다.</b> 남은 양이 \(\frac{1}{8}\)이면 반감기는 세 번입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 5013년<span class="why"><b>선형으로 줄어든다고 보았습니다.</b> \(\frac{7}{8} \times 5730\)은 근거가 없습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 22920년<span class="why"><b>반감기를 한 번 더 셌습니다.</b> \(\frac{1}{16}\)일 때의 답입니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>

@@ -1,0 +1,144 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>꼭짓점의 차수와 변의 개수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="꼭짓점의 차수, 차수의 합과 변의 개수의 관계(악수 정리), 홀수 차수 꼭짓점의 개수, 완전그래프, 차수열. 변을 이으며 차수의 합을 확인하는 카드와, 주어진 차수열을 그래프로 실현하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-handshake canvas { aspect-ratio: 4 / 3; max-width: 480px; margin: 0 auto; display: block; }
+    #card-dmath-degree-seq canvas { aspect-ratio: 4 / 3; max-width: 460px; margin: 0 auto; display: block; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="4-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>꼭짓점의 차수와 변의 개수</h1>
+    <p class="lead">꼭짓점에 닿은 변의 개수를 그 꼭짓점의 <em>차수</em>라 합니다. 변 하나는 두 꼭짓점의 차수를 하나씩 올리므로, 차수를 모두 더하면 늘 변의 수의 두 배가 됩니다. 이 단순한 사실이 많은 것을 알려 줍니다. 이 절에서는 변을 이으며 이 관계를 확인하고, 차수 목록만 보고 그런 그래프가 있는지 판단해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/dmath/4-1.html#card-dmath-konigsberg" title="이산 수학 4.1 · 일곱 다리를 한 번씩만 건너 산책할 수 있을까?">그래프와 실생활 문제</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-handshake"><span class="mono">4.2.1</span>차수의 합은 늘 변의 수의 두 배</a></li>
+        <li><a href="#card-dmath-degree-seq"><span class="mono">4.2.2</span>주어진 차수대로 그래프를 그릴 수 있을까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-4-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-handshake">
+        <header class="card-head">
+          <span class="no">4.2.1</span><h2>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</h2><span class="kind">차수와 변의 개수 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="꼭짓점 일곱 개. 두 점을 차례로 누르면 변이 생기거나 지워진다. 점 옆의 수는 차수"></canvas>
+            <div class="presets"><button class="chip go-rand" type="button">아무렇게나 잇기</button><button class="chip go-full" type="button">모두 잇기</button><button class="chip go-clr" type="button">모두 지우기</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>파티에서 사람들이 악수를 했습니다. 각자 악수한 횟수를 적어 모두 더하면 늘 짝수가 됩니다. 왜 그럴까요? 또 악수를 홀수 번 한 사람의 수에 대해 무엇을 말할 수 있을까요?</li>
+            <li><span class="tag">복원</span>사람을 꼭짓점, 악수 한 번을 변 하나로 나타내면 그래프가 됩니다.</li>
+            <li><span class="tag">설명</span>꼭짓점에 닿은 변의 개수를 그 꼭짓점의 <em>차수</em> \(\deg(v)\)라 합니다. 변 하나는 양 끝의 두 꼭짓점의 차수를 1씩 올리므로 \(\sum \deg(v) = 2|E|\)입니다(<em>악수 정리</em>). 차수의 합이 짝수이므로 <b>차수가 홀수인 꼭짓점의 개수는 늘 짝수</b>입니다. 꼭짓점이 \(n\)개이고 모든 쌍이 이어진 <em>완전그래프</em> \(K_n\)은 차수가 모두 \(n - 1\)이라 변이 \(\frac{n(n-1)}{2}\)개입니다.</li>
+            <li><span class="tag">연결</span>쾨니히스베르크에서 "홀수인 땅의 수"가 중요했습니다. 악수 정리 때문에 홀수인 땅은 0, 2, 4, …개만 가능합니다. 다음 카드에서는 차수만 주어졌을 때 그런 그래프가 있는지 따집니다.</li>
+            <li><span class="tag">적용</span>변을 이었다 지웠다 하며 차수의 합과 변의 수를 비교하세요. 홀수 차수인 꼭짓점을 정확히 하나만 만들 수 있나요? "모두 잇기"로 \(K_7\)의 변의 수를 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>한 꼭짓점에서 자기 자신으로 가는 고리(루프)가 있으면 그 꼭짓점의 차수는 2 올라갑니다. 고리와 다중 변이 있어도 \(\sum\deg(v) = 2|E|\)는 성립하지만, "단순그래프"인지 아닌지에 따라 다른 성질은 달라집니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">모든 꼭짓점의 차수가 3인 그래프에 꼭짓점이 10개 있습니다. 변은 몇 개일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(15\)개<span class="why"><b>맞습니다.</b> \(3 \times 10 = 2|E|\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(30\)개<span class="why"><b>변을 두 번 셌습니다.</b> 차수의 합이 30입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(45\)개<span class="why"><b>\(K_{10}\)의 변의 수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>이런 그래프는 없다<span class="why"><b>차수의 합 30이 짝수라 가능합니다(예: 페테르센 그래프).</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-1.html#card-dmath-konigsberg"><small class="mono">이산 수학 4.1</small>일곱 다리를 한 번씩만 건너 산책할 수 있을까?</a><a href="../../c/dmath/4-1.html#card-dmath-graph-model"><small class="mono">이산 수학 4.1</small>버스 노선 설명을 그래프로 그리면 무엇이 보일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-3.html#card-dmath-adj-matrix"><small class="mono">이산 수학 4.3</small>그래프를 수의 표로 바꾸면 무엇을 계산할 수 있을까?</a><a href="../../c/dmath/4-3.html#card-dmath-walk-count"><small class="mono">이산 수학 4.3</small>세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?</a><a href="../../c/dmath/4-4.html#card-dmath-untangle"><small class="mono">이산 수학 4.4</small>엉킨 그래프를 선이 겹치지 않게 펼 수 있을까?</a><a href="../../c/dmath/4-4.html#card-dmath-euler-formula"><small class="mono">이산 수학 4.4</small>평면그래프에서 점, 선, 면의 수 사이에는 어떤 관계가 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-degree-seq">
+        <header class="card-head">
+          <span class="no">4.2.2</span><h2>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</h2><span class="kind">차수열 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="mono small lv"></p>
+            <canvas aria-label="꼭짓점마다 목표 차수가 적혀 있다. 두 점을 눌러 변을 잇거나 지운다. 점 옆의 수는 아직 더 필요한 변의 수"></canvas>
+            <div class="presets"><button class="chip go-no" type="button">불가능하다</button><button class="chip go-hh" type="button">하벨-하키미 방법 보기</button><button class="chip go-clr" type="button">변 지우기</button><button class="chip go-next" type="button" disabled>다음 목록</button></div>
+            <p class="verdict" role="status"></p>
+            <p class="mono small hh"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>여섯 명이 "나는 친구가 5명, 3명, 2명, 2명, 1명, 1명"이라고 말했습니다(친구 관계는 서로). 이 말이 모두 사실일 수 있을까요? 그래프를 그려 보지 않고 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>악수 정리: 차수의 합은 변의 수의 두 배이므로 짝수입니다.</li>
+            <li><span class="tag">설명</span>꼭짓점들의 차수를 큰 것부터 늘어놓은 것을 <em>차수열</em>이라 합니다. 고리와 다중 변이 없는 단순그래프로 실현되려면 ① 합이 짝수, ② 가장 큰 차수가 \(n - 1\) 이하여야 합니다. 그래도 부족해서, <em>하벨-하키미 방법</em>으로 확인합니다: 가장 큰 차수 \(d\)를 지우고 그다음 큰 \(d\)개의 차수에서 1씩 뺀 뒤 다시 정렬하기를 반복해, 모두 0이 되면 가능하고 음수가 나오면 불가능합니다. 이 과정이 실제로 그래프를 그리는 방법도 알려 줍니다.</li>
+            <li><span class="tag">연결</span>화학에서 원자의 결합 수(원자가)가 정해진 분자의 구조를 찾을 때, 네트워크 설계에서 각 장치의 연결 수가 정해졌을 때 같은 질문이 나옵니다.</li>
+            <li><span class="tag">적용</span>목록마다 꼭짓점 옆의 수(더 필요한 변)가 모두 0이 되게 변을 이어 보세요. 아무리 해도 안 되면 "불가능하다"를 누르세요. 합이 짝수인데도 불가능한 목록이 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>"합이 짝수"는 필요조건일 뿐입니다. (4, 4, 1, 1, 1, 1)은 합이 12인데도 단순그래프로 그릴 수 없습니다. 차수 4인 두 꼭짓점이 각각 다른 네 점과 이어져야 하는데, 차수 1인 점들은 한 번밖에 이어질 수 없기 때문입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 중 단순그래프의 차수열이 될 수 있는 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((2, 2, 2, 2)\)<span class="why"><b>맞습니다.</b> 사각형(순환 그래프 \(C_4\))입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((3, 3, 3)\)<span class="why"><b>꼭짓점 3개에서 차수는 2 이하입니다.</b> 합도 홀수입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((3, 2, 2, 2)\)<span class="why"><b>합 9가 홀수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((3, 3, 1, 1)\)<span class="why"><b>하벨-하키미: 3을 지우면 (2, 0, 0), 다시 2를 지우면 (−1, −1)</b>이라 불가능합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-1.html#card-dmath-konigsberg"><small class="mono">이산 수학 4.1</small>일곱 다리를 한 번씩만 건너 산책할 수 있을까?</a><a href="../../c/dmath/4-1.html#card-dmath-graph-model"><small class="mono">이산 수학 4.1</small>버스 노선 설명을 그래프로 그리면 무엇이 보일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-3.html#card-dmath-adj-matrix"><small class="mono">이산 수학 4.3</small>그래프를 수의 표로 바꾸면 무엇을 계산할 수 있을까?</a><a href="../../c/dmath/4-3.html#card-dmath-walk-count"><small class="mono">이산 수학 4.3</small>세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?</a><a href="../../c/dmath/4-4.html#card-dmath-untangle"><small class="mono">이산 수학 4.4</small>엉킨 그래프를 선이 겹치지 않게 펼 수 있을까?</a><a href="../../c/dmath/4-4.html#card-dmath-euler-formula"><small class="mono">이산 수학 4.4</small>평면그래프에서 점, 선, 면의 수 사이에는 어떤 관계가 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/graph.js"></script>
+<script src="../../js/cards/dmath/handshake.js"></script>
+<script src="../../js/cards/dmath/degree-seq.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>비둘기집의 원리 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="비둘기집의 원리와 그 일반형, 존재 증명. 생일 달력으로 비둘기집과 생일 문제를 비교하는 카드와, 나누어떨어지지 않게 수를 고르는 도전에서 비둘기집을 찾는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-birthday canvas { aspect-ratio: 16 / 8; max-width: 560px; margin: 0 auto; display: block; }
+    #card-dmath-pigeon-pairs .nums { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+    #card-dmath-pigeon-pairs .nums button { width: 3rem; height: 3rem; border-radius: 50%; border: 2px solid var(--rule); background: var(--card); color: var(--ink); font: 700 1.05rem/1 sans-serif; cursor: pointer; }
+    #card-dmath-pigeon-pairs .nums button[aria-pressed="true"] { background: var(--forest); color: var(--on-accent); border-color: var(--forest); }
+    #card-dmath-pigeon-pairs .nums button.bad { background: var(--warn); border-color: var(--warn); color: var(--on-accent); }
+    #card-dmath-pigeon-pairs .boxes { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+    #card-dmath-pigeon-pairs .boxes span { padding: .3rem .55rem; border: 1px solid var(--rule); border-radius: 8px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .85rem; background: var(--paper-2); }
+    #card-dmath-pigeon-pairs .boxes span.two { border-color: var(--warn); background: var(--warn-bg); }
+  </style>
+</head>
+<body data-course="dmath" data-sec="1-5">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>비둘기집의 원리</h1>
+    <p class="lead">비둘기가 집보다 많으면 두 마리 이상 들어간 집이 반드시 있습니다. 너무 당연해 보이는 이 <em>비둘기집의 원리</em>는 어디에 있는지는 몰라도 "반드시 있다"는 것을 보여 주는 강력한 도구입니다. 이 절에서는 생일이 같은 사람이 반드시 있는 인원과 그럴 확률이 절반을 넘는 인원을 비교하고, 무엇을 집으로 삼을지 찾아 증명을 완성해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/stat/2-2.html#card-stat-add-rule" title="확률과 통계 2.2 · &#x27;A 또는 B&#x27;의 확률은 두 확률의 합일까?">여사건의 확률</a><a class="p p-card" href="../../c/cm1/3-1.html#card-cm1-divisors" title="공통수학1 3.1 · 약수의 개수는 왜 지수에 1을 더해 곱할까?">약수와 배수</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-birthday"><span class="mono">1.5.1</span>생일이 같은 두 사람이 있을까</a></li>
+        <li><a href="#card-dmath-pigeon-pairs"><span class="mono">1.5.2</span>나누어떨어지는 쌍을 피할 수 있을까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-1-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-1-5">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-birthday">
+        <header class="card-head">
+          <span class="no">1.5.1</span><h2>몇 명이 모이면 생일이 같은 두 사람이 꼭 있을까?</h2><span class="kind">비둘기집의 원리 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">사람 수 = <output class="n-out">23</output></label><input class="n" type="range" min="2" max="400" step="1" value="23" aria-label="모인 사람 수"></div></div>
+            <canvas aria-label="1년 366일 달력 칸. 생일이 들어간 날은 파랑, 두 명 이상 겹친 날은 빨강"></canvas>
+            <div class="presets"><button class="chip go-1" type="button">한 반 새로 만들기</button><button class="chip go-500" type="button">500반 만들기</button></div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">2월 29일을 포함해 366일이 똑같이 나올 수 있다고 본 모형입니다. 실제 생일은 날마다 조금씩 비율이 다릅니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>몇 명이 모이면 생일이 같은 두 사람이 <b>반드시</b> 있을까요? 그리고 "반드시"까지는 아니어도 절반 넘는 확률로 있으려면 몇 명이면 될까요?</li>
+            <li><span class="tag">복원</span>여사건의 확률: "적어도 한 쌍이 겹친다" \(= 1 -\) "모두 다르다".</li>
+            <li><span class="tag">설명</span><em>비둘기집의 원리</em>: 비둘기 \(n + 1\)마리가 집 \(n\)개에 들어가면 두 마리 이상 들어간 집이 반드시 있습니다. 생일(집)은 366가지이므로 367명이면 반드시 생일이 같은 두 사람이 있습니다. 일반적으로 \(kn + 1\)마리면 \(k + 1\)마리 이상 들어간 집이 있습니다. 한편 확률은 훨씬 빨리 커집니다. 모두 다를 확률 \(\frac{366}{366}\cdot\frac{365}{366}\cdots\frac{366 - n + 1}{366}\)은 23명에서 이미 \(\frac{1}{2}\) 아래로 떨어집니다.</li>
+            <li><span class="tag">연결</span>비둘기집의 원리는 "어디에 있는지는 몰라도 있다는 것은 안다"는 존재 증명입니다. 컴퓨터의 해시 함수에서 서로 다른 자료가 같은 값을 갖는 충돌이 반드시 생기는 이유이고, 생일 문제의 확률은 충돌이 얼마나 일찍 생기는지 알려 줍니다.</li>
+            <li><span class="tag">적용</span>23명으로 한 반을 여러 번 만들어 겹치는 날이 얼마나 자주 생기는지 보세요. 500반 만들기로 비율을 구해 계산값과 비교하세요. 사람 수를 367 이상으로 하면 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>"23명이면 생일이 같은 사람이 있다"는 틀린 말입니다. 23명은 확률이 약 50%일 뿐이고, 반드시 있으려면 367명이 필요합니다. "나와 생일이 같은 사람"이 있을 확률은 이보다 훨씬 작습니다. 확실성과 확률을 구별해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">양말 서랍에 검정, 흰색, 회색 양말이 많이 섞여 있습니다. 보지 않고 꺼낼 때 같은 색 한 켤레(2짝)가 반드시 나오려면 최소 몇 짝을 꺼내야 할까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(4\)짝<span class="why"><b>맞습니다.</b> 색(집)이 3가지이므로 4짝이면 두 짝이 같은 색입니다. 3짝은 모두 다를 수 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(3\)짝<span class="why"><b>검정, 흰색, 회색이 하나씩 나올 수 있습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(6\)짝<span class="why"><b>너무 많습니다.</b> 각 색 한 켤레씩이 아니라 아무 색이나 한 켤레면 됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>알 수 없다<span class="why"><b>최악의 경우를 생각하면 정할 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-1.html#card-dmath-round-table"><small class="mono">이산 수학 1.1</small>원탁에 앉는 방법은 왜 n!보다 적을까?</a><a href="../../c/dmath/1-1.html#card-dmath-grid-path"><small class="mono">이산 수학 1.1</small>바둑판 도시에서 가장 짧은 길은 몇 가지일까?</a></div></nav>
+
+      <article class="card" id="card-dmath-pigeon-pairs">
+        <header class="card-head">
+          <span class="no">1.5.2</span><h2>서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?</h2><span class="kind">비둘기집의 원리 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">n <select class="pick" aria-label="n 고르기"><option value="5" selected>5 (1부터 10까지)</option><option value="8">8 (1부터 16까지)</option></select></label></div>
+            <p class="small">1부터 2n까지에서 수를 고르세요. 고른 수 중 하나가 다른 하나를 나누면 빨갛게 표시됩니다.</p>
+            <div class="nums" role="group" aria-label="고를 수 있는 수"></div>
+            <p class="mono small say" role="status"></p>
+            <div class="presets"><button class="chip go-box" type="button" aria-pressed="false">비둘기집 보기</button><button class="chip go-clr" type="button">모두 지우기</button></div>
+            <div class="boxes" aria-label="홀수 부분이 같은 수끼리 묶은 상자"></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>1부터 10까지에서 수를 여러 개 고르되, 고른 수 중 어느 것도 다른 것을 나누지 않게 하려고 합니다. 최대 몇 개까지 고를 수 있을까요? 6개를 고르면 왜 안 될까요?</li>
+            <li><span class="tag">복원</span>모든 자연수는 \(2^a \times (\text{홀수})\) 꼴로 한 가지로만 나타낼 수 있습니다. 예: \(12 = 2^2 \times 3\).</li>
+            <li><span class="tag">설명</span>1부터 \(2n\)까지의 수를 홀수 부분이 같은 것끼리 상자에 넣으면, 홀수는 \(1, 3, \ldots, 2n - 1\)의 \(n\)개뿐이므로 상자는 \(n\)개입니다. \(n + 1\)개를 고르면 <em>비둘기집의 원리</em>로 두 수가 같은 상자에 들어가고, 같은 상자의 두 수 \(2^a m\), \(2^b m\) \((a < b)\)는 작은 것이 큰 것을 나눕니다. 그래서 최대는 \(n\)개이고, \(n + 1, \ldots, 2n\)을 고르면 실제로 \(n\)개가 가능합니다.</li>
+            <li><span class="tag">연결</span>비둘기집의 원리를 쓰는 증명의 핵심은 "무엇을 비둘기로, 무엇을 집으로 볼지" 정하는 것입니다. 이 문제의 집은 홀수 부분이었습니다. 수학 경시대회에 자주 나오는 고전적인 문제입니다.</li>
+            <li><span class="tag">적용</span>빨간 표시가 나오지 않게 최대한 많이 골라 보세요. \(n\)개를 넘길 수 있나요? "비둘기집 보기"를 눌러 고른 수가 어느 상자에 들어가는지 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>여러 번 시도해서 6개를 못 골랐다고 "불가능하다"는 증명이 되지는 않습니다. 시도는 짐작을 주고, 모든 경우를 덮는 논리(비둘기집)가 증명을 줍니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">1부터 100까지에서 51개를 고르면 반드시 성립하는 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>서로 이웃한(차가 1인) 두 수가 있다.<span class="why"><b>맞습니다.</b> \(\{1, 2\}, \{3, 4\}, \ldots, \{99, 100\}\)의 50개 상자에 51개를 넣으면 한 상자에 둘이 들어갑니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>세 수가 같은 상자에 들어간다.<span class="why"><b>51 = 50 × 1 + 1</b>이라 두 개까지만 보장됩니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>100이 반드시 들어 있다.<span class="why"><b>1부터 51까지를 고르면 100이 없습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>합이 100인 두 수가 있다.<span class="why"><b>반례가 있습니다.</b> 50부터 100까지 51개를 고르면 서로 다른 두 수의 합은 모두 101 이상입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-1.html#card-dmath-round-table"><small class="mono">이산 수학 1.1</small>원탁에 앉는 방법은 왜 n!보다 적을까?</a><a href="../../c/dmath/1-1.html#card-dmath-grid-path"><small class="mono">이산 수학 1.1</small>바둑판 도시에서 가장 짧은 길은 몇 가지일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-1-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/birthday.js"></script>
+<script src="../../js/cards/dmath/pigeon-pairs.js"></script>
+</body>
+</html>

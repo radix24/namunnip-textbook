@@ -1,0 +1,259 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>위치벡터, 내적과 외적 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="위치벡터, 내적과 외적의 뜻과 활용. 썰매를 끄는 힘이 한 일(내적), 오른손 법칙과 평행사변형 넓이(외적), 렌치로 볼트를 돌리는 토크, 3D 그래픽에서 면의 밝기를 정하는 법선과 조명 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-work-dot canvas { aspect-ratio: 16 / 9; }
+    #card-pmath-cross canvas { width: 100%; aspect-ratio: 4 / 3; }
+    #card-pmath-torque canvas { aspect-ratio: 16 / 10; touch-action: pan-y; }
+    #card-pmath-shading canvas { width: 100%; aspect-ratio: 4 / 3; }
+  </style>
+</head>
+<body data-course="pmath" data-sec="2-7">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>위치벡터, 내적과 외적</h1>
+    <p class="lead">두 벡터를 곱하는 방법은 두 가지입니다. <em>내적</em>은 두 벡터가 같은 쪽을 얼마나 향하는지를 수 하나로 알려 주고, <em>외적</em>은 두 벡터에 모두 수직인 새 벡터를 만들어 그 크기로 평행사변형의 넓이를 알려 줍니다. 이 절에서는 썰매를 끌 때 하는 일로 내적을, 렌치로 볼트를 돌리는 토크로 외적을 체험하고, 컴퓨터 그래픽이 외적으로 면의 방향을 구하고 내적으로 그 면의 밝기를 정하는 과정을 직접 조작해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/3-2.html#card-geo-pos-section" title="기하 3.2 · 두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?">위치벡터</a><a class="p p-card" href="../../c/geo/3-3.html#card-geo-dot-space" title="기하 3.3 · 공간에서 두 벡터가 수직인지 어떻게 알까?">벡터의 내적과 수직 조건</a><a class="p p-card" href="../../c/geo/3-2.html#card-geo-components" title="기하 3.2 · 화살표를 수 두 개로 바꿀 수 있을까?">벡터의 성분</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-work-dot"><span class="mono">2.7.1</span>썰매를 끄는 힘과 내적</a></li>
+        <li><a href="#card-pmath-cross"><span class="mono">2.7.2</span>외적의 방향과 크기</a></li>
+        <li><a href="#card-pmath-torque"><span class="mono">2.7.3</span>렌치와 토크</a></li>
+        <li><a href="#card-pmath-shading"><span class="mono">2.7.4</span>3D 그래픽의 법선과 조명</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pmath-2-7"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-2-7">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-work-dot">
+        <header class="card-head">
+          <span class="no">2.7.1</span><h2>썰매 줄을 비스듬히 당기면 힘의 얼마가 썰매를 끄는 데 쓰일까?</h2><span class="kind">내적 · 일 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="썰매와 비스듬한 줄, 힘 벡터 F와 이동 벡터 s, F를 s 방향으로 정사영한 성분"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">당기는 힘 \(|\vec{F}|\) = <output class="f-out">100</output> N</label><input class="sf" type="range" min="20" max="200" step="5" value="100" aria-label="당기는 힘의 크기"></div>
+                <div><label class="mono">줄의 각 \(\theta\) = <output class="t-out">40°</output></label><input class="st" type="range" min="0" max="120" step="1" value="40" aria-label="줄이 바닥과 이루는 각"></div>
+              </div>
+              <label class="mono">끌고 간 거리 \(|\vec{s}|\) = <output class="s-out">10</output> m</label>
+              <input class="ss" type="range" min="1" max="20" step="1" value="10" aria-label="이동 거리">
+              <dl class="nums">
+                <div><dt>\(\vec{F}\)의 \(\vec{s}\) 방향 성분</dt><dd class="n-c">—</dd></div>
+                <div><dt>일 \(W = \vec{F}\cdot\vec{s}\)</dt><dd class="n-w">—</dd></div>
+                <div><dt>성분으로 계산</dt><dd class="n-k">—</dd></div>
+              </dl>
+              <p class="fig-note">90°보다 크게 하면 줄을 뒤쪽으로 당기는 셈입니다. 성분 계산은 \(\vec{F} = (|\vec{F}|\cos\theta, |\vec{F}|\sin\theta)\), \(\vec{s} = (|\vec{s}|, 0)\)으로 했습니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>썰매를 줄로 비스듬히 당기면 힘의 일부는 썰매를 들어 올리는 데 쓰이고, 일부만 앞으로 끄는 데 쓰입니다. 같은 힘으로 같은 거리를 끌어도 줄의 각에 따라 한 일이 다를까요?</li>
+            <li><span class="tag">복원</span>두 벡터의 내적은 \(\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos\theta = a_1b_1 + a_2b_2\)입니다. \(|\vec{a}|\cos\theta\)는 \(\vec{a}\)를 \(\vec{b}\) 방향으로 정사영한 길이(부호 포함)입니다.</li>
+            <li><span class="tag">설명</span>물리에서 일은 "움직인 방향으로 작용한 힘 × 움직인 거리"입니다. 움직인 방향의 힘은 \(\vec{F}\)를 \(\vec{s}\) 방향으로 정사영한 \(|\vec{F}|\cos\theta\)이므로 <b>일 \(W = |\vec{F}||\vec{s}|\cos\theta = \vec{F}\cdot\vec{s}\)</b>, 곧 내적입니다. 줄이 수평이면 힘을 모두 쓰고, 수직이면 일을 하지 않으며, 둔각이면 일이 음수(움직임을 방해함)가 됩니다. 내적은 "두 벡터가 같은 쪽을 얼마나 향하는가"에 크기를 곱한 값입니다.</li>
+            <li><span class="tag">연결</span>내적이 0이면 두 벡터가 수직입니다. 원운동하는 물체에서 구심력이 일을 하지 않는 이유, 무거운 가방을 들고 수평으로 걸을 때 물리학적 일이 0인 이유가 모두 내적이 0이기 때문입니다.</li>
+            <li><span class="tag">적용</span>줄의 각을 0°부터 120°까지 바꾸며 일이 어떻게 변하는지 보세요. 일이 절반이 되는 각은 몇 도인가요? 두 계산(\(|\vec{F}||\vec{s}|\cos\theta\)와 성분 곱의 합)이 늘 같은지 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>실제 썰매에서는 줄을 비스듬히 당기면 썰매가 바닥을 덜 누르게 되어 마찰력이 줄어듭니다. 그래서 끄는 데 가장 유리한 각이 0°가 아닐 수 있습니다. 이 카드의 일은 줄이 한 일만 계산한 것입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\vec{F} = (3, 4)\) N의 힘으로 물체를 \(\vec{s} = (5, -2)\) m만큼 옮겼습니다. 힘이 한 일은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>7 J<span class="why"><b>맞습니다.</b> \(\vec{F}\cdot\vec{s} = 3 \times 5 + 4 \times (-2) = 7\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>23 J<span class="why"><b>음수 성분의 부호를 빠뜨렸습니다.</b> \(4 \times (-2) = -8\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(5\sqrt{29}\) J<span class="why"><b>두 벡터의 크기를 곱했습니다.</b> 방향이 달라 \(\cos\theta\)를 곱해야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\((15, -8)\) J<span class="why"><b>성분끼리 곱하고 더하지 않았습니다.</b> 내적은 벡터가 아니라 수입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a></div></nav>
+
+      <article class="card" id="card-pmath-cross">
+        <header class="card-head">
+          <span class="no">2.7.2</span><h2>두 벡터에 모두 수직인 벡터는 어느 쪽을 향하고, 길이는 얼마일까?</h2><span class="kind">외적 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="벡터 a, b와 두 벡터가 만드는 평행사변형, 그리고 외적 a × b. 끌어서 돌려 볼 수 있다"></canvas>
+            <div class="ctl">
+              <div class="presets"><button class="chip" type="button" data-o="ab" aria-pressed="true">\(\vec{a} \times \vec{b}\)</button><button class="chip" type="button" data-o="ba">\(\vec{b} \times \vec{a}\)</button></div>
+              <div class="ctl-row">
+                <div><label class="mono">사잇각 \(\varphi\) = <output class="p-out">60°</output></label><input class="sp" type="range" min="0" max="180" step="1" value="60" aria-label="두 벡터 사이의 각"></div>
+                <div><label class="mono">\(|\vec{b}|\) = <output class="b-out">2</output></label><input class="sb" type="range" min="0.5" max="3" step="0.1" value="2" aria-label="벡터 b의 크기"></div>
+              </div>
+              <label class="mono">\(\vec{b}\)를 위로 기울이기 = <output class="e-out">0°</output></label>
+              <input class="se" type="range" min="0" max="60" step="1" value="0" aria-label="벡터 b를 xy평면에서 들어 올린 각">
+              <dl class="nums">
+                <div><dt>외적의 성분</dt><dd class="n-c">—</dd></div>
+                <div><dt>\(|\vec{a}\times\vec{b}|\)와 평행사변형 넓이</dt><dd class="n-a">—</dd></div>
+                <div><dt>\((\vec{a}\times\vec{b})\cdot\vec{a}\), \(\cdot\vec{b}\)</dt><dd class="n-d">—</dd></div>
+              </dl>
+              <p class="fig-note">\(\vec{a} = (2, 0, 0)\)로 고정했습니다. 오른손의 네 손가락을 \(\vec{a}\)에서 \(\vec{b}\) 쪽으로 감아쥐면 엄지가 외적의 방향입니다. 그림을 끌면 돌아갑니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>공간에서 두 벡터가 만드는 평면에 수직인 방향은 위와 아래 두 가지입니다. 두 벡터만으로 이 중 하나를 정하고, 동시에 두 벡터가 만드는 평행사변형의 넓이까지 알려 주는 계산이 있을까요?</li>
+            <li><span class="tag">복원</span>두 벡터가 수직이면 내적이 0입니다. 두 변의 길이가 \(a\), \(b\)이고 끼인각이 \(\varphi\)인 평행사변형의 넓이는 \(ab\sin\varphi\)입니다.</li>
+            <li><span class="tag">설명</span><em>외적</em> \(\vec{a}\times\vec{b} = (a_2b_3 - a_3b_2,\ a_3b_1 - a_1b_3,\ a_1b_2 - a_2b_1)\)은 세 가지 성질을 가집니다. ① <b>\(\vec{a}\), \(\vec{b}\)에 모두 수직</b>입니다(내적이 0). ② <b>크기는 \(|\vec{a}||\vec{b}|\sin\varphi\)</b>, 곧 두 벡터가 만드는 평행사변형의 넓이입니다. ③ 방향은 <b>오른손 법칙</b>을 따릅니다. 순서를 바꾸면 \(\vec{b}\times\vec{a} = -\vec{a}\times\vec{b}\)로 방향이 뒤집힙니다. 두 벡터가 평행하면(\(\varphi = 0^\circ, 180^\circ\)) 외적은 영벡터입니다.</li>
+            <li><span class="tag">연결</span>외적은 평면의 법선벡터를 구할 때, 삼각형의 넓이를 좌표로 구할 때 쓰입니다. 물리에서는 토크 \(\vec{\tau} = \vec{r}\times\vec{F}\), 자기장 속 전하가 받는 힘 \(q\vec{v}\times\vec{B}\)가 외적입니다. 다음 카드에서 토크를 직접 다룹니다.</li>
+            <li><span class="tag">적용</span>사잇각을 0°부터 180°까지 움직이며 외적의 길이가 평행사변형의 넓이와 늘 같은지 보세요. 넓이가 가장 큰 각은? \(\vec{b}\times\vec{a}\)로 바꾸면 무엇이 달라지나요? \(\vec{b}\)를 위로 기울여도 외적이 두 벡터에 수직인지 표로 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>외적은 3차원 벡터에서만 정의됩니다. 평면 벡터에는 "두 벡터에 모두 수직인 같은 평면 위의 벡터"가 없기 때문입니다. 또 외적은 교환법칙이 성립하지 않으므로 순서를 함부로 바꾸면 부호가 틀립니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">세 점 O(0, 0, 0), A(1, 2, 0), B(3, 1, 0)을 꼭짓점으로 하는 삼각형의 넓이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{5}{2}\)<span class="why"><b>맞습니다.</b> \(\overrightarrow{\mathrm{OA}}\times\overrightarrow{\mathrm{OB}} = (0, 0, 1 - 6) = (0, 0, -5)\)이고, 삼각형은 평행사변형의 절반이므로 \(\frac{5}{2}\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>5<span class="why"><b>평행사변형의 넓이입니다.</b> 삼각형은 그 절반입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(-\frac{5}{2}\)<span class="why"><b>외적의 성분을 넓이로 보았습니다.</b> 넓이는 외적의 크기(양수)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\frac{7}{2}\)<span class="why"><b>\(1 + 6\)으로 계산했습니다.</b> z성분은 \(a_1b_2 - a_2b_1 = 1 \cdot 1 - 2 \cdot 3\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-area"><small class="mono">고급 대수 2.3</small>행렬식은 무엇을 재는 수일까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-spot"><small class="mono">고급 대수 2.3</small>이 행렬식 계산, 어디서 틀렸을까?</a></div></nav>
+
+      <article class="card" id="card-pmath-torque">
+        <header class="card-head">
+          <span class="no">2.7.3</span><h2>녹슨 볼트를 풀려면 렌치의 어디를 어느 방향으로 밀어야 할까?</h2><span class="kind">외적 · 토크 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="위에서 본 볼트와 렌치, 손잡이를 미는 힘 F와 볼트 중심에서 힘의 작용선까지의 거리(팔 길이)"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">잡는 위치 \(|\vec{r}|\) = <output class="r-out">0.20</output> m</label><input class="sr" type="range" min="0.05" max="0.4" step="0.01" value="0.2" aria-label="볼트 중심에서 손이 잡은 곳까지의 거리"></div>
+                <div><label class="mono">힘의 크기 \(|\vec{F}|\) = <output class="f-out">150</output> N</label><input class="sf" type="range" min="20" max="400" step="5" value="150" aria-label="미는 힘의 크기"></div>
+              </div>
+              <label class="mono">렌치와 힘이 이루는 각 \(\varphi\) = <output class="p-out">50°</output></label>
+              <input class="sp" type="range" min="0" max="180" step="1" value="50" aria-label="렌치와 힘 사이의 각">
+              <dl class="nums">
+                <div><dt>토크 \(|\vec{r}\times\vec{F}|\)</dt><dd class="n-t">—</dd></div>
+                <div><dt>팔 길이 \(|\vec{r}|\sin\varphi\)</dt><dd class="n-l">—</dd></div>
+                <div><dt>볼트</dt><dd class="n-b">—</dd></div>
+              </dl>
+              <p class="fig-note">이 볼트는 40 N·m 이상의 토크가 걸려야 풀린다고 합시다. 도전: 가장 작은 힘으로 볼트를 풀어 보세요.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>꽉 조인 볼트가 풀리지 않을 때 렌치 손잡이 끝을 잡거나 긴 파이프를 끼우면 쉽게 풀립니다. 힘은 같은데 왜 효과가 다를까요? 손잡이를 렌치 방향으로 밀면 왜 아무 일도 일어나지 않을까요?</li>
+            <li><span class="tag">복원</span>외적 \(\vec{r}\times\vec{F}\)의 크기는 \(|\vec{r}||\vec{F}|\sin\varphi\)이고, 방향은 \(\vec{r}\)과 \(\vec{F}\)에 모두 수직이며 오른손 법칙을 따릅니다.</li>
+            <li><span class="tag">설명</span>물체를 돌리는 효과를 <em>토크(돌림힘)</em>라고 하고, <b>\(\vec{\tau} = \vec{r}\times\vec{F}\)</b>로 나타냅니다. \(\vec{r}\)은 회전축(볼트 중심)에서 힘을 주는 곳까지의 위치벡터입니다. 크기 \(|\vec{r}||\vec{F}|\sin\varphi\)는 "힘 × 팔 길이"인데, 팔 길이 \(|\vec{r}|\sin\varphi\)는 볼트 중심에서 힘의 작용선까지의 거리입니다. 그래서 손잡이 끝을 잡고(\(|\vec{r}|\)이 크게), 렌치에 수직으로 밀 때(\(\sin\varphi = 1\)) 토크가 가장 큽니다. 렌치 방향으로 밀면 \(\varphi = 0\)이라 토크는 0입니다. 외적의 방향(볼트 축 방향의 위 또는 아래)은 조이는 쪽인지 푸는 쪽인지를 알려 줍니다.</li>
+            <li><span class="tag">연결</span>문손잡이가 경첩 반대쪽 끝에 달린 것, 시소에서 가벼운 사람이 멀리 앉는 것, 자전거 페달이 아래로 내려갈 때 가장 힘이 잘 전달되는 것이 모두 토크 때문입니다.</li>
+            <li><span class="tag">적용</span>40 N·m를 넘겨 볼트를 풀어 보세요. 잡는 위치를 0.4 m로 하면 필요한 힘은 몇 N까지 줄어드나요? 각 \(\varphi\)를 0°와 180°로 하면 어떻게 되나요? 90°보다 큰 각에서는 무엇이 다른가요?</li>
+            <li class="warn"><span class="tag">판단</span>이 그림은 볼트 축에 수직인 평면에서 미는 경우만 다룹니다. 렌치를 비스듬히 위로 당기면 힘의 일부는 볼트 축 방향으로 가서 돌리는 데 쓰이지 않습니다. 실제로는 렌치나 볼트가 견딜 수 있는 토크에도 한계가 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">길이 0.25 m인 렌치 끝을 렌치와 \(30^\circ\)를 이루는 방향으로 200 N의 힘으로 밀었습니다. 토크의 크기는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>25 N·m<span class="why"><b>맞습니다.</b> \(0.25 \times 200 \times \sin 30^\circ = 25\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 43.3 N·m<span class="why"><b>코사인을 썼습니다.</b> 돌리는 데 쓰이는 것은 렌치에 수직인 성분 \(F\sin\varphi\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>50 N·m<span class="why"><b>각을 무시했습니다.</b> 수직으로 밀 때의 값입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>800 N·m<span class="why"><b>길이로 나누었습니다.</b> 토크는 팔 길이와 힘의 곱입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-area"><small class="mono">고급 대수 2.3</small>행렬식은 무엇을 재는 수일까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-spot"><small class="mono">고급 대수 2.3</small>이 행렬식 계산, 어디서 틀렸을까?</a></div></nav>
+
+      <article class="card" id="card-pmath-shading">
+        <header class="card-head">
+          <span class="no">2.7.4</span><h2>게임 속 3D 물체는 어떻게 그림자를 칠할까?</h2><span class="kind">외적과 내적 · 3D 그래픽 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="삼각형 면으로 이루어진 구. 면마다 외적으로 구한 법선과 빛 방향의 내적으로 밝기를 칠했다. 끌어서 돌려 볼 수 있다"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">빛의 방위 = <output class="az-out">40°</output></label><input class="saz" type="range" min="0" max="360" step="1" value="40" aria-label="빛이 오는 방위각"></div>
+                <div><label class="mono">빛의 높이 = <output class="el-out">35°</output></label><input class="sel" type="range" min="-60" max="90" step="1" value="35" aria-label="빛이 오는 높이각"></div>
+              </div>
+              <label class="mono">면의 개수 = <output class="d-out">보통</output></label>
+              <input class="sd" type="range" min="1" max="4" step="1" value="2" aria-label="구를 나누는 정도">
+              <div class="presets"><button class="chip go-n" type="button" aria-pressed="false">법선 보기</button><button class="chip go-flip" type="button" aria-pressed="false">외적 순서 뒤집기</button></div>
+              <p class="mono small face">—</p>
+              <p class="fig-note">면의 밝기 = max(0, 법선 · 빛 방향) (둘 다 단위벡터). 법선은 면의 두 모서리 벡터의 외적입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>게임 속 공은 사실 작은 삼각형 수백 개를 이어 붙인 것입니다. 컴퓨터는 이 삼각형마다 얼마나 밝게 칠할지를 어떻게 정할까요?</li>
+            <li><span class="tag">복원</span>외적 \(\vec{u}\times\vec{v}\)는 두 벡터에 모두 수직이고, 단위벡터끼리의 내적은 사잇각의 코사인입니다.</li>
+            <li><span class="tag">설명</span>삼각형 PQR의 두 모서리 \(\vec{u} = \overrightarrow{\mathrm{PQ}}\), \(\vec{v} = \overrightarrow{\mathrm{PR}}\)의 외적 \(\vec{u}\times\vec{v}\)를 크기 1로 줄이면 면에 수직인 <b>법선벡터</b> \(\hat{n}\)이 됩니다. 빛이 오는 방향의 단위벡터를 \(\hat{l}\)이라 하면, 면이 빛을 정면으로 받을수록 밝으므로 <b>밝기 \(= \max(0, \hat{n}\cdot\hat{l}) = \max(0, \cos\theta)\)</b>로 칠합니다. 이것을 램버트 조명 모형이라고 합니다. 내적이 음수인 면은 빛을 등지고 있어 검게 칠합니다. 이 계산은 정사영 단원에서 태양광 패널이 받는 빛의 양 \(\cos\gamma\)와 같은 식입니다.</li>
+            <li><span class="tag">연결</span>외적의 순서(\(\vec{u}\times\vec{v}\)인가 \(\vec{v}\times\vec{u}\)인가)는 법선이 바깥을 향하느냐 안을 향하느냐를 정합니다. 그래서 3D 모델 파일은 삼각형의 꼭짓점을 늘 같은 방향(예: 바깥에서 볼 때 시계 반대 방향)으로 적는 약속을 지킵니다.</li>
+            <li><span class="tag">적용</span>빛의 방향을 바꾸며 가장 밝은 면이 빛 쪽을 향한 면인지 보세요. 면의 개수를 늘리면 공이 얼마나 매끄러워 보이나요? "외적 순서 뒤집기"를 켜면 무슨 일이 생기나요? 법선을 보면서 이유를 설명해 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>이 모형은 빛이 면에 닿는 각만 봅니다. 실제 그래픽에는 반짝이는 반사광, 다른 물체가 드리우는 그림자, 주변에서 되비친 빛이 더해집니다. 또 면마다 밝기를 하나로 칠하면 각진 모습이 남아, 실제 게임은 꼭짓점의 법선을 섞어 매끄럽게 보이게 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">어떤 면의 단위 법선이 \(\left(0, 0, 1\right)\)이고 빛이 오는 방향의 단위벡터가 \(\left(\frac{1}{2}, 0, \frac{\sqrt{3}}{2}\right)\)일 때, 이 면의 밝기(0~1)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{\sqrt{3}}{2} \approx 0.87\)<span class="why"><b>맞습니다.</b> 두 단위벡터의 내적은 \(0 + 0 + \frac{\sqrt{3}}{2}\)이고, 빛이 법선과 \(30^\circ\)를 이루며 들어옵니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\frac{1}{2}\)<span class="why"><b>x성분을 골랐습니다.</b> 법선이 z축 방향이므로 빛의 z성분이 내적입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>1<span class="why"><b>빛이 정면에서 온다고 보았습니다.</b> 빛 방향이 법선과 \(30^\circ\) 어긋나 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>0<span class="why"><b>두 벡터가 수직이라고 보았습니다.</b> 내적이 0이 아니므로 수직이 아닙니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-raytrace"><small class="mono">전문 수학 2.8</small>빛줄기와 구의 교점만 계산해서 3D 그림을 그릴 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-2-7"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/work-dot.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/pmath/cross.js"></script>
+<script src="../../js/cards/pmath/torque.js"></script>
+<script src="../../js/cards/pmath/shading.js"></script>
+</body>
+</html>

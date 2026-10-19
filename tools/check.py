@@ -10,7 +10,14 @@ PORT는 에이전트마다 다른 번호를 쓸 것.
 import sys, subprocess, threading, http.server, socketserver, functools, pathlib, os, re, tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+CHROME = next((c for c in (
+    os.environ.get("CHROME", ""),
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    os.path.expandvars(r"%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe"),
+    r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+) if c and os.path.exists(c)), "google-chrome")
 
 
 MISSING = []   # 서버가 404로 응답한 경로 (페이지마다 비움)
@@ -18,7 +25,7 @@ MISSING = []   # 서버가 404로 응답한 경로 (페이지마다 비움)
 
 def serve(port):
     p = subprocess.Popen([sys.executable, "-u", "-m", "http.server", str(port), "--bind", "127.0.0.1", "--directory", str(ROOT)],
-                         stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+                         stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace")
 
     def watch():
         for line in p.stderr:
@@ -46,9 +53,9 @@ def main():
         MISSING.clear()
         r = subprocess.run([CHROME, "--headless=new", "--enable-logging=stderr", "--v=1",
                             "--virtual-time-budget=6000", "--window-size=1440,1000", "--dump-dom", url],
-                           capture_output=True, text=True, timeout=120)
+                           capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=120)
         errs = [l for l in r.stderr.splitlines() if "CONSOLE" in l and ("Error" in l or "error" in l or "Uncaught" in l)]
-        errs = [re.sub(r"^.*?CONSOLE\(\d+\)\] ", "", e) for e in errs]
+        errs = [re.sub(r"^.*?CONSOLE[(:]\d+\)?\] ", "", e) for e in errs]   # 맥: CONSOLE(1)] · Windows: CONSOLE:1]
         errs += [f"404 {m}" for m in dict.fromkeys(MISSING)]
         if "<main" not in r.stdout:
             errs.append("페이지를 불러오지 못함")
@@ -57,7 +64,7 @@ def main():
             print("     " + e[:300])
         bad += bool(errs)
         if shot:
-            name = page.replace("/", "_").replace(".html", "") + ("_m" if mobile else "") + ".png"
+            name = re.sub(r'[\\/:*?"<>|&=]', "_", page.replace(".html", "")) + ("_m" if mobile else "") + ".png"   # Windows에서 못 쓰는 글자(? 등) 빼기
             if mobile:
                 wrap = ROOT / f"_wrap_{port}.html"
                 wrap.write_text(f'<body style="margin:0"><iframe src="{page}" style="width:390px;height:7000px;border:0"></iframe></body>')

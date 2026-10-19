@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>문학과 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="행의 글자 수가 1, 1, 2, 3, 5, 8인 피보나치 시 짓기, 제약 속의 창작, 보르헤스 「바벨의 도서관」의 책 수 25^1312000, 상용로그로 자릿수 구하기. 피보나치 시 카드와, 바벨의 도서관 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-fib-poem textarea { width: 100%; min-height: 9.5rem; font: inherit; line-height: 1.6; padding: .4rem .5rem; box-sizing: border-box; }
+    #card-mcult-fib-poem .rows { display: grid; gap: .25rem; margin: .5rem 0 .6rem; }
+    #card-mcult-fib-poem .row { display: grid; grid-template-columns: 4.6rem 1fr; align-items: center; gap: .4rem; font-size: .85rem; }
+    #card-mcult-fib-poem .track { position: relative; height: 14px; margin-right: 4px; }
+    #card-mcult-fib-poem .bar { height: 100%; border-radius: 3px; background: rgba(63,111,163,.5); }
+    #card-mcult-fib-poem .bar.ok { background: rgba(59,124,42,.6); }
+    #card-mcult-fib-poem .track i { position: absolute; top: -3px; bottom: -3px; margin-left: -1px; border-left: 2px dashed #b4562f; }
+    #card-mcult-babel-library .ctl-row > div { min-width: 12rem; }
+    #card-mcult-babel-library table { border-collapse: collapse; font-size: .85rem; margin-top: .4rem; width: 100%; }
+    #card-mcult-babel-library td, #card-mcult-babel-library th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .2rem .4rem; text-align: left; }
+    #card-mcult-babel-library td:last-child { text-align: right; font-family: var(--mono, monospace); }
+  </style>
+</head>
+<body data-course="mcult" data-sec="1-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>문학과 수학</h1>
+    <p class="lead">문학 작품에도 수학이 숨어 있습니다. 시조의 음수율처럼 글자 수의 규칙이 형식을 만들고, 소설은 상상하기 어려운 큰 수를 다루기도 합니다. 이 절에서는 <em>피보나치 수열</em>로 시를 짓고, <em>상용로그</em>로 소설 속 도서관의 크기를 가늠합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/3-6.html#card-alg-recur-rule" title="대수 3.6 · 첫째항과 규칙만으로 수열이 정해질까?">수열의 귀납적 정의</a><a class="p p-card" href="../../c/alg/1-5.html#card-alg-log-digits" title="대수 1.5 · 2⁵⁰은 몇 자리 수일까?">상용로그</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-fib-poem"><span class="mono">1.3.1</span>줄마다 글자 수가 1, 1, 2, 3, 5, 8인 피보나치 시</a></li>
+        <li><a href="#card-mcult-babel-library"><span class="mono">1.3.2</span>모든 책이 있는 도서관의 책 수를 로그로 어림하기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mcult-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-1-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-fib-poem">
+        <header class="card-head">
+          <span class="no">1.3.1</span><h2>줄마다 글자 수가 1, 1, 2, 3, 5, 8인 시를 지어 볼까?</h2><span class="kind">수열과 문학 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <label class="small" for="fib-poem-ta">한 줄에 한 행씩 쓰세요. 한글 음절만 셉니다(띄어쓰기·문장 부호 제외).</label>
+            <textarea id="fib-poem-ta" class="ta" spellcheck="false"></textarea>
+            <div class="rows" aria-live="polite"></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>시조는 3·4·3·4처럼 글자 수의 규칙을 지킵니다. 행마다 글자 수가 피보나치 수열을 따르는 시(피보나치 시)를 지으면, 시의 모양은 어떻게 될까요?</li>
+            <li><span class="tag">복원</span>피보나치 수열은 \(F_1 = F_2 = 1\), \(F_{n+2} = F_{n+1} + F_n\)입니다.</li>
+            <li><span class="tag">설명</span>피보나치 시는 행의 글자 수가 1, 1, 2, 3, 5, 8, …로 늘어납니다. 각 행이 앞의 두 행을 합친 길이라서, 시는 점점 빠르게 넓어지는 삼각형 모양이 됩니다. 수학의 규칙이 형식을 정하고, 그 형식 안에서 표현을 고르는 것이 창작의 재미입니다. 음악의 박자, 시조의 음수율도 같은 생각입니다.</li>
+            <li><span class="tag">연결</span>정해진 규칙(제약) 안에서 만드는 창작은 문학 실험 모임 울리포(OuLiPo)가 즐겨 쓴 방법입니다.</li>
+            <li><span class="tag">적용</span>예시 시를 바꿔 여러분의 피보나치 시를 6행 이상 지어 보세요. 7행은 몇 글자여야 하나요?</li>
+            <li class="warn"><span class="tag">판단</span>글자 수를 맞추려고 뜻이 어색한 말을 넣으면 시가 망가집니다. 규칙과 의미가 둘 다 살아야 좋은 작품입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">피보나치 시를 8행까지 쓰면 전체 글자 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>54<span class="why"><b>맞습니다.</b> 1+1+2+3+5+8+13+21 = 54 \(= F_{10} - 1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>21<span class="why"><b>8행 한 줄의 글자 수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>33<span class="why"><b>7행까지의 합입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>36<span class="why"><b>1부터 8까지의 합입니다.</b> 피보나치 수가 아닙니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-babel-library">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>세상의 모든 책이 있는 도서관에는 책이 몇 권 있을까?</h2><span class="kind">거듭제곱과 상용로그 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">보르헤스의 소설 「바벨의 도서관」에는 410쪽, 쪽마다 40행, 행마다 80글자, 25가지 기호로 만들 수 있는 <b>모든</b> 책이 있습니다. <b>예측</b>: 책의 수는 우주의 원자 수(약 \(10^{80}\))와 비교하면?</p>
+            <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="lo">원자 수보다 적다</button><button class="chip" type="button" data-g="eq">비슷하다</button><button class="chip" type="button" data-g="hi">훨씬 많다</button></div>
+            <p class="verdict" role="status"></p>
+            <div class="after" hidden>
+              <div class="ctl-row">
+                <div><label class="mono">기호의 수 \(a\) = <output class="a-out"></output></label><input class="a" type="range" min="2" max="60" step="1" value="25" aria-label="기호의 수"></div>
+                <div><label class="mono">책 한 권 글자 수 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="1" max="7" step="any" value="6.1179" aria-label="글자 수(로그 눈금)"></div>
+              </div>
+              <table></table>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>가능한 모든 글자 배열을 다 모은 도서관이라면 책이 너무 많아 셀 수도 없을 것 같습니다. 직접 쓸 수 없을 만큼 큰 수의 크기는 어떻게 가늠할까요?</li>
+            <li><span class="tag">복원</span>\(\log_{10} a^n = n \log_{10} a\). 양의 정수 \(N\)의 자릿수는 \(\lfloor \log_{10} N \rfloor + 1\)입니다.</li>
+            <li><span class="tag">설명</span>한 권의 글자 수는 \(410 \times 40 \times 80 = 1\,312\,000\)이고 자리마다 25가지 기호가 올 수 있으므로 책의 수는 \(25^{1\,312\,000}\)입니다. \(\log_{10} 25 \approx 1.39794\)이므로 \(\log_{10} 25^{1\,312\,000} \approx 1\,834\,097.3\), 곧 이 수는 <em>약 183만 자리</em>의 수입니다. 약 \(10^{80}\)(81자리)인 우주의 원자 수와는 비교할 수도 없습니다. 상용로그는 이런 수의 "자릿수"를 계산해 크기를 가늠하게 해 줍니다.</li>
+            <li><span class="tag">연결</span>비밀번호의 경우의 수, 암호의 열쇠 공간도 같은 방식으로 계산합니다. 글자 종류보다 길이가 경우의 수를 훨씬 크게 늘립니다.</li>
+            <li><span class="tag">적용</span>기호의 수와 글자 수를 바꾸며 자릿수가 어떻게 변하는지 보세요. 글자 수를 2배로 하면 자릿수는 몇 배가 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>모든 책이 있다는 것은 의미 있는 책을 찾을 수 있다는 뜻이 아닙니다. 거의 모든 책은 무의미한 기호의 나열이라 원하는 책을 찾는 일은 사실상 불가능합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(\log_{10} 2 \approx 0.3010\)일 때, \(2^{100}\)은 몇 자리 수일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>31자리<span class="why"><b>맞습니다.</b> \(\log_{10} 2^{100} \approx 30.10\)이므로 \(30 + 1 = 31\)자리입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>30자리<span class="why"><b>정수 부분에 1을 더하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>100자리<span class="why"><b>지수를 그대로 자릿수로 보았습니다.</b> 밑이 10일 때만 그렇습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>200자리<span class="why"><b>2와 100을 곱했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/fib-poem.js"></script>
+<script src="../../js/cards/mcult/babel-library.js"></script>
+</body>
+</html>

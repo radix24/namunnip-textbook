@@ -1,0 +1,55 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/pmath/pm.js",
+    "js/cards/adalg/lin.js",
+    "js/cards/adalg/transform-target.js"
+  ],
+  "short": "회전·대칭·닮음 행렬로 목표 맞히기"
+}
+-->
+<style>
+#card-adalg-transform-target canvas { aspect-ratio: 1 / 1; max-width: 420px; margin: 0 auto; display: block; }
+#card-adalg-transform-target .kinds { display: flex; flex-wrap: wrap; gap: .3rem; }
+</style>
+<article class="card" id="card-adalg-transform-target">
+  <header class="card-head">
+    <span class="no"></span><h2>회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?</h2><span class="kind">회전·대칭·닮음변환 · 도전</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <p class="mono small lv">—</p>
+      <canvas aria-label="원래 집(회색), 목표(주황 점선), 고른 변환의 결과(파랑). 대칭이면 대칭축을 점선으로 그린다"></canvas>
+      <div class="ctl">
+        <div class="kinds" role="group" aria-label="변환 종류">
+          <button class="chip" type="button" data-t="rot" aria-pressed="true">회전</button>
+          <button class="chip" type="button" data-t="ref">대칭</button>
+          <button class="chip" type="button" data-t="dil">닮음</button>
+        </div>
+        <div class="ctl-row"><div><label class="mono"><span class="p-name">회전각 θ</span> = <output class="p-out">0</output></label><input class="p" type="range" min="-180" max="180" step="15" value="0" aria-label="변환의 매개변수"></div></div>
+        <p class="mono small mat">—</p>
+        <div class="presets"><button class="chip go-next" type="button" disabled>다음 목표</button></div>
+        <p class="verdict" role="status"></p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>회전, 대칭, 확대는 모양을 바꾸는 가장 기본적인 방법입니다. 이 셋을 행렬로 쓰면 어떤 모양일까요? 서로 다른 종류의 변환이 같은 결과를 낼 수도 있을까요?</li>
+      <li><span class="tag">복원</span>행렬의 1열은 \((1, 0)\)의 상, 2열은 \((0, 1)\)의 상입니다. \((1, 0)\)을 \(\theta\)만큼 돌리면 \((\cos\theta, \sin\theta)\)입니다.</li>
+      <li><span class="tag">설명</span>원점을 중심으로 \(\theta\)만큼 도는 <em>회전변환</em>은 \(\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}\), 원점을 지나고 \(x\)축과 \(\varphi\)를 이루는 직선에 대한 <em>대칭변환</em>은 \(\begin{pmatrix} \cos2\varphi & \sin2\varphi \\ \sin2\varphi & -\cos2\varphi \end{pmatrix}\), 원점을 중심으로 \(k\)배 하는 <em>닮음변환</em>은 \(\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}\)입니다. 회전의 \(\det\)는 1, 대칭의 \(\det\)는 \(-1\), 닮음의 \(\det\)는 \(k^2\)입니다.</li>
+      <li><span class="tag">연결</span>회전과 대칭은 길이와 각을 바꾸지 않습니다. 이런 행렬은 3단원의 직교행렬이고, 열벡터들이 1단원의 정규직교기저를 이룹니다.</li>
+      <li><span class="tag">적용</span>목표마다 변환 종류와 매개변수를 골라 맞춰 보세요. 대칭은 모양이 뒤집히고(\(\det < 0\)), 회전은 뒤집히지 않습니다. 원점 대칭인 목표는 몇 가지 방법으로 만들 수 있나요?</li>
+      <li class="warn"><span class="tag">판단</span>대칭축이 \(\varphi\)이면 행렬에는 \(2\varphi\)가 들어갑니다. \(\varphi\) 대신 \(\varphi\)를 그대로 넣는 실수가 흔합니다. \(\varphi = 45°\)(직선 \(y = x\))로 확인하면 \(\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\)이 나와야 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">원점을 중심으로 \(90°\) 회전한 뒤 원점을 중심으로 2배 확대하는 변환의 행렬은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\begin{pmatrix} 0 & -2 \\ 2 & 0 \end{pmatrix}\)<span class="why"><b>맞습니다.</b> \(2I\)와 회전행렬의 곱입니다. 이 경우에는 순서를 바꿔도 같습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\begin{pmatrix} 0 & 2 \\ -2 & 0 \end{pmatrix}\)<span class="why"><b>\(-90°\) 회전입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\begin{pmatrix} 2 & -1 \\ 1 & 2 \end{pmatrix}\)<span class="why"><b>행렬을 더했습니다.</b> 변환을 잇따라 하는 것은 곱입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\)<span class="why"><b>직선 \(y = x\)에 대한 대칭입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

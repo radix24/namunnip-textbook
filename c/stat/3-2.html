@@ -34,7 +34,7 @@
     <p class="lead">복권 한 장을 사면 평균 얼마를 받을까요? 확률분포를 알면 값마다 확률을 곱해 더하는 것으로 '평균적으로 기대되는 값'을 구할 수 있습니다. 이 절에서는 기댓값을 분포의 무게중심으로 보고, 값들이 평균에서 얼마나 퍼져 있는지를 분산과 표준편차로 잽니다. 단위를 바꾸거나 점수를 환산할 때 이 값들이 어떻게 변하는지도 확인합니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/stat/3-1.html#card-stat-rv-coins" title="확률과 통계 3.1 · &#x27;앞뒤앞&#x27;에 수를 붙이면 무엇이 달라질까?">확률변수와 확률분포</a><a class="p p-card" href="../../c/stat/3-2.html#card-stat-balance" title="확률과 통계 3.2 · 확률분포의 &#x27;가운데&#x27;와 &#x27;퍼짐&#x27;은 어디서 읽을까?">자료의 평균과 분산</a><span class="p">\(\sum\) 기호</span>
+      <a class="p p-card" href="../../c/stat/3-1.html#card-stat-rv-coins" title="확률과 통계 3.1 · &#x27;앞뒤앞&#x27;에 수를 붙이면 무엇이 달라질까?">확률변수와 확률분포</a><a class="p p-card" href="../../c/stat/3-2.html#card-stat-balance" title="확률과 통계 3.2 · 확률분포의 &#x27;가운데&#x27;와 &#x27;퍼짐&#x27;은 어디서 읽을까?">자료의 평균과 분산</a><a class="p p-card" href="../../c/stat/1-3.html#card-stat-binom-expand" title="확률과 통계 1.3 · (a + b)ⁿ의 계수는 왜 조합의 수일까?">\(\sum\) 기호</a>
     </div>
   </section>
 
@@ -46,6 +46,7 @@
         <li><a href="#card-stat-linear-rv"><span class="mono">3.2.2</span>aX + b의 평균과 표준편차</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=stat-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">47문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=stat-3-2">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
@@ -93,11 +94,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-1.html#card-stat-rv-coins"><small class="mono">확률과 통계 3.1</small>'앞뒤앞'에 수를 붙이면 무엇이 달라질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-4.html#card-stat-normal-curve"><small class="mono">확률과 통계 3.4</small>평균과 표준편차만으로 종 모양이 정해질까?</a><a href="../../c/stat/3-4.html#card-stat-standardize"><small class="mono">확률과 통계 3.4</small>정규분포표 하나로 모든 정규분포의 확률을 구할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-1.html#card-stat-rv-coins"><small class="mono">확률과 통계 3.1</small>'앞뒤앞'에 수를 붙이면 무엇이 달라질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-4.html#card-stat-normal-curve"><small class="mono">확률과 통계 3.4</small>평균과 표준편차만으로 종 모양이 정해질까?</a><a href="../../c/stat/3-4.html#card-stat-standardize"><small class="mono">확률과 통계 3.4</small>정규분포표 하나로 모든 정규분포의 확률을 구할 수 있을까?</a><a href="../../c/pmath/3-6.html#card-pmath-fair-game"><small class="mono">전문 수학 3.6</small>학교 축제 주사위 게임, 상금을 얼마로 해야 공정할까?</a></div></nav>
 
       <article class="card" id="card-stat-linear-rv">
         <header class="card-head">
-          <span class="no">3.2.2</span><h2>점수를 두 배 하고 5점을 더하면 표준편차는?</h2><span class="kind">\(E(aX + b) \cdot \sigma(aX + b)\)</span>
+          <span class="no">3.2.2</span><h2>점수를 두 배 하고 5점을 빼면 표준편차는?</h2><span class="kind">\(E(aX + b) \cdot \sigma(aX + b)\)</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -136,13 +137,17 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-1.html#card-stat-rv-coins"><small class="mono">확률과 통계 3.1</small>'앞뒤앞'에 수를 붙이면 무엇이 달라질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-4.html#card-stat-normal-curve"><small class="mono">확률과 통계 3.4</small>평균과 표준편차만으로 종 모양이 정해질까?</a><a href="../../c/stat/3-4.html#card-stat-standardize"><small class="mono">확률과 통계 3.4</small>정규분포표 하나로 모든 정규분포의 확률을 구할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-1.html#card-stat-rv-coins"><small class="mono">확률과 통계 3.1</small>'앞뒤앞'에 수를 붙이면 무엇이 달라질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-4.html#card-stat-normal-curve"><small class="mono">확률과 통계 3.4</small>평균과 표준편차만으로 종 모양이 정해질까?</a><a href="../../c/stat/3-4.html#card-stat-standardize"><small class="mono">확률과 통계 3.4</small>정규분포표 하나로 모든 정규분포의 확률을 구할 수 있을까?</a><a href="../../c/pmath/3-6.html#card-pmath-fair-game"><small class="mono">전문 수학 3.6</small>학교 축제 주사위 게임, 상금을 얼마로 해야 공정할까?</a></div></nav>
 
       <a class="px-go" href="../../practice.html?sec=stat-3-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">47문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -155,7 +160,6 @@
 <script src="../../js/prereq.js"></script>
 <script src="../../js/cards/stat/stat-lib.js"></script>
 <script src="../../js/cards/stat/balance.js"></script>
-<script src="../../js/cards/stat/stat-lib.js"></script>
 <script src="../../js/cards/stat/linear-rv.js"></script>
 </body>
 </html>

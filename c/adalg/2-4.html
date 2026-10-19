@@ -1,0 +1,165 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>선형변환과 행렬 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="선형변환의 뜻(덧셈과 실수배 보존), 선형변환과 행렬의 대응, e₁·e₂의 상과 행렬의 열. 행렬로 평면 격자 전체를 변환해 보는 카드와, 변환된 그림에서 행렬을 알아내는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adalg-grid-transform canvas { aspect-ratio: 1 / 1; max-width: 440px; margin: 0 auto; display: block; }
+    #card-adalg-grid-transform .ctl-row > div { min-width: 8rem; }
+    #card-adalg-match-matrix canvas { aspect-ratio: 1 / 1; max-width: 420px; margin: 0 auto; display: block; }
+    #card-adalg-match-matrix .key { display: inline-grid; grid-template-columns: repeat(2, 4rem); gap: .3rem; padding: .3rem .5rem; border-left: 2px solid var(--ink); border-right: 2px solid var(--ink); border-radius: 6px; vertical-align: middle; }
+    #card-adalg-match-matrix .key input { width: 100%; font: inherit; text-align: center; padding: .2rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); }
+  </style>
+</head>
+<body data-course="adalg" data-sec="2-4">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>선형변환과 행렬</h1>
+    <p class="lead">행렬을 벡터에 곱하는 것은 평면의 점을 다른 점으로 옮기는 함수로 볼 수 있습니다. 덧셈과 실수배를 보존하는 이런 함수가 <em>선형변환</em>이고, 평면의 선형변환은 \(\vec{e}_1\), \(\vec{e}_2\)가 가는 곳만으로 완전히 정해집니다. 이 절에서는 행렬의 성분을 바꾸며 격자가 어떻게 휘는지 보고, 변환된 집 그림만 보고 행렬을 알아내 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/4-2.html#card-cm1-matrix-mult" title="공통수학1 4.2 · 행렬의 곱은 왜 행과 열을 짝지어 계산할까?">행렬의 곱셈</a><a class="p p-card" href="../../c/adalg/1-5.html#card-adalg-basis-grid" title="고급 대수 1.5 · 같은 점인데 기저를 바꾸면 왜 좌표가 달라질까?">기저와 좌표</a><a class="p p-card" href="../../c/adalg/2-3.html#card-adalg-det-area" title="고급 대수 2.3 · 행렬식은 무엇을 재는 수일까?">행렬식</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adalg-grid-transform"><span class="mono">2.4.1</span>행렬은 평면 전체를 움직인다</a></li>
+        <li><a href="#card-adalg-match-matrix"><span class="mono">2.4.2</span>그림을 보고 행렬 맞히기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adalg-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adalg-2-4">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adalg-grid-transform">
+        <header class="card-head">
+          <span class="no">2.4.1</span><h2>행렬 하나가 평면 전체를 어떻게 움직일까?</h2><span class="kind">선형변환과 행렬 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="행렬로 변환한 격자와 집 모양. 빨강은 e₁의 상, 초록은 e₂의 상"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">a = <output data-o="0">1</output></label><input data-m="0" type="range" min="-2" max="2" step="0.1" value="1" aria-label="1행 1열"></div>
+                <div><label class="mono">b = <output data-o="1">0</output></label><input data-m="1" type="range" min="-2" max="2" step="0.1" value="0" aria-label="1행 2열"></div>
+                <div><label class="mono">c = <output data-o="2">0</output></label><input data-m="2" type="range" min="-2" max="2" step="0.1" value="0" aria-label="2행 1열"></div>
+                <div><label class="mono">d = <output data-o="3">1</output></label><input data-m="3" type="range" min="-2" max="2" step="0.1" value="1" aria-label="2행 2열"></div>
+              </div>
+              <div class="presets">
+                <button class="chip" type="button" data-p="1,0,0,1">단위행렬</button>
+                <button class="chip" type="button" data-p="0,-1,1,0">90° 회전</button>
+                <button class="chip" type="button" data-p="1,1,0,1">밀기(전단)</button>
+                <button class="chip" type="button" data-p="1.5,0,0,0.5">늘이고 줄이기</button>
+                <button class="chip" type="button" data-p="1,2,0.5,1">납작하게</button>
+                <button class="chip go-play" type="button">변환 재생</button>
+              </div>
+              <p class="mono small say">—</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>행렬 \(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\)를 점 \((x, y)\)에 곱하면 새 점이 나옵니다. 평면의 모든 점에 한꺼번에 곱하면 평면은 어떤 모양으로 바뀔까요? 무한히 많은 점의 행방을 알려면 몇 개의 점만 보면 될까요?</li>
+            <li><span class="tag">복원</span>\(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\binom{x}{y} = x\binom{a}{c} + y\binom{b}{d}\), 곧 행렬과 벡터의 곱은 열벡터들의 일차결합입니다.</li>
+            <li><span class="tag">설명</span>\(T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v})\), \(T(k\vec{u}) = kT(\vec{u})\)를 만족하는 함수를 <em>선형변환</em>이라고 합니다. 행렬을 곱하는 변환은 선형변환이고, 거꾸로 평면의 선형변환은 모두 행렬 하나로 나타납니다: \(\vec{e}_1 = (1, 0)\), \(\vec{e}_2 = (0, 1)\)이 가는 곳을 차례로 열에 적으면 그 행렬입니다. 그래서 <b>\(\vec{e}_1\), \(\vec{e}_2\)의 상 두 개만 알면 평면 전체의 행방을 압니다.</b> 격자선은 평행하고 같은 간격인 채로 남고, 원점은 움직이지 않습니다.</li>
+            <li><span class="tag">연결</span>색칠한 단위 정사각형의 넓이가 \(|\det|\)배가 되는 것을 앞 절에서 보았습니다. 게임과 그래픽 프로그램은 화면의 모든 점을 이런 행렬 곱으로 움직입니다.</li>
+            <li><span class="tag">적용</span>슬라이더를 하나씩 움직이며 빨강(\(\vec{e}_1\)의 상)과 초록(\(\vec{e}_2\)의 상) 화살표가 어느 열을 따라가는지 확인하세요. "납작하게"에서는 평면이 어떻게 되나요? 그때 \(\det\)는 얼마인가요?</li>
+            <li class="warn"><span class="tag">판단</span>평행이동 \((x, y) \mapsto (x + 1, y)\)은 원점을 움직이므로 선형변환이 아니고, \(2 \times 2\) 행렬로 나타낼 수 없습니다. 그래픽에서는 차원을 하나 늘린 \(3 \times 3\) 행렬(동차좌표)로 평행이동까지 다룹니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">선형변환 \(T\)가 \(T(1, 0) = (2, 1)\), \(T(0, 1) = (-1, 3)\)을 만족할 때 \(T(2, 1)\)은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((3, 5)\)<span class="why"><b>맞습니다.</b> \(2(2, 1) + 1(-1, 3) = (3, 5)\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((4, 3)\)<span class="why"><b>\(T(1, 0)\)만 2배 했습니다.</b> \(T(0, 1)\)도 더해야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((5, 5)\)<span class="why"><b>행과 열을 바꾸어 곱했습니다.</b> 상은 행렬의 열입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정보가 부족하다.<span class="why"><b>선형변환은 \(\vec{e}_1\), \(\vec{e}_2\)의 상만으로 정해집니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/1-5.html#card-adalg-basis-grid"><small class="mono">고급 대수 1.5</small>같은 점인데 기저를 바꾸면 왜 좌표가 달라질까?</a><a href="../../c/adalg/1-5.html#card-adalg-basis-hunt"><small class="mono">고급 대수 1.5</small>비스듬한 두 방향만으로 목표점까지 안내할 수 있을까?</a><a href="../../c/cm1/4-2.html#card-cm1-matrix-mult"><small class="mono">공통수학1 4.2</small>행렬의 곱은 왜 행과 열을 짝지어 계산할까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-area"><small class="mono">고급 대수 2.3</small>행렬식은 무엇을 재는 수일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/2-5.html#card-adalg-transform-target"><small class="mono">고급 대수 2.5</small>회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?</a><a href="../../c/adalg/2-5.html#card-adalg-pixel-rotate"><small class="mono">고급 대수 2.5</small>사진을 돌리면 왜 구멍이 뚫릴까?</a><a href="../../c/adalg/2-6.html#card-adalg-compose-order"><small class="mono">고급 대수 2.6</small>두 변환의 순서를 바꾸면 결과도 달라질까?</a><a href="../../c/adalg/2-6.html#card-adalg-undo"><small class="mono">고급 대수 2.6</small>뒤틀린 그림을 제자리로 되돌리는 행렬은?</a></div></nav>
+
+      <article class="card" id="card-adalg-match-matrix">
+        <header class="card-head">
+          <span class="no">2.4.2</span><h2>바뀐 그림만 보고 행렬을 알아낼 수 있을까?</h2><span class="kind">변환을 나타내는 행렬 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="mono small lv">—</p>
+            <canvas aria-label="원래 집(회색), 목표 모양(주황 점선), 내 행렬로 바꾼 모양(파랑)"></canvas>
+            <div class="ctl">
+              <div><span class="mono small">내 행렬</span> <span class="key"><input data-k="0" type="number" step="0.5" value="1" aria-label="1행 1열"><input data-k="1" type="number" step="0.5" value="0" aria-label="1행 2열"><input data-k="2" type="number" step="0.5" value="0" aria-label="2행 1열"><input data-k="3" type="number" step="0.5" value="1" aria-label="2행 2열"></span></div>
+              <div class="presets"><button class="chip go-hint" type="button">힌트: e₁, e₂의 상</button><button class="chip go-next" type="button" disabled>다음 문제</button></div>
+              <p class="verdict" role="status"></p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>사진 편집 앱에서 그림을 돌리고 늘이고 비튼 결과만 보고, 어떤 행렬을 썼는지 알아낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>선형변환의 행렬은 \(\vec{e}_1\)의 상을 1열, \(\vec{e}_2\)의 상을 2열에 적은 것입니다.</li>
+            <li><span class="tag">설명</span>집의 왼쪽 아래 꼭짓점은 원점, 바닥의 오른쪽 끝은 \((1, 0)\), 왼쪽 벽 위 끝은 \((0, 1)\)입니다. 목표 그림에서 이 두 점이 간 곳 \((a, c)\), \((b, d)\)를 읽으면 행렬은 \(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\)입니다. 두 점만 맞으면 나머지 모든 점도 저절로 맞습니다. 선형변환이 일차결합을 보존하기 때문입니다.</li>
+            <li><span class="tag">연결</span>컴퓨터 비전은 같은 물체를 찍은 두 사진에서 대응점 몇 쌍을 찾아 두 사진 사이의 변환 행렬을 구합니다. 파노라마 사진을 이어 붙일 때 쓰는 방법입니다.</li>
+            <li><span class="tag">적용</span>문제마다 목표 그림에서 \((1, 0)\)과 \((0, 1)\)이 간 곳을 찾아 행렬을 입력하세요. 막히면 힌트를 누르세요.</li>
+            <li class="warn"><span class="tag">판단</span>모양이 대칭이면 서로 다른 행렬이 같은 그림을 만들 수 있습니다. 이 집은 일부러 비대칭으로 만들어 그런 일이 없습니다. 실제 사진에서도 대응점을 잘못 짝지으면 엉뚱한 행렬이 나옵니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\((1, 0)\)을 \((0, 2)\)로, \((0, 1)\)을 \((-1, 0)\)으로 보내는 선형변환의 행렬은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\begin{pmatrix} 0 & -1 \\ 2 & 0 \end{pmatrix}\)<span class="why"><b>맞습니다.</b> 상을 차례로 열에 적었습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\begin{pmatrix} 0 & 2 \\ -1 & 0 \end{pmatrix}\)<span class="why"><b>상을 행에 적었습니다.</b> 열에 적어야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\begin{pmatrix} -1 & 0 \\ 0 & 2 \end{pmatrix}\)<span class="why"><b>열의 순서가 바뀌었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\begin{pmatrix} 0 & 1 \\ -2 & 0 \end{pmatrix}\)<span class="why"><b>부호가 모두 반대입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adalg/1-5.html#card-adalg-basis-grid"><small class="mono">고급 대수 1.5</small>같은 점인데 기저를 바꾸면 왜 좌표가 달라질까?</a><a href="../../c/adalg/1-5.html#card-adalg-basis-hunt"><small class="mono">고급 대수 1.5</small>비스듬한 두 방향만으로 목표점까지 안내할 수 있을까?</a><a href="../../c/cm1/4-2.html#card-cm1-matrix-mult"><small class="mono">공통수학1 4.2</small>행렬의 곱은 왜 행과 열을 짝지어 계산할까?</a><a href="../../c/adalg/2-3.html#card-adalg-det-area"><small class="mono">고급 대수 2.3</small>행렬식은 무엇을 재는 수일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adalg/2-5.html#card-adalg-transform-target"><small class="mono">고급 대수 2.5</small>회전, 대칭, 닮음 중 어느 것으로 목표 모양을 만들까?</a><a href="../../c/adalg/2-5.html#card-adalg-pixel-rotate"><small class="mono">고급 대수 2.5</small>사진을 돌리면 왜 구멍이 뚫릴까?</a><a href="../../c/adalg/2-6.html#card-adalg-compose-order"><small class="mono">고급 대수 2.6</small>두 변환의 순서를 바꾸면 결과도 달라질까?</a><a href="../../c/adalg/2-6.html#card-adalg-undo"><small class="mono">고급 대수 2.6</small>뒤틀린 그림을 제자리로 되돌리는 행렬은?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adalg-2-4"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/adalg/lin.js"></script>
+<script src="../../js/cards/adalg/grid-transform.js"></script>
+<script src="../../js/cards/adalg/match-matrix.js"></script>
+</body>
+</html>

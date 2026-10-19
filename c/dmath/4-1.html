@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>그래프와 실생활 문제 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="그래프의 뜻(꼭짓점, 변, 인접), 실생활 상황을 그래프로 나타내기, 쾨니히스베르크 다리 문제. 일곱 다리를 그래프로 바꿔 산책해 보는 카드와, 버스 노선 설명을 그래프로 옮기는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-konigsberg .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .5rem; }
+    #card-dmath-konigsberg canvas { aspect-ratio: 1 / 1; width: 100%; display: block; }
+    #card-dmath-graph-model canvas { aspect-ratio: 4 / 3; max-width: 480px; margin: 0 auto; display: block; }
+    #card-dmath-graph-model .lines { font-size: .9rem; margin: .3rem 0; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="4-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>그래프와 실생활 문제</h1>
+    <p class="lead">무엇과 무엇이 이어져 있는지만 남기고 나머지를 버리면 많은 문제가 단순해집니다. 점(<em>꼭짓점</em>)과 선(<em>변</em>)으로 이루어진 이런 그림을 <em>그래프</em>라 합니다. 이 절에서는 그래프 이론의 출발점인 쾨니히스베르크의 다리 문제를 직접 풀어 보고, 말로 된 버스 노선을 그래프로 옮기며 무엇이 잘 보이는지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm2/2-3.html#card-cm2-set-ops" title="공통수학2 2.3 · 두 집합으로 새 집합을 만드는 방법은 몇 가지일까?">집합</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-konigsberg"><span class="mono">4.1.1</span>쾨니히스베르크의 일곱 다리 건너기</a></li>
+        <li><a href="#card-dmath-graph-model"><span class="mono">4.1.2</span>노선 설명을 그래프로 옮기기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-4-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-4-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-konigsberg">
+        <header class="card-head">
+          <span class="no">4.1.1</span><h2>일곱 다리를 한 번씩만 건너 산책할 수 있을까?</h2><span class="kind">그래프로 나타내기 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="two">
+              <canvas class="map no-invert" aria-label="강이 흐르는 도시의 모식도와 다리 일곱 개"></canvas>
+              <canvas class="gr" aria-label="땅을 점, 다리를 선으로 바꾼 그래프. 출발할 땅과 건널 다리를 차례로 누른다"></canvas>
+            </div>
+            <div class="presets"><button class="chip go-reset" type="button">처음부터</button><button class="chip go-add" type="button" aria-pressed="false">다리 하나 더 놓기</button><button class="chip go-deg" type="button" aria-pressed="false">땅마다 다리 수 보기</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>18세기 프로이센의 쾨니히스베르크에는 강 가운데 섬을 잇는 다리 일곱 개가 있었습니다. 시민들은 "모든 다리를 꼭 한 번씩만 건너는 산책길"을 찾으려 했지만 아무도 성공하지 못했습니다. 정말 불가능할까요?</li>
+            <li><span class="tag">복원</span>지도에서 중요한 것만 남기고 나머지를 버리는 것을 추상화라고 합니다.</li>
+            <li><span class="tag">설명</span>1736년 오일러는 땅의 모양과 다리의 길이는 상관없고 "어느 땅과 어느 땅이 다리로 이어졌는가"만 중요하다는 것을 알아챘습니다. 땅을 점(<em>꼭짓점</em>), 다리를 선(<em>변</em>)으로 바꾼 것이 <em>그래프</em>입니다. 산책 중간에 지나는 땅은 들어가는 다리와 나오는 다리가 짝을 이루므로 다리 수가 짝수여야 합니다. 그런데 이 도시는 네 땅 모두 다리 수가 홀수(3, 3, 3, 5)라 불가능합니다.</li>
+            <li><span class="tag">연결</span>이 논증이 그래프 이론의 시작으로 꼽힙니다. 오늘날 지하철 노선도, 인터넷 연결망, 친구 관계, 분자 구조처럼 "무엇과 무엇이 이어졌는가"가 중요한 문제를 그래프로 다룹니다. 5절에서 오일러 회로의 조건을 정리합니다.</li>
+            <li><span class="tag">적용</span>오른쪽 그래프에서 출발할 땅을 누르고, 건널 다리를 차례로 눌러 산책해 보세요. 다리를 모두 건널 수 있나요? "다리 하나 더 놓기"를 하면 어떻게 달라지나요?</li>
+            <li class="warn"><span class="tag">판단</span>그래프로 바꾸면 거리, 모양, 위치 같은 정보는 버려집니다. 가장 짧은 길을 찾는 문제라면 변에 거리를 적어 두어야 합니다. 어떤 정보를 남길지는 질문이 정합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다리 수가 각각 2, 4, 3, 3인 네 땅이 있습니다. 모든 다리를 한 번씩만 건너는 길은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>있다. 다리가 3개인 땅에서 출발해 다른 3개인 땅에서 끝난다.<span class="why"><b>맞습니다.</b> 홀수인 땅이 정확히 2개이면 그 둘이 출발점과 끝점입니다(연결되어 있을 때).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>없다. 홀수인 땅이 있으므로.<span class="why"><b>홀수인 땅 2개는 출발점과 끝점이 될 수 있습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>있고, 출발한 땅으로 돌아온다.<span class="why"><b>돌아오려면 모든 땅이 짝수여야 합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>지도를 보아야 알 수 있다.<span class="why"><b>다리 수(차수)만으로 판단할 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-dmath-graph-model">
+        <header class="card-head">
+          <span class="no">4.1.2</span><h2>버스 노선 설명을 그래프로 그리면 무엇이 보일까?</h2><span class="kind">그래프로 모델링하기 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="lines">가상 도시의 마을버스는 다음 두 정류장 사이를 곧바로 다닙니다: <span class="mono small list"></span></p>
+            <canvas aria-label="정류장(점). 두 점을 차례로 누르면 그 사이에 선이 생기거나 지워진다. 점을 끌어 옮길 수 있다"></canvas>
+            <div class="presets"><button class="chip go-shape" type="button">모양 바꾸기</button><button class="chip go-clr" type="button">선 모두 지우기</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>말로 된 노선 설명만으로는 "어느 정류장이 가장 중요한지", "한 노선이 끊기면 어디가 고립되는지" 알기 어렵습니다. 그림으로 옮기면 무엇이 잘 보일까요?</li>
+            <li><span class="tag">복원</span>앞 카드에서 땅을 점으로, 다리를 선으로 바꾸어 문제를 단순하게 만들었습니다.</li>
+            <li><span class="tag">설명</span><em>그래프</em> \(G = (V, E)\)는 꼭짓점의 집합 \(V\)와 두 꼭짓점을 잇는 변의 집합 \(E\)로 이루어집니다. 변으로 이어진 두 꼭짓점은 <em>인접</em>한다고 합니다. 그래프는 "무엇과 무엇이 이어졌는가"만 기록하므로, 점의 위치나 선의 모양을 바꾸어도 같은 그래프입니다. 상황을 그래프로 옮길 때는 무엇을 꼭짓점으로, 무엇을 변으로 할지 먼저 정합니다.</li>
+            <li><span class="tag">연결</span>방향이 있는 관계(일방통행, 팔로우)는 화살표로 나타낸 방향그래프로, 거리나 요금이 있는 관계는 변에 수를 적은 가중그래프로 나타냅니다(최소 신장 트리에서 씁니다).</li>
+            <li><span class="tag">적용</span>노선 설명대로 두 정류장을 차례로 눌러 선을 이으세요. 완성되면 "모양 바꾸기"로 점을 흩어도 같은 그래프인지 확인하세요. 가장 많은 노선이 지나는 정류장은 어디인가요? 어느 한 노선이 없어지면 다른 정류장으로 갈 수 없게 되는 정류장이 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>그래프 그림에서 선이 겹쳐 보이는 곳은 정류장이 아닙니다. 꼭짓점이 아닌 곳에서 선이 만나는 것은 그림의 우연일 뿐이며, 4절에서 이런 교차를 없앨 수 있는지 다룹니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">반 학생들의 "서로 아는 사이"를 그래프로 나타낼 때 알맞은 것은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>학생을 꼭짓점, 서로 아는 두 학생을 변으로 잇는다.<span class="why"><b>맞습니다.</b> "서로 안다"는 대칭인 관계라 방향 없는 변이 알맞습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>"아는 사이"를 꼭짓점으로 한다.<span class="why"><b>관계는 변이 됩니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>키가 큰 순서대로 점을 놓아야 한다.<span class="why"><b>점의 위치는 그래프에 영향을 주지 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>반드시 화살표로 그려야 한다.<span class="why"><b>한쪽만 아는 관계라면 방향그래프가 필요하지만, "서로 아는"은 방향이 없습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-4-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/graph.js"></script>
+<script src="../../js/cards/dmath/konigsberg.js"></script>
+<script src="../../js/cards/dmath/graph-model.js"></script>
+</body>
+</html>

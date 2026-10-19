@@ -60,7 +60,7 @@
     $(".n-p").textContent = `(${K.n(t)}, ${K.n(ft)})`;
     $(".n-q").textContent = `(${K.n(ft)}, ${K.n(t)})`;
     const v = $(".n-v");
-    if (d.inv) { v.textContent = `${K.n(d.inv(ft))} = t`; v.className = "good"; } else { v.textContent = "역함수 없음"; v.className = "bad"; }
+    if (d.inv) { v.textContent = `${K.n(d.inv(ft))} = t`; v.className = "n-v good"; } else { v.textContent = "역함수 없음"; v.className = "n-v bad"; }
     $(".eq").innerHTML = d.steps.slice(0, step + 1).map((s, i) => `${i + 1}. ${s}`).join("<br>");
     $(".go-next").disabled = step >= d.steps.length - 1;
     draw();

@@ -1,0 +1,58 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/lib/proof.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adalg/lin.js",
+    "js/cards/adalg/orth-diag-proof.js"
+  ],
+  "short": "대칭행렬의 고유벡터는 수직 · 증명 조립"
+}
+-->
+<style>
+#card-adalg-orth-diag-proof canvas { aspect-ratio: 4 / 3; max-width: 440px; margin: 0 auto; display: block; }
+</style>
+<article class="card" id="card-adalg-orth-diag-proof">
+  <header class="card-head">
+    <span class="no"></span><h2>대칭행렬의 고유벡터는 왜 서로 수직일까?</h2><span class="kind">대칭행렬의 성질 · 증명 조립</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="행렬 [2, 1 ; c, 1]의 두 고유벡터 방향. c가 1일 때 대칭"></canvas>
+      <div class="ctl">
+        <label class="mono">\(A = \begin{pmatrix} 2 & 1 \\ c & 1 \end{pmatrix}\), c = <output class="c-out">0</output></label>
+        <input class="c" type="range" min="-0.2" max="3" step="0.1" value="0" aria-label="2행 1열 c">
+        <p class="mono small say"></p>
+        <div class="pf">
+          <ol class="pf-pool">
+            <li data-k="a">\(A^T = A\)이고 \(A\vec{v}_1 = \lambda_1\vec{v}_1\), \(A\vec{v}_2 = \lambda_2\vec{v}_2\), \(\lambda_1 \ne \lambda_2\)라 하자.</li>
+            <li data-k="b">\(\lambda_1(\vec{v}_1\cdot\vec{v}_2) = (\lambda_1\vec{v}_1)\cdot\vec{v}_2 = (A\vec{v}_1)\cdot\vec{v}_2\)이다.<span class="pf-why">먼저 무엇을 가정하는지 밝혀야 합니다.</span></li>
+            <li data-k="c">\((A\vec{v}_1)\cdot\vec{v}_2 = (A\vec{v}_1)^T\vec{v}_2 = \vec{v}_1^TA^T\vec{v}_2 = \vec{v}_1^TA\vec{v}_2\) (\(A^T = A\)를 씀)이다.<span class="pf-why">이 식은 \(\lambda_1(\vec{v}_1\cdot\vec{v}_2)\)를 행렬로 바꾼 뒤에 이어집니다.</span></li>
+            <li data-k="d">\(\vec{v}_1^TA\vec{v}_2 = \vec{v}_1\cdot(A\vec{v}_2) = \lambda_2(\vec{v}_1\cdot\vec{v}_2)\)이다.<span class="pf-why">\(A\)를 \(\vec{v}_2\) 쪽으로 옮기는 단계(대칭을 쓰는 곳)가 먼저입니다.</span></li>
+            <li data-k="e">따라서 \((\lambda_1 - \lambda_2)(\vec{v}_1\cdot\vec{v}_2) = 0\)이고 \(\lambda_1 \ne \lambda_2\)이므로 \(\vec{v}_1\cdot\vec{v}_2 = 0\), 곧 두 고유벡터는 수직이다.<span class="pf-why">같은 양을 두 가지로 나타낸 식이 아직 완성되지 않았습니다.</span></li>
+            <li data-k="t">\(\lambda_1 \ne \lambda_2\)이면 \(\vec{v}_1 \ne \vec{v}_2\)이므로 두 벡터는 수직이다.<span class="pf-why">다른 벡터라고 수직인 것은 아닙니다. 대칭이 아닌 행렬(c ≠ 1)에서 그림을 보세요.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>앞 카드에서 대칭행렬의 두 고유벡터는 \(b\)를 아무리 바꿔도 늘 수직이었습니다. 우연일까요, 아니면 증명할 수 있을까요?</li>
+      <li><span class="tag">복원</span>\(\vec{u}\cdot\vec{v} = \vec{u}^T\vec{v}\), \((AB)^T = B^TA^T\)입니다.</li>
+      <li><span class="tag">설명</span>핵심은 \((A\vec{v}_1)\cdot\vec{v}_2\)를 두 가지로 계산하는 것입니다. 한 번은 \(A\vec{v}_1 = \lambda_1\vec{v}_1\)으로, 한 번은 \(A\)를 반대편으로 옮겨 \(A\vec{v}_2 = \lambda_2\vec{v}_2\)로 계산합니다. \(A\)를 옮길 때 \(A^T\)가 생기는데, 대칭이라 \(A^T = A\)입니다. 두 결과가 같으려면 \(\lambda_1 \ne \lambda_2\)일 때 내적이 0이어야 합니다.</li>
+      <li><span class="tag">연결</span>이 성질에 "대칭행렬의 고윳값은 실수"라는 사실까지 쓰면, 모든 실대칭행렬은 직교대각화된다는 <em>스펙트럼 정리</em>가 나옵니다. 다음 절에서 이차곡선의 축을 찾는 근거입니다.</li>
+      <li><span class="tag">적용</span>증명을 순서대로 쌓으세요. 그다음 \(c\)를 움직여 대칭(\(c = 1\))일 때만 두 고유벡터가 수직인지 확인하세요.</li>
+      <li class="warn"><span class="tag">판단</span>증명에서 \(A^T = A\)를 쓴 곳은 한 군데뿐입니다. 그곳이 없으면 증명이 무너지고, 그림에서도 \(c \ne 1\)이면 각이 90°가 아닙니다. 가정이 증명의 어디에 쓰였는지 찾는 습관이 중요합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">대칭행렬 \(A\)의 고유벡터가 \((1, 2)\)(고윳값 5)이고 다른 고윳값이 \(-1\)일 때, 고윳값 \(-1\)의 고유벡터 방향은?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\((2, -1)\)<span class="why"><b>맞습니다.</b> 서로 다른 고윳값의 고유벡터는 수직이므로 \((1, 2)\)에 수직인 방향입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\((-1, -2)\)<span class="why"><b>같은 방향(반대 방향)입니다.</b> 이것은 고윳값 5의 고유벡터입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\((2, 1)\)<span class="why"><b>성분을 바꾸기만 하고 부호를 바꾸지 않았습니다.</b> \((1, 2)\cdot(2, 1) = 4 \ne 0\)입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정할 수 없다.<span class="why"><b>대칭행렬이라는 조건으로 정해집니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

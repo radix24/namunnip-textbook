@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-geo-series");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sa = $(".a"), sr = $(".r"), sn = $(".nn"), MAX = 30;
   const getR = () => Math.round(+sr.value * 100) / 100;

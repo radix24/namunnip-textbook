@@ -14,6 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-fusi-cooling canvas { width: 100%; aspect-ratio: 16 / 11; }
     #card-fusi-cooling .cl-verdict { font-size: 13.5px; line-height: 1.55; margin: 8px 0 4px; padding: 8px 10px; border-left: 3px solid var(--rule); min-height: 3em; }
@@ -48,6 +49,7 @@
         <li><a href="#card-fusi-cooling"><span class="mono">2.2.1</span>두 가설을 가르는 탐구 설계</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=fusi-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=fusi-2-2">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
@@ -89,7 +91,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">탐구 문제</span>카페에서 받은 뜨거운 음료는 어떤 규칙으로 식을까요? 가설 1: "일정한 빠르기(매분 같은 온도)로 식는다." 가설 2: "주위와의 온도 차가 클수록 빨리 식는다." 두 가설은 컵을 고르고, 마시기 알맞은 때를 정하는 데 서로 다른 답을 줍니다.</li>
-            <li><span class="tag">복원</span><em>가설</em>은 검증할 수 있는 잠정적인 답이고, <em>모형</em>은 가설을 식이나 그림으로 나타내 수치를 예측하게 만든 것입니다. 가설 1의 모형은 T = T₀ − rt(직선), 가설 2의 모형은 T = T<sub>실내</sub> + (T₀ − T<sub>실내</sub>)e<sup>−kt</sup>(지수 곡선, 뉴턴의 냉각 법칙)입니다.</li>
+            <li><span class="tag">복원</span><em>가설</em>은 검증할 수 있는 잠정적인 답이고, <em>모형</em>은 가설을 식이나 그림으로 나타내 수치를 예측하게 만든 것입니다. 가설 1의 모형은 T = T₀ − rt(직선), 가설 2의 모형은 T = T<sub>실내</sub> + (T₀ − T<sub>실내</sub>)e<sup>−kt</sup>(지수 곡선, 뉴턴의 냉각 법칙)입니다. 지수 곡선은 같은 시간이 지날 때마다 실내 온도와의 차이가 같은 비율로 줄어드는 곡선이고, \(e\)는 약 2.718인 수입니다(지수함수는 대수, \(e\)는 미적분Ⅱ에서 자세히 배웁니다).</li>
             <li><span class="tag">설계</span>조작 변인은 시간, 종속 변인은 물의 온도, 통제 변인은 물의 양, 처음 온도, 실내 온도, 컵, 온도계를 넣는 깊이입니다. 설계의 핵심은 <em>두 모형의 예측이 갈리는 구간을 재는 것</em>입니다. 처음 몇 분 동안은 지수 곡선도 거의 직선이라, 그 구간만 재면 어느 가설도 버릴 수 없습니다.</li>
             <li><span class="tag">분석</span>측정값에 두 모형을 각각 맞춘 뒤, 측정값과 선의 어긋남을 온도계의 우연 오차와 비교합니다. 한 모형의 어긋남이 오차 수준이고 다른 모형은 훨씬 크면, 큰 쪽의 가설을 버립니다. 둘 다 오차 수준이면 이 자료로는 판정할 수 없습니다.</li>
             <li><span class="tag">측정</span>머그컵으로 5분 동안 재 보고, 판정이 되지 않으면 측정 기간을 늘려 판정이 처음 가능해지는 기간을 찾으세요. 종이컵, 보온병으로도 같은 일을 하고, 필요한 기간이 왜 컵마다 다른지 설명하세요. 기간은 그대로 두고 측정 간격만 줄이면 판정이 가능해지나요?</li>
@@ -106,17 +108,23 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/1-1.html#card-bio-control"><small class="mono">생명과학 1.1</small>가설은 어떻게 검증할까?</a><a href="../../c/phy/1-5.html#card-mech-insulation"><small class="mono">물리학 1.5</small>단열재를 두껍게 하면 빠져나가는 열이 얼마나 줄까?</a><a href="../../c/mech/2-1.html#text-mech-heat-tech"><small class="mono">역학과 에너지 2.1</small>건물과 다리는 열을 어떻게 다룰까?</a><a href="../../c/resr/3-1.html#card-labphy-lsq"><small class="mono">과학과제 연구 3.1</small>흩어진 점들에 그은 직선의 기울기는 얼마나 믿을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/1-1.html#card-bio-control"><small class="mono">생명과학 1.1</small>가설은 어떻게 검증할까?</a></div></nav>
 
       <a class="px-go" href="../../practice.html?sec=fusi-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>

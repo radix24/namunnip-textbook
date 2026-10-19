@@ -43,17 +43,61 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-cell-chloroplast"><span class="mono">3.5.1</span>엽록체의 구조와 기능</a></li>
-        <li><a href="#card-leaf-color"><span class="mono">3.5.2</span>잎은 왜 초록색일까?</a></li>
+        <li><a href="#card-leaf-color"><span class="mono">3.5.1</span>잎은 왜 초록색일까?</a></li>
+        <li><a href="#card-cell-chloroplast"><span class="mono">3.5.2</span>엽록체의 구조와 기능</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=cell-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">30문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=cell-3-5">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
+      <article class="card" id="card-leaf-color">
+        <header class="card-head">
+          <span class="no">3.5.1</span><h2>잎은 왜 초록색일까?</h2><span class="kind">흡수 스펙트럼 · 모식도</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="엽록소 a, 엽록소 b, 카로티노이드의 흡수 스펙트럼 모식도"></canvas>
+            <div class="ctl">
+              <label class="mono">파장 λ = <output class="lambda-out">550</output> nm</label>
+              <input class="lambda" type="range" min="400" max="700" step="1" value="550" aria-label="파장">
+              <div class="toggles" role="group" aria-label="색소 켜고 끄기">
+                <label><input type="checkbox" data-pig="a" checked><i style="--c:#2f6b22"></i>엽록소 a</label>
+                <label><input type="checkbox" data-pig="b" checked><i style="--c:#8fbf5e"></i>엽록소 b</label>
+                <label><input type="checkbox" data-pig="car" checked><i style="--c:#e0a02a"></i>카로티노이드</label>
+              </div>
+              <div class="readout">
+                <div class="swatch-wrap"><span class="swatch beam"></span><span class="small">들어온 빛</span></div>
+                <div class="mid mono abs-out">흡수 —</div>
+                <div class="swatch-wrap"><span class="swatch leaf-sw"></span><span class="small">남는 빛 (보이는 색)</span></div>
+              </div>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>햇빛에는 모든 색이 섞여 있습니다. 잎은 그중 어떤 빛을 쓰고 있을까요?</li>
+            <li><span class="tag">복원</span>물체의 색은 그 물체가 <em>흡수하지 않고 돌려보낸</em> 빛의 색입니다. 빨간 사과는 빨간빛을 반사합니다.</li>
+            <li><span class="tag">설명</span>엽록소는 파란빛(430–450 nm)과 붉은빛(640–670 nm)을 잘 흡수해 광합성에 씁니다. 가운데 초록 구간은 덜 흡수합니다.</li>
+            <li><span class="tag">연결</span>슬라이더로 파장을 옮겨 보세요. 흡수가 적은 파장이 남고, 남은 빛을 섞으면 오른쪽 색이 됩니다.</li>
+            <li><span class="tag">적용</span>엽록소 a와 b를 끄면 무엇이 남나요? 가을에 엽록소가 먼저 분해되면 숨어 있던 카로티노이드의 노란색이 드러납니다.</li>
+            <li class="warn"><span class="tag">판단</span><b>흔한 오개념:</b> “초록빛은 전혀 안 쓴다.” 이 그래프는 추출한 색소 용액의 모식도입니다. 실제 잎은 두껍고 빛이 안에서 여러 번 산란되어, 초록빛도 대략 70–80%를 흡수합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">초록색 빛만 나오는 조명 아래에서 식물을 키우면 어떻게 될까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>광합성을 전혀 하지 못한다.<span class="why"><b>그럴듯하지만 틀렸습니다.</b> 추출액 그래프만 보면 그렇게 보이지만, 실제 잎은 초록빛도 상당히 흡수해 광합성에 씁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>광합성은 하지만, 같은 세기의 흰빛보다는 대체로 느리다.<span class="why"><b>맞습니다.</b> 초록빛은 덜 흡수되는 편이라 효율이 낮지만 0은 아닙니다. 모형(추출액)과 실제(잎)를 구분한 답입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>잎이 초록색이니 초록빛에서 가장 잘 자란다.<span class="why"><b>거꾸로입니다.</b> 잎이 초록으로 보이는 것은 초록빛을 상대적으로 덜 흡수해서 돌려보내기 때문입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/1-3.html#card-is2-redox-electron"><small class="mono">통합과학2 1.3</small>산화는 산소와의 반응일까, 전자의 이동일까?</a><a href="../../c/is2/1-3.html#card-is2-reactivity"><small class="mono">통합과학2 1.3</small>철은 왜 녹슬고 금은 녹슬지 않을까?</a><a href="../../c/is2/1-3.html#card-is2-redox-life"><small class="mono">통합과학2 1.3</small>광합성과 호흡은 왜 산화 환원 반응일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/3-1.html#card-bio-carbon"><small class="mono">통합과학1 3.1</small>탄소는 생태계를 어떻게 돌까?</a><a href="../../c/bio/1-6.html#card-bio-nitrogen"><small class="mono">생명과학 1.6</small>공기의 78%가 질소인데 식물은 왜 질소가 모자랄까?</a><a href="../../c/bio/1-6.html#card-bio-flow"><small class="mono">생명과학 1.6</small>물질은 순환하는데 에너지는 왜 흘러가 버릴까?</a><a href="../../c/bio/1-7.html#card-bio-disturb"><small class="mono">생명과학 1.7</small>생태계의 한 고리를 빼거나 더하면 어떻게 될까?</a></div></nav>
+
       <article class="card" id="card-cell-chloroplast">
         <header class="card-head">
-          <span class="no">3.5.1</span><h2>엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?</h2><span class="kind">엽록체 · 틸라코이드와 스트로마 · 빛에 따른 pH 변화</span>
+          <span class="no">3.5.2</span><h2>엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?</h2><span class="kind">엽록체 · 틸라코이드와 스트로마 · 빛에 따른 pH 변화</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -97,54 +141,15 @@
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#text-cell-organelles"><small class="mono">통합과학1 3.5</small>세포 속 방들은 각각 무슨 일을 하고, 어떻게 알아냈을까?</a><a href="../../c/cell/1-3.html#card-cell-fraction"><small class="mono">세포와 물질대사 1.3</small>세포를 갈아 돌리면 소기관을 하나씩 골라낼 수 있을까?</a><a href="../../c/is2/2-4.html#card-photo-rate"><small class="mono">통합과학2 2.4</small>빛을 늘리면 광합성도 계속 빨라질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cell/3-6.html#card-cell-calvin"><small class="mono">세포와 물질대사 3.6</small>불을 끄면 캘빈 회로의 어떤 물질이 쌓일까?</a></div></nav>
 
-      <article class="card" id="card-leaf-color">
-        <header class="card-head">
-          <span class="no">3.5.2</span><h2>잎은 왜 초록색일까?</h2><span class="kind">흡수 스펙트럼 · 모식도</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="엽록소 a, 엽록소 b, 카로티노이드의 흡수 스펙트럼 모식도"></canvas>
-            <div class="ctl">
-              <label class="mono">파장 λ = <output class="lambda-out">550</output> nm</label>
-              <input class="lambda" type="range" min="400" max="700" step="1" value="550" aria-label="파장">
-              <div class="toggles" role="group" aria-label="색소 켜고 끄기">
-                <label><input type="checkbox" data-pig="a" checked><i style="--c:#2f6b22"></i>엽록소 a</label>
-                <label><input type="checkbox" data-pig="b" checked><i style="--c:#8fbf5e"></i>엽록소 b</label>
-                <label><input type="checkbox" data-pig="car" checked><i style="--c:#e0a02a"></i>카로티노이드</label>
-              </div>
-              <div class="readout">
-                <div class="swatch-wrap"><span class="swatch beam"></span><span class="small">들어온 빛</span></div>
-                <div class="mid mono abs-out">흡수 —</div>
-                <div class="swatch-wrap"><span class="swatch leaf-sw"></span><span class="small">남는 빛 (보이는 색)</span></div>
-              </div>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>햇빛에는 모든 색이 섞여 있습니다. 잎은 그중 어떤 빛을 쓰고 있을까요?</li>
-            <li><span class="tag">복원</span>물체의 색은 그 물체가 <em>흡수하지 않고 돌려보낸</em> 빛의 색입니다. 빨간 사과는 빨간빛을 반사합니다.</li>
-            <li><span class="tag">설명</span>엽록소는 파란빛(430–450 nm)과 붉은빛(640–670 nm)을 잘 흡수해 광합성에 씁니다. 가운데 초록 구간은 덜 흡수합니다.</li>
-            <li><span class="tag">연결</span>슬라이더로 파장을 옮겨 보세요. 흡수가 적은 파장이 남고, 남은 빛을 섞으면 오른쪽 색이 됩니다.</li>
-            <li><span class="tag">적용</span>엽록소 a와 b를 끄면 무엇이 남나요? 가을에 엽록소가 먼저 분해되면 숨어 있던 카로티노이드의 노란색이 드러납니다.</li>
-            <li class="warn"><span class="tag">판단</span><b>흔한 오개념:</b> “초록빛은 전혀 안 쓴다.” 이 그래프는 추출한 색소 용액의 모식도입니다. 실제 잎은 두껍고 빛이 안에서 여러 번 산란되어, 초록빛도 대략 70–80%를 흡수합니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">초록색 빛만 나오는 조명 아래에서 식물을 키우면 어떻게 될까요?</p>
-          <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>광합성을 전혀 하지 못한다.<span class="why"><b>그럴듯하지만 틀렸습니다.</b> 추출액 그래프만 보면 그렇게 보이지만, 실제 잎은 초록빛도 상당히 흡수해 광합성에 씁니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>광합성은 하지만, 같은 세기의 흰빛보다는 대체로 느리다.<span class="why"><b>맞습니다.</b> 초록빛은 덜 흡수되는 편이라 효율이 낮지만 0은 아닙니다. 모형(추출액)과 실제(잎)를 구분한 답입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>잎이 초록색이니 초록빛에서 가장 잘 자란다.<span class="why"><b>거꾸로입니다.</b> 잎이 초록으로 보이는 것은 초록빛을 상대적으로 덜 흡수해서 돌려보내기 때문입니다.</span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/1-3.html#card-is2-redox-electron"><small class="mono">통합과학2 1.3</small>산화는 산소와의 반응일까, 전자의 이동일까?</a><a href="../../c/is2/1-3.html#card-is2-reactivity"><small class="mono">통합과학2 1.3</small>철은 왜 녹슬고 금은 녹슬지 않을까?</a><a href="../../c/is2/1-3.html#card-is2-redox-life"><small class="mono">통합과학2 1.3</small>광합성과 호흡은 왜 산화 환원 반응일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/3-1.html#card-bio-carbon"><small class="mono">통합과학1 3.1</small>탄소는 생태계를 어떻게 돌까?</a><a href="../../c/bio/1-6.html#card-bio-nitrogen"><small class="mono">생명과학 1.6</small>공기의 78%가 질소인데 식물은 왜 질소가 모자랄까?</a><a href="../../c/bio/1-6.html#card-bio-flow"><small class="mono">생명과학 1.6</small>물질은 순환하는데 에너지는 왜 흘러가 버릴까?</a><a href="../../c/bio/1-7.html#card-bio-disturb"><small class="mono">생명과학 1.7</small>생태계의 한 고리를 빼거나 더하면 어떻게 될까?</a></div></nav>
-
       <a class="px-go" href="../../practice.html?sec=cell-3-5"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">30문항</span></a>
 
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -153,7 +158,7 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
-<script src="../../js/cards/cell/chloroplast.js"></script>
 <script src="../../js/cards/leaf-color.js"></script>
+<script src="../../js/cards/cell/chloroplast.js"></script>
 </body>
 </html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>중복조합 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="중복조합의 뜻과 수, 방정식의 정수해 개수. 별과 막대로 사탕을 나누는 카드와, 조건이 붙은 방정식의 정수해를 삼각형 격자로 세는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-stars-bars .row { display: flex; flex-wrap: wrap; gap: .25rem; align-items: center; min-height: 3rem; padding: .5rem; border: 1px dashed var(--rule); border-radius: 8px; margin: .5rem 0; }
+    #card-dmath-stars-bars .row button { min-width: 2rem; height: 2.2rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); font: 700 1.1rem/1 sans-serif; cursor: pointer; }
+    #card-dmath-stars-bars .row button.bar { background: var(--ink); color: var(--card); min-width: .7rem; padding: 0; }
+    #card-dmath-stars-bars .row button.star { color: var(--forest); }
+    #card-dmath-stars-bars .ctl-row > div { min-width: 8rem; }
+    #card-dmath-int-solutions canvas { aspect-ratio: 1 / 0.9; max-width: 440px; margin: 0 auto; display: block; }
+    #card-dmath-int-solutions .ctl-row > div { min-width: 7rem; }
+    #card-dmath-int-solutions .gp { display: flex; flex-wrap: wrap; gap: .3rem; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="1-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>중복조합</h1>
+    <p class="lead">같은 사탕을 여러 친구에게 나누거나, 같은 맛을 여러 번 골라도 되는 아이스크림을 고르는 것은 서로 다른 \(n\)개에서 중복을 허락해 \(r\)개를 고르는 <em>중복조합</em>입니다. 별과 막대 그림 하나로 이 문제가 같은 것이 있는 순열로 바뀝니다. 이 절에서는 직접 나눔을 만들어 세어 보고, 조건이 붙은 방정식의 정수해 개수로 넓혀 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm1/3-3.html#card-cm1-comb-group" title="공통수학1 3.3 · 순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?">조합</a><a class="p p-card" href="../../c/dmath/1-1.html#card-dmath-grid-path" title="이산 수학 1.1 · 바둑판 도시에서 가장 짧은 길은 몇 가지일까?">같은 것이 있는 순열과 최단 경로</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-stars-bars"><span class="mono">1.2.1</span>별과 막대로 나누어 주기</a></li>
+        <li><a href="#card-dmath-int-solutions"><span class="mono">1.2.2</span>x + y + z = r의 정수해를 삼각형 위에서 세기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-1-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-stars-bars">
+        <header class="card-head">
+          <span class="no">1.2.1</span><h2>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</h2><span class="kind">중복조합 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">사탕 r = <output class="r-out">5</output></label><input class="r" type="range" min="1" max="8" step="1" value="5" aria-label="사탕 수"></div>
+              <div><label class="mono">친구 n = <output class="n-out">3</output></label><input class="n" type="range" min="2" max="5" step="1" value="3" aria-label="친구 수"></div>
+            </div>
+            <p class="small">아래 칸을 누르면 사탕(★)과 칸막이(|)가 서로 바뀝니다. 칸막이는 늘 n − 1개입니다.</p>
+            <div class="row" role="group" aria-label="별과 막대 줄"></div>
+            <p class="mono small give">—</p>
+            <div class="presets"><button class="chip go-save" type="button">이 나눔 기록</button><button class="chip go-all" type="button">모두 보기</button></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>똑같은 사탕 5개를 세 친구에게 나눠 줍니다. 못 받는 친구가 있어도 됩니다. (5, 0, 0), (2, 2, 1), … 하나씩 적다 보면 빠뜨리기 쉽습니다. 한 번에 세는 방법이 있을까요?</li>
+            <li><span class="tag">복원</span>같은 것이 있는 순열: ★ 5개와 | 2개를 늘어놓는 방법은 \(\frac{7!}{5!\,2!}\)가지입니다.</li>
+            <li><span class="tag">설명</span>사탕을 ★, 친구 사이의 경계를 |로 그리면 ★★|★★|★은 (2, 2, 1)입니다. 나눔 하나가 ★ \(r\)개와 | \(n - 1\)개의 줄 하나에 꼭 맞게 대응하므로, 나누는 방법의 수는 \(r + n - 1\)칸 중 | 자리를 고르는 수 \({}_{r+n-1}\mathrm{C}_{n-1} = {}_{r+n-1}\mathrm{C}_r\)입니다. 이것을 서로 다른 \(n\)개에서 중복을 허락해 \(r\)개를 고르는 <em>중복조합</em> \({}_n\mathrm{H}_r\)이라고 합니다.</li>
+            <li><span class="tag">연결</span>\({}_n\mathrm{H}_r\)은 방정식 \(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수이기도 합니다(다음 카드). 아이스크림 맛 고르기, 다항식 \((x + y + z)^r\)의 항의 개수도 같은 수입니다.</li>
+            <li><span class="tag">적용</span>칸을 눌러 여러 나눔을 만들고 기록하세요. 중복 없이 모두 모으면 몇 개인가요? 식으로 구한 \({}_n\mathrm{H}_r\)과 같은가요?</li>
+            <li class="warn"><span class="tag">판단</span>"모든 친구가 적어도 하나씩 받는다"면 먼저 한 개씩 나눠 준 뒤 남은 \(r - n\)개를 나누므로 \({}_n\mathrm{H}_{r-n}\)입니다. 사탕이 서로 다르면 친구 선택을 사탕마다 하므로 \(n^r\)(중복순열)입니다. 무엇이 같고 무엇이 다른지 먼저 확인하세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">4가지 맛 중에서 아이스크림 3스쿱을 고르는 방법(같은 맛 중복 가능, 순서 무시)의 수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\({}_4\mathrm{H}_3 = 20\)<span class="why"><b>맞습니다.</b> \({}_{6}\mathrm{C}_3 = 20\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\({}_4\mathrm{C}_3 = 4\)<span class="why"><b>같은 맛을 두 번 고르는 경우를 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(4^3 = 64\)<span class="why"><b>순서를 따졌습니다.</b> 그것은 중복순열입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\({}_3\mathrm{H}_4 = 15\)<span class="why"><b>\(n\)과 \(r\)이 바뀌었습니다.</b> 고르는 종류가 4, 고르는 개수가 3입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/3-3.html#card-cm1-comb-group"><small class="mono">공통수학1 3.3</small>순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?</a><a href="../../c/cm1/3-3.html#card-cm1-comb-bars"><small class="mono">공통수학1 3.3</small>뽑는 수 r가 바뀌면 조합의 수는 어떻게 변할까?</a><a href="../../c/dmath/1-1.html#card-dmath-round-table"><small class="mono">이산 수학 1.1</small>원탁에 앉는 방법은 왜 n!보다 적을까?</a><a href="../../c/dmath/1-1.html#card-dmath-grid-path"><small class="mono">이산 수학 1.1</small>바둑판 도시에서 가장 짧은 길은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-3.html#card-dmath-venn-count"><small class="mono">이산 수학 1.3</small>세 집합을 합칠 때 왜 더하고 빼고 다시 더할까?</a><a href="../../c/dmath/1-3.html#card-dmath-derange"><small class="mono">이산 수학 1.3</small>모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?</a><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a></div></nav>
+
+      <article class="card" id="card-dmath-int-solutions">
+        <header class="card-head">
+          <span class="no">1.2.2</span><h2>조건이 붙은 방정식의 정수해는 몇 개일까?</h2><span class="kind">중복조합과 정수해 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">문제 <select class="pick" aria-label="문제 고르기"><option value="0">1. x + y + z = 8, 모두 0 이상</option><option value="1">2. x + y + z = 8, 모두 1 이상</option><option value="2">3. x + y + z = 8, x ≥ 3</option><option value="3">4. x + y + z = 8, 모두 4 이하</option></select></label></div>
+            <p class="small">예측: 해의 개수는?</p>
+            <div class="gp" role="group" aria-label="예측"></div>
+            <canvas aria-label="x + y + z = 8의 음이 아닌 정수해를 삼각형 격자의 점으로 나타냄. 조건을 만족하는 점은 초록"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>방정식 \(x + y + z = 8\)의 음이 아닌 정수해는 중복조합으로 셀 수 있었습니다. 그런데 "모두 1 이상", "\(x \ge 3\)", "모두 4 이하" 같은 조건이 붙으면 어떻게 셀까요?</li>
+            <li><span class="tag">복원</span>\(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수는 \({}_n\mathrm{H}_r = {}_{n+r-1}\mathrm{C}_r\)입니다.</li>
+            <li><span class="tag">설명</span>아래로 막힌 조건은 <b>미리 나눠 주고</b> 셉니다. \(x \ge 3\)이면 \(x = x' + 3\)으로 두어 \(x' + y + z = 5\), 곧 \({}_3\mathrm{H}_5 = 21\)개입니다. "모두 1 이상"은 하나씩 먼저 주고 \({}_3\mathrm{H}_5\)입니다. 위로 막힌 조건 "4 이하"는 이렇게 바꿀 수 없어서, 전체에서 "어느 하나가 5 이상"인 해를 빼야 하며 이때 겹치는 것을 조심해야 합니다(다음 절의 포함배제의 원리).</li>
+            <li><span class="tag">연결</span>세 변수의 해는 정삼각형 모양 격자의 점으로 그릴 수 있습니다. 꼭짓점이 \((8, 0, 0)\), \((0, 8, 0)\), \((0, 0, 8)\)이고, 아래로 막힌 조건은 작은 삼각형을, 위로 막힌 조건은 모서리를 잘라 낸 육각형을 남깁니다.</li>
+            <li><span class="tag">적용</span>네 문제의 답을 먼저 예측한 뒤 그림으로 확인하세요. 문제 4에서 잘려 나간 세 모서리 삼각형은 각각 몇 개의 점을 가지나요? 서로 겹치나요?</li>
+            <li class="warn"><span class="tag">판단</span>"양의 정수해"와 "음이 아닌 정수해"는 다릅니다. 문제를 읽을 때 0을 허용하는지 먼저 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(x + y + z + w = 10\)의 양의 정수해의 개수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\({}_4\mathrm{H}_6 = 84\)<span class="why"><b>맞습니다.</b> 넷에게 하나씩 먼저 주면 남은 6을 나누는 문제가 됩니다. \({}_9\mathrm{C}_6 = 84\).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\({}_4\mathrm{H}_{10} = 286\)<span class="why"><b>0을 허용한 개수입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\({}_{10}\mathrm{C}_4 = 210\)<span class="why"><b>공식에 넣을 수를 잘못 골랐습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\({}_4\mathrm{H}_7 = 120\)<span class="why"><b>하나씩 주고 남은 수를 잘못 셌습니다.</b> \(10 - 4 = 6\)입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/3-3.html#card-cm1-comb-group"><small class="mono">공통수학1 3.3</small>순서 없이 뽑는 수는 왜 순열의 수를 r!로 나눌까?</a><a href="../../c/cm1/3-3.html#card-cm1-comb-bars"><small class="mono">공통수학1 3.3</small>뽑는 수 r가 바뀌면 조합의 수는 어떻게 변할까?</a><a href="../../c/dmath/1-1.html#card-dmath-round-table"><small class="mono">이산 수학 1.1</small>원탁에 앉는 방법은 왜 n!보다 적을까?</a><a href="../../c/dmath/1-1.html#card-dmath-grid-path"><small class="mono">이산 수학 1.1</small>바둑판 도시에서 가장 짧은 길은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-3.html#card-dmath-venn-count"><small class="mono">이산 수학 1.3</small>세 집합을 합칠 때 왜 더하고 빼고 다시 더할까?</a><a href="../../c/dmath/1-3.html#card-dmath-derange"><small class="mono">이산 수학 1.3</small>모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?</a><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-1-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/stars-bars.js"></script>
+<script src="../../js/cards/dmath/int-solutions.js"></script>
+</body>
+</html>

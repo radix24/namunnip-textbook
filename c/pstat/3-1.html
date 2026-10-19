@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>정규분포와 t분포 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="T = (X̄ − μ)/(S/√n)가 따르는 자유도 n − 1인 t분포, 표준정규분포보다 두꺼운 꼬리, 자유도에 따른 t₀.₀₂₅ 표, 작은 표본에서 |T| &gt; 1.96이 5%보다 자주 나오는 시뮬레이션(가상 모집단). t분포 곡선 카드와, t통계량 시뮬레이션 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pstat-t-vs-z canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-pstat-t-vs-z .ctl-row > div { min-width: 12rem; }
+    #card-pstat-t-vs-z table { border-collapse: collapse; font: .8rem var(--mono, monospace); margin-top: .4rem; }
+    #card-pstat-t-vs-z td, #card-pstat-t-vs-z th { border: 1px solid var(--rule, #d9dad2); padding: .1rem .4rem; text-align: right; }
+    #card-pstat-t-vs-z tr.on td { background: rgba(181,83,47,.12); font-weight: 700; }
+    #card-pstat-why-t canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-pstat-why-t .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="pstat" data-sec="3-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>정규분포와 t분포</h1>
+    <p class="lead">모표준편차를 모를 때는 표본표준편차로 표준화합니다. 이렇게 만든 값은 표준정규분포가 아니라 꼬리가 조금 더 두꺼운 <em>t분포</em>를 따르고, 표본이 커질수록 표준정규분포에 가까워집니다. 이 절에서는 두 분포를 비교하고 t분포가 필요한 까닭을 시뮬레이션으로 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/stat/3-4.html#card-stat-standardize" title="확률과 통계 3.4 · 정규분포표 하나로 모든 정규분포의 확률을 구할 수 있을까?">정규분포와 표준화</a><a class="p p-card" href="../../c/stat/3-6.html#card-stat-xbar-dist" title="확률과 통계 3.6 · 표본을 크게 뽑으면 표본평균은 덜 흔들릴까?">표본평균의 분포</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pstat-t-vs-z"><span class="mono">3.1.1</span>자유도가 작을수록 꼬리가 두꺼운 t분포</a></li>
+        <li><a href="#card-pstat-why-t"><span class="mono">3.1.2</span>작은 표본에서 1.96을 쓰면 왜 틀리는지 직접 확인</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pstat-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pstat-3-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pstat-t-vs-z">
+        <header class="card-head">
+          <span class="no">3.1.1</span><h2>t분포는 표준정규분포와 무엇이 다를까?</h2><span class="kind">정규분포와 t분포 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">자유도 \(\nu\) = <output class="d-out"></output></label><input class="d" type="range" min="1" max="60" step="1" value="4" aria-label="자유도"></div></div>
+            <canvas aria-label="표준정규분포와 t분포 곡선, 양쪽 2.5% 꼬리 경계"></canvas>
+            <p class="mono small say" role="status"></p>
+            <div style="overflow-x:auto"><table></table></div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>모표준편차를 모를 때는 표본에서 구한 표준편차로 표준화합니다. 그러면 표준화한 값의 분포는 여전히 표준정규분포일까요?</li>
+            <li><span class="tag">복원</span>표준정규분포 \(N(0, 1)\), \(P(-1.96 \le Z \le 1.96) \approx 0.95\).</li>
+            <li><span class="tag">설명</span>정규분포를 따르는 모집단에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - \mu}{S/\sqrt n}\)를 만들면, \(T\)는 자유도 \(n - 1\)인 <em>t분포</em>를 따릅니다. t분포는 0에 대해 대칭인 종 모양이지만 표준정규분포보다 <em>꼬리가 두껍습니다</em>. \(S\)도 표본마다 흔들리는 값이라 극단적인 \(T\)가 더 자주 나오기 때문입니다. 자유도가 커지면 t분포는 표준정규분포에 가까워집니다.</li>
+            <li><span class="tag">연결</span>t분포는 맥주 회사에서 일하던 윌리엄 고셋이 적은 표본으로 품질을 판단하려고 연구해 '스튜던트'라는 필명으로 발표한 것으로 알려져 있습니다.</li>
+            <li><span class="tag">적용</span>자유도를 1부터 늘리며 양쪽 2.5% 경계값 \(t_{0.025}\)가 1.96에 가까워지는 모습을 보세요. 자유도가 몇일 때 2.1보다 작아지나요?</li>
+            <li class="warn"><span class="tag">판단</span>t분포는 모집단이 정규분포에 가깝다는 가정에서 나온 것입니다. 표본이 작고 자료가 크게 치우쳐 있으면 결과를 조심해서 해석해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">표본의 크기가 10일 때 모평균을 추정하는 데 쓰는 t분포의 자유도는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>9<span class="why"><b>맞습니다.</b> 자유도는 \(n - 1\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>10<span class="why"><b>표본평균을 쓰면서 자유도 하나가 줄어듭니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>11<span class="why"><b>더하지 않고 뺍니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(\sqrt{10}\)<span class="why"><b>표준오차 계산과 섞였습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/2-4.html#card-pstat-mean-median"><small class="mono">실용 통계 2.4</small>동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?</a><a href="../../c/pstat/2-4.html#card-pstat-sd-spread"><small class="mono">실용 통계 2.4</small>평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/3-2.html#card-pstat-ci-t-cover"><small class="mono">실용 통계 3.2</small>배터리 6개로 평균 수명을 추정할 때, 신뢰구간은 어떻게 만들어야 할까?</a><a href="../../c/pstat/3-2.html#card-pstat-sample-size"><small class="mono">실용 통계 3.2</small>택배 배송 시간의 평균을 ±0.5시간 안으로 추정하려면 몇 건을 조사해야 할까?</a></div></nav>
+
+      <article class="card" id="card-pstat-why-t">
+        <header class="card-head">
+          <span class="no">3.1.2</span><h2>표본 5개로 표준화하면 정말 95%가 ±1.96 안에 들어올까?</h2><span class="kind">t통계량의 분포 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">모집단 \(N(50, 10^2)\)(가상)에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - 50}{S/\sqrt n}\)를 2000번 계산합니다.</p>
+            <div class="ctl-row"><div><label class="mono">표본의 크기 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="3" max="40" step="1" value="5" aria-label="표본의 크기"></div></div>
+            <div class="presets"><button class="chip run" type="button">2000번 뽑기</button></div>
+            <canvas aria-label="T 값의 히스토그램과 표준정규분포, t분포 곡선"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>표본평균을 표준화할 때 모표준편차 \(\sigma\) 대신 표본표준편차 \(S\)를 넣으면 어떤 일이 생길까요? 1.96을 그대로 써도 될까요?</li>
+            <li><span class="tag">복원</span>\(\bar X\)의 분포: 평균 \(\mu\), 표준편차 \(\frac{\sigma}{\sqrt n}\).</li>
+            <li><span class="tag">설명</span>\(S\)는 표본마다 달라서, 우연히 \(S\)가 작게 나온 표본은 \(T\)가 크게 튀어 나갑니다. 그래서 \(T\)의 분포는 표준정규분포보다 꼬리가 두껍고, \(n\)이 작을수록 \(|T| > 1.96\)인 경우가 5%보다 훨씬 많아집니다. 시뮬레이션 막대는 자유도 \(n - 1\)인 t분포 곡선(빨강)과 잘 맞습니다. 그래서 작은 표본에서는 1.96 대신 t분포의 경계값을 씁니다.</li>
+            <li><span class="tag">연결</span>다음 절의 모평균의 신뢰구간 \(\bar x \pm t_{0.025}\frac{s}{\sqrt n}\)이 바로 이 결과를 이용합니다.</li>
+            <li><span class="tag">적용</span>\(n = 3, 5, 10, 30\)에서 \(|T| > 1.96\)의 비율을 비교하세요. \(n\)이 커지면 왜 5%에 가까워질까요?</li>
+            <li class="warn"><span class="tag">판단</span>시뮬레이션 결과는 할 때마다 조금씩 다릅니다. 2000번이면 비율의 오차가 대략 ±1%p 정도라는 것을 생각하며 읽습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">표본이 작을 때 \(S\)를 쓰면서 t값 대신 1.96을 그대로 써서 '95% 신뢰구간'을 만들면 실제로 모평균을 포함하는 비율은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>95%보다 작다<span class="why"><b>맞습니다.</b> \(|T| > 1.96\)이 5%보다 자주 나오기 때문입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>정확히 95%<span class="why"><b>σ를 알 때의 이야기입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>95%보다 크다<span class="why"><b>구간이 필요보다 좁아 놓치는 일이 늘어납니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>표본마다 0% 또는 100%<span class="why"><b>한 구간은 포함하거나 못 하지만, 비율을 묻고 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/pstat/2-4.html#card-pstat-mean-median"><small class="mono">실용 통계 2.4</small>동네에 아주 부유한 한 집이 이사 오면 '평균 소득'과 '중앙값'은 어떻게 달라질까?</a><a href="../../c/pstat/2-4.html#card-pstat-sd-spread"><small class="mono">실용 통계 2.4</small>평균이 같은 두 반의 점수, 무엇으로 차이를 나타낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pstat/3-2.html#card-pstat-ci-t-cover"><small class="mono">실용 통계 3.2</small>배터리 6개로 평균 수명을 추정할 때, 신뢰구간은 어떻게 만들어야 할까?</a><a href="../../c/pstat/3-2.html#card-pstat-sample-size"><small class="mono">실용 통계 3.2</small>택배 배송 시간의 평균을 ±0.5시간 안으로 추정하려면 몇 건을 조사해야 할까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pstat-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/stat/stat-lib.js"></script>
+<script src="../../js/cards/pstat/pst.js"></script>
+<script src="../../js/cards/pstat/t-vs-z.js"></script>
+<script src="../../js/cards/pstat/why-t.js"></script>
+</body>
+</html>

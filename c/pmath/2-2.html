@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이차곡선의 접선 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="이차곡선 위의 점에서 그은 접선의 방정식과 반사 성질. 포물면 안테나·전조등의 반사, 타원 당구대에서 한 초점을 지난 공이 다른 초점으로 가는 이유를 시뮬레이션으로 확인하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-parabolic-mirror canvas { aspect-ratio: 16 / 10; }
+    #card-pmath-ellipse-billiard canvas { aspect-ratio: 16 / 10; }
+  </style>
+</head>
+<body data-course="pmath" data-sec="2-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>이차곡선의 접선</h1>
+    <p class="lead">이차곡선의 접선에는 쓸모 있는 성질이 숨어 있습니다. 포물선의 축과 나란히 들어온 빛은 접선에서 반사되어 모두 초점에 모이고, 타원의 한 초점에서 나간 빛은 반사되어 다른 초점을 지납니다. 이 절에서는 곡선 위의 점 \((x_1, y_1)\)에서 그은 접선의 방정식을 구하고, 빛과 당구공을 직접 쏘아 보며 이 성질이 접선의 방정식에서 어떻게 나오는지 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/1-4.html#card-geo-tangent-point" title="기하 1.4 · 곡선 위의 점에서 그은 접선은 어떤 식일까?">이차곡선의 접선</a><a class="p p-card" href="../../c/cm2/1-5.html#card-cm2-tangent" title="공통수학2 1.5 · 원 위의 한 점에서 그은 접선의 방정식은?">접선의 방정식</a><a class="p p-card" href="../../c/geo/1-2.html#card-geo-ellipse-eq" title="기하 1.2 · 방정식만 보고 타원의 초점과 장축을 찾을 수 있을까?">타원의 방정식</a><a class="p p-card" href="../../c/geo/1-1.html#card-geo-parabola-shift" title="기하 1.1 · 꼭짓점을 옮기면 초점과 준선은 어디로 갈까?">포물선의 방정식</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-parabolic-mirror"><span class="mono">2.2.1</span>포물면 안테나와 전조등</a></li>
+        <li><a href="#card-pmath-ellipse-billiard"><span class="mono">2.2.2</span>타원 당구대</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pmath-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-2-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-parabolic-mirror">
+        <header class="card-head">
+          <span class="no">2.2.1</span><h2>위성 안테나는 왜 접시 모양일까?</h2><span class="kind">포물선의 접선과 반사 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="포물선 모양 거울과 빛줄기들. 축에 나란히 들어온 빛은 반사되어 초점에 모인다"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-m="in" aria-pressed="true">안테나: 들어오는 빛</button>
+                <button class="chip" type="button" data-m="out">전조등: 초점의 전구</button>
+              </div>
+              <div class="ctl-row">
+                <div><label class="mono">빛이 들어오는 기울기 = <output class="a-out">0°</output></label>
+                <input class="sa" type="range" min="-20" max="20" step="1" value="0" aria-label="빛이 축과 이루는 각"></div>
+                <div><label class="mono">살펴볼 빛줄기 = <output class="k-out">3</output>번</label>
+                <input class="sk" type="range" min="0" max="8" step="1" value="3" aria-label="접선을 보여 줄 빛줄기"></div>
+              </div>
+              <p class="mono small eq">—</p>
+              <p class="fig-note">포물선은 \(x^2 = 4py\) (\(p = 1\)), 초점은 \((0, 1)\)입니다. 굵게 그린 빛줄기에서 접선과 들어오는 빛, 나가는 빛이 이루는 두 각이 같은지 보세요.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>위성 안테나는 아주 먼 위성에서 오는 약한 신호를 받습니다. 접시 가운데가 아니라 접시 앞에 튀어나온 받침대 끝에 수신기가 달려 있는 이유는 무엇일까요?</li>
+            <li><span class="tag">복원</span>빛이 거울에서 반사될 때 들어오는 각과 나가는 각은 접선(또는 법선)에 대하여 같습니다. 포물선 \(x^2 = 4py\) 위의 점 \((x_1, y_1)\)에서 그은 접선의 방정식은 \(x_1 x = 2p(y + y_1)\)입니다.</li>
+            <li><span class="tag">설명</span>접점 \(\mathrm{P}(x_1, y_1)\)에서 접선은 y축과 \((0, -y_1)\)에서 만납니다. 그러면 초점 \(\mathrm{F}(0, p)\)까지의 거리 \(\overline{\mathrm{FP}} = y_1 + p\)와 \(\mathrm{F}\)에서 접선의 y절편까지의 거리 \(p + y_1\)이 같아 이등변삼각형이 생기고, 두 밑각이 같습니다. 이 두 각이 바로 "축에 나란한 빛"과 접선이 이루는 각, "P에서 F로 가는 빛"과 접선이 이루는 각입니다. 그래서 <b>축에 나란히 들어온 빛은 모두 초점으로 반사됩니다.</b> 거꾸로 초점에 전구를 두면 빛이 모두 축에 나란히 나갑니다.</li>
+            <li><span class="tag">연결</span>3차원에서는 포물선을 축 둘레로 돌린 포물면을 씁니다. 위성 안테나, 전파 망원경, 태양열 조리기는 들어오는 쪽으로, 자동차 전조등과 손전등은 나가는 쪽으로 이 성질을 씁니다.</li>
+            <li><span class="tag">적용</span>안테나 모드에서 빛이 모두 한 점에 모이는지 보세요. 빛의 기울기를 바꾸면 모이는 점은 어떻게 되나요? 안테나를 위성 쪽으로 정확히 겨눠야 하는 이유를 그림에서 찾으세요. 전조등 모드에서는 초점의 빛이 어떻게 나가나요?</li>
+            <li class="warn"><span class="tag">판단</span>모든 빛이 한 점에 모이는 것은 빛이 축과 정확히 나란할 때뿐입니다. 비스듬히 들어오면 반사된 빛이 흩어집니다. 또 이 그림은 빛을 직선으로만 보는 기하 광학 모형이라, 접시의 크기에 따른 회절은 다루지 않습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">지름 60 cm, 깊이 9 cm인 포물면 안테나의 수신기는 접시 바닥 중심에서 몇 cm 떨어진 곳에 달아야 할까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>25 cm<span class="why"><b>맞습니다.</b> 바닥을 원점으로 \(x^2 = 4py\)에 가장자리 \((30, 9)\)를 넣으면 \(900 = 36p\), \(p = 25\)입니다. 초점은 \((0, 25)\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>9 cm<span class="why"><b>접시의 깊이를 초점으로 보았습니다.</b> 이 접시는 얕아서 초점이 가장자리보다 바깥에 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>100 cm<span class="why"><b>\(4p\)를 구하고 멈추었습니다.</b> \(4p = 100\)이므로 \(p = 25\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>30 cm<span class="why"><b>반지름을 초점 거리로 보았습니다.</b> 초점 거리는 반지름과 깊이로 계산해야 합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/1-4.html#card-geo-tangent-slope"><small class="mono">기하 1.4</small>기울기가 정해진 접선은 어떻게 찾을까?</a><a href="../../c/geo/1-4.html#card-geo-tangent-point"><small class="mono">기하 1.4</small>곡선 위의 점에서 그은 접선은 어떤 식일까?</a></div></nav>
+
+      <article class="card" id="card-pmath-ellipse-billiard">
+        <header class="card-head">
+          <span class="no">2.2.2</span><h2>타원 모양 당구대에서 초점을 지나게 친 공은 어디로 갈까?</h2><span class="kind">타원의 접선과 반사 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="타원 모양 당구대와 두 초점, 공이 쿠션에 부딪쳐 튀는 경로"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" type="button" data-s="focus" aria-pressed="true">초점에서 치기</button>
+                <button class="chip" type="button" data-s="free">아무 데서나 치기</button>
+              </div>
+              <div class="ctl-row">
+                <div><label class="mono">치는 방향 = <output class="d-out">50°</output></label>
+                <input class="sd" type="range" min="0" max="359" step="1" value="50" aria-label="공을 치는 방향"></div>
+                <div><label class="mono">쿠션에 부딪친 횟수 = <output class="b-out">1</output></label>
+                <input class="sbn" type="range" min="1" max="30" step="1" value="1" aria-label="보여 줄 반사 횟수"></div>
+              </div>
+              <dl class="nums">
+                <div><dt>첫 반사점까지 \(\overline{\mathrm{F_1P}} + \overline{\mathrm{PF_2}}\)</dt><dd class="n-sum">—</dd></div>
+                <div><dt>장축의 길이 \(2a\)</dt><dd class="n-2a">8</dd></div>
+                <div><dt>반사된 공이 \(\mathrm{F_2}\)를 지나는가</dt><dd class="n-f2">—</dd></div>
+              </dl>
+              <p class="fig-note">"아무 데서나 치기"에서는 그림 속 흰 공을 끌어 출발점을 옮길 수 있습니다. 타원은 \(\frac{x^2}{16} + \frac{y^2}{6.25} = 1\), 초점은 \((\pm\sqrt{9.75}, 0)\)입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>타원 모양 당구대의 한 초점에 공을 두고 아무 방향으로나 치면, 쿠션에 맞고 튄 공은 언제나 같은 곳을 지난다고 합니다. 정말 그럴까요? 그곳은 어디일까요?</li>
+            <li><span class="tag">복원</span>타원 위의 점 P에서 두 초점까지의 거리의 합은 \(2a\)로 일정합니다. 타원 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) 위의 점 \((x_1, y_1)\)에서 그은 접선의 방정식은 \(\frac{x_1 x}{a^2} + \frac{y_1 y}{b^2} = 1\)입니다.</li>
+            <li><span class="tag">설명</span>접선 위에서 P가 아닌 점 Q를 잡으면 Q는 타원 바깥에 있으므로 \(\overline{\mathrm{F_1Q}} + \overline{\mathrm{QF_2}} &gt; 2a = \overline{\mathrm{F_1P}} + \overline{\mathrm{PF_2}}\)입니다. 곧 접선 위의 점 가운데 두 초점까지의 거리의 합이 가장 작은 점이 P입니다. 직선 위에서 두 점까지의 거리의 합이 가장 작아지는 곳은 두 선분이 직선과 <b>같은 각</b>을 이루는 곳(빛의 반사 경로)이므로, \(\mathrm{F_1P}\)와 \(\mathrm{PF_2}\)는 접선과 같은 각을 이룹니다. 그래서 <b>한 초점에서 나온 공은 반사되어 반드시 다른 초점을 지납니다.</b></li>
+            <li><span class="tag">연결</span>타원형 천장이 있는 방(속삭이는 회랑)에서는 한 초점에서 속삭인 소리가 다른 초점에서 또렷하게 들립니다. 병원에서 신장 결석을 깨는 체외 충격파 쇄석기도 타원형 반사경의 한 초점에서 충격파를 만들어, 다른 초점에 놓인 결석에 모읍니다.</li>
+            <li><span class="tag">적용</span>초점에서 여러 방향으로 쳐 보고, 반사 횟수를 늘려 경로가 어떻게 변하는지 보세요. 여러 번 튈수록 공의 경로는 어떤 선에 가까워지나요? "아무 데서나 치기"로 바꾸면 공이 다른 초점을 지나지 않는 것도 확인하세요.</li>
+            <li class="warn"><span class="tag">판단</span>실제 당구공은 굴러가며 회전하고 마찰이 있어 반사각이 입사각과 정확히 같지 않습니다. 이 그림은 공을 점으로, 반사를 거울 반사로 본 모형입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">타원 \(\frac{x^2}{25} + \frac{y^2}{9} = 1\)의 한 초점에서 나온 빛이 타원 위의 점 P에서 반사되어 다른 초점에 도착했습니다. 빛이 지난 거리는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>10<span class="why"><b>맞습니다.</b> \(\overline{\mathrm{F_1P}} + \overline{\mathrm{PF_2}} = 2a = 10\)이고, P가 어디든 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>8<span class="why"><b>두 초점 사이 거리 \(2c\)를 썼습니다.</b> 빛은 곧장 가지 않고 타원을 들렀다 옵니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>6<span class="why"><b>단축의 길이 \(2b\)를 썼습니다.</b> 거리의 합은 장축의 길이와 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>P에 따라 다르다<span class="why"><b>타원의 정의를 놓쳤습니다.</b> 타원 위의 모든 점에서 두 초점까지의 거리의 합은 같습니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/1-4.html#card-geo-tangent-slope"><small class="mono">기하 1.4</small>기울기가 정해진 접선은 어떻게 찾을까?</a><a href="../../c/geo/1-4.html#card-geo-tangent-point"><small class="mono">기하 1.4</small>곡선 위의 점에서 그은 접선은 어떤 식일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-2-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/parabolic-mirror.js"></script>
+<script src="../../js/cards/pmath/ellipse-billiard.js"></script>
+</body>
+</html>

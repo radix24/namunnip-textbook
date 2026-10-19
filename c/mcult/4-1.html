@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>식생활과 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="영양성분표의 1회 제공량과 1일 영양성분 기준치(나트륨 2000 mg 등)에 대한 비율, 먹은 양으로 비례 환산하기, 푸드 마일리지(t·km)와 운송 수단별 배출 계수(모식 값)로 어림하는 운송 배출량. 영양성분표 카드와, 푸드 마일리지 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-nutrition-label .label { border: 2px solid #232326; padding: .4rem .6rem; max-width: 20rem; font-size: .85rem; }
+    #card-mcult-nutrition-label .label h4 { margin: 0 0 .2rem; font-size: 1rem; }
+    #card-mcult-nutrition-label .label table { width: 100%; border-collapse: collapse; }
+    #card-mcult-nutrition-label .label td { border-top: 1px solid #8d8d92; padding: .12rem 0; }
+    #card-mcult-nutrition-label .label td:last-child { text-align: right; }
+    #card-mcult-nutrition-label .ctl-row > div { min-width: 12rem; }
+    #card-mcult-nutrition-label .bars { display: grid; gap: .3rem; margin-top: .5rem; }
+    #card-mcult-nutrition-label .bar { display: grid; grid-template-columns: 4.2rem 1fr 3.4rem; gap: .4rem; align-items: center; font-size: .82rem; }
+    #card-mcult-nutrition-label .bar div { height: 12px; background: rgba(141,141,146,.2); border-radius: 3px; overflow: hidden; }
+    #card-mcult-nutrition-label .bar i { display: block; height: 100%; background: rgba(63,111,163,.6); }
+    #card-mcult-nutrition-label .bar i.hi { background: rgba(181,83,47,.75); }
+    #card-mcult-food-mileage table { border-collapse: collapse; font-size: .84rem; width: 100%; }
+    #card-mcult-food-mileage td, #card-mcult-food-mileage th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .25rem .3rem; text-align: right; }
+    #card-mcult-food-mileage td:first-child, #card-mcult-food-mileage th:first-child { text-align: left; }
+    #card-mcult-food-mileage .tw { overflow-x: auto; }
+    #card-mcult-food-mileage select, #card-mcult-food-mileage input[type=number] { font-size: .82rem; }
+    #card-mcult-food-mileage input[type=number] { width: 4.6rem; }
+    #card-mcult-food-mileage canvas { aspect-ratio: 16 / 6; max-width: 560px; margin: .4rem auto 0; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="4-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>식생활과 수학</h1>
+    <p class="lead">먹거리를 고르는 일에도 수학이 필요합니다. 영양성분표의 수치는 <em>기준량</em>을 확인하고 먹은 양에 맞게 비례로 바꿔 읽어야 하고, 먹거리가 이동하며 생기는 환경 부담은 <em>무게와 거리의 곱</em>으로 어림합니다. 이 절에서는 건강과 환경을 함께 생각하는 식생활을 수학으로 따져 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm2/1-1.html#card-cm2-internal-div" title="공통수학2 1.1 · 선분을 m : n으로 나누는 점은 어디에 있을까?">비례식</a><button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-nutrition-label"><span class="mono">4.1.1</span>영양성분표의 '1회 제공량'과 '%기준치' 바로 읽기</a></li>
+        <li><a href="#card-mcult-food-mileage"><span class="mono">4.1.2</span>먹거리가 이동한 거리와 수단 — 푸드 마일리지와 배출량</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mcult-4-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-4-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-nutrition-label">
+        <header class="card-head">
+          <span class="no">4.1.1</span><h2>과자 한 봉지를 다 먹으면 하루 나트륨의 몇 %를 먹는 걸까?</h2><span class="kind">비례와 백분율 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="label" aria-label="가상 과자의 영양성분표">
+              <h4>영양정보 <span class="small">(가상 과자)</span></h4>
+              <p class="small" style="margin:.1rem 0">총 내용량 150 g · 1회 제공량 30 g(총 5회 제공량)</p>
+              <table>
+                <tr><td><b>1회 제공량당</b></td><td><b>1일 영양성분 기준치에 대한 비율</b></td></tr>
+                <tr><td>열량 160 kcal</td><td></td></tr>
+                <tr><td>나트륨 240 mg</td><td>12%</td></tr>
+                <tr><td>당류 9 g</td><td>9%</td></tr>
+                <tr><td>포화지방 2.4 g</td><td>16%</td></tr>
+              </table>
+            </div>
+            <div class="ctl-row"><div><label class="mono">먹은 양 = <output class="g-out"></output> g</label><input class="g" type="range" min="10" max="300" step="10" value="150" aria-label="먹은 양"></div></div>
+            <div class="bars"></div>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>과자 봉지 뒤 영양성분표에 "나트륨 240 mg, 12%"라고 쓰여 있습니다. 한 봉지를 다 먹었다면 하루에 권장되는 나트륨의 12%만 먹은 걸까요?</li>
+            <li><span class="tag">복원</span>비례식, 백분율 \(= \frac{\text{비교하는 양}}{\text{기준량}} \times 100\).</li>
+            <li><span class="tag">설명</span>영양성분표의 수치는 <em>1회 제공량</em>(여기서는 30 g) 기준인 경우가 많습니다. 한 봉지 150 g은 1회 제공량의 5배이므로 나트륨은 \(240 \times 5 = 1200\) mg입니다. %는 <em>1일 영양성분 기준치</em>(나트륨 2000 mg)에 대한 비율이라 \(\frac{1200}{2000} \times 100 = 60\%\)입니다. 먹은 양과 표시 기준량의 비를 곱하는 비례 계산입니다.</li>
+            <li><span class="tag">연결</span>국내 식품의 1일 영양성분 기준치는 나트륨 2000 mg, 당류 100 g, 포화지방 15 g 등으로 정해져 있습니다. 표시 기준(1회 제공량, 100 g당, 총 내용량)은 제품마다 다르니 꼭 확인합니다.</li>
+            <li><span class="tag">적용</span>먹은 양을 바꿔 나트륨이 하루 기준치의 100%를 넘는 양을 찾아보세요. 같은 양을 먹을 때 가장 먼저 기준치에 다가가는 성분은 무엇인가요?</li>
+            <li class="warn"><span class="tag">판단</span>1일 기준치는 평균적인 성인을 위한 참고값입니다. 나이, 활동량, 건강 상태에 따라 알맞은 양은 다릅니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">100 g당 나트륨 400 mg인 라면 국물 250 g을 모두 먹으면 1일 기준치(2000 mg)의 몇 %일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>50%<span class="why"><b>맞습니다.</b> 400 × 2.5 = 1000 mg, 1000 ÷ 2000 = 50%입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>20%<span class="why"><b>100 g당 값만 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>40%<span class="why"><b>먹은 양을 200 g으로 계산했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>125%<span class="why"><b>250 ÷ 200으로 계산했습니다.</b> 나트륨의 양으로 계산합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-food-mileage">
+        <header class="card-head">
+          <span class="no">4.1.2</span><h2>멀리서 온 먹거리는 언제나 배출량이 더 많을까?</h2><span class="kind">곱과 단위 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">식품 1 kg이 오는 세 경로(가상). 운송 수단별 배출 계수는 대략적인 <b>모식 값</b>입니다(g CO₂ / t·km).</p>
+            <div class="tw"><table></table></div>
+            <canvas aria-label="세 경로의 푸드 마일리지와 운송 배출량 막대"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>가까운 곳에서 난 먹거리를 먹자는 말이 있습니다. 먹거리가 이동한 거리만 보면 환경에 주는 영향을 알 수 있을까요?</li>
+            <li><span class="tag">복원</span>단위가 있는 양의 곱(예: t × km = t·km).</li>
+            <li><span class="tag">설명</span><em>푸드 마일리지</em>는 식품의 무게(t)와 이동 거리(km)를 곱한 값(t·km)입니다. 운송 중 배출량은 여기에 운송 수단의 <em>배출 계수</em>(1 t을 1 km 옮길 때의 배출량)를 곱해 어림합니다. 이 카드의 모식 값으로는 배로 9000 km 옮길 때의 배출이 트럭으로 1350 km 옮길 때와 같고, 비행기는 같은 거리에서 배의 수십 배입니다. 그래서 거리만 보고는 판단할 수 없고, <em>어떤 수단으로</em> 왔는지가 함께 중요합니다.</li>
+            <li><span class="tag">연결</span>식품의 전체 영향에는 운송 외에도 재배 방식, 비닐하우스 난방, 냉장 보관, 포장이 들어갑니다(전과정 평가).</li>
+            <li><span class="tag">적용</span>거리와 운송 수단을 바꿔 세 경로의 순서가 뒤바뀌는 경우를 만들어 보세요. 가까운 지역 트럭 경로가 몇 km이면 배 + 트럭 경로와 배출이 같아지나요?</li>
+            <li class="warn"><span class="tag">판단</span>푸드 마일리지는 운송만 보는 지표입니다. 실제 계수는 차량, 짐의 양, 빈 차 운행에 따라 다르므로 이 카드의 모식 값으로 실제 식품을 판정하면 안 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">2 t의 식품을 500 km 옮겼습니다. 푸드 마일리지는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>1000 t·km<span class="why"><b>맞습니다.</b> 2 × 500 = 1000입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>250 t·km<span class="why"><b>거리를 무게로 나누었습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>502 t·km<span class="why"><b>더했습니다.</b> 무게와 거리를 곱합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>500 km<span class="why"><b>거리만 썼습니다.</b> 무게도 함께 반영합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-4-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/nutrition-label.js"></script>
+<script src="../../js/cards/mcult/food-mileage.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>겨냥도와 전개도 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="정육면체의 전개도 11가지와 판정(주사위 굴리기로 각 칸이 어느 면이 되는지 추적), 직육면체 상자의 전개도, 풀칠 날개, 겉넓이와 판지 손실. 전개도 만들기 카드와, 포장 판지 계산 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-box-net .grid { display: grid; grid-template-columns: repeat(5, 2.4rem); gap: 2px; margin: .4rem 0; }
+    #card-jmath-box-net .grid button { width: 2.4rem; height: 2.4rem; border: 1px dashed #8d8d92; background: transparent; padding: 0; font-size: .8rem; font-weight: 700; }
+    #card-jmath-box-net .grid button.on { background: rgba(63,111,163,.35); border: 1px solid #3f6fa3; }
+    #card-jmath-box-net .found { font-size: .86rem; }
+    #card-jmath-package-board canvas { aspect-ratio: 1 / 1; max-width: 440px; margin: 0 auto; }
+    #card-jmath-package-board .ctl-row > div { min-width: 9rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="3-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>겨냥도와 전개도</h1>
+    <p class="lead">입체도형을 펼쳐 평면에 나타낸 그림이 <em>전개도</em>이고, 비스듬히 본 모양을 그린 그림이 <em>겨냥도</em>입니다. 포장재를 만드는 일은 전개도를 설계하는 일입니다. 이 절에서는 정육면체가 되는 전개도를 찾고, 상자를 만드는 데 필요한 판지와 버려지는 양을 계산합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-box-net"><span class="mono">3.1.1</span>정사각형 6개로 정육면체 전개도 만들기</a></li>
+        <li><a href="#card-jmath-package-board"><span class="mono">3.1.2</span>상자 전개도를 판지에서 잘라낼 때 버려지는 양</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=jmath-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-3-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-box-net">
+        <header class="card-head">
+          <span class="no">3.1.1</span><h2>정사각형 6개를 어떻게 이어 붙여야 접어서 상자가 될까?</h2><span class="kind">정육면체의 전개도 · 만들기</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">칸을 눌러 정사각형 6개를 고르세요. 이어진 6칸을 접어 정육면체가 되는지 바로 판정합니다. 판정되면 각 칸이 상자의 어느 면(아래, 위, 앞, 뒤, 왼, 오)이 되는지 글자로 보여 줍니다.</p>
+            <div class="grid" role="group" aria-label="5×5 칸"></div>
+            <div class="presets"><button class="chip go-clear" type="button">지우기</button><button class="chip go-cross" type="button">십자 모양 불러오기</button></div>
+            <p class="verdict" role="status"></p>
+            <p class="found mono"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>포장 상자를 만드는 업체는 판지 한 장을 잘라 접어 상자를 만듭니다. 정사각형 6개를 이어 붙인 모양은 모두 접어서 정육면체가 될까요?</li>
+            <li><span class="tag">복원</span>정육면체는 정사각형 면 6개로 이루어지고, 한 꼭짓점에 세 면이 모입니다.</li>
+            <li><span class="tag">설명</span>입체도형을 잘라 평면에 펼친 그림을 <em>전개도</em>라 합니다. 정사각형 6개를 변끼리 이어 붙인 모양(헥소미노)은 35가지인데, 그중 접어서 정육면체가 되는 것은 <em>11가지</em>뿐입니다. 한 줄에 정사각형이 5개 이상 이어지거나, 한 꼭짓점에 정사각형 4개가 모이면 면이 겹쳐 상자가 되지 않습니다. 이 카드는 주사위를 전개도 위에서 굴리듯이 각 칸이 상자의 어느 면이 되는지 추적해, 6칸이 서로 다른 6면이 되는지로 판정합니다.</li>
+            <li><span class="tag">연결</span>실제 포장 전개도에는 풀칠할 날개와 접는 선이 더해집니다(다음 카드). 전개도로 겉넓이를 구할 수도 있습니다.</li>
+            <li><span class="tag">적용</span>정육면체가 되는 전개도를 되도록 많이 찾아보세요. 찾은 모양은 아래에 쌓입니다(돌리거나 뒤집은 것은 같은 모양으로 셉니다). 11가지를 모두 찾을 수 있나요?</li>
+            <li class="warn"><span class="tag">판단</span>"6칸이 이어져 있으면 된다"는 직관은 틀립니다. 한 줄로 4칸 위에 두 칸이 같은 쪽에 붙으면, 접었을 때 두 칸이 같은 면에 겹칩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">정사각형 6개를 가로 한 줄로 이어 붙인 모양은 정육면체의 전개도일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>아니다<span class="why"><b>맞습니다.</b> 한 줄로 접으면 4칸이 한 바퀴를 돌고 나머지 2칸이 앞의 면과 겹칩니다. 위아래 면이 생기지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>그렇다<span class="why"><b>둘레를 감는 면은 4개뿐입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>접는 방향에 따라 다르다<span class="why"><b>어느 방향으로 접어도 위아래 면이 생기지 않습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정사각형 크기에 따라 다르다<span class="why"><b>크기와 상관없는 모양의 문제입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/3-5.html#card-jmath-tank-volume"><small class="mono">직무 수학 3.5</small>원기둥 물탱크를 가득 채우려면 물이 몇 L 필요하고 몇 분이 걸릴까?</a><a href="../../c/jmath/3-5.html#card-jmath-paint-surface"><small class="mono">직무 수학 3.5</small>창고 바깥을 칠하려면 칠할 넓이는 얼마일까?</a></div></nav>
+
+      <article class="card" id="card-jmath-package-board">
+        <header class="card-head">
+          <span class="no">3.1.2</span><h2>상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?</h2><span class="kind">전개도와 넓이 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row">
+              <div><label class="mono">가로 = <output class="l-out"></output> cm</label><input class="l" type="range" min="10" max="40" step="1" value="30" aria-label="상자 가로"></div>
+              <div><label class="mono">세로 = <output class="w-out"></output> cm</label><input class="w" type="range" min="10" max="40" step="1" value="20" aria-label="상자 세로"></div>
+              <div><label class="mono">높이 = <output class="h-out"></output> cm</label><input class="h" type="range" min="5" max="30" step="1" value="10" aria-label="상자 높이"></div>
+              <div><label class="mono">풀칠 날개 = <output class="g-out"></output> cm</label><input class="g" type="range" min="0" max="4" step="0.5" value="2" aria-label="풀칠 날개 폭"></div>
+            </div>
+            <canvas aria-label="직사각형 판지 안에 그린 상자 전개도와 풀칠 날개, 버려지는 부분"></canvas>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">전개도 배치는 여러 가지 중 하나이고, 판지 크기는 전개도를 감싸는 가장 작은 직사각형으로 계산했습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>가로 30 cm, 세로 20 cm, 높이 10 cm인 택배 상자를 판지 한 장으로 만듭니다. 판지는 최소 얼마나 커야 하고, 잘라 내고 버리는 부분은 얼마일까요?</li>
+            <li><span class="tag">복원</span>직육면체의 겉넓이 = \(2(ab + bc + ca)\).</li>
+            <li><span class="tag">설명</span>바닥(가로 × 세로)을 가운데에 두고 네 옆면을 펼치고, 뒷면 위에 뚜껑을 붙인 전개도는 가로 \(l + 2h\), 세로 \(2w + 2h\)인 직사각형 안에 들어갑니다. 풀칠 날개까지 더하면 조금 더 커집니다. 전개도의 넓이는 겉넓이와 날개 넓이의 합이고, 판지 넓이에서 이것을 뺀 나머지가 버려지는 부분입니다.</li>
+            <li><span class="tag">연결</span>포장재 회사는 전개도 배치를 바꾸거나 여러 개를 맞물려 배치해 버려지는 판지를 줄입니다. 겉넓이는 입체도형의 겉넓이와 부피 절에서 다시 다룹니다.</li>
+            <li><span class="tag">적용</span>상자 크기를 바꿔 버려지는 비율이 가장 작아지는 모양을 찾아보세요. 높이가 낮은 상자와 높은 상자 중 어느 쪽이 판지를 덜 버리나요?</li>
+            <li class="warn"><span class="tag">판단</span>겉넓이만큼만 판지를 사면 모자랍니다. 전개도는 직사각형 판지에서 잘라 내므로 판지 넓이는 늘 겉넓이보다 큽니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">한 모서리가 10 cm인 정육면체 상자의 겉넓이는? (날개 없음)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>600 cm²<span class="why"><b>맞습니다.</b> 면 6개 × 100 cm²입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1000 cm²<span class="why"><b>부피(cm³)입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>400 cm²<span class="why"><b>옆면 4개만 셌습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>1200 cm²<span class="why"><b>십자 전개도를 감싸는 판지(30 × 40)와 헷갈렸습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/3-5.html#card-jmath-tank-volume"><small class="mono">직무 수학 3.5</small>원기둥 물탱크를 가득 채우려면 물이 몇 L 필요하고 몇 분이 걸릴까?</a><a href="../../c/jmath/3-5.html#card-jmath-paint-surface"><small class="mono">직무 수학 3.5</small>창고 바깥을 칠하려면 칠할 넓이는 얼마일까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-3-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/box-net.js"></script>
+<script src="../../js/cards/jmath/package-board.js"></script>
+</body>
+</html>

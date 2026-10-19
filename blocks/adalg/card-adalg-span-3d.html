@@ -1,0 +1,56 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/geo/space3d.js",
+    "js/cards/pmath/pm.js",
+    "js/cards/adalg/lin.js",
+    "js/cards/adalg/span-3d.js"
+  ],
+  "short": "세 벡터가 납작해지는 순간"
+}
+-->
+<style>
+#card-adalg-span-3d canvas { width: 100%; aspect-ratio: 4 / 3; }
+</style>
+<article class="card" id="card-adalg-span-3d">
+  <header class="card-head">
+    <span class="no"></span><h2>세 벡터가 공간을 채우지 못하고 평면에 갇히는 때는 언제일까?</h2><span class="kind">일차독립과 일차종속 · 조작</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <canvas aria-label="세 벡터 u, v, w와 그것들이 만드는 평행육면체. 부피가 0이 되면 납작해진다. 끌어서 돌려 볼 수 있다"></canvas>
+      <div class="ctl">
+        <p class="mono small">\(\vec{u} = (2, 0, 0)\), \(\vec{v} = (1, 2, 0)\) 고정 · \(\vec{w} = (w_1, w_2, w_3)\)</p>
+        <div class="ctl-row">
+          <div><label class="mono">\(w_1\) = <output class="o1">0</output></label><input class="w1" type="range" min="-2" max="2" step="0.5" value="0" aria-label="w의 x성분"></div>
+          <div><label class="mono">\(w_2\) = <output class="o2">1</output></label><input class="w2" type="range" min="-2" max="2" step="0.5" value="1" aria-label="w의 y성분"></div>
+        </div>
+        <label class="mono">\(w_3\) = <output class="o3">1.5</output></label><input class="w3" type="range" min="-2" max="2" step="0.25" value="1.5" aria-label="w의 z성분">
+        <dl class="nums">
+          <div><dt>평행육면체 부피 \(|\det|\)</dt><dd class="n-v">—</dd></div>
+          <div><dt>판정</dt><dd class="n-j">—</dd></div>
+          <div><dt>\(\vec{w}\)를 \(\vec{u}, \vec{v}\)로</dt><dd class="n-c">—</dd></div>
+        </dl>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>공간의 벡터 세 개를 실수배해 더하면 보통 공간의 모든 점에 닿을 수 있습니다. 그런데 세 벡터가 어떤 위치에 있으면 아무리 조합해도 한 평면 위에만 머뭅니다. 그 순간을 어떻게 알아챌까요?</li>
+      <li><span class="tag">복원</span>\(s\vec{u} + t\vec{v} + r\vec{w}\)를 일차결합이라고 합니다. 세 벡터로 만든 평행육면체의 부피는 세 벡터를 열로 하는 행렬식의 절댓값입니다.</li>
+      <li><span class="tag">설명</span>\(s\vec{u} + t\vec{v} + r\vec{w} = \vec{0}\)을 만족하는 \((s, t, r)\)가 \((0, 0, 0)\)뿐이면 세 벡터는 <em>일차독립</em>, 그렇지 않으면 <em>일차종속</em>입니다. 일차종속이면 한 벡터를 나머지의 일차결합으로 쓸 수 있으므로(예: \(\vec{w} = a\vec{u} + b\vec{v}\)), 세 벡터는 한 평면에 갇히고 평행육면체가 납작해져 부피가 0이 됩니다. 그래서 \(\mathbb{R}^3\)의 세 벡터는 <b>행렬식이 0이 아닐 때 일차독립</b>입니다.</li>
+      <li><span class="tag">연결</span>일차독립인 벡터는 서로 "새로운 방향"을 보탭니다. \(\mathbb{R}^3\)에서 일차독립인 벡터는 많아야 세 개이고, 세 개면 공간 전체를 생성합니다. 이것이 다음 절의 기저와 차원입니다.</li>
+      <li><span class="tag">적용</span>\(w_3\)를 0으로 내리면 무슨 일이 생기나요? \(w_3 \ne 0\)이면서 일차종속이 되는 \(\vec{w}\)가 있을까요? 일차종속일 때 \(\vec{w}\)를 \(\vec{u}, \vec{v}\)로 나타낸 식을 표에서 확인하세요.</li>
+      <li class="warn"><span class="tag">판단</span>두 벡터씩 보면 모두 평행하지 않은데도 세 벡터가 일차종속일 수 있습니다. "어느 둘도 평행하지 않다"는 일차독립의 충분조건이 아닙니다. 세 벡터를 함께 봐야 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">\((1, 1, 0)\), \((0, 1, 1)\), \((1, k, 1)\)이 일차종속이 되는 \(k\)는?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>2<span class="why"><b>맞습니다.</b> 행렬식 \(1(1 - k) - 1(0 - 1) + 0 = 2 - k = 0\)이므로 \(k = 2\)이고, 이때 셋째 벡터는 앞의 두 벡터의 합입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1<span class="why"><b>\(k = 1\)이면 행렬식이 1이라 일차독립입니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0<span class="why"><b>행렬식은 2로 0이 아닙니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>없다<span class="why"><b>\(k = 2\)일 때 \((1, 1, 0) + (0, 1, 1) = (1, 2, 1)\)입니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

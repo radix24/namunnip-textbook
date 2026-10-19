@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이산확률변수와 이항분포 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="이산확률변수의 기댓값과 표준편차, 이항분포의 뜻과 성질, 평균과 표준편차. 기댓값이 0인 공정한 게임을 설계하는 카드와 B(n, p)를 시뮬레이션하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-pmath-fair-game canvas { aspect-ratio: 16 / 8; }
+    #card-pmath-binom-slider canvas { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body data-course="pmath" data-sec="3-6">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>이산확률변수와 이항분포</h1>
+    <p class="lead">복권 한 장의 값어치는 당첨금에 당첨 확률을 곱해 더한 기댓값으로 따질 수 있습니다. 이 절에서는 상금과 참가비를 조절해 기댓값이 0인 공정한 게임을 직접 설계하고, 같은 시행을 \(n\)번 되풀이할 때 성공 횟수가 따르는 이항분포 \(\mathrm{B}(n, p)\)의 평균 \(np\)와 표준편차 \(\sqrt{np(1 - p)}\)를 시뮬레이션으로 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/stat/3-2.html#card-stat-balance" title="확률과 통계 3.2 · 확률분포의 &#x27;가운데&#x27;와 &#x27;퍼짐&#x27;은 어디서 읽을까?">기댓값과 표준편차</a><a class="p p-card" href="../../c/stat/3-2.html#card-stat-linear-rv" title="확률과 통계 3.2 · 점수를 두 배 하고 5점을 빼면 표준편차는?">aX + b의 평균과 표준편차</a><a class="p p-card" href="../../c/stat/3-3.html#card-stat-binom-shape" title="확률과 통계 3.3 · 자유투 10번 중 몇 번 들어갈까?">이항분포</a><a class="p p-card" href="../../c/stat/2-6.html#card-stat-indep-trials" title="확률과 통계 2.6 · 동전을 네 번 던져 앞면이 두 번 나오는 길은 몇 가지일까?">독립시행의 확률</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-pmath-fair-game"><span class="mono">3.6.1</span>공정한 게임 설계하기</a></li>
+        <li><a href="#card-pmath-binom-slider"><span class="mono">3.6.2</span>이항분포 B(n, p)</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=pmath-3-6"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=pmath-3-6">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-pmath-fair-game">
+        <header class="card-head">
+          <span class="no">3.6.1</span><h2>학교 축제 주사위 게임, 상금을 얼마로 해야 공정할까?</h2><span class="kind">이산확률변수의 기댓값 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="mono small">규칙: 참가비를 내고 주사위 하나를 던진다. 6이 나오면 상금 A, 5가 나오면 상금 B, 나머지는 상금이 없다.</p>
+            <div class="ctl-row">
+              <div><label class="mono">상금 A (6) = <output class="a-out">3000</output>원</label><input class="sa" type="range" min="0" max="6000" step="100" value="3000" aria-label="6이 나올 때 상금"></div>
+              <div><label class="mono">상금 B (5) = <output class="b-out">1000</output>원</label><input class="sbb" type="range" min="0" max="6000" step="100" value="1000" aria-label="5가 나올 때 상금"></div>
+            </div>
+            <label class="mono">참가비 = <output class="c-out">1000</output>원</label>
+            <input class="sc" type="range" min="0" max="3000" step="100" value="1000" aria-label="참가비">
+            <dl class="nums">
+              <div><dt>참가자 이익의 기댓값 \(E(X)\)</dt><dd class="n-e">—</dd></div>
+              <div><dt>표준편차 \(\sigma(X)\)</dt><dd class="n-s">—</dd></div>
+              <div><dt>지금까지 한 판당 평균 이익</dt><dd class="n-m">—</dd></div>
+            </dl>
+            <p class="verdict" role="status"></p>
+            <canvas aria-label="게임을 여러 번 했을 때 한 판당 평균 이익의 변화와 기댓값"></canvas>
+            <div class="sim-btns"><button class="chip" type="button" data-sim="1">1판</button><button class="chip" type="button" data-sim="100">100판</button><button class="chip go" type="button" data-sim="auto">계속 실행</button><button class="chip" type="button" data-sim="reset">처음부터</button></div>
+            <p class="fig-note">도전: 참가비 1000원, 상금 A가 상금 B의 두 배일 때 공정한 게임(기댓값 0)을 만들어 보세요.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>축제에서 주사위 게임 부스를 엽니다. 상금을 너무 크게 하면 부스가 손해를 보고, 너무 작게 하면 아무도 하지 않습니다. 참가자와 부스 모두에게 공정한 상금은 어떻게 정할까요?</li>
+            <li><span class="tag">복원</span>이산확률변수 \(X\)가 값 \(x_i\)를 확률 \(p_i\)로 가질 때 기댓값은 \(E(X) = \sum x_i p_i\), 분산은 \(V(X) = E(X^2) - \{E(X)\}^2\), 표준편차는 \(\sigma(X) = \sqrt{V(X)}\)입니다.</li>
+            <li><span class="tag">설명</span>참가자의 이익 \(X\)는 6이면 \(A - c\), 5이면 \(B - c\), 나머지면 \(-c\)입니다(\(c\)는 참가비). 그러므로 <b>\(E(X) = \frac{A + B}{6} - c\)</b>이고, \(E(X) = 0\)인 게임을 공정한 게임이라고 합니다. 기댓값은 한 판의 결과를 알려 주지 않지만, 많이 하면 한 판당 평균 이익이 \(E(X)\)에 가까워집니다. 표준편차는 한 판의 결과가 기댓값에서 얼마나 흩어지는지, 곧 게임의 "짜릿함"(위험)을 나타냅니다.</li>
+            <li><span class="tag">연결</span>복권, 보험, 카지노는 모두 기댓값으로 설계됩니다. 복권과 카지노는 참가자의 기댓값이 음수이고, 보험은 가입자의 기댓값이 음수인 대신 큰 손해의 위험(표준편차)을 줄여 줍니다.</li>
+            <li><span class="tag">적용</span>도전 조건으로 공정한 게임을 만든 뒤, 100판씩 돌려 평균 이익이 0 근처로 모이는지 보세요. 같은 기댓값 0이라도 A를 크게, B를 0으로 하면 표준편차는 어떻게 바뀌나요? 부스가 한 판에 평균 200원을 남기려면 참가비를 얼마로 해야 하나요?</li>
+            <li class="warn"><span class="tag">판단</span>기댓값이 양수인 게임도 짧게 하면 손해를 볼 수 있고, 음수인 게임도 운이 좋으면 이길 수 있습니다. "기댓값만큼 번다"는 많이 되풀이할 때의 이야기입니다. 몇 판만 해 보고 게임이 공정한지 판단하면 안 됩니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">동전 두 개를 던져 모두 앞면이면 3000원을 받는 게임이 공정하려면 참가비는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>750원<span class="why"><b>맞습니다.</b> 모두 앞면일 확률은 \(\frac{1}{4}\)이고, \(3000 \times \frac{1}{4} = 750\)원이 상금의 기댓값입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1500원<span class="why"><b>확률을 \(\frac{1}{2}\)로 보았습니다.</b> 두 동전이 모두 앞면이어야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>1000원<span class="why"><b>결과가 앞앞, 앞뒤, 뒤뒤 세 가지라고 보았습니다.</b> 앞뒤와 뒤앞은 다른 결과라 모두 네 가지입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3000원<span class="why"><b>상금 전체를 참가비로 했습니다.</b> 그러면 참가자의 기댓값은 \(-2250\)원입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a></div></nav>
+
+      <article class="card" id="card-pmath-binom-slider">
+        <header class="card-head">
+          <span class="no">3.6.2</span><h2>자유투 성공률 70 %인 선수가 20번 던지면 몇 번쯤 넣을까?</h2><span class="kind">이항분포 · 평균과 표준편차 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="이항분포 B(n, p)의 확률 막대와 시뮬레이션 결과의 상대도수, 평균과 표준편차 표시"></canvas>
+            <div class="ctl">
+              <div class="ctl-row">
+                <div><label class="mono">시행 횟수 \(n\) = <output class="n-out">20</output></label><input class="sn" type="range" min="1" max="100" step="1" value="20" aria-label="시행 횟수 n"></div>
+                <div><label class="mono">성공 확률 \(p\) = <output class="p-out">0.7</output></label><input class="sp" type="range" min="0.05" max="0.95" step="0.05" value="0.7" aria-label="성공 확률 p"></div>
+              </div>
+              <div class="sim-btns"><button class="chip" type="button" data-sim="1">실험 1번</button><button class="chip" type="button" data-sim="100">100번</button><button class="chip go" type="button" data-sim="auto">계속 실행</button><button class="chip" type="button" data-sim="reset">처음부터</button></div>
+              <dl class="nums n4">
+                <div><dt>\(np\)</dt><dd class="n-m">—</dd></div>
+                <div><dt>\(\sqrt{np(1 - p)}\)</dt><dd class="n-s">—</dd></div>
+                <div><dt>실험의 평균</dt><dd class="n-xm">—</dd></div>
+                <div><dt>실험의 표준편차</dt><dd class="n-xs">—</dd></div>
+              </dl>
+              <p class="fig-note">실험 1번 = \(n\)번 던져 성공 횟수를 세는 것. 점선은 이론 확률 \({}_n\mathrm{C}_k p^k(1 - p)^{n - k}\), 막대는 실험의 상대도수입니다. 빨간 선은 평균, 띠는 평균 ± 표준편차입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>자유투 성공률이 70 %인 선수가 20번 던지면 평균 14번 넣을 것 같습니다. 하지만 경기마다 12번, 17번처럼 들쭉날쭉합니다. 성공 횟수는 어떤 분포를 따르고, 보통 어느 범위에서 흔들릴까요?</li>
+            <li><span class="tag">복원</span>성공 확률이 \(p\)인 독립시행을 \(n\)번 할 때 \(k\)번 성공할 확률은 \({}_n\mathrm{C}_k p^k (1 - p)^{n - k}\)입니다.</li>
+            <li><span class="tag">설명</span>성공 횟수 \(X\)의 확률분포를 <em>이항분포</em> \(\mathrm{B}(n, p)\)라고 합니다. 한 번의 시행에서 성공하면 1, 실패하면 0인 확률변수의 평균은 \(p\), 분산은 \(p(1 - p)\)이고, \(X\)는 이런 독립인 확률변수 \(n\)개의 합이므로 <b>\(E(X) = np\)</b>, <b>\(V(X) = np(1 - p)\)</b>, \(\sigma(X) = \sqrt{np(1 - p)}\)입니다. 20번 던지면 평균 14번, 표준편차 약 2번이라 대부분 12~16번 사이에 들어갑니다.</li>
+            <li><span class="tag">연결</span>\(n\)이 커지면 이항분포의 막대 모양은 종 모양에 가까워집니다. 다음 절에서는 이 모양을 정규분포 곡선으로 어림합니다(연속성 보정).</li>
+            <li><span class="tag">적용</span>실험을 계속 실행해 막대가 점선(이론)에 다가가고, 실험의 평균과 표준편차가 \(np\), \(\sqrt{np(1 - p)}\)에 가까워지는지 보세요. \(p = 0.5\)일 때와 \(p = 0.9\)일 때 분포의 모양은 어떻게 다른가요? \(n\)을 4배로 하면 표준편차는 몇 배가 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>이항분포는 시행이 독립이고 성공 확률이 매번 같을 때만 맞습니다. 실제 선수는 긴장하거나 지치면 성공률이 바뀌고, 앞의 결과가 다음 시도에 영향을 줄 수도 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">\(X\)가 이항분포 \(\mathrm{B}(n, p)\)를 따르고 \(E(X) = 12\), \(V(X) = 3\)일 때 \(n\)은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>16<span class="why"><b>맞습니다.</b> \(\frac{V(X)}{E(X)} = 1 - p = \frac{3}{12} = \frac{1}{4}\)이므로 \(p = \frac{3}{4}\)이고, \(n = \frac{12}{3/4} = 16\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>48<span class="why"><b>\(p = \frac{1}{4}\)로 보았습니다.</b> \(\frac{V}{E}\)는 \(p\)가 아니라 \(1 - p\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>15<span class="why"><b>평균과 분산을 더했습니다.</b> 두 식을 나누어 \(p\)부터 구해야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>36<span class="why"><b>평균과 분산을 곱했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=pmath-3-6"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/lib/sim.js"></script>
+<script src="../../js/cards/pmath/pm.js"></script>
+<script src="../../js/cards/pmath/fair-game.js"></script>
+<script src="../../js/cards/pmath/binom-slider.js"></script>
+</body>
+</html>

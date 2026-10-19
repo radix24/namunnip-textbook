@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>포함배제의 원리 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="포함배제의 원리(세 집합 이상), 교란순열. 벤 다이어그램에서 영역마다 센 횟수를 따라가는 카드와, 모자 섞기로 교란순열의 확률 1/e를 확인하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-dmath-venn-count canvas { aspect-ratio: 1 / 0.9; max-width: 420px; margin: 0 auto; display: block; cursor: pointer; }
+    #card-dmath-derange canvas { aspect-ratio: 16 / 9; max-width: 560px; margin: 0 auto; display: block; }
+    #card-dmath-derange table.st { border-collapse: collapse; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .8rem; }
+    #card-dmath-derange table.st td, #card-dmath-derange table.st th { padding: .12rem .5rem; border-bottom: 1px solid var(--rule); text-align: right; }
+  </style>
+</head>
+<body data-course="dmath" data-sec="1-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>포함배제의 원리</h1>
+    <p class="lead">여러 집합의 합집합 원소 수를 셀 때는 겹친 부분을 여러 번 세지 않도록 더하고 빼기를 번갈아 합니다. 이것이 <em>포함배제의 원리</em>입니다. 이 절에서는 세 집합의 벤 다이어그램에서 각 영역이 정확히 한 번씩 세어지는 과정을 따라가고, 아무도 자기 모자를 받지 못하는 경우의 수를 이 원리로 구해 실험과 비교합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/cm2/2-3.html#card-cm2-set-ops" title="공통수학2 2.3 · 두 집합으로 새 집합을 만드는 방법은 몇 가지일까?">합집합의 원소의 개수</a><a class="p p-card" href="../../c/stat/2-2.html#card-stat-add-rule" title="확률과 통계 2.2 · &#x27;A 또는 B&#x27;의 확률은 두 확률의 합일까?">확률</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-dmath-venn-count"><span class="mono">1.3.1</span>더하고 빼고 더하면 한 번씩</a></li>
+        <li><a href="#card-dmath-derange"><span class="mono">1.3.2</span>아무도 제 모자를 못 받을 확률</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=dmath-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=dmath-1-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-dmath-venn-count">
+        <header class="card-head">
+          <span class="no">1.3.1</span><h2>세 집합을 합칠 때 왜 더하고 빼고 다시 더할까?</h2><span class="kind">포함배제의 원리 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas aria-label="세 집합 A, B, C의 벤 다이어그램. 영역의 숫자는 그 영역의 원소 수, 동그라미 속 수는 지금까지 센 횟수"></canvas>
+            <div class="presets" role="group" aria-label="단계">
+              <button class="chip" type="button" data-s="1">① |A| + |B| + |C|</button>
+              <button class="chip" type="button" data-s="2">② − 두 개씩 겹친 부분</button>
+              <button class="chip" type="button" data-s="3">③ + 세 개 겹친 부분</button>
+              <button class="chip go-new" type="button">원소 수 바꾸기</button>
+            </div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">영역을 누르면 그 영역의 원소가 하나 늘어납니다. 빨간 배지는 그 영역을 지금까지 몇 번 셌는지입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>설문에서 축구를 좋아하는 학생 A명, 농구 B명, 야구 C명이라고 합니다. 셋 중 하나라도 좋아하는 학생은 \(A + B + C\)명일까요?</li>
+            <li><span class="tag">복원</span>두 집합에서 \(n(A \cup B) = n(A) + n(B) - n(A \cap B)\)입니다. 겹친 부분을 두 번 셌으니 한 번 뺍니다.</li>
+            <li><span class="tag">설명</span>세 집합이면 ① 세 집합을 더할 때 두 집합에만 속한 원소는 2번, 세 집합 모두에 속한 원소는 3번 셉니다. ② 두 개씩의 교집합 세 개를 빼면 두 집합에만 속한 원소는 1번이 되지만, 세 집합 모두에 속한 원소는 \(3 - 3 = 0\)번이 됩니다. ③ 그래서 세 집합의 교집합을 다시 더합니다. \(n(A \cup B \cup C) = \sum n(A) - \sum n(A \cap B) + n(A \cap B \cap C)\). 이것이 <em>포함배제의 원리</em>이며, 집합이 더 많아도 "홀수 개의 교집합은 더하고 짝수 개는 뺀다"로 이어집니다.</li>
+            <li><span class="tag">연결</span>"어느 것도 아닌 것"을 세려면 전체에서 합집합을 뺍니다. 다음 카드의 교란순열, 앞 절의 "4 이하" 정수해, 1부터 100까지 2, 3, 5 중 어느 것으로도 나누어지지 않는 수 세기가 모두 이 방법입니다.</li>
+            <li><span class="tag">적용</span>①, ②, ③을 차례로 누르며 각 영역의 배지가 어떻게 바뀌는지 보세요. ③ 뒤에는 모든 영역이 1이 되나요? 영역의 수를 바꿔도 같은가요?</li>
+            <li class="warn"><span class="tag">판단</span>문제에서 "A와 B를 좋아하는 학생"이 "A와 B만 좋아하는 학생"인지 "A와 B를 둘 다 좋아하는 학생(C도 포함)"인지 구별해야 합니다. 공식의 \(n(A \cap B)\)는 C도 좋아하는 학생을 포함합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">1부터 60까지의 자연수 중 2, 3, 5 중 어느 것의 배수인 수의 개수는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(44\)<span class="why"><b>맞습니다.</b> \(30 + 20 + 12 - 10 - 6 - 4 + 2 = 44\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(62\)<span class="why"><b>겹친 것을 빼지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(42\)<span class="why"><b>세 개의 교집합(30의 배수 2개)을 다시 더하지 않았습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(16\)<span class="why"><b>어느 것의 배수도 아닌 수의 개수입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a></div></nav>
+
+      <article class="card" id="card-dmath-derange">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?</h2><span class="kind">교란순열 · 시뮬레이션</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">사람 수 n = <output class="n-out">6</output></label><input class="n" type="range" min="2" max="12" step="1" value="6" aria-label="사람 수"></div></div>
+            <canvas class="no-invert" aria-label="위: 마지막 시행에서 각 사람이 받은 모자. 아래: 아무도 제 모자를 못 받은 시행의 비율 그래프"></canvas>
+            <div class="presets"><button class="chip go-1" type="button">한 번 섞기</button><button class="chip go-1000" type="button">1000번 섞기</button><button class="chip go-reset" type="button">기록 지우기</button></div>
+            <p class="mono small say" role="status"></p>
+            <table class="st" aria-label="n에 따른 교란순열의 수"></table>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>파티에 온 \(n\)명이 맡긴 모자를 무작위로 돌려받습니다. 아무도 자기 모자를 받지 못할 확률은 사람이 많아질수록 어떻게 될까요? 1에 가까워질까요, 0에 가까워질까요?</li>
+            <li><span class="tag">복원</span>포함배제의 원리: "적어도 하나"는 홀수 개의 교집합을 더하고 짝수 개를 뺍니다.</li>
+            <li><span class="tag">설명</span>\(A_i\)를 "\(i\)번째 사람이 제 모자를 받는" 배열의 집합이라 하면, \(k\)명을 정해 제 모자를 받게 하는 배열은 \((n - k)!\)가지이고 그런 \(k\)명을 고르는 방법은 \({}_n\mathrm{C}_k\)입니다. 따라서 아무도 제 것을 받지 않는 배열(<em>교란순열</em>)의 수는 \(D_n = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!}\right)\)입니다. 확률 \(D_n/n!\)은 \(n\)이 커지면 \(\frac{1}{e} \approx 0.3679\)로 빠르게 다가갑니다.</li>
+            <li><span class="tag">연결</span>교란순열은 점화식 \(D_n = (n - 1)(D_{n-1} + D_{n-2})\)도 만족합니다(다음 단원의 점화 관계). 비밀 산타 뽑기에서 자기 이름을 뽑지 않을 확률이 바로 이 값입니다.</li>
+            <li><span class="tag">적용</span>먼저 \(n = 6\)일 때 확률을 짐작해 보세요. 1000번 섞기를 여러 번 눌러 비율이 어디로 모이는지 보세요. \(n\)을 2, 3, 12로 바꾸면 어떻게 되나요?</li>
+            <li class="warn"><span class="tag">판단</span>사람이 많을수록 "누군가는 자기 것을 받겠지" 싶어 확률이 0으로 갈 것 같지만, 실제로는 약 37%에 머뭅니다. 직관과 다른 결과는 계산과 실험으로 확인해야 합니다. 시행 횟수가 적으면 비율이 크게 흔들린다는 점도 기억하세요.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">4명의 교란순열의 수 \(D_4\)는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(9\)<span class="why"><b>맞습니다.</b> \(24 - 24 + 12 - 4 + 1 = 9\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(23\)<span class="why"><b>"모두 제 것을 받는" 1가지만 뺐습니다.</b> 일부만 제 것을 받는 경우도 빼야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(8\)<span class="why"><b>마지막 \(+1\)(네 명 모두의 교집합)을 빠뜨렸습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(6\)<span class="why"><b>\(3!\)은 원순열의 수입니다.</b> 교란순열과 다릅니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=dmath-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/dmath/dm.js"></script>
+<script src="../../js/cards/dmath/venn-count.js"></script>
+<script src="../../js/cards/dmath/derange.js"></script>
+</body>
+</html>

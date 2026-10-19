@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-geo-ratio");
   if (!root) return;
   const { C, F, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sr = $(".r");
   const R0 = -1.6, R1 = 1.6, STRIP = 64;

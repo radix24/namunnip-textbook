@@ -1,0 +1,145 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대기 오염과 수학 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="초미세먼지(PM2.5) 등급 기준, 1시간 값과 24시간 이동평균의 차이(가상 측정값), 같은 비율로 줄일 때 총 배출 100/r(등비급수)와 같은 양씩 줄일 때 100(N + 1)/2(등차수열의 합), 가상 탄소 예산. 미세먼지 평균 카드와, 배출 경로 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-mcult-pm-average canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-mcult-pm-average .ctl-row > div { min-width: 12rem; }
+    #card-mcult-emission-path canvas { aspect-ratio: 16 / 8; max-width: 600px; margin: .3rem auto 0; }
+    #card-mcult-emission-path .ctl-row > div { min-width: 12rem; }
+  </style>
+</head>
+<body data-course="mcult" data-sec="4-2">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>대기 오염과 수학</h1>
+    <p class="lead">대기 오염과 기후 변화는 숫자로 감시하고 계획합니다. 미세먼지 농도는 <em>어떤 평균</em>으로 보느냐에 따라 등급이 달라지고, 온실가스 감축 계획은 해마다의 배출을 모두 더한 <em>총량</em>으로 평가합니다. 이 절에서는 평균과 수열의 합으로 대기 환경을 읽습니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-l-mean" title="중학교 개념 설명 보기">평균</button><a class="p p-card" href="../../c/calc2/1-5.html#card-calc2-geo-series" title="미적분Ⅱ 1.5 · 같은 비율로 줄어드는 수를 끝없이 더하면 얼마일까?">등비급수</a><a class="p p-card" href="../../c/alg/3-2.html#card-alg-arith-sum" title="대수 3.2 · 1부터 100까지 더하는 빠른 방법은?">등차수열의 합</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-mcult-pm-average"><span class="mono">4.2.1</span>지금 공기는 나쁜데 등급은 '보통'? — 이동평균</a></li>
+        <li><a href="#card-mcult-emission-path"><span class="mono">4.2.2</span>해마다 몇 %씩 줄이면 충분할까 — 등비급수와 탄소 예산</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=mcult-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=mcult-4-2">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-mcult-pm-average">
+        <header class="card-head">
+          <span class="no">4.2.1</span><h2>창밖은 뿌연데 초미세먼지 등급은 왜 '보통'일까?</h2><span class="kind">평균과 이동평균 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">시각 = 둘째 날 <output class="t-out"></output>시</label><input class="t" type="range" min="24" max="47" step="1" value="34" aria-label="시각"></div></div>
+            <canvas aria-label="이틀 동안 시간별 초미세먼지 농도 막대와 24시간 이동평균 선, 등급 구간"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>창밖이 뿌옇고 1시간 측정값은 '나쁨'인데, 어떤 곳에서는 '보통'으로 나옵니다(이 카드의 측정값은 가상). 같은 공기를 두고 왜 다른 등급이 나올까요?</li>
+            <li><span class="tag">복원</span>평균 \(= \frac{\text{자료의 합}}{\text{자료의 개수}}\).</li>
+            <li><span class="tag">설명</span>매시간 지난 24시간의 값을 평균한 것을 <em>24시간 이동평균</em>이라 합니다. 이동평균은 짧게 치솟은 값을 고르게 펴 주어 하루 동안 얼마나 노출되었는지를 나타내지만, 갑자기 나빠진 지금의 공기는 늦게 반영합니다. 초미세먼지(PM2.5) 등급 기준은 좋음 0~15, 보통 16~35, 나쁨 36~75, 매우 나쁨 76 이상(µg/m³)입니다. 같은 시각이라도 1시간 값으로 보느냐 24시간 이동평균으로 보느냐에 따라 등급이 달라질 수 있습니다.</li>
+            <li><span class="tag">연결</span>주가 그래프의 이동평균선, 코로나19 확진자 수의 7일 평균도 같은 방법입니다.</li>
+            <li><span class="tag">적용</span>시각을 옮기며 1시간 값과 24시간 평균의 등급이 다른 때를 찾아보세요. 농도가 갑자기 높아진 뒤 이동평균이 '나쁨'이 되기까지 몇 시간 걸리나요?</li>
+            <li class="warn"><span class="tag">판단</span>바깥 활동을 정할 때는 지금의 1시간 값이 더 알맞을 수 있습니다. 어떤 평균인지 확인하고 목적에 맞게 읽어야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">24시간 중 20시간은 20 µg/m³, 4시간은 80 µg/m³였습니다. 24시간 평균은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>30 µg/m³<span class="why"><b>맞습니다.</b> \(\frac{20 \times 20 + 4 \times 80}{24} = \frac{720}{24} = 30\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>50 µg/m³<span class="why"><b>두 값의 평균입니다.</b> 시간 수를 반영해야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>80 µg/m³<span class="why"><b>가장 높은 값입니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>20 µg/m³<span class="why"><b>대부분의 시간 값만 보았습니다.</b> 높았던 4시간도 평균에 들어갑니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card" id="card-mcult-emission-path">
+        <header class="card-head">
+          <span class="no">4.2.2</span><h2>배출량을 해마다 같은 비율로 줄이는 것과 같은 양씩 줄이는 것, 무엇이 남은 예산을 지킬까?</h2><span class="kind">등차·등비수열의 합 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <p class="small">올해 배출량을 100으로 둔 <b>가상</b> 상황입니다. 앞으로 모두 합해 1500(올해의 15년치)까지만 배출할 수 있다고 합시다(가상의 탄소 예산).</p>
+            <div class="ctl-row">
+              <div><label class="mono">해마다 줄이는 비율 \(r\) = <output class="r-out"></output>%</label><input class="r" type="range" min="1" max="20" step="0.5" value="5" aria-label="해마다 줄이는 비율"></div>
+              <div><label class="mono">같은 양씩 줄여 0이 되는 해 \(N\) = <output class="n-out"></output>년</label><input class="n" type="range" min="5" max="60" step="1" value="30" aria-label="0이 되는 해"></div>
+            </div>
+            <canvas aria-label="해마다 배출량, 같은 비율로 줄이는 경로와 같은 양씩 줄이는 경로"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>기후 변화를 막으려면 앞으로 내보낼 온실가스의 <em>총량</em>을 제한해야 한다는 생각(탄소 예산)이 있습니다. 해마다 5%씩 줄이는 계획은 예산을 지킬 수 있을까요?</li>
+            <li><span class="tag">복원</span>등비수열의 합 \(\sum_{k=0}^{\infty} ar^k = \frac{a}{1 - r}\) \((|r| < 1)\), 등차수열의 합.</li>
+            <li><span class="tag">설명</span>해마다 \(r\)씩 줄이면 \(k\)년 뒤 배출량은 \(100(1 - r)^k\)이고, 영원히 더한 총량은 \(\frac{100}{1 - (1 - r)} = \frac{100}{r}\)입니다. \(r = 5\%\)이면 2000으로 예산 1500을 넘습니다. 같은 비율로 줄이면 배출량이 0에 가까워질 뿐 0이 되지는 않고, 앞쪽 해들의 배출이 총량에서 큰 몫을 차지합니다. 같은 양씩 줄여 \(N\)년 뒤 0으로 만들면 총량은 약 \(\frac{100(N + 1)}{2}\)입니다.</li>
+            <li><span class="tag">연결</span>여러 나라가 정한 '탄소 중립' 목표는 배출을 언제까지 순 0으로 만드는지를 정한 것입니다. 경로에 따라 같은 목표 연도라도 총 배출량이 다릅니다.</li>
+            <li><span class="tag">적용</span>같은 비율로 줄여 예산 1500을 지키려면 \(r\)이 몇 % 이상이어야 하나요? 같은 양씩 줄일 때는 몇 년 안에 0을 만들어야 하나요?</li>
+            <li class="warn"><span class="tag">판단</span>이 카드의 예산과 배출량은 가상의 값입니다. 실제 탄소 예산은 목표 온도와 추정 방법에 따라 크게 달라지며, 과학 기관의 보고서를 확인해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">올해 배출량 100에서 해마다 10%씩 줄이면, 앞으로 영원히 더한 총 배출량은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>1000<span class="why"><b>맞습니다.</b> \(\frac{100}{1 - 0.9} = 1000\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>550<span class="why"><b>10년 만에 0이 되는 등차수열로 보았습니다(100 + 90 + … + 0).</b> 같은 비율로 줄이면 0이 되지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>무한히 커진다<span class="why"><b>공비가 1보다 작은 등비급수는 수렴합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>900<span class="why"><b>첫해를 빼고 더했습니다.</b> 첫해(100)도 포함합니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <a class="px-go" href="../../practice.html?sec=mcult-4-2"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/mcult/pm-average.js"></script>
+<script src="../../js/cards/mcult/emission-path.js"></script>
+</body>
+</html>

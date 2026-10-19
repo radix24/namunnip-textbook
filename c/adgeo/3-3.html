@@ -1,0 +1,157 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>구면삼각형 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="구면 위의 대원과 대원호, 구면삼각형의 변(중심각)과 각, 각의 합이 180°보다 큰 성질과 구면 과잉(지라르의 정리). 구면삼각형을 움직이는 카드와, 대원 항로와 항정선을 비교하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-sphere-triangle canvas { aspect-ratio: 1 / 1; max-width: 420px; margin: 0 auto; display: block; }
+    #card-adgeo-sphere-triangle .ctl-row > div { min-width: 9rem; }
+    #card-adgeo-flight-route .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .5rem; }
+    #card-adgeo-flight-route canvas.g { aspect-ratio: 1 / 1; width: 100%; display: block; }
+    #card-adgeo-flight-route canvas.m { aspect-ratio: 2 / 1.1; width: 100%; display: block; }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="3-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>구면삼각형</h1>
+    <p class="lead">구면 위에서 가장 짧은 길은 구의 중심을 지나는 평면으로 자른 <em>대원</em>의 호입니다. 세 대원호로 둘러싸인 <em>구면삼각형</em>은 평면삼각형과 성질이 달라서 세 각의 합이 늘 180°보다 큽니다. 이 절에서는 구면삼각형을 직접 움직여 보고, 비행기가 지도에서 휘어 보이는 길로 가는 이유를 확인합니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/geo/2-5.html#card-geo-sphere-eq" title="기하 2.5 · 중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?">구의 방정식</a><a class="p p-card" href="../../c/alg/2-1.html#card-alg-radian" title="대수 2.1 · 각의 크기를 길이의 비로 잴 수 있을까?">호도법과 부채꼴의 넓이</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-sphere-triangle"><span class="mono">3.3.1</span>세 각의 합이 180°보다 큰 삼각형</a></li>
+        <li><a href="#card-adgeo-flight-route"><span class="mono">3.3.2</span>비행기는 왜 북극 쪽으로 돌아갈까</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adgeo-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-3-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-sphere-triangle">
+        <header class="card-head">
+          <span class="no">3.3.1</span><h2>지구 위의 삼각형은 세 각의 합이 왜 180°보다 클까?</h2><span class="kind">구면삼각형 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="움직일 꼭짓점">
+              <button class="chip" type="button" data-v="0" aria-pressed="true">A 움직이기</button><button class="chip" type="button" data-v="1">B 움직이기</button><button class="chip" type="button" data-v="2">C 움직이기</button>
+              <button class="chip go-big" type="button">직각 셋</button><button class="chip go-small" type="button">아주 작은 삼각형</button>
+            </div>
+            <div class="ctl-row">
+              <div><label class="mono">위도 = <output class="lat-out">0</output>°</label><input class="lat" type="range" min="-90" max="90" step="1" value="0" aria-label="위도"></div>
+              <div><label class="mono">경도 = <output class="lon-out">0</output>°</label><input class="lon" type="range" min="-180" max="180" step="1" value="0" aria-label="경도"></div>
+            </div>
+            <canvas aria-label="단위구 위의 구면삼각형 ABC. 끌어서 구를 돌려 볼 수 있다"></canvas>
+            <p class="mono small say" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>북극에서 출발해 경도 0°를 따라 적도까지 내려가, 적도를 따라 동쪽으로 지구 둘레의 4분의 1을 간 뒤, 다시 북극으로 올라오면 세 모퉁이가 모두 직각입니다. 각의 합이 270°인 삼각형이 어떻게 가능할까요?</li>
+            <li><span class="tag">복원</span>평면 삼각형의 세 각의 합은 180°이고, 이는 평행선의 성질(평행선 공준)에서 나옵니다.</li>
+            <li><span class="tag">설명</span>구면 위에서 두 점 사이의 가장 짧은 길은 구의 중심을 지나는 평면으로 자른 큰 원(<em>대원</em>)의 호입니다. 세 대원호로 둘러싸인 도형이 <em>구면삼각형</em>이고, 변의 길이는 중심각 \(a, b, c\)로, 각은 꼭짓점에서 두 대원의 접선이 이루는 각 \(A, B, C\)로 잽니다. 구면삼각형의 세 각의 합은 늘 180°보다 크고, 넘는 양 \(E = A + B + C - \pi\)(<em>구면 과잉</em>)는 넓이에 비례합니다: 반지름 \(R\)인 구에서 넓이 \(= ER^2\)(지라르의 정리). 작은 삼각형은 거의 평면이라 과잉이 0에 가깝습니다.</li>
+            <li><span class="tag">연결</span>구면에는 평행한 대원이 없습니다(모든 대원은 두 점에서 만남). 평행선 공준이 성립하지 않는 이런 기하를 비유클리드 기하라 하며, 항해와 항공, 천문학의 기초입니다(다음 카드).</li>
+            <li><span class="tag">적용</span>"직각 셋"을 눌러 각의 합과 넓이를 확인하세요(구 겉넓이 \(4\pi\)의 8분의 1). 꼭짓점을 움직여 삼각형을 키우거나 줄이며 구면 과잉과 넓이가 어떻게 함께 변하는지 보세요.</li>
+            <li class="warn"><span class="tag">판단</span>구면삼각형의 변은 위선(위도선)이 아니라 대원의 호입니다. 적도를 뺀 위선은 대원이 아니어서 가장 짧은 길이 아닙니다. 지도 위에서 직선으로 보이는 길도 지구 위에서는 대원이 아닐 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">단위구 위의 구면삼각형의 세 각이 각각 100°, 80°, 60°일 때 넓이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\frac{\pi}{3}\)<span class="why"><b>맞습니다.</b> 과잉은 \(240° - 180° = 60° = \frac{\pi}{3}\)이고, \(R = 1\)이라 넓이와 같습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(60\)<span class="why"><b>도 단위를 그대로 썼습니다.</b> 라디안으로 바꿔야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{4\pi}{3}\)<span class="why"><b>합 240°를 그대로 라디안으로 바꿨습니다.</b> 180°를 빼야 합니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>알 수 없다<span class="why"><b>세 각만으로 넓이가 정해집니다.</b> 평면과 다른 점입니다.</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-flight-route">
+        <header class="card-head">
+          <span class="no">3.3.2</span><h2>서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?</h2><span class="kind">대원 항로 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">노선 <select class="pick" aria-label="노선 고르기"><option value="0">서울 → 뉴욕</option><option value="1">서울 → 런던</option><option value="2">서울 → 로스앤젤레스</option><option value="3">서울 → 시드니</option></select></label></div>
+            <div class="two">
+              <canvas class="g" aria-label="지구본 위의 대원 항로(보라)와 방향을 바꾸지 않는 항정선(주황). 끌어서 돌려 볼 수 있다"></canvas>
+              <canvas class="m" aria-label="위도·경도를 직사각형으로 편 지도 위의 두 경로"></canvas>
+            </div>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">도시의 위도·경도는 대략적인 값이고, 지구를 반지름 6371 km인 구로 본 계산입니다. 실제 항로는 바람과 항공 규정에 따라 조금씩 다릅니다. 오른쪽 지도에는 해안선 없이 경위선만 그렸습니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>서울과 뉴욕은 위도가 비슷해서(약 38°, 41°) 지도에서는 동쪽으로 곧장 가면 될 것 같습니다. 그런데 실제 항공기는 알래스카와 캐나다 북쪽을 지나 크게 휘어 갑니다. 왜 그럴까요?</li>
+            <li><span class="tag">복원</span>구면 위의 두 점 사이의 가장 짧은 길은 대원의 호이고, 그 길이는 \(R \times\)(중심각)입니다.</li>
+            <li><span class="tag">설명</span>두 도시를 잇는 가장 짧은 길(<em>대원 항로</em>)은 지구 중심을 지나는 평면이 지구를 자른 큰 원 위에 있습니다. 서울과 뉴욕처럼 같은 북반구의 두 도시를 잇는 대원은 극 쪽으로 불룩하게 지나갑니다. 반면 나침반의 방위를 일정하게 유지하며 가는 길(<em>항정선</em>)은 메르카토르 지도에서 직선이라 따라가기 쉽지만 더 깁니다. 두 길의 길이는 구면삼각법(다음 절)으로 계산합니다.</li>
+            <li><span class="tag">연결</span>위도·경도를 직사각형으로 편 지도에서는 대원 항로가 휘어 보이고, 지구본에서는 가장 곧은 길입니다. 지도는 구면을 평면으로 펴면서 길이나 모양을 왜곡하기 때문입니다(구면은 평면으로 정확히 펼 수 없음).</li>
+            <li><span class="tag">적용</span>노선을 바꿔 가며 두 경로의 길이 차이를 비교하세요. 차이가 가장 큰 노선은 어느 것인가요? 서울 → 시드니처럼 남북으로 가는 노선은 왜 차이가 작을까요?</li>
+            <li class="warn"><span class="tag">판단</span>지도에서 직선이 가장 짧은 길이라는 직관은 평면에서만 맞습니다. 어떤 지도를 썼는지에 따라 "직선"이 의미하는 것이 다릅니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">적도 위의 두 지점의 경도 차가 90°일 때 둘 사이의 대원 거리는? (지구 반지름 6400 km로 계산)</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>약 10050 km<span class="why"><b>맞습니다.</b> 중심각 \(\frac{\pi}{2}\)이므로 \(6400 \times \frac{\pi}{2} \approx 10053\) km입니다. 적도는 대원입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>약 9050 km<span class="why"><b>직선(지구를 뚫는 현) 길이입니다.</b> \(6400\sqrt2\).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>약 576000 km<span class="why"><b>각을 도 단위로 곱했습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>약 20100 km<span class="why"><b>지구 반 바퀴(180°)의 거리입니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/geo/space3d.js"></script>
+<script src="../../js/cards/adgeo/sphere.js"></script>
+<script src="../../js/cards/adgeo/sphere-triangle.js"></script>
+<script src="../../js/cards/adgeo/flight-route.js"></script>
+</body>
+</html>

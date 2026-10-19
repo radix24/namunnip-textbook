@@ -1,0 +1,162 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작도 가능성과 대수 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="작도 가능한 수(사칙연산과 제곱근), 작도 불가능 문제(정육면체 배적, 각의 삼등분, 원적), 작도 가능한 정다각형의 판정(가우스-방첼 정리, 페르마 소수). 길이를 만들어 가는 도전 카드와, 정n각형의 작도 가능성을 예측하는 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-adgeo-constructible-number canvas { aspect-ratio: 16 / 9; max-width: 560px; margin: 0 auto; display: block; }
+    #card-adgeo-constructible-number .pool { display: flex; flex-wrap: wrap; gap: .3rem; margin: .4rem 0; }
+    #card-adgeo-constructible-number .pool button { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    #card-adgeo-constructible-number .ops { display: flex; flex-wrap: wrap; gap: .3rem; }
+    #card-adgeo-gauss-polygon .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(4.2rem, 1fr)); gap: .35rem; margin: .5rem 0; }
+    #card-adgeo-gauss-polygon .grid button { padding: .35rem .2rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); color: var(--ink); font: 700 .95rem/1.2 "IBM Plex Mono", monospace; cursor: pointer; }
+    #card-adgeo-gauss-polygon .grid button small { display: block; font-size: .65rem; font-weight: 600; color: var(--ink-2); }
+    #card-adgeo-gauss-polygon .grid button.yes { background: var(--right-bg); border-color: var(--forest); }
+    #card-adgeo-gauss-polygon .grid button.no { background: var(--warn-bg); border-color: var(--warn); }
+    #card-adgeo-gauss-polygon .grid button.wrong { outline: 3px solid var(--warn); }
+  </style>
+</head>
+<body data-course="adgeo" data-sec="1-3">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>작도 가능성과 대수</h1>
+    <p class="lead">작도로 얻는 점은 직선과 원의 교점, 곧 많아야 이차방정식의 근입니다. 그래서 작도할 수 있는 길이는 1에서 사칙연산과 제곱근만으로 얻는 수뿐입니다. 이 단순한 관찰로 2000년 넘게 풀리지 않던 작도 문제들이 "불가능"으로 판정되었습니다. 이 절에서는 길이를 직접 만들어 보며 작도 가능한 수를 익히고, 어떤 정다각형이 작도 가능한지 예측해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <a class="p p-card" href="../../c/alg/1-1.html#card-alg-root-rules" title="대수 1.1 · 거듭제곱근끼리 곱하면 왜 근호 하나로 합쳐질까?">제곱근과 그 성질</a><button type="button" class="p p-basic" data-basic="b-m-similarity" title="중학교 개념 설명 보기">닮음</button><a class="p p-card" href="../../c/cm1/2-2.html#card-cm1-discriminant" title="공통수학1 2.2 · 근의 공식의 √ 안이 음수이면 근이 없는 걸까?">이차방정식</a>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-adgeo-constructible-number"><span class="mono">1.3.1</span>길이 1에서 작도할 수 있는 수</a></li>
+        <li><a href="#card-adgeo-gauss-polygon"><span class="mono">1.3.2</span>작도 가능한 정다각형 가려내기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=adgeo-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=adgeo-1-3">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-adgeo-constructible-number">
+        <header class="card-head">
+          <span class="no">1.3.1</span><h2>길이 1만 주어지면 어떤 길이를 작도할 수 있을까?</h2><span class="kind">작도 가능한 수 · 도전</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><label class="mono">목표 <select class="pick" aria-label="목표 길이"><option value="0">√2</option><option value="1">√3</option><option value="2">황금비 (1 + √5)/2</option><option value="3">√(1 + √2)</option><option value="4">∛2 (정육면체 배적 문제)</option></select></label></div>
+            <p class="small">가진 길이(두 개를 차례로 고르기):</p>
+            <div class="pool" role="group" aria-label="지금까지 작도한 길이"></div>
+            <div class="ops" role="group" aria-label="작도 연산">
+              <button class="chip" type="button" data-op="add">a + b</button>
+              <button class="chip" type="button" data-op="sub">a − b</button>
+              <button class="chip" type="button" data-op="mul">a × b</button>
+              <button class="chip" type="button" data-op="div">a ÷ b</button>
+              <button class="chip" type="button" data-op="sqrt">√a</button>
+              <button class="chip go-no" type="button">작도할 수 없다</button>
+              <button class="chip go-reset" type="button">다시</button>
+            </div>
+            <canvas aria-label="마지막으로 한 연산의 작도 그림"></canvas>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>길이 1인 선분 하나만 주어졌을 때, 자와 컴퍼스로 길이 \(\sqrt2\)인 선분을 그릴 수 있습니다(정사각형의 대각선). 그렇다면 \(\sqrt[3]{2}\)는요? 어떤 수가 작도 가능한지 대수로 판정할 수 있을까요?</li>
+            <li><span class="tag">복원</span>닮은 삼각형에서 대응변의 비는 같습니다. 반원에 내접하는 각은 직각이고, 직각삼각형에서 빗변에 내린 수선의 길이 \(h\)는 \(h^2 = pq\)(빗변이 나뉜 두 길이의 곱)입니다.</li>
+            <li><span class="tag">설명</span>길이 \(a\), \(b\)가 작도되어 있으면 \(a + b\), \(a - b\)는 이어 붙여서, \(ab\), \(a/b\)는 닮은 삼각형(평행선)으로, \(\sqrt{a}\)는 지름이 \(a + 1\)인 반원에서 작도할 수 있습니다. 거꾸로 직선과 원의 교점을 구하는 일은 많아야 이차방정식을 푸는 것이므로, <b>작도 가능한 수는 1에서 시작해 사칙연산과 제곱근을 유한 번 써서 얻는 수뿐</b>입니다. 그런 수는 차수가 2의 거듭제곱인 방정식의 근이 되는데, \(\sqrt[3]{2}\)는 \(x^3 = 2\)(기약인 삼차방정식)의 근이라 작도할 수 없습니다.</li>
+            <li><span class="tag">연결</span>이 판정으로 고대의 3대 작도 문제 중 정육면체 배적(\(\sqrt[3]{2}\))과 각의 삼등분(예: 60°를 삼등분하려면 삼차방정식을 풀어야 함)이 불가능함이 19세기에 증명되었습니다. 원적 문제(\(\sqrt\pi\))는 \(\pi\)가 어떤 대수방정식의 근도 아니라서(초월수) 불가능합니다.</li>
+            <li><span class="tag">적용</span>가진 길이에서 두 개를 고르고 연산을 눌러 새 길이를 만드세요. 목표에 도착하면 성공입니다. \(\sqrt[3]{2}\)는 아무리 해도 만들 수 없다면 "작도할 수 없다"를 누르세요.</li>
+            <li class="warn"><span class="tag">판단</span>여러 번 시도해 실패한 것은 불가능의 증명이 아닙니다. 불가능은 "작도로 얻는 수는 모두 2의 거듭제곱 차수"라는 대수적 사실로 증명됩니다. 반대로 눈금 있는 자 같은 다른 도구를 허용하면 \(\sqrt[3]{2}\)도 그릴 수 있습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 중 길이 1에서 자와 컴퍼스로 작도할 수 <b>없는</b> 길이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>\(\sqrt[3]{3}\)<span class="why"><b>맞습니다.</b> 기약인 삼차방정식 \(x^3 = 3\)의 근입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(\sqrt[4]{2}\)<span class="why"><b>\(\sqrt{\sqrt2}\)이므로 제곱근을 두 번 쓰면 됩니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\frac{2}{3}\)<span class="why"><b>유리수는 모두 작도할 수 있습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(1 + \sqrt5\)<span class="why"><b>제곱근 하나와 덧셈으로 됩니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/1-2.html#card-adgeo-center-construct"><small class="mono">고급 기하 1.2</small>세 점을 모두 지나는 원은 어떻게 작도할까?</a><a href="../../c/adgeo/1-2.html#card-adgeo-regular-polygon"><small class="mono">고급 기하 1.2</small>원 안에 정육각형, 정사각형, 정팔각형을 작도할 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-adgeo-gauss-polygon">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>정칠각형은 작도할 수 있을까, 정십칠각형은?</h2><span class="kind">작도 가능한 정다각형 · 예측→확인</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="presets" role="group" aria-label="표시할 예측"><button class="chip" type="button" data-g="1" aria-pressed="true">작도 가능 표시</button><button class="chip" type="button" data-g="0">작도 불가능 표시</button></div>
+            <p class="small">고른 표시로 정n각형 칸을 누르세요. 다 고른 뒤 확인합니다.</p>
+            <div class="grid" role="group" aria-label="정3각형부터 정30각형까지"></div>
+            <div class="presets"><button class="chip go-check" type="button">확인</button><button class="chip go-reset" type="button">다시</button></div>
+            <p class="verdict" role="status"></p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>정삼각형, 정사각형, 정오각형, 정육각형은 작도할 수 있습니다. 정칠각형은 2000년 넘게 아무도 작도하지 못했습니다. 어떤 정다각형이 작도 가능한지 규칙이 있을까요?</li>
+            <li><span class="tag">복원</span>작도 가능한 수는 1에서 사칙연산과 제곱근으로 얻는 수입니다. 정\(n\)각형을 작도하는 것은 \(\cos\frac{360°}{n}\)을 작도하는 것과 같습니다.</li>
+            <li><span class="tag">설명</span>1796년 18세의 가우스는 정십칠각형이 작도 가능함을 보였고, 이후 다음이 증명되었습니다(가우스-방첼 정리): <b>정\(n\)각형이 작도 가능할 필요충분조건은 \(n = 2^k p_1p_2\cdots p_m\)</b>(\(p_i\)는 서로 다른 <em>페르마 소수</em>)인 것입니다. 페르마 소수는 \(2^{2^j} + 1\) 꼴의 소수로, 지금까지 3, 5, 17, 257, 65537 다섯 개만 알려져 있습니다. 그래서 7, 9(= 3 × 3, 같은 소수 반복), 11, 13은 작도할 수 없습니다.</li>
+            <li><span class="tag">연결</span>각의 삼등분이 불가능한 것도 같은 원리입니다. 60°를 삼등분한 20°를 작도할 수 있다면 정십팔각형(= 2 × 3 × 3)을 작도할 수 있어야 하지만 3이 두 번 들어가므로 불가능합니다.</li>
+            <li><span class="tag">적용</span>정3각형부터 정30각형까지 작도 가능 여부를 예측해 표시한 뒤 확인하세요. 틀린 칸은 빨간 테두리로 표시됩니다. 정십칠각형, 정십오각형, 정이십각형은 어떻게 판정되나요?</li>
+            <li class="warn"><span class="tag">판단</span>"작도 불가능"은 근삿값으로도 그릴 수 없다는 뜻이 아닙니다. 정칠각형도 아주 정확한 근사 작도가 있습니다. 불가능하다는 것은 유한 번의 작도로 "정확히" 그릴 수 없다는 뜻입니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">다음 중 작도 가능한 정다각형은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>정십오각형<span class="why"><b>맞습니다.</b> \(15 = 3 \times 5\), 서로 다른 페르마 소수의 곱입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>정구각형<span class="why"><b>\(9 = 3 \times 3\)으로 같은 페르마 소수가 두 번 들어갑니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>정십사각형<span class="why"><b>\(14 = 2 \times 7\)이고 7은 페르마 소수가 아닙니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>정십일각형<span class="why"><b>11은 페르마 소수가 아닙니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/1-2.html#card-adgeo-center-construct"><small class="mono">고급 기하 1.2</small>세 점을 모두 지나는 원은 어떻게 작도할까?</a><a href="../../c/adgeo/1-2.html#card-adgeo-regular-polygon"><small class="mono">고급 기하 1.2</small>원 안에 정육각형, 정사각형, 정팔각형을 작도할 수 있을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=adgeo-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/adgeo/constructible-number.js"></script>
+<script src="../../js/cards/adgeo/gauss-polygon.js"></script>
+</body>
+</html>

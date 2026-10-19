@@ -3,7 +3,7 @@
   const root = document.getElementById("card-calc2-rational-seq");
   if (!root) return;
   const { C, fit } = NM;
-  const S = NMSeq, n = S.n;
+  const S = NMLim, n = S.n;
   const $ = (s) => root.querySelector(s);
   const sk = $(".k"), sm = $(".m"), sp = $(".p"), sq = $(".q"), st = $(".t");
   const PS = [-3, -2, -1, 1, 2, 3];

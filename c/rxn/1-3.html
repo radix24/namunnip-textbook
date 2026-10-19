@@ -46,64 +46,21 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-rxn-titration"><span class="mono">1.3.1</span>적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?</a></li>
-        <li><a href="#card-chem-eq-point"><span class="mono">1.3.2</span>중화점에서 용액은 언제나 중성일까?</a></li>
+        <li><a href="#card-chem-eq-point"><span class="mono">1.3.1</span>중화점에서 용액은 언제나 중성일까?</a></li>
+        <li><a href="#card-rxn-titration"><span class="mono">1.3.2</span>적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?</a></li>
         <li><a href="#card-chem-indicator"><span class="mono">1.3.3</span>지시약은 왜 딱 그 순간에 색이 바뀔까?</a></li>
         <li><a href="#card-chem-vinegar"><span class="mono">1.3.4</span>식초 속 아세트산 농도를 어떻게 알아낼까?</a></li>
         <li><a href="#video-chem-titration"><span class="mono">영상</span>중화 적정 실험 따라 하기</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=rxn-1-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">14문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=rxn-1-3">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
-      <article class="card" id="card-rxn-titration">
-        <header class="card-head">
-          <span class="no">1.3.1</span><h2>적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?</h2><span class="kind">중화 적정 곡선 · 중화점과 반중화점</span>
-        </header>
-        <div class="card-body">
-          <div class="card-fig">
-            <canvas class="cv-wide" aria-label="0.10 M 산 25 mL에 0.10 M NaOH를 넣을 때 pH 변화 곡선과 지시약의 변색 범위"></canvas>
-            <div class="ctl">
-              <div class="presets" role="group" aria-label="적정하는 산">
-                <button type="button" class="chip" data-a="HCl" aria-pressed="true">염산 (강산)</button>
-                <button type="button" class="chip" data-a="AcOH" aria-pressed="true">아세트산 (Ka 1.8 × 10⁻⁵)</button>
-                <button type="button" class="chip" data-a="HCN" aria-pressed="false">사이안화 수소 (Ka 6.2 × 10⁻¹⁰)</button>
-              </div>
-              <label class="mono">넣은 NaOH = <output class="v-out">12.5</output> mL</label>
-              <input class="v" type="range" min="0" max="50" step="0.1" value="12.5" aria-label="넣은 NaOH 부피">
-              <dl class="nums">
-                <div><dt>지금의 pH</dt><dd class="n-ph">—</dd></div>
-                <div><dt>중화점 (25.0 mL)의 pH</dt><dd class="n-eq">—</dd></div>
-                <div><dt>알맞은 지시약</dt><dd class="n-in">—</dd></div>
-              </dl>
-              <p class="fig-note">산 0.10 M 25.0 mL를 0.10 M NaOH로 적정할 때, 부피 변화와 물의 이온화까지 포함해 계산했습니다(25 °C). 색 띠는 지시약의 변색 범위입니다.</p>
-            </div>
-          </div>
-          <ol class="steps">
-            <li><span class="tag">질문</span>식초를 수산화 나트륨으로 적정하면, 처음에는 한참을 넣어도 pH가 조금씩만 오르다가 어느 순간 한두 방울에 pH가 크게 뛰어오릅니다. 이 곡선에서 무엇을 알아낼 수 있을까요?</li>
-            <li><span class="tag">복원</span>중화점에서는 산이 내놓는 H⁺의 양(mol)과 염기가 내놓는 OH⁻의 양이 같습니다(nMV = n′M′V′). 지시약은 pH에 따라 색이 바뀌는 약산입니다.</li>
-            <li><span class="tag">설명</span>강산을 적정하면 중화점 전에는 남은 H⁺가 pH를 정하므로 pH가 낮게 머물다, 중화점(pH 7)에서 수직에 가깝게 뜁니다. 약산은 처음 pH가 더 높고, 넣은 OH⁻가 HA를 A⁻로 바꾸어 HA와 A⁻가 함께 있는 구간에서는 pH가 천천히 오릅니다(완충 구간). 특히 NaOH를 중화점의 절반만큼 넣은 <em>반중화점</em>에서는 [HA] = [A⁻]이므로 pH = pKa입니다. 중화점에서는 A⁻가 물과 반응해 OH⁻를 만들어 pH가 7보다 높습니다.</li>
-            <li><span class="tag">연결</span>그래서 적정 곡선에서 중화점의 부피로 산의 농도를, 반중화점의 pH로 산의 Ka를 구할 수 있습니다. 지시약은 변색 범위가 중화점 근처 pH의 급변 구간 안에 들어가야 하므로, 약산–강염기 적정에는 페놀프탈레인을, 강산–약염기 적정에는 메틸 오렌지를 씁니다. 산이 매우 약하면 급변 구간이 짧아져 지시약으로 중화점을 찾기 어렵습니다.</li>
-            <li><span class="tag">적용</span>세 산의 곡선을 겹쳐 보고 반중화점(12.5 mL)의 pH를 읽어 각 산의 pKa와 비교하세요. 아세트산 적정에 메틸 오렌지를 쓰면 중화점을 얼마나 잘못 찾게 될까요?</li>
-            <li class="warn"><span class="tag">판단</span>“중화점은 pH 7인 지점”이라는 말은 강산–강염기 적정에서만 맞습니다. 중화점은 산과 염기의 양이 같아진 점이고, 그때의 pH는 생긴 염의 가수 분해(다음 절)에 따라 달라집니다.</li>
-          </ol>
-        </div>
-        <div class="quiz">
-          <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">어떤 약산 0.10 M 25 mL를 0.10 M NaOH로 적정했더니, 12.5 mL 넣었을 때 pH가 4.2였습니다. 이 산의 Ka는 약 얼마일까요?</p>
-          <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>6 × 10⁻⁵<span class="why"><b>맞습니다.</b> 반중화점에서 pH = pKa = 4.2이므로 Ka = 10⁻⁴·² ≈ 6.3 × 10⁻⁵입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>4.2<span class="why"><b>4.2는 pKa입니다.</b> Ka = 10^(−pKa)입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>알 수 없다 (중화점의 pH가 필요하다)<span class="why"><b>반중화점의 pH만으로 pKa를 알 수 있습니다.</b></span></span></button></li>
-          </ol>
-        </div>
-      </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/rxn/1-2.html#card-rxn-weak-acid"><small class="mono">화학 반응의 세계 1.2</small>같은 농도의 산인데 pH는 왜 다를까?</a><a href="../../c/chem/4-3.html#card-chem-ion-count"><small class="mono">화학 4.3</small>산과 염기를 섞을 때 이온 수는 어떻게 변할까?</a><a href="../../c/chem/4-3.html#card-chem-antacid"><small class="mono">화학 4.3</small>제산제 한 알은 위산을 얼마나 중화할까?</a><a href="../../c/chem/4-3.html#text-chem-neutral-env"><small class="mono">화학 4.3</small>산성 토양과 산 누출 사고는 어떻게 중화할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/4-5.html#card-adchem-pka"><small class="mono">고급 화학 4.5</small>적정 곡선에서 약산의 pKa를 읽어 낼 수 있을까?</a></div></nav>
-
       <article class="card" id="card-chem-eq-point">
         <header class="card-head">
-          <span class="no">1.3.2</span><h2>중화점에서 용액은 언제나 중성일까?</h2><span class="kind">강산과 약산 비교 · BTB</span>
+          <span class="no">1.3.1</span><h2>중화점에서 용액은 언제나 중성일까?</h2><span class="kind">강산과 약산 비교 · BTB</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -146,6 +103,50 @@
         </div>
       </article>
       <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/1-4.html#card-is2-ion-migration"><small class="mono">통합과학2 1.4</small>여러 가지 산에 공통으로 들어 있는 것은?</a><a href="../../c/is2/1-4.html#card-is2-ph-log"><small class="mono">통합과학2 1.4</small>pH는 왜 로그 눈금일까?</a><a href="../../c/is2/1-4.html#card-is2-neutral"><small class="mono">통합과학2 1.4</small>산과 염기를 섞으면 무엇이 사라질까?</a><a href="../../c/is2/1-4.html#card-is2-acid-plate"><small class="mono">통합과학2 1.4</small>이름표가 떨어진 용액 여섯 개, 어떤 시험으로 가려낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/3-3.html#card-labchem-acid-titration"><small class="mono">화학 실험 3.3</small>뷰렛 한 방울 차이로 미지 산의 농도를 어디까지 알 수 있을까?</a></div></nav>
+
+      <article class="card" id="card-rxn-titration">
+        <header class="card-head">
+          <span class="no">1.3.2</span><h2>적정 곡선의 모양에서 산의 세기를 읽을 수 있을까?</h2><span class="kind">중화 적정 곡선 · 중화점과 반중화점</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-wide" aria-label="0.10 M 산 25 mL에 0.10 M NaOH를 넣을 때 pH 변화 곡선과 지시약의 변색 범위"></canvas>
+            <div class="ctl">
+              <div class="presets" role="group" aria-label="적정하는 산">
+                <button type="button" class="chip" data-a="HCl" aria-pressed="true">염산 (강산)</button>
+                <button type="button" class="chip" data-a="AcOH" aria-pressed="true">아세트산 (Ka 1.8 × 10⁻⁵)</button>
+                <button type="button" class="chip" data-a="HCN" aria-pressed="false">사이안화 수소 (Ka 6.2 × 10⁻¹⁰)</button>
+              </div>
+              <label class="mono">넣은 NaOH = <output class="v-out">12.5</output> mL</label>
+              <input class="v" type="range" min="0" max="50" step="0.1" value="12.5" aria-label="넣은 NaOH 부피">
+              <dl class="nums">
+                <div><dt>지금의 pH</dt><dd class="n-ph">—</dd></div>
+                <div><dt>중화점 (25.0 mL)의 pH</dt><dd class="n-eq">—</dd></div>
+                <div><dt>알맞은 지시약</dt><dd class="n-in">—</dd></div>
+              </dl>
+              <p class="fig-note">산 0.10 M 25.0 mL를 0.10 M NaOH로 적정할 때, 부피 변화와 물의 이온화까지 포함해 계산했습니다(25 °C). 색 띠는 지시약의 변색 범위입니다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>식초를 수산화 나트륨으로 적정하면, 처음에는 한참을 넣어도 pH가 조금씩만 오르다가 어느 순간 한두 방울에 pH가 크게 뛰어오릅니다. 이 곡선에서 무엇을 알아낼 수 있을까요?</li>
+            <li><span class="tag">복원</span>중화점에서는 산이 내놓는 H⁺의 양(mol)과 염기가 내놓는 OH⁻의 양이 같습니다(nMV = n′M′V′). 지시약은 pH에 따라 색이 바뀌는 약산입니다.</li>
+            <li><span class="tag">설명</span>강산을 적정하면 중화점 전에는 남은 H⁺가 pH를 정하므로 pH가 낮게 머물다, 중화점(pH 7)에서 수직에 가깝게 뜁니다. 약산은 처음 pH가 더 높고, 넣은 OH⁻가 HA를 A⁻로 바꾸어 HA와 A⁻가 함께 있는 구간에서는 pH가 천천히 오릅니다(완충 구간). 특히 NaOH를 중화점의 절반만큼 넣은 <em>반중화점</em>에서는 [HA] = [A⁻]이므로 pH = pKa입니다. 중화점에서는 A⁻가 물과 반응해 OH⁻를 만들어 pH가 7보다 높습니다.</li>
+            <li><span class="tag">연결</span>그래서 적정 곡선에서 중화점의 부피로 산의 농도를, 반중화점의 pH로 산의 Ka를 구할 수 있습니다. 지시약은 변색 범위가 중화점 근처 pH의 급변 구간 안에 들어가야 하므로, 약산–강염기 적정에는 페놀프탈레인을, 강산–약염기 적정에는 메틸 오렌지를 씁니다. 산이 매우 약하면 급변 구간이 짧아져 지시약으로 중화점을 찾기 어렵습니다.</li>
+            <li><span class="tag">적용</span>세 산의 곡선을 겹쳐 보고 반중화점(12.5 mL)의 pH를 읽어 각 산의 pKa와 비교하세요. 아세트산 적정에 메틸 오렌지를 쓰면 중화점을 얼마나 잘못 찾게 될까요?</li>
+            <li class="warn"><span class="tag">판단</span>“중화점은 pH 7인 지점”이라는 말은 강산–강염기 적정에서만 맞습니다. 중화점은 산과 염기의 양이 같아진 점이고, 그때의 pH는 생긴 염의 가수 분해에 따라 달라집니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">어떤 약산 0.10 M 25 mL를 0.10 M NaOH로 적정했더니, 12.5 mL 넣었을 때 pH가 4.2였습니다. 이 산의 Ka는 약 얼마일까요?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>6 × 10⁻⁵<span class="why"><b>맞습니다.</b> 반중화점에서 pH = pKa = 4.2이므로 Ka = 10⁻⁴·² ≈ 6.3 × 10⁻⁵입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>4.2<span class="why"><b>4.2는 pKa입니다.</b> Ka = 10^(−pKa)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>알 수 없다 (중화점의 pH가 필요하다)<span class="why"><b>반중화점의 pH만으로 pKa를 알 수 있습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/rxn/1-2.html#card-rxn-weak-acid"><small class="mono">화학 반응의 세계 1.2</small>같은 농도의 산인데 pH는 왜 다를까?</a><a href="../../c/chem/4-3.html#card-chem-ion-count"><small class="mono">화학 4.3</small>산과 염기를 섞을 때 이온 수는 어떻게 변할까?</a><a href="../../c/chem/4-3.html#card-chem-antacid"><small class="mono">화학 4.3</small>제산제 한 알은 위산을 얼마나 중화할까?</a><a href="../../c/chem/4-3.html#text-chem-neutral-env"><small class="mono">화학 4.3</small>산성 토양과 산 누출 사고는 어떻게 중화할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/4-5.html#card-adchem-pka"><small class="mono">고급 화학 4.5</small>적정 곡선에서 약산의 pKa를 읽어 낼 수 있을까?</a></div></nav>
 
       <article class="card" id="card-chem-indicator">
         <header class="card-head">
@@ -259,7 +260,7 @@
           <span class="mono">영상 · 통통사과 · 30초</span>
           <h2>중화 적정 실험 따라 하기</h2>
           <p>식초 10 mL를 10배로 묽히고, 그중 20 mL를 0.100 M NaOH로 적정합니다. 16.70 mL에서 옅은 분홍이 남았다면 식초의 아세트산은 약 5.0%입니다.
-            피펫, 부피 플라스크, 뷰렛을 쓰는 순서와 계산 과정을 30초로 봅니다. 카드 4.4.1에서 직접 해 보기 전에 보면 좋습니다.</p>
+            피펫, 부피 플라스크, 뷰렛을 쓰는 순서와 계산 과정을 30초로 봅니다. 식초 적정 카드에서 직접 해 보기 전에 보면 좋습니다.</p>
         </div>
         <div class="phone">
           <canvas width="360" height="640" aria-label="식초를 묽혀 수산화 나트륨으로 적정하고 농도를 계산하는 과정을 보여 주는 짧은 애니메이션"></canvas>
@@ -277,6 +278,10 @@
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -285,9 +290,9 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/cards/chem/b-eq-point.js"></script>
 <script src="../../js/cards/rxn/chem-eq.js"></script>
 <script src="../../js/cards/rxn/a-titration.js"></script>
-<script src="../../js/cards/chem/b-eq-point.js"></script>
 <script src="../../js/cards/chem/b-indicator.js"></script>
 <script src="../../js/cards/chem/b-vinegar.js"></script>
 <script src="../../js/cards/chem/b-reel-titration.js"></script>

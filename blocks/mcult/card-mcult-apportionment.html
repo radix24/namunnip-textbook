@@ -1,0 +1,50 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/mcult/apportionment.js"
+  ],
+  "short": "의석을 늘렸는데 한 지역은 줄어든다 — 의석 배분과 앨라배마 역설"
+}
+-->
+<style>
+#card-mcult-apportionment .pops { display: flex; flex-wrap: wrap; gap: .4rem .8rem; margin: .3rem 0; }
+#card-mcult-apportionment .pops label { font: .85rem var(--mono, monospace); }
+#card-mcult-apportionment .pops input[type=number] { width: 4.2rem; }
+#card-mcult-apportionment table { border-collapse: collapse; font: .84rem var(--mono, monospace); width: 100%; margin: .4rem 0; }
+#card-mcult-apportionment td, #card-mcult-apportionment th { border-bottom: 1px solid var(--rule, #d9dad2); padding: .2rem .35rem; text-align: right; }
+#card-mcult-apportionment td:first-child, #card-mcult-apportionment th:first-child { text-align: left; }
+#card-mcult-apportionment canvas { aspect-ratio: 16 / 7; max-width: 560px; margin: .2rem auto 0; }
+</style>
+<article class="card" id="card-mcult-apportionment">
+  <header class="card-head">
+    <span class="no"></span><h2>전체 의석을 하나 늘렸는데 어떤 지역의 의석은 줄어들 수 있을까?</h2><span class="kind">비례 배분과 반올림 · 활용</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="pops"><label>가 <input type="number" min="1" max="999" value="61" data-r="0" aria-label="가 지역 인구"></label><label>나 <input type="number" min="1" max="999" value="59" data-r="1" aria-label="나 지역 인구"></label><label>다 <input type="number" min="1" max="999" value="20" data-r="2" aria-label="다 지역 인구"></label><span class="small">(인구, 만 명 · 가상)</span></div>
+      <div class="ctl-row"><div><label class="mono">전체 의석 = <output class="s-out"></output></label><input class="s" type="range" min="3" max="30" step="1" value="10" aria-label="전체 의석"></div></div>
+      <table></table>
+      <canvas aria-label="전체 의석 수에 따라 인구가 가장 적은 지역이 받는 의석, 최대 나머지 방식과 동트 방식"></canvas>
+      <p class="mono small say" role="status"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>의석을 인구에 비례해 나누면 몫이 4.29석처럼 소수가 됩니다. 사람을 쪼갤 수 없으니 반올림해야 하는데, 어떤 규칙으로 정수로 만들어야 공정할까요?</li>
+      <li><span class="tag">복원</span>비례배분: 전체를 \(a : b : c\)로 나누면 첫째 몫은 전체 \(\times \frac{a}{a + b + c}\)입니다.</li>
+      <li><span class="tag">설명</span><em>최대 나머지 방식</em>(해밀턴)은 몫의 정수 부분을 먼저 주고, 남은 의석을 소수 부분이 큰 순서로 줍니다. 이 방식은 몫과 늘 1석 이내로 가깝지만, 전체 의석을 늘렸을 때 어떤 지역이 오히려 줄어드는 <em>앨라배마 역설</em>이 생길 수 있습니다. 기본 자료에서 10석이면 다 지역이 2석이지만 11석이면 1석입니다. <em>동트 방식</em>은 인구를 1, 2, 3, …으로 나눈 값이 큰 순서로 한 석씩 주는데, 이런 역설은 없지만 큰 지역에 조금 유리합니다.</li>
+      <li><span class="tag">연결</span>미국 하원의 주별 의석 배분에서 실제로 이 역설이 발견되었고, 우리나라 국회의원 선거의 비례대표 의석 배분도 정해진 규칙(최대 나머지 방식에 기반)으로 계산합니다.</li>
+      <li><span class="tag">적용</span>의석을 하나씩 늘리며 그래프에서 다 지역의 의석이 줄어드는 곳을 찾으세요. 인구를 바꾸면 역설이 사라지나요?</li>
+      <li class="warn"><span class="tag">판단</span>모든 공정성 조건을 함께 만족하는 배분 방법은 없다는 것이 알려져 있습니다(발린스키–영 정리). 어떤 성질을 지킬지 먼저 합의해야 합니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">인구 50, 30, 20(만 명)인 세 지역에 7석을 최대 나머지 방식으로 나누면?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>4, 2, 1<span class="why"><b>맞습니다.</b> 몫 3.5, 2.1, 1.4 → 정수 부분 3, 2, 1(6석), 남은 1석은 소수 부분이 가장 큰 첫째(0.5)에.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>3, 2, 2<span class="why"><b>소수 부분 0.4를 0.5보다 크게 보았습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>3, 3, 1<span class="why"><b>둘째의 소수 부분 0.1은 가장 작습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3, 2, 1<span class="why"><b>정수 부분만 주어 1석이 남았습니다.</b></span></span></button></li>
+    </ol>
+  </div>
+</article>

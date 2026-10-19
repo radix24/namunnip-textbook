@@ -42,7 +42,7 @@
     <p class="lead">곡선으로 둘러싸인 도형의 넓이를 잴 공식은 없습니다. 이 절에서는 곡선 아래 넓이를 직사각형으로 메워 가며 정적분이라는 개념을 세우고, 그래프가 \(x\)축 아래로 내려가는 경우까지 정의를 넓힌 뒤 그 성질을 살펴봅니다.</p>
     <div class="prereq">
       <span class="mono">먼저 알면 좋은 것</span>
-      <a class="p p-card" href="../../c/calc1/1-4.html#text-calc1-cont-props" title="미적분Ⅰ 1.4 · 연속함수끼리 더하고 곱하고 나누어도 연속일까?">연속함수</a><a class="p p-card" href="../../c/calc2/1-2.html#card-calc2-squeeze" title="미적분Ⅱ 1.2 · 위아래에서 조이면 가운데 수열의 극한도 정해질까?">수열의 극한</a><a class="p p-card" href="../../c/calc1/2-8.html#card-calc1-sketch" title="미적분Ⅰ 2.8 · 점 몇 개로 그래프의 뼈대를 세울 수 있을까?">다항함수의 그래프</a>
+      <a class="p p-card" href="../../c/calc1/1-4.html#text-calc1-cont-props" title="미적분Ⅰ 1.4 · 연속함수끼리 더하고 곱하고 나누어도 연속일까?">연속함수</a><a class="p p-card" href="../../c/calc1/1-2.html#card-calc1-lim-laws" title="미적분Ⅰ 1.2 · 두 함수를 더하고 곱하면 극한값도 더하고 곱하면 될까?">함수의 극한</a><a class="p p-card" href="../../c/calc1/2-8.html#card-calc1-sketch" title="미적분Ⅰ 2.8 · 점 몇 개로 그래프의 뼈대를 세울 수 있을까?">다항함수의 그래프</a>
     </div>
   </section>
 
@@ -55,6 +55,7 @@
         <li><a href="#card-calc1-int-props"><span class="mono">3.3.3</span>정적분의 성질</a></li>
       </ol>
       <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=calc1-3-3"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">148문항 →</span></a>
       <p class="toc-links mono small"><a href="../../graph.html?sec=calc1-3-3">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
@@ -89,7 +90,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>직사각형, 삼각형의 넓이는 공식으로 구합니다. 그러면 \(y = x^2\)과 \(x\)축, 직선 \(x = 2\)로 둘러싸인 도형처럼 한쪽이 곡선인 도형의 넓이는 어떻게 잴까요?</li>
-            <li><span class="tag">복원</span>함수 \(f\)가 닫힌구간 \([a, b]\)에서 연속이면 그래프가 끊어지지 않습니다. 직사각형의 넓이는 밑변 × 높이입니다. 수열의 극한에서는 \(n\)이 한없이 커질 때 값이 다가가는 수를 생각했습니다.</li>
+            <li><span class="tag">복원</span>함수 \(f\)가 닫힌구간 \([a, b]\)에서 연속이면 그래프가 끊어지지 않습니다. 직사각형의 넓이는 밑변 × 높이입니다. 함수의 극한에서는 \(x\)가 한 값에 한없이 가까워질 때 함숫값이 다가가는 수를 생각했습니다. 여기서는 직사각형의 개수 \(n\)이 한없이 커질 때 넓이의 합이 다가가는 수를 생각합니다.</li>
             <li><span class="tag">설명</span>구간을 폭이 같은 직사각형 \(n\)개로 나누고, 각 직사각형의 높이를 그 칸 안의 함숫값으로 잡아 넓이를 더하면 곡선 아래 넓이의 근삿값을 얻습니다. \(n\)을 크게 할수록 남거나 모자라는 조각이 줄어, 높이를 어디서 잡든 합이 같은 값에 다가갑니다. 그 값이 곡선 아래의 넓이입니다. 닫힌구간 \([a, b]\)에서 연속이고 \(f(x) \ge 0\)인 함수에 대해, \(y = f(x)\)의 그래프와 \(x\)축 및 두 직선 \(x = a, x = b\)로 둘러싸인 도형의 넓이를 \(f(x)\)의 \(a\)에서 \(b\)까지의 <em>정적분</em>이라 하고 <b>\(\int_a^b f(x)\,dx\)</b>로 씁니다. \(a\)를 아래끝, \(b\)를 위끝이라 합니다.</li>
             <li><span class="tag">연결</span>기호 \(\int\)는 합(sum)의 첫 글자 \(S\)를 길게 늘인 모양이고, \(f(x)dx\)는 높이 \(f(x)\), 폭 \(dx\)인 아주 가는 직사각형을 떠올리게 합니다. 직사각형의 합을 극한으로 보내는 방법(구분구적법)은 미적분Ⅱ에서 정적분과 급수의 관계로 다시 다룹니다.</li>
             <li><span class="tag">적용</span>\(x^2\)에서 '오른쪽 끝 높이'와 '왼쪽 끝 높이'를 번갈아 고르면 합이 참값보다 큰가요, 작은가요? 그 까닭을 그래프의 증가와 연결해 보세요. 차이가 0.01보다 작아지려면 \(n\)이 얼마쯤이어야 하나요? '가운데 높이'에서는 어떤가요?</li>
@@ -107,6 +108,7 @@
           </ol>
         </div>
       </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/1-6.html#card-pmath-riemann"><small class="mono">전문 수학 1.6</small>직사각형을 끝없이 잘게 쪼개면 곡선 아래 넓이가 될까?</a><a href="../../c/pmath/1-6.html#card-pmath-pyramid"><small class="mono">전문 수학 1.6</small>각뿔의 부피는 왜 각기둥의 1/3일까?</a></div></nav>
 
       <article class="card" id="card-calc1-signed-area">
         <header class="card-head">
@@ -154,6 +156,7 @@
           </ol>
         </div>
       </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/1-6.html#card-pmath-riemann"><small class="mono">전문 수학 1.6</small>직사각형을 끝없이 잘게 쪼개면 곡선 아래 넓이가 될까?</a><a href="../../c/pmath/1-6.html#card-pmath-pyramid"><small class="mono">전문 수학 1.6</small>각뿔의 부피는 왜 각기둥의 1/3일까?</a></div></nav>
 
       <article class="card" id="card-calc1-int-props">
         <header class="card-head">
@@ -211,6 +214,10 @@
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
 </main>
 
 <script src="../../js/toc.js"></script>
@@ -224,11 +231,7 @@
 <script src="../../js/cards/calc1/plot.js"></script>
 <script src="../../js/cards/calc1/int-lib.js"></script>
 <script src="../../js/cards/calc1/riemann.js"></script>
-<script src="../../js/cards/calc1/plot.js"></script>
-<script src="../../js/cards/calc1/int-lib.js"></script>
 <script src="../../js/cards/calc1/signed-area.js"></script>
-<script src="../../js/cards/calc1/plot.js"></script>
-<script src="../../js/cards/calc1/int-lib.js"></script>
 <script src="../../js/cards/calc1/int-props.js"></script>
 </body>
 </html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- 자동 생성: python3 tools/build.py — 직접 고치지 말고 blocks/ 와 curricula/ 를 고칠 것 -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>직무 속의 수와 사칙연산 — 나뭇잎 디지털 교과서</title>
+  <meta name="description" content="직무 상황에서 쓰는 사칙연산과 계산 순서, 합계와 할인(비율 할인과 정액 할인), 거스름돈, 레시피의 배율 계산과 나눌 수 없는 재료의 올림, 포장 단위. 카페 계산대 카드와, 단체 급식 레시피 카드.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#f3f4ef">
+  <script>(function(){var d=document.documentElement,q=/[?&]theme=(dark|light)\b/.exec(location.search),t=q&&q[1];if(!t)try{t=localStorage.getItem("namunnip-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;if(t==="dark")document.querySelector('meta[name="theme-color"]').content="#17181a"})()</script>
+  <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
+  <style>
+    #card-jmath-cafe-bill .menu { display: grid; grid-template-columns: 1fr auto auto auto; gap: .3rem .6rem; align-items: center; max-width: 420px; }
+    #card-jmath-cafe-bill .menu .q { font-family: var(--mono, monospace); min-width: 1.5rem; text-align: center; }
+    #card-jmath-cafe-bill .bill { border: 1px dashed var(--rule, #d9dad2); border-radius: 8px; padding: .5rem .7rem; font-family: var(--mono, monospace); font-size: .86rem; line-height: 1.7; margin-top: .5rem; }
+    #card-jmath-cafe-bill .ctl-row > div { min-width: 12rem; }
+    #card-jmath-recipe-scale table { border-collapse: collapse; font-size: .88rem; margin: .4rem 0; }
+    #card-jmath-recipe-scale td, #card-jmath-recipe-scale th { border: 1px solid var(--rule, #d9dad2); padding: .25rem .5rem; text-align: right; }
+    #card-jmath-recipe-scale td:first-child, #card-jmath-recipe-scale th:first-child { text-align: left; }
+    #card-jmath-recipe-scale .ctl-row > div { min-width: 14rem; }
+  </style>
+</head>
+<body data-course="jmath" data-sec="1-1">
+
+<header class="top">
+  <a class="brand" href="../../"><svg class="brand-mark"><use href="#nm"/></svg>나뭇잎 디지털 교과서</a>
+  <nav class="crumbs" aria-label="위치"></nav>
+  <div class="top-right"><a href="../../graph.html">개념 지도</a><a href="../../notes.html">내 노트</a><a href="./">← 과목 목차</a><button type="button" class="theme-btn" aria-label="다크 모드" aria-pressed="false" title="다크 모드 켜고 끄기"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</header>
+
+<main class="wrap">
+  <section class="topic-hero">
+    <div class="meta"></div>
+    <h1>직무 속의 수와 사칙연산</h1>
+    <p class="lead">계산대, 주방, 창고처럼 일하는 곳에서는 사칙연산을 빠르고 정확하게 해야 합니다. 계산의 순서를 지키고, 결과가 상황에 맞는지 판단하는 것도 중요합니다. 이 절에서는 카페의 계산서와 단체 급식의 레시피를 계산해 봅니다.</p>
+    <div class="prereq">
+      <span class="mono">먼저 알면 좋은 것</span>
+      <button type="button" class="p p-basic" data-basic="b-m-ratio-percent" title="중학교 개념 설명 보기">비율과 백분율</button>
+    </div>
+  </section>
+
+  <div class="topic-layout">
+    <aside class="toc" aria-label="이 절의 카드">
+      <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
+      <ol id="toc-list">
+        <li><a href="#card-jmath-cafe-bill"><span class="mono">1.1.1</span>카페 계산대에서 쿠폰 두 장 중 무엇이 유리할까</a></li>
+        <li><a href="#card-jmath-recipe-scale"><span class="mono">1.1.2</span>4인분 레시피를 30인분으로 늘리기</a></li>
+      </ol>
+      <p class="progress mono small"></p>
+      <a class="toc-px" href="../../practice.html?sec=jmath-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">준비 중 →</span></a>
+      <p class="toc-links mono small"><a href="../../graph.html?sec=jmath-1-1">이 절을 개념 지도에서 보기</a></p>
+    </aside>
+
+    <div>
+      <article class="card" id="card-jmath-cafe-bill">
+        <header class="card-head">
+          <span class="no">1.1.1</span><h2>카페 계산대에서 쿠폰 두 장 중 어느 것을 써야 손님에게 유리할까?</h2><span class="kind">사칙연산과 계산 순서 · 활용</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="menu"></div>
+            <div class="presets" role="group" aria-label="쿠폰"><button class="chip" type="button" data-c="0" aria-pressed="true">쿠폰 없음</button><button class="chip" type="button" data-c="1">10% 할인 쿠폰</button><button class="chip" type="button" data-c="2">2000원 할인 쿠폰(1만 원 이상)</button></div>
+            <div class="ctl-row"><div><label class="mono">손님이 낸 돈 <select class="paid" aria-label="손님이 낸 돈"><option value="10000">1만 원</option><option value="20000" selected>2만 원</option><option value="50000">5만 원</option></select></label></div></div>
+            <div class="bill" aria-live="polite"></div>
+            <p class="fig-note">메뉴와 가격, 쿠폰 조건은 가상입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>손님이 "10% 할인 쿠폰과 2000원 할인 쿠폰 중 어느 게 나아요?"라고 묻습니다. 주문 금액에 따라 답이 달라질까요?</li>
+            <li><span class="tag">복원</span>곱셈과 나눗셈을 덧셈과 뺄셈보다 먼저, 괄호 안을 가장 먼저 계산합니다.</li>
+            <li><span class="tag">설명</span>합계는 (단가 × 수량)들의 합입니다. 10% 할인은 합계에 0.9를 곱하는 것이고, 2000원 할인은 합계에서 2000을 빼는 것입니다. 두 할인액이 같아지는 것은 합계의 10%가 2000원일 때, 곧 합계가 20000원일 때입니다. 합계가 2만 원보다 많으면 10% 쿠폰이, 적으면 2000원 쿠폰이 유리합니다.</li>
+            <li><span class="tag">연결</span>계산기나 포스(POS) 기기가 계산해 주더라도, 직원이 어림으로 결과가 맞는지 확인할 수 있어야 실수를 바로잡을 수 있습니다(다음 절 어림).</li>
+            <li><span class="tag">적용</span>주문을 바꿔 두 쿠폰의 할인액이 같아지는 합계를 확인하세요. 거스름돈을 지폐와 동전 수가 가장 적게 내주려면 어떻게 줘야 할까요?</li>
+            <li class="warn"><span class="tag">판단</span>"4500 + 5000 × 2"를 왼쪽부터 계산하면 19000이 되는 실수가 생깁니다. 곱셈을 먼저 해 14500이 맞습니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">합계 15000원일 때 10% 할인과 2000원 할인 중 더 많이 깎이는 쪽과 차이는?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>2000원 할인, 500원 차이<span class="why"><b>맞습니다.</b> 10%는 1500원이므로 2000원 쿠폰이 500원 더 깎입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>10% 할인, 500원 차이<span class="why"><b>2만 원보다 적으면 정액 할인이 유리합니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>같다<span class="why"><b>합계가 2만 원일 때 같습니다.</b></span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>2000원 할인, 1500원 차이<span class="why"><b>할인액끼리 빼야 합니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/1-2.html#card-jmath-paint-estimate"><small class="mono">직무 수학 1.2</small>방 하나를 칠하려면 페인트를 몇 통 사야 할까?</a><a href="../../c/jmath/1-2.html#card-jmath-round-budget"><small class="mono">직무 수학 1.2</small>올림, 버림, 반올림 중 어느 것을 써야 일이 틀어지지 않을까?</a><a href="../../c/jmath/1-3.html#card-jmath-dose-convert"><small class="mono">직무 수학 1.3</small>"체중 1 kg당 15 mg"을 주사기 눈금 몇 mL로 바꿀까?</a><a href="../../c/jmath/1-3.html#card-jmath-unit-error"><small class="mono">직무 수학 1.3</small>이 작업 지시서의 단위 환산은 맞을까?</a></div></nav>
+
+      <article class="card" id="card-jmath-recipe-scale">
+        <header class="card-head">
+          <span class="no">1.1.2</span><h2>4인분 레시피로 단체 손님 30명의 음식을 만들려면?</h2><span class="kind">곱셈과 나눗셈, 배율 · 조작</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <div class="ctl-row"><div><label class="mono">만들 인원 = <output class="n-out"></output>명</label><input class="n" type="range" min="1" max="40" step="1" value="30" aria-label="만들 인원"></div></div>
+            <table aria-label="재료별 4인분 양, 배율, 필요한 양"></table>
+            <p class="mono small say" role="status"></p>
+            <p class="fig-note">팬케이크 레시피와 포장 단위는 가상입니다.</p>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>조리사가 4인분 팬케이크 레시피로 30인분을 만들어야 합니다. 재료를 각각 얼마나 준비하고, 몇 봉지를 사야 할까요?</li>
+            <li><span class="tag">복원</span>\(a \div b = \dfrac{a}{b}\), 분수와 소수의 곱셈.</li>
+            <li><span class="tag">설명</span>모든 재료에 같은 수 <em>배율</em> \(\dfrac{\text{만들 인원}}{\text{레시피 인원}} = \dfrac{30}{4} = 7.5\)를 곱합니다. 밀가루 300 g은 \(300 \times 7.5 = 2250\) g입니다. 달걀처럼 나눌 수 없는 재료는 계산값을 올림하고, 재료를 살 때는 포장 단위로 나누어 필요한 봉지 수를 다시 올림합니다.</li>
+            <li><span class="tag">연결</span>약 조제, 콘크리트 배합, 페인트 조색처럼 정해진 비율을 유지하며 양을 늘리고 줄이는 일은 직무에서 자주 쓰입니다(2단원 비).</li>
+            <li><span class="tag">적용</span>인원을 바꿔 배율과 필요한 봉지 수를 확인하세요. 남는 재료가 가장 적은 인원은 몇 명일까요?</li>
+            <li class="warn"><span class="tag">판단</span>굽는 시간, 소금 같은 양념은 배율대로 늘리면 안 되는 경우가 있습니다. 계산 결과는 경험과 함께 판단해야 합니다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">6인분에 설탕 90 g이 들어가는 레시피로 20인분을 만들 때 설탕은?</p>
+          <ol>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>300 g<span class="why"><b>맞습니다.</b> 1인분 15 g, \(15 \times 20 = 300\) g입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>270 g<span class="why"><b>배율을 3으로 어림했습니다.</b> 정확히는 \(\frac{20}{6}\)배입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>180 g<span class="why"><b>두 배만 했습니다.</b> 배율은 \(\frac{20}{6} \approx 3.33\)입니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>27 g<span class="why"><b>배율을 거꾸로 했습니다.</b></span></span></button></li>
+          </ol>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/jmath/1-2.html#card-jmath-paint-estimate"><small class="mono">직무 수학 1.2</small>방 하나를 칠하려면 페인트를 몇 통 사야 할까?</a><a href="../../c/jmath/1-2.html#card-jmath-round-budget"><small class="mono">직무 수학 1.2</small>올림, 버림, 반올림 중 어느 것을 써야 일이 틀어지지 않을까?</a><a href="../../c/jmath/1-3.html#card-jmath-dose-convert"><small class="mono">직무 수학 1.3</small>"체중 1 kg당 15 mg"을 주사기 눈금 몇 mL로 바꿀까?</a><a href="../../c/jmath/1-3.html#card-jmath-unit-error"><small class="mono">직무 수학 1.3</small>이 작업 지시서의 단위 환산은 맞을까?</a></div></nav>
+
+      <a class="px-go" href="../../practice.html?sec=jmath-1-1"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">준비 중</span></a>
+
+      <nav class="next" aria-label="절 이동"></nav>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg><b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a></p>
+  </footer>
+</main>
+
+<script src="../../js/toc.js"></script>
+<script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
+<script src="../../js/store.js"></script>
+<script src="../../js/notes.js"></script>
+<script src="../../js/reader.js"></script>
+<script src="../../js/prereq.js"></script>
+<script src="../../js/cards/jmath/cafe-bill.js"></script>
+<script src="../../js/cards/jmath/recipe-scale.js"></script>
+</body>
+</html>

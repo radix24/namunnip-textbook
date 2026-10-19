@@ -1,0 +1,63 @@
+<!--block
+{
+  "type": "card",
+  "scripts": [
+    "js/cards/mcult/nutrition-label.js"
+  ],
+  "short": "영양성분표의 '1회 제공량'과 '%기준치' 바로 읽기"
+}
+-->
+<style>
+#card-mcult-nutrition-label .label { border: 2px solid #232326; padding: .4rem .6rem; max-width: 20rem; font-size: .85rem; }
+#card-mcult-nutrition-label .label h4 { margin: 0 0 .2rem; font-size: 1rem; }
+#card-mcult-nutrition-label .label table { width: 100%; border-collapse: collapse; }
+#card-mcult-nutrition-label .label td { border-top: 1px solid #8d8d92; padding: .12rem 0; }
+#card-mcult-nutrition-label .label td:last-child { text-align: right; }
+#card-mcult-nutrition-label .ctl-row > div { min-width: 12rem; }
+#card-mcult-nutrition-label .bars { display: grid; gap: .3rem; margin-top: .5rem; }
+#card-mcult-nutrition-label .bar { display: grid; grid-template-columns: 4.2rem 1fr 3.4rem; gap: .4rem; align-items: center; font-size: .82rem; }
+#card-mcult-nutrition-label .bar div { height: 12px; background: rgba(141,141,146,.2); border-radius: 3px; overflow: hidden; }
+#card-mcult-nutrition-label .bar i { display: block; height: 100%; background: rgba(63,111,163,.6); }
+#card-mcult-nutrition-label .bar i.hi { background: rgba(181,83,47,.75); }
+</style>
+<article class="card" id="card-mcult-nutrition-label">
+  <header class="card-head">
+    <span class="no"></span><h2>과자 한 봉지를 다 먹으면 하루 나트륨의 몇 %를 먹는 걸까?</h2><span class="kind">비례와 백분율 · 활용</span>
+  </header>
+  <div class="card-body">
+    <div class="card-fig">
+      <div class="label" aria-label="가상 과자의 영양성분표">
+        <h4>영양정보 <span class="small">(가상 과자)</span></h4>
+        <p class="small" style="margin:.1rem 0">총 내용량 150 g · 1회 제공량 30 g(총 5회 제공량)</p>
+        <table>
+          <tr><td><b>1회 제공량당</b></td><td><b>1일 영양성분 기준치에 대한 비율</b></td></tr>
+          <tr><td>열량 160 kcal</td><td></td></tr>
+          <tr><td>나트륨 240 mg</td><td>12%</td></tr>
+          <tr><td>당류 9 g</td><td>9%</td></tr>
+          <tr><td>포화지방 2.4 g</td><td>16%</td></tr>
+        </table>
+      </div>
+      <div class="ctl-row"><div><label class="mono">먹은 양 = <output class="g-out"></output> g</label><input class="g" type="range" min="10" max="300" step="10" value="150" aria-label="먹은 양"></div></div>
+      <div class="bars"></div>
+      <p class="mono small say" role="status"></p>
+    </div>
+    <ol class="steps">
+      <li><span class="tag">질문</span>과자 봉지 뒤 영양성분표에 "나트륨 240 mg, 12%"라고 쓰여 있습니다. 한 봉지를 다 먹었다면 하루에 권장되는 나트륨의 12%만 먹은 걸까요?</li>
+      <li><span class="tag">복원</span>비례식, 백분율 \(= \frac{\text{비교하는 양}}{\text{기준량}} \times 100\).</li>
+      <li><span class="tag">설명</span>영양성분표의 수치는 <em>1회 제공량</em>(여기서는 30 g) 기준인 경우가 많습니다. 한 봉지 150 g은 1회 제공량의 5배이므로 나트륨은 \(240 \times 5 = 1200\) mg입니다. %는 <em>1일 영양성분 기준치</em>(나트륨 2000 mg)에 대한 비율이라 \(\frac{1200}{2000} \times 100 = 60\%\)입니다. 먹은 양과 표시 기준량의 비를 곱하는 비례 계산입니다.</li>
+      <li><span class="tag">연결</span>국내 식품의 1일 영양성분 기준치는 나트륨 2000 mg, 당류 100 g, 포화지방 15 g 등으로 정해져 있습니다. 표시 기준(1회 제공량, 100 g당, 총 내용량)은 제품마다 다르니 꼭 확인합니다.</li>
+      <li><span class="tag">적용</span>먹은 양을 바꿔 나트륨이 하루 기준치의 100%를 넘는 양을 찾아보세요. 같은 양을 먹을 때 가장 먼저 기준치에 다가가는 성분은 무엇인가요?</li>
+      <li class="warn"><span class="tag">판단</span>1일 기준치는 평균적인 성인을 위한 참고값입니다. 나이, 활동량, 건강 상태에 따라 알맞은 양은 다릅니다.</li>
+    </ol>
+  </div>
+  <div class="quiz">
+    <h3><span class="mono">확인</span>조건이 달라지면</h3>
+    <p class="q">100 g당 나트륨 400 mg인 라면 국물 250 g을 모두 먹으면 1일 기준치(2000 mg)의 몇 %일까요?</p>
+    <ol>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>50%<span class="why"><b>맞습니다.</b> 400 × 2.5 = 1000 mg, 1000 ÷ 2000 = 50%입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>20%<span class="why"><b>100 g당 값만 계산했습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>40%<span class="why"><b>먹은 양을 200 g으로 계산했습니다.</b></span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>125%<span class="why"><b>250 ÷ 200으로 계산했습니다.</b> 나트륨의 양으로 계산합니다.</span></span></button></li>
+    </ol>
+  </div>
+</article>
