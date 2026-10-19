@@ -30,6 +30,15 @@ JSON 형식 (exams/bank/<과목>.json) — 카드 HTML과 따로 두어 나중�
   @ 응용                 난이도(기본·응용·심화, 첫 글자만 써도 된다). 모든 문항에 있어야 한다
   * 힌트                 힌트(여러 줄이면 여러 개)
 
+  python3 tools/bank.py balance [과목 …] [--n 2000]   시험지 난이도 균형 검사(고정 시험지와 무작위 시험지 n번)
+
+난이도(lv) 기준 — 풀이 단계 수, 엮인 개념 수, 계산량, 함정 여부로 매긴다:
+  기본  개념 하나를 바로 적용, 1~2단계, 계산이 짧고 함정 없음
+  응용  개념 두 개를 엮거나 새 상황·자료·그래프에 적용, 3단계 안팎
+  심화  개념 셋 이상을 엮거나 조건을 바꾼 상황, 4단계 이상이거나 흔한 함정을 피해야 하는 문항(내신 변별 수준)
+시험지 균형: 고정 시험지와 무작위 시험지 모두 '객관식·단답형 기본→응용→심화, 서술형 기본→응용→심화' 층으로 나눠
+  층마다 범위 안 비율대로 담는다(js/bank.js의 sheets·randomSheet). 평균 난이도는 기본 1, 응용 2, 심화 3으로 낸다.
+
   python3 tools/bank.py lv <원고.txt> 기기응심…   난이도 줄이 없는 문항에 차례로 '@ …' 줄을 넣는다(옛 원고에 난이도를 붙일 때)
 """
 import json, re, sys, pathlib
@@ -267,9 +276,88 @@ def stat_line(c, items):
             f'  기말 {len(fin):3}({sh(fin)}장, 서술 {fr(fin):2})  응용·심화 {round(100 * hi / max(1, len(items))):3}%')
 
 
+LV_ORDER = ["기본", "응용", "심화"]
+
+
+def tier(it):
+    return (3 if it["type"] == "free" else 0) + (LV_ORDER.index(it["lv"]) if it.get("lv") in LV_ORDER else 0)
+
+
+def avg_lv(xs):
+    v = [LV_ORDER.index(it["lv"]) + 1 for it in xs if it.get("lv") in LV_ORDER]
+    return sum(v) / len(v) if v else 0
+
+
+def fixed_sheets(pool, order, stratified=True):
+    """js/bank.js sheets()와 같은 규칙. stratified=False는 예전 방식(단원 순서로 돌려 담기)"""
+    key = (lambda it: (tier(it), order.index(it["sec"]), it["id"])) if stratified else           (lambda it: (it["type"] == "free", order.index(it["sec"]), it["id"]))
+    pool = sorted(pool, key=key)
+    n = max(1, round(len(pool) / SHEET)) if pool else 0
+    return [pool[i::n] for i in range(n)]
+
+
+def random_sheet(pool, rng):
+    """js/bank.js randomSheet()와 같은 규칙: 층마다 비율대로 몫(최대 나머지), 층 안에서는 단원을 번갈아 뽑는다"""
+    want = min(SHEET, len(pool))
+    tiers = {}
+    for it in pool:
+        tiers.setdefault(tier(it), []).append(it)
+    quota = {t: want * len(v) // len(pool) for t, v in tiers.items()}
+    for t in sorted(tiers, key=lambda t: -(want * len(tiers[t]) / len(pool) % 1)):
+        if sum(quota.values()) < want and quota[t] < len(tiers[t]):
+            quota[t] += 1
+    out = []
+    for t, v in tiers.items():
+        bucket = {}
+        for it in rng.sample(v, len(v)):
+            bucket.setdefault(it["sec"], []).append(it)
+        secs = list(bucket)
+        rng.shuffle(secs)
+        i = got = 0
+        while got < quota[t]:
+            b = bucket[secs[i % len(secs)]]
+            if b:
+                out.append(b.pop()); got += 1
+            i += 1
+    return out
+
+
+def balance(c, items, runs, rng):
+    order = [f'{ch["n"]}-{s["n"]}' for ch in c["chapters"] for s in ch["sections"]]
+    k = split(c)
+    rows = []
+    for name, pool in (("중간", [it for it in items if order.index(it["sec"]) < k]),
+                       ("기말", [it for it in items if order.index(it["sec"]) >= k])):
+        if not pool:
+            continue
+        new = [avg_lv(s) for s in fixed_sheets(pool, order)]
+        old = [avg_lv(s) for s in fixed_sheets(pool, order, False)]
+        ra = [avg_lv(random_sheet(pool, rng)) for _ in range(runs)]
+        rp = [avg_lv(rng.sample(pool, min(SHEET, len(pool)))) for _ in range(runs)]   # 예전 무작위(그냥 섞어 뽑기)
+        sd = lambda xs: (sum((x - sum(xs) / len(xs)) ** 2 for x in xs) / len(xs)) ** 0.5
+        rows.append((name, avg_lv(pool), max(new) - min(new), max(old) - min(old), sd(ra), max(ra) - min(ra), sd(rp), max(rp) - min(rp)))
+    return rows
+
+
 def main():
     a = sys.argv[1:]
     cs = courses()
+    if a and a[0] == "balance":
+        import random
+        rng = random.Random(1)
+        runs = int(a[a.index("--n") + 1]) if "--n" in a else 2000
+        want = [x for x in a[1:] if x in cs]
+        print("과목      범위  평균  고정(새)폭 고정(옛)폭 | 무작위(새) 표준편차·폭 | 무작위(옛) 표준편차·폭")
+        worst = [0, 0, 0]
+        for f in sorted(BANK.glob("*.json")):
+            if want and f.stem not in want:
+                continue
+            d = json.loads(rd(f))
+            for name, m, fn, fo, rs, rw, ps, pw in balance(cs[d["course"]], d["items"], runs, rng):
+                worst = [max(worst[0], fn), max(worst[1], rs), max(worst[2], rw)]
+                print(f'{d["course"]:9} {name}  {m:.2f}  {fn:9.2f} {fo:9.2f} | {rs:8.3f} {rw:6.2f} | {ps:8.3f} {pw:6.2f}')
+        print(f"가장 큰 값 — 고정 시험지 평균 차 {worst[0]:.2f}, 무작위 표준편차 {worst[1]:.3f}, 무작위 폭 {worst[2]:.2f}")
+        return
     if not a or a[0] not in ("import", "check", "stat", "lv"):
         print(__doc__); return
     if a[0] == "lv":

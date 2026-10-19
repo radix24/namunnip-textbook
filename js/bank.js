@@ -47,15 +47,45 @@
 
   const bySec = (a, b) => secOrder[a.sec].i - secOrder[b.sec].i || (a.id < b.id ? -1 : 1);
   const freeLast = (a, b) => (a.type === "free") - (b.type === "free");
+  /* 난이도 층: 객관식·단답형을 기본→응용→심화로, 그다음 서술형을 같은 순서로 늘어놓는다(층 안은 단원 순서).
+     이 순서대로 돌려 담거나 뽑으면 장마다 층별 문항 수가 ±1 안에서 같고 단원도 고르게 섞인다. tools/bank.py balance와 같은 규칙 */
+  const LV_ORDER = ["기본", "응용", "심화"];
+  const tierOf = (it) => (it.type === "free" ? 3 : 0) + Math.max(0, LV_ORDER.indexOf(it.lv));
+  const byTier = (a, b) => tierOf(a) - tierOf(b) || bySec(a, b);
   function sheets(items, r) {
-    const pool = items.filter(inRange(r)).sort(bySec);
+    const pool = items.filter(inRange(r)).sort(byTier);
     const n = pool.length ? Math.max(1, Math.round(pool.length / PER)) : 0;
     const out = Array.from({ length: n }, () => []);
-    const obj = pool.filter((it) => it.type !== "free"), fr = pool.filter((it) => it.type === "free");
-    obj.forEach((it, i) => out[i % n].push(it));
-    fr.forEach((it, i) => out[(obj.length + i) % n].push(it));   // 이어서 돌려 담아 장마다 문항 수가 고르다
-    return out;
+    pool.forEach((it, i) => out[i % n].push(it));
+    return out.map((s) => s.sort(bySec).sort(freeLast));
   }
+  /* 무작위 시험지: 층마다 범위 안 비율대로 몫을 정하고(최대 나머지 방식), 층 안에서는 단원을 번갈아 가며 뽑는다 */
+  function randomSheet(pool) {
+    const want = Math.min(PER, pool.length);
+    const tiers = {};
+    pool.forEach((it) => (tiers[tierOf(it)] = tiers[tierOf(it)] || []).push(it));
+    const keys = Object.keys(tiers);
+    const quota = {}; let given = 0;
+    keys.forEach((t) => { quota[t] = Math.floor(want * tiers[t].length / pool.length); given += quota[t]; });
+    keys.slice().sort((a, b) => (want * tiers[b].length / pool.length % 1) - (want * tiers[a].length / pool.length % 1))
+      .forEach((t) => { if (given < want && quota[t] < tiers[t].length) { quota[t]++; given++; } });
+    const out = [];
+    keys.forEach((t) => {
+      const bucket = {};
+      shuffle(tiers[t]).forEach((it) => (bucket[it.sec] = bucket[it.sec] || []).push(it));
+      const secs = shuffle(Object.keys(bucket));
+      for (let i = 0, got = 0; got < quota[t]; i++) {
+        const b = bucket[secs[i % secs.length]];
+        if (b.length) { out.push(b.pop()); got++; }
+      }
+    });
+    return out.sort(bySec).sort(freeLast);
+  }
+  const lvMix = (xs) => {
+    const n = lvCount(xs), m = n.기본 + n.응용 + n.심화;
+    const avg = m ? (n.기본 + 2 * n.응용 + 3 * n.심화) / m : 0;
+    return `기본 ${n.기본} · 응용 ${n.응용} · 심화 ${n.심화}${n.free ? ` · 서술형 ${n.free}` : ""} · 평균 난이도 ${avg.toFixed(2)}`;
+  };
   /* 난이도 거르기: lv=b 기본, ah 응용·심화, h 심화 */
   const LVF = { b: ["기본"], ah: ["응용", "심화"], h: ["심화"] };
   const LVN = { b: "기본", ah: "응용·심화", h: "심화" };
@@ -153,7 +183,7 @@
       return `<section class="bk-range">
         <h2>${RANGES[r].name} <span class="mono dim">${r === "all" ? "" : rangeLabel(r)}</span></h2>
         <p class="small dim">${RANGES[r].chs.map((ch) => { const n = RANGES[r].fs.filter((f) => f.ch === ch).length; return `${R[ch.n]}. ${esc(ch.title)}${n < ch.sections.length ? ` (${n}절)` : ""}`; }).join(" · ")}</p>
-        <div class="bk-sheets">${sh.map((s, i) => { const sc = scores[`${c.id}/${r}/${i + 1}`]; return `<a class="bk-sheet" href="bank.html?c=${c.id}&r=${r}&s=${i + 1}"><b>시험지 ${i + 1}</b><span class="mono">${s.length}문항</span><span class="mono ${sc ? "ok" : "dim"}">${sc ? `최근 ${sc.ok}/${sc.n}` : "아직 안 풂"}</span></a>`; }).join("")}
+        <div class="bk-sheets">${sh.map((s, i) => { const sc = scores[`${c.id}/${r}/${i + 1}`]; return `<a class="bk-sheet" href="bank.html?c=${c.id}&r=${r}&s=${i + 1}"><b>시험지 ${i + 1}</b><span class="mono">${s.length}문항</span><span class="mono dim">${(() => { const n = lvCount(s); return `기본 ${n.기본} · 응용 ${n.응용} · 심화 ${n.심화}`; })()}</span><span class="mono ${sc ? "ok" : "dim"}">${sc ? `최근 ${sc.ok}/${sc.n}` : "아직 안 풂"}</span></a>`; }).join("")}
           <a class="bk-sheet rand" href="bank.html?c=${c.id}&r=${r}&s=x"><b>무작위 시험지</b><span class="mono">${Math.min(PER, items.filter(inRange(r)).length)}문항</span><span class="mono dim">풀 때마다 새로 뽑음</span></a></div>
         <p class="small bk-lvrow">${(() => { const n = lvCount(items.filter(inRange(r))); return `<span class="mono dim">기본 ${n.기본} · 응용 ${n.응용} · 심화 ${n.심화}${n.free ? ` · 서술형 ${n.free}` : ""}</span>`; })()} 난이도를 골라 무작위로 풀기 ${lvLinks(`bank.html?c=${c.id}&r=${r}&s=x`)}</p>
       </section>`;
@@ -172,13 +202,14 @@
     const sh = sheets(items, r);
     const rand = sNo === "x";
     const k = rand ? 0 : Math.min(Math.max(1, +sNo || 1), sh.length || 1);
-    const list = rand ? shuffle(items.filter(inRange(r)).filter(lvOk)).slice(0, PER).sort(bySec).sort(freeLast) : sh[k - 1] || [];
+    const list = rand ? randomSheet(items.filter(inRange(r)).filter(lvOk)) : sh[k - 1] || [];
     const title = `${RANGES[r].name} ${rand ? `무작위 시험지${lvKey ? ` · ${LVN[lvKey]}` : ""}` : `시험지 ${k}`}`;
     crumb(title);
     document.title = `${title} · ${c.name} — 나뭇잎 교과서`;
     head.innerHTML = `<span class="mono dim">${esc(c.name)} · ${RANGES[r].name} 범위 ${r === "all" ? "" : rangeLabel(r)}</span>
       <h1>${esc(c.name)} <em>${esc(title)}</em></h1>
       <p class="lead">${AI} ${list.length}문항입니다. 객관식은 번호를 고르고, 단답형은 답을 적으세요.${list.some((it) => it.type === "free") ? " 서술형은 풀이 과정을 쓰고, 채점 뒤 모범 답안과 채점 기준을 보고 스스로 점수를 매깁니다." : ""} 다 풀면 맨 아래 <b>채점하기</b>를 누릅니다.</p>
+      <p class="mono small bk-lvrow">난이도 구성: ${lvMix(list)} <span class="dim">(기본 1 · 응용 2 · 심화 3으로 평균)</span></p>
       <p class="mono small dim">실제 시험 문항이 아닙니다. 고등학교 교육과정 범위에서 AI가 출제했습니다.</p>`;
     const nav = rand ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=x${lvKey ? `&lv=${lvKey}` : ""}">다른 무작위 시험지</a>`
       : `${k > 1 ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=${k - 1}">← 시험지 ${k - 1}</a>` : ""}${k < sh.length ? `<a class="btn ghost" href="bank.html?c=${c.id}&r=${r}&s=${k + 1}">시험지 ${k + 1} →</a>` : ""}`;
