@@ -6,6 +6,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "common",
   "level": "공통",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -37,7 +38,8 @@ window.TOC = [
         "id": "card-is1-gps",
         "title": "GPS는 어떻게 시간으로 위치를 찾을까?"
        }
-      ]
+      ],
+      "ex": 10
      },
      {
       "n": 2,
@@ -60,7 +62,8 @@ window.TOC = [
         "id": "card-is1-new-unit",
         "title": "두 양을 나누면 왜 쓸모 있는 새 단위가 생길까?"
        }
-      ]
+      ],
+      "ex": 8
      },
      {
       "n": 3,
@@ -98,7 +101,8 @@ window.TOC = [
         "id": "card-is1-fermi",
         "title": "운동장의 모래알은 몇 개일까?"
        }
-      ]
+      ],
+      "ex": 4
      },
      {
       "n": 4,
@@ -126,7 +130,8 @@ window.TOC = [
         "id": "text-is1-ict-history",
         "title": "정보 통신 기술은 문명을 어떻게 바꾸었을까?"
        }
-      ]
+      ],
+      "ex": 6
      }
     ]
    },
@@ -150,7 +155,8 @@ window.TOC = [
         "id": "card-is1-bbn",
         "title": "우주는 왜 대부분 수소와 헬륨일까?"
        }
-      ]
+      ],
+      "ex": 21
      },
      {
       "n": 2,
@@ -183,7 +189,8 @@ window.TOC = [
         "id": "text-esys-early-earth",
         "title": "녹은 암석 덩어리가 어떻게 바다와 대기를 가진 행성이 되었을까?"
        }
-      ]
+      ],
+      "ex": 56
      },
      {
       "n": 3,
@@ -206,7 +213,8 @@ window.TOC = [
         "id": "card-is1-halogen",
         "title": "할로젠끼리는 누가 누구를 밀어낼까?"
        }
-      ]
+      ],
+      "ex": 43
      },
      {
       "n": 4,
@@ -224,7 +232,8 @@ window.TOC = [
         "id": "card-is1-conduct",
         "title": "소금물은 전기가 통하는데 설탕물은 왜 안 통할까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 5,
@@ -247,7 +256,8 @@ window.TOC = [
         "id": "text-is1-rare-earth",
         "title": "스마트폰과 풍력 발전기에 꼭 필요한 희토류, 캐는 대가는 누가 치를까?"
        }
-      ]
+      ],
+      "ex": 71
      },
      {
       "n": 6,
@@ -275,7 +285,8 @@ window.TOC = [
         "id": "card-emq-semis",
         "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
        }
-      ]
+      ],
+      "ex": 25
      }
     ]
    },
@@ -319,7 +330,8 @@ window.TOC = [
         "id": "text-is1-human-impact",
         "title": "숲 하나를 베면 지구시스템의 어디까지 흔들릴까?"
        }
-      ]
+      ],
+      "ex": 39
      },
      {
       "n": 2,
@@ -357,7 +369,8 @@ window.TOC = [
         "id": "card-is1-quake-damage",
         "title": "규모가 같은 지진인데 왜 피해는 수백 배씩 다를까?"
        }
-      ]
+      ],
+      "ex": 23
      },
      {
       "n": 3,
@@ -390,7 +403,8 @@ window.TOC = [
         "id": "video-apple-moon",
         "title": "달도 떨어지고 있다"
        }
-      ]
+      ],
+      "ex": 47
      },
      {
       "n": 4,
@@ -413,7 +427,8 @@ window.TOC = [
         "id": "card-is1-egg-drop",
         "title": "떨어뜨린 달걀이 깨지지 않게 하려면?"
        }
-      ]
+      ],
+      "ex": 40
      },
      {
       "n": 5,
@@ -466,7 +481,8 @@ window.TOC = [
         "id": "card-cell-coupling",
         "title": "에너지가 필요한 반응을 세포는 어떻게 일으킬까?"
        }
-      ]
+      ],
+      "ex": 44
      },
      {
       "n": 6,
@@ -489,7 +505,8 @@ window.TOC = [
         "id": "video-is1-codon",
         "title": "유전 암호표 읽는 법"
        }
-      ]
+      ],
+      "ex": 22
      }
     ]
    }
@@ -501,6 +518,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "common",
   "level": "공통",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -537,7 +555,8 @@ window.TOC = [
         "id": "card-is2-mass-extinction",
         "title": "공룡을 없앤 범인은 소행성일까, 화산일까?"
        }
-      ]
+      ],
+      "ex": 18
      },
      {
       "n": 2,
@@ -570,7 +589,8 @@ window.TOC = [
         "id": "text-is2-biodiversity",
         "title": "생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?"
        }
-      ]
+      ],
+      "ex": 5
      },
      {
       "n": 3,
@@ -593,7 +613,8 @@ window.TOC = [
         "id": "card-is2-redox-life",
         "title": "광합성과 호흡은 왜 산화 환원 반응일까?"
        }
-      ]
+      ],
+      "ex": 11
      },
      {
       "n": 4,
@@ -621,7 +642,8 @@ window.TOC = [
         "id": "card-is2-acid-plate",
         "title": "이름표가 떨어진 용액 여섯 개, 어떤 시험으로 가려낼까?"
        }
-      ]
+      ],
+      "ex": 16
      },
      {
       "n": 5,
@@ -639,7 +661,8 @@ window.TOC = [
         "id": "card-is2-cold-pack",
         "title": "냉찜질 팩은 어떻게 차가워질까?"
        }
-      ]
+      ],
+      "ex": 7
      }
     ]
    },
@@ -663,7 +686,8 @@ window.TOC = [
         "id": "card-is2-fox-heat",
         "title": "추운 곳의 여우는 왜 귀가 작을까?"
        }
-      ]
+      ],
+      "ex": 7
      },
      {
       "n": 2,
@@ -681,7 +705,8 @@ window.TOC = [
         "id": "card-is2-energy-pyramid",
         "title": "에너지는 왜 영양 단계를 올라갈수록 줄어들까?"
        }
-      ]
+      ],
+      "ex": 1
      },
      {
       "n": 3,
@@ -724,7 +749,8 @@ window.TOC = [
         "id": "card-is2-ssp",
         "title": "2100년의 지구는 지금 우리가 고르는 길에 따라 얼마나 달라질까?"
        }
-      ]
+      ],
+      "ex": 10
      },
      {
       "n": 4,
@@ -752,7 +778,8 @@ window.TOC = [
         "id": "text-is2-sun-path",
         "title": "바람, 비, 밥, 석유는 모두 햇빛에서 왔을까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 5,
@@ -780,7 +807,8 @@ window.TOC = [
         "id": "video-is2-grid",
         "title": "콘센트까지 오는 전기의 여행"
        }
-      ]
+      ],
+      "ex": 8
      },
      {
       "n": 6,
@@ -808,7 +836,8 @@ window.TOC = [
         "id": "card-is2-energy-design",
         "title": "우리 학교 전기를 신재생 에너지로 채운다면 무엇을 얼마나 지을까?"
        }
-      ]
+      ],
+      "ex": 9
      }
     ]
    },
@@ -837,7 +866,8 @@ window.TOC = [
         "id": "card-is2-rapid-test",
         "title": "신속 항원 검사의 두 줄은 어떻게 생기고, 왜 PCR보다 놓치기 쉬울까?"
        }
-      ]
+      ],
+      "ex": 1
      },
      {
       "n": 2,
@@ -860,7 +890,8 @@ window.TOC = [
         "id": "card-is2-reident",
         "title": "이름을 지운 자료로도 나를 찾아낼 수 있을까?"
        }
-      ]
+      ],
+      "ex": 3
      },
      {
       "n": 3,
@@ -921,7 +952,8 @@ window.TOC = [
         "id": "text-is2-genai",
         "title": "생성형 AI가 그린 그림은 누구의 것일까?"
        }
-      ]
+      ],
+      "ex": 2
      }
     ]
    }
@@ -933,6 +965,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "phy",
   "level": "일반",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -959,7 +992,8 @@ window.TOC = [
         "id": "card-phy-truss",
         "title": "다리의 뼈대는 왜 삼각형으로 짤까?"
        }
-      ]
+      ],
+      "ex": 131
      },
      {
       "n": 2,
@@ -992,7 +1026,8 @@ window.TOC = [
         "id": "card-phy-video-track",
         "title": "동영상 한 편으로 수레의 가속도를 잴 수 있을까?"
        }
-      ]
+      ],
+      "ex": 369
      },
      {
       "n": 3,
@@ -1015,7 +1050,8 @@ window.TOC = [
         "id": "card-phy-collision",
         "title": "부딪칠 때 무엇이 보존될까?"
        }
-      ]
+      ],
+      "ex": 309
      },
      {
       "n": 4,
@@ -1043,7 +1079,8 @@ window.TOC = [
         "id": "card-pendulum",
         "title": "진자 공식은 언제 틀릴까?"
        }
-      ]
+      ],
+      "ex": 253
      },
      {
       "n": 5,
@@ -1076,7 +1113,8 @@ window.TOC = [
         "id": "card-mech-insulation",
         "title": "단열재를 두껍게 하면 빠져나가는 열이 얼마나 줄까?"
        }
-      ]
+      ],
+      "ex": 93
      },
      {
       "n": 6,
@@ -1099,7 +1137,8 @@ window.TOC = [
         "id": "video-phy-engine",
         "title": "증기 기관에서 자동차 엔진까지"
        }
-      ]
+      ],
+      "ex": 88
      }
     ]
    },
@@ -1123,7 +1162,8 @@ window.TOC = [
         "id": "card-phy-potential",
         "title": "전위차는 ‘전기의 높이’일까?"
        }
-      ]
+      ],
+      "ex": 120
      },
      {
       "n": 2,
@@ -1146,7 +1186,8 @@ window.TOC = [
         "id": "card-phy-circuit-meter",
         "title": "직렬과 병렬 회로에서 전류계와 전압계는 무엇을 말해 줄까?"
        }
-      ]
+      ],
+      "ex": 79
      },
      {
       "n": 3,
@@ -1164,7 +1205,8 @@ window.TOC = [
         "id": "card-phy-touch",
         "title": "터치스크린은 손가락을 어떻게 알아챌까?"
        }
-      ]
+      ],
+      "ex": 56
      },
      {
       "n": 4,
@@ -1177,7 +1219,8 @@ window.TOC = [
         "id": "card-phy-magnet",
         "title": "철은 자석에 붙는데 알루미늄은 왜 안 붙을까?"
        }
-      ]
+      ],
+      "ex": 100
      },
      {
       "n": 5,
@@ -1200,7 +1243,8 @@ window.TOC = [
         "id": "video-phy-speaker",
         "title": "스피커를 분해하면"
        }
-      ]
+      ],
+      "ex": 124
      },
      {
       "n": 6,
@@ -1223,7 +1267,8 @@ window.TOC = [
         "id": "text-phy-induction-tech",
         "title": "교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?"
        }
-      ]
+      ],
+      "ex": 173
      }
     ]
    },
@@ -1252,7 +1297,8 @@ window.TOC = [
         "id": "card-phy-superpose",
         "title": "마주 오던 두 파동이 만나면 부서질까, 그냥 지나갈까?"
        }
-      ]
+      ],
+      "ex": 35
      },
      {
       "n": 2,
@@ -1280,7 +1326,8 @@ window.TOC = [
         "id": "card-phy-lens-bench",
         "title": "스크린에 맺힌 상만으로 렌즈의 초점 거리를 잴 수 있을까?"
        }
-      ]
+      ],
+      "ex": 135
      },
      {
       "n": 3,
@@ -1313,7 +1360,8 @@ window.TOC = [
         "id": "card-phy-lm-emicro",
         "title": "전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?"
        }
-      ]
+      ],
+      "ex": 122
      },
      {
       "n": 4,
@@ -1336,7 +1384,8 @@ window.TOC = [
         "id": "card-phy-prism",
         "title": "프리즘은 하얀빛 속에 숨은 무지개를 어떻게 꺼낼까?"
        }
-      ]
+      ],
+      "ex": 137
      },
      {
       "n": 5,
@@ -1374,7 +1423,8 @@ window.TOC = [
         "id": "card-is2-solar-cell",
         "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
        }
-      ]
+      ],
+      "ex": 189
      },
      {
       "n": 6,
@@ -1407,7 +1457,8 @@ window.TOC = [
         "id": "text-phy-relativity-society",
         "title": "상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?"
        }
-      ]
+      ],
+      "ex": 151
      }
     ]
    }
@@ -1419,6 +1470,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "chem",
   "level": "일반",
+  "split": 7,
   "chapters": [
    {
     "n": 1,
@@ -1450,7 +1502,8 @@ window.TOC = [
         "id": "text-chem-green",
         "title": "화학은 탄소와 자원 문제를 어떻게 풀고 있을까?"
        }
-      ]
+      ],
+      "ex": 256
      },
      {
       "n": 2,
@@ -1483,7 +1536,8 @@ window.TOC = [
         "id": "text-chem-avogadro",
         "title": "보이지 않는 원자의 수를 사람들은 어떻게 세었을까?"
        }
-      ]
+      ],
+      "ex": 315
      },
      {
       "n": 3,
@@ -1511,7 +1565,8 @@ window.TOC = [
         "id": "card-chem-caco3",
         "title": "달걀 껍데기를 염산에 넣으면 날아간 기체로 반응식을 확인할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 332
      }
     ]
    },
@@ -1535,7 +1590,8 @@ window.TOC = [
         "id": "card-chem-nacl",
         "title": "고체 소금은 전기가 안 통하는데, 녹이면 왜 통할까?"
        }
-      ]
+      ],
+      "ex": 243
      },
      {
       "n": 2,
@@ -1558,7 +1614,8 @@ window.TOC = [
         "id": "card-chem-polar-lab",
         "title": "대전된 막대를 가까이 대면 물줄기는 휘는데 기름 줄기는 왜 안 휠까?"
        }
-      ]
+      ],
+      "ex": 80
      },
      {
       "n": 3,
@@ -1581,7 +1638,8 @@ window.TOC = [
         "id": "video-chem-shapes",
         "title": "분자 모양 한 번에 보기"
        }
-      ]
+      ],
+      "ex": 260
      },
      {
       "n": 4,
@@ -1604,7 +1662,8 @@ window.TOC = [
         "id": "card-chem-mix",
         "title": "기름과 물은 왜 섞이지 않을까?"
        }
-      ]
+      ],
+      "ex": 51
      }
     ]
    },
@@ -1638,7 +1697,8 @@ window.TOC = [
         "id": "card-chem-phase",
         "title": "얼린 딸기는 어떻게 물을 녹이지 않고 바로 날려 보낼까?"
        }
-      ]
+      ],
+      "ex": 65
      },
      {
       "n": 2,
@@ -1656,7 +1716,8 @@ window.TOC = [
         "id": "card-chem-k-solid",
         "title": "평형 상수 식에는 왜 고체가 빠질까?"
        }
-      ]
+      ],
+      "ex": 62
      },
      {
       "n": 3,
@@ -1669,7 +1730,8 @@ window.TOC = [
         "id": "card-chem-qk",
         "title": "Q와 K를 비교하면 무엇을 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 33
      },
      {
       "n": 4,
@@ -1707,7 +1769,8 @@ window.TOC = [
         "id": "text-chem-eq-cases",
         "title": "몸속, 바닷속, 공장 속의 평형은 어떻게 움직일까?"
        }
-      ]
+      ],
+      "ex": 66
      }
     ]
    },
@@ -1741,7 +1804,8 @@ window.TOC = [
         "id": "card-chem-dilute-ph",
         "title": "염산을 10배씩 계속 묽히면 pH는 끝없이 커질까?"
        }
-      ]
+      ],
+      "ex": 60
      },
      {
       "n": 2,
@@ -1759,7 +1823,8 @@ window.TOC = [
         "id": "card-chem-dilution",
         "title": "물을 더 부으면 무엇이 그대로이고 무엇이 변할까?"
        }
-      ]
+      ],
+      "ex": 151
      },
      {
       "n": 3,
@@ -1787,7 +1852,8 @@ window.TOC = [
         "id": "text-chem-neutral-env",
         "title": "산성 토양과 산 누출 사고는 어떻게 중화할까?"
        }
-      ]
+      ],
+      "ex": 123
      },
      {
       "n": 4,
@@ -1810,7 +1876,8 @@ window.TOC = [
         "id": "video-chem-titration",
         "title": "중화 적정 실험 따라 하기"
        }
-      ]
+      ],
+      "ex": 43
      }
     ]
    }
@@ -1822,6 +1889,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "bio",
   "level": "일반",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -1853,7 +1921,8 @@ window.TOC = [
         "id": "text-bio-modern",
         "title": "생명과학은 다른 학문과 만나 무엇을 해냈을까?"
        }
-      ]
+      ],
+      "ex": 273
      },
      {
       "n": 2,
@@ -1871,7 +1940,8 @@ window.TOC = [
         "id": "text-bio-eco-levels",
         "title": "개체 너머에는 어떤 생명 시스템이 있을까?"
        }
-      ]
+      ],
+      "ex": 122
      },
      {
       "n": 3,
@@ -1889,7 +1959,8 @@ window.TOC = [
         "id": "card-bio-atp",
         "title": "ATP는 왜 에너지 ‘화폐’일까?"
        }
-      ]
+      ],
+      "ex": 117
      },
      {
       "n": 4,
@@ -1912,7 +1983,8 @@ window.TOC = [
         "id": "card-bio-digest",
         "title": "소화 효소는 어떤 영양소를 분해할까?"
        }
-      ]
+      ],
+      "ex": 157
      },
      {
       "n": 5,
@@ -1940,7 +2012,8 @@ window.TOC = [
         "id": "card-bio-metabolic",
         "title": "건강 검진표로 대사 증후군을 알아낼 수 있을까?"
        }
-      ]
+      ],
+      "ex": 51
      },
      {
       "n": 6,
@@ -1963,7 +2036,8 @@ window.TOC = [
         "id": "card-bio-flow",
         "title": "물질은 순환하는데 에너지는 왜 흘러가 버릴까?"
        }
-      ]
+      ],
+      "ex": 133
      },
      {
       "n": 7,
@@ -2001,7 +2075,8 @@ window.TOC = [
         "id": "card-bio-disturb",
         "title": "생태계의 한 고리를 빼거나 더하면 어떻게 될까?"
        }
-      ]
+      ],
+      "ex": 216
      }
     ]
    },
@@ -2030,7 +2105,8 @@ window.TOC = [
         "id": "card-bio-snapshot",
         "title": "자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?"
        }
-      ]
+      ],
+      "ex": 196
      },
      {
       "n": 2,
@@ -2048,7 +2124,8 @@ window.TOC = [
         "id": "card-bio-syndrug",
         "title": "약물은 시냅스의 어느 단계에 끼어들까?"
        }
-      ]
+      ],
+      "ex": 34
      },
      {
       "n": 3,
@@ -2076,7 +2153,8 @@ window.TOC = [
         "id": "card-bio-brain-map",
         "title": "뇌 영상으로 뇌의 어느 부분이 무슨 일을 하는지 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 175
      },
      {
       "n": 4,
@@ -2109,7 +2187,8 @@ window.TOC = [
         "id": "card-bio-wearable",
         "title": "스마트 워치 기록으로 항상성을 탐구할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 220
      },
      {
       "n": 5,
@@ -2127,7 +2206,8 @@ window.TOC = [
         "id": "card-bio-immune",
         "title": "두 번째 감염은 왜 더 빨리 이겨낼까?"
        }
-      ]
+      ],
+      "ex": 203
      },
      {
       "n": 6,
@@ -2140,7 +2220,8 @@ window.TOC = [
         "id": "card-bio-blood",
         "title": "ABO식 혈액형은 어떻게 판정할까?"
        }
-      ]
+      ],
+      "ex": 37
      },
      {
       "n": 7,
@@ -2158,7 +2239,8 @@ window.TOC = [
         "id": "card-bio-herd",
         "title": "집단 면역은 몇 %가 접종해야 생길까?"
        }
-      ]
+      ],
+      "ex": 15
      }
     ]
    },
@@ -2192,7 +2274,8 @@ window.TOC = [
         "id": "card-bio-karyotype",
         "title": "흩어진 염색체 사진으로 핵형을 맞출 수 있을까?"
        }
-      ]
+      ],
+      "ex": 134
      },
      {
       "n": 2,
@@ -2215,7 +2298,8 @@ window.TOC = [
         "id": "video-bio-meiosis",
         "title": "감수 분열 30초 정리"
        }
-      ]
+      ],
+      "ex": 309
      },
      {
       "n": 3,
@@ -2248,7 +2332,8 @@ window.TOC = [
         "id": "text-bio-evo-methods",
         "title": "진화는 어떤 증거와 방법으로 연구할까?"
        }
-      ]
+      ],
+      "ex": 182
      },
      {
       "n": 4,
@@ -2271,7 +2356,8 @@ window.TOC = [
         "id": "card-bio-domains",
         "title": "처음 보는 생물을 3역 6계 중 어디에 넣을까?"
        }
-      ]
+      ],
+      "ex": 60
      },
      {
       "n": 5,
@@ -2299,7 +2385,8 @@ window.TOC = [
         "id": "card-bio-seq-tree",
         "title": "DNA 서열의 차이로 계통수를 그릴 수 있을까?"
        }
-      ]
+      ],
+      "ex": 71
      }
     ]
    }
@@ -2311,6 +2398,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "earth",
   "level": "일반",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -2347,7 +2435,8 @@ window.TOC = [
         "id": "card-earth-gas",
         "title": "차가운 바다에 산소가 더 많이 녹는 까닭은?"
        }
-      ]
+      ],
+      "ex": 115
      },
      {
       "n": 2,
@@ -2380,7 +2469,8 @@ window.TOC = [
         "id": "card-earth-gyre",
         "title": "바람과 지구 자전은 어떻게 거대한 해류 고리를 만들까?"
        }
-      ]
+      ],
+      "ex": 135
      },
      {
       "n": 3,
@@ -2418,7 +2508,8 @@ window.TOC = [
         "id": "text-earth-moving-highs",
         "title": "봄가을 날씨는 왜 사나흘마다 바뀔까?"
        }
-      ]
+      ],
+      "ex": 136
      },
      {
       "n": 4,
@@ -2451,7 +2542,8 @@ window.TOC = [
         "id": "card-earth-typhoon-track",
         "title": "실제 태풍의 길과 세기를 자료로 읽을 수 있을까?"
        }
-      ]
+      ],
+      "ex": 159
      },
      {
       "n": 5,
@@ -2474,7 +2566,8 @@ window.TOC = [
         "id": "card-earth-oni",
         "title": "실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?"
        }
-      ]
+      ],
+      "ex": 121
      },
      {
       "n": 6,
@@ -2502,7 +2595,8 @@ window.TOC = [
         "id": "card-earth-mitigate",
         "title": "탄소 제거와 태양 복사 조절, 어떤 기술에 기대야 할까?"
        }
-      ]
+      ],
+      "ex": 146
      }
     ]
    },
@@ -2531,7 +2625,8 @@ window.TOC = [
         "id": "card-earth-correlate",
         "title": "멀리 떨어진 두 지역의 지층을 어떻게 이어 맞출까?"
        }
-      ]
+      ],
+      "ex": 341
      },
      {
       "n": 2,
@@ -2579,7 +2674,8 @@ window.TOC = [
         "id": "text-earth-paleoclimate",
         "title": "온도계가 없던 시대의 기후는 어떻게 알아낼까?"
        }
-      ]
+      ],
+      "ex": 143
      },
      {
       "n": 3,
@@ -2597,7 +2693,8 @@ window.TOC = [
         "id": "card-earth-igneous",
         "title": "현무암과 화강암은 왜 알갱이 크기가 다를까?"
        }
-      ]
+      ],
+      "ex": 204
      },
      {
       "n": 4,
@@ -2620,7 +2717,8 @@ window.TOC = [
         "id": "card-earth-rock-cycle",
         "title": "암석은 어떻게 다른 암석이 될까?"
        }
-      ]
+      ],
+      "ex": 95
      },
      {
       "n": 5,
@@ -2643,7 +2741,8 @@ window.TOC = [
         "id": "card-earth-geopark",
         "title": "국가지질공원에서는 무엇을 보고, 왜 지켜야 할까?"
        }
-      ]
+      ],
+      "ex": 160
      }
     ]
    },
@@ -2672,7 +2771,8 @@ window.TOC = [
         "id": "card-earth-retro",
         "title": "행성은 왜 가끔 뒤로 가는 것처럼 보일까?"
        }
-      ]
+      ],
+      "ex": 215
      },
      {
       "n": 2,
@@ -2695,7 +2795,8 @@ window.TOC = [
         "id": "card-space-distance",
         "title": "별까지의 거리는 어떤 사다리를 타고 잴까?"
        }
-      ]
+      ],
+      "ex": 54
      },
      {
       "n": 3,
@@ -2723,7 +2824,8 @@ window.TOC = [
         "id": "card-earth-star-core",
         "title": "무거운 별과 가벼운 별은 속에서 핵융합하는 방식이 다를까?"
        }
-      ]
+      ],
+      "ex": 143
      },
      {
       "n": 4,
@@ -2751,7 +2853,8 @@ window.TOC = [
         "id": "card-earth-galaxy-ai",
         "title": "은하 사진 수천 장을 인공지능은 어떻게 분류할까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 5,
@@ -2774,7 +2877,8 @@ window.TOC = [
         "id": "text-earth-cosmology",
         "title": "우주에 대한 생각은 어떤 증거로 바뀌어 왔을까?"
        }
-      ]
+      ],
+      "ex": 176
      }
     ]
    }
@@ -2786,6 +2890,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "phy",
   "level": "진로",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -2807,7 +2912,8 @@ window.TOC = [
         "id": "card-mech-incline",
         "title": "빗면 위의 상자는 어느 쪽으로 움직일까?"
        }
-      ]
+      ],
+      "ex": 122
      },
      {
       "n": 2,
@@ -2825,7 +2931,8 @@ window.TOC = [
         "id": "card-mech-projectile",
         "title": "비스듬히 던진 공은 몇 도에서 가장 멀리 갈까?"
        }
-      ]
+      ],
+      "ex": 159
      },
      {
       "n": 3,
@@ -2848,7 +2955,8 @@ window.TOC = [
         "id": "video-apple-moon",
         "title": "달도 떨어지고 있다"
        }
-      ]
+      ],
+      "ex": 73
      },
      {
       "n": 4,
@@ -2866,7 +2974,8 @@ window.TOC = [
         "id": "text-mech-kepler-history",
         "title": "관측 자료에서 만유인력까지, 무엇이 이어졌을까?"
        }
-      ]
+      ],
+      "ex": 147
      },
      {
       "n": 5,
@@ -2884,7 +2993,8 @@ window.TOC = [
         "id": "card-mech-escape",
         "title": "달에는 왜 대기가 없을까?"
        }
-      ]
+      ],
+      "ex": 33
      },
      {
       "n": 6,
@@ -2902,7 +3012,8 @@ window.TOC = [
         "id": "text-mech-gr",
         "title": "중력은 힘일까, 휘어진 시공간일까?"
        }
-      ]
+      ],
+      "ex": 79
      }
     ]
    },
@@ -2926,7 +3037,8 @@ window.TOC = [
         "id": "text-mech-heat-tech",
         "title": "건물과 다리는 열을 어떻게 다룰까?"
        }
-      ]
+      ],
+      "ex": 43
      },
      {
       "n": 2,
@@ -2944,7 +3056,8 @@ window.TOC = [
         "id": "card-mech-ideal-gas",
         "title": "기체를 데우면 압력은 왜 커질까?"
        }
-      ]
+      ],
+      "ex": 42
      },
      {
       "n": 3,
@@ -2967,7 +3080,8 @@ window.TOC = [
         "id": "card-mech-first-law",
         "title": "기체에 준 열은 어디에 쓰일까?"
        }
-      ]
+      ],
+      "ex": 86
      },
      {
       "n": 4,
@@ -3000,7 +3114,8 @@ window.TOC = [
         "id": "card-mech-cycle",
         "title": "한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?"
        }
-      ]
+      ],
+      "ex": 4
      },
      {
       "n": 5,
@@ -3018,7 +3133,8 @@ window.TOC = [
         "id": "card-is2-efficiency",
         "title": "에너지는 보존되는데 왜 아껴야 할까?"
        }
-      ]
+      ],
+      "ex": 7
      }
     ]
    },
@@ -3047,7 +3163,8 @@ window.TOC = [
         "id": "card-mech-shm",
         "title": "용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?"
        }
-      ]
+      ],
+      "ex": 82
      },
      {
       "n": 2,
@@ -3065,7 +3182,8 @@ window.TOC = [
         "id": "text-mech-elastic-use",
         "title": "보이지 않는 곳을 탄성파로 어떻게 볼까?"
        }
-      ]
+      ],
+      "ex": 95
      },
      {
       "n": 3,
@@ -3078,7 +3196,8 @@ window.TOC = [
         "id": "card-mech-doppler",
         "title": "다가오는 사이렌은 왜 더 높게 들릴까?"
        }
-      ]
+      ],
+      "ex": 69
      },
      {
       "n": 4,
@@ -3096,7 +3215,8 @@ window.TOC = [
         "id": "card-mech-two-speaker",
         "title": "스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?"
        }
-      ]
+      ],
+      "ex": 35
      },
      {
       "n": 5,
@@ -3109,7 +3229,8 @@ window.TOC = [
         "id": "card-mech-standing",
         "title": "기타 줄과 리코더는 왜 정해진 음만 낼까?"
        }
-      ]
+      ],
+      "ex": 51
      }
     ]
    }
@@ -3121,6 +3242,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "phy",
   "level": "진로",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -3147,7 +3269,8 @@ window.TOC = [
         "id": "card-emq-equipotential",
         "title": "등전위면 간격만 보고 전기장의 세기를 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 82
      },
      {
       "n": 2,
@@ -3170,7 +3293,8 @@ window.TOC = [
         "id": "card-phy-touch",
         "title": "터치스크린은 손가락을 어떻게 알아챌까?"
        }
-      ]
+      ],
+      "ex": 58
      },
      {
       "n": 3,
@@ -3193,7 +3317,8 @@ window.TOC = [
         "id": "card-emq-bfield",
         "title": "도선을 둥글게 감으면 자기장은 어떻게 달라질까?"
        }
-      ]
+      ],
+      "ex": 59
      },
      {
       "n": 4,
@@ -3211,7 +3336,8 @@ window.TOC = [
         "id": "card-phy-motor",
         "title": "전동기는 어떻게 계속 돌까?"
        }
-      ]
+      ],
+      "ex": 39
      },
      {
       "n": 5,
@@ -3244,7 +3370,8 @@ window.TOC = [
         "id": "card-emq-transformer",
         "title": "변압기는 왜 교류에서만 작동할까?"
        }
-      ]
+      ],
+      "ex": 90
      },
      {
       "n": 6,
@@ -3257,7 +3384,8 @@ window.TOC = [
         "id": "card-emq-rlc",
         "title": "축전기에 담긴 에너지는 회로에서 어디로 갈까?"
        }
-      ]
+      ],
+      "ex": 137
      },
      {
       "n": 7,
@@ -3290,7 +3418,8 @@ window.TOC = [
         "id": "card-emq-semis",
         "title": "교류를 직류로, 작은 신호를 큰 신호로 어떻게 바꿀까?"
        }
-      ]
+      ],
+      "ex": 43
      }
     ]
    },
@@ -3324,7 +3453,8 @@ window.TOC = [
         "id": "text-emq-hologram",
         "title": "홀로그램은 어떻게 입체 영상을 기록할까?"
        }
-      ]
+      ],
+      "ex": 39
      },
      {
       "n": 2,
@@ -3347,7 +3477,8 @@ window.TOC = [
         "id": "card-emq-aberration",
         "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
        }
-      ]
+      ],
+      "ex": 44
      },
      {
       "n": 3,
@@ -3360,7 +3491,8 @@ window.TOC = [
         "id": "card-emq-polarizer",
         "title": "편광판 두 장 사이에 한 장을 더 끼우면 왜 빛이 다시 나올까?"
        }
-      ]
+      ],
+      "ex": 19
      },
      {
       "n": 4,
@@ -3388,7 +3520,8 @@ window.TOC = [
         "id": "card-is2-solar-cell",
         "title": "태양 전지는 햇빛을 얼마나 전기로 바꿀 수 있을까?"
        }
-      ]
+      ],
+      "ex": 47
      },
      {
       "n": 5,
@@ -3406,7 +3539,8 @@ window.TOC = [
         "id": "text-emq-fiber",
         "title": "머리카락 굵기의 유리실로 어떻게 대륙 사이의 인터넷을 이을까?"
        }
-      ]
+      ],
+      "ex": 22
      }
     ]
    },
@@ -3430,7 +3564,8 @@ window.TOC = [
         "id": "card-emq-single-photon",
         "title": "전자를 하나씩 쏘아도 간섭무늬가 생길까?"
        }
-      ]
+      ],
+      "ex": 6
      },
      {
       "n": 2,
@@ -3461,7 +3596,8 @@ window.TOC = [
         "id": "card-emq-tunnel",
         "title": "에너지가 모자란 전자가 어떻게 벽을 통과할까?"
        }
-      ]
+      ],
+      "ex": 19
      },
      {
       "n": 4,
@@ -3484,7 +3620,8 @@ window.TOC = [
         "id": "card-is1-shells",
         "title": "주기율표는 왜 이런 모양일까?"
        }
-      ]
+      ],
+      "ex": 39
      },
      {
       "n": 5,
@@ -3517,7 +3654,8 @@ window.TOC = [
         "id": "card-phy-lm-spec",
         "title": "빛만 보고 무엇이 빛나는지 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 90
      }
     ]
    }
@@ -3529,6 +3667,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "chem",
   "level": "진로",
+  "split": 7,
   "chapters": [
    {
     "n": 1,
@@ -3555,7 +3694,8 @@ window.TOC = [
         "id": "card-mateng-gas-use",
         "title": "에어백을 부풀리려면 기체가 몇 몰 필요할까?"
        }
-      ]
+      ],
+      "ex": 131
      },
      {
       "n": 2,
@@ -3568,7 +3708,8 @@ window.TOC = [
         "id": "card-mateng-partial",
         "title": "깊이 잠수할 때는 왜 공기 대신 다른 기체를 마실까?"
        }
-      ]
+      ],
+      "ex": 93
      },
      {
       "n": 3,
@@ -3591,7 +3732,8 @@ window.TOC = [
         "id": "card-mateng-bp-data",
         "title": "극성이 없는 분자도 서로 끌어당길까?"
        }
-      ]
+      ],
+      "ex": 172
      },
      {
       "n": 4,
@@ -3604,7 +3746,8 @@ window.TOC = [
         "id": "card-mateng-solids",
         "title": "소금, 얼음, 다이아몬드, 구리는 무엇으로 붙잡혀 있을까?"
        }
-      ]
+      ],
+      "ex": 93
      }
     ]
    },
@@ -3633,7 +3776,8 @@ window.TOC = [
         "id": "text-mateng-water",
         "title": "물은 왜 그렇게 특별한 액체일까?"
        }
-      ]
+      ],
+      "ex": 61
      },
      {
       "n": 2,
@@ -3646,7 +3790,8 @@ window.TOC = [
         "id": "card-mateng-colligative",
         "title": "소금물은 왜 더 높은 온도에서 끓고, 더 낮은 온도에서 얼까?"
        }
-      ]
+      ],
+      "ex": 158
      },
      {
       "n": 3,
@@ -3664,7 +3809,8 @@ window.TOC = [
         "id": "card-mateng-osmosis",
         "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
        }
-      ]
+      ],
+      "ex": 29
      }
     ]
    },
@@ -3693,7 +3839,8 @@ window.TOC = [
         "id": "card-mateng-thermo-eq",
         "title": "반응식을 두 배로 하면 ΔH는 어떻게 될까?"
        }
-      ]
+      ],
+      "ex": 86
      },
      {
       "n": 2,
@@ -3706,7 +3853,8 @@ window.TOC = [
         "id": "card-mateng-hess",
         "title": "잴 수 없는 반응의 열을 어떻게 알아낼까?"
        }
-      ]
+      ],
+      "ex": 100
      },
      {
       "n": 3,
@@ -3724,7 +3872,8 @@ window.TOC = [
         "id": "card-mateng-spont",
         "title": "열을 흡수하는 변화도 저절로 일어날 수 있을까?"
        }
-      ]
+      ],
+      "ex": 103
      }
     ]
    },
@@ -3743,7 +3892,8 @@ window.TOC = [
         "id": "card-mateng-rate-law",
         "title": "농도를 2배로 하면 반응은 몇 배 빨라질까?"
        }
-      ]
+      ],
+      "ex": 32
      },
      {
       "n": 2,
@@ -3761,7 +3911,8 @@ window.TOC = [
         "id": "card-mateng-half-life",
         "title": "약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?"
        }
-      ]
+      ],
+      "ex": 85
      },
      {
       "n": 3,
@@ -3779,7 +3930,8 @@ window.TOC = [
         "id": "card-is1-activation",
         "title": "효소는 반응을 어떻게 빠르게 할까?"
        }
-      ]
+      ],
+      "ex": 9
      },
      {
       "n": 4,
@@ -3792,7 +3944,8 @@ window.TOC = [
         "id": "card-mateng-rate-factors",
         "title": "냉장고, 잘게 썬 장작, 촉매 장치는 각각 무엇을 바꿀까?"
        }
-      ]
+      ],
+      "ex": 64
      }
     ]
    }
@@ -3804,6 +3957,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "chem",
   "level": "진로",
+  "split": 7,
   "chapters": [
    {
     "n": 1,
@@ -3830,7 +3984,8 @@ window.TOC = [
         "id": "card-rxn-conjugate",
         "title": "OH⁻가 없는 암모니아는 어떻게 염기일까?"
        }
-      ]
+      ],
+      "ex": 51
      },
      {
       "n": 2,
@@ -3858,7 +4013,8 @@ window.TOC = [
         "id": "card-rxn-weak-acid",
         "title": "같은 농도의 산인데 pH는 왜 다를까?"
        }
-      ]
+      ],
+      "ex": 48
      },
      {
       "n": 3,
@@ -3891,7 +4047,8 @@ window.TOC = [
         "id": "video-chem-titration",
         "title": "중화 적정 실험 따라 하기"
        }
-      ]
+      ],
+      "ex": 14
      },
      {
       "n": 4,
@@ -3909,7 +4066,8 @@ window.TOC = [
         "id": "card-chem-kw-temp",
         "title": "pH 7은 언제나 중성일까?"
        }
-      ]
+      ],
+      "ex": 12
      },
      {
       "n": 5,
@@ -3927,7 +4085,8 @@ window.TOC = [
         "id": "card-rxn-buffer",
         "title": "혈액의 pH는 어떻게 7.4에 머물까?"
        }
-      ]
+      ],
+      "ex": 28
      }
     ]
    },
@@ -3951,7 +4110,8 @@ window.TOC = [
         "id": "card-rxn-oxnum",
         "title": "복잡한 산화·환원 반응식의 계수는 어떻게 맞출까?"
        }
-      ]
+      ],
+      "ex": 229
      },
      {
       "n": 2,
@@ -3969,7 +4129,8 @@ window.TOC = [
         "id": "text-rxn-battery-history",
         "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
        }
-      ]
+      ],
+      "ex": 27
      },
      {
       "n": 3,
@@ -3982,7 +4143,8 @@ window.TOC = [
         "id": "card-rxn-cell",
         "title": "두 금속을 고르면 전지의 전압을 미리 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 22
      },
      {
       "n": 4,
@@ -4000,7 +4162,8 @@ window.TOC = [
         "id": "card-chem-h2oel",
         "title": "물을 전기 분해하면 왜 수소가 산소의 2배 나올까?"
        }
-      ]
+      ],
+      "ex": 34
      },
      {
       "n": 5,
@@ -4023,7 +4186,8 @@ window.TOC = [
         "id": "card-cell-etc",
         "title": "전자는 한쪽에선 내려가고, 다른 쪽에선 왜 올라갈까?"
        }
-      ]
+      ],
+      "ex": 4
      }
     ]
    },
@@ -4047,7 +4211,8 @@ window.TOC = [
         "id": "card-chem-dipole",
         "title": "CO₂는 극성 결합이 있는데 왜 무극성 분자일까?"
        }
-      ]
+      ],
+      "ex": 48
      },
      {
       "n": 2,
@@ -4078,7 +4243,8 @@ window.TOC = [
         "id": "card-rxn-polymer",
         "title": "작은 분자를 이으면 어떻게 비닐과 나일론이 될까?"
        }
-      ]
+      ],
+      "ex": 27
      },
      {
       "n": 4,
@@ -4096,7 +4262,8 @@ window.TOC = [
         "id": "video-chem-society",
         "title": "공기로 비료를, 석유로 옷을"
        }
-      ]
+      ],
+      "ex": 5
      }
     ]
    }
@@ -4108,6 +4275,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "bio",
   "level": "진로",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -4129,7 +4297,8 @@ window.TOC = [
         "id": "text-cell-carb-lipid",
         "title": "탄수화물과 지질은 어떤 종류가 있고, 어떻게 찾아낼까?"
        }
-      ]
+      ],
+      "ex": 38
      },
      {
       "n": 2,
@@ -4152,7 +4321,8 @@ window.TOC = [
         "id": "text-cell-protein",
         "title": "아미노산 한 줄이 어떻게 일하는 단백질이 될까?"
        }
-      ]
+      ],
+      "ex": 83
      },
      {
       "n": 3,
@@ -4175,7 +4345,8 @@ window.TOC = [
         "id": "card-cell-pulse",
         "title": "세포 밖으로 나갈 단백질은 어떤 길을 지날까?"
        }
-      ]
+      ],
+      "ex": 161
      },
      {
       "n": 4,
@@ -4193,7 +4364,8 @@ window.TOC = [
         "id": "text-cell-pro-eu",
         "title": "항생제는 왜 세균만 죽이고 사람 세포는 두고 갈까?"
        }
-      ]
+      ],
+      "ex": 94
      },
      {
       "n": 5,
@@ -4216,7 +4388,8 @@ window.TOC = [
         "id": "card-cell-osmosis",
         "title": "소금물에 담근 세포는 왜 쪼그라들까?"
        }
-      ]
+      ],
+      "ex": 149
      }
     ]
    },
@@ -4240,7 +4413,8 @@ window.TOC = [
         "id": "card-bio-energy",
         "title": "더 먹은 만큼 몸무게는 계속 늘까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 2,
@@ -4258,7 +4432,8 @@ window.TOC = [
         "id": "card-cell-plant-day",
         "title": "식물은 광합성으로 만든 ATP로 살아갈까?"
        }
-      ]
+      ],
+      "ex": 9
      },
      {
       "n": 3,
@@ -4276,7 +4451,8 @@ window.TOC = [
         "id": "card-cell-enzyme-lab",
         "title": "효소가 가장 잘 일하는 조건은 어떻게 찾을까?"
        }
-      ]
+      ],
+      "ex": 48
      },
      {
       "n": 4,
@@ -4299,7 +4475,8 @@ window.TOC = [
         "id": "card-cell-inhibit",
         "title": "기질을 더 넣으면 저해제를 이길 수 있을까?"
        }
-      ]
+      ],
+      "ex": 88
      },
      {
       "n": 5,
@@ -4312,7 +4489,8 @@ window.TOC = [
         "id": "text-cell-enzyme-use",
         "title": "효소는 실험실 밖 어디에서 일하고 있을까?"
        }
-      ]
+      ],
+      "ex": 3
      }
     ]
    },
@@ -4331,7 +4509,8 @@ window.TOC = [
         "id": "card-cell-mito",
         "title": "미토콘드리아의 안쪽 막은 왜 주름져 있을까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 2,
@@ -4349,7 +4528,8 @@ window.TOC = [
         "id": "card-cell-carbon",
         "title": "포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?"
        }
-      ]
+      ],
+      "ex": 98
      },
      {
       "n": 3,
@@ -4362,7 +4542,8 @@ window.TOC = [
         "id": "card-cell-chemiosmosis",
         "title": "산소를 쓰는 일과 ATP를 만드는 일은 어떻게 이어져 있을까?"
        }
-      ]
+      ],
+      "ex": 65
      },
      {
       "n": 4,
@@ -4380,7 +4561,8 @@ window.TOC = [
         "id": "text-cell-ferment-use",
         "title": "김치, 빵, 막걸리 속 미생물은 무엇을 하고 있을까?"
        }
-      ]
+      ],
+      "ex": 84
      },
      {
       "n": 5,
@@ -4398,7 +4580,8 @@ window.TOC = [
         "id": "card-cell-chloroplast",
         "title": "엽록체 속 납작한 주머니는 왜 층층이 쌓여 있을까?"
        }
-      ]
+      ],
+      "ex": 30
      },
      {
       "n": 6,
@@ -4416,7 +4599,8 @@ window.TOC = [
         "id": "card-photo-rate",
         "title": "빛을 늘리면 광합성도 계속 빨라질까?"
        }
-      ]
+      ],
+      "ex": 166
      },
      {
       "n": 7,
@@ -4434,7 +4618,8 @@ window.TOC = [
         "id": "card-cell-etc",
         "title": "전자는 한쪽에선 내려가고, 다른 쪽에선 왜 올라갈까?"
        }
-      ]
+      ],
+      "ex": 10
      },
      {
       "n": 8,
@@ -4452,7 +4637,8 @@ window.TOC = [
         "id": "card-cell-engelmann",
         "title": "세균을 모아 광합성에 쓰이는 빛의 색을 알아낼 수 있을까?"
        }
-      ]
+      ],
+      "ex": 28
      }
     ]
    }
@@ -4464,6 +4650,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "bio",
   "level": "진로",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -4490,7 +4677,8 @@ window.TOC = [
         "id": "card-gene-sexlinked",
         "title": "색맹은 왜 남자에게 더 많을까?"
        }
-      ]
+      ],
+      "ex": 186
      },
      {
       "n": 2,
@@ -4508,7 +4696,8 @@ window.TOC = [
         "id": "card-gene-pedigree",
         "title": "가계도만 보고 유전 방식을 가려낼 수 있을까?"
        }
-      ]
+      ],
+      "ex": 92
      },
      {
       "n": 3,
@@ -4521,7 +4710,8 @@ window.TOC = [
         "id": "card-gene-polygenic",
         "title": "키는 왜 ‘크다·작다’ 두 가지가 아니라 고르게 이어질까?"
        }
-      ]
+      ],
+      "ex": 64
      },
      {
       "n": 4,
@@ -4549,7 +4739,8 @@ window.TOC = [
         "id": "text-gene-disorders",
         "title": "유전병은 원인에 따라 어떻게 나눌까?"
        }
-      ]
+      ],
+      "ex": 120
      },
      {
       "n": 5,
@@ -4572,7 +4763,8 @@ window.TOC = [
         "id": "text-gene-dna-history",
         "title": "DNA가 유전 물질이고 이중 나선이라는 것은 어떻게 밝혀졌을까?"
        }
-      ]
+      ],
+      "ex": 84
      },
      {
       "n": 6,
@@ -4595,7 +4787,8 @@ window.TOC = [
         "id": "text-cell-pro-eu",
         "title": "항생제는 왜 세균만 죽이고 사람 세포는 두고 갈까?"
        }
-      ]
+      ],
+      "ex": 1
      },
      {
       "n": 7,
@@ -4608,7 +4801,8 @@ window.TOC = [
         "id": "card-gene-replication",
         "title": "DNA가 복제될 때 원래 가닥은 어디로 갈까?"
        }
-      ]
+      ],
+      "ex": 65
      }
     ]
    },
@@ -4632,7 +4826,8 @@ window.TOC = [
         "id": "card-gene-central",
         "title": "핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?"
        }
-      ]
+      ],
+      "ex": 63
      },
      {
       "n": 2,
@@ -4655,7 +4850,8 @@ window.TOC = [
         "id": "card-is1-mutation",
         "title": "염기 하나가 바뀌면 무슨 일이 생길까?"
        }
-      ]
+      ],
+      "ex": 60
      },
      {
       "n": 3,
@@ -4668,7 +4864,8 @@ window.TOC = [
         "id": "card-gene-lac",
         "title": "대장균은 젖당 분해 효소를 언제 만들까?"
        }
-      ]
+      ],
+      "ex": 69
      },
      {
       "n": 4,
@@ -4681,7 +4878,8 @@ window.TOC = [
         "id": "card-gene-differentiation",
         "title": "같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?"
        }
-      ]
+      ],
+      "ex": 16
      },
      {
       "n": 5,
@@ -4713,7 +4911,8 @@ window.TOC = [
         "id": "text-gene-biotech-history",
         "title": "생명공학은 어떤 도구를 하나씩 손에 넣었을까?"
        }
-      ]
+      ],
+      "ex": 52
      },
      {
       "n": 2,
@@ -4731,7 +4930,8 @@ window.TOC = [
         "id": "text-gene-therapies",
         "title": "단일클론항체, 줄기세포, 유전자 편집은 어떤 병을 고칠까?"
        }
-      ]
+      ],
+      "ex": 15
      },
      {
       "n": 3,
@@ -4749,7 +4949,8 @@ window.TOC = [
         "id": "card-is2-pcr",
         "title": "PCR은 아주 적은 양의 바이러스를 어떻게 찾아낼까?"
        }
-      ]
+      ],
+      "ex": 1
      },
      {
       "n": 4,
@@ -4767,7 +4968,8 @@ window.TOC = [
         "id": "card-bio-selection",
         "title": "진화는 ‘더 나아지는 것’일까?"
        }
-      ]
+      ],
+      "ex": 12
      },
      {
       "n": 5,
@@ -4797,6 +4999,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "earth",
   "level": "진로",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -4823,7 +5026,8 @@ window.TOC = [
         "id": "text-esys-early-earth",
         "title": "녹은 암석 덩어리가 어떻게 바다와 대기를 가진 행성이 되었을까?"
        }
-      ]
+      ],
+      "ex": 98
      },
      {
       "n": 2,
@@ -4846,7 +5050,8 @@ window.TOC = [
         "id": "card-is1-water-budget",
         "title": "바다는 왜 넘치지도, 마르지도 않을까?"
        }
-      ]
+      ],
+      "ex": 81
      },
      {
       "n": 3,
@@ -4869,7 +5074,8 @@ window.TOC = [
         "id": "card-esys-hotspot",
         "title": "하와이 섬들의 나이로 판의 속도를 잴 수 있을까?"
        }
-      ]
+      ],
+      "ex": 325
      },
      {
       "n": 4,
@@ -4897,7 +5103,8 @@ window.TOC = [
         "id": "card-esys-volcano",
         "title": "어떤 화산은 흐르고, 어떤 화산은 터지는 까닭은?"
        }
-      ]
+      ],
+      "ex": 57
      },
      {
       "n": 5,
@@ -4910,7 +5117,8 @@ window.TOC = [
         "id": "card-esys-seismic",
         "title": "지진파가 닿지 않는 곳이 왜 생길까?"
        }
-      ]
+      ],
+      "ex": 188
      }
     ]
    },
@@ -4934,7 +5142,8 @@ window.TOC = [
         "id": "card-esys-ekman",
         "title": "바람과 직각으로 흐른 물이 어떻게 거대한 해류가 될까?"
        }
-      ]
+      ],
+      "ex": 96
      },
      {
       "n": 2,
@@ -4947,7 +5156,8 @@ window.TOC = [
         "id": "card-esys-waves",
         "title": "파도는 왜 해안에 가까워지면 느려지고 높아질까?"
        }
-      ]
+      ],
+      "ex": 51
      },
      {
       "n": 3,
@@ -4970,7 +5180,8 @@ window.TOC = [
         "id": "text-esys-surge",
         "title": "해일은 무엇 때문에 생기고, 어떻게 대비할까?"
        }
-      ]
+      ],
+      "ex": 23
      },
      {
       "n": 4,
@@ -4983,7 +5194,8 @@ window.TOC = [
         "id": "card-esys-tide",
         "title": "밀물과 썰물은 왜 하루에 두 번일까, 그리고 왜 매일 달라질까?"
        }
-      ]
+      ],
+      "ex": 67
      }
     ]
    },
@@ -5012,7 +5224,8 @@ window.TOC = [
         "id": "card-esys-absorb",
         "title": "공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?"
        }
-      ]
+      ],
+      "ex": 24
      },
      {
       "n": 2,
@@ -5030,7 +5243,8 @@ window.TOC = [
         "id": "card-is1-earth-energy",
         "title": "지구시스템을 움직이는 에너지는 어디서 올까?"
        }
-      ]
+      ],
+      "ex": 60
      },
      {
       "n": 3,
@@ -5058,7 +5272,8 @@ window.TOC = [
         "id": "card-earth-thunder",
         "title": "뇌우는 왜 여름 오후에 잘 생길까?"
        }
-      ]
+      ],
+      "ex": 89
      },
      {
       "n": 4,
@@ -5071,7 +5286,8 @@ window.TOC = [
         "id": "card-esys-hydro",
         "title": "공기는 왜 위로 떠오르지도, 가라앉지도 않을까?"
        }
-      ]
+      ],
+      "ex": 29
      },
      {
       "n": 5,
@@ -5089,7 +5305,8 @@ window.TOC = [
         "id": "card-esys-winds",
         "title": "바람은 왜 등압선을 따라, 또는 비스듬히 불까?"
        }
-      ]
+      ],
+      "ex": 77
      },
      {
       "n": 6,
@@ -5107,7 +5324,8 @@ window.TOC = [
         "id": "card-esys-rossby",
         "title": "굽이치는 편서풍 아래에서 저기압은 어디에 생길까?"
        }
-      ]
+      ],
+      "ex": 59
      }
     ]
    }
@@ -5119,6 +5337,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "earth",
   "level": "진로",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -5140,7 +5359,8 @@ window.TOC = [
         "id": "text-space-exploration",
         "title": "탐사선과 인공위성은 무엇을 알아냈을까?"
        }
-      ]
+      ],
+      "ex": 21
      },
      {
       "n": 2,
@@ -5158,7 +5378,8 @@ window.TOC = [
         "id": "text-space-weather",
         "title": "태양이 폭발하면 지구에서는 무슨 일이 생길까?"
        }
-      ]
+      ],
+      "ex": 12
      },
      {
       "n": 3,
@@ -5181,7 +5402,8 @@ window.TOC = [
         "id": "card-earth-retro",
         "title": "행성은 왜 가끔 뒤로 가는 것처럼 보일까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 4,
@@ -5194,7 +5416,8 @@ window.TOC = [
         "id": "card-space-smallbodies",
         "title": "명왕성은 왜 행성에서 빠졌을까?"
        }
-      ]
+      ],
+      "ex": 61
      },
      {
       "n": 5,
@@ -5212,7 +5435,8 @@ window.TOC = [
         "id": "card-space-exoplanet",
         "title": "보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?"
        }
-      ]
+      ],
+      "ex": 160
      }
     ]
    },
@@ -5236,7 +5460,8 @@ window.TOC = [
         "id": "card-space-sun",
         "title": "같은 태양이 파장마다 왜 전혀 다르게 보일까?"
        }
-      ]
+      ],
+      "ex": 26
      },
      {
       "n": 2,
@@ -5249,7 +5474,8 @@ window.TOC = [
         "id": "card-space-distance",
         "title": "별까지의 거리는 어떤 사다리를 타고 잴까?"
        }
-      ]
+      ],
+      "ex": 23
      },
      {
       "n": 3,
@@ -5262,7 +5488,8 @@ window.TOC = [
         "id": "card-space-proper-motion",
         "title": "10만 년 뒤 북두칠성은 어떤 모양일까?"
        }
-      ]
+      ],
+      "ex": 13
      },
      {
       "n": 4,
@@ -5280,7 +5507,8 @@ window.TOC = [
         "id": "card-space-binary",
         "title": "서로를 도는 두 별은 어떻게 별의 저울이 될까?"
        }
-      ]
+      ],
+      "ex": 9
      },
      {
       "n": 5,
@@ -5303,7 +5531,8 @@ window.TOC = [
         "id": "card-space-variables",
         "title": "별의 밝기가 변하는 모양만 보고 무슨 일인지 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 10
      }
     ]
    },
@@ -5322,7 +5551,8 @@ window.TOC = [
         "id": "card-space-cluster",
         "title": "성단 사진 한 장으로 나이와 거리를 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 34
      },
      {
       "n": 2,
@@ -5335,7 +5565,8 @@ window.TOC = [
         "id": "card-space-extinction",
         "title": "은하수의 검은 틈에는 정말 별이 없을까?"
        }
-      ]
+      ],
+      "ex": 29
      },
      {
       "n": 3,
@@ -5353,7 +5584,8 @@ window.TOC = [
         "id": "card-space-rotation",
         "title": "은하의 바깥쪽 별은 왜 느려지지 않을까?"
        }
-      ]
+      ],
+      "ex": 29
      },
      {
       "n": 4,
@@ -5371,7 +5603,8 @@ window.TOC = [
         "id": "card-space-redshift-survey",
         "title": "하늘 사진에서는 안 보이던 우주의 구조가 스펙트럼으로 어떻게 드러날까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 5,
@@ -5399,7 +5632,8 @@ window.TOC = [
         "id": "text-space-large-structure",
         "title": "은하 너머에는 어떤 구조가 있을까?"
        }
-      ]
+      ],
+      "ex": 11
      }
     ]
    }
@@ -5411,6 +5645,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "common",
   "level": "공통",
+  "split": 2,
   "chapters": [
    {
     "n": 1,
@@ -5540,6 +5775,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "common",
   "level": "공통",
+  "split": 3,
   "chapters": [
    {
     "n": 1,
@@ -5664,6 +5900,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "fusion",
   "level": "융합",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -6047,6 +6284,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "fusion",
   "level": "융합",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -6359,6 +6597,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "fusion",
   "level": "융합",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -6651,6 +6890,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "phy",
   "level": "고급",
+  "split": 12,
   "chapters": [
    {
     "n": 1,
@@ -6672,7 +6912,8 @@ window.TOC = [
         "id": "card-adphy-drag",
         "title": "공기 저항이 있으면 포물선은 어떻게 찌그러질까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -6695,7 +6936,8 @@ window.TOC = [
         "id": "card-adphy-collide2d",
         "title": "당구공은 왜 직각으로 갈라질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -6718,7 +6960,8 @@ window.TOC = [
         "id": "card-adphy-spin",
         "title": "회전의자에서 팔을 오므리면 왜 빨리 돌까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -6741,7 +6984,8 @@ window.TOC = [
         "id": "card-adphy-orbit",
         "title": "인공위성은 얼마나 빨리 던져야 지구를 돌까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -6759,7 +7003,8 @@ window.TOC = [
         "id": "card-adphy-process",
         "title": "같은 부피만큼 팽창해도 필요한 열은 왜 다를까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -6782,7 +7027,8 @@ window.TOC = [
         "id": "card-adphy-carnot",
         "title": "열기관의 효율에는 왜 넘을 수 없는 한계가 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -6816,7 +7062,8 @@ window.TOC = [
         "id": "card-adphy-dipole",
         "title": "알짜 전하가 0인 쌍극자는 왜 전기장을 만들고 회전할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -6844,7 +7091,8 @@ window.TOC = [
         "id": "card-labphy-capacitor",
         "title": "포일과 종이로 만든 축전기로 C = εA/d를 확인할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -6877,7 +7125,8 @@ window.TOC = [
         "id": "card-labphy-rc",
         "title": "축전기가 다 차는 데 걸리는 시간은 무엇이 정할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -6895,7 +7144,8 @@ window.TOC = [
         "id": "text-adphy-maxwell",
         "title": "맥스웰은 어떻게 전기와 자기의 식에서 빛의 속력을 꺼냈을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -6913,7 +7163,8 @@ window.TOC = [
         "id": "card-adphy-kirchhoff",
         "title": "전류 방향을 거꾸로 가정해도 답이 맞을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -6941,7 +7192,8 @@ window.TOC = [
         "id": "card-labphy-rlc",
         "title": "진동수를 바꾸면 RLC 회로의 전류는 어디에서 가장 클까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -6975,7 +7227,8 @@ window.TOC = [
         "id": "card-emq-aberration",
         "title": "렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -6998,7 +7251,8 @@ window.TOC = [
         "id": "card-adphy-interferometer",
         "title": "빛의 파장으로 1만분의 1 mm를 잴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -7021,7 +7275,8 @@ window.TOC = [
         "id": "card-adphy-rayleigh",
         "title": "망원경은 왜 클수록 더 가까이 붙은 두 별을 가를까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -7044,7 +7299,8 @@ window.TOC = [
         "id": "text-adphy-display",
         "title": "휴대 전화 화면 속에는 편광판이 몇 장 들어 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -7063,7 +7319,8 @@ window.TOC = [
         "id": "card-adphy-frames",
         "title": "돌아가는 회전판 위에서 똑바로 민 공은 왜 휘어 갈까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -7101,7 +7358,8 @@ window.TOC = [
         "id": "text-mech-gr",
         "title": "중력은 힘일까, 휘어진 시공간일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -7134,7 +7392,8 @@ window.TOC = [
         "id": "card-adphy-davisson",
         "title": "니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -7157,7 +7416,8 @@ window.TOC = [
         "id": "text-adphy-complementarity",
         "title": "전자가 어느 슬릿을 지났는지 보면 왜 간섭무늬가 사라질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -7195,7 +7455,8 @@ window.TOC = [
         "id": "text-adphy-nano",
         "title": "물질을 나노미터 크기로 줄이면 무엇이 달라질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -7223,7 +7484,8 @@ window.TOC = [
         "id": "card-adphy-gamow",
         "title": "태양 중심은 쿨롱 장벽을 넘기에 너무 차가운데, 어떻게 핵융합이 일어날까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -7235,6 +7497,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "chem",
   "level": "고급",
+  "split": 17,
   "chapters": [
    {
     "n": 1,
@@ -7256,7 +7519,8 @@ window.TOC = [
         "id": "card-adchem-wavefn",
         "title": "파동 함수의 그래프에서 무엇을 읽을 수 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 2,
@@ -7274,7 +7538,8 @@ window.TOC = [
         "id": "card-adchem-config",
         "title": "전이 원소의 전자 배치는 전형 원소와 무엇이 다를까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 3,
@@ -7287,7 +7552,8 @@ window.TOC = [
         "id": "card-adchem-potential",
         "title": "두 입자를 가까이 가져가면 에너지는 어떻게 변할까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 4,
@@ -7305,7 +7571,8 @@ window.TOC = [
         "id": "card-adchem-formal",
         "title": "세 결합의 길이가 같은 질산 이온을 루이스 구조식으로 어떻게 나타낼까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 5,
@@ -7333,7 +7600,8 @@ window.TOC = [
         "id": "card-labchem-aromatic",
         "title": "벤젠에 이중 결합이 세 개 있다면, 왜 브로민수의 색을 없애지 못할까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 6,
@@ -7351,7 +7619,8 @@ window.TOC = [
         "id": "card-labchem-hydrocarbon",
         "title": "탄소 여섯 개짜리 탄화수소들은 왜 끓는점도, 브로민수에 대한 반응도 다를까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 7,
@@ -7379,7 +7648,8 @@ window.TOC = [
         "id": "card-labchem-alcohol-ox",
         "title": "세 가지 알코올을 똑같이 산화시켰는데, 생성물은 왜 서로 다를까?"
        }
-      ]
+      ],
+      "ai": 3
      }
     ]
    },
@@ -7403,7 +7673,8 @@ window.TOC = [
         "id": "card-adchem-maxwell",
         "title": "같은 온도의 기체 분자는 모두 같은 속력으로 움직일까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 2,
@@ -7421,7 +7692,8 @@ window.TOC = [
         "id": "card-adchem-stopcock",
         "title": "콕을 열어 두 기체를 섞으면 각 기체의 압력은 어떻게 될까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 3,
@@ -7434,7 +7706,8 @@ window.TOC = [
         "id": "card-adchem-real-gas",
         "title": "높은 압력의 기체는 왜 PV = nRT를 따르지 않을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 4,
@@ -7457,7 +7730,8 @@ window.TOC = [
         "id": "card-adchem-capillary",
         "title": "가는 유리관 속 물은 왜 저절로 올라가고, 수은은 내려갈까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 5,
@@ -7480,7 +7754,8 @@ window.TOC = [
         "id": "card-adchem-ionic-cell",
         "title": "NaCl과 CsCl은 둘 다 1 : 1 화합물인데, 왜 결정 구조가 다를까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 6,
@@ -7503,7 +7778,8 @@ window.TOC = [
         "id": "card-adchem-solubility",
         "title": "온도를 올리면 왜 어떤 염은 더 녹고 어떤 염은 덜 녹을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 7,
@@ -7526,7 +7802,8 @@ window.TOC = [
         "id": "card-mateng-osmosis",
         "title": "바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?"
        }
-      ]
+      ],
+      "ai": 3
      }
     ]
    },
@@ -7550,7 +7827,8 @@ window.TOC = [
         "id": "card-adchem-path",
         "title": "같은 곳에 도착해도 길에 따라 열과 일이 달라질까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 2,
@@ -7573,7 +7851,8 @@ window.TOC = [
         "id": "card-labchem-calorimetry",
         "title": "두 단계로 잰 반응열의 합은 한 번에 잰 반응열과 같을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 3,
@@ -7591,7 +7870,8 @@ window.TOC = [
         "id": "card-adchem-suniv",
         "title": "물이 얼면 질서가 생기는데, 왜 저절로 얼까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 4,
@@ -7609,7 +7889,8 @@ window.TOC = [
         "id": "card-adchem-gibbs-t",
         "title": "석회석은 몇 도부터 저절로 분해될까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 5,
@@ -7632,7 +7913,8 @@ window.TOC = [
         "id": "card-labchem-redox-titration",
         "title": "지시약 없이 적정이 끝난 순간을 어떻게 알까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 6,
@@ -7655,7 +7937,8 @@ window.TOC = [
         "id": "card-labchem-cell-emf",
         "title": "전지의 전압은 금속이 정할까, 용액이 정할까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 7,
@@ -7673,7 +7956,8 @@ window.TOC = [
         "id": "text-rxn-battery-history",
         "title": "개구리 다리에서 스마트폰 배터리까지, 전지는 어떻게 발전했을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 8,
@@ -7696,7 +7980,8 @@ window.TOC = [
         "id": "card-labchem-electrolysis",
         "title": "흘린 전하량으로 전극에 생길 물질의 양을 미리 맞힐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      }
     ]
    },
@@ -7725,7 +8010,8 @@ window.TOC = [
         "id": "card-labchem-fescn",
         "title": "섞는 양을 바꿔도 변하지 않는 값이 정말 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 2,
@@ -7748,7 +8034,8 @@ window.TOC = [
         "id": "card-adchem-vanthoff",
         "title": "온도를 바꾸면 평형 상수는 왜, 얼마나 변할까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 3,
@@ -7766,7 +8053,8 @@ window.TOC = [
         "id": "card-adchem-ksp",
         "title": "Ksp가 작은 염이 언제나 덜 녹을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 4,
@@ -7784,7 +8072,8 @@ window.TOC = [
         "id": "card-adchem-lewis",
         "title": "H⁺가 없는 금속 이온은 어떻게 물을 산성으로 만들까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 5,
@@ -7807,7 +8096,8 @@ window.TOC = [
         "id": "card-rxn-hydrolysis",
         "title": "중화로 만든 염의 수용액은 왜 중성이 아닐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 6,
@@ -7830,7 +8120,8 @@ window.TOC = [
         "id": "card-adchem-polyprotic",
         "title": "인산을 적정하면 pH는 왜 두 번 뛸까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 7,
@@ -7853,7 +8144,8 @@ window.TOC = [
         "id": "card-labchem-rate-design",
         "title": "무엇을 고정해야 \"이 요인이 속도를 바꿨다\"고 말할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 8,
@@ -7871,7 +8163,8 @@ window.TOC = [
         "id": "card-adchem-integrated",
         "title": "농도–시간 자료만 보고 반응 차수를 알 수 있을까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 9,
@@ -7889,7 +8182,8 @@ window.TOC = [
         "id": "card-adchem-collision",
         "title": "온도를 올리면 충돌이 늘어서 빨라질까, 충돌이 세져서 빨라질까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 10,
@@ -7902,7 +8196,8 @@ window.TOC = [
         "id": "card-adchem-mechanism",
         "title": "두 단계 반응에서 전체 빠르기는 누가 정할까?"
        }
-      ]
+      ],
+      "ai": 3
      },
      {
       "n": 11,
@@ -7920,7 +8215,8 @@ window.TOC = [
         "id": "text-adchem-catalysts",
         "title": "촉매는 어떤 방식으로 새 경로를 열까?"
        }
-      ]
+      ],
+      "ai": 3
      }
     ]
    }
@@ -7932,6 +8228,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "bio",
   "level": "고급",
+  "split": 11,
   "chapters": [
    {
     "n": 1,
@@ -8398,6 +8695,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "earth",
   "level": "고급",
+  "split": 17,
   "chapters": [
    {
     "n": 1,
@@ -9259,6 +9557,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "fusion",
   "level": "고급",
+  "split": 6,
   "chapters": [
    {
     "n": 1,
@@ -9497,6 +9796,7 @@ window.TOC = [
   "meta": "과학계열 진로선택",
   "track": "fusion",
   "level": "고급",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -9854,6 +10154,7 @@ window.TOC = [
   "meta": "과학계열 융합선택",
   "track": "phy",
   "level": "실험",
+  "split": 18,
   "chapters": [
    {
     "n": 1,
@@ -10423,6 +10724,7 @@ window.TOC = [
   "meta": "과학계열 융합선택",
   "track": "chem",
   "level": "실험",
+  "split": 16,
   "chapters": [
    {
     "n": 1,
@@ -10937,6 +11239,7 @@ window.TOC = [
   "meta": "과학계열 융합선택",
   "track": "bio",
   "level": "실험",
+  "split": 20,
   "chapters": [
    {
     "n": 1,
@@ -11576,6 +11879,7 @@ window.TOC = [
   "meta": "과학계열 융합선택",
   "track": "earth",
   "level": "실험",
+  "split": 19,
   "chapters": [
    {
     "n": 1,
@@ -12202,6 +12506,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "math",
   "level": "공통",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -12223,7 +12528,8 @@ window.TOC = [
         "id": "card-cm1-poly-div",
         "title": "다항식의 나눗셈은 언제 멈출까?"
        }
-      ]
+      ],
+      "ex": 150
      },
      {
       "n": 2,
@@ -12246,7 +12552,8 @@ window.TOC = [
         "id": "card-cm1-synthetic",
         "title": "조립제법은 나눗셈의 어느 부분을 줄여 쓴 걸까?"
        }
-      ]
+      ],
+      "ex": 181
      },
      {
       "n": 3,
@@ -12269,7 +12576,8 @@ window.TOC = [
         "id": "card-cm1-factor-roots",
         "title": "공식에 맞지 않는 삼차식은 어떻게 인수분해할까?"
        }
-      ]
+      ],
+      "ex": 61
      }
     ]
    },
@@ -12293,7 +12601,8 @@ window.TOC = [
         "id": "card-cm1-complex-arith",
         "title": "복소수로 나눗셈은 어떻게 할까?"
        }
-      ]
+      ],
+      "ex": 135
      },
      {
       "n": 2,
@@ -12311,7 +12620,8 @@ window.TOC = [
         "id": "card-cm1-root-path",
         "title": "두 실근이 허근으로 바뀌는 순간 무슨 일이 생길까?"
        }
-      ]
+      ],
+      "ex": 34
      },
      {
       "n": 3,
@@ -12329,7 +12639,8 @@ window.TOC = [
         "id": "card-cm1-sum-product",
         "title": "둘레와 넓이만 알면 직사각형의 가로, 세로를 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 72
      },
      {
       "n": 4,
@@ -12347,7 +12658,8 @@ window.TOC = [
         "id": "card-cm1-level-line",
         "title": "x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?"
        }
-      ]
+      ],
+      "ex": 45
      },
      {
       "n": 5,
@@ -12365,7 +12677,8 @@ window.TOC = [
         "id": "card-cm1-tangent-point",
         "title": "한 점에서 포물선에 그을 수 있는 접선은 몇 개일까?"
        }
-      ]
+      ],
+      "ex": 85
      },
      {
       "n": 6,
@@ -12383,7 +12696,8 @@ window.TOC = [
         "id": "card-cm1-fence",
         "title": "벽에 붙여 울타리를 칠 때 가장 넓은 땅은 언제 생길까?"
        }
-      ]
+      ],
+      "ex": 71
      },
      {
       "n": 7,
@@ -12401,7 +12715,8 @@ window.TOC = [
         "id": "card-cm1-biquad",
         "title": "사차방정식을 이차방정식처럼 풀 수 있을까?"
        }
-      ]
+      ],
+      "ex": 73
      },
      {
       "n": 8,
@@ -12419,7 +12734,8 @@ window.TOC = [
         "id": "card-cm1-factor-system",
         "title": "이차식 두 개로 된 연립방정식은 어떻게 풀까?"
        }
-      ]
+      ],
+      "ex": 48
      },
      {
       "n": 9,
@@ -12437,7 +12753,8 @@ window.TOC = [
         "id": "card-cm1-ineq-system",
         "title": "두 부등식을 함께 만족하는 범위는 어디일까?"
        }
-      ]
+      ],
+      "ex": 21
      },
      {
       "n": 10,
@@ -12455,7 +12772,8 @@ window.TOC = [
         "id": "card-cm1-abs-cases",
         "title": "절댓값이 두 개면 어디서 나누어 풀까?"
        }
-      ]
+      ],
+      "ex": 36
      },
      {
       "n": 11,
@@ -12473,7 +12791,8 @@ window.TOC = [
         "id": "card-cm1-quad-system",
         "title": "이차부등식이 섞인 연립부등식은 어떻게 풀까?"
        }
-      ]
+      ],
+      "ex": 106
      }
     ]
    },
@@ -12502,7 +12821,8 @@ window.TOC = [
         "id": "card-cm1-divisors",
         "title": "약수의 개수는 왜 지수에 1을 더해 곱할까?"
        }
-      ]
+      ],
+      "ex": 36
      },
      {
       "n": 2,
@@ -12520,7 +12840,8 @@ window.TOC = [
         "id": "card-cm1-perm-tree",
         "title": "조건이 붙은 줄 세우기는 어떻게 셀까?"
        }
-      ]
+      ],
+      "ex": 49
      },
      {
       "n": 3,
@@ -12538,7 +12859,8 @@ window.TOC = [
         "id": "card-cm1-comb-bars",
         "title": "뽑는 수 r가 바뀌면 조합의 수는 어떻게 변할까?"
        }
-      ]
+      ],
+      "ex": 55
      }
     ]
    },
@@ -12562,7 +12884,8 @@ window.TOC = [
         "id": "card-cm1-road-matrix",
         "title": "도로 지도를 수의 표로 바꿀 수 있을까?"
        }
-      ]
+      ],
+      "ex": 38
      },
      {
       "n": 2,
@@ -12580,7 +12903,8 @@ window.TOC = [
         "id": "card-cm1-matrix-mult",
         "title": "행렬의 곱은 왜 행과 열을 짝지어 계산할까?"
        }
-      ]
+      ],
+      "ex": 253
      }
     ]
    }
@@ -12592,6 +12916,7 @@ window.TOC = [
   "meta": "고1 공통",
   "track": "math",
   "level": "공통",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -12613,7 +12938,8 @@ window.TOC = [
         "id": "card-cm2-internal-div",
         "title": "선분을 m : n으로 나누는 점은 어디에 있을까?"
        }
-      ]
+      ],
+      "ex": 80
      },
      {
       "n": 2,
@@ -12631,7 +12957,8 @@ window.TOC = [
         "id": "card-cm2-perp",
         "title": "수직인 두 직선의 기울기는 어떤 관계일까?"
        }
-      ]
+      ],
+      "ex": 46
      },
      {
       "n": 3,
@@ -12649,7 +12976,8 @@ window.TOC = [
         "id": "card-cm2-tri-area",
         "title": "꼭짓점의 좌표만으로 삼각형의 넓이를 구할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 31
      },
      {
       "n": 4,
@@ -12667,7 +12995,8 @@ window.TOC = [
         "id": "card-cm2-general-circle",
         "title": "x² + y² + Ax + By + C = 0은 언제 원이 될까?"
        }
-      ]
+      ],
+      "ex": 32
      },
      {
       "n": 5,
@@ -12685,7 +13014,8 @@ window.TOC = [
         "id": "card-cm2-tangent",
         "title": "원 위의 한 점에서 그은 접선의 방정식은?"
        }
-      ]
+      ],
+      "ex": 62
      },
      {
       "n": 6,
@@ -12703,7 +13033,8 @@ window.TOC = [
         "id": "card-cm2-translate-graph",
         "title": "도형을 옮기면 방정식의 부호는 왜 반대로 바뀔까?"
        }
-      ]
+      ],
+      "ex": 31
      },
      {
       "n": 7,
@@ -12726,7 +13057,8 @@ window.TOC = [
         "id": "card-cm2-shortest-path",
         "title": "강가에 들렀다 가는 가장 짧은 길은 어디일까?"
        }
-      ]
+      ],
+      "ex": 43
      }
     ]
    },
@@ -12750,7 +13082,8 @@ window.TOC = [
         "id": "card-cm2-set-interval",
         "title": "같은 범위인데 원소가 몇 개인지가 왜 달라질까?"
        }
-      ]
+      ],
+      "ex": 5
      },
      {
       "n": 2,
@@ -12768,7 +13101,8 @@ window.TOC = [
         "id": "card-cm2-subset-count",
         "title": "원소가 하나 늘면 부분집합은 몇 개 늘까?"
        }
-      ]
+      ],
+      "ex": 43
      },
      {
       "n": 3,
@@ -12786,7 +13120,8 @@ window.TOC = [
         "id": "card-cm2-set-laws",
         "title": "두 식이 같은 집합인지 그림으로 어떻게 확인할까?"
        }
-      ]
+      ],
+      "ex": 151
      },
      {
       "n": 4,
@@ -12809,7 +13144,8 @@ window.TOC = [
         "id": "text-cm2-prop-terms",
         "title": "정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?"
        }
-      ]
+      ],
+      "ex": 42
      },
      {
       "n": 5,
@@ -12827,7 +13163,8 @@ window.TOC = [
         "id": "card-cm2-contra-venn",
         "title": "명제와 대우의 참·거짓은 왜 항상 같을까?"
        }
-      ]
+      ],
+      "ex": 8
      },
      {
       "n": 6,
@@ -12845,7 +13182,8 @@ window.TOC = [
         "id": "card-cm2-cond-plane",
         "title": "두 변수의 조건은 반례를 어디에서 찾을까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 7,
@@ -12868,7 +13206,8 @@ window.TOC = [
         "id": "text-cm2-proof-ways",
         "title": "어떤 명제에 어떤 증명법을 쓸까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 8,
@@ -12886,7 +13225,8 @@ window.TOC = [
         "id": "card-cm2-amgm",
         "title": "두 양수의 산술평균과 기하평균 가운데 어느 쪽이 클까?"
        }
-      ]
+      ],
+      "ex": 35
      }
     ]
    },
@@ -12910,7 +13250,8 @@ window.TOC = [
         "id": "card-cm2-func-graph",
         "title": "그래프만 보고 함수인지 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 40
      },
      {
       "n": 2,
@@ -12928,7 +13269,8 @@ window.TOC = [
         "id": "card-cm2-compose-machine",
         "title": "합성함수의 식과 값은 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 59
      },
      {
       "n": 3,
@@ -12946,7 +13288,8 @@ window.TOC = [
         "id": "card-cm2-inverse-graph",
         "title": "역함수는 어떻게 구하고, 그래프는 어디에 있을까?"
        }
-      ]
+      ],
+      "ex": 75
      },
      {
       "n": 4,
@@ -12964,7 +13307,8 @@ window.TOC = [
         "id": "card-cm2-rational-form",
         "title": "y = (ax + b)/(cx + d)의 점근선은 어떻게 찾을까?"
        }
-      ]
+      ],
+      "ex": 112
      },
      {
       "n": 5,
@@ -12982,7 +13326,8 @@ window.TOC = [
         "id": "card-cm2-sqrt-line",
         "title": "무리함수의 그래프와 직선은 몇 번 만날까?"
        }
-      ]
+      ],
+      "ex": 96
      }
     ]
    }
@@ -12994,6 +13339,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "math",
   "level": "일반",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -13015,7 +13361,8 @@ window.TOC = [
         "id": "card-alg-root-rules",
         "title": "거듭제곱근끼리 곱하면 왜 근호 하나로 합쳐질까?"
        }
-      ]
+      ],
+      "ex": 80
      },
      {
       "n": 2,
@@ -13038,7 +13385,8 @@ window.TOC = [
         "id": "card-alg-real-exp",
         "title": "2√²처럼 지수가 무리수인 수는 어떻게 정할까?"
        }
-      ]
+      ],
+      "ex": 25
      },
      {
       "n": 3,
@@ -13061,7 +13409,8 @@ window.TOC = [
         "id": "card-alg-exp-simplify",
         "title": "복잡한 거듭제곱 식을 밑 하나로 정리하려면?"
        }
-      ]
+      ],
+      "ex": 245
      },
      {
       "n": 4,
@@ -13084,7 +13433,8 @@ window.TOC = [
         "id": "card-alg-log-base-change",
         "title": "밑이 다른 로그는 서로 어떤 관계일까?"
        }
-      ]
+      ],
+      "ex": 291
      },
      {
       "n": 5,
@@ -13102,7 +13452,8 @@ window.TOC = [
         "id": "card-alg-log-scale",
         "title": "규모 7 지진은 규모 5 지진보다 몇 배 셀까?"
        }
-      ]
+      ],
+      "ex": 63
      },
      {
       "n": 6,
@@ -13120,7 +13471,8 @@ window.TOC = [
         "id": "card-alg-log-func-def",
         "title": "지수함수의 화살표를 거꾸로 하면 함수가 될까?"
        }
-      ]
+      ],
+      "ex": 8
      },
      {
       "n": 7,
@@ -13138,7 +13490,8 @@ window.TOC = [
         "id": "card-alg-inverse-graph",
         "title": "로그함수의 그래프는 지수함수의 그래프와 어떤 관계일까?"
        }
-      ]
+      ],
+      "ex": 433
      },
      {
       "n": 8,
@@ -13156,7 +13509,8 @@ window.TOC = [
         "id": "card-alg-growth-time",
         "title": "탄소-14가 4분의 1만 남았다면 몇 년이 지났을까?"
        }
-      ]
+      ],
+      "ex": 318
      }
     ]
    },
@@ -13180,7 +13534,8 @@ window.TOC = [
         "id": "card-alg-radian",
         "title": "각의 크기를 길이의 비로 잴 수 있을까?"
        }
-      ]
+      ],
+      "ex": 39
      },
      {
       "n": 2,
@@ -13203,7 +13558,8 @@ window.TOC = [
         "id": "card-alg-sin-param",
         "title": "식의 어느 수가 파동의 높이와 폭을 정할까?"
        }
-      ]
+      ],
+      "ex": 470
      },
      {
       "n": 3,
@@ -13226,7 +13582,8 @@ window.TOC = [
         "id": "card-alg-tri-area",
         "title": "높이를 재지 않고 삼각형의 넓이를 구할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 203
      }
     ]
    },
@@ -13250,7 +13607,8 @@ window.TOC = [
         "id": "card-alg-seq-guess",
         "title": "1, 2, 4, 8 다음은 꼭 16일까?"
        }
-      ]
+      ],
+      "ex": 8
      },
      {
       "n": 2,
@@ -13273,7 +13631,8 @@ window.TOC = [
         "id": "card-alg-arith-sn",
         "title": "합을 알면 각 항도 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 254
      },
      {
       "n": 3,
@@ -13291,7 +13650,8 @@ window.TOC = [
         "id": "card-alg-geo-sum",
         "title": "곱해 가는 수열의 합은 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 247
      },
      {
       "n": 4,
@@ -13309,7 +13669,8 @@ window.TOC = [
         "id": "card-alg-sigma-rules",
         "title": "Σ끼리 더하고 곱해도 될까?"
        }
-      ]
+      ],
+      "ex": 225
      },
      {
       "n": 5,
@@ -13332,7 +13693,8 @@ window.TOC = [
         "id": "card-alg-sum-telescope",
         "title": "분수를 차로 쪼개면 무엇이 남을까?"
        }
-      ]
+      ],
+      "ex": 118
      },
      {
       "n": 6,
@@ -13350,7 +13712,8 @@ window.TOC = [
         "id": "card-alg-recur-tiling",
         "title": "2× n 판을 덮는 방법은 몇 가지일까?"
        }
-      ]
+      ],
+      "ex": 260
      },
      {
       "n": 7,
@@ -13368,7 +13731,8 @@ window.TOC = [
         "id": "card-alg-induct-proof",
         "title": "P(k)에서 P(k + 1)로 어떻게 건너갈까?"
        }
-      ]
+      ],
+      "ex": 37
      }
     ]
    }
@@ -13380,6 +13744,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "math",
   "level": "일반",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -13406,7 +13771,8 @@ window.TOC = [
         "id": "card-calc1-infinity",
         "title": "함숫값이 한없이 커지는 것도 극한이라고 할까?"
        }
-      ]
+      ],
+      "ex": 146
      },
      {
       "n": 2,
@@ -13429,7 +13795,8 @@ window.TOC = [
         "id": "card-calc1-lim-coef",
         "title": "분모가 0으로 가는데 극한값이 있다면 분자는?"
        }
-      ]
+      ],
+      "ex": 210
      },
      {
       "n": 3,
@@ -13447,7 +13814,8 @@ window.TOC = [
         "id": "card-calc1-cont-interval",
         "title": "구간의 끝점까지 연속이라는 것은 무슨 뜻일까?"
        }
-      ]
+      ],
+      "ex": 217
      },
      {
       "n": 4,
@@ -13470,7 +13838,8 @@ window.TOC = [
         "id": "card-calc1-ivt",
         "title": "그래프를 보지 않고 방정식의 근이 있는 곳을 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 5
      }
     ]
    },
@@ -13494,7 +13863,8 @@ window.TOC = [
         "id": "card-calc1-zoom",
         "title": "곡선을 계속 확대하면 무엇이 보일까?"
        }
-      ]
+      ],
+      "ex": 144
      },
      {
       "n": 2,
@@ -13512,7 +13882,8 @@ window.TOC = [
         "id": "card-calc1-glue",
         "title": "두 식을 이어 붙이면 언제 매끄럽게 이어질까?"
        }
-      ]
+      ],
+      "ex": 90
      },
      {
       "n": 3,
@@ -13530,7 +13901,8 @@ window.TOC = [
         "id": "card-calc1-power-rule",
         "title": "(x + h)ⁿ을 전개하면 왜 nxⁿ⁻¹만 남을까?"
        }
-      ]
+      ],
+      "ex": 2
      },
      {
       "n": 4,
@@ -13548,7 +13920,8 @@ window.TOC = [
         "id": "card-calc1-product-rule",
         "title": "곱의 미분은 왜 f'g + fg'일까?"
        }
-      ]
+      ],
+      "ex": 178
      },
      {
       "n": 5,
@@ -13571,7 +13944,8 @@ window.TOC = [
         "id": "card-calc1-tangent-ext",
         "title": "곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?"
        }
-      ]
+      ],
+      "ex": 99
      },
      {
       "n": 6,
@@ -13589,7 +13963,8 @@ window.TOC = [
         "id": "card-calc1-mvt",
         "title": "평균 기울기와 같은 순간 기울기는 어디에 있을까?"
        }
-      ]
+      ],
+      "ex": 12
      },
      {
       "n": 7,
@@ -13607,7 +13982,8 @@ window.TOC = [
         "id": "card-calc1-extremum",
         "title": "기울기가 0인 점은 언제나 봉우리나 골짜기일까?"
        }
-      ]
+      ],
+      "ex": 154
      },
      {
       "n": 8,
@@ -13625,7 +14001,8 @@ window.TOC = [
         "id": "card-calc1-maxmin",
         "title": "극댓값이 곧 최댓값일까?"
        }
-      ]
+      ],
+      "ex": 69
      },
      {
       "n": 9,
@@ -13643,7 +14020,8 @@ window.TOC = [
         "id": "card-calc1-ineq-min",
         "title": "모든 x에서 성립한다는 것을 어떻게 보일까?"
        }
-      ]
+      ],
+      "ex": 82
      },
      {
       "n": 10,
@@ -13661,7 +14039,8 @@ window.TOC = [
         "id": "card-calc1-throw",
         "title": "위로 던진 공은 언제 가장 높이 올라갈까?"
        }
-      ]
+      ],
+      "ex": 39
      }
     ]
    },
@@ -13685,7 +14064,8 @@ window.TOC = [
         "id": "card-calc1-slope-field",
         "title": "한 점을 지나라는 조건이 있으면 적분상수가 정해질까?"
        }
-      ]
+      ],
+      "ex": 7
      },
      {
       "n": 2,
@@ -13703,7 +14083,8 @@ window.TOC = [
         "id": "card-calc1-linear-int",
         "title": "여러 항의 합은 항마다 따로 적분해도 될까?"
        }
-      ]
+      ],
+      "ex": 110
      },
      {
       "n": 3,
@@ -13726,7 +14107,8 @@ window.TOC = [
         "id": "card-calc1-int-props",
         "title": "구간을 둘로 나누어 적분해도 값이 같을까?"
        }
-      ]
+      ],
+      "ex": 148
      },
      {
       "n": 4,
@@ -13744,7 +14126,8 @@ window.TOC = [
         "id": "card-calc1-ftc-eval",
         "title": "넓이를 재지 않고 정적분을 구할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 142
      },
      {
       "n": 5,
@@ -13762,7 +14145,8 @@ window.TOC = [
         "id": "card-calc1-area-between",
         "title": "두 그래프로 둘러싸인 도형의 넓이는 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 127
      },
      {
       "n": 6,
@@ -13780,7 +14164,8 @@ window.TOC = [
         "id": "card-calc1-chase",
         "title": "두 속도 그래프가 만나는 순간, 두 물체도 만날까?"
        }
-      ]
+      ],
+      "ex": 112
      }
     ]
    }
@@ -13792,6 +14177,7 @@ window.TOC = [
   "meta": "일반선택",
   "track": "math",
   "level": "일반",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -13818,7 +14204,8 @@ window.TOC = [
         "id": "card-stat-grid-path",
         "title": "바둑판 길에서 가장 짧은 길은 몇 가지일까?"
        }
-      ]
+      ],
+      "ex": 136
      },
      {
       "n": 2,
@@ -13836,7 +14223,8 @@ window.TOC = [
         "id": "card-stat-int-solutions",
         "title": "x + y + z = r를 만족하는 정수해는 몇 개일까?"
        }
-      ]
+      ],
+      "ex": 143
      },
      {
       "n": 3,
@@ -13854,7 +14242,8 @@ window.TOC = [
         "id": "card-stat-pascal",
         "title": "이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?"
        }
-      ]
+      ],
+      "ex": 74
      }
     ]
    },
@@ -13878,7 +14267,8 @@ window.TOC = [
         "id": "card-stat-sample-grid",
         "title": "두 눈의 합이 11가지이면 확률은 각각 1/11일까?"
        }
-      ]
+      ],
+      "ex": 52
      },
      {
       "n": 2,
@@ -13896,7 +14286,8 @@ window.TOC = [
         "id": "card-stat-add-multiples",
         "title": "4의 배수와 6의 배수는 어디에서 겹칠까?"
        }
-      ]
+      ],
+      "ex": 40
      },
      {
       "n": 3,
@@ -13914,7 +14305,8 @@ window.TOC = [
         "id": "card-stat-at-least",
         "title": "불량품이 적어도 한 개 섞일 확률은 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 34
      },
      {
       "n": 4,
@@ -13932,7 +14324,8 @@ window.TOC = [
         "id": "card-stat-cond-test",
         "title": "검사에서 양성이 나오면 정말 병에 걸린 것일까?"
        }
-      ]
+      ],
+      "ex": 87
      },
      {
       "n": 5,
@@ -13950,7 +14343,8 @@ window.TOC = [
         "id": "card-stat-indep-area",
         "title": "두 사각형이 어떻게 겹치면 독립일까?"
        }
-      ]
+      ],
+      "ex": 57
      },
      {
       "n": 6,
@@ -13968,7 +14362,8 @@ window.TOC = [
         "id": "card-stat-indep-trials",
         "title": "동전을 네 번 던져 앞면이 두 번 나오는 길은 몇 가지일까?"
        }
-      ]
+      ],
+      "ex": 12
      }
     ]
    },
@@ -13992,7 +14387,8 @@ window.TOC = [
         "id": "card-stat-density",
         "title": "정확히 3분을 기다릴 확률은 얼마일까?"
        }
-      ]
+      ],
+      "ex": 17
      },
      {
       "n": 2,
@@ -14010,7 +14406,8 @@ window.TOC = [
         "id": "card-stat-linear-rv",
         "title": "점수를 두 배 하고 5점을 빼면 표준편차는?"
        }
-      ]
+      ],
+      "ex": 47
      },
      {
       "n": 3,
@@ -14028,7 +14425,8 @@ window.TOC = [
         "id": "card-stat-large-numbers",
         "title": "많이 던질수록 비율은 확률에 다가갈까?"
        }
-      ]
+      ],
+      "ex": 31
      },
      {
       "n": 4,
@@ -14051,7 +14449,8 @@ window.TOC = [
         "id": "card-stat-binom-normal",
         "title": "시행 횟수가 많아지면 이항분포는 어떤 모양에 가까워질까?"
        }
-      ]
+      ],
+      "ex": 58
      },
      {
       "n": 5,
@@ -14087,7 +14486,8 @@ window.TOC = [
         "id": "card-stat-phat-dist",
         "title": "100명에게 물으면 찬성 비율은 얼마나 흔들릴까?"
        }
-      ]
+      ],
+      "ex": 33
      },
      {
       "n": 7,
@@ -14105,7 +14505,8 @@ window.TOC = [
         "id": "card-stat-ci-prop",
         "title": "여론조사의 '오차 범위 ±3.1%p'는 어디서 나올까?"
        }
-      ]
+      ],
+      "ex": 29
      }
     ]
    }
@@ -14117,6 +14518,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "math",
   "level": "진로",
+  "split": 12,
   "chapters": [
    {
     "n": 1,
@@ -14138,7 +14540,8 @@ window.TOC = [
         "id": "card-calc2-seq-far",
         "title": "처음 몇 항만 보고 수렴·발산을 판정해도 될까?"
        }
-      ]
+      ],
+      "ex": 7
      },
      {
       "n": 2,
@@ -14161,7 +14564,8 @@ window.TOC = [
         "id": "card-calc2-squeeze",
         "title": "위아래에서 조이면 가운데 수열의 극한도 정해질까?"
        }
-      ]
+      ],
+      "ex": 176
      },
      {
       "n": 3,
@@ -14179,7 +14583,8 @@ window.TOC = [
         "id": "card-calc2-geo-compare",
         "title": "밑이 다른 거듭제곱이 섞이면 어느 쪽이 극한을 정할까?"
        }
-      ]
+      ],
+      "ex": 94
      },
      {
       "n": 4,
@@ -14197,7 +14602,8 @@ window.TOC = [
         "id": "card-calc2-nth-term",
         "title": "더하는 항이 0으로 가면 급수는 수렴할까?"
        }
-      ]
+      ],
+      "ex": 71
      },
      {
       "n": 5,
@@ -14215,7 +14621,8 @@ window.TOC = [
         "id": "card-calc2-bounce",
         "title": "끝없이 튀는 공은 모두 얼마나 움직일까?"
        }
-      ]
+      ],
+      "ex": 140
      }
     ]
    },
@@ -14244,7 +14651,8 @@ window.TOC = [
         "id": "card-calc2-log-deriv",
         "title": "y = ln x의 접선의 기울기는 왜 1/x일까?"
        }
-      ]
+      ],
+      "ex": 98
      },
      {
       "n": 2,
@@ -14267,7 +14675,8 @@ window.TOC = [
         "id": "card-calc2-wave-sum",
         "title": "a sin x + b cos x는 어떤 모양의 그래프일까?"
        }
-      ]
+      ],
+      "ex": 77
      },
      {
       "n": 3,
@@ -14285,7 +14694,8 @@ window.TOC = [
         "id": "card-calc2-sin-deriv",
         "title": "sin x의 접선의 기울기를 모으면 어떤 그래프가 될까?"
        }
-      ]
+      ],
+      "ex": 113
      },
      {
       "n": 4,
@@ -14303,7 +14713,8 @@ window.TOC = [
         "id": "card-calc2-trig-table",
         "title": "tan x의 접선의 기울기는 왜 1보다 작아지지 않을까?"
        }
-      ]
+      ],
+      "ex": 16
      },
      {
       "n": 5,
@@ -14321,7 +14732,8 @@ window.TOC = [
         "id": "card-calc2-power-real",
         "title": "지수가 √2여도 (xr)' = r xr⁻¹일까?"
        }
-      ]
+      ],
+      "ex": 45
      },
      {
       "n": 6,
@@ -14339,7 +14751,8 @@ window.TOC = [
         "id": "card-calc2-param-reparam",
         "title": "같은 곡선을 다른 매개변수로 나타내면 기울기도 달라질까?"
        }
-      ]
+      ],
+      "ex": 29
      },
      {
       "n": 7,
@@ -14357,7 +14770,8 @@ window.TOC = [
         "id": "card-calc2-inverse-slope",
         "title": "식을 모르는 역함수의 기울기를 구할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 68
      },
      {
       "n": 8,
@@ -14375,7 +14789,8 @@ window.TOC = [
         "id": "card-calc2-slope-tangent",
         "title": "기울기가 정해진 접선은 곡선의 어디에 닿을까?"
        }
-      ]
+      ],
+      "ex": 29
      },
      {
       "n": 9,
@@ -14393,7 +14808,8 @@ window.TOC = [
         "id": "card-calc2-curve-sketch",
         "title": "점을 찍지 않고 그래프의 모양을 알 수 있을까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 10,
@@ -14411,7 +14827,8 @@ window.TOC = [
         "id": "card-calc2-exp-bound",
         "title": "ex ≥ kx가 모든 x에서 성립하려면 k는 얼마까지 될까?"
        }
-      ]
+      ],
+      "ex": 9
      },
      {
       "n": 11,
@@ -14429,7 +14846,8 @@ window.TOC = [
         "id": "card-calc2-plane-motion",
         "title": "일정한 빠르기로 원을 도는 점에도 가속도가 있을까?"
        }
-      ]
+      ],
+      "ex": 21
      }
     ]
    },
@@ -14453,7 +14871,8 @@ window.TOC = [
         "id": "card-calc2-antideriv-check",
         "title": "어느 후보가 ex, sin x의 진짜 원시함수일까?"
        }
-      ]
+      ],
+      "ex": 52
      },
      {
       "n": 2,
@@ -14471,7 +14890,8 @@ window.TOC = [
         "id": "card-calc2-sub-bounds",
         "title": "치환할 때 적분 구간도 바꾸어야 할까?"
        }
-      ]
+      ],
+      "ex": 51
      },
      {
       "n": 3,
@@ -14489,7 +14909,8 @@ window.TOC = [
         "id": "card-calc2-parts-choice",
         "title": "어느 쪽을 미분하고 어느 쪽을 적분해야 할까?"
        }
-      ]
+      ],
+      "ex": 40
      },
      {
       "n": 4,
@@ -14507,7 +14928,8 @@ window.TOC = [
         "id": "card-calc2-sum-to-int",
         "title": "같은 합을 서로 다른 정적분으로 읽어도 될까?"
        }
-      ]
+      ],
+      "ex": 27
      },
      {
       "n": 5,
@@ -14525,7 +14947,8 @@ window.TOC = [
         "id": "card-calc2-area-cross",
         "title": "두 곡선이 엇갈리면 넓이는 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 24
      },
      {
       "n": 6,
@@ -14543,7 +14966,8 @@ window.TOC = [
         "id": "card-calc2-cavalieri",
         "title": "입체를 비스듬히 밀면 부피가 바뀔까?"
        }
-      ]
+      ],
+      "ex": 28
      },
      {
       "n": 7,
@@ -14561,7 +14985,8 @@ window.TOC = [
         "id": "card-calc2-path-length",
         "title": "평면 위를 움직인 점은 얼마나 먼 길을 갔을까?"
        }
-      ]
+      ],
+      "ex": 4
      }
     ]
    }
@@ -14573,6 +14998,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "math",
   "level": "진로",
+  "split": 7,
   "chapters": [
    {
     "n": 1,
@@ -14594,7 +15020,8 @@ window.TOC = [
         "id": "card-geo-parabola-shift",
         "title": "꼭짓점을 옮기면 초점과 준선은 어디로 갈까?"
        }
-      ]
+      ],
+      "ex": 66
      },
      {
       "n": 2,
@@ -14612,7 +15039,8 @@ window.TOC = [
         "id": "card-geo-ellipse-eq",
         "title": "방정식만 보고 타원의 초점과 장축을 찾을 수 있을까?"
        }
-      ]
+      ],
+      "ex": 68
      },
      {
       "n": 3,
@@ -14630,7 +15058,8 @@ window.TOC = [
         "id": "card-geo-hyperbola-asym",
         "title": "쌍곡선은 어떤 직선에 한없이 가까워질까?"
        }
-      ]
+      ],
+      "ex": 73
      },
      {
       "n": 4,
@@ -14653,7 +15082,8 @@ window.TOC = [
         "id": "text-geo-conic-uses",
         "title": "이차곡선은 어디에 쓰일까?"
        }
-      ]
+      ],
+      "ex": 59
      }
     ]
    },
@@ -14687,7 +15117,8 @@ window.TOC = [
         "id": "card-geo-plane-cut",
         "title": "평행한 두 평면을 한 평면으로 자르면 교선은 어떻게 놓일까?"
        }
-      ]
+      ],
+      "ex": 4
      },
      {
       "n": 2,
@@ -14705,7 +15136,8 @@ window.TOC = [
         "id": "card-geo-dihedral",
         "title": "두 평면이 벌어진 정도는 어떤 각으로 재야 할까?"
        }
-      ]
+      ],
+      "ex": 22
      },
      {
       "n": 3,
@@ -14723,7 +15155,8 @@ window.TOC = [
         "id": "card-geo-proj-area",
         "title": "기울어진 판의 그림자 넓이는 어떻게 구할까?"
        }
-      ]
+      ],
+      "ex": 50
      },
      {
       "n": 4,
@@ -14746,7 +15179,8 @@ window.TOC = [
         "id": "card-geo-section3",
         "title": "공간의 선분을 m : n으로 나누는 점은 좌표마다 따로 구해도 될까?"
        }
-      ]
+      ],
+      "ex": 36
      },
      {
       "n": 5,
@@ -14769,7 +15203,8 @@ window.TOC = [
         "id": "card-geo-sphere-section",
         "title": "구를 평면 z = k로 자르면 단면의 크기는 어떻게 정해질까?"
        }
-      ]
+      ],
+      "ex": 9
      }
     ]
    },
@@ -14798,7 +15233,8 @@ window.TOC = [
         "id": "card-geo-vec-scalar",
         "title": "벡터에 음수를 곱하면 무엇이 바뀔까?"
        }
-      ]
+      ],
+      "ex": 62
      },
      {
       "n": 2,
@@ -14821,7 +15257,8 @@ window.TOC = [
         "id": "card-geo-space-components",
         "title": "공간의 화살표는 수 몇 개로 정해질까?"
        }
-      ]
+      ],
+      "ex": 6
      },
      {
       "n": 3,
@@ -14839,7 +15276,8 @@ window.TOC = [
         "id": "card-geo-dot-space",
         "title": "공간에서 두 벡터가 수직인지 어떻게 알까?"
        }
-      ]
+      ],
+      "ex": 67
      },
      {
       "n": 4,
@@ -14862,7 +15300,8 @@ window.TOC = [
         "id": "card-geo-line-normal",
         "title": "방향 대신 수직인 벡터로 직선을 정할 수 있을까?"
        }
-      ]
+      ],
+      "ex": 22
      },
      {
       "n": 5,
@@ -14880,7 +15319,8 @@ window.TOC = [
         "id": "card-geo-sphere-vec",
         "title": "중심에서 거리가 같은 점을 벡터로 쓰면?"
        }
-      ]
+      ],
+      "ex": 11
      }
     ]
    }
@@ -14892,6 +15332,7 @@ window.TOC = [
   "meta": "과학계열 선택",
   "track": "math",
   "level": "고급",
+  "split": 12,
   "chapters": [
    {
     "n": 1,
@@ -14918,7 +15359,8 @@ window.TOC = [
         "id": "card-pmath-beats",
         "title": "음이 조금 다른 두 소리를 함께 내면 왜 \"웅웅\" 울릴까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -14936,7 +15378,8 @@ window.TOC = [
         "id": "card-pmath-csc-predict",
         "title": "사인 그래프만 보고 코시컨트 그래프를 그릴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -14954,7 +15397,8 @@ window.TOC = [
         "id": "card-pmath-arc-sawtooth",
         "title": "arcsin(sin x)는 언제나 x일까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 4,
@@ -14977,7 +15421,8 @@ window.TOC = [
         "id": "card-pmath-jerk",
         "title": "엘리베이터가 덜컹거리지 않으려면 몇 번째 도함수까지 매끄러워야 할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15000,7 +15445,8 @@ window.TOC = [
         "id": "card-pmath-growth-race",
         "title": "x¹⁰과 ex가 무한대까지 달리면 누가 이길까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -15018,7 +15464,8 @@ window.TOC = [
         "id": "card-pmath-pyramid",
         "title": "각뿔의 부피는 왜 각기둥의 1/3일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -15041,7 +15488,8 @@ window.TOC = [
         "id": "card-pmath-trig-sub",
         "title": "∫₀a√(1 − x²) dx를 원의 그림만으로 계산할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -15065,7 +15513,8 @@ window.TOC = [
         "id": "card-pmath-eccentricity",
         "title": "포물선, 타원, 쌍곡선을 하나의 규칙으로 그릴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15083,7 +15532,8 @@ window.TOC = [
         "id": "card-pmath-ellipse-billiard",
         "title": "타원 모양 당구대에서 초점을 지나게 친 공은 어디로 갈까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15101,7 +15551,8 @@ window.TOC = [
         "id": "card-pmath-space-counter",
         "title": "평면에서 참인 명제가 공간에서도 참일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15119,7 +15570,8 @@ window.TOC = [
         "id": "card-pmath-solar-panel",
         "title": "태양광 패널은 몇 도로 세워야 햇빛을 가장 많이 받을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15142,7 +15594,8 @@ window.TOC = [
         "id": "card-pmath-trilateration",
         "title": "위성까지의 거리만으로 내 위치를 어떻게 알아낼까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -15160,7 +15613,8 @@ window.TOC = [
         "id": "card-pmath-vec-puzzle",
         "title": "주어진 화살표 두 개만으로 목표점에 갈 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -15188,7 +15642,8 @@ window.TOC = [
         "id": "card-pmath-shading",
         "title": "게임 속 3D 물체는 어떻게 그림자를 칠할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 8,
@@ -15211,7 +15666,8 @@ window.TOC = [
         "id": "card-pmath-raytrace",
         "title": "빛줄기와 구의 교점만 계산해서 3D 그림을 그릴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -15240,7 +15696,8 @@ window.TOC = [
         "id": "card-pmath-candy",
         "title": "똑같은 사탕 6개를 세 사람에게 나누는 방법은 몇 가지일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15258,7 +15715,8 @@ window.TOC = [
         "id": "card-pmath-binom-approx",
         "title": "계산기 없이 1.01¹⁰을 소수 셋째 자리까지 구할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15276,7 +15734,8 @@ window.TOC = [
         "id": "card-pmath-thumbtack",
         "title": "압정이 바늘 끝을 위로 하고 떨어질 확률은 계산할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15299,7 +15758,8 @@ window.TOC = [
         "id": "card-pmath-gambler",
         "title": "동전이 다섯 번 연속 앞면이 나왔다면, 다음은 뒷면이 나올 차례일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15317,7 +15777,8 @@ window.TOC = [
         "id": "card-pmath-hist-density",
         "title": "버스를 정확히 3분 기다릴 확률은 왜 0일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -15335,7 +15796,8 @@ window.TOC = [
         "id": "card-pmath-binom-slider",
         "title": "자유투 성공률 70 %인 선수가 20번 던지면 몇 번쯤 넣을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -15358,7 +15820,8 @@ window.TOC = [
         "id": "card-pmath-height-normal",
         "title": "우리 반의 키(또는 직접 잰 자료)는 정규분포를 따를까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 8,
@@ -15376,7 +15839,8 @@ window.TOC = [
         "id": "text-pmath-literary-digest",
         "title": "수백만 명에게 물은 여론조사가 왜 틀렸을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 9,
@@ -15394,7 +15858,8 @@ window.TOC = [
         "id": "card-pmath-sample-size",
         "title": "오차 범위를 ±3 %p 안으로 하려면 몇 명에게 물어야 할까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -15406,6 +15871,7 @@ window.TOC = [
   "meta": "과학계열 선택",
   "track": "math",
   "level": "고급",
+  "split": 11,
   "chapters": [
    {
     "n": 1,
@@ -15432,7 +15898,8 @@ window.TOC = [
         "id": "card-adcalc-newton-basin",
         "title": "출발점에서 가장 가까운 근으로 갈까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15455,7 +15922,8 @@ window.TOC = [
         "id": "card-adcalc-arsinh-proof",
         "title": "sinh의 역함수는 왜 로그로 쓸 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -15478,7 +15946,8 @@ window.TOC = [
         "id": "card-adcalc-skydiver",
         "title": "스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15496,7 +15965,8 @@ window.TOC = [
         "id": "card-adcalc-cable-length",
         "title": "100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15519,7 +15989,8 @@ window.TOC = [
         "id": "card-adcalc-escape",
         "title": "무한히 멀리 가는 데 드는 일은 유한할까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 6,
@@ -15542,7 +16013,8 @@ window.TOC = [
         "id": "card-adcalc-gabriel",
         "title": "채울 수는 있는데 칠할 수는 없는 나팔이 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -15566,7 +16038,8 @@ window.TOC = [
         "id": "card-adcalc-polar-spot",
         "title": "θ = tan⁻¹y/x로 각을 구한 이 풀이, 맞을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15589,7 +16062,8 @@ window.TOC = [
         "id": "card-adcalc-mic-pattern",
         "title": "무대용 마이크는 왜 뒤쪽 소리를 잘 받지 않을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15607,7 +16081,8 @@ window.TOC = [
         "id": "card-adcalc-log-spiral",
         "title": "목표를 늘 같은 각도로 보며 날면 어떤 길이 될까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15625,7 +16100,8 @@ window.TOC = [
         "id": "card-adcalc-polar-angle",
         "title": "마주 보는 두 카디오이드는 몇 도로 만날까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15643,7 +16119,8 @@ window.TOC = [
         "id": "card-adcalc-roll-length",
         "title": "두루마리 휴지를 풀지 않고 길이를 잴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -15667,7 +16144,8 @@ window.TOC = [
         "id": "card-adcalc-monotone-proof",
         "title": "극한을 L로 놓고 방정식을 풀면 끝일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15690,7 +16168,8 @@ window.TOC = [
         "id": "card-adcalc-overhang",
         "title": "책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15708,7 +16187,8 @@ window.TOC = [
         "id": "card-adcalc-rearrange",
         "title": "더하는 순서만 바꿨는데 합이 달라질 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15726,7 +16206,8 @@ window.TOC = [
         "id": "card-adcalc-radius-why",
         "title": "어디서나 매끄러운 1/(1 + x²)의 급수는 왜 |x| < 1에서만 맞을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15744,7 +16225,8 @@ window.TOC = [
         "id": "card-adcalc-pi-race",
         "title": "tan⁻¹x의 급수로 원주율을 몇 자리까지 구할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -15762,7 +16244,8 @@ window.TOC = [
         "id": "card-adcalc-taylor-build",
         "title": "차수를 올리면 테일러다항식은 어디까지 함수를 따라갈까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -15785,7 +16268,8 @@ window.TOC = [
         "id": "card-adcalc-relativity",
         "title": "운동 에너지 1/2mv²은 상대성 이론의 어떤 근사일까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -15809,7 +16293,8 @@ window.TOC = [
         "id": "card-adcalc-field-match",
         "title": "방향장만 보고 미분방정식을 알아맞힐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15827,7 +16312,8 @@ window.TOC = [
         "id": "card-adcalc-euler-orbit",
         "title": "원을 그려야 할 공이 왜 점점 멀어질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15845,7 +16331,8 @@ window.TOC = [
         "id": "card-adcalc-separable-spot",
         "title": "초기 조건을 넣었는데 해가 맞지 않는 이 풀이, 어디가 틀렸을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15868,7 +16355,8 @@ window.TOC = [
         "id": "card-adcalc-logistic",
         "title": "개체 수는 왜 끝없이 지수적으로 늘지 않을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -15880,6 +16368,7 @@ window.TOC = [
   "meta": "과학계열 선택",
   "track": "math",
   "level": "고급",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -15901,7 +16390,8 @@ window.TOC = [
         "id": "card-adalg-rgb-mix",
         "title": "색이 섞인 조명 세 개로 원하는 색을 만들 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -15919,7 +16409,8 @@ window.TOC = [
         "id": "card-adalg-poly-vector",
         "title": "화살표가 아닌 다항식도 벡터처럼 더할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -15937,7 +16428,8 @@ window.TOC = [
         "id": "card-adalg-intersect-proof",
         "title": "두 부분공간이 겹치는 부분도 부분공간일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -15955,7 +16447,8 @@ window.TOC = [
         "id": "card-adalg-indep-predict",
         "title": "계산하기 전에 일차독립인지 알아볼 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -15973,7 +16466,8 @@ window.TOC = [
         "id": "card-adalg-basis-hunt",
         "title": "비스듬한 두 방향만으로 목표점까지 안내할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -15991,7 +16485,8 @@ window.TOC = [
         "id": "card-adalg-cauchy",
         "title": "내적은 두 크기의 곱보다 커질 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -16009,7 +16504,8 @@ window.TOC = [
         "id": "card-adalg-least-squares",
         "title": "모든 점을 지나는 직선이 없을 때 가장 좋은 직선은?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 8,
@@ -16027,7 +16523,8 @@ window.TOC = [
         "id": "card-adalg-ortho-coords",
         "title": "정규직교기저의 좌표는 왜 내적 한 번이면 될까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16051,7 +16548,8 @@ window.TOC = [
         "id": "card-adalg-balance-eq",
         "title": "화학 반응식의 계수는 어떻게 한 번에 정할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16069,7 +16567,8 @@ window.TOC = [
         "id": "card-adalg-hill-cipher",
         "title": "행렬로 잠근 암호는 어떤 열쇠로 열릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16087,7 +16586,8 @@ window.TOC = [
         "id": "card-adalg-det-spot",
         "title": "이 행렬식 계산, 어디서 틀렸을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 4,
@@ -16105,7 +16605,8 @@ window.TOC = [
         "id": "card-adalg-match-matrix",
         "title": "바뀐 그림만 보고 행렬을 알아낼 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -16123,7 +16624,8 @@ window.TOC = [
         "id": "card-adalg-pixel-rotate",
         "title": "사진을 돌리면 왜 구멍이 뚫릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -16141,7 +16643,8 @@ window.TOC = [
         "id": "card-adalg-undo",
         "title": "뒤틀린 그림을 제자리로 되돌리는 행렬은?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16165,7 +16668,8 @@ window.TOC = [
         "id": "card-adalg-pagerank",
         "title": "검색 엔진은 어떤 페이지를 맨 위에 올릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16183,7 +16687,8 @@ window.TOC = [
         "id": "card-adalg-power-reduce",
         "title": "A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16201,7 +16706,8 @@ window.TOC = [
         "id": "card-adalg-fibonacci",
         "title": "피보나치 수열의 일반항에 왜 √5가 나올까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16219,7 +16725,8 @@ window.TOC = [
         "id": "card-adalg-orth-diag-proof",
         "title": "대칭행렬의 고유벡터는 왜 서로 수직일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -16237,7 +16744,8 @@ window.TOC = [
         "id": "card-adalg-conic-classify",
         "title": "그리지 않고 이차곡선의 모양을 알 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -16255,7 +16763,8 @@ window.TOC = [
         "id": "card-adalg-population",
         "title": "멸종 위기종을 살리려면 어느 생존율을 높일까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -16267,6 +16776,7 @@ window.TOC = [
   "meta": "과학계열 선택",
   "track": "math",
   "level": "고급",
+  "split": 10,
   "chapters": [
    {
     "n": 1,
@@ -16288,7 +16798,8 @@ window.TOC = [
         "id": "card-dmath-grid-path",
         "title": "바둑판 도시에서 가장 짧은 길은 몇 가지일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16306,7 +16817,8 @@ window.TOC = [
         "id": "card-dmath-int-solutions",
         "title": "조건이 붙은 방정식의 정수해는 몇 개일까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -16324,7 +16836,8 @@ window.TOC = [
         "id": "card-dmath-derange",
         "title": "모자를 섞어 돌려주면 아무도 제 것을 못 받을 확률은?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16342,7 +16855,8 @@ window.TOC = [
         "id": "card-dmath-young",
         "title": "점 그림을 뒤집으면 어떤 분할이 나올까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 5,
@@ -16360,7 +16874,8 @@ window.TOC = [
         "id": "card-dmath-pigeon-pairs",
         "title": "서로 나누어떨어지지 않게 수를 몇 개까지 고를 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16384,7 +16899,8 @@ window.TOC = [
         "id": "card-dmath-domino",
         "title": "2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16402,7 +16918,8 @@ window.TOC = [
         "id": "card-dmath-loan",
         "title": "매달 얼마씩 갚아야 24개월 만에 대출이 끝날까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16420,7 +16937,8 @@ window.TOC = [
         "id": "card-dmath-algo-bug",
         "title": "이 알고리즘은 어떤 입력에서 틀릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16438,7 +16956,8 @@ window.TOC = [
         "id": "card-dmath-fast-power",
         "title": "a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -16456,7 +16975,8 @@ window.TOC = [
         "id": "card-dmath-updown",
         "title": "1부터 1000까지의 수를 몇 번 만에 맞힐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16480,7 +17000,8 @@ window.TOC = [
         "id": "card-dmath-binary-cards",
         "title": "카드 여섯 장만 보고 마음속의 수를 어떻게 맞힐까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16498,7 +17019,8 @@ window.TOC = [
         "id": "card-dmath-twos-comp",
         "title": "8자리 이진수로 음수를 나타내면 100 + 50은 얼마가 될까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16516,7 +17038,8 @@ window.TOC = [
         "id": "card-dmath-karnaugh",
         "title": "긴 부울 식을 그림으로 묶어 줄일 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16534,7 +17057,8 @@ window.TOC = [
         "id": "card-dmath-adder",
         "title": "게이트만으로 덧셈하는 기계를 만들 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16558,7 +17082,8 @@ window.TOC = [
         "id": "card-dmath-graph-model",
         "title": "버스 노선 설명을 그래프로 그리면 무엇이 보일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16576,7 +17101,8 @@ window.TOC = [
         "id": "card-dmath-degree-seq",
         "title": "차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16594,7 +17120,8 @@ window.TOC = [
         "id": "card-dmath-walk-count",
         "title": "세 번 갈아타서 도착하는 항공편 경로는 몇 가지일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16612,7 +17139,8 @@ window.TOC = [
         "id": "card-dmath-euler-formula",
         "title": "평면그래프에서 점, 선, 면의 수 사이에는 어떤 관계가 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -16630,7 +17158,8 @@ window.TOC = [
         "id": "card-dmath-hamilton",
         "title": "모든 도시를 꼭 한 번씩 들르고 돌아오는 길이 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -16648,7 +17177,8 @@ window.TOC = [
         "id": "card-dmath-kruskal",
         "title": "모든 마을에 광케이블을 가장 싸게 연결하려면?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -16666,7 +17196,8 @@ window.TOC = [
         "id": "card-dmath-chromatic-poly",
         "title": "색이 k가지일 때 칠하는 방법은 몇 가지일까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -16678,6 +17209,7 @@ window.TOC = [
   "meta": "과학계열 선택",
   "track": "math",
   "level": "고급",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -16699,7 +17231,8 @@ window.TOC = [
         "id": "card-adgeo-construct-challenge",
         "title": "원과 직선 몇 번이면 목표 도형을 그릴 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -16717,7 +17250,8 @@ window.TOC = [
         "id": "card-adgeo-regular-polygon",
         "title": "원 안에 정육각형, 정사각형, 정팔각형을 작도할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -16735,7 +17269,8 @@ window.TOC = [
         "id": "card-adgeo-gauss-polygon",
         "title": "정칠각형은 작도할 수 있을까, 정십칠각형은?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 4,
@@ -16753,7 +17288,8 @@ window.TOC = [
         "id": "card-adgeo-fallacy",
         "title": "\"모든 삼각형은 이등변삼각형이다\"의 증명은 어디가 틀렸을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 5,
@@ -16771,7 +17307,8 @@ window.TOC = [
         "id": "card-adgeo-euler-line",
         "title": "삼각형의 세 중심이 한 직선 위에 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 6,
@@ -16789,7 +17326,8 @@ window.TOC = [
         "id": "card-adgeo-ptolemy",
         "title": "원에 내접하는 사각형의 두 대각선의 곱은 무엇과 같을까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -16813,7 +17351,8 @@ window.TOC = [
         "id": "card-adgeo-lissajous",
         "title": "가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16831,7 +17370,8 @@ window.TOC = [
         "id": "card-adgeo-apollonius",
         "title": "두 점까지 거리의 비가 2 : 1인 점은 어디에 모일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16849,7 +17389,8 @@ window.TOC = [
         "id": "card-adgeo-curve-match",
         "title": "식만 보고 공간곡선의 모양을 알아볼 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -16867,7 +17408,8 @@ window.TOC = [
         "id": "card-adgeo-drone",
         "title": "8자 비행하는 드론은 얼마나 빨리 돌 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -16885,7 +17427,8 @@ window.TOC = [
         "id": "card-adgeo-arc-length",
         "title": "휘어진 곡선의 길이는 어떻게 잴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -16903,7 +17446,8 @@ window.TOC = [
         "id": "card-adgeo-milestones",
         "title": "구불구불한 산길에 1 km마다 표지판을 세우려면?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 7,
@@ -16921,7 +17465,8 @@ window.TOC = [
         "id": "card-adgeo-reparam-spot",
         "title": "이 재매개화 풀이는 어디서 틀렸을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 8,
@@ -16939,7 +17484,8 @@ window.TOC = [
         "id": "card-adgeo-road-curve",
         "title": "고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -16963,7 +17509,8 @@ window.TOC = [
         "id": "card-adgeo-level-match",
         "title": "등고선 지도만 보고 함수를 알아맞힐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -16981,7 +17528,8 @@ window.TOC = [
         "id": "card-adgeo-slice-predict",
         "title": "이 곡면을 이 평면으로 자르면 어떤 모양이 나올까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -16999,7 +17547,8 @@ window.TOC = [
         "id": "card-adgeo-flight-route",
         "title": "서울에서 뉴욕 가는 비행기는 왜 북극 쪽으로 돌아갈까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17017,7 +17566,8 @@ window.TOC = [
         "id": "card-adgeo-city-distance",
         "title": "위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -17029,6 +17579,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "math",
   "level": "진로",
+  "split": 9,
   "chapters": [
    {
     "n": 1,
@@ -17050,7 +17601,8 @@ window.TOC = [
         "id": "card-econ-index-trap",
         "title": "이 경제 기사 문장은 숫자를 바르게 읽었을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17068,7 +17620,8 @@ window.TOC = [
         "id": "card-econ-cross-rate",
         "title": "100만 원을 엔화로 바꿀 때 어느 길이 가장 유리할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17086,7 +17639,8 @@ window.TOC = [
         "id": "card-econ-tax-myth",
         "title": "세율 구간이 올라가면 오히려 손에 쥐는 돈이 줄어들까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17104,7 +17658,8 @@ window.TOC = [
         "id": "card-econ-present-value",
         "title": "지금 100만 원과 5년 뒤 130만 원, 어느 쪽이 더 이득일까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 5,
@@ -17122,7 +17677,8 @@ window.TOC = [
         "id": "card-econ-lump-or-annuity",
         "title": "일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -17146,7 +17702,8 @@ window.TOC = [
         "id": "card-econ-phone-plan",
         "title": "한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17164,7 +17721,8 @@ window.TOC = [
         "id": "card-econ-demand-fit",
         "title": "설문 자료로 우리 학교 매점의 수요곡선을 만들 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17182,7 +17740,8 @@ window.TOC = [
         "id": "card-econ-indifference",
         "title": "예산선 위에서 만족이 가장 큰 점은 어떻게 생겼을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17200,7 +17759,8 @@ window.TOC = [
         "id": "card-econ-cobweb",
         "title": "배추값은 왜 해마다 폭등과 폭락을 되풀이할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -17218,7 +17778,8 @@ window.TOC = [
         "id": "card-econ-income-shift",
         "title": "소득이 늘면 라면 값은 오를까 내릴까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 6,
@@ -17236,7 +17797,8 @@ window.TOC = [
         "id": "card-econ-diet",
         "title": "영양 기준을 채우는 가장 싼 아침 식단은?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -17260,7 +17822,8 @@ window.TOC = [
         "id": "card-econ-market-share",
         "title": "해마다 일부 고객이 갈아타면 점유율은 결국 어떻게 될까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17278,7 +17841,8 @@ window.TOC = [
         "id": "card-econ-bundle-price",
         "title": "세트 메뉴 가격만 보고 버거 하나의 값을 맞힐 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17296,7 +17860,8 @@ window.TOC = [
         "id": "card-econ-two-market",
         "title": "돼지고기 값이 오르면 닭고기 값은 왜 따라 오를까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -17320,7 +17885,8 @@ window.TOC = [
         "id": "card-econ-marginal-revenue",
         "title": "한 개를 더 팔면 수입이 그 가격만큼 늘어날까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17338,7 +17904,8 @@ window.TOC = [
         "id": "card-econ-revenue-shape",
         "title": "이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17356,7 +17923,8 @@ window.TOC = [
         "id": "card-econ-price-hike",
         "title": "값을 10% 올리면 매출이 늘어날까 줄어들까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17374,7 +17942,8 @@ window.TOC = [
         "id": "card-econ-ticket-price",
         "title": "학교 축제 공연 티켓 값을 얼마로 정해야 수익이 가장 클까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -17386,6 +17955,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "math",
   "level": "진로",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -17407,7 +17977,8 @@ window.TOC = [
         "id": "card-aimath-rule-vs-learn",
         "title": "불량품을 가려내는 기준 무게는 사람이 정하는 것이 좋을까, 자료가 정하는 것이 좋을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17425,7 +17996,8 @@ window.TOC = [
         "id": "card-aimath-perceptron-xor",
         "title": "인공 뉴런 하나로 \"둘 중 하나만 참\"을 판단할 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -17443,7 +18015,8 @@ window.TOC = [
         "id": "card-aimath-data-bias",
         "title": "자료가 많은데도 인공지능이 틀리는 이유는 무엇일까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -17467,7 +18040,8 @@ window.TOC = [
         "id": "card-aimath-onehot",
         "title": "문장을 숫자들의 줄, 곧 벡터로 바꿀 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17485,7 +18059,8 @@ window.TOC = [
         "id": "card-aimath-tfidf",
         "title": "가장 많이 나온 낱말이 그 글의 핵심어일까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -17503,7 +18078,8 @@ window.TOC = [
         "id": "card-aimath-spam",
         "title": "\"무료\", \"당첨\"이 들어간 메일은 스팸일 확률이 얼마일까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -17527,7 +18103,8 @@ window.TOC = [
         "id": "card-aimath-rgb",
         "title": "색이 있는 사진은 행렬 몇 개로 나타낼까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17545,7 +18122,8 @@ window.TOC = [
         "id": "card-aimath-convolution",
         "title": "주변 픽셀과 섞으면 사진에서 윤곽선을 찾을 수 있을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -17563,7 +18141,8 @@ window.TOC = [
         "id": "card-aimath-knn",
         "title": "가장 가까운 이웃 하나만 믿어도 될까, 여럿에게 물어볼까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -17587,7 +18166,8 @@ window.TOC = [
         "id": "card-aimath-base-rate",
         "title": "정확도 99%인 진단 인공지능이 \"양성\"이라고 하면 정말 병이 있을 확률은?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17605,7 +18185,8 @@ window.TOC = [
         "id": "card-aimath-extrapolate",
         "title": "처음 몇 해의 추세로 10년 뒤를 예측해도 될까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -17623,7 +18204,8 @@ window.TOC = [
         "id": "card-aimath-loss-outlier",
         "title": "잘못 입력된 자료 하나가 들어오면 어떤 손실함수가 더 크게 흔들릴까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 4,
@@ -17641,7 +18223,8 @@ window.TOC = [
         "id": "card-aimath-gd-contour",
         "title": "기울기와 절편을 함께 학습하면 어떤 길로 내려갈까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -17665,7 +18248,8 @@ window.TOC = [
         "id": "card-aimath-neuron",
         "title": "인공 뉴런 하나는 입력을 어떻게 확률로 바꿀까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17683,7 +18267,8 @@ window.TOC = [
         "id": "card-aimath-fairness",
         "title": "같은 기준 점수를 적용하면 공정한 인공지능일까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    }
@@ -17695,6 +18280,7 @@ window.TOC = [
   "meta": "진로선택",
   "track": "math",
   "level": "진로",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -17716,7 +18302,8 @@ window.TOC = [
         "id": "card-jmath-recipe-scale",
         "title": "4인분 레시피로 단체 손님 30명의 음식을 만들려면?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 2,
@@ -17734,7 +18321,8 @@ window.TOC = [
         "id": "card-jmath-round-budget",
         "title": "올림, 버림, 반올림 중 어느 것을 써야 일이 틀어지지 않을까?"
        }
-      ]
+      ],
+      "ai": 5
      },
      {
       "n": 3,
@@ -17752,7 +18340,8 @@ window.TOC = [
         "id": "card-jmath-unit-error",
         "title": "이 작업 지시서의 단위 환산은 맞을까?"
        }
-      ]
+      ],
+      "ai": 5
      }
     ]
    },
@@ -17776,7 +18365,8 @@ window.TOC = [
         "id": "card-jmath-scale-drawing",
         "title": "도면 위 6 cm는 실제로 몇 m일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17794,7 +18384,8 @@ window.TOC = [
         "id": "card-jmath-margin-markup",
         "title": "\"원가에 30%를 붙여 판다\"와 \"마진율 30%\"는 같은 말일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17812,7 +18403,8 @@ window.TOC = [
         "id": "card-jmath-pay-table",
         "title": "밤에 일하는 시간이 늘면 하루 급여는 어떻게 늘어날까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17830,7 +18422,8 @@ window.TOC = [
         "id": "card-jmath-delivery-graph",
         "title": "배달 기사의 거리–시간 그래프에서 무엇을 읽을 수 있을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -17848,7 +18441,8 @@ window.TOC = [
         "id": "card-jmath-dilution",
         "title": "원액을 물에 얼마나 섞어야 원하는 농도가 될까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -17872,7 +18466,8 @@ window.TOC = [
         "id": "card-jmath-package-board",
         "title": "상자 하나를 만들려면 판지가 얼마나 필요하고, 얼마나 버려질까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17890,7 +18485,8 @@ window.TOC = [
         "id": "card-jmath-view-count",
         "title": "앞과 옆에서 찍은 사진만 있을 때 상자는 몇 개일까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -17908,7 +18504,8 @@ window.TOC = [
         "id": "card-jmath-sign-enlarge",
         "title": "간판 시안을 3배로 키우면 페인트와 재료는 몇 배가 들까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -17926,7 +18523,8 @@ window.TOC = [
         "id": "card-jmath-fence",
         "title": "울타리 24 m로 둘러싼 직사각형 텃밭은 어떤 모양일 때 가장 넓을까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -17944,7 +18542,8 @@ window.TOC = [
         "id": "card-jmath-paint-surface",
         "title": "창고 바깥을 칠하려면 칠할 넓이는 얼마일까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    },
@@ -17968,7 +18567,8 @@ window.TOC = [
         "id": "card-jmath-password",
         "title": "비밀번호를 한 자리 늘리는 것과 특수문자를 넣는 것 중 무엇이 더 안전할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 2,
@@ -17986,7 +18586,8 @@ window.TOC = [
         "id": "card-jmath-overbooking",
         "title": "식당 좌석이 40석일 때 예약을 몇 팀까지 받아도 될까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 3,
@@ -18004,7 +18605,8 @@ window.TOC = [
         "id": "card-jmath-class-width",
         "title": "배달 시간 자료를 도수분포표로 정리할 때 계급을 몇 분 단위로 나눌까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 4,
@@ -18022,7 +18624,8 @@ window.TOC = [
         "id": "card-jmath-dashboard",
         "title": "매장 대시보드를 보고 회의에서 무엇이라고 보고할까?"
        }
-      ]
+      ],
+      "ai": 4
      },
      {
       "n": 5,
@@ -18040,7 +18643,8 @@ window.TOC = [
         "id": "card-jmath-stock-decision",
         "title": "내일 비 올 확률이 30%일 때 우산을 몇 개 들여놓아야 할까?"
        }
-      ]
+      ],
+      "ai": 4
      }
     ]
    }
@@ -18052,6 +18656,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "math",
   "level": "융합",
+  "split": 8,
   "chapters": [
    {
     "n": 1,
@@ -18373,6 +18978,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "math",
   "level": "융합",
+  "split": 7,
   "chapters": [
    {
     "n": 1,
@@ -18640,6 +19246,7 @@ window.TOC = [
   "meta": "융합선택",
   "track": "math",
   "level": "융합",
+  "split": 6,
   "chapters": [
    {
     "n": 1,
@@ -18847,6 +19454,7 @@ window.TOC = [
   "meta": "교육과정 밖",
   "track": "extra",
   "level": "교양",
+  "split": 1,
   "chapters": [
    {
     "n": 1,

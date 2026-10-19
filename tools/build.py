@@ -109,16 +109,61 @@ def indent(text, n):
 
 
 EXAM_INDEX = ROOT / "exams" / "index.json"   # {"<과목>-<대단원>-<절>": 문항 수} — 기출 처리 도구가 만든다
+BANK_DIR = ROOT / "exams" / "bank"           # <과목>.json: AI 출제 연습 문항(tools/bank.py가 만들고 검사한다)
 _exam_counts = None
+_bank_counts = None
 
 
-def exam_count(course, ch, sec):
-    """절 끝 연습문제 버튼에 적을 문항 수 문구."""
+def exam_n(course, ch, sec):
+    """이 절에 분류된 기출 문항 수. 0이면 절 페이지에 기출 버튼을 만들지 않는다."""
     global _exam_counts
     if _exam_counts is None:
         _exam_counts = json.loads(rd(EXAM_INDEX)) if EXAM_INDEX.exists() else {}
-    n = _exam_counts.get(f'{course["id"]}-{ch["n"]}-{sec["n"]}', 0)
-    return f"{n}문항" if n else "준비 중"
+    return _exam_counts.get(f'{course["id"]}-{ch["n"]}-{sec["n"]}', 0)
+
+
+def bank_counts(cid):
+    """과목의 AI 연습 문항 수: {"<대단원>-<절>": 문항 수}. 문제은행 파일이 없으면 빈 사전."""
+    global _bank_counts
+    if _bank_counts is None:
+        _bank_counts = {}
+        for f in sorted(BANK_DIR.glob("*.json")) if BANK_DIR.exists() else []:
+            d = json.loads(rd(f))
+            n = _bank_counts.setdefault(d["course"], {})
+            for it in d["items"]:
+                n[it["sec"]] = n.get(it["sec"], 0) + 1
+    return _bank_counts.get(cid, {})
+
+
+def exam_split(course):
+    """중간고사 범위 = 앞쪽 절 몇 개(목차 순서). 절 수의 절반에서 1절 이내에 대단원 경계가 있으면 그 경계에서,
+    없으면 대단원 중간이라도 절반(올림)에서 나눈다. 기말고사 범위는 나머지 절이다."""
+    sizes = [len(ch["sections"]) for ch in course["chapters"]]
+    total = sum(sizes)
+    cuts = [sum(sizes[:k]) for k in range(1, len(sizes))]
+    near = [x for x in cuts if abs(x - total / 2) <= 1]
+    return min(near, key=lambda x: (abs(x - total / 2), -x)) if near else (total + 1) // 2
+
+
+def practice_links(course, ch, sec, where):
+    """절 페이지의 연습문제(AI 출제)·기출문제 버튼. where='side'(왼쪽 목차 아래) | 'end'(절 끝).
+    연습문제가 이 절에 없으면 이 절이 든 시험 범위의 시험지 목록으로 보낸다. 기출이 0이면 기출 버튼을 만들지 않는다."""
+    cid, here = course["id"], f'{ch["n"]}-{sec["n"]}'
+    bank = bank_counts(cid)
+    out = []
+    if bank:
+        n = bank.get(here, 0)
+        order = [f'{c["n"]}-{x["n"]}' for c in course["chapters"] for x in c["sections"]]
+        rng = "mid" if order.index(here) < exam_split(course) else "fin"
+        href = f'../../bank.html?c={cid}&amp;sec={here}' if n else f'../../bank.html?c={cid}&amp;r={rng}'
+        what = f"{n}문항" if n else ("중간고사 범위" if rng == "mid" else "기말고사 범위")
+        out.append((href, "AI 출제 문항", "연습문제 풀어보기", what))
+    ex = exam_n(course, ch, sec)
+    if ex:
+        out.append((f"../../practice.html?sec={cid}-{here}", "수능·모의평가·학력평가", "기출문제 풀어보기", f"{ex}문항"))
+    if where == "side":
+        return "".join(f'\n      <a class="toc-px" href="{h}"><span class="mono">{k}</span><b>{t}</b><span class="mono">{w} →</span></a>' for h, k, t, w in out)
+    return "".join(f'      <a class="px-go" href="{h}"><span class="mono">{k}</span><b>{t}</b><span class="mono px-n">{w}</span></a>\n' for h, k, t, w in out)
 
 
 REL, USED, NAMES = {}, {}, {}   # main()이 채운다: 카드별 연관 카드, 블록 배치 위치, 과목 이름
@@ -311,16 +356,14 @@ def page_html(course, ch, sec, blocks):
       <ol id="toc-list">
 {chr(10).join(toc)}
       </ol>
-      <p class="progress mono small"></p>
-      <a class="toc-px" href="../../practice.html?sec={course["id"]}-{ch["n"]}-{sec["n"]}"><span class="mono">연습문제</span><b>이 절의 기출 문항</b><span class="mono">{exam_count(course, ch, sec)} →</span></a>
+      <p class="progress mono small"></p>{practice_links(course, ch, sec, "side")}
       <p class="toc-links mono small"><a href="../../graph.html?sec={course["id"]}-{ch["n"]}-{sec["n"]}">이 절을 개념 지도에서 보기</a></p>
     </aside>
 
     <div>
 {(chr(10) + chr(10)).join(bodies)}
 
-      <a class="px-go" href="../../practice.html?sec={course["id"]}-{ch["n"]}-{sec["n"]}"><span class="mono">연습문제</span><b>이 절의 기출 문항 풀기</b><span class="mono px-n">{exam_count(course, ch, sec)}</span></a>
-
+{practice_links(course, ch, sec, "end")}
       <nav class="next" aria-label="절 이동"></nav>
     </div>
   </div>
@@ -418,7 +461,7 @@ def main():
     pages = []
     for c in cur["courses"]:
         NAMES[c["id"]] = c["name"]
-        tc = {"id": c["id"], "name": c["name"], "meta": c["meta"], "track": c["track"], "level": c["level"], "chapters": []}
+        tc = {"id": c["id"], "name": c["name"], "meta": c["meta"], "track": c["track"], "level": c["level"], "split": exam_split(c), "chapters": []}
         toc.append(tc)
         for ch in c["chapters"]:
             tch = {"n": ch["n"], "title": ch["title"], "sections": []}
@@ -433,7 +476,11 @@ def main():
                     used.setdefault(bid, []).append(here)   # 한 블록을 여러 과목·절에 재사용할 수 있다
                 items = [{"kind": TOC_KIND[blocks[b]["type"]], "id": b, "title": tex_plain(blocks[b]["title"])}
                          for b in s["blocks"] if blocks[b]["type"] in TOC_KIND]
-                tch["sections"].append({"n": s["n"], "title": s["title"], "code": s["code"], "page": bool(s["blocks"]), "items": items})
+                ts = {"n": s["n"], "title": s["title"], "code": s["code"], "page": bool(s["blocks"]), "items": items}
+                ex, ai = exam_n(c, ch, s), bank_counts(c["id"]).get(f'{ch["n"]}-{s["n"]}', 0)
+                if ex: ts["ex"] = ex   # 기출 문항 수
+                if ai: ts["ai"] = ai   # AI 출제 연습 문항 수
+                tch["sections"].append(ts)
                 if s["blocks"]:
                     pages.append((c, ch, s))
 

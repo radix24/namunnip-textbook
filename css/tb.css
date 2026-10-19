@@ -908,6 +908,37 @@ body[data-domain="math"] #chips .chip { display: none; }
 .px-go .mono { color: var(--forest); }
 .px-go b { font-size: 16px; }
 .px-go .px-n { color: var(--ink-3); }
+.px-go + .px-go { margin-top: 8px; }
+.toc-px + .toc-px { margin-top: 8px; }
+/* ───── 연습 시험 (bank.html, js/bank.js): AI 출제 연습 문항 ───── */
+.bk-ai { display: inline-block; margin-right: 6px; padding: 1px 8px; border: 1px solid var(--forest); border-radius: 999px; color: var(--forest); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+.bk-range { padding: 22px 0 8px; border-bottom: 1px solid var(--rule); }
+.bk-range h2 { font-size: 21px; letter-spacing: -.02em; }
+.bk-range h2 .mono { font-size: 13px; font-weight: 400; margin-left: 6px; }
+.bk-range > p { margin: 4px 0 12px; }
+.bk-sheets { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.bk-sheet { display: grid; gap: 3px; padding: 12px 14px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--forest); text-decoration: none; color: var(--ink); }
+.bk-sheet:hover { border-color: var(--forest); }
+.bk-sheet.rand { border-left-color: var(--ink-3); }
+.bk-sheet .mono { font-size: 12px; }
+.bk-sheet .ok { color: var(--forest); }
+.bk-ch { margin: 14px 0 6px; font-size: 15px; }
+.bk-secs { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+.bk-secs li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 5px 0; border-bottom: 1px dashed var(--rule); font-size: 14.5px; }
+.bk-item header .bk-no { font-weight: 700; font-size: 17px; min-width: 1.6em; }
+.px-opt.sel { border-color: var(--ink); background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--ink); }
+.px-opt:disabled { cursor: default; }
+.bk-sol { margin-top: 10px; padding: 10px 14px; background: var(--paper-2); border: 1px solid var(--rule); font-size: 14.5px; line-height: 1.75; max-width: 760px; }
+.bk-sol > b { display: block; color: var(--forest); font-size: 13px; margin-bottom: 2px; }
+.bk-sol p + p { margin-top: 4px; }
+.bk-submit { display: flex; align-items: center; gap: 14px; padding: 8px 0 18px; }
+.bk-score { margin: 0 0 18px; padding: 16px 20px; background: var(--card); border: 1px solid var(--forest); border-left: 4px solid var(--forest); display: grid; gap: 4px; }
+.bk-score > b { font-size: 26px; }
+.bk-nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 30px; }
+.cx-bank { display: grid; gap: 2px; margin-top: 10px; padding: 10px 14px; border: 1px solid var(--forest); border-radius: 8px; color: var(--ink); text-decoration: none; line-height: 1.4; }
+.cx-bank:hover { background: var(--paper-2); }
+.cx-bank b { color: var(--forest); font-size: 14px; }
+.cx-bank span { font-size: 12px; }
 .px-head { padding: 32px 0 12px; display: grid; gap: 8px; }
 .px-head h1 { font-size: clamp(26px, 4vw, 38px); letter-spacing: -.03em; line-height: 1.2; }
 .px-head h1 em { font-style: normal; color: var(--forest); }

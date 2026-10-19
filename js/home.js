@@ -294,6 +294,7 @@
     const subj = (k) => { const p = k.split("-"); return p.length === 2 ? p[0].replace(/\d{2}$/, "") : p[0]; };
     const info = [["구분", c.meta], ["구성", `대단원 ${c.chapters.length} · 절 ${n.open}/${n.sec} · 카드 ${n.cards}${n.vids ? ` · 영상 ${n.vids}` : ""}`],
       ["교육과정", code ? `2022 개정 [${subj(code)}]` : "교육과정 밖 교양"]];
+    const nAi = c.chapters.reduce((t, ch) => t + ch.sections.reduce((u, s) => u + (s.ai || 0), 0), 0);   // AI 출제 연습 문항(bank.html)
     const kindLb = (i) => (i.kind === "video" ? '<span class="cx-k mono">영상</span>' : i.kind === "text" ? '<span class="cx-k mono">읽기</span>' : "");
 
     document.title = `${c.name} — 나뭇잎 디지털 교과서`;
@@ -310,6 +311,7 @@
           <div class="cx-prog" aria-hidden="true"><i style="width:${pct}%"></i></div>
           <p class="cx-prog-t mono small">카드 <span class="cx-done">${done}</span>/${items.length} 공부함 (<span class="cx-pct">${pct}</span>%)</p>
           ${nextUp ? `<a class="cx-go" href="${nextUp.ch.n}-${nextUp.s.n}.html#${nextUp.i.id}">${done ? "이어서 공부하기" : "처음부터 공부하기"} · ${nextUp.ch.n}.${nextUp.s.n} ${esc(nextUp.s.title)}</a>` : items.length ? `<p class="cx-all small">모든 카드를 공부했습니다.</p>` : ""}
+          ${nAi ? `<a class="cx-bank" href="../../bank.html?c=${c.id}"><b>연습 시험 풀기</b><span class="dim">중간고사·기말고사 범위 시험지 · AI 출제 ${nAi}문항</span></a>` : ""}
           <dl class="cx-info">${info.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
           <div class="cx-path small">
             <p><span class="dim">먼저 공부할 과목</span>${pre.length ? pre.map(link).join(" · ") : esc(FIRST[c.id] || "따로 없음")}</p>
