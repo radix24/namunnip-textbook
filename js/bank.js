@@ -15,7 +15,8 @@
          이 브라우저에 무작위 씨앗(localStorage "namunnip-bank-seed")을 한 번 만들어 두고, 씨앗·과목·범위·기출 포함 여부로
          의사 난수를 만든다. 범위 문항을 층(기본·응용·심화, 서술형)으로 나눠 층마다 섞고, 층 안에서는 절을 번갈아 늘어놓은 뒤
          1, 2, …, n번 시험지에 돌려 담는다. 한 번 섞은 순서를 장마다 나눠 담으므로 장끼리 문항이 겹치지 않는다.
-         장마다 객관식·단답형은 기본 30 · 응용 50 · 심화 20 비율(최대 나머지 방식)로 담고, 층이 모자라면 가까운 층에서 채운다.
+         장마다 서술형을 먼저 돌려 담고, 장 전체가 기본 30 · 응용 50 · 심화 20(최대 나머지 방식)이 되도록 남은 몫을
+         객관식·단답형으로 채운다. 층이 모자라면 가까운 층에서 채운다.
          AI 문항을 먼저 모두 고르게 나눠 담고, 남는 자리를 기출로 채운다(장마다 AI·기출이 고르게 섞인다).
          기출을 섞으면 한 장 PER문항, 장 수는 MAXS까지. 기출을 빼면 범위의 AI 문항을 남김없이 round(문항/PER)장에 나눈다.
          무작위 시험지(s=x)는 같은 방식으로 한 장을 뽑되 Math.random을 써서 풀 때마다 새로 뽑는다.
@@ -108,7 +109,12 @@
     const free = spread(pool.filter((it) => it.type === "free").sort((a, b) => lvIdx(a) - lvIdx(b)), rnd);
     const fq = free.slice(0, n * freeCap);
     fq.forEach((it, i) => out[i % n].push(it));
-    const want = sizes.map((m, k) => quota(Math.max(0, m - out[k].length)));
+    // 장 전체(서술형 포함)를 30/50/20으로 나눈 몫에서 이미 담은 서술형의 층을 빼고 남은 몫을 객관식·단답형으로 채운다
+    const want = sizes.map((m, k) => {
+      const w = quota(m);
+      out[k].forEach((it) => { const t = [lvIdx(it), ...NEAR[lvIdx(it)]].find((u) => w[u] > 0); if (t != null) w[t]--; });
+      return w;
+    });
     const spare = [[], [], []];
     LV_ORDER.forEach((lv, t) => {
       const obj = pool.filter((it) => it.type !== "free" && lvIdx(it) === t);
