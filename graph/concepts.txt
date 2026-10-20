@@ -10,7 +10,7 @@ units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standar
 error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis | measure
 estimate | 어림 | card-is1-fermi | units
 digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration | measure
-data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data | error
+data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data text-fusi-simpson-paradox | error
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat text-is2-ai-robot | digital data
 robot | 로봇과 되먹임 제어 | card-is2-robot card-is2-robot-design | digital
@@ -294,7 +294,7 @@ sie-galileo | 갈릴레이의 빗면 실험 | card-sie1-galileo text-sie1-galile
 sie-nature | 과학의 본성과 과학사 | text-sie1-nature text-sie1-light-speed |
 sie-induction | 귀납적 탐구 | card-sie1-pendulum text-sie1-pendulum-induction | error
 sie-deduction | 가설 연역적 탐구 | card-sie1-pasteur | sci-method sie-induction
-sie-represent | 자료의 분석과 표현 | card-sie1-plot | error
+sie-represent | 자료의 분석과 표현 | card-sie1-plot text-fusi-area-distortion | error
 sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer text-sie1-replication | error sie-deduction
 sie-everyday | 생활 속 과학 원리 탐구 (확산 시간) | card-sie2-egg text-sie2-egg-cooking | sie-represent
 sie-question | 탐구 문제와 탐구 계획 | text-sie2-question text-sie2-sampling-days | sie-deduction
@@ -622,21 +622,21 @@ rs-report | 연구 보고서 작성과 인용 | card-resr-abstract text-resr-rep
 rs-present | 구두·포스터 발표 | card-resr-poster text-resr-present | rs-report
 
 # ── 융합선택: 융합과학 탐구 ──
-fs-convergence | 융합 탐구의 사례: X선 회절과 DNA 구조 | card-fusi-helix text-fusi-dna |
-fs-inquiry-compare | 예술·사회과학·과학 탐구의 비교 | text-fusi-compare card-fusi-pointil | sci-method
-fs-data-types | 데이터의 종류와 측정 척도 | card-fusi-scale text-fusi-data | data error
-fs-digital-ai | 디지털 탐구 도구와 기계 학습 | card-fusi-power card-fusi-knn text-fusi-ai | digital elec-power
-fs-data-question | 공개 데이터 가공과 탐구 문제 발견 | card-fusi-quake | plate fs-data-types sie-represent
-fs-hypo-design | 가설·모형과 판별 가능한 탐구 설계 | card-fusi-cooling | sci-method
-fs-data-quality | 표집 편향과 데이터의 신뢰성·타당성 | card-fusi-sampling card-fusi-pmsensor | error digital sie-calib
+fs-convergence | 융합 탐구의 사례: X선 회절과 DNA 구조 | card-fusi-helix text-fusi-dna text-fusi-xray-helix |
+fs-inquiry-compare | 예술·사회과학·과학 탐구의 비교 | text-fusi-compare card-fusi-pointil text-fusi-color-mixing | sci-method
+fs-data-types | 데이터의 종류와 측정 척도 | card-fusi-scale text-fusi-data text-fusi-measure-scale | data error
+fs-digital-ai | 디지털 탐구 도구와 기계 학습 | card-fusi-power card-fusi-knn text-fusi-ai text-fusi-sampling-interval | digital elec-power
+fs-data-question | 공개 데이터 가공과 탐구 문제 발견 | card-fusi-quake text-fusi-gutenberg | plate fs-data-types sie-represent
+fs-hypo-design | 가설·모형과 판별 가능한 탐구 설계 | card-fusi-cooling text-fusi-cooling-hypothesis | sci-method
+fs-data-quality | 표집 편향과 데이터의 신뢰성·타당성 | card-fusi-sampling card-fusi-pmsensor text-fusi-response-bias | error digital sie-calib
 fs-visual | 목적에 맞는 시각화와 왜곡된 그래프 | card-fusi-misgraph | sie-represent
-fs-mean-sd | 평균·표준편차·표준오차로 가설 평가 | card-fusi-meansd | error sci-method
+fs-mean-sd | 평균·표준편차·표준오차로 가설 평가 | card-fusi-meansd text-fusi-mean-difference | error sci-method
 fs-conclude | 결론 평가: 교란 변수와 심슨의 역설 | card-fusi-simpson | data fs-mean-sd
-fs-present | 탐구 결과 발표와 토론 | text-fusi-present | sie-evidence fs-conclude
-fs-tech-forecast | 미래 융합과학기술의 예측 | card-fusi-moore text-fusi-future | semicond
-fs-grand-challenge | 인류 난제의 융합적 해결 | card-fusi-desal text-fusi-challenges | cell-transport
-fs-ethics | 융합과학 탐구의 윤리와 쟁점 | text-fusi-ethics card-fusi-fairness | sie-ethics ethics ai diag-test
-fs-citizen-sci | 시민 참여와 시민 과학 | card-fusi-crowd text-fusi-citizen | data
+fs-present | 탐구 결과 발표와 토론 | text-fusi-present text-fusi-error-bar | sie-evidence fs-conclude
+fs-tech-forecast | 미래 융합과학기술의 예측 | card-fusi-moore text-fusi-future text-fusi-exponential-trend | semicond
+fs-grand-challenge | 인류 난제의 융합적 해결 | card-fusi-desal text-fusi-challenges text-fusi-desalination | cell-transport
+fs-ethics | 융합과학 탐구의 윤리와 쟁점 | text-fusi-ethics card-fusi-fairness text-fusi-fair-ai | sie-ethics ethics ai diag-test
+fs-citizen-sci | 시민 참여와 시민 과학 | card-fusi-crowd text-fusi-citizen text-fusi-crowd-majority | data
 
 # ── 융합선택: 기후변화와 환경생태 ──
 cl-weather-climate | 날씨와 기후, 평년값 | card-clim-normals text-clim-normal-anomaly |

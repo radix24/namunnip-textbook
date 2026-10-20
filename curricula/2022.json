@@ -3670,6 +3670,7 @@
        "code": "12융탐01-01",
        "blocks": [
         "intro-fusi-1-1",
+        "text-fusi-xray-helix",
         "card-fusi-helix",
         "text-fusi-dna"
        ]
@@ -3680,6 +3681,7 @@
        "code": "12융탐01-02",
        "blocks": [
         "intro-fusi-1-2",
+        "text-fusi-color-mixing",
         "text-fusi-compare",
         "card-fusi-pointil"
        ]
@@ -3690,6 +3692,7 @@
        "code": "12융탐01-03",
        "blocks": [
         "intro-fusi-1-3",
+        "text-fusi-measure-scale",
         "card-fusi-scale",
         "text-fusi-data"
        ]
@@ -3700,6 +3703,7 @@
        "code": "12융탐01-04",
        "blocks": [
         "intro-fusi-1-4",
+        "text-fusi-sampling-interval",
         "card-fusi-power",
         "card-fusi-knn",
         "text-fusi-ai"
@@ -3717,6 +3721,7 @@
        "code": "12융탐02-01",
        "blocks": [
         "intro-fusi-2-1",
+        "text-fusi-gutenberg",
         "card-fusi-quake",
         "text-sie2-question"
        ]
@@ -3727,6 +3732,7 @@
        "code": "12융탐02-02",
        "blocks": [
         "intro-fusi-2-2",
+        "text-fusi-cooling-hypothesis",
         "card-fusi-cooling"
        ]
       },
@@ -3736,6 +3742,7 @@
        "code": "12융탐02-03",
        "blocks": [
         "intro-fusi-2-3",
+        "text-fusi-response-bias",
         "card-fusi-sampling",
         "card-fusi-pmsensor"
        ]
@@ -3746,6 +3753,7 @@
        "code": "12융탐02-04",
        "blocks": [
         "intro-fusi-2-4",
+        "text-fusi-area-distortion",
         "card-sie1-plot",
         "card-fusi-misgraph"
        ]
@@ -3756,6 +3764,7 @@
        "code": "12융탐02-05",
        "blocks": [
         "intro-fusi-2-5",
+        "text-fusi-mean-difference",
         "card-fusi-meansd",
         "card-is2-dredge"
        ]
@@ -3766,6 +3775,7 @@
        "code": "12융탐02-06",
        "blocks": [
         "intro-fusi-2-6",
+        "text-fusi-simpson-paradox",
         "card-is2-confound",
         "card-fusi-simpson"
        ]
@@ -3776,6 +3786,7 @@
        "code": "12융탐02-07",
        "blocks": [
         "intro-fusi-2-7",
+        "text-fusi-error-bar",
         "text-fusi-present"
        ]
       }
@@ -3791,6 +3802,7 @@
        "code": "12융탐03-01",
        "blocks": [
         "intro-fusi-3-1",
+        "text-fusi-exponential-trend",
         "card-fusi-moore",
         "text-fusi-future"
        ]
@@ -3801,6 +3813,7 @@
        "code": "12융탐03-02",
        "blocks": [
         "intro-fusi-3-2",
+        "text-fusi-desalination",
         "card-fusi-desal",
         "text-fusi-challenges"
        ]
@@ -3811,6 +3824,7 @@
        "code": "12융탐03-03",
        "blocks": [
         "intro-fusi-3-3",
+        "text-fusi-fair-ai",
         "text-fusi-ethics",
         "card-fusi-fairness"
        ]
@@ -3821,6 +3835,7 @@
        "code": "12융탐03-04",
        "blocks": [
         "intro-fusi-3-4",
+        "text-fusi-crowd-majority",
         "card-fusi-crowd",
         "text-fusi-citizen"
        ]
