@@ -2064,6 +2064,7 @@
        "code": "12반응01-01",
        "blocks": [
         "intro-rxn-1-1",
+        "text-rxn-bronsted",
         "card-is2-ion-migration",
         "card-is2-neutral",
         "card-rxn-conjugate"
@@ -2075,6 +2076,7 @@
        "code": "12반응01-02",
        "blocks": [
         "intro-rxn-1-2",
+        "text-rxn-ph",
         "card-is2-ph-log",
         "card-chem-autoion",
         "card-chem-ph-scale",
@@ -2087,6 +2089,7 @@
        "code": "12반응01-03",
        "blocks": [
         "intro-rxn-1-3",
+        "text-rxn-titration",
         "card-chem-eq-point",
         "card-rxn-titration",
         "card-chem-indicator",
@@ -2100,6 +2103,7 @@
        "code": "12반응01-04",
        "blocks": [
         "intro-rxn-1-4",
+        "text-rxn-hydrolysis",
         "card-rxn-hydrolysis",
         "card-chem-kw-temp"
        ]
@@ -2110,6 +2114,7 @@
        "code": "12반응01-05",
        "blocks": [
         "intro-rxn-1-5",
+        "text-rxn-buffer",
         "card-chem-lechat",
         "card-rxn-buffer"
        ]
@@ -2126,6 +2131,7 @@
        "code": "12반응02-01",
        "blocks": [
         "intro-rxn-2-1",
+        "text-rxn-oxidation-number",
         "card-is2-redox-electron",
         "card-rxn-oxnum"
        ]
@@ -2136,6 +2142,7 @@
        "code": "12반응02-02",
        "blocks": [
         "intro-rxn-2-2",
+        "text-rxn-galvanic",
         "card-is2-reactivity",
         "text-rxn-battery-history"
        ]
@@ -2146,6 +2153,7 @@
        "code": "12반응02-03",
        "blocks": [
         "intro-rxn-2-3",
+        "text-rxn-potential",
         "card-rxn-cell"
        ]
       },
@@ -2155,6 +2163,7 @@
        "code": "12반응02-04",
        "blocks": [
         "intro-rxn-2-4",
+        "text-rxn-electrolysis",
         "card-rxn-electrolysis",
         "card-chem-h2oel"
        ]
@@ -2165,6 +2174,7 @@
        "code": "12반응02-05",
        "blocks": [
         "intro-rxn-2-5",
+        "text-rxn-bio-redox",
         "text-rxn-redox-life",
         "card-is2-redox-life",
         "card-cell-etc"
@@ -2182,6 +2192,7 @@
        "code": "12반응03-01",
        "blocks": [
         "intro-rxn-3-1",
+        "text-rxn-functional-group",
         "card-rxn-functional",
         "card-chem-dipole"
        ]
@@ -2192,6 +2203,7 @@
        "code": "12반응03-02",
        "blocks": [
         "intro-rxn-3-2",
+        "text-rxn-organic-reaction",
         "card-rxn-reaction-map"
        ]
       },
@@ -2201,6 +2213,7 @@
        "code": "12반응03-03",
        "blocks": [
         "intro-rxn-3-3",
+        "text-rxn-polymerization",
         "card-is1-polymer",
         "card-rxn-polymer"
        ]
@@ -2211,6 +2224,7 @@
        "code": "12반응03-04",
        "blocks": [
         "intro-rxn-3-4",
+        "text-rxn-haber",
         "text-rxn-society",
         "video-chem-society"
        ]

@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-is2-redox-life canvas { width: 100%; aspect-ratio: 4 / 3; }
     #card-is2-redox-life .eq { font-family: var(--f-mono); font-size: 14px; margin: 4px 0 2px; }
@@ -52,9 +53,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#text-rxn-redox-life"><span class="mono">2.5.1</span>생명과 전지 속에서 전자는 누구에게서 누구에게로 갈까?</a></li>
-        <li><a href="#card-is2-redox-life"><span class="mono">2.5.2</span>광합성과 호흡은 왜 산화 환원 반응일까?</a></li>
-        <li><a href="#card-cell-etc"><span class="mono">2.5.3</span>두 전자 전달계 비교</a></li>
+        <li><a href="#text-rxn-bio-redox"><span class="mono">2.5.1</span>본문 · 생명과 전지 속 산화·환원</a></li>
+        <li><a href="#text-rxn-redox-life"><span class="mono">2.5.2</span>생명과 전지 속에서 전자는 누구에게서 누구에게로 갈까?</a></li>
+        <li><a href="#card-is2-redox-life"><span class="mono">2.5.3</span>광합성과 호흡은 왜 산화 환원 반응일까?</a></li>
+        <li><a href="#card-cell-etc"><span class="mono">2.5.4</span>두 전자 전달계 비교</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=rxn&amp;sec=2-5"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">14문항 →</span></a>
@@ -63,9 +65,58 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-rxn-bio-redox" data-kind="본문">
+        <header class="card-head"><span class="no">2.5.1</span><h2>우리 몸은 음식을 태우지 않고 어떻게 에너지를 얻을까?</h2><span class="kind">본문 · 생명과 전지 속 산화·환원</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">포도당을 불에 태우면 이산화 탄소와 물이 되면서 열이 한꺼번에 나온다. 우리 몸도 포도당을 산소와 반응시켜 이산화 탄소와 물로 바꾸지만, 몸이 불타지는 않는다. 같은 반응의 에너지를 세포는 어떻게 조금씩 나누어 받아 쓸까? 그리고 이것이 수소 연료 전지와 무엇이 닮았을까?</p>
+          <figure class="q-fig" data-q="rxn-etc">
+            <svg viewBox="0 0 520 230" role="img" aria-label="전자 전달계의 환원 전위 계단"></svg>
+            <div class="q-ctl"><label>전자가 내려온 단계 <input type="range" data-k="k" min="0" max="3" step="1" value="3"><output data-k="k"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 미토콘드리아의 전자 전달계. 전자가 NADH에서 산소까지 환원 전위가 커지는 계단을 차례로 내려오며, 단계마다 에너지를 조금씩 내놓는다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>표준 환원 전위와 \(\Delta G° = -nFE°\)(<a href="2-3.html">표준 환원 전위와 전지 전위</a>), 세포 호흡과 광합성(생명과학), 산화수(<a href="2-1.html">산화수와 산화·환원 반응식</a>).</div>
+
+          <h3><span class="mono">1</span>세포 호흡은 전자를 산소에게 넘기는 반응</h3>
+          <p>세포 호흡에서 포도당의 탄소는 산화수가 0에서 +4로 커지며 산화되고, 산소는 0에서 −2로 작아지며 환원된다. 즉 포도당에서 떨어져 나온 전자가 결국 산소에게 간다. 그런데 세포는 이 전자를 한꺼번에 산소에게 주지 않는다. 먼저 NAD⁺ 같은 운반체가 전자를 받아 NADH가 되고, NADH는 미토콘드리아의 전자 전달계로 전자를 넘긴다.</p>
+          <p>전자 전달계는 환원 전위가 조금씩 큰 분자들이 줄지어 있는 계단이다. 전자는 환원 전위가 작은 쪽에서 큰 쪽으로 저절로 흐르며, 한 단계씩 내려올 때마다 에너지를 조금 내놓는다. 세포는 그 에너지로 수소 이온을 막 바깥으로 퍼내고, 수소 이온이 되돌아올 때의 흐름으로 ATP를 만든다.<sup class="fn"><a href="#fn-rxn-bio-redox-1">1</a></sup></p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">전자 전달과 에너지</span></span>
+            <p>전자 \(n\) mol이 환원 전위 차 \(\Delta E\)를 내려오면 방출되는 에너지는 \[-\Delta G = nF\Delta E\] 이다. 전자는 환원 전위가 작은 운반체에서 큰 운반체로 저절로 이동한다.</p>
+          </div>
+          <p>그림 1에서 단계를 옮겨 보자. NADH(−0.32 V)에서 산소(+0.82 V)까지 전위 차는 1.14 V이다. 이를 한 번에 내려오면 에너지가 열로 흩어지지만, 네 단계로 나누어 내려오면 ATP를 만들 만큼씩 나누어 쓸 수 있다.</p>
+
+          <h3><span class="mono">2</span>광합성과 연료 전지</h3>
+          <p>광합성은 반대 방향이다. 엽록체는 빛 에너지로 물에서 전자를 떼어 내, 환원 전위가 작은 NADP⁺ 쪽으로 계단을 거슬러 올린다. 그래서 광합성은 빛이 없으면 일어나지 않는다. 한편 수소 연료 전지는 수소에서 나온 전자를 도선을 거쳐 산소에게 넘겨 전기를 얻는다. 세포 호흡이 전자를 단백질 계단으로 넘긴다면, 연료 전지는 도선으로 넘기는 셈이다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="세포 호흡, 광합성, 연료 전지의 전자 흐름">
+              <g class="s">
+                <text x="20" y="25">세포 호흡</text><text x="140" y="25">포도당 → NADH → 전자 전달계 → O₂</text><text x="430" y="25" class="td">에너지 방출</text>
+                <text x="20" y="60">광합성</text><text x="140" y="60">H₂O → (빛) → NADP⁺ → 포도당</text><text x="430" y="60" class="tb">에너지 저장</text>
+                <text x="20" y="95">연료 전지</text><text x="140" y="95">H₂ → 도선 → O₂</text><text x="430" y="95" class="td">전기 에너지</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 세 과정 모두 산화·환원으로 전자를 옮기며 에너지를 주고받는다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>NADH 1 mol에서 전자 2 mol이 산소까지 내려온다. 방출되는 에너지를 구하여라. 이 에너지로 ATP가 2.5 mol 만들어지고, ATP 1 mol을 만드는 데 30.5 kJ이 든다면 에너지 효율은 얼마인가? (\(F = 96.5\) kJ/(V·mol))</p>
+          </div>
+          <p>전위 차는 \(0.82 - (-0.32) = 1.14\) V이므로 방출 에너지는 \(2 \times 96.5 \times 1.14 \approx 220\) kJ이다.</p>
+          <p>ATP 2.5 mol에 저장된 에너지는 \(2.5 \times 30.5 \approx 76\) kJ이므로 효율은 \(\dfrac{76}{220} \approx 0.35\), 곧 약 35%이다. 나머지 65%는 열이 되어 체온을 유지하는 데 쓰인다. 자동차 엔진의 효율이 25~35%임을 생각하면, 세포는 체온 37 °C에서 엔진만큼 효율적으로 화학 에너지를 쓸모 있는 형태로 바꾼다.</p>
+          <p>아래 탐구 카드에서 생명과 전지 속에서 전자가 누구에게서 누구에게로 가는지, 광합성과 호흡이 왜 산화·환원 반응인지 따져 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-rxn-bio-redox-1">청산가리(사이안화물)는 전자 전달계의 마지막 단계에서 산소에게 전자를 넘기는 효소를 막는다. 전자가 흐르지 못하면 ATP를 만들 수 없어 세포가 빠르게 죽는다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>세포 호흡은 포도당의 전자를 산소에게 넘기는 산화·환원 반응이며, 전자는 환원 전위가 커지는 운반체의 계단을 따라 내려오며 \(nF\Delta E\)의 에너지를 나누어 내놓는다. 광합성은 빛 에너지로 전자를 거꾸로 올린다. 그래서 처음 질문의 우리 몸은 포도당의 전자를 한꺼번에 산소에게 주지 않고 여러 단계로 나누어 넘겨, 불타지 않고도 에너지를 ATP로 받아 쓴다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/rxn/2-3.html#card-rxn-cell"><small class="mono">화학 반응의 세계 2.3</small>두 금속을 고르면 전지의 전압을 미리 알 수 있을까?</a><a href="../../c/rxn/2-3.html#text-rxn-potential"><small class="mono">화학 반응의 세계 2.3</small>두 금속을 고르면 전지의 전압을 미리 알 수 있을까?</a></div></nav>
+
       <article class="card reading" id="text-rxn-redox-life">
         <header class="card-head">
-          <span class="no">2.5.1</span><h2>생명과 전지 속에서 전자는 누구에게서 누구에게로 갈까?</h2><span class="kind">읽기 · 생명 현상과 화학 전지의 산화·환원</span>
+          <span class="no">2.5.2</span><h2>생명과 전지 속에서 전자는 누구에게서 누구에게로 갈까?</h2><span class="kind">읽기 · 생명 현상과 화학 전지의 산화·환원</span>
         </header>
         <div class="reading-body">
           <p class="ask">산화·환원 반응에서는 전자를 내놓는 물질(환원제)과 받는 물질(산화제)이 짝을 이룹니다. 생명체와 전지는 이 전자의 흐름에서 에너지를 꺼내 씁니다. 각 과정에서 누가 어떤 역할을 할까요?</p>
@@ -94,11 +145,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/rxn/2-3.html#card-rxn-cell"><small class="mono">화학 반응의 세계 2.3</small>두 금속을 고르면 전지의 전압을 미리 알 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/rxn/2-3.html#card-rxn-cell"><small class="mono">화학 반응의 세계 2.3</small>두 금속을 고르면 전지의 전압을 미리 알 수 있을까?</a><a href="../../c/rxn/2-3.html#text-rxn-potential"><small class="mono">화학 반응의 세계 2.3</small>두 금속을 고르면 전지의 전압을 미리 알 수 있을까?</a></div></nav>
 
       <article class="card" id="card-is2-redox-life">
         <header class="card-head">
-          <span class="no">2.5.2</span><h2>광합성과 호흡은 왜 산화 환원 반응일까?</h2><span class="kind">원자 추적 · 산소 동위 원소 · 모식</span>
+          <span class="no">2.5.3</span><h2>광합성과 호흡은 왜 산화 환원 반응일까?</h2><span class="kind">원자 추적 · 산소 동위 원소 · 모식</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -145,11 +196,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-4.html#card-is1-bond"><small class="mono">통합과학1 2.4</small>원자는 왜 전자를 주고받거나 함께 쓸까?</a><a href="../../c/is1/2-4.html#card-is1-conduct"><small class="mono">통합과학1 2.4</small>소금물은 전기가 통하는데 설탕물은 왜 안 통할까?</a><a href="../../c/chem/2-1.html#card-chem-nacl"><small class="mono">화학 2.1</small>고체 소금은 전기가 안 통하는데, 녹이면 왜 통할까?</a><a href="../../c/chem/2-1.html#card-chem-h2oel"><small class="mono">화학 2.1</small>물을 전기 분해하면 왜 수소가 산소의 2배 나올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/1-3.html#card-bio-resp"><small class="mono">생명과학 1.3</small>세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?</a><a href="../../c/is1/3-5.html#card-bio-atp"><small class="mono">통합과학1 3.5</small>ATP는 왜 에너지 ‘화폐’일까?</a><a href="../../c/bio/1-3.html#text-bio-metabolism"><small class="mono">생명과학 1.3</small>밥에 든 에너지는 어떻게 근육을 움직일까?</a><a href="../../c/is2/2-4.html#card-leaf-color"><small class="mono">통합과학2 2.4</small>잎은 왜 초록색일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-4.html#card-is1-bond"><small class="mono">통합과학1 2.4</small>원자는 왜 전자를 주고받거나 함께 쓸까?</a><a href="../../c/is1/2-4.html#card-is1-conduct"><small class="mono">통합과학1 2.4</small>소금물은 전기가 통하는데 설탕물은 왜 안 통할까?</a><a href="../../c/chem/2-1.html#card-chem-nacl"><small class="mono">화학 2.1</small>고체 소금은 전기가 안 통하는데, 녹이면 왜 통할까?</a><a href="../../c/chem/2-1.html#card-chem-h2oel"><small class="mono">화학 2.1</small>물을 전기 분해하면 왜 수소가 산소의 2배 나올까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/rxn/2-2.html#text-rxn-galvanic"><small class="mono">화학 반응의 세계 2.2</small>볼타 전지는 왜 금방 약해졌을까?</a><a href="../../c/rxn/2-1.html#text-rxn-oxidation-number"><small class="mono">화학 반응의 세계 2.1</small>전자가 눈에 보이지 않는데 누가 산화되었는지 어떻게 알까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/1-3.html#card-bio-resp"><small class="mono">생명과학 1.3</small>세포 호흡은 포도당의 에너지를 어떻게 꺼낼까?</a><a href="../../c/is1/3-5.html#card-bio-atp"><small class="mono">통합과학1 3.5</small>ATP는 왜 에너지 ‘화폐’일까?</a><a href="../../c/bio/1-3.html#text-bio-metabolism"><small class="mono">생명과학 1.3</small>밥에 든 에너지는 어떻게 근육을 움직일까?</a><a href="../../c/is2/2-4.html#card-leaf-color"><small class="mono">통합과학2 2.4</small>잎은 왜 초록색일까?</a></div></nav>
 
       <article class="card" id="card-cell-etc">
         <header class="card-head">
-          <span class="no">2.5.3</span><h2>전자는 한쪽에선 내려가고, 다른 쪽에선 왜 올라갈까?</h2><span class="kind">광합성과 세포 호흡의 전자 전달계 · 산화 환원 전위 · 대략값</span>
+          <span class="no">2.5.4</span><h2>전자는 한쪽에선 내려가고, 다른 쪽에선 왜 올라갈까?</h2><span class="kind">광합성과 세포 호흡의 전자 전달계 · 산화 환원 전위 · 대략값</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -215,10 +266,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/rxn/body.js"></script>
 <script src="../../js/cards/is2/v-redox-life.js"></script>
 <script src="../../js/cards/cell/etc.js"></script>
 </body>

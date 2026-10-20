@@ -28,7 +28,7 @@ alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | 
 bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond text-chem-bond-elec | periodic
 silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
-polymer | 생명체의 고분자 | card-is1-polymer | bonding
+polymer | 생명체의 고분자 | card-is1-polymer text-rxn-polymerization | bonding
 bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor text-emq-semiconductor | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
@@ -37,15 +37,15 @@ imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-ch
 chem-society | 화학과 우리 사회 | card-chem-haber video-chem-society card-chem-safety text-chem-green text-chem-society | 
 mole | 몰 | card-chem-mole card-chem-cup card-chem-molvol card-chem-molar-mass text-chem-avogadro text-chem-mol | units
 stoich | 화학 반응식과 양적 관계 | card-chem-balance card-chem-gasvol card-chem-limit card-chem-caco3 text-chem-stoich | mole
-redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox | bonding
-acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-log card-is2-neutral card-is2-acid-plate text-is2-acid-base | bonding
+redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox text-rxn-galvanic text-rxn-oxidation-number | bonding
+acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-log card-is2-neutral card-is2-acid-plate text-is2-acid-base text-rxn-bronsted text-rxn-ph | bonding
 reaction-heat | 발열 반응과 흡열 반응 | card-is2-hand-warmer card-is2-cold-pack text-is2-reaction-heat text-mateng-enthalpy | bonding
 equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium | stoich
 eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk text-chem-kc text-chem-qk | equilibrium
-le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier | eq-const chem-society
+le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier text-rxn-buffer | eq-const chem-society
 water-ion | 물의 자동 이온화와 pH | card-chem-autoion card-chem-ph-scale card-chem-kw-temp card-chem-dilute-ph text-chem-ph | acid-base eq-const
 molarity | 몰 농도 | card-chem-molar-lab card-chem-dilution text-chem-molarity | mole
-neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env text-chem-neutralize | acid-base molarity
+neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env text-chem-neutralize text-rxn-titration | acid-base molarity
 titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-titration text-chem-titration | neutral-q water-ion
 
 # ── 힘과 에너지 ──
@@ -241,17 +241,17 @@ emq-star-spectrum | 별의 핵융합과 흡수 스펙트럼 | card-emq-star-spec
 rxn-bronsted | 브뢴스테드–라우리 산과 염기 | card-rxn-conjugate | acid-base
 rxn-ka | 이온화 상수와 약산의 pH | card-rxn-weak-acid | rxn-bronsted eq-const water-ion
 rxn-titration | 중화 적정 곡선 | card-rxn-titration | rxn-ka neutral-q
-rxn-hydrolysis | 염의 가수 분해 | card-rxn-hydrolysis | rxn-ka
+rxn-hydrolysis | 염의 가수 분해 | card-rxn-hydrolysis text-rxn-hydrolysis | rxn-ka
 rxn-buffer | 완충 용액 | card-rxn-buffer | rxn-ka le-chat
 rxn-oxnum | 산화수와 반쪽 반응식 | card-rxn-oxnum | redox
 rxn-battery | 화학 전지의 발달 | text-rxn-battery-history | redox
-rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell | rxn-oxnum rxn-battery
-rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis | rxn-cell
-rxn-redox-life | 생명과 전지 속 산화·환원 | text-rxn-redox-life | rxn-cell
-rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional | bonding
-rxn-organic-rxn | 작용기의 변화와 반응 | card-rxn-reaction-map | rxn-functional redox
+rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell text-rxn-potential | rxn-oxnum rxn-battery
+rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis text-rxn-electrolysis | rxn-cell
+rxn-redox-life | 생명과 전지 속 산화·환원 | text-rxn-redox-life text-rxn-bio-redox | rxn-cell
+rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional text-rxn-functional-group | bonding
+rxn-organic-rxn | 작용기의 변화와 반응 | card-rxn-reaction-map text-rxn-organic-reaction | rxn-functional redox
 rxn-polymerization | 첨가 중합과 축합 중합 | card-rxn-polymer | rxn-organic-rxn polymer
-rxn-society | 탄소 화합물과 사회 | text-rxn-society | rxn-polymerization
+rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber | rxn-polymerization
 
 # ── 진로선택: 생물의 유전 ──
 gene-sexlinked | 상염색체 유전과 반성 유전 | card-gene-sexlinked | division
