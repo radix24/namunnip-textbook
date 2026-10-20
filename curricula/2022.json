@@ -4577,6 +4577,7 @@
        "code": "12고생01-01",
        "blocks": [
         "intro-adbio-1-1",
+        "text-adbio-dna-melting",
         "text-cell-carb-lipid",
         "text-cell-protein",
         "card-adbio-isomer",
@@ -4589,6 +4590,7 @@
        "code": "12고생01-02",
        "blocks": [
         "intro-adbio-1-2",
+        "text-adbio-cyclic-flow",
         "card-cell-etc",
         "card-adbio-cyclic"
        ]
@@ -4599,6 +4601,7 @@
        "code": "12고생01-03",
        "blocks": [
         "intro-adbio-1-3",
+        "text-adbio-calvin-tracer",
         "card-cell-calvin",
         "card-adbio-benson"
        ]
@@ -4609,6 +4612,7 @@
        "code": "12고생01-04",
        "blocks": [
         "intro-adbio-1-4",
+        "text-adbio-photorespiration",
         "card-adbio-rubisco",
         "text-adbio-c3c4cam"
        ]
@@ -4619,6 +4623,7 @@
        "code": "12고생01-05",
        "blocks": [
         "intro-adbio-1-5",
+        "text-adbio-pfk-control",
         "card-cell-carbon",
         "text-adbio-hub",
         "card-adbio-pfk"
@@ -4630,6 +4635,7 @@
        "code": "12고생01-06",
        "blocks": [
         "intro-adbio-1-6",
+        "text-adbio-c-ring",
         "card-cell-chemiosmosis",
         "card-adbio-synthase"
        ]
@@ -4646,6 +4652,7 @@
        "code": "12고생02-01",
        "blocks": [
         "intro-adbio-2-1",
+        "text-adbio-diffusion-time",
         "card-bio-glucose",
         "card-adbio-signal"
        ]
@@ -4656,6 +4663,7 @@
        "code": "12고생02-02",
        "blocks": [
         "intro-adbio-2-2",
+        "text-adbio-signal-cascade",
         "card-bio-hormone",
         "text-adbio-hormone-kinds",
         "card-adbio-hormone-path"
@@ -4667,6 +4675,7 @@
        "code": "12고생02-03",
        "blocks": [
         "intro-adbio-2-3",
+        "text-adbio-goldman",
         "card-bio-saltatory",
         "card-adbio-ghk",
         "card-adbio-hh",
@@ -4679,6 +4688,7 @@
        "code": "12고생02-04",
        "blocks": [
         "intro-adbio-2-4",
+        "text-adbio-summation",
         "card-bio-syndir",
         "card-bio-syndrug",
         "card-adbio-psp"
@@ -4690,6 +4700,7 @@
        "code": "12고생02-05",
        "blocks": [
         "intro-adbio-2-5",
+        "text-adbio-innate-race",
         "text-adbio-immune-players",
         "card-adbio-infection"
        ]
@@ -4700,6 +4711,7 @@
        "code": "12고생02-06",
        "blocks": [
         "intro-adbio-2-6",
+        "text-adbio-vdj",
         "card-adbio-vdj",
         "text-adbio-tcell-mhc",
         "card-bio-immune"
@@ -4717,6 +4729,7 @@
        "code": "12고생03-01",
        "blocks": [
         "intro-adbio-3-1",
+        "text-adbio-fidelity",
         "card-gene-replication",
         "card-adbio-proofread"
        ]
@@ -4727,6 +4740,7 @@
        "code": "12고생03-02",
        "blocks": [
         "intro-adbio-3-2",
+        "text-adbio-activator",
         "card-gene-central",
         "card-adbio-promoter"
        ]
@@ -4737,6 +4751,7 @@
        "code": "12고생03-03",
        "blocks": [
         "intro-adbio-3-3",
+        "text-adbio-code-cracking",
         "card-gene-codon",
         "card-adbio-codebreak"
        ]
@@ -4747,6 +4762,7 @@
        "code": "12고생03-04",
        "blocks": [
         "intro-adbio-3-4",
+        "text-adbio-response-time",
         "card-gene-lac",
         "card-adbio-operon",
         "text-adbio-eukreg"
@@ -4758,6 +4774,7 @@
        "code": "12고생03-05",
        "blocks": [
         "intro-adbio-3-5",
+        "text-adbio-bicoid",
         "card-gene-differentiation",
         "card-adbio-hox"
        ]
@@ -4774,6 +4791,7 @@
        "code": "12고생04-01",
        "blocks": [
         "intro-adbio-4-1",
+        "text-adbio-limiting-dilution",
         "card-labbio-tissue-culture",
         "text-adbio-cell-eng",
         "card-adbio-hybridoma"
@@ -4785,6 +4803,7 @@
        "code": "12고생04-02",
        "blocks": [
         "intro-adbio-4-2",
+        "text-adbio-pcr",
         "card-labbio-restriction",
         "card-adbio-cloning",
         "card-labbio-transformation"
@@ -4796,6 +4815,7 @@
        "code": "12고생04-03",
        "blocks": [
         "intro-adbio-4-3",
+        "text-adbio-coverage",
         "text-adbio-omics",
         "card-adbio-assembly"
        ]
@@ -4806,6 +4826,7 @@
        "code": "12고생04-04",
        "blocks": [
         "intro-adbio-4-4",
+        "text-adbio-off-target",
         "text-gene-bioethics",
         "text-adbio-ethics"
        ]

@@ -131,10 +131,10 @@ phylo | 계통수 | card-bio-tree-read card-bio-tree-build card-bio-seq-tree | c
 metabolism | 세포 호흡과 ATP | card-bio-resp card-bio-atp text-bio-metabolism text-cell-atp-cycle text-cell-respiration-steps | enzyme redox
 photosyn | 광합성 | card-leaf-color card-photo-rate text-cell-pigment | redox
 organ-sys | 기관계의 통합 작용 | card-bio-systems card-bio-exercise card-bio-digest text-bio-organ-systems | metabolism bio-levels
-neuron | 뉴런과 흥분 전도 | card-bio-ap card-bio-saltatory card-bio-snapshot text-bio-neuron | membrane
-synapse | 시냅스 | card-bio-syndir card-bio-syndrug text-bio-synapse | neuron
+neuron | 뉴런과 흥분 전도 | card-bio-ap card-bio-saltatory card-bio-snapshot text-bio-neuron text-adbio-goldman | membrane
+synapse | 시냅스 | card-bio-syndir card-bio-syndrug text-bio-synapse text-adbio-summation | neuron
 nervous | 신경계 | card-bio-reflex card-bio-autonomic text-bio-brain card-bio-brain-map text-bio-nervous | synapse
-homeostasis | 항상성 | card-bio-glucose card-bio-thermo video-bio-fever card-bio-hormone card-bio-wearable text-bio-homeostasis | nervous organ-sys
+homeostasis | 항상성 | card-bio-glucose card-bio-thermo video-bio-fever card-bio-hormone card-bio-wearable text-bio-homeostasis text-adbio-diffusion-time text-adbio-signal-cascade | nervous organ-sys
 metab-disease | 물질대사와 질환 | card-bio-diabetes card-bio-energy text-bio-epidemiology card-bio-metabolic text-bio-disease | homeostasis
 immunity | 병원체와 면역 | card-bio-pathogen card-bio-immune text-bio-immunity | life
 blood-type | 항원–항체 반응과 혈액형 | card-bio-blood text-bio-bloodtype text-gene-abo | immunity
@@ -181,7 +181,7 @@ mateng-ea | 유효 충돌과 활성화 에너지 | card-mateng-ea text-mateng-ac
 mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control text-adchem-ten-degree | mateng-ea enzyme
 
 # ── 진로선택: 세포와 물질대사 ──
-cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid | polymer
+cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid text-adbio-dna-melting | polymer
 cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-protein text-gene-hershey | polymer
 cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions text-cell-centrifuge | bio-levels
 cell-endomembrane | 내막계와 분비 경로 | card-cell-pulse | cell-organelle dogma
@@ -193,12 +193,12 @@ cell-enzyme-kind | 효소의 종류와 활성 요인 | text-cell-enzyme-kind car
 cell-enzyme-kinetics | 효소 작용 기작과 저해 | card-cell-inhibit | enzyme
 cell-enzyme-use | 효소의 이용 | text-cell-enzyme-use text-cell-thermostable | cell-enzyme-kind
 cell-mito | 미토콘드리아의 구조 | card-cell-mito text-cell-mitochondria | cell-organelle
-cell-resp-steps | 세포 호흡의 단계 | card-cell-carbon | metabolism cell-mito redox
-cell-chemiosmosis | 산화적 인산화와 화학 삼투 | card-cell-chemiosmosis text-cell-chemiosmosis | cell-resp-steps cell-transport
+cell-resp-steps | 세포 호흡의 단계 | card-cell-carbon text-adbio-pfk-control | metabolism cell-mito redox
+cell-chemiosmosis | 산화적 인산화와 화학 삼투 | card-cell-chemiosmosis text-cell-chemiosmosis text-adbio-c-ring | cell-resp-steps cell-transport
 cell-ferment | 산소 호흡과 발효 | card-cell-ferment text-cell-ferment-use text-cell-fermentation | cell-resp-steps
 cell-chloroplast | 엽록체의 구조 | card-cell-chloroplast | cell-organelle photosyn
-cell-calvin | 명반응과 탄소 고정 반응 | card-cell-calvin text-cell-light-reaction | cell-chloroplast
-cell-etc-compare | 두 전자 전달계의 비교 | card-cell-etc | cell-chemiosmosis cell-calvin redox
+cell-calvin | 명반응과 탄소 고정 반응 | card-cell-calvin text-cell-light-reaction text-adbio-calvin-tracer | cell-chloroplast
+cell-etc-compare | 두 전자 전달계의 비교 | card-cell-etc text-adbio-cyclic-flow | cell-chemiosmosis cell-calvin redox
 cell-photo-history | 광합성 연구의 역사 | text-cell-photo-history card-cell-engelmann text-cell-photo-experiment | photosyn
 
 # ── 진로선택: 지구시스템과학 ──
@@ -260,17 +260,17 @@ gene-polygenic | 다유전자 유전 | card-gene-polygenic text-gene-polygenic |
 gene-disorder | 염색체 이상과 유전자 이상 | card-gene-nondisjunction text-gene-disorders | division dogma
 gene-material | 유전 물질의 규명과 DNA 구조 | card-gene-hershey text-gene-dna-history | chromosome cell-protein-na
 gene-genome | 유전자 구조와 유전체 | card-gene-genome | chromosome
-gene-replication | 반보존적 DNA 복제 | card-gene-replication text-gene-replication | gene-material
-gene-expression | 전사와 번역, RNA 가공 | card-gene-central | dogma gene-genome
-gene-code | 유전 부호와 돌연변이 | card-gene-codon text-gene-codon | gene-expression
-gene-regulation | 유전자 발현 조절 | card-gene-lac text-gene-operon | gene-expression
-gene-differentiation | 세포 분화와 발생 | card-gene-differentiation text-gene-differentiation | gene-regulation
+gene-replication | 반보존적 DNA 복제 | card-gene-replication text-gene-replication text-adbio-fidelity | gene-material
+gene-expression | 전사와 번역, RNA 가공 | card-gene-central text-adbio-activator | dogma gene-genome
+gene-code | 유전 부호와 돌연변이 | card-gene-codon text-gene-codon text-adbio-code-cracking | gene-expression
+gene-regulation | 유전자 발현 조절 | card-gene-lac text-gene-operon text-adbio-response-time | gene-expression
+gene-differentiation | 세포 분화와 발생 | card-gene-differentiation text-gene-differentiation text-adbio-bicoid | gene-regulation
 gene-welfare | 발현 조절 연구와 인류 복지 | text-gene-regulation-welfare text-gene-rnai | gene-differentiation
 gene-biotech-history | 생명공학기술의 발달 | text-gene-biotech-history text-gene-restriction | gene-replication gene-expression
 gene-editing | 유전자 편집·줄기세포·단일클론항체 | card-gene-crispr text-gene-therapies text-gene-crispr | gene-biotech-history gene-differentiation
 gene-fingerprint | PCR과 전기 영동, DNA 지문 | card-gene-gel text-gene-profile | gene-biotech-history
 gene-lmo | 유전자 변형 생물체 | card-gene-bt text-gene-bt-refuge | gene-biotech-history
-gene-ethics | 생명 윤리 | text-gene-bioethics text-gene-screening | gene-editing gene-lmo
+gene-ethics | 생명 윤리 | text-gene-bioethics text-gene-screening text-adbio-off-target | gene-editing gene-lmo
 
 # ── 진로선택: 행성우주과학 ──
 space-exploration | 태양계 탐사와 탐사선 궤도 | card-space-hohmann text-space-exploration text-space-hohmann-orbit | kepler
@@ -400,10 +400,10 @@ lb-chick-dev | 닭의 발생 단계 | card-labbio-chick | gene-differentiation
 lb-polytene | 다사 염색체와 퍼프 | card-labbio-polytene | chromosome gene-replication gene-expression
 lb-fly-mutants | 초파리 돌연변이 형질과 암수 구별 | card-labbio-fly-mutants | gene-sexlinked
 lb-cell-culture | 동물 세포 계대 배양과 생장 곡선 | card-labbio-cell-culture text-labbio-cell-research | division population
-lb-tissue-culture | 식물 조직 배양과 호르몬 비율 | card-labbio-tissue-culture text-labbio-plant-culture-uses | gene-differentiation division
+lb-tissue-culture | 식물 조직 배양과 호르몬 비율 | card-labbio-tissue-culture text-labbio-plant-culture-uses text-adbio-limiting-dilution | gene-differentiation division
 lb-dna-extract | DNA 추출 단계의 의미 | card-labbio-dna-extract | membrane gene-material enzyme
 lb-electrophoresis | 전기 영동과 표준 곡선 | card-labbio-electrophoresis | lb-dna-extract gene-fingerprint
-lb-restriction | 제한 효소의 인식 서열과 기능 확인 | card-labbio-restriction | lb-electrophoresis gene-biotech-history enzyme
+lb-restriction | 제한 효소의 인식 서열과 기능 확인 | card-labbio-restriction text-adbio-pcr | lb-electrophoresis gene-biotech-history enzyme
 lb-transformation | 대장균 형질 전환과 선택 배지 | card-labbio-transformation | lb-restriction gene-lmo gene-expression
 lb-pcr | PCR 온도 단계와 시약의 역할 | card-labbio-pcr | gene-replication pcr lb-electrophoresis
 lb-bioinfo | 생물정보학과 유전체 분석의 의료 활용 | card-labbio-bioinfo text-labbio-genome-med | gene-code gene-disorder phylo
@@ -460,7 +460,7 @@ ab-isomer | 생체 분자의 이성질체 | card-adbio-isomer | cell-carb-lipid
 ab-membrane-lipid | 지방산의 기하 이성질체와 막의 유동성 | card-adbio-fatty | cell-carb-lipid
 ab-cyclic | 순환적·비순환적 광인산화 | card-adbio-cyclic | cell-etc-compare cell-calvin
 ab-calvin-trace | 캘빈 회로를 밝힌 탐구 | card-adbio-benson | cell-calvin
-ab-photoresp | 광호흡과 C3·C4·CAM 식물 | card-adbio-rubisco text-adbio-c3c4cam | cell-calvin
+ab-photoresp | 광호흡과 C3·C4·CAM 식물 | card-adbio-rubisco text-adbio-c3c4cam text-adbio-photorespiration | cell-calvin
 ab-metab-hub | 해당 과정·TCA 회로의 중간 산물과 교차로 | text-adbio-hub | cell-resp-steps
 ab-pfk | 해당 과정의 다른 자리 입체성 조절 | card-adbio-pfk | ab-metab-hub cell-enzyme-kinetics
 ab-atp-synthase | ATP 합성 효소의 작동 | card-adbio-synthase | cell-chemiosmosis
@@ -470,8 +470,8 @@ ab-membrane-pot | 막전위: 네른스트 식과 GHK 식 | card-adbio-ghk | neur
 ab-hh | 호지킨–헉슬리 모형과 불응기 | card-adbio-hh | ab-membrane-pot
 ab-demyelination | 말이집 이상과 전도 질환 | text-adbio-demyelination | ab-hh neuron
 ab-psp | 시냅스후 전위와 시간 합·공간 합 | card-adbio-psp | synapse ab-membrane-pot
-ab-innate-adaptive | 선천 면역과 후천 면역의 연계 | text-adbio-immune-players card-adbio-infection | immunity
-ab-lymphocyte | 림프구의 발달, 항체 다양성, MHC와 체액성·세포성 면역 | card-adbio-vdj text-adbio-tcell-mhc | ab-innate-adaptive gene-expression
+ab-innate-adaptive | 선천 면역과 후천 면역의 연계 | text-adbio-immune-players card-adbio-infection text-adbio-innate-race | immunity
+ab-lymphocyte | 림프구의 발달, 항체 다양성, MHC와 체액성·세포성 면역 | card-adbio-vdj text-adbio-tcell-mhc text-adbio-vdj | ab-innate-adaptive gene-expression
 ab-proofread | DNA 복제의 교정과 뉴클레오타이드 절제 수선 | card-adbio-proofread | gene-replication
 ab-transcription | 전사 개시 요소와 원핵·진핵 전사 비교 | card-adbio-promoter | gene-expression
 ab-codebreak | 유전 암호의 실험적 해독 | card-adbio-codebreak | gene-code dogma
@@ -480,7 +480,7 @@ ab-eukreg | 진핵세포의 발현 조절 (염색질·히스톤 코드·RNA 간�
 ab-hox | 호메오 유전자와 발생의 진화 | card-adbio-hox | gene-differentiation evolution
 ab-cell-eng | 핵이식·줄기세포·세포 융합 | text-adbio-cell-eng card-adbio-hybridoma | gene-differentiation immunity lb-tissue-culture lb-cell-culture
 ab-recombinant | 유전자 재조합과 클로닝 설계 | card-adbio-cloning | lb-restriction gene-regulation gene-biotech-history
-ab-omics | 유전체 조립·단백체학·시스템생물학과 생명공학의 활용 | text-adbio-omics card-adbio-assembly | gene-genome gene-expression lb-bioinfo
+ab-omics | 유전체 조립·단백체학·시스템생물학과 생명공학의 활용 | text-adbio-omics card-adbio-assembly text-adbio-coverage | gene-genome gene-expression lb-bioinfo
 ab-bioethics | 생명공학의 윤리·사회 쟁점과 논증 | text-adbio-ethics | gene-ethics gene-editing ethics
 
 # ── 과학계열: 고급 물리학 ──
