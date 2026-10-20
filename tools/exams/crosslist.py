@@ -4,6 +4,7 @@
   python -X utf8 tools/exams/crosslist.py   # exams/sec/*.json 에서 via 표시가 붙은 항목을 지우고 다시 만든 뒤 exams/index.json 을 새로 센다
 
 규칙 = (대상 절, 원래 절 목록, 문제 글에 있어야 할 낱말 정규식 또는 None). 띄어쓰기를 지운 글에 맞춘다.
+정규식이 !로 시작하면 그 낱말이 없어야 싣는다.
 한 과목 안에서는 위에 있는 규칙이 먼저 잡는다(한 문항이 같은 과목의 두 절에 겹쳐 나오지 않게).
 Ⅰ 과목 문항은 고급 과목에 비해 쉬워서 넣지 않는다.
 """
@@ -16,18 +17,22 @@ RULES = [
     # 고급 물리학
     ("adphy-1-1", ["mech-1-1", "mech-1-2"], r"포물선|수평으로던|수평방향으로던|비스듬히"),
     ("adphy-1-2", ["phy-1-3"], None),
-    ("adphy-1-3", ["phy-1-1", "mech-1-3"], None),
+    ("adphy-1-3", ["phy-1-1"], r"막대|돌림힘|회전|원판|무게중심|평형을유지|수평을"),
+    ("adphy-1-3", ["mech-1-3"], None),
     ("adphy-1-4", ["mech-1-4", "mech-1-5"], None),
     ("adphy-1-6", ["mech-2-4", "mech-2-5"], None),
     ("adphy-1-6", ["mech-2-3"], r"열효율|열기관|카르노|엔트로피"),
     ("adphy-1-5", ["mech-2-2", "mech-2-3"], None),
     ("adphy-2-1", ["emq-1-1", "phy-2-1"], None),
-    ("adphy-2-2", ["phy-2-3", "emq-1-2"], None),
+    ("adphy-2-4", ["emq-1-5", "emq-1-6", "emq-2-1"], r"전자기파|안테나|송수신|라디오"),
+    ("adphy-2-2", ["phy-2-3"], None),
+    ("adphy-2-2", ["emq-1-2"], r"유전|축전기"),
     ("adphy-2-6", ["emq-1-6"], r"교류|공명|리액턴스|진동수"),
     ("adphy-2-2", ["emq-1-6"], r"축전기"),
     ("adphy-2-5", ["phy-2-2"], None),
     ("adphy-2-3", ["emq-1-3", "phy-2-5", "emq-1-5", "phy-2-6"], None),
-    ("adphy-3-1", ["emq-2-2", "phy-3-2"], None),
+    ("adphy-3-1", ["emq-2-2"], None),
+    ("adphy-3-1", ["phy-3-2"], r"렌즈|거울"),
     ("adphy-3-3", ["emq-2-1"], r"회절|분해능"),
     ("adphy-3-2", ["emq-2-1", "phy-3-1"], None),
     ("adphy-3-4", ["emq-2-3"], None),
@@ -39,11 +44,12 @@ RULES = [
     ("adphy-4-6", ["emq-3-5"], r"핵융합|핵반응|핵분열"),
     # 고급 화학
     ("adchem-2-3", ["mateng-1-1", "mateng-1-2"], r"실제기체"),
-    ("adchem-2-1", ["mateng-1-1"], r"분자운동|평균속력|평균운동에너지|속력분포"),
+    ("adchem-2-1", ["mateng-1-1", "mateng-1-2"], r"분자운동|평균속력|평균운동에너지|속력분포|확산|분출"),
     ("adchem-2-2", ["mateng-1-1", "mateng-1-2"], None),
     ("adchem-4-3", ["mateng-1-3"], r"상평형|삼중점|상그림|임계점"),
     ("adchem-2-4", ["mateng-1-3"], r"증기압|표면장력|모세관"),
-    ("adchem-2-4", ["mateng-2-1"], None),
+    ("adchem-4-3", ["mateng-2-1"], r"상평형"),
+    ("adchem-2-4", ["mateng-2-1"], r"표면장력|모세관|증기압"),
     ("adchem-2-5", ["mateng-1-4"], None),
     ("adchem-2-6", ["chem-4-2"], None),
     ("adchem-2-7", ["mateng-2-2", "mateng-2-3"], None),
@@ -55,6 +61,7 @@ RULES = [
     ("adchem-3-6", ["rxn-2-2", "rxn-2-3"], None),
     ("adchem-3-8", ["rxn-2-4"], None),
     ("adchem-4-2", ["chem-3-4"], r"온도를(높|낮|올|내)|온도에따른|온도변화|온도가(높|낮)|흡열|발열"),
+    ("adchem-4-3", ["chem-3-1"], r"상평형|용해|증기압"),
     ("adchem-4-1", ["chem-3-1", "chem-3-2", "chem-3-3"], None),
     ("adchem-4-6", ["rxn-1-3", "rxn-1-5"], None),
     ("adchem-4-5", ["rxn-1-2", "rxn-1-4"], r"pH|수소이온농도"),
@@ -73,16 +80,16 @@ RULES = [
     ("adbio-1-5", ["cell-3-2"], None),
     ("adbio-1-6", ["cell-3-3"], None),
     ("adbio-3-1", ["gene-1-7"], None),
-    ("adbio-3-2", ["gene-2-3"], r"프로모터|전사인자|조절부위|인핸서|조절서열|오페론"),
-    ("adbio-3-4", ["gene-2-3"], None),
+    ("adbio-3-4", ["gene-2-3"], r"오페론|대장균|원핵"),
+    ("adbio-3-2", ["gene-2-3"], None),
     ("adbio-3-3", ["gene-2-2"], None),
     ("adbio-3-5", ["gene-2-4"], None),
     ("adbio-4-1", ["gene-3-1", "gene-3-2"], r"줄기세포|세포융합|핵치환|단일클론|조직배양|복제양|복제동물"),
     ("adbio-4-2", ["gene-3-1", "gene-3-2"], r"재조합|제한효소|플라스미드|PCR|중합효소연쇄|전기영동|DNA연결"),
     ("adbio-4-3", ["gene-3-1", "gene-3-2"], None),
     # 고급 지구과학
-    ("adearth-1-3", ["esys-1-5"], r"지자기|복각|편각|고지자기|자북"),
-    ("adearth-1-2", ["esys-1-5"], r"중력|지오이드|지각평형|원심력|만유인력|단진자|탐사"),
+    ("adearth-1-3", ["esys-1-5"], r"지자기|지구자기|복각|편각|고지자기|자북|오로라"),
+    ("adearth-1-2", ["esys-1-5"], r"중력|지오이드|지각평형|원심력|만유인력|단진자|탐사|조륙|빙하|융기|나무토막|나무도막"),
     ("adearth-1-1", ["esys-1-5"], None),
     ("adearth-1-4", ["esys-1-3"], None),
     ("adearth-1-6", ["earth-2-3", "earth-2-4"], r"편광|니콜|복굴절|다색성|소광|간섭색|광학적"),
@@ -90,10 +97,10 @@ RULES = [
     ("adearth-1-7", ["earth-2-3", "earth-2-4", "esys-1-4"], None),
     ("adearth-1-10", ["earth-2-1"], r"주향|경사|지질도|클리노미터"),
     ("adearth-1-8", ["earth-2-1"], None),
-    ("adearth-3-2", ["earth-3-1"], r"겉보기운동|역행|순행|회합|내행성|외행성|금성|화성|목성|토성|최대이각|식"),
+    ("adearth-3-2", ["earth-3-1"], r"겉보기운동|역행|순행|회합|내행성|외행성|금성|화성|목성|토성|최대이각|일식|월식"),
     ("adearth-3-1", ["earth-3-1"], r"적경|적위|천구|방위각|고도|자오선|시간권|항성시"),
     ("adearth-1-9", ["earth-2-2"], None),
-    ("adearth-1-11", ["earth-2-5"], None),
+    ("adearth-1-11", ["earth-2-5"], r"!생산량|매장량|수요량|수입|광물자원|자원"),
     ("adearth-2-1", ["esys-3-3"], r"구름|이슬점|포화|강수|빙정|병합"),
     ("adearth-2-2", ["esys-3-3", "esys-3-4"], None),
     ("adearth-2-4", ["esys-3-5"], None),
@@ -107,7 +114,7 @@ RULES = [
     ("adearth-3-2", ["space-1-3"], None),
     ("adearth-3-3", ["space-2-2"], None),
     ("adearth-3-4", ["earth-3-2"], None),
-    ("adearth-3-5", ["earth-3-3", "space-2-4"], None),
+    ("adearth-3-5", ["earth-3-3"], None),
     ("adearth-3-6", ["space-2-5"], None),
     ("adearth-3-7", ["space-3-2"], None),
     ("adearth-3-8", ["space-3-1", "space-3-3"], None),
@@ -124,12 +131,13 @@ def main():
     taken, added = set(), {}
     for target, srcs, pat in RULES:
         course = target.split("-")[0]
-        rx = re.compile(pat) if pat else None
+        neg = bool(pat) and pat.startswith("!")
+        rx = re.compile(pat[1:] if neg else pat) if pat else None
         for s in srcs:
             for it in data.get(s, {"items": []})["items"]:
                 if "Ⅱ" not in it["subject"] or (course, it["id"]) in taken:
                     continue
-                if rx and not rx.search(re.sub(r"\s+", "", it.get("text", ""))):
+                if rx and bool(rx.search(re.sub(r"\s+", "", it.get("text", "")))) == neg:
                     continue
                 taken.add((course, it["id"]))
                 data.setdefault(target, {"sec": target, "items": []})["items"].append({**it, "via": s})
