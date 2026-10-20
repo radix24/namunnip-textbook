@@ -4852,6 +4852,7 @@
        "code": "12고지01-01",
        "blocks": [
         "intro-adearth-1-1",
+        "text-adearth-moho",
         "card-esys-seismic",
         "card-labearth-epicenter",
         "card-adearth-prem"
@@ -4863,6 +4864,7 @@
        "code": "12고지01-02",
        "blocks": [
         "intro-adearth-1-2",
+        "text-adearth-gravity-anomaly",
         "card-labearth-geoid",
         "card-labearth-gravity",
         "card-adearth-buried"
@@ -4874,6 +4876,7 @@
        "code": "12고지01-03",
        "blocks": [
         "intro-adearth-1-3",
+        "text-adearth-paleolatitude",
         "card-labearth-apwp",
         "card-adearth-dynamo"
        ]
@@ -4884,6 +4887,7 @@
        "code": "12고지01-04",
        "blocks": [
         "intro-adearth-1-4",
+        "text-adearth-seafloor-depth",
         "card-esys-hotspot",
         "card-labearth-spreading",
         "card-adearth-cooling",
@@ -4896,6 +4900,7 @@
        "code": "12고지01-05",
        "blocks": [
         "intro-adearth-1-5",
+        "text-adearth-olivine",
         "card-is1-silicate",
         "card-labearth-mineral-id",
         "card-adearth-solidsol"
@@ -4907,6 +4912,7 @@
        "code": "12고지01-06",
        "blocks": [
         "intro-adearth-1-6",
+        "text-adearth-birefringence",
         "card-labearth-polarizing",
         "card-adearth-retard"
        ]
@@ -4917,6 +4923,7 @@
        "code": "12고지01-07",
        "blocks": [
         "intro-adearth-1-7",
+        "text-adearth-decompression",
         "card-adearth-facies",
         "text-earth-sediment",
         "card-labearth-rock-id",
@@ -4930,6 +4937,7 @@
        "code": "12고지01-08",
        "blocks": [
         "intro-adearth-1-8",
+        "text-adearth-isochron",
         "card-labearth-section",
         "card-earth-correlate",
         "card-labearth-isochron",
@@ -4942,6 +4950,7 @@
        "code": "12고지01-09",
        "blocks": [
         "intro-adearth-1-9",
+        "text-adearth-fossil-range",
         "card-earth-geotime",
         "card-adearth-range",
         "card-labearth-trackway"
@@ -4953,6 +4962,7 @@
        "code": "12고지01-10",
        "blocks": [
         "intro-adearth-1-10",
+        "text-adearth-apparent-dip",
         "card-labearth-strike-dip",
         "card-adearth-threepoint"
        ]
@@ -4963,6 +4973,7 @@
        "code": "12고지01-11",
        "blocks": [
         "intro-adearth-1-11",
+        "text-adearth-zircon-age",
         "card-earth-fossil-map",
         "card-adearth-korea-map",
         "text-adearth-korea-history"
@@ -4980,6 +4991,7 @@
        "code": "12고지02-01",
        "blocks": [
         "intro-adearth-2-1",
+        "text-adearth-droplet-growth",
         "text-esys-precip",
         "card-labearth-humidity",
         "card-adearth-cloud",
@@ -4992,6 +5004,7 @@
        "code": "12고지02-02",
        "blocks": [
         "intro-adearth-2-2",
+        "text-adearth-cloud-base",
         "card-esys-stability",
         "card-adearth-lapse",
         "card-labearth-skewt"
@@ -5003,6 +5016,7 @@
        "code": "12고지02-03",
        "blocks": [
         "intro-adearth-2-3",
+        "text-adearth-rossby-number",
         "card-labearth-coriolis",
         "card-adearth-forces"
        ]
@@ -5013,6 +5027,7 @@
        "code": "12고지02-04",
        "blocks": [
         "intro-adearth-2-4",
+        "text-adearth-gradient-wind",
         "card-esys-winds",
         "card-adearth-adjust",
         "card-labearth-geowind"
@@ -5024,6 +5039,7 @@
        "code": "12고지02-05",
        "blocks": [
         "intro-adearth-2-5",
+        "text-adearth-angular-momentum",
         "card-labearth-circulation",
         "card-esys-rossby",
         "card-adearth-jet"
@@ -5035,6 +5051,7 @@
        "code": "12고지02-06",
        "blocks": [
         "intro-adearth-2-6",
+        "text-adearth-sofar",
         "card-earth-ts",
         "card-adearth-watermass",
         "card-adearth-sofar"
@@ -5046,6 +5063,7 @@
        "code": "12고지02-07",
        "blocks": [
         "intro-adearth-2-7",
+        "text-adearth-storm-surge",
         "card-esys-waves",
         "card-adearth-dispersion",
         "text-esys-surge",
@@ -5058,6 +5076,7 @@
        "code": "12고지02-08",
        "blocks": [
         "intro-adearth-2-8",
+        "text-adearth-geostrophic-current",
         "card-esys-ekman",
         "card-adearth-gradcur",
         "card-labearth-geostrophic",
@@ -5070,6 +5089,7 @@
        "code": "12고지02-09",
        "blocks": [
         "intro-adearth-2-9",
+        "text-adearth-sverdrup",
         "card-earth-gyre",
         "card-adearth-sverdrup",
         "card-labearth-thermohaline"
@@ -5081,6 +5101,7 @@
        "code": "12고지02-10",
        "blocks": [
         "intro-adearth-2-10",
+        "text-adearth-tidal-resonance",
         "card-esys-tide",
         "card-adearth-tidal-force",
         "card-adearth-tide-resonance",
@@ -5094,6 +5115,7 @@
        "code": "12고지02-11",
        "blocks": [
         "intro-adearth-2-11",
+        "text-adearth-delayed-oscillator",
         "card-earth-enso",
         "card-earth-oni",
         "card-adearth-enso-osc",
@@ -5112,6 +5134,7 @@
        "code": "12고지03-01",
        "blocks": [
         "intro-adearth-3-1",
+        "text-adearth-sidereal-day",
         "card-labearth-celestial",
         "card-labearth-equation-time",
         "card-adearth-sidereal",
@@ -5125,6 +5148,7 @@
        "code": "12고지03-02",
        "blocks": [
         "intro-adearth-3-2",
+        "text-adearth-synodic",
         "card-labearth-analemma",
         "card-adearth-synodic"
        ]
@@ -5135,6 +5159,7 @@
        "code": "12고지03-03",
        "blocks": [
         "intro-adearth-3-3",
+        "text-adearth-parallax-error",
         "card-space-distance",
         "card-adearth-distance-error",
         "card-labearth-msfit",
@@ -5147,6 +5172,7 @@
        "code": "12고지03-04",
        "blocks": [
         "intro-adearth-3-4",
+        "text-adearth-balmer",
         "card-adearth-planck",
         "card-labearth-photometry",
         "card-adearth-balmer",
@@ -5159,6 +5185,7 @@
        "code": "12고지03-05",
        "blocks": [
         "intro-adearth-3-5",
+        "text-adearth-stellar-lifetime",
         "card-adearth-hydrostatic",
         "card-adearth-tracks",
         "card-labearth-cluster-hr"
@@ -5170,6 +5197,7 @@
        "code": "12고지03-06",
        "blocks": [
         "intro-adearth-3-6",
+        "text-adearth-burning-stages",
         "card-is1-fusion",
         "card-earth-star-core",
         "card-space-variables",
@@ -5183,6 +5211,7 @@
        "code": "12고지03-07",
        "blocks": [
         "intro-adearth-3-7",
+        "text-adearth-stromgren",
         "card-space-extinction",
         "card-labearth-extinction",
         "card-adearth-stromgren",
@@ -5195,6 +5224,7 @@
        "code": "12고지03-08",
        "blocks": [
         "intro-adearth-3-8",
+        "text-adearth-rotation-curve",
         "card-labearth-shapley",
         "card-space-proper-motion",
         "card-adearth-oort",
@@ -5208,6 +5238,7 @@
        "code": "12고지03-09",
        "blocks": [
         "intro-adearth-3-9",
+        "text-adearth-agn-size",
         "card-earth-hubble",
         "card-earth-quasar",
         "text-adearth-galaxy-agn",
@@ -5220,6 +5251,7 @@
        "code": "12고지03-10",
        "blocks": [
         "intro-adearth-3-10",
+        "text-adearth-hubble-time",
         "card-labearth-hubble-age",
         "card-is1-bbn",
         "card-adearth-cmb"
@@ -5231,6 +5263,7 @@
        "code": "12고지03-11",
        "blocks": [
         "intro-adearth-3-11",
+        "text-adearth-universe-age",
         "text-earth-cosmology",
         "card-adearth-friedmann",
         "card-space-cosmic-web"
