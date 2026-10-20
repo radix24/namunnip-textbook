@@ -21,7 +21,7 @@ sci-method | 가설과 대조 실험 | card-bio-control | error
 # ── 원소와 화학 결합 ──
 spectrum | 선 스펙트럼 | card-is1-spectrum text-is1-spectrum-elements |
 bbn | 빅뱅과 가벼운 원소 | card-is1-bbn | spectrum
-fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-path text-is1-nucleosynthesis text-is2-solar-energy | bbn
+fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-path text-is1-nucleosynthesis text-is2-solar-energy text-emq-stellar | bbn
 heavy-el | 무거운 원소의 생성 | card-is1-ncap video-is1-body | fusion
 periodic | 주기율과 전자 껍질 | card-is1-shells text-is1-periodicity |
 alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | periodic
@@ -29,7 +29,7 @@ bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-c
 silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
 polymer | 생명체의 고분자 | card-is1-polymer | bonding
-bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor | bonding spectrum
+bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor text-emq-semiconductor | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
 lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes text-chem-shape | bonding
@@ -65,20 +65,20 @@ efficiency | 에너지 효율과 신재생 에너지 | card-is2-efficiency card-
 solar-cell | 태양 전지 | card-is2-solar-cell | semicond spectrum
 
 # ── 전기와 자기 ──
-e-field | 전기장과 전위차 | card-phy-field card-phy-potential text-phy-efield |
+e-field | 전기장과 전위차 | card-phy-field card-phy-potential text-phy-efield text-emq-field |
 elec-power | 저항의 연결과 전력 | card-phy-multitap card-phy-bulbs card-phy-circuit-meter text-phy-circuit | e-field
 capacitor | 축전기 | card-phy-capacitor card-phy-touch text-phy-capacitor | e-field
-magnet | 자성체 | card-phy-magnet text-phy-magnetism |
+magnet | 자성체 | card-phy-magnet text-phy-magnetism text-emq-bfield |
 current-mag | 전류의 자기 작용 | card-phy-oersted card-phy-motor video-phy-speaker text-phy-current-mag | magnet
-em-induction | 전자기 유도 | card-phy-lenz card-phy-wireless card-is2-generator text-phy-induction-tech text-is2-power text-phy-induction | current-mag
+em-induction | 전자기 유도 | card-phy-lenz card-phy-wireless card-is2-generator text-phy-induction-tech text-is2-power text-phy-induction text-emq-induction | current-mag
 power-gen | 발전소 | text-is2-power-plants | em-induction
 transmission | 송전과 전력 수송 | card-is2-transmission video-is2-grid | power-gen elec-power
 
 # ── 빛과 현대 물리 ──
-interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference | 
-lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens | 
-photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality | interference
-matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro | photon lens
+interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference text-emq-grating | 
+lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens | 
+photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric | interference
+matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro text-emq-single-quantum | photon lens
 energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels | photon spectrum
 relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence | inertia gps-time
 
@@ -220,21 +220,21 @@ esys-rossby | 행성파와 편서풍 파동 | card-esys-rossby | esys-winds fron
 
 # ── 진로선택: 전자기와 양자 ──
 emq-equipotential | 등전위면과 전기장의 세기 | card-emq-equipotential | e-field
-emq-polarize | 정전기 유도와 유전 분극 | card-emq-polarize | e-field
+emq-polarize | 정전기 유도와 유전 분극 | card-emq-polarize text-emq-polarization | e-field
 emq-bfield | 전류가 만드는 자기장의 세기 | card-emq-bfield | current-mag
-emq-lorentz | 로런츠 힘과 질량 분석기 | card-emq-lorentz | emq-bfield
+emq-lorentz | 로런츠 힘과 질량 분석기 | card-emq-lorentz text-emq-lorentz | emq-bfield
 emq-transformer | 자기 선속과 변압기 | card-emq-transformer | em-induction
-emq-rlc | 저항·축전기·인덕터의 에너지 | card-emq-rlc | capacitor emq-transformer
+emq-rlc | 저항·축전기·인덕터의 에너지 | card-emq-rlc text-emq-circuit | capacitor emq-transformer
 emq-semis | 다이오드와 트랜지스터 | card-emq-semis | semicond
 emq-diffraction | 회절과 회절 격자, 홀로그램 | card-emq-diffraction text-emq-hologram | interference
 emq-aberration | 광학 기기와 수차 | card-emq-aberration | lens
-emq-polarization | 편광 | card-emq-polarizer |
+emq-polarization | 편광 | card-emq-polarizer text-emq-polarize |
 emq-photosensor | 광센서와 이미지 센서 | card-emq-pixels | photon bands
-emq-laser | 레이저와 광통신 | card-emq-laser text-emq-fiber | spectrum
+emq-laser | 레이저와 광통신 | card-emq-laser text-emq-fiber text-emq-laser | spectrum
 emq-single-quantum | 단일 양자의 간섭과 입자–파동 이중성 | card-emq-single-photon | interference matter-wave
-emq-superposition | 중첩과 측정, 양자 기술 | card-emq-qubit text-emq-quantum-tech | emq-single-quantum emq-polarization
-emq-tunnel | 터널 효과 | card-emq-tunnel | matter-wave
-emq-orbital | 불확정성 원리와 오비탈 | card-emq-orbital | matter-wave spectrum
+emq-superposition | 중첩과 측정, 양자 기술 | card-emq-qubit text-emq-quantum-tech text-emq-superposition | emq-single-quantum emq-polarization
+emq-tunnel | 터널 효과 | card-emq-tunnel text-emq-tunneling | matter-wave
+emq-orbital | 불확정성 원리와 오비탈 | card-emq-orbital text-emq-atom | matter-wave spectrum
 emq-star-spectrum | 별의 핵융합과 흡수 스펙트럼 | card-emq-star-spectrum | fusion spectrum blackbody
 
 # ── 진로선택: 화학 반응의 세계 ──

@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "cc308a161c8f",
+"version": "b08e3725ba10",
 "files": [
 "404.html",
 "bank.html",
@@ -1830,6 +1830,7 @@ self.PRECACHE = {
 "js/cards/econ/tax.js",
 "js/cards/econ/ticket-price.js",
 "js/cards/econ/two-market.js",
+"js/cards/emq/body.js",
 "js/cards/emq/e-bfield.js",
 "js/cards/emq/e-equipotential.js",
 "js/cards/emq/e-lorentz.js",
