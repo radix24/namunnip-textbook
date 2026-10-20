@@ -734,40 +734,40 @@ alg-seq-sums | 여러 가지 수열의 합 | card-alg-sum-square card-alg-sum-cu
 alg-recursive | 수열의 귀납적 정의 | card-alg-recur-rule card-alg-recur-tiling text-alg-recursion | alg-arith-seq alg-geo-seq
 alg-induction | 수학적 귀납법 | card-alg-induct-domino card-alg-induct-proof text-alg-induction | alg-recursive alg-seq-sums
 # calc1-1
-calc1-limit | 함수의 극한 | card-calc1-lim-approach | 
+calc1-limit | 함수의 극한 | card-calc1-lim-approach text-calc1-limit | 
 calc1-one-sided | 좌극한과 우극한 | card-calc1-one-sided | calc1-limit
 calc1-divergence | 발산과 무한대 | card-calc1-infinity | calc1-one-sided
-calc1-limit-laws | 함수의 극한에 대한 성질 | card-calc1-lim-laws | calc1-limit
+calc1-limit-laws | 함수의 극한에 대한 성질 | card-calc1-lim-laws text-calc1-limit-laws | calc1-limit
 calc1-limit-calc | 극한값의 계산 | card-calc1-indeterminate card-calc1-lim-coef | calc1-limit-laws calc1-divergence
-calc1-continuity | 함수의 연속 | card-calc1-cont-three card-calc1-cont-interval | calc1-one-sided calc1-limit-calc
-calc1-cont-props | 연속함수의 성질 | text-calc1-cont-props | calc1-continuity calc1-limit-laws
+calc1-continuity | 함수의 연속 | card-calc1-cont-three card-calc1-cont-interval text-calc1-continuity | calc1-one-sided calc1-limit-calc
+calc1-cont-props | 연속함수의 성질 | text-calc1-cont-props text-calc1-cont-theorems | calc1-continuity calc1-limit-laws
 calc1-evt | 최대·최소 정리 | card-calc1-evt | calc1-continuity
 calc1-ivt | 사잇값 정리 | card-calc1-ivt | calc1-continuity calc1-cont-props
 # calc1-2a
-calc1-derivative-coef | 미분계수 | card-calc1-secant card-calc1-zoom | 
-calc1-differentiability | 미분가능성과 연속성 | card-calc1-corner card-calc1-glue | calc1-derivative-coef
-calc1-derivative-fn | 도함수 | card-calc1-deriv-graph | calc1-derivative-coef
+calc1-derivative-coef | 미분계수 | card-calc1-secant card-calc1-zoom text-calc1-derivative-coef | 
+calc1-differentiability | 미분가능성과 연속성 | card-calc1-corner card-calc1-glue text-calc1-differentiability | calc1-derivative-coef
+calc1-derivative-fn | 도함수 | card-calc1-deriv-graph text-calc1-power-rule | calc1-derivative-coef
 calc1-power-rule | y = xⁿ의 도함수 | card-calc1-power-rule | calc1-derivative-fn
-calc1-sum-rule | 실수배·합·차의 미분법 | card-calc1-sum-rule | calc1-power-rule
+calc1-sum-rule | 실수배·합·차의 미분법 | card-calc1-sum-rule text-calc1-poly-deriv | calc1-power-rule
 calc1-product-rule | 곱의 미분법 | card-calc1-product-rule | calc1-sum-rule
-calc1-tangent | 접선의 방정식 | card-calc1-tangent-line card-calc1-tangent-slope card-calc1-tangent-ext | calc1-derivative-coef calc1-sum-rule
+calc1-tangent | 접선의 방정식 | card-calc1-tangent-line card-calc1-tangent-slope card-calc1-tangent-ext text-calc1-tangent | calc1-derivative-coef calc1-sum-rule
 # calc1-2b
-calc1-rolle | 롤의 정리 | card-calc1-rolle | 
+calc1-rolle | 롤의 정리 | card-calc1-rolle text-calc1-mvt | 
 calc1-mvt | 평균값 정리 | card-calc1-mvt | calc1-rolle
-calc1-incdec | 함수의 증가와 감소 | card-calc1-incdec | calc1-mvt
+calc1-incdec | 함수의 증가와 감소 | card-calc1-incdec text-calc1-extrema | calc1-mvt
 calc1-extremum | 극대와 극소 | card-calc1-extremum | calc1-incdec
-calc1-sketch | 그래프의 개형 | card-calc1-sketch | calc1-extremum
+calc1-sketch | 그래프의 개형 | card-calc1-sketch text-calc1-sketch | calc1-extremum
 calc1-maxmin | 닫힌 구간의 최댓값과 최솟값 | card-calc1-maxmin | calc1-extremum
-calc1-eq-ineq | 방정식과 부등식에의 활용 | card-calc1-root-count card-calc1-ineq-min | calc1-sketch calc1-maxmin
-calc1-velocity | 속도와 가속도 | card-calc1-motion card-calc1-throw | calc1-incdec
+calc1-eq-ineq | 방정식과 부등식에의 활용 | card-calc1-root-count card-calc1-ineq-min text-calc1-eq-ineq | calc1-sketch calc1-maxmin
+calc1-velocity | 속도와 가속도 | card-calc1-motion card-calc1-throw text-calc1-velocity | calc1-incdec
 # calc1-3
-calc1-antideriv | 부정적분과 적분상수 | card-calc1-antideriv-family card-calc1-slope-field | 
-calc1-poly-antideriv | 다항함수의 부정적분 | card-calc1-power-int card-calc1-linear-int | calc1-antideriv
-calc1-definite | 정적분의 뜻 | card-calc1-riemann card-calc1-signed-area | 
+calc1-antideriv | 부정적분과 적분상수 | card-calc1-antideriv-family card-calc1-slope-field text-calc1-antiderivative | 
+calc1-poly-antideriv | 다항함수의 부정적분 | card-calc1-power-int card-calc1-linear-int text-calc1-poly-integral | calc1-antideriv
+calc1-definite | 정적분의 뜻 | card-calc1-riemann card-calc1-signed-area text-calc1-definite | 
 calc1-definite-props | 정적분의 성질 | card-calc1-int-props | calc1-definite
-calc1-ftc | 부정적분과 정적분의 관계 | card-calc1-area-function card-calc1-ftc-eval | calc1-poly-antideriv calc1-definite-props
-calc1-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc1-area-axis card-calc1-area-between | calc1-ftc
-calc1-int-motion | 속도와 거리 | card-calc1-vel-dist card-calc1-chase | calc1-ftc calc1-area
+calc1-ftc | 부정적분과 정적분의 관계 | card-calc1-area-function card-calc1-ftc-eval text-calc1-ftc | calc1-poly-antideriv calc1-definite-props
+calc1-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc1-area-axis card-calc1-area-between text-calc1-area | calc1-ftc
+calc1-int-motion | 속도와 거리 | card-calc1-vel-dist card-calc1-chase text-calc1-distance | calc1-ftc calc1-area
 # calc2-1
 calc2-seq-limit | 수열의 수렴과 발산 | card-calc2-seq-converge card-calc2-seq-far | 
 calc2-seq-limit-laws | 수열의 극한에 대한 성질 | card-calc2-lim-laws card-calc2-rational-seq | calc2-seq-limit
