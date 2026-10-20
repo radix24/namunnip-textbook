@@ -3475,6 +3475,7 @@
        "code": "12기환01-01",
        "blocks": [
         "intro-clim-1-1",
+        "text-clim-normal-anomaly",
         "card-clim-normals",
         "card-clim-factors"
        ]
@@ -3485,6 +3486,7 @@
        "code": "12기환01-02",
        "blocks": [
         "intro-clim-1-2",
+        "text-clim-feedback-gain",
         "card-clim-feedback",
         "card-clim-daisy"
        ]
@@ -3495,6 +3497,7 @@
        "code": "12기환01-03",
        "blocks": [
         "intro-clim-1-3",
+        "text-clim-seaice-season",
         "card-clim-seaice",
         "text-clim-impacts"
        ]
@@ -3511,6 +3514,7 @@
        "code": "12기환02-01",
        "blocks": [
         "intro-clim-2-1",
+        "text-clim-keeling-curve",
         "card-clim-keeling",
         "card-earth-attrib",
         "text-clim-crisis"
@@ -3522,6 +3526,7 @@
        "code": "12기환02-02",
        "blocks": [
         "intro-clim-2-2",
+        "text-clim-sea-level",
         "card-clim-slr",
         "card-clim-meltheat"
        ]
@@ -3532,6 +3537,7 @@
        "code": "12기환02-03",
        "blocks": [
         "intro-clim-2-3",
+        "text-clim-extreme-shift",
         "card-clim-extremes",
         "text-clim-extreme-cases"
        ]
@@ -3542,6 +3548,7 @@
        "code": "12기환02-04",
        "blocks": [
         "intro-clim-2-4",
+        "text-clim-range-shift",
         "card-is2-ssp",
         "card-clim-range-shift",
         "text-clim-future-reports"
@@ -3553,6 +3560,7 @@
        "code": "12기환02-05",
        "blocks": [
         "intro-clim-2-5",
+        "text-clim-growing-degree",
         "card-clim-flowering",
         "text-clim-phenology-life"
        ]
@@ -3563,6 +3571,7 @@
        "code": "12기환02-06",
        "blocks": [
         "intro-clim-2-6",
+        "text-clim-phenology-mismatch",
         "card-clim-pollinator",
         "text-clim-insect-decline"
        ]
@@ -3573,6 +3582,7 @@
        "code": "12기환02-07",
        "blocks": [
         "intro-clim-2-7",
+        "text-clim-algal-growth",
         "card-clim-algal",
         "text-clim-water-bloom"
        ]
@@ -3583,6 +3593,7 @@
        "code": "12기환02-08",
        "blocks": [
         "intro-clim-2-8",
+        "text-clim-vector-temperature",
         "card-clim-vector",
         "text-clim-vector-cases"
        ]
@@ -3599,6 +3610,7 @@
        "code": "12기환03-01",
        "blocks": [
         "intro-clim-3-1",
+        "text-clim-degree-heating",
         "card-clim-dhw",
         "text-clim-barren"
        ]
@@ -3609,6 +3621,7 @@
        "code": "12기환03-02",
        "blocks": [
         "intro-clim-3-2",
+        "text-clim-fire-spread",
         "card-clim-wildfire",
         "text-clim-land-response"
        ]
@@ -3619,6 +3632,7 @@
        "code": "12기환03-03",
        "blocks": [
         "intro-clim-3-3",
+        "text-clim-carbon-budget",
         "card-clim-budget",
         "text-clim-tech",
         "card-earth-mitigate"
@@ -3630,6 +3644,7 @@
        "code": "12기환03-04",
        "blocks": [
         "intro-clim-3-4",
+        "text-clim-public-goods",
         "card-clim-cooperate",
         "text-clim-agreements"
        ]

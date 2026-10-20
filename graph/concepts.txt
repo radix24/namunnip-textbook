@@ -101,7 +101,7 @@ wind | 기압과 바람 | card-earth-isobar card-earth-updown text-earth-cyclone
 front | 전선과 중위도 저기압 | card-earth-front text-earth-satellite card-earth-forecast text-earth-moving-highs text-esys-planetary-wave | wind
 typhoon | 태풍과 악기상 | card-earth-typhoon-energy card-earth-danger card-earth-thunder text-earth-severe-weather card-earth-typhoon-track text-earth-typhoon text-esys-tsunami-height | wind
 enso | 용승과 엘니뇨 | card-earth-upwelling card-earth-enso text-is2-enso-desert card-earth-oni text-earth-enso text-esys-ekman-transport | seawater wind
-greenhouse | 온실 효과와 지구 온난화 | card-is2-greenhouse card-is2-co2 card-is2-sea-level video-is2-keeling card-is2-ssp text-is2-greenhouse text-esys-selective-absorb | earth-system
+greenhouse | 온실 효과와 지구 온난화 | card-is2-greenhouse card-is2-co2 card-is2-sea-level video-is2-keeling card-is2-ssp text-is2-greenhouse text-esys-selective-absorb text-clim-range-shift | earth-system
 climate-factor | 기후 변화의 요인 | card-earth-milankovitch card-earth-forcing card-earth-attrib card-earth-mitigate text-earth-climate | greenhouse
 
 # ── 우주 ──
@@ -639,23 +639,23 @@ fs-ethics | 융합과학 탐구의 윤리와 쟁점 | text-fusi-ethics card-fusi
 fs-citizen-sci | 시민 참여와 시민 과학 | card-fusi-crowd text-fusi-citizen | data
 
 # ── 융합선택: 기후변화와 환경생태 ──
-cl-weather-climate | 날씨와 기후, 평년값 | card-clim-normals |
+cl-weather-climate | 날씨와 기후, 평년값 | card-clim-normals text-clim-normal-anomaly |
 cl-climate-factor | 기후 요소와 기후 인자 | card-clim-factors | cl-weather-climate
-cl-feedback | 기후 되먹임과 기후 민감도 | card-clim-feedback | greenhouse
+cl-feedback | 기후 되먹임과 기후 민감도 | card-clim-feedback text-clim-feedback-gain | greenhouse
 cl-biosphere-feedback | 생물권과 기후의 상호 작용 | card-clim-daisy | cl-feedback earth-system
-cl-impacts | 기후변화가 생태계와 생활에 준 영향 | card-clim-seaice text-clim-impacts | cl-feedback biodiversity
-cl-causes | 기후위기의 원인과 심각성 | card-clim-keeling text-clim-crisis | carbon-cycle greenhouse
-cl-sea-level | 해수면 상승: 열팽창과 빙상 융해 | card-clim-slr card-clim-meltheat | cl-causes
-cl-extremes | 극한 기상 현상과 기온 분포의 꼬리 | card-clim-extremes text-clim-extreme-cases | greenhouse
+cl-impacts | 기후변화가 생태계와 생활에 준 영향 | card-clim-seaice text-clim-impacts text-clim-seaice-season | cl-feedback biodiversity
+cl-causes | 기후위기의 원인과 심각성 | card-clim-keeling text-clim-crisis text-clim-keeling-curve | carbon-cycle greenhouse
+cl-sea-level | 해수면 상승: 열팽창과 빙상 융해 | card-clim-slr card-clim-meltheat text-clim-sea-level | cl-causes
+cl-extremes | 극한 기상 현상과 기온 분포의 꼬리 | card-clim-extremes text-clim-extreme-cases text-clim-extreme-shift | greenhouse
 cl-range-shift | 기후변화 시나리오와 생물 분포 이동 | card-clim-range-shift text-clim-future-reports | greenhouse climate-factor biodiversity
-cl-phenology | 생물 계절과 개화 시기 변화 | card-clim-flowering text-clim-phenology-life | enzyme photosyn
-cl-pollinator | 꽃가루 매개 곤충의 감소와 원인 | card-clim-pollinator text-clim-insect-decline | cl-phenology food-web
-cl-algal-bloom | 물꽃 현상과 수생태계 생물다양성 | card-clim-algal text-clim-water-bloom | photosyn eco-parts biodiversity
-cl-vector | 곤충 매개 감염병과 기후 | card-clim-vector text-clim-vector-cases |
-cl-coral | 산호 백화와 바다 사막화 | card-clim-dhw text-clim-barren | seawater food-web
-cl-land-hazard | 사막화·대형 산불·가뭄과 홍수 | card-clim-wildfire text-clim-land-response | greenhouse
-cl-neutral | 탄소 예산과 탄소중립 기술 | card-clim-budget text-clim-tech | carbon-cycle greenhouse efficiency
-cl-cooperate | 국제 협약과 시민 참여 | card-clim-cooperate text-clim-agreements | cl-neutral biodiversity
+cl-phenology | 생물 계절과 개화 시기 변화 | card-clim-flowering text-clim-phenology-life text-clim-growing-degree | enzyme photosyn
+cl-pollinator | 꽃가루 매개 곤충의 감소와 원인 | card-clim-pollinator text-clim-insect-decline text-clim-phenology-mismatch | cl-phenology food-web
+cl-algal-bloom | 물꽃 현상과 수생태계 생물다양성 | card-clim-algal text-clim-water-bloom text-clim-algal-growth | photosyn eco-parts biodiversity
+cl-vector | 곤충 매개 감염병과 기후 | card-clim-vector text-clim-vector-cases text-clim-vector-temperature |
+cl-coral | 산호 백화와 바다 사막화 | card-clim-dhw text-clim-barren text-clim-degree-heating | seawater food-web
+cl-land-hazard | 사막화·대형 산불·가뭄과 홍수 | card-clim-wildfire text-clim-land-response text-clim-fire-spread | greenhouse
+cl-neutral | 탄소 예산과 탄소중립 기술 | card-clim-budget text-clim-tech text-clim-carbon-budget | carbon-cycle greenhouse efficiency
+cl-cooperate | 국제 협약과 시민 참여 | card-clim-cooperate text-clim-agreements text-clim-public-goods | cl-neutral biodiversity
 
 # ── 과학계열: 정보과학 ──
 if-function | 함수 정의·호출과 매개변수 | card-info-scope text-info-params |
