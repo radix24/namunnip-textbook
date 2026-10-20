@@ -9736,6 +9736,7 @@
        "code": "12경수01-01",
        "blocks": [
         "intro-econ-1-1",
+        "text-econ-index",
         "card-econ-cpi-basket",
         "card-econ-index-trap"
        ]
@@ -9746,6 +9747,7 @@
        "code": "12경수01-02",
        "blocks": [
         "intro-econ-1-2",
+        "text-econ-exchange",
         "card-econ-exchange",
         "card-econ-cross-rate"
        ]
@@ -9756,6 +9758,7 @@
        "code": "12경수01-03",
        "blocks": [
         "intro-econ-1-3",
+        "text-econ-tax",
         "card-econ-progressive-tax",
         "card-econ-tax-myth"
        ]
@@ -9766,6 +9769,7 @@
        "code": "12경수01-04",
        "blocks": [
         "intro-econ-1-4",
+        "text-econ-interest",
         "card-econ-compound",
         "card-econ-present-value"
        ]
@@ -9776,6 +9780,7 @@
        "code": "12경수01-05",
        "blocks": [
         "intro-econ-1-5",
+        "text-econ-annuity",
         "card-econ-annuity",
         "card-econ-lump-or-annuity"
        ]
@@ -9792,6 +9797,7 @@
        "code": "12경수02-01",
        "blocks": [
         "intro-econ-2-1",
+        "text-econ-functions",
         "card-econ-cost-function",
         "card-econ-phone-plan"
        ]
@@ -9802,6 +9808,7 @@
        "code": "12경수02-02",
        "blocks": [
         "intro-econ-2-2",
+        "text-econ-demand",
         "card-econ-demand-shift",
         "card-econ-demand-fit"
        ]
@@ -9812,6 +9819,7 @@
        "code": "12경수02-03",
        "blocks": [
         "intro-econ-2-3",
+        "text-econ-utility",
         "card-econ-marginal-utility",
         "card-econ-indifference"
        ]
@@ -9822,6 +9830,7 @@
        "code": "12경수02-04",
        "blocks": [
         "intro-econ-2-4",
+        "text-econ-equilibrium",
         "card-econ-equilibrium",
         "card-econ-cobweb"
        ]
@@ -9832,6 +9841,7 @@
        "code": "12경수02-05",
        "blocks": [
         "intro-econ-2-5",
+        "text-econ-tax-eq",
         "card-econ-tax-incidence",
         "card-econ-income-shift"
        ]
@@ -9842,6 +9852,7 @@
        "code": "12경수02-06",
        "blocks": [
         "intro-econ-2-6",
+        "text-econ-lp",
         "card-econ-lp-production",
         "card-econ-diet"
        ]
@@ -9858,6 +9869,7 @@
        "code": "12경수03-01",
        "blocks": [
         "intro-econ-3-1",
+        "text-econ-matrix",
         "card-econ-sales-matrix",
         "card-econ-market-share"
        ]
@@ -9868,6 +9880,7 @@
        "code": "12경수03-02",
        "blocks": [
         "intro-econ-3-2",
+        "text-econ-inverse",
         "card-econ-inverse-steps",
         "card-econ-bundle-price"
        ]
@@ -9878,6 +9891,7 @@
        "code": "12경수03-03",
        "blocks": [
         "intro-econ-3-3",
+        "text-econ-leontief",
         "card-econ-leontief",
         "card-econ-two-market"
        ]
@@ -9894,6 +9908,7 @@
        "code": "12경수04-01",
        "blocks": [
         "intro-econ-4-1",
+        "text-econ-marginal",
         "card-econ-marginal-cost",
         "card-econ-marginal-revenue"
        ]
@@ -9904,6 +9919,7 @@
        "code": "12경수04-02",
        "blocks": [
         "intro-econ-4-2",
+        "text-econ-avg-cost",
         "card-econ-avg-marginal",
         "card-econ-revenue-shape"
        ]
@@ -9914,6 +9930,7 @@
        "code": "12경수04-03",
        "blocks": [
         "intro-econ-4-3",
+        "text-econ-elasticity",
         "card-econ-elasticity",
         "card-econ-price-hike"
        ]
@@ -9924,6 +9941,7 @@
        "code": "12경수04-04",
        "blocks": [
         "intro-econ-4-4",
+        "text-econ-optimize",
         "card-econ-profit-max",
         "card-econ-ticket-price"
        ]

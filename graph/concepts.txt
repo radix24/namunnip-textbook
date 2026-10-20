@@ -1039,24 +1039,24 @@ agx-level | 등위곡선과 곡면 | card-adgeo-contour card-adgeo-level-match |
 agx-quadric | 이차곡면 | card-adgeo-quadric card-adgeo-slice-predict | agx-level geo-ellipse geo-hyperbola geo-parabola geo-sphere-eq
 agx-sph-tri | 구면삼각형 | card-adgeo-sphere-triangle card-adgeo-flight-route | geo-sphere-eq
 agx-sph-law | 구면코사인법칙과 구면사인법칙 | card-adgeo-spherical-law card-adgeo-city-distance | agx-sph-tri alg-cosine-law geo-dot
-econ-index | 경제지표와 물가지수 | card-econ-cpi-basket card-econ-index-trap | 
-econ-fx | 환율 | card-econ-exchange card-econ-cross-rate | econ-index
-econ-tax | 누진세와 세율 | card-econ-progressive-tax card-econ-tax-myth | cm2-function
-econ-interest | 단리와 복리, 현재 가치 | card-econ-compound card-econ-present-value | 
-econ-annuity | 연금 | card-econ-annuity card-econ-lump-or-annuity | econ-interest
-econ-func | 경제 함수와 손익분기점 | card-econ-cost-function card-econ-phone-plan | cm2-function
-econ-demand | 수요곡선과 공급곡선 | card-econ-demand-shift card-econ-demand-fit | econ-func
-econ-utility | 효용함수와 무차별곡선 | card-econ-marginal-utility card-econ-indifference | cm2-function
-econ-equilibrium | 균형 가격 | card-econ-equilibrium card-econ-cobweb | econ-demand
-econ-shift | 세금·소득과 균형의 변화 | card-econ-tax-incidence card-econ-income-shift | econ-equilibrium econ-tax
-econ-lp | 부등식의 영역과 선형계획 | card-econ-lp-production card-econ-diet | cm1-ineq-lin-sys
-econ-matrix | 경제 현상과 행렬 | card-econ-sales-matrix card-econ-market-share | cm1-matrix-mult
-econ-inverse | 역행렬과 연립방정식 | card-econ-inverse-steps card-econ-bundle-price | econ-matrix
-econ-leontief | 행렬로 푸는 경제 문제 | card-econ-leontief card-econ-two-market | econ-inverse econ-equilibrium
-econ-marginal | 한계비용과 한계수입 | card-econ-marginal-cost card-econ-marginal-revenue | econ-func
-econ-shape | 경제 함수의 그래프 개형 | card-econ-avg-marginal card-econ-revenue-shape | econ-marginal
-econ-elasticity | 가격 탄력성 | card-econ-elasticity card-econ-price-hike | econ-marginal econ-demand
-econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-price | econ-shape
+econ-index | 경제지표와 물가지수 | card-econ-cpi-basket card-econ-index-trap text-econ-index | 
+econ-fx | 환율 | card-econ-exchange card-econ-cross-rate text-econ-exchange | econ-index
+econ-tax | 누진세와 세율 | card-econ-progressive-tax card-econ-tax-myth text-econ-tax | cm2-function
+econ-interest | 단리와 복리, 현재 가치 | card-econ-compound card-econ-present-value text-econ-interest | 
+econ-annuity | 연금 | card-econ-annuity card-econ-lump-or-annuity text-econ-annuity | econ-interest
+econ-func | 경제 함수와 손익분기점 | card-econ-cost-function card-econ-phone-plan text-econ-functions | cm2-function
+econ-demand | 수요곡선과 공급곡선 | card-econ-demand-shift card-econ-demand-fit text-econ-demand | econ-func
+econ-utility | 효용함수와 무차별곡선 | card-econ-marginal-utility card-econ-indifference text-econ-utility | cm2-function
+econ-equilibrium | 균형 가격 | card-econ-equilibrium card-econ-cobweb text-econ-equilibrium | econ-demand
+econ-shift | 세금·소득과 균형의 변화 | card-econ-tax-incidence card-econ-income-shift text-econ-tax-eq | econ-equilibrium econ-tax
+econ-lp | 부등식의 영역과 선형계획 | card-econ-lp-production card-econ-diet text-econ-lp | cm1-ineq-lin-sys
+econ-matrix | 경제 현상과 행렬 | card-econ-sales-matrix card-econ-market-share text-econ-matrix | cm1-matrix-mult
+econ-inverse | 역행렬과 연립방정식 | card-econ-inverse-steps card-econ-bundle-price text-econ-inverse | econ-matrix
+econ-leontief | 행렬로 푸는 경제 문제 | card-econ-leontief card-econ-two-market text-econ-leontief | econ-inverse econ-equilibrium
+econ-marginal | 한계비용과 한계수입 | card-econ-marginal-cost card-econ-marginal-revenue text-econ-marginal | econ-func
+econ-shape | 경제 함수의 그래프 개형 | card-econ-avg-marginal card-econ-revenue-shape text-econ-avg-cost | econ-marginal
+econ-elasticity | 가격 탄력성 | card-econ-elasticity card-econ-price-hike text-econ-elasticity | econ-marginal econ-demand
+econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-price text-econ-optimize | econ-shape
 ai-learn | 인공지능의 학습과 수학 | card-aimath-teach-machine card-aimath-rule-vs-learn | 
 ai-history | 인공지능과 수학의 역사 | card-aimath-timeline card-aimath-perceptron-xor | ai-learn
 ai-bigdata | 빅데이터와 표본 | card-aimath-bigdata-sample card-aimath-data-bias | 

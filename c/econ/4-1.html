@@ -49,8 +49,9 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-econ-marginal-cost"><span class="mono">4.1.1</span>한계비용 = 비용 함수의 접선의 기울기</a></li>
-        <li><a href="#card-econ-marginal-revenue"><span class="mono">4.1.2</span>하나 더 팔 때 늘어나는 수입은 가격보다 작다</a></li>
+        <li><a href="#text-econ-marginal"><span class="mono">4.1.1</span>본문 · 경제 함수의 미분</a></li>
+        <li><a href="#card-econ-marginal-cost"><span class="mono">4.1.2</span>한계비용 = 비용 함수의 접선의 기울기</a></li>
+        <li><a href="#card-econ-marginal-revenue"><span class="mono">4.1.3</span>하나 더 팔 때 늘어나는 수입은 가격보다 작다</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=econ&amp;sec=4-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">13문항 →</span></a>
@@ -58,9 +59,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-econ-marginal" data-kind="본문">
+        <header class="card-head"><span class="no">4.1.1</span><h2>하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?</h2><span class="kind">본문 · 경제 함수의 미분</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">공장이 하루 100개를 만들다가 101개째를 만들려면 비용이 얼마나 더 들까? 처음 몇 개를 더 만들 때는 기계가 놀고 있어 싸게 늘릴 수 있지만, 생산량이 많아지면 야근 수당과 기계 마모 때문에 하나 더 만드는 비용이 커진다. '하나 더'의 비용을 생산량의 함수로 나타낼 수 있을까?</p>
+          <figure class="q-fig" data-q="econ-mc">
+            <svg viewBox="0 0 520 230" role="img" aria-label="총비용 함수의 그래프와 한 점에서의 접선"></svg>
+            <div class="q-ctl"><label>생산량 \(q\) <input type="range" data-k="q" min="0" max="280" step="10" value="100"><output data-k="q"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 총비용 \(C(q) = 1000 + 20q + 0.1q^2\)(천 원 단위)과 그 접선. 접선의 기울기가 한계비용 \(C'(q)\)로, 생산량이 늘수록 커진다. 실제로 하나 더 만드는 비용 \(C(q + 1) - C(q)\)와 거의 같다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>함수의 뜻과 함숫값, 직선의 기울기(중학교), 미분계수와 도함수(미적분Ⅰ), 경제 현상과 함수(<a href="2-1.html">경제 현상과 함수</a>).</div>
+
+          <h3><span class="mono">1</span>한계비용</h3>
+          <p>생산량이 \(q\)에서 한 단위 늘 때 늘어나는 비용 \(C(q + 1) - C(q)\)는, 생산량의 변화가 작다면 \(C(q)\)의 미분계수 \(C'(q)\)와 거의 같다. 경제학에서는 이 미분계수를 한계비용이라 한다. 마찬가지로 수입 함수 \(R(q)\)의 도함수 \(R'(q)\)를 한계수입, 이윤 함수의 도함수를 한계이윤이라 한다.</p>
+          <div class="tb-env thm"><span class="lb">정의 <span class="nm">한계비용과 한계수입</span></span>
+            <p>\[MC = C'(q) \approx C(q + 1) - C(q),\qquad MR = R'(q) \approx R(q + 1) - R(q)\] 생산량을 한 단위 늘릴 때 비용과 수입이 늘어나는 정도를 뜻한다.</p>
+          </div>
+          <p>그림 1의 비용 함수에서 \(C'(q) = 20 + 0.2q\)이다. 100개째에서는 \(C'(100) = 40\)천 원, 200개째에서는 60천 원이다. 실제로 101개째를 만드는 비용은 \(C(101) - C(100) = 40.1\)천 원으로 미분값과 거의 같다. 슬라이더로 생산량을 늘리면 접선이 점점 가팔라진다.<sup class="fn"><a href="#fn-econ-marginal-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>한계수입</h3>
+          <p>가격이 정해져 있으면 하나 더 팔 때 수입은 가격만큼 늘어난다. 하지만 많이 팔려면 값을 내려야 하는 시장에서는 사정이 다르다. 수요가 \(p = 100 - q\)이면 수입은 \(R(q) = q(100 - q)\)이고 한계수입은 \(R'(q) = 100 - 2q\)이다. 하나를 더 팔려고 값을 내리면 이미 팔던 물건들의 값도 함께 내려가므로, 한계수입은 가격 \(100 - q\)보다 작다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="경제 용어와 미분의 대응">
+              <g class="s">
+                <text x="30" y="25">경제 용어</text><text x="240" y="25">미분으로 나타내면</text>
+                <line x1="20" y1="33" x2="500" y2="33" class="gd"/>
+                <text x="30" y="55">한계비용 MC</text><text x="240" y="55">C′(q)</text>
+                <text x="30" y="78">한계수입 MR</text><text x="240" y="78">R′(q)</text>
+                <text x="30" y="101">한계이윤</text><text x="240" y="101">π′(q) = R′(q) − C′(q)</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 경제학의 '한계'는 수학의 '미분계수'와 같은 뜻이다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>총비용이 \(C(q) = 1000 + 20q + 0.1q^2\)(천 원)인 공장에서, 생산량이 150개일 때의 한계비용을 구하고 151개째를 실제로 만드는 비용과 비교하여라. 또 수요가 \(p = 100 - q\)일 때 30개를 파는 시점의 한계수입과 가격을 비교하여라.</p>
+          </div>
+          <p>\(C'(150) = 20 + 30 = 50\)천 원이다. 실제 비용은 \(C(151) - C(150) = 20 + 0.1(151^2 - 150^2) = 20 + 0.1 \times 301 = 50.1\)천 원으로, 미분값과 0.1천 원 차이이다.</p>
+          <p>\(q = 30\)이면 가격은 \(100 - 30 = 70\)이고 한계수입은 \(100 - 60 = 40\)이다. 31개째를 팔면 그 물건값으로 69를 받지만, 앞의 30개 값이 1씩 내려가 30을 잃으므로 수입은 약 39만 는다. 한계수입이 가격보다 훨씬 작은 까닭이다.</p>
+          <p>아래 탐구 카드에서 생산량에 따른 한계비용과, 값을 내려 하나 더 팔 때의 한계수입을 직접 확인해 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-econ-marginal-1">'한계'는 영어 marginal을 옮긴 말로 '가장자리'라는 뜻이다. 지금까지의 생산에 '가장자리에서 하나 더 붙이는' 변화를 말한다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>한 단위 더 생산할 때의 비용 변화인 한계비용은 비용 함수의 미분계수 \(C'(q)\)로, 한 단위 더 팔 때의 수입 변화인 한계수입은 \(R'(q)\)로 나타낸다. 값을 내려야 더 팔 수 있는 시장에서는 한계수입이 가격보다 작다. 그래서 처음 질문의 '하나 더'의 비용은 \(C'(q) = 20 + 0.2q\)처럼 생산량의 함수이며, 생산량이 많을수록 커진다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a><a href="../../c/econ/2-1.html#text-econ-functions"><small class="mono">경제 수학 2.1</small>빵집이 하루 몇 개를 팔아야 본전이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a></div></nav>
+
       <article class="card" id="card-econ-marginal-cost">
         <header class="card-head">
-          <span class="no">4.1.1</span><h2>하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?</h2><span class="kind">한계비용 · 조작</span>
+          <span class="no">4.1.2</span><h2>하나 더 만들 때 드는 비용은 생산량에 따라 어떻게 달라질까?</h2><span class="kind">한계비용 · 조작</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -93,11 +144,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a><a href="../../c/econ/2-1.html#text-econ-functions"><small class="mono">경제 수학 2.1</small>빵집이 하루 몇 개를 팔아야 본전이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a></div></nav>
 
       <article class="card" id="card-econ-marginal-revenue">
         <header class="card-head">
-          <span class="no">4.1.2</span><h2>한 개를 더 팔면 수입이 그 가격만큼 늘어날까?</h2><span class="kind">한계수입 · 예측→확인</span>
+          <span class="no">4.1.3</span><h2>한 개를 더 팔면 수입이 그 가격만큼 늘어날까?</h2><span class="kind">한계수입 · 예측→확인</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -132,7 +183,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a><a href="../../c/econ/4-3.html#card-econ-price-hike"><small class="mono">경제 수학 4.3</small>값을 10% 올리면 매출이 늘어날까 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/2-1.html#card-econ-cost-function"><small class="mono">경제 수학 2.1</small>빵집이 하루 200개를 팔아야 본전이 되려면 값을 얼마로 정할까?</a><a href="../../c/econ/2-1.html#card-econ-phone-plan"><small class="mono">경제 수학 2.1</small>한 달에 데이터를 얼마나 쓰면 어떤 요금제가 가장 쌀까?</a><a href="../../c/econ/2-1.html#text-econ-functions"><small class="mono">경제 수학 2.1</small>빵집이 하루 몇 개를 팔아야 본전이 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-3.html#card-econ-elasticity"><small class="mono">경제 수학 4.3</small>기울기가 일정한 수요곡선인데 반응의 크기는 왜 달라질까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=econ&amp;sec=4-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
 
@@ -153,6 +204,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/econ/body.js"></script>
 <script src="../../js/cards/econ/econ.js"></script>
 <script src="../../js/cards/econ/marginal-cost.js"></script>
 <script src="../../js/cards/econ/marginal-revenue.js"></script>
