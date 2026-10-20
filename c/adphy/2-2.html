@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-phy-capacitor .row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 6px 0 4px; }
     #card-phy-capacitor .row .mono { color: var(--ink-3); }
@@ -50,10 +51,11 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-phy-capacitor"><span class="mono">2.2.1</span>축전기는 전기 에너지를 어떻게 저장할까?</a></li>
-        <li><a href="#card-emq-polarize"><span class="mono">2.2.2</span>전하를 띠지 않은 물체는 왜 대전체에 끌려올까?</a></li>
-        <li><a href="#card-adphy-capnet"><span class="mono">2.2.3</span>축전기 연결과 유전체</a></li>
-        <li><a href="#card-labphy-capacitor"><span class="mono">2.2.4</span>포일과 종이로 만든 축전기로 C = εA/d를 확인할 수 있을까?</a></li>
+        <li><a href="#text-adphy-dielectric"><span class="mono">2.2.1</span>본문 · 축전기의 연결과 유전체</a></li>
+        <li><a href="#card-phy-capacitor"><span class="mono">2.2.2</span>축전기는 전기 에너지를 어떻게 저장할까?</a></li>
+        <li><a href="#card-emq-polarize"><span class="mono">2.2.3</span>전하를 띠지 않은 물체는 왜 대전체에 끌려올까?</a></li>
+        <li><a href="#card-adphy-capnet"><span class="mono">2.2.4</span>축전기 연결과 유전체</a></li>
+        <li><a href="#card-labphy-capacitor"><span class="mono">2.2.5</span>포일과 종이로 만든 축전기로 C = εA/d를 확인할 수 있을까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=adphy&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">11문항 →</span></a>
@@ -62,9 +64,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-adphy-dielectric" data-kind="본문">
+        <header class="card-head"><span class="no">2.2.1</span><h2>축전기 속을 얇은 세라믹으로 채우면 왜 전하를 더 많이 담을까?</h2><span class="kind">본문 · 축전기의 연결과 유전체</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">스마트폰 기판에는 쌀알보다 작은 적층 세라믹 축전기가 수백 개 붙어 있다. 이 작은 부품 속에는 아주 얇은 금속 판과 세라믹 층이 수백 겹 번갈아 쌓여 있다. 극판 사이를 공기 대신 세라믹으로 채우면 같은 크기에 수천 배의 전하를 담을 수 있다. 극판 사이의 물질은 무슨 일을 하는 걸까? 그리고 유전체를 극판 사이의 절반만 채우면 축전기의 용량은 어떻게 될까?</p>
+          <figure class="q-fig" data-q="adphy-diel">
+            <svg viewBox="0 0 520 140" role="img" aria-label="유전 상수와 채운 비율에 따른 축전기 용량의 변화"></svg>
+            <div class="q-ctl"><label>유전 상수 κ <input type="range" data-k="kap" min="1" max="10" step="0.5" value="4"><output data-k="kap"></output></label><label>채운 비율 <input type="range" data-k="f" min="0" max="1" step="0.05" value="0.5"><output data-k="f"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 평행판 축전기에 유전체를 일부 채운 두 가지 방법. 극판 넓이의 일부를 옆으로 나란히 채우면 두 축전기의 병렬 연결이고, 극판 간격의 일부를 층으로 채우면 직렬 연결이다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>전기 용량과 평행판 사이의 전기장, 유전 분극(물리학), 가우스 법칙(<a href="2-1.html">가우스 법칙과 전기장</a>).</div>
+
+          <h3><span class="mono">1</span>유전체와 유전 상수</h3>
+          <p>평행판 축전기의 극판에 전하 \(\pm Q\)를 주면, 가우스 법칙에 따라 극판 사이의 전기장은 \(E_0 = \dfrac{Q}{\varepsilon_0 A}\)이고 전위차는 \(V_0 = E_0 d\)이다. 그래서 전기 용량은 \(C_0 = Q/V_0 = \varepsilon_0 A/d\)이다. 극판 사이에 절연체를 넣으면, 절연체의 분자들이 전기장 방향으로 조금씩 늘어나 양전하와 음전하가 어긋난다. 이를 유전 분극이라 한다. 분극된 절연체의 겉면에는 극판의 전하와 반대 부호의 전하가 나타나 전기장을 일부 지운다. 이렇게 분극하는 절연체를 유전체라 한다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">유전체를 채운 축전기</span></span>
+            <p>유전체가 전기장을 \(1/\kappa\)로 줄이면 같은 전하에서 전위차도 \(1/\kappa\)이 되므로 용량은 \(C = \kappa C_0\)이다. \(\kappa\)를 유전 상수라 한다. 축전기를 병렬로 이으면 \(C = C_1 + C_2\), 직렬로 이으면 \(\dfrac{1}{C} = \dfrac{1}{C_1} + \dfrac{1}{C_2}\)이다.</p>
+          </div>
+          <p>그림 1에서 두 값을 바꾸어 보자. \(\kappa = 4\)인 유전체로 극판 넓이의 절반을 채우면, 공기 부분 \(C_0/2\)와 유전체 부분 \(4C_0/2\)가 병렬로 이어져 \(2.5C_0\)이다. 같은 유전체로 극판 간격의 절반을 층으로 채우면, 간격이 반인 두 축전기 \(2C_0\)과 \(8C_0\)이 직렬로 이어져 \(1.6C_0\)이다. 같은 양의 유전체라도 채우는 방법에 따라 용량이 다르다. 층으로 채우면 공기층의 작은 용량이 전체를 묶어 두기 때문이다.<sup class="fn"><a href="#fn-adphy-dielectric-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>작은 부품에 큰 용량</h3>
+          <p>용량을 키우는 방법은 극판을 넓히고, 간격을 좁히고, 유전 상수가 큰 물질을 채우는 것이다. 적층 세라믹 축전기는 이 셋을 모두 쓴다. 유전 상수가 수천에 이르는 타이타늄산 바륨을 1 μm 남짓한 두께로 깔고, 그 위에 금속 막을 번갈아 수백 층 쌓는다. 그러면 극판들이 모두 병렬로 이어져 넓이가 층 수만큼 늘어난다. 다만 유전체에 너무 센 전기장이 걸리면 절연이 깨져 전류가 흐르므로, 축전기마다 견딜 수 있는 최대 전압이 정해져 있다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="물질별 유전 상수">
+              <g class="s">
+                <text x="20" y="22">물질</text><text x="200" y="22">유전 상수 (대략)</text><text x="360" y="22">쓰임</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">공기</text><text x="200" y="52">1.0006</text><text x="360" y="52">기준</text>
+                <text x="20" y="74">유리, 운모</text><text x="200" y="74">5 ~ 7</text><text x="360" y="74">고전압 축전기</text>
+                <text x="20" y="96">타이타늄산 바륨</text><text x="200" y="96">1000 ~ 5000</text><text x="360" y="96">적층 세라믹 축전기</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 유전 상수가 큰 물질일수록 같은 크기의 축전기에 더 많은 전하를 담는다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>넓이 1 cm², 간격 1 μm인 평행판 축전기의 극판 사이를 유전 상수 2000인 세라믹으로 채웠다. 이 층의 용량을 구하여라. 같은 층을 200장 병렬로 쌓으면 전체 용량은 얼마인가? \(\varepsilon_0 = 8.85 \times 10^{-12}\ \text{F/m}\)이다.</p>
+          </div>
+          <p>한 층의 용량은 \(C = \kappa\varepsilon_0 A/d = 2000 \times 8.85 \times 10^{-12} \times \dfrac{1.0 \times 10^{-4}}{1.0 \times 10^{-6}} \approx 1.8 \times 10^{-6}\) F, 곧 약 1.8 μF이다.</p>
+          <p>200장을 병렬로 이으면 용량이 더해져 \(200 \times 1.8 \approx 350\) μF이다. 공기로 채운 같은 크기의 축전기 한 층은 \(1.8 \div 2000 \approx 0.0009\) μF에 불과하므로, 유전체와 적층으로 용량이 약 40만 배 커졌다. 그래서 손톱만 한 부품도 전원 전압의 흔들림을 잡아 주는 큰 저장고 노릇을 한다.</p>
+          <p>아래 탐구 카드에서 유전체를 반만 끼운 축전기가 직렬인지 병렬인지 따져 보고, 포일과 종이로 축전기를 만들어 용량 공식을 확인해 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-adphy-dielectric-1">물의 유전 상수는 약 80으로 아주 크다. 그래서 물속에서는 이온 사이의 전기력이 80분의 1로 약해져, 소금 같은 이온 결정이 쉽게 녹는다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>유전체는 전기장 속에서 분극하여 극판 사이의 전기장을 \(1/\kappa\)로 줄이므로, 같은 전압에 \(\kappa\)배의 전하를 담게 한다. 유전체를 일부만 채우면 채우는 방향에 따라 병렬이나 직렬 연결이 되어 용량이 다르게 늘어난다. 그래서 처음 질문의 적층 세라믹 축전기는 유전 상수가 수천인 얇은 세라믹 층과 수백 겹의 병렬 적층으로 작은 크기에 큰 용량을 얻는다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>금속판 두 장은 어떻게 전기를 담아 둘까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>카메라 플래시는 어떻게 순간적으로 밝은 빛을 낼까?</a></div></nav>
+
       <article class="card" id="card-phy-capacitor">
         <header class="card-head">
-          <span class="no">2.2.1</span><h2>축전기는 전기 에너지를 어떻게 저장할까?</h2><span class="kind">전기 용량 · 유전체 · Q–V 그래프</span>
+          <span class="no">2.2.2</span><h2>축전기는 전기 에너지를 어떻게 저장할까?</h2><span class="kind">전기 용량 · 유전체 · Q–V 그래프</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -119,7 +171,7 @@
 
       <article class="card" id="card-emq-polarize">
         <header class="card-head">
-          <span class="no">2.2.2</span><h2>전하를 띠지 않은 물체는 왜 대전체에 끌려올까?</h2><span class="kind">정전기 유도 · 유전 분극</span>
+          <span class="no">2.2.3</span><h2>전하를 띠지 않은 물체는 왜 대전체에 끌려올까?</h2><span class="kind">정전기 유도 · 유전 분극</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -166,7 +218,7 @@
 
       <article class="card" id="card-adphy-capnet">
         <header class="card-head">
-          <span class="no">2.2.3</span><h2>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</h2><span class="kind">축전기의 직렬·병렬 연결 · 유전체와 속박 전하 · 에너지</span>
+          <span class="no">2.2.4</span><h2>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</h2><span class="kind">축전기의 직렬·병렬 연결 · 유전체와 속박 전하 · 에너지</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -227,7 +279,7 @@
 
       <article class="card" id="card-labphy-capacitor">
         <header class="card-head">
-          <span class="no">2.2.4</span><h2>포일과 종이로 만든 축전기로 C = εA/d를 확인할 수 있을까?</h2><span class="kind">실험 · 평행판 축전기 · 전기 용량계 · 유전율</span>
+          <span class="no">2.2.5</span><h2>포일과 종이로 만든 축전기로 C = εA/d를 확인할 수 있을까?</h2><span class="kind">실험 · 평행판 축전기 · 전기 용량계 · 유전율</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -283,10 +335,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/adphy/body.js"></script>
 <script src="../../js/cards/phy/em-capacitor.js"></script>
 <script src="../../js/cards/emq/e-polarize.js"></script>
 <script src="../../js/cards/adphy/em-capnet.js"></script>

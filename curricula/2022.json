@@ -3861,6 +3861,7 @@
        "code": "12고물01-01",
        "blocks": [
         "intro-adphy-1-1",
+        "text-adphy-terminal",
         "card-mech-projectile",
         "card-adphy-drag"
        ]
@@ -3871,6 +3872,7 @@
        "code": "12고물01-02",
        "blocks": [
         "intro-adphy-1-2",
+        "text-adphy-elastic",
         "card-phy-collision",
         "card-adphy-potential",
         "card-adphy-collide2d"
@@ -3882,6 +3884,7 @@
        "code": "12고물01-03",
        "blocks": [
         "intro-adphy-1-3",
+        "text-adphy-rolling-energy",
         "card-phy-seesaw",
         "card-adphy-rolling",
         "card-adphy-spin"
@@ -3893,6 +3896,7 @@
        "code": "12고물01-04",
        "blocks": [
         "intro-adphy-1-4",
+        "text-adphy-circular-orbit",
         "card-mech-kepler",
         "card-mech-escape",
         "card-adphy-orbit"
@@ -3904,6 +3908,7 @@
        "code": "12고물01-05",
        "blocks": [
         "intro-adphy-1-5",
+        "text-adphy-expansion-work",
         "card-mech-ideal-gas",
         "card-adphy-process"
        ]
@@ -3914,6 +3919,7 @@
        "code": "12고물01-06",
        "blocks": [
         "intro-adphy-1-6",
+        "text-adphy-entropy-flow",
         "card-mech-cycle",
         "card-mech-entropy",
         "card-adphy-carnot"
@@ -3931,6 +3937,7 @@
        "code": "12고물02-01",
        "blocks": [
         "intro-adphy-2-1",
+        "text-adphy-gauss-sphere",
         "card-phy-field",
         "card-emq-equipotential",
         "card-adphy-gauss",
@@ -3943,6 +3950,7 @@
        "code": "12고물02-02",
        "blocks": [
         "intro-adphy-2-2",
+        "text-adphy-dielectric",
         "card-phy-capacitor",
         "card-emq-polarize",
         "card-adphy-capnet",
@@ -3955,6 +3963,7 @@
        "code": "12고물02-03",
        "blocks": [
         "intro-adphy-2-3",
+        "text-adphy-rl-circuit",
         "card-emq-bfield",
         "card-adphy-biot",
         "card-labphy-induction",
@@ -3968,6 +3977,7 @@
        "code": "12고물02-04",
        "blocks": [
         "intro-adphy-2-4",
+        "text-adphy-antenna",
         "card-adphy-wave",
         "text-adphy-maxwell"
        ]
@@ -3978,6 +3988,7 @@
        "code": "12고물02-05",
        "blocks": [
         "intro-adphy-2-5",
+        "text-adphy-kirchhoff-rules",
         "card-phy-circuit-meter",
         "card-adphy-kirchhoff"
        ]
@@ -3988,6 +3999,7 @@
        "code": "12고물02-06",
        "blocks": [
         "intro-adphy-2-6",
+        "text-adphy-resonance",
         "card-is2-generator",
         "card-emq-rlc",
         "card-adphy-ac",
@@ -4006,6 +4018,7 @@
        "code": "12고물03-01",
        "blocks": [
         "intro-adphy-3-1",
+        "text-adphy-microscope",
         "card-phy-lm-image",
         "card-labphy-mirror",
         "card-adphy-instrument",
@@ -4018,6 +4031,7 @@
        "code": "12고물03-02",
        "blocks": [
         "intro-adphy-3-2",
+        "text-adphy-michelson",
         "card-phy-lm-dslit",
         "card-phy-lm-film",
         "card-adphy-interferometer"
@@ -4029,6 +4043,7 @@
        "code": "12고물03-03",
        "blocks": [
         "intro-adphy-3-3",
+        "text-adphy-resolution",
         "card-emq-diffraction",
         "card-phy-lm-litho",
         "card-adphy-rayleigh"
@@ -4040,6 +4055,7 @@
        "code": "12고물03-04",
        "blocks": [
         "intro-adphy-3-4",
+        "text-adphy-brewster",
         "card-emq-polarizer",
         "card-adphy-3d",
         "text-adphy-display"
@@ -4057,6 +4073,7 @@
        "code": "12고물04-01",
        "blocks": [
         "intro-adphy-4-1",
+        "text-adphy-inertial-force",
         "card-adphy-frames"
        ]
       },
@@ -4066,6 +4083,7 @@
        "code": "12고물04-02",
        "blocks": [
         "intro-adphy-4-2",
+        "text-adphy-muon",
         "card-phy-lm-clock",
         "card-phy-lm-gps",
         "text-adphy-sr",
@@ -4080,6 +4098,7 @@
        "code": "12고물04-03",
        "blocks": [
         "intro-adphy-4-3",
+        "text-adphy-matter-wave",
         "card-phy-lm-photo",
         "card-phy-compton",
         "card-adphy-planck",
@@ -4093,6 +4112,7 @@
        "code": "12고물04-04",
        "blocks": [
         "intro-adphy-4-4",
+        "text-adphy-uncertainty",
         "card-emq-single-photon",
         "card-adphy-packet",
         "text-adphy-complementarity"
@@ -4104,6 +4124,7 @@
        "code": "12고물04-05",
        "blocks": [
         "intro-adphy-4-5",
+        "text-adphy-quantum-box",
         "card-phy-lm-hyd",
         "card-adphy-well",
         "card-emq-tunnel",
@@ -4118,6 +4139,7 @@
        "code": "12고물04-06",
        "blocks": [
         "intro-adphy-4-6",
+        "text-adphy-binding-energy",
         "text-adphy-particles",
         "card-is2-sun-fusion",
         "text-adphy-nuclear",

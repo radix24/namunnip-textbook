@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-phy-lm-photo .card-fig { align-content: start; }
   </style>
@@ -45,11 +46,12 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-phy-lm-photo"><span class="mono">4.3.1</span>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a></li>
-        <li><a href="#card-phy-compton"><span class="mono">4.3.2</span>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a></li>
-        <li><a href="#card-adphy-planck"><span class="mono">4.3.3</span>흑체 복사와 플랑크 가설</a></li>
-        <li><a href="#card-phy-lm-emicro"><span class="mono">4.3.4</span>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a></li>
-        <li><a href="#card-adphy-davisson"><span class="mono">4.3.5</span>전자 회절과 드브로이 파장</a></li>
+        <li><a href="#text-adphy-matter-wave"><span class="mono">4.3.1</span>본문 · 빛의 이중성과 물질파</a></li>
+        <li><a href="#card-phy-lm-photo"><span class="mono">4.3.2</span>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a></li>
+        <li><a href="#card-phy-compton"><span class="mono">4.3.3</span>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a></li>
+        <li><a href="#card-adphy-planck"><span class="mono">4.3.4</span>흑체 복사와 플랑크 가설</a></li>
+        <li><a href="#card-phy-lm-emicro"><span class="mono">4.3.5</span>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a></li>
+        <li><a href="#card-adphy-davisson"><span class="mono">4.3.6</span>전자 회절과 드브로이 파장</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=adphy&amp;sec=4-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">13문항 →</span></a>
@@ -58,9 +60,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-adphy-matter-wave" data-kind="본문">
+        <header class="card-head"><span class="no">4.3.1</span><h2>54 V로 가속한 전자는 왜 니켈 결정에서 특정한 각도로만 튀어나왔을까?</h2><span class="kind">본문 · 빛의 이중성과 물질파</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">1927년 미국 벨 연구소의 데이비슨과 저머는 진공관 속에서 니켈 결정에 전자를 쏘고, 튀어나오는 전자의 방향을 재었다. 전자가 작은 공이라면 모든 방향으로 고르게 흩어져야 한다. 그런데 54 V로 가속한 전자는 50° 방향으로 유난히 많이 튀어나왔다. X선을 결정에 비출 때 생기는 회절과 똑같은 모습이었다. 입자라고 믿었던 전자가 어떻게 파동처럼 회절할까? 그 파장은 얼마일까?</p>
+          <figure class="q-fig" data-q="adphy-dbl">
+            <svg viewBox="0 0 520 230" role="img" aria-label="가속 전압에 따른 전자의 드브로이 파장"></svg>
+            <div class="q-ctl"><label>가속 전압 (V) <input type="range" data-k="lg" min="0" max="4" step="0.01" value="1.73"><output data-k="lg"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 전압 V로 가속한 전자의 드브로이 파장(두 축 모두 로그 눈금). 수십 V로 가속한 전자의 파장은 결정 속 원자 간격(회색 선)과 비슷하여, 결정이 회절 격자 노릇을 한다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>파동의 간섭과 회절(<a href="3-3.html">회절과 분해능</a>), 운동량과 에너지 보존, 광전 효과와 광자(물리학).</div>
+
+          <h3><span class="mono">1</span>빛의 이중성에서 물질파로</h3>
+          <p>빛은 간섭과 회절을 하는 파동이지만, 광전 효과와 콤프턴 산란에서는 에너지 \(hf\)와 운동량 \(h/\lambda\)를 가진 알갱이(광자)처럼 행동한다. 1924년 드브로이는 이 관계를 뒤집어 보았다. 빛이 입자의 성질을 가진다면, 전자 같은 입자도 파동의 성질을 가지지 않을까? 그는 운동량 \(p\)인 입자에 파장 \(\lambda = h/p\)인 파동이 따른다고 제안했다. 이 파동을 물질파 또는 드브로이 파라 한다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">전자의 드브로이 파장</span></span>
+            <p>질량 \(m\), 전하 \(e\)인 전자를 정지 상태에서 전압 \(V\)로 가속하면 운동 에너지가 \(eV\)이므로 운동량은 \(p = \sqrt{2meV}\)이다. 따라서 파장은 \[\lambda = \frac{h}{\sqrt{2meV}} \approx \frac{1.226}{\sqrt{V}}\ \text{nm}\]이다(\(V\)는 볼트 단위, 빛의 속력보다 충분히 느릴 때).</p>
+          </div>
+          <p>그림 1에서 가속 전압을 바꾸어 보자. 54 V이면 파장은 \(1.226 \div \sqrt{54} \approx 0.167\) nm이다. 니켈 결정의 원자 간격은 약 0.215 nm라서 전자의 파장과 비슷하다. 그래서 결정 표면의 원자 줄에서 반사된 전자 파동이 서로 간섭하여, 경로차가 파장의 정수배가 되는 방향에서만 세진다. \(d\sin\theta = \lambda\)에서 \(\sin\theta = 0.167 \div 0.215 \approx 0.78\), 곧 \(\theta \approx 51°\)로, 실험에서 잰 50°와 잘 맞는다.<sup class="fn"><a href="#fn-adphy-matter-wave-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>왜 공은 회절하지 않을까</h3>
+          <p>모든 물체가 물질파를 가진다면, 야구공도 회절해야 한다. 그런데 질량 0.15 kg인 공이 40 m/s로 날면 운동량이 6 kg·m/s이므로 파장은 \(6.6 \times 10^{-34} \div 6 \approx 10^{-34}\) m이다. 이것은 원자핵보다도 \(10^{19}\)배 작아서, 이런 간격을 가진 틈은 세상에 없다. 그래서 일상의 물체에서는 파동의 성질이 드러나지 않는다. 반면 전자는 질량이 아주 작아 파장이 원자 크기만큼 길다. 전자 현미경은 이 짧은 파장 덕분에 빛보다 수천 배 작은 것을 본다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="입자의 종류와 물질파의 파장">
+              <g class="s">
+                <text x="20" y="22">입자</text><text x="190" y="22">조건</text><text x="370" y="22">파장 (대략)</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">전자</text><text x="190" y="52">54 V로 가속</text><text x="370" y="52">0.17 nm</text>
+                <text x="20" y="74">전자 (전자 현미경)</text><text x="190" y="74">100 kV로 가속</text><text x="370" y="74">0.004 nm</text>
+                <text x="20" y="96">야구공</text><text x="190" y="96">0.15 kg, 40 m/s</text><text x="370" y="96">10⁻³⁴ m</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 물질파의 파장은 운동량에 반비례하여, 가벼운 입자에서만 원자 크기에 이른다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>원자 간격 0.20 nm인 결정으로 전자 회절 실험을 한다. 전자의 파장을 원자 간격과 같은 0.20 nm로 하려면 몇 V로 가속해야 하는가? 그때 전자의 속력은 얼마인가? 전자의 질량은 \(9.1 \times 10^{-31}\) kg이다.</p>
+          </div>
+          <p>\(\lambda = 1.226/\sqrt V\) nm에서 \(\sqrt V = 1.226 \div 0.20 = 6.13\)이므로 \(V \approx 37.6\) V이다.</p>
+          <p>운동량은 \(p = h/\lambda = 6.63 \times 10^{-34} \div 2.0 \times 10^{-10} \approx 3.3 \times 10^{-24}\) kg·m/s이므로, 속력은 \(p/m = 3.3 \times 10^{-24} \div 9.1 \times 10^{-31} \approx 3.6 \times 10^6\) m/s이다. 빛의 속력의 약 1.2%이므로 상대성 효과를 무시해도 된다. 즉 건전지 몇십 개 정도의 전압으로 가속한 전자도 원자 간격만 한 파장을 가져 결정에서 회절한다. 그래서 전자 회절은 결정의 원자 배열을 알아내는 도구로 쓰인다.</p>
+          <p>아래 탐구 카드에서 고전 물리학이 뜨거운 물체의 빛을 설명하지 못한 까닭과, 니켈 결정에 쏜 전자가 특정한 각도로 몰려 나오는 까닭을 확인해 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-adphy-matter-wave-1">1906년 조지프 존 톰슨은 전자가 입자임을 밝힌 공로로 노벨상을 받았고, 1937년 그의 아들 조지 패짓 톰슨은 전자가 파동임을 회절 실험으로 보인 공로로 데이비슨과 함께 노벨상을 받았다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>빛이 입자의 성질을 가지듯, 운동량 \(p\)인 입자는 파장 \(h/p\)인 물질파의 성질을 가진다. 수십 V로 가속한 전자의 파장은 원자 간격과 비슷해 결정에서 회절하지만, 일상의 물체는 파장이 너무 짧아 파동의 성질이 드러나지 않는다. 그래서 처음 질문의 전자는 54 V로 가속되어 파장이 약 0.17 nm인 물질파가 되었고, 니켈 원자 줄에서 회절하여 50° 방향으로 몰려 나왔다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-1.html#card-phy-lm-dslit"><small class="mono">물리학 3.1</small>이중 슬릿 무늬의 간격은 무엇이 정할까?</a><a href="../../c/phy/3-1.html#card-phy-lm-film"><small class="mono">물리학 3.1</small>비눗방울은 왜 무지갯빛일까?</a><a href="../../c/phy/3-1.html#card-phy-superpose"><small class="mono">물리학 3.1</small>마주 오던 두 파동이 만나면 부서질까, 그냥 지나갈까?</a><a href="../../c/phy/3-1.html#text-phy-interference"><small class="mono">물리학 3.1</small>빛과 빛을 더했는데 왜 어두워질까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/emq/2-4.html#text-emq-photoelectric"><small class="mono">전자기와 양자 2.4</small>빨간빛은 아무리 세게 비춰도 왜 전자를 떼어 내지 못할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a><a href="../../c/phy/3-4.html#card-phy-lm-hyd"><small class="mono">물리학 3.4</small>수소는 왜 몇 가지 색의 빛만 낼까?</a><a href="../../c/phy/3-4.html#card-phy-lm-spec"><small class="mono">물리학 3.4</small>빛만 보고 무엇이 빛나는지 알 수 있을까?</a><a href="../../c/phy/3-4.html#card-phy-prism"><small class="mono">물리학 3.4</small>프리즘은 하얀빛 속에 숨은 무지개를 어떻게 꺼낼까?</a></div></nav>
+
       <article class="card" id="card-phy-lm-photo">
         <header class="card-head">
-          <span class="no">4.3.1</span><h2>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</h2><span class="kind">광전 효과 · 광자</span>
+          <span class="no">4.3.2</span><h2>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</h2><span class="kind">광전 효과 · 광자</span>
         </header>
         <div class="card-body">
           <div class="card-fig fig-2">
@@ -111,7 +163,7 @@
 
       <article class="card" id="card-phy-compton">
         <header class="card-head">
-          <span class="no">4.3.2</span><h2>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</h2><span class="kind">콤프턴 효과 · 광자의 운동량 · 입자성</span>
+          <span class="no">4.3.3</span><h2>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</h2><span class="kind">콤프턴 효과 · 광자의 운동량 · 입자성</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -148,7 +200,7 @@
 
       <article class="card" id="card-adphy-planck">
         <header class="card-head">
-          <span class="no">4.3.3</span><h2>고전 물리학은 왜 뜨거운 물체가 자외선을 무한히 낸다고 예측했을까?</h2><span class="kind">흑체 복사 · 자외선 파탄과 플랑크의 양자 가설</span>
+          <span class="no">4.3.4</span><h2>고전 물리학은 왜 뜨거운 물체가 자외선을 무한히 낸다고 예측했을까?</h2><span class="kind">흑체 복사 · 자외선 파탄과 플랑크의 양자 가설</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -196,7 +248,7 @@
 
       <article class="card" id="card-phy-lm-emicro">
         <header class="card-head">
-          <span class="no">4.3.4</span><h2>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</h2><span class="kind">물질파 · 분해능</span>
+          <span class="no">4.3.5</span><h2>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</h2><span class="kind">물질파 · 분해능</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -238,11 +290,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/emq/2-4.html#text-emq-photoelectric"><small class="mono">전자기와 양자 2.4</small>빨간빛은 아무리 세게 비춰도 왜 전자를 떼어 내지 못할까?</a><a href="../../c/phy/3-2.html#card-phy-lm-refract"><small class="mono">물리학 3.2</small>볼록 렌즈는 왜 빛을 한 점에 모을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/3-1.html#card-emq-single-photon"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 간섭무늬가 생길까?</a><a href="../../c/emq/3-3.html#card-emq-tunnel"><small class="mono">전자기와 양자 3.3</small>에너지가 모자란 전자가 어떻게 벽을 통과할까?</a><a href="../../c/emq/3-3.html#text-emq-tunneling"><small class="mono">전자기와 양자 3.3</small>에너지가 모자란 전자는 어떻게 벽을 통과할까?</a><a href="../../c/emq/3-4.html#card-emq-orbital"><small class="mono">전자기와 양자 3.4</small>전자는 원자핵 둘레의 어디에 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/emq/2-4.html#text-emq-photoelectric"><small class="mono">전자기와 양자 2.4</small>빨간빛은 아무리 세게 비춰도 왜 전자를 떼어 내지 못할까?</a><a href="../../c/phy/3-2.html#card-phy-lm-refract"><small class="mono">물리학 3.2</small>볼록 렌즈는 왜 빛을 한 점에 모을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/3-1.html#card-emq-single-photon"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 간섭무늬가 생길까?</a><a href="../../c/adphy/4-4.html#text-adphy-uncertainty"><small class="mono">고급 물리학 4.4</small>원자 속의 전자는 왜 핵으로 떨어지지 않을까?</a><a href="../../c/emq/3-3.html#card-emq-tunnel"><small class="mono">전자기와 양자 3.3</small>에너지가 모자란 전자가 어떻게 벽을 통과할까?</a><a href="../../c/emq/3-3.html#text-emq-tunneling"><small class="mono">전자기와 양자 3.3</small>에너지가 모자란 전자는 어떻게 벽을 통과할까?</a></div></nav>
 
       <article class="card" id="card-adphy-davisson">
         <header class="card-head">
-          <span class="no">4.3.5</span><h2>니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?</h2><span class="kind">물질파 · 데이비슨–거머 실험과 드브로이 파장</span>
+          <span class="no">4.3.6</span><h2>니켈 결정에 쏜 전자는 왜 특정한 각도로 몰려 튀어나올까?</h2><span class="kind">물질파 · 데이비슨–거머 실험과 드브로이 파장</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -280,7 +332,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a><a href="../../c/phy/3-3.html#card-emq-diffraction"><small class="mono">물리학 3.3</small>틈이 많아질수록 무늬는 왜 더 날카로워질까?</a><a href="../../c/emq/2-1.html#text-emq-hologram"><small class="mono">전자기와 양자 2.1</small>홀로그램은 어떻게 입체 영상을 기록할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a><a href="../../c/phy/3-3.html#card-emq-diffraction"><small class="mono">물리학 3.3</small>틈이 많아질수록 무늬는 왜 더 날카로워질까?</a><a href="../../c/emq/2-1.html#text-emq-hologram"><small class="mono">전자기와 양자 2.1</small>홀로그램은 어떻게 입체 영상을 기록할까?</a><a href="../../c/adphy/3-3.html#text-adphy-resolution"><small class="mono">고급 물리학 3.3</small>멀리서 오는 자동차의 두 전조등은 왜 어느 거리부터 하나로 보일까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adphy&amp;sec=4-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adphy-4-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">52문항</span></a>
@@ -296,10 +348,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/adphy/body.js"></script>
 <script src="../../js/cards/phy/lm-photoelectric.js"></script>
 <script src="../../js/cards/phy/compton.js"></script>
 <script src="../../js/cards/adphy/q3-planck.js"></script>

@@ -54,9 +54,9 @@ free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projecti
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
 newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
 impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop text-sie2-paper-column | inertia free-fall
-torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque text-mech-forces |
+torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque text-mech-forces text-adphy-rolling-energy |
 action-reaction | 작용 반작용 | card-phy-horse text-phy-momentum-cons | newton2
-momentum | 운동량 보존 | card-phy-rocket card-phy-collision text-mech-escape | impulse action-reaction
+momentum | 운동량 보존 | card-phy-rocket card-phy-collision text-mech-escape text-adphy-elastic | impulse action-reaction
 work-energy | 일과 운동 에너지 | card-phy-work text-phy-energy | newton2
 mech-energy | 역학적 에너지 보존 | card-phy-coaster text-phy-spring card-pendulum text-mech-shm | work-energy free-fall
 heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer text-phy-heat text-mech-first-law | mech-energy
@@ -65,22 +65,22 @@ efficiency | 에너지 효율과 신재생 에너지 | card-is2-efficiency card-
 solar-cell | 태양 전지 | card-is2-solar-cell | semicond spectrum
 
 # ── 전기와 자기 ──
-e-field | 전기장과 전위차 | card-phy-field card-phy-potential text-phy-efield text-emq-field |
-elec-power | 저항의 연결과 전력 | card-phy-multitap card-phy-bulbs card-phy-circuit-meter text-phy-circuit | e-field
-capacitor | 축전기 | card-phy-capacitor card-phy-touch text-phy-capacitor | e-field
+e-field | 전기장과 전위차 | card-phy-field card-phy-potential text-phy-efield text-emq-field text-adphy-gauss-sphere |
+elec-power | 저항의 연결과 전력 | card-phy-multitap card-phy-bulbs card-phy-circuit-meter text-phy-circuit text-adphy-kirchhoff-rules | e-field
+capacitor | 축전기 | card-phy-capacitor card-phy-touch text-phy-capacitor text-adphy-dielectric | e-field
 magnet | 자성체 | card-phy-magnet text-phy-magnetism text-emq-bfield |
 current-mag | 전류의 자기 작용 | card-phy-oersted card-phy-motor video-phy-speaker text-phy-current-mag | magnet
-em-induction | 전자기 유도 | card-phy-lenz card-phy-wireless card-is2-generator text-phy-induction-tech text-is2-power text-phy-induction text-emq-induction | current-mag
+em-induction | 전자기 유도 | card-phy-lenz card-phy-wireless card-is2-generator text-phy-induction-tech text-is2-power text-phy-induction text-emq-induction text-adphy-resonance | current-mag
 power-gen | 발전소 | text-is2-power-plants | em-induction
 transmission | 송전과 전력 수송 | card-is2-transmission video-is2-grid | power-gen elec-power
 
 # ── 빛과 현대 물리 ──
-interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference text-emq-grating | 
-lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens | 
-photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric | interference
+interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference text-emq-grating text-adphy-michelson | 
+lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens text-adphy-microscope | 
+photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric text-adphy-matter-wave | interference
 matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro text-emq-single-quantum | photon lens
-energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels | photon spectrum
-relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence text-hist-light-bending | inertia gps-time
+energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels text-adphy-quantum-box | photon spectrum
+relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence text-hist-light-bending text-adphy-muon | inertia gps-time
 
 # ── 지구 ──
 earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system text-esys-frost-line |
@@ -147,16 +147,16 @@ phyllotaxis | 잎차례와 황금각 | card-phyllo | photosyn
 
 # ── 진로선택: 역학과 에너지 ──
 force-vector | 힘의 합성과 빗면 | card-mech-incline | newton2 torque
-projectile2 | 포물선 운동의 정량 분석 | card-mech-projectile | free-fall mech-energy force-vector
+projectile2 | 포물선 운동의 정량 분석 | card-mech-projectile text-adphy-terminal | free-fall mech-energy force-vector
 circular | 원운동과 구심력 | card-mech-circular text-mech-circular | force-vector inertia
-kepler | 케플러 법칙과 만유인력 | card-mech-kepler text-mech-kepler-history text-mech-kepler text-space-kepler-mass | circular gravity
+kepler | 케플러 법칙과 만유인력 | card-mech-kepler text-mech-kepler-history text-mech-kepler text-space-kepler-mass text-adphy-circular-orbit | circular gravity
 escape | 탈출 속도와 대기 | card-mech-escape | kepler mech-energy momentum
 gen-rel | 등가 원리와 일반 상대론 | text-mech-gr | escape relativity
 heat-transfer | 열의 이동과 열팽창 | card-mech-insulation text-mech-heat-tech text-mech-heat-transfer | heat-energy
 latent-heat | 비열과 잠열 | card-mech-heating-curve text-mech-ideal-gas | heat-energy
-ideal-gas | 이상 기체 | card-mech-ideal-gas text-mateng-gas-law | heat-energy
+ideal-gas | 이상 기체 | card-mech-ideal-gas text-mateng-gas-law text-adphy-expansion-work | heat-energy
 first-law | 열역학 제1법칙 | card-mech-first-law | ideal-gas heat-energy
-cycle | 열기관의 순환 과정 | card-mech-cycle | first-law heat-engine
+cycle | 열기관의 순환 과정 | card-mech-cycle text-adphy-entropy-flow | first-law heat-engine
 entropy | 엔트로피와 비가역 현상 | card-mech-entropy text-mech-entropy text-mateng-spontaneity | first-law cycle
 shm | 단진동 | card-mech-shm | mech-energy force-vector
 elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use text-mech-pulse | shm
@@ -221,17 +221,17 @@ esys-rossby | 행성파와 편서풍 파동 | card-esys-rossby | esys-winds fron
 # ── 진로선택: 전자기와 양자 ──
 emq-equipotential | 등전위면과 전기장의 세기 | card-emq-equipotential | e-field
 emq-polarize | 정전기 유도와 유전 분극 | card-emq-polarize text-emq-polarization | e-field
-emq-bfield | 전류가 만드는 자기장의 세기 | card-emq-bfield | current-mag
+emq-bfield | 전류가 만드는 자기장의 세기 | card-emq-bfield text-adphy-rl-circuit | current-mag
 emq-lorentz | 로런츠 힘과 질량 분석기 | card-emq-lorentz text-emq-lorentz | emq-bfield
 emq-transformer | 자기 선속과 변압기 | card-emq-transformer | em-induction
 emq-rlc | 저항·축전기·인덕터의 에너지 | card-emq-rlc text-emq-circuit | capacitor emq-transformer
 emq-semis | 다이오드와 트랜지스터 | card-emq-semis | semicond
-emq-diffraction | 회절과 회절 격자, 홀로그램 | card-emq-diffraction text-emq-hologram | interference
+emq-diffraction | 회절과 회절 격자, 홀로그램 | card-emq-diffraction text-emq-hologram text-adphy-resolution | interference
 emq-aberration | 광학 기기와 수차 | card-emq-aberration | lens
-emq-polarization | 편광 | card-emq-polarizer text-emq-polarize |
+emq-polarization | 편광 | card-emq-polarizer text-emq-polarize text-adphy-brewster |
 emq-photosensor | 광센서와 이미지 센서 | card-emq-pixels | photon bands
 emq-laser | 레이저와 광통신 | card-emq-laser text-emq-fiber text-emq-laser | spectrum
-emq-single-quantum | 단일 양자의 간섭과 입자–파동 이중성 | card-emq-single-photon | interference matter-wave
+emq-single-quantum | 단일 양자의 간섭과 입자–파동 이중성 | card-emq-single-photon text-adphy-uncertainty | interference matter-wave
 emq-superposition | 중첩과 측정, 양자 기술 | card-emq-qubit text-emq-quantum-tech text-emq-superposition | emq-single-quantum emq-polarization
 emq-tunnel | 터널 효과 | card-emq-tunnel text-emq-tunneling | matter-wave
 emq-orbital | 불확정성 원리와 오비탈 | card-emq-orbital text-emq-atom | matter-wave spectrum
@@ -497,14 +497,14 @@ ap-dipole | 전기 쌍극자와 돌림힘 | card-adphy-dipole | e-field ap-gauss
 ap-capnet | 축전기의 직렬·병렬 연결과 유전체 | card-adphy-capnet | capacitor emq-polarize ap-gauss
 ap-biot | 비오–사바르 법칙과 암페어 법칙 | card-adphy-biot | emq-bfield
 ap-selfind | 자체 유도 계수와 RL 회로 | card-adphy-selfind | ap-biot em-induction
-ap-emwave | 전자기파의 발생과 맥스웰 방정식 | card-adphy-wave text-adphy-maxwell | ap-gauss ap-biot em-induction elastic-wave
+ap-emwave | 전자기파의 발생과 맥스웰 방정식 | card-adphy-wave text-adphy-maxwell text-adphy-antenna | ap-gauss ap-biot em-induction elastic-wave
 ap-kirchhoff | 키르히호프 법칙 | card-adphy-kirchhoff | elec-power
 ap-ac | 교류 리액턴스·임피던스와 RLC 공진 | card-adphy-ac | ap-selfind ap-capnet emq-rlc ap-kirchhoff
 ap-optical-instrument | 광학 기기의 결합 렌즈와 각배율 | card-adphy-instrument | lens lp-mirror
 ap-interferometer | 간섭계와 정밀 측정 | card-adphy-interferometer | interference
 ap-resolution | 원형 구멍의 회절과 분해능 | card-adphy-rayleigh | emq-diffraction lens
 ap-polarization-tech | 파장판·원편광과 디스플레이 | card-adphy-3d text-adphy-display | emq-polarization interference
-ap-fictitious-force | 가속 좌표계와 관성력 | card-adphy-frames | newton2 circular inertia
+ap-fictitious-force | 가속 좌표계와 관성력 | card-adphy-frames text-adphy-inertial-force | newton2 circular inertia
 ap-spacetime | 로런츠 변환과 시공간 도표 | card-adphy-spacetime text-adphy-sr | relativity ap-fictitious-force
 ap-mass-energy | 질량–에너지 동등성 | card-adphy-mass-energy | relativity work-energy
 ap-blackbody | 흑체 복사와 플랑크의 양자 가설 | card-adphy-planck | blackbody photon
@@ -514,7 +514,7 @@ ap-complementarity | 상보성 원리 | text-adphy-complementarity | emq-single-
 ap-well | 퍼텐셜 상자 속 입자와 슈뢰딩거 방정식 | card-adphy-well | matter-wave standing-wave energy-level
 ap-bands | 이어진 우물과 에너지띠 형성 | card-adphy-bands | ap-well emq-tunnel bands
 ap-nano | 반도체와 나노 물리학 | text-adphy-nano | ap-well semicond emq-tunnel
-ap-standard-model | 기본 입자와 네 가지 상호 작용 | text-adphy-particles | relativity ap-uncertainty
+ap-standard-model | 기본 입자와 네 가지 상호 작용 | text-adphy-particles text-adphy-binding-energy | relativity ap-uncertainty
 ap-nuclear | 핵분열·핵융합과 플라스마 | text-adphy-nuclear | fusion ap-standard-model
 ap-gamow | 별 속 핵융합과 가모프 봉우리 | card-adphy-gamow | fusion emq-tunnel ideal-gas
 

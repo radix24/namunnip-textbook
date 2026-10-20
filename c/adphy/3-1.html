@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-phy-lm-image canvas { cursor: ew-resize; }
     #card-adphy-instrument canvas { aspect-ratio: 16 / 10; }
@@ -51,10 +52,11 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-phy-lm-image"><span class="mono">3.1.1</span>렌즈를 반쯤 가리면 상도 반만 생길까?</a></li>
-        <li><a href="#card-labphy-mirror"><span class="mono">3.1.2</span>스크린에 잡히지 않는 상의 위치는 어떻게 잴까?</a></li>
-        <li><a href="#card-adphy-instrument"><span class="mono">3.1.3</span>현미경·망원경·카메라</a></li>
-        <li><a href="#card-emq-aberration"><span class="mono">3.1.4</span>렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?</a></li>
+        <li><a href="#text-adphy-microscope"><span class="mono">3.1.1</span>본문 · 거울·렌즈와 광학 기기</a></li>
+        <li><a href="#card-phy-lm-image"><span class="mono">3.1.2</span>렌즈를 반쯤 가리면 상도 반만 생길까?</a></li>
+        <li><a href="#card-labphy-mirror"><span class="mono">3.1.3</span>스크린에 잡히지 않는 상의 위치는 어떻게 잴까?</a></li>
+        <li><a href="#card-adphy-instrument"><span class="mono">3.1.4</span>현미경·망원경·카메라</a></li>
+        <li><a href="#card-emq-aberration"><span class="mono">3.1.5</span>렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=adphy&amp;sec=3-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">13문항 →</span></a>
@@ -63,9 +65,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-adphy-microscope" data-kind="본문">
+        <header class="card-head"><span class="no">3.1.1</span><h2>렌즈 두 장을 겹치면 어떻게 세포가 수백 배로 커 보일까?</h2><span class="kind">본문 · 거울·렌즈와 광학 기기</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">돋보기 한 장으로는 아무리 애써도 열 배 넘게 키워 보기 어렵다. 그런데 학교 실험실의 현미경은 렌즈 두 묶음만으로 양파 껍질의 세포를 400배로 보여 준다. 대물렌즈에는 '40×', 접안렌즈에는 '10×'라고 적혀 있다. 두 렌즈는 각각 무슨 일을 하며, 왜 두 숫자를 곱하면 전체 배율이 될까? 그리고 망원경은 같은 두 렌즈로 어떻게 먼 별을 크게 보여 줄까?</p>
+          <figure class="q-fig" data-q="adphy-micro">
+            <svg viewBox="0 0 520 160" role="img" aria-label="대물렌즈와 접안렌즈의 초점 거리에 따른 현미경 배율"></svg>
+            <div class="q-ctl"><label>대물렌즈 초점 거리 (mm) <input type="range" data-k="fo" min="2" max="20" step="0.5" value="4"><output data-k="fo"></output></label><label>접안렌즈 초점 거리 (mm) <input type="range" data-k="fe" min="10" max="50" step="1" value="25"><output data-k="fe"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 경통 길이 160 mm, 명시 거리 250 mm인 현미경의 배율. 대물렌즈가 만든 확대된 실상을 접안렌즈가 돋보기처럼 다시 키우므로, 전체 배율은 두 배율의 곱이다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>빛의 반사와 굴절, 렌즈 방정식, 실상과 허상(물리학).</div>
+
+          <h3><span class="mono">1</span>렌즈 방정식과 배율</h3>
+          <p>초점 거리 \(f\)인 볼록 렌즈 앞 \(a\)에 물체를 두면, 렌즈 뒤 \(b\)에 상이 생기며 \(\dfrac{1}{a} + \dfrac{1}{b} = \dfrac{1}{f}\)이다. 상의 크기는 물체의 \(b/a\)배이다. 물체를 초점 바로 바깥에 두면 \(a\)가 \(f\)에 가까워져 \(b\)가 아주 커지므로, 렌즈 뒤 멀리에 크게 확대된 거꾸로 선 실상이 생긴다. 물체를 초점 안쪽에 두면 상은 같은 쪽에 바로 선 허상으로 생긴다. 돋보기는 이 허상을 본다. 눈이 편히 볼 수 있는 가장 가까운 거리 약 250 mm에 견주어, 돋보기로 본 상은 대략 \(250/f\)배로 커 보인다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">현미경의 배율</span></span>
+            <p>대물렌즈(초점 거리 \(f_o\))가 물체를 경통 길이 \(L\) 근처에 \(L/f_o\)배로 키운 실상을 만들고, 접안렌즈(초점 거리 \(f_e\))가 그 실상을 \(250\ \text{mm}/f_e\)배로 다시 키운다. 따라서 전체 배율은 \[M \approx \frac{L}{f_o} \times \frac{250\ \text{mm}}{f_e}\]이다. 한 렌즈가 만든 상이 다음 렌즈의 물체가 된다.</p>
+          </div>
+          <p>그림 1에서 두 초점 거리를 바꾸어 보자. 초점 거리 4 mm인 대물렌즈는 \(160 \div 4 = 40\)배, 25 mm인 접안렌즈는 \(250 \div 25 = 10\)배여서 전체 400배이다. 대물렌즈의 초점 거리를 2 mm로 줄이면 배율이 두 배인 800배가 된다. 그래서 고배율 대물렌즈는 초점 거리가 짧아, 관찰할 때 렌즈 끝이 시료에 거의 닿을 만큼 가깝다.<sup class="fn"><a href="#fn-adphy-microscope-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>망원경</h3>
+          <p>망원경은 아주 먼 물체를 본다. 먼 물체에서 온 빛은 거의 나란하므로, 대물렌즈는 그 상을 자신의 초점면에 만든다. 이 상은 실제 물체보다 훨씬 작지만, 눈 가까이 가져온 셈이 된다. 접안렌즈는 이 상을 돋보기처럼 키운다. 그래서 망원경의 배율은 물체가 눈에 보이는 각도를 몇 배로 키우느냐로 정하며, 대물렌즈와 접안렌즈 초점 거리의 비 \(f_o/f_e\)이다. 현미경과 달리 망원경은 대물렌즈의 초점 거리가 길수록 배율이 크다. 그리고 대물렌즈가 클수록 빛을 많이 모아 어두운 별도 보인다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="현미경과 망원경의 비교">
+              <g class="s">
+                <text x="20" y="22">기기</text><text x="130" y="22">대물렌즈</text><text x="290" y="22">배율</text><text x="420" y="22">보는 대상</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">돋보기</text><text x="130" y="52">없음</text><text x="290" y="52">250 mm / f</text><text x="420" y="52">손 위의 물체</text>
+                <text x="20" y="74">현미경</text><text x="130" y="74">초점 거리 짧음</text><text x="290" y="74">(L/fₒ)(250 mm/fₑ)</text><text x="420" y="74">가까운 작은 것</text>
+                <text x="20" y="96">망원경</text><text x="130" y="96">초점 거리 김</text><text x="290" y="96">fₒ / fₑ</text><text x="420" y="96">먼 큰 것</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 현미경과 망원경은 같은 두 렌즈 구조를 쓰지만 대물렌즈의 초점 거리가 정반대이다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>초점 거리 4.0 mm인 대물렌즈에서 물체를 얼마나 떨어뜨려야 렌즈 뒤 164 mm에 실상이 생기는가? 그 실상의 배율과, 초점 거리 25 mm인 접안렌즈로 본 전체 배율을 구하여라.</p>
+          </div>
+          <p>렌즈 방정식에서 \(\dfrac{1}{a} = \dfrac{1}{4.0} - \dfrac{1}{164} = \dfrac{41 - 1}{164} = \dfrac{40}{164}\)이므로 \(a = 4.1\) mm이다. 물체는 초점에서 0.1 mm 바깥에 있다. 실상의 배율은 \(b/a = 164 \div 4.1 = 40\)배이다.</p>
+          <p>접안렌즈는 이 실상을 \(250 \div 25 = 10\)배로 키우므로 전체 배율은 400배이다. 물체가 초점에서 0.1 mm만 움직여도 상의 위치가 크게 바뀌므로, 고배율에서는 미동 나사로 시료를 아주 조금씩 움직여 초점을 맞춘다. 즉 배율이 높을수록 초점을 맞출 수 있는 범위가 좁아진다. 그래서 두꺼운 시료의 여러 깊이를 보려면 미동 나사를 돌려 가며 층마다 살펴야 한다.</p>
+          <p>아래 탐구 카드에서 렌즈 두 장을 겹쳐 상이 어떻게 커지는지 확인하고, 스크린에 잡히지 않는 허상의 위치를 재어 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-adphy-microscope-1">배율을 아무리 높여도 일정한 크기보다 작은 것은 갈라 보이지 않는다. 빛의 회절 때문이며, 가시광선을 쓰는 광학 현미경은 약 0.2 μm가 한계이다. 그래서 1500배 넘는 배율은 흐린 상을 더 크게 보여 줄 뿐이다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>한 렌즈가 만든 상은 다음 렌즈의 물체가 되므로, 렌즈를 여러 장 이으면 배율이 곱해진다. 현미경은 초점 거리가 짧은 대물렌즈로 크게 확대된 실상을 만들고 접안렌즈로 그것을 다시 키우며, 망원경은 초점 거리가 긴 대물렌즈로 먼 물체의 상을 눈앞에 가져온다. 그래서 처음 질문의 두 렌즈는 대물렌즈가 40배, 접안렌즈가 10배를 맡아 세포를 400배로 보여 준다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/phy/3-2.html#card-phy-lm-refract"><small class="mono">물리학 3.2</small>볼록 렌즈는 왜 빛을 한 점에 모을까?</a><a href="../../c/phy/3-2.html#card-phy-lm-litho"><small class="mono">물리학 3.2</small>반도체 회로는 왜 더 짧은 파장의 빛으로 새길까?</a><a href="../../c/phy/3-2.html#card-phy-lens-bench"><small class="mono">물리학 3.2</small>스크린에 맺힌 상만으로 렌즈의 초점 거리를 잴 수 있을까?</a><a href="../../c/phy/3-2.html#text-phy-lens"><small class="mono">물리학 3.2</small>볼록 렌즈는 어떻게 상을 만들까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-emicro"><small class="mono">물리학 3.3</small>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a><a href="../../c/esys/1-5.html#card-esys-seismic"><small class="mono">지구시스템과학 1.5</small>지진파가 닿지 않는 곳이 왜 생길까?</a><a href="../../c/esys/1-5.html#text-esys-seismic-shadow"><small class="mono">지구시스템과학 1.5</small>지진파가 닿지 않는 곳이 왜 생길까?</a></div></nav>
+
       <article class="card" id="card-phy-lm-image">
         <header class="card-head">
-          <span class="no">3.1.1</span><h2>렌즈를 반쯤 가리면 상도 반만 생길까?</h2><span class="kind">상의 작도 · 렌즈 방정식</span>
+          <span class="no">3.1.2</span><h2>렌즈를 반쯤 가리면 상도 반만 생길까?</h2><span class="kind">상의 작도 · 렌즈 방정식</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -118,7 +170,7 @@
 
       <article class="card" id="card-labphy-mirror">
         <header class="card-head">
-          <span class="no">3.1.2</span><h2>스크린에 잡히지 않는 상의 위치는 어떻게 잴까?</h2><span class="kind">실험 · 구면 거울 · 실상과 허상 · 시차법</span>
+          <span class="no">3.1.3</span><h2>스크린에 잡히지 않는 상의 위치는 어떻게 잴까?</h2><span class="kind">실험 · 구면 거울 · 실상과 허상 · 시차법</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -164,7 +216,7 @@
 
       <article class="card" id="card-adphy-instrument">
         <header class="card-head">
-          <span class="no">3.1.3</span><h2>렌즈 두 장을 겹치면 왜 상이 수백 배로 커질까?</h2><span class="kind">광학 기기 · 렌즈 두 장의 결합과 각배율</span>
+          <span class="no">3.1.4</span><h2>렌즈 두 장을 겹치면 왜 상이 수백 배로 커질까?</h2><span class="kind">광학 기기 · 렌즈 두 장의 결합과 각배율</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -211,7 +263,7 @@
 
       <article class="card" id="card-emq-aberration">
         <header class="card-head">
-          <span class="no">3.1.4</span><h2>렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?</h2><span class="kind">광학 기기와 수차 · 구면 수차와 색수차</span>
+          <span class="no">3.1.5</span><h2>렌즈는 왜 빛을 정확히 한 점에 모으지 못할까?</h2><span class="kind">광학 기기와 수차 · 구면 수차와 색수차</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -266,10 +318,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/adphy/body.js"></script>
 <script src="../../js/cards/phy/lm-lens-image.js"></script>
 <script src="../../js/lib/lab.js"></script>
 <script src="../../js/cards/labphy/mirror.js"></script>
