@@ -40,7 +40,7 @@
     };
     const pick = (f) => TOC.filter(f).sort((a, b) => RANK.indexOf(a.level) - RANK.indexOf(b.level));
     const tree = document.getElementById("tree");
-    /* 과학: 공통 과목 띠 아래에 교과(행) × 선택 구분(열) 표. 일반·진로·융합선택은 나란히 고르는 구분이고,
+    /* 과학: 공통 과목 행(선택 과목 행과 같은 꼴) 아래에 교과(행) × 선택 구분(열) 표. 일반·진로·융합선택은 나란히 고르는 구분이고,
        과학계열 과목은 과학고·영재학교 등에서 여는 과목이라 맨 오른쪽 열에 둔다 */
     const SCI_COLS = [["일반", "일반선택", "교과의 기본"], ["진로", "진로선택", "심화·진로"], ["융합", "융합선택", "교과 융합·실생활"],
       ["고급", "과학계열 진로선택", "과학고·영재학교"], ["실험", "과학계열 융합선택", "과학고·영재학교"]];
@@ -83,12 +83,12 @@
         <p class="mono small dim tree-note">공통 과목을 배운 뒤 선택 과목을 고릅니다. <span class="for-sci">열은 교과, 행은 선택 구분입니다.</span><span class="for-math">행은 선택 구분입니다.</span> 흐린 상자는 아직 준비 중입니다.</p></div>
       <div class="tree-body" id="tree-body">
       <div class="tree-sci">
-        <div class="tree-band" data-track="common"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div>
+        <div class="mx" role="table" aria-label="공통 과목"><div class="mx-row mx-flowrow" role="row" data-track="common"><span class="mx-lb mx-lv" role="rowheader">공통<small>고1 공통 과목</small></span><div class="mx-cell mx-flow" role="cell" data-col="공통">${pick((c) => c.track === "common").map((c) => box(c)).join("")}</div></div></div>
         <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
         ${sciMatrix()}
       </div>
       <div class="tree-mth">
-        <div class="tree-band" data-track="math"><span class="band-lb mono">공통</span><div>${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div>
+        <div class="mx" role="table" aria-label="공통 과목"><div class="mx-row mx-flowrow" role="row" data-track="math"><span class="mx-lb mx-lv" role="rowheader">공통<small>고1 공통 과목</small></span><div class="mx-cell mx-flow" role="cell" data-col="공통">${pick((c) => c.track === "math" && c.level === "공통").map((c) => box(c)).join("")}</div></div></div>
         <p class="mx-arrow mono small dim" aria-hidden="true">↓ 선택 과목</p>
         ${mathMatrix()}
       </div>

@@ -27,7 +27,8 @@
   --pad: clamp(16px, 4vw, 56px);
   --max: 1240px;
   --f-kr: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* IBM Plex Mono에는 한글이 없다. 한글은 Pretendard로 그려 Windows의 굴림·빈 칸(□)을 막는다 */
+  --f-mono: "IBM Plex Mono", "Pretendard Variable", Pretendard, ui-monospace, "SFMono-Regular", Menlo, monospace;
   --f-serif: "Newsreader", Georgia, serif;
 }
 
@@ -664,9 +665,6 @@ a.nb-title:hover { text-decoration: underline; }
 .tree [data-track="common"] { --tc: var(--forest); }
 .tree [data-track="fusion"] { --tc: #c0587e; }
 .tree [data-track="math"] { --tc: #c98a12; }
-.tree-band { display: grid; grid-template-columns: 56px 1fr; align-items: center; gap: 12px; padding: 12px; background: var(--paper-2); border: 1px solid var(--rule); }
-.tree-band > div { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
-.band-lb { color: var(--tc); font-weight: 600; font-size: 13px; }
 .tree-math > div { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); align-items: start; gap: 12px; }
 .m-col { display: flex; flex-direction: column; gap: 8px; }
 .m-col h3 { margin: 0; padding-bottom: 4px; font-size: 12px; font-weight: 600; color: var(--tc); border-bottom: 1px solid var(--rule); }
@@ -718,6 +716,7 @@ body[data-scope="basic"] .sci-mx [data-tk="fusion"] { display: none; }   /* 교�
 .mx .tbox b { font-size: 14px; }
 /* 수학 표: 행 = 선택 구분, 과목 상자는 같은 폭으로 옆으로 늘어놓는다 */
 .mx .mx-row.mx-flowrow { grid-template-columns: 120px minmax(0, 1fr); }
+.tree-sci .mx .mx-row.mx-flowrow { grid-template-columns: 86px minmax(0, 1fr); }   /* 과학의 공통 행: 아래 선택 과목 표의 행 이름 칸과 같은 폭 */
 .mx-cell.mx-flow { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 220px)); gap: 8px; padding: 8px 0; }
 body[data-domain="math"] .tree-sci, body[data-domain="sci"] .tree-mth,
 body[data-domain="math"] .for-sci, body[data-domain="sci"] .for-math { display: none; }
@@ -753,8 +752,6 @@ body[data-domain="math"] #chips .chip { display: none; }
 @media (max-width: 640px) {
   .dom-tabs button { flex: 1; padding: 10px 0; }
   .tree-cols { grid-template-columns: repeat(2, 1fr); row-gap: 22px; }
-  .tree-band { grid-template-columns: 1fr; gap: 6px; }
-  .tree-band > div { grid-template-columns: repeat(2, 1fr); }
   .tbox { padding: 8px 10px 11px; }
   .tbox b { font-size: 14px; }
 }
