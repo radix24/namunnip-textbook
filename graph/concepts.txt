@@ -803,19 +803,19 @@ calc2-int-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc2-area-sl
 calc2-int-volume | 입체도형의 부피 | card-calc2-cross-section card-calc2-cavalieri | calc2-int-series
 calc2-int-distance | 속도와 거리 | card-calc2-distance-area card-calc2-path-length | calc2-int-functions calc2-int-series
 # cm1-1
-cm1-poly-ops | 다항식의 덧셈·뺄셈·곱셈 | card-cm1-poly-mult | 
+cm1-poly-ops | 다항식의 덧셈·뺄셈·곱셈 | card-cm1-poly-mult text-cm1-poly-ops | 
 cm1-poly-div | 다항식의 나눗셈 | card-cm1-poly-div | cm1-poly-ops
-cm1-identity | 항등식과 미정계수법 | card-cm1-identity | cm1-poly-ops
+cm1-identity | 항등식과 미정계수법 | card-cm1-identity text-cm1-remainder-thm | cm1-poly-ops
 cm1-remainder | 나머지정리와 인수정리 | card-cm1-remainder | cm1-poly-div cm1-identity
 cm1-synthetic | 조립제법 | card-cm1-synthetic | cm1-poly-div
-cm1-factor-formula | 인수분해 공식 | card-cm1-sq3 card-cm1-cube-diff | cm1-poly-ops
+cm1-factor-formula | 인수분해 공식 | card-cm1-sq3 card-cm1-cube-diff text-cm1-factoring | cm1-poly-ops
 cm1-factor-theorem | 인수정리를 이용한 인수분해 | card-cm1-factor-roots | cm1-remainder cm1-synthetic
 # cm1-2a
-cm1-complex | 허수단위와 복소수 | card-cm1-imag-unit | 
+cm1-complex | 허수단위와 복소수 | card-cm1-imag-unit text-cm1-complex | 
 cm1-complex-ops | 복소수의 사칙연산과 켤레복소수 | card-cm1-complex-arith | cm1-complex
-cm1-discriminant | 이차방정식의 판별식과 실근·허근 | card-cm1-discriminant card-cm1-root-path | cm1-complex-ops
-cm1-vieta | 근과 계수의 관계 | card-cm1-vieta card-cm1-sum-product | cm1-discriminant
-cm1-quad-graph | 이차방정식과 이차함수의 관계 | card-cm1-parabola-xaxis card-cm1-level-line | cm1-discriminant
+cm1-discriminant | 이차방정식의 판별식과 실근·허근 | card-cm1-discriminant card-cm1-root-path text-cm1-discriminant | cm1-complex-ops
+cm1-vieta | 근과 계수의 관계 | card-cm1-vieta card-cm1-sum-product text-cm1-vieta | cm1-discriminant
+cm1-quad-graph | 이차방정식과 이차함수의 관계 | card-cm1-parabola-xaxis card-cm1-level-line text-cm1-quad-func | cm1-discriminant
 cm1-line-parabola | 이차함수의 그래프와 직선의 위치 관계 | card-cm1-line-parabola card-cm1-tangent-point | cm1-quad-graph
 cm1-quad-minmax | 제한된 범위에서 이차함수의 최대·최소 | card-cm1-minmax-interval card-cm1-fence | cm1-quad-graph
 # cm1-2b

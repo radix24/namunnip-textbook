@@ -6764,6 +6764,7 @@
        "code": "10공수1-01-01",
        "blocks": [
         "intro-cm1-1-1",
+        "text-cm1-poly-ops",
         "card-cm1-poly-mult",
         "card-cm1-poly-div"
        ]
@@ -6774,6 +6775,7 @@
        "code": "10공수1-01-02",
        "blocks": [
         "intro-cm1-1-2",
+        "text-cm1-remainder-thm",
         "card-cm1-identity",
         "card-cm1-remainder",
         "card-cm1-synthetic"
@@ -6785,6 +6787,7 @@
        "code": "10공수1-01-03",
        "blocks": [
         "intro-cm1-1-3",
+        "text-cm1-factoring",
         "card-cm1-sq3",
         "card-cm1-cube-diff",
         "card-cm1-factor-roots"
@@ -6802,6 +6805,7 @@
        "code": "10공수1-02-01",
        "blocks": [
         "intro-cm1-2-1",
+        "text-cm1-complex",
         "card-cm1-imag-unit",
         "card-cm1-complex-arith"
        ]
@@ -6812,6 +6816,7 @@
        "code": "10공수1-02-02",
        "blocks": [
         "intro-cm1-2-2",
+        "text-cm1-discriminant",
         "card-cm1-discriminant",
         "card-cm1-root-path"
        ]
@@ -6822,6 +6827,7 @@
        "code": "10공수1-02-03",
        "blocks": [
         "intro-cm1-2-3",
+        "text-cm1-vieta",
         "card-cm1-vieta",
         "card-cm1-sum-product"
        ]
@@ -6832,6 +6838,7 @@
        "code": "10공수1-02-04",
        "blocks": [
         "intro-cm1-2-4",
+        "text-cm1-quad-func",
         "card-cm1-parabola-xaxis",
         "card-cm1-level-line"
        ]
