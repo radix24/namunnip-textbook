@@ -947,6 +947,7 @@
        "code": "12생과01-01",
        "blocks": [
         "intro-bio-1-1",
+        "text-bio-science",
         "card-bio-alive",
         "card-bio-control",
         "text-gene-bioethics",
@@ -959,6 +960,7 @@
        "code": "12생과01-02",
        "blocks": [
         "intro-bio-1-2",
+        "text-bio-levels",
         "card-bio-levels",
         "text-bio-eco-levels"
        ]
@@ -969,6 +971,7 @@
        "code": "12생과01-03",
        "blocks": [
         "intro-bio-1-3",
+        "text-bio-metabolism",
         "card-bio-resp",
         "card-bio-atp",
         "related-photo"
@@ -980,6 +983,7 @@
        "code": "12생과01-04",
        "blocks": [
         "intro-bio-1-4",
+        "text-bio-organ-systems",
         "card-bio-systems",
         "card-bio-exercise",
         "card-bio-digest"
@@ -991,6 +995,7 @@
        "code": "12생과01-05",
        "blocks": [
         "intro-bio-1-5",
+        "text-bio-disease",
         "card-bio-diabetes",
         "card-bio-energy",
         "text-bio-epidemiology",
@@ -1003,6 +1008,7 @@
        "code": "12생과01-06",
        "blocks": [
         "intro-bio-1-6",
+        "text-bio-ecosystem",
         "card-bio-carbon",
         "card-bio-nitrogen",
         "card-bio-flow"
@@ -1014,6 +1020,7 @@
        "code": "12생과01-07",
        "blocks": [
         "intro-bio-1-7",
+        "text-bio-population",
         "card-bio-logistic",
         "text-bio-social",
         "card-bio-interact",
@@ -1034,6 +1041,7 @@
        "code": "12생과02-01",
        "blocks": [
         "intro-bio-2-1",
+        "text-bio-neuron",
         "card-bio-ap",
         "card-bio-saltatory",
         "card-bio-snapshot"
@@ -1045,6 +1053,7 @@
        "code": "12생과02-02",
        "blocks": [
         "intro-bio-2-2",
+        "text-bio-synapse",
         "card-bio-syndir",
         "card-bio-syndrug"
        ]
@@ -1055,6 +1064,7 @@
        "code": "12생과02-03",
        "blocks": [
         "intro-bio-2-3",
+        "text-bio-nervous",
         "card-bio-reflex",
         "text-bio-brain",
         "card-bio-autonomic",
@@ -1067,6 +1077,7 @@
        "code": "12생과02-04",
        "blocks": [
         "intro-bio-2-4",
+        "text-bio-homeostasis",
         "card-bio-glucose",
         "card-bio-thermo",
         "video-bio-fever",
@@ -1080,6 +1091,7 @@
        "code": "12생과02-05",
        "blocks": [
         "intro-bio-2-5",
+        "text-bio-immunity",
         "card-bio-pathogen",
         "card-bio-immune"
        ]
@@ -1090,6 +1102,7 @@
        "code": "12생과02-06",
        "blocks": [
         "intro-bio-2-6",
+        "text-bio-bloodtype",
         "card-bio-blood"
        ]
       },
@@ -1099,6 +1112,7 @@
        "code": "12생과02-07",
        "blocks": [
         "intro-bio-2-7",
+        "text-bio-vaccine",
         "card-bio-vtypes",
         "card-bio-herd"
        ]
@@ -1115,6 +1129,7 @@
        "code": "12생과03-01",
        "blocks": [
         "intro-bio-3-1",
+        "text-bio-chromosome",
         "card-bio-dna-pack",
         "card-bio-gene-chromo",
         "card-gene-nondisjunction",
@@ -1127,6 +1142,7 @@
        "code": "12생과03-02",
        "blocks": [
         "intro-bio-3-2",
+        "text-bio-division",
         "card-bio-division",
         "card-bio-assort",
         "video-bio-meiosis"
@@ -1138,6 +1154,7 @@
        "code": "12생과03-03",
        "blocks": [
         "intro-bio-3-3",
+        "text-bio-evolution",
         "card-bio-selection",
         "card-bio-finch",
         "video-bio-whale",
@@ -1151,6 +1168,7 @@
        "code": "12생과03-04",
        "blocks": [
         "intro-bio-3-4",
+        "text-bio-taxonomy",
         "card-bio-rank",
         "card-bio-species",
         "card-bio-domains"
@@ -1162,6 +1180,7 @@
        "code": "12생과03-05",
        "blocks": [
         "intro-bio-3-5",
+        "text-bio-phylogeny",
         "card-bio-key",
         "card-bio-tree-read",
         "card-bio-tree-build",
