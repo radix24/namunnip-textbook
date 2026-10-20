@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-cell-coupling canvas { width: 100%; aspect-ratio: 1 / 0.78; }
     #card-cell-coupling .presets { flex-wrap: wrap; }
@@ -48,8 +49,9 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-cell-coupling"><span class="mono">2.1.1</span>동화·이화와 에너지 짝짓기</a></li>
-        <li><a href="#card-bio-energy"><span class="mono">2.1.2</span>더 먹은 만큼 몸무게는 계속 늘까?</a></li>
+        <li><a href="#text-cell-energy-coupling"><span class="mono">2.1.1</span>본문 · 물질대사와 에너지 출입</a></li>
+        <li><a href="#card-cell-coupling"><span class="mono">2.1.2</span>동화·이화와 에너지 짝짓기</a></li>
+        <li><a href="#card-bio-energy"><span class="mono">2.1.3</span>더 먹은 만큼 몸무게는 계속 늘까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=cell&amp;sec=2-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">12문항 →</span></a>
@@ -58,9 +60,61 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-cell-energy-coupling" data-kind="본문">
+        <header class="card-head"><span class="no">2.1.1</span><h2>에너지가 필요한 반응을 세포는 어떻게 일으킬까?</h2><span class="kind">본문 · 물질대사와 에너지 출입</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">세포는 아미노산을 이어 단백질을 만들고, 포도당을 이어 글리코젠을 만든다. 작은 분자를 큰 분자로 조립하는 이런 반응은 에너지를 흡수해야 해서 저절로는 일어나지 않는다. 물을 언덕 위로 올리려면 펌프가 필요한 것과 같다. 세포는 무엇으로 이 언덕을 넘길까? 그리고 먹은 음식의 에너지는 어떤 경로로 이런 반응에 쓰일까?</p>
+          <figure class="q-fig" data-q="cell-couple">
+            <svg viewBox="0 0 520 180" role="img" aria-label="에너지가 필요한 반응과 ATP 가수 분해의 짝지음"></svg>
+            <div class="q-ctl"><label>필요한 반응의 ΔG (kJ/mol) <input type="range" data-k="dg" min="5" max="60" step="1" value="14"><output data-k="dg"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 에너지가 필요한 반응(빨강)에 ATP 가수 분해(파랑)를 짝지으면 전체 에너지 변화(주황)가 음수가 되어 반응이 저절로 일어난다. 필요한 에너지가 크면 ATP를 여러 개 쓴다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>화학 반응과 에너지 출입(화학), 효소(통합과학), 단백질과 핵산의 합성(<a href="1-2.html">핵산과 단백질</a>), ATP의 구조.</div>
+
+          <h3><span class="mono">1</span>동화 작용과 이화 작용</h3>
+          <p>생명체 안에서 일어나는 모든 화학 반응을 물질대사라 한다. 작은 분자를 큰 분자로 합성하는 반응을 동화 작용이라 하며, 에너지를 흡수한다. 광합성, 단백질 합성이 그 예이다. 큰 분자를 작은 분자로 분해하는 반응을 이화 작용이라 하며, 에너지를 방출한다. 세포 호흡과 소화가 그 예이다. 생물은 이화 작용에서 나온 에너지로 동화 작용을 일으킨다.</p>
+          <p>그런데 이화 작용에서 나온 에너지는 그대로 동화 작용에 옮겨 갈 수 없다. 포도당이 분해되는 곳과 단백질이 만들어지는 곳이 다르고, 열로 내놓으면 흩어져 버린다. 그래서 세포는 에너지를 ATP라는 운반 분자에 담아 필요한 곳으로 나른다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">에너지 짝지음</span></span>
+            <p>에너지를 흡수하는 반응(\(\Delta G &gt; 0\))은 에너지를 방출하는 반응(\(\Delta G &lt; 0\))과 짝지어 일어날 때 전체 \(\Delta G\)가 음수가 되어 진행된다. 세포에서는 주로 ATP 가수 분해(\(\text{ATP} + \text{H}_2\text{O} \rightarrow \text{ADP} + \text{P}_i\), \(\Delta G \approx -30.5\) kJ/mol)가 짝을 이룬다.</p>
+          </div>
+          <p>짝지음은 효소가 두 반응을 한 자리에서 일으키게 하여 이루어진다. 예를 들어 글루탐산과 암모니아로 글루타민을 만드는 반응은 +14 kJ/mol이라 저절로 일어나지 않는다. 그러나 효소가 ATP의 인산을 먼저 글루탐산에 붙이고, 인산이 붙은 글루탐산이 암모니아와 반응하면 전체 \(\Delta G\)는 \(14 - 30.5 = -16.5\) kJ/mol이 된다.<sup class="fn"><a href="#fn-cell-energy-coupling-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>에너지의 흐름</h3>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="음식에서 ATP를 거쳐 생명 활동으로">
+              <g class="s">
+                <rect x="15" y="40" width="90" height="34" class="lk"/><text x="60" y="62" text-anchor="middle">음식 (포도당)</text>
+                <rect x="135" y="40" width="90" height="34" class="lc"/><text x="180" y="62" text-anchor="middle">세포 호흡</text>
+                <rect x="255" y="40" width="80" height="34" class="lb"/><text x="295" y="62" text-anchor="middle">ATP</text>
+                <rect x="365" y="20" width="140" height="28" class="lk"/><text x="435" y="39" text-anchor="middle">합성, 수송, 운동</text>
+                <rect x="365" y="64" width="140" height="28" class="ld"/><text x="435" y="83" text-anchor="middle">열</text>
+                <line x1="105" y1="57" x2="135" y2="57" class="k"/><line x1="225" y1="57" x2="255" y2="57" class="k"/><line x1="335" y1="52" x2="365" y2="34" class="k"/><line x1="225" y1="66" x2="365" y2="78" class="d"/>
+              </g>
+            </svg>
+            <figcaption>그림 2. 음식의 에너지 일부는 ATP에 실려 생명 활동에 쓰이고, 나머지는 열이 되어 체온을 유지한다.</figcaption>
+          </figure>
+          <p>그림 1에서 필요한 반응의 ΔG를 키워 보자. 30.5 kJ/mol을 넘으면 ATP 하나로는 모자라 두 개를 써야 한다. 실제로 단백질 합성에서는 아미노산 하나를 이을 때마다 ATP와 GTP를 합쳐 4개 정도를 쓴다.</p>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>아미노산 300개로 된 단백질 한 분자를 만드는 데 펩타이드 결합 하나마다 ATP 4개분의 에너지가 든다. 이 단백질 1 mol을 만드는 데 필요한 에너지는 몇 kJ인가? 세포 호흡으로 포도당 1 mol에서 ATP 32 mol을 얻는다면 포도당이 몇 mol 필요한가?</p>
+          </div>
+          <p>펩타이드 결합은 아미노산 수보다 하나 적은 299개이다. 필요한 ATP는 \(299 \times 4 = 1196\) mol이므로 에너지는 \(1196 \times 30.5 \approx 36\,500\) kJ이다.</p>
+          <p>포도당은 \(\dfrac{1196}{32} \approx 37\) mol이 필요하다. 즉 단백질 1 mol을 만드는 데 포도당 37 mol, 곧 약 6.7 kg이 든다. 이 단백질 1 mol의 질량은 아미노산 평균 110 g/mol로 약 33 kg이다. 그러므로 단백질을 만드는 일은 에너지가 많이 드는 작업이다. 그래서 성장기나 상처가 아무는 동안에는 평소보다 많은 에너지가 필요하다.</p>
+          <p>아래 탐구 카드에서 에너지가 필요한 반응을 세포가 일으키는 방법과, 더 먹은 만큼 몸무게가 계속 느는지 따져 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-cell-energy-coupling-1">세포 안의 실제 농도에서는 ATP 가수 분해의 ΔG가 약 −50 kJ/mol로 표준값보다 크다. 세포가 ATP를 ADP보다 훨씬 높은 농도로 유지하기 때문이다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>물질대사는 에너지를 흡수하는 동화 작용과 방출하는 이화 작용으로 나뉘며, 이화 작용의 에너지는 ATP에 담겨 동화 작용으로 옮겨 간다. 그래서 처음 질문의 세포는 에너지가 필요한 반응을 ATP 가수 분해와 짝지어, 전체 에너지 변화를 음수로 만들어 일으킨다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#card-is1-enzyme-fit"><small class="mono">통합과학1 3.5</small>효소는 왜 특정 물질에만 작용할까?</a><a href="../../c/is1/3-5.html#card-is1-activation"><small class="mono">통합과학1 3.5</small>효소는 반응을 어떻게 빠르게 할까?</a><a href="../../c/is1/3-5.html#text-is1-enzymes-life"><small class="mono">통합과학1 3.5</small>생활 속에서 효소는 어떤 화학 반응을 도울까?</a><a href="../../c/is1/3-5.html#card-is1-catalase"><small class="mono">통합과학1 3.5</small>감자 조각을 넣으면 과산화 수소가 왜 거품을 낼까?</a></div></nav>
+
       <article class="card" id="card-cell-coupling">
         <header class="card-head">
-          <span class="no">2.1.1</span><h2>에너지가 필요한 반응을 세포는 어떻게 일으킬까?</h2><span class="kind">동화 작용과 이화 작용 · 반응 짝짓기 · 표준 자유 에너지</span>
+          <span class="no">2.1.2</span><h2>에너지가 필요한 반응을 세포는 어떻게 일으킬까?</h2><span class="kind">동화 작용과 이화 작용 · 반응 짝짓기 · 표준 자유 에너지</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -106,7 +160,7 @@
 
       <article class="card" id="card-bio-energy">
         <header class="card-head">
-          <span class="no">2.1.2</span><h2>더 먹은 만큼 몸무게는 계속 늘까?</h2><span class="kind">기초 대사량 · 에너지 수지 · 모식 모형</span>
+          <span class="no">2.1.3</span><h2>더 먹은 만큼 몸무게는 계속 늘까?</h2><span class="kind">기초 대사량 · 에너지 수지 · 모식 모형</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -164,10 +218,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/cell/body.js"></script>
 <script src="../../js/cards/cell/coupling.js"></script>
 <script src="../../js/cards/bio/s-energy.js"></script>
 </body>

@@ -28,7 +28,7 @@ alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | 
 bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond text-chem-bond-elec | periodic
 silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
-polymer | 생명체의 고분자 | card-is1-polymer text-rxn-polymerization | bonding
+polymer | 생명체의 고분자 | card-is1-polymer text-rxn-polymerization text-cell-dna-base | bonding
 bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor text-emq-semiconductor | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
@@ -37,7 +37,7 @@ imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-ch
 chem-society | 화학과 우리 사회 | card-chem-haber video-chem-society card-chem-safety text-chem-green text-chem-society | 
 mole | 몰 | card-chem-mole card-chem-cup card-chem-molvol card-chem-molar-mass text-chem-avogadro text-chem-mol | units
 stoich | 화학 반응식과 양적 관계 | card-chem-balance card-chem-gasvol card-chem-limit card-chem-caco3 text-chem-stoich | mole
-redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox text-rxn-galvanic text-rxn-oxidation-number | bonding
+redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox text-rxn-galvanic text-rxn-oxidation-number text-cell-two-etc | bonding
 acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-log card-is2-neutral card-is2-acid-plate text-is2-acid-base text-rxn-bronsted text-rxn-ph | bonding
 reaction-heat | 발열 반응과 흡열 반응 | card-is2-hand-warmer card-is2-cold-pack text-is2-reaction-heat text-mateng-enthalpy | bonding
 equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium | stoich
@@ -118,8 +118,8 @@ cosmology | 현대 우주론 | text-earth-cosmology | expansion bbn
 # ── 생명 ──
 life | 생명의 특성 | card-bio-alive text-bio-modern text-bio-science | 
 bio-levels | 생명 시스템의 구성 단계 | card-bio-levels text-bio-eco-levels text-bio-levels |
-membrane | 세포막과 물질 출입 | card-is1-membrane text-mateng-osmotic | bio-levels
-enzyme | 효소 | card-is1-enzyme-fit card-is1-activation text-is1-enzymes-life card-is1-catalase | polymer
+membrane | 세포막과 물질 출입 | card-is1-membrane text-mateng-osmotic text-cell-membrane-transport | bio-levels
+enzyme | 효소 | card-is1-enzyme-fit card-is1-activation text-is1-enzymes-life card-is1-catalase text-cell-enzyme-kinetics | polymer
 dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon text-is1-gene-protein | polymer
 pcr | PCR 진단 | card-is2-pcr card-is2-rapid-test text-is2-diagnosis | dogma
 chromosome | 염색체와 DNA | card-bio-dna-pack card-bio-gene-chromo card-bio-karyotype text-bio-chromosome | dogma
@@ -128,8 +128,8 @@ evolution | 변이와 자연선택 | card-is2-selection card-is2-resistance card
 biodiversity | 생물다양성 | text-is2-biodiversity | evolution
 classify | 분류 체계와 종 | card-bio-rank card-bio-species card-bio-domains card-bio-key text-bio-phylogeny text-bio-taxonomy | evolution
 phylo | 계통수 | card-bio-tree-read card-bio-tree-build card-bio-seq-tree | classify
-metabolism | 세포 호흡과 ATP | card-bio-resp card-bio-atp text-bio-metabolism | enzyme redox
-photosyn | 광합성 | card-leaf-color card-photo-rate | redox
+metabolism | 세포 호흡과 ATP | card-bio-resp card-bio-atp text-bio-metabolism text-cell-atp-cycle text-cell-respiration-steps | enzyme redox
+photosyn | 광합성 | card-leaf-color card-photo-rate text-cell-pigment | redox
 organ-sys | 기관계의 통합 작용 | card-bio-systems card-bio-exercise card-bio-digest text-bio-organ-systems | metabolism bio-levels
 neuron | 뉴런과 흥분 전도 | card-bio-ap card-bio-saltatory card-bio-snapshot text-bio-neuron | membrane
 synapse | 시냅스 | card-bio-syndir card-bio-syndrug text-bio-synapse | neuron
@@ -181,25 +181,25 @@ mateng-ea | 유효 충돌과 활성화 에너지 | card-mateng-ea text-mateng-ac
 mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control | mateng-ea enzyme
 
 # ── 진로선택: 세포와 물질대사 ──
-cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid | polymer
+cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid | polymer
 cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-protein | polymer
-cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions | bio-levels
+cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions text-cell-centrifuge | bio-levels
 cell-endomembrane | 내막계와 분비 경로 | card-cell-pulse | cell-organelle dogma
-cell-pro-eu | 원핵세포와 진핵세포 | card-cell-size text-cell-pro-eu | cell-organelle
+cell-pro-eu | 원핵세포와 진핵세포 | card-cell-size text-cell-pro-eu text-cell-surface-volume | cell-organelle
 cell-transport | 막 수송과 삼투 | card-cell-transport card-cell-osmosis | membrane
-cell-metab-energy | 물질대사와 에너지 출입 | card-cell-coupling | enzyme
+cell-metab-energy | 물질대사와 에너지 출입 | card-cell-coupling text-cell-energy-coupling | enzyme
 cell-energy-flow | 광합성·세포 호흡과 ATP | card-cell-plant-day | metabolism photosyn
-cell-enzyme-kind | 효소의 종류와 활성 요인 | text-cell-enzyme-kind card-cell-enzyme-lab | enzyme sci-method
+cell-enzyme-kind | 효소의 종류와 활성 요인 | text-cell-enzyme-kind card-cell-enzyme-lab text-cell-enzyme-condition | enzyme sci-method
 cell-enzyme-kinetics | 효소 작용 기작과 저해 | card-cell-inhibit | enzyme
-cell-enzyme-use | 효소의 이용 | text-cell-enzyme-use | cell-enzyme-kind
-cell-mito | 미토콘드리아의 구조 | card-cell-mito | cell-organelle
+cell-enzyme-use | 효소의 이용 | text-cell-enzyme-use text-cell-thermostable | cell-enzyme-kind
+cell-mito | 미토콘드리아의 구조 | card-cell-mito text-cell-mitochondria | cell-organelle
 cell-resp-steps | 세포 호흡의 단계 | card-cell-carbon | metabolism cell-mito redox
-cell-chemiosmosis | 산화적 인산화와 화학 삼투 | card-cell-chemiosmosis | cell-resp-steps cell-transport
-cell-ferment | 산소 호흡과 발효 | card-cell-ferment text-cell-ferment-use | cell-resp-steps
+cell-chemiosmosis | 산화적 인산화와 화학 삼투 | card-cell-chemiosmosis text-cell-chemiosmosis | cell-resp-steps cell-transport
+cell-ferment | 산소 호흡과 발효 | card-cell-ferment text-cell-ferment-use text-cell-fermentation | cell-resp-steps
 cell-chloroplast | 엽록체의 구조 | card-cell-chloroplast | cell-organelle photosyn
-cell-calvin | 명반응과 탄소 고정 반응 | card-cell-calvin | cell-chloroplast
+cell-calvin | 명반응과 탄소 고정 반응 | card-cell-calvin text-cell-light-reaction | cell-chloroplast
 cell-etc-compare | 두 전자 전달계의 비교 | card-cell-etc | cell-chemiosmosis cell-calvin redox
-cell-photo-history | 광합성 연구의 역사 | text-cell-photo-history card-cell-engelmann | photosyn
+cell-photo-history | 광합성 연구의 역사 | text-cell-photo-history card-cell-engelmann text-cell-photo-experiment | photosyn
 
 # ── 진로선택: 지구시스템과학 ──
 esys-origin | 태양계와 초기 지구의 형성 | card-esys-snowline text-esys-early-earth | earth-system heavy-el

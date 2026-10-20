@@ -2250,6 +2250,7 @@
        "code": "12세포01-01",
        "blocks": [
         "intro-cell-1-1",
+        "text-cell-fatty-acid",
         "card-cell-fat",
         "text-cell-carb-lipid"
        ]
@@ -2260,6 +2261,7 @@
        "code": "12세포01-02",
        "blocks": [
         "intro-cell-1-2",
+        "text-cell-dna-base",
         "card-is1-polymer",
         "card-cell-chargaff",
         "text-cell-protein"
@@ -2271,6 +2273,7 @@
        "code": "12세포01-03",
        "blocks": [
         "intro-cell-1-3",
+        "text-cell-centrifuge",
         "text-cell-organelles",
         "card-cell-fraction",
         "card-cell-pulse"
@@ -2282,6 +2285,7 @@
        "code": "12세포01-04",
        "blocks": [
         "intro-cell-1-4",
+        "text-cell-surface-volume",
         "card-cell-size",
         "text-cell-pro-eu"
        ]
@@ -2292,6 +2296,7 @@
        "code": "12세포01-05",
        "blocks": [
         "intro-cell-1-5",
+        "text-cell-membrane-transport",
         "card-is1-membrane",
         "card-cell-transport",
         "card-cell-osmosis"
@@ -2309,6 +2314,7 @@
        "code": "12세포02-01",
        "blocks": [
         "intro-cell-2-1",
+        "text-cell-energy-coupling",
         "card-cell-coupling",
         "card-bio-energy"
        ]
@@ -2319,6 +2325,7 @@
        "code": "12세포02-02",
        "blocks": [
         "intro-cell-2-2",
+        "text-cell-atp-cycle",
         "card-bio-atp",
         "card-cell-plant-day"
        ]
@@ -2329,6 +2336,7 @@
        "code": "12세포02-03",
        "blocks": [
         "intro-cell-2-3",
+        "text-cell-enzyme-condition",
         "text-cell-enzyme-kind",
         "card-cell-enzyme-lab"
        ]
@@ -2339,6 +2347,7 @@
        "code": "12세포02-04",
        "blocks": [
         "intro-cell-2-4",
+        "text-cell-enzyme-kinetics",
         "card-is1-activation",
         "card-is1-enzyme-fit",
         "card-cell-inhibit"
@@ -2350,6 +2359,7 @@
        "code": "12세포02-05",
        "blocks": [
         "intro-cell-2-5",
+        "text-cell-thermostable",
         "text-cell-enzyme-use"
        ]
       }
@@ -2365,6 +2375,7 @@
        "code": "12세포03-01",
        "blocks": [
         "intro-cell-3-1",
+        "text-cell-mitochondria",
         "card-cell-mito"
        ]
       },
@@ -2374,6 +2385,7 @@
        "code": "12세포03-02",
        "blocks": [
         "intro-cell-3-2",
+        "text-cell-respiration-steps",
         "card-bio-resp",
         "card-cell-carbon"
        ]
@@ -2384,6 +2396,7 @@
        "code": "12세포03-03",
        "blocks": [
         "intro-cell-3-3",
+        "text-cell-chemiosmosis",
         "card-cell-chemiosmosis"
        ]
       },
@@ -2393,6 +2406,7 @@
        "code": "12세포03-04",
        "blocks": [
         "intro-cell-3-4",
+        "text-cell-fermentation",
         "card-cell-ferment",
         "text-cell-ferment-use"
        ]
@@ -2403,6 +2417,7 @@
        "code": "12세포03-05",
        "blocks": [
         "intro-cell-3-5",
+        "text-cell-pigment",
         "card-leaf-color",
         "card-cell-chloroplast"
        ]
@@ -2413,6 +2428,7 @@
        "code": "12세포03-06",
        "blocks": [
         "intro-cell-3-6",
+        "text-cell-light-reaction",
         "card-cell-calvin",
         "card-photo-rate"
        ]
@@ -2423,6 +2439,7 @@
        "code": "12세포03-07",
        "blocks": [
         "intro-cell-3-7",
+        "text-cell-two-etc",
         "card-is2-redox-life",
         "card-cell-etc"
        ]
@@ -2433,6 +2450,7 @@
        "code": "12세포03-08",
        "blocks": [
         "intro-cell-3-8",
+        "text-cell-photo-experiment",
         "text-cell-photo-history",
         "card-cell-engelmann"
        ]

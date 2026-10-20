@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-cell-ferment canvas { width: 100%; aspect-ratio: 1 / 0.92; }
   </style>
@@ -45,8 +46,9 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-cell-ferment"><span class="mono">3.4.1</span>산소 호흡과 발효</a></li>
-        <li><a href="#text-cell-ferment-use"><span class="mono">3.4.2</span>생활 속 발효와 조사 계획</a></li>
+        <li><a href="#text-cell-fermentation"><span class="mono">3.4.1</span>본문 · 산소 호흡과 발효</a></li>
+        <li><a href="#card-cell-ferment"><span class="mono">3.4.2</span>산소 호흡과 발효</a></li>
+        <li><a href="#text-cell-ferment-use"><span class="mono">3.4.3</span>생활 속 발효와 조사 계획</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=cell&amp;sec=3-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">14문항 →</span></a>
@@ -55,9 +57,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-cell-fermentation" data-kind="본문">
+        <header class="card-head"><span class="no">3.4.1</span><h2>산소가 없으면 세포는 왜 포도당을 훨씬 많이 쓸까?</h2><span class="kind">본문 · 산소 호흡과 발효</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">100 m를 전력으로 달리면 근육은 산소가 모자란 채로 포도당을 분해한다. 이때 근육에 젖산이 쌓이고, 같은 일을 하는 데 포도당이 훨씬 많이 소모된다. 효모도 산소가 없으면 포도당을 빠르게 써 버리며 알코올과 이산화 탄소를 만든다. 산소가 없으면 왜 포도당을 더 많이 써야 하며, 굳이 젖산이나 알코올을 만드는 까닭은 무엇일까?</p>
+          <figure class="q-fig" data-q="cell-ferm">
+            <svg viewBox="0 0 520 170" role="img" aria-label="산소 호흡과 발효에서 필요한 포도당의 양"></svg>
+            <div class="q-ctl"><label>필요한 ATP (mmol/분) <input type="range" data-k="atp" min="8" max="192" step="8" value="64"><output data-k="atp"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 같은 양의 ATP를 얻는 데 필요한 포도당. 산소 호흡은 포도당 1분자에서 ATP 약 32개를, 발효는 2개를 얻으므로 발효는 포도당을 16배 쓴다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>해당 과정과 NAD⁺, NADH(<a href="3-2.html">세포호흡의 단계</a>), 전자 전달계와 산소(<a href="3-3.html">기질 수준 인산화와 산화적 인산화</a>).</div>
+
+          <h3><span class="mono">1</span>발효</h3>
+          <p>산소가 없으면 전자 전달계가 멈추어 NADH가 전자를 넘길 곳이 없다. 그러면 세포 속의 NAD⁺가 모두 NADH로 바뀌어 바닥나고, NAD⁺가 필요한 해당 과정마저 멈춘다. 그래서 세포는 해당 과정에서 생긴 피루브산에 NADH의 전자를 넘겨 NAD⁺를 되살린다. 이렇게 산소 없이 해당 과정을 계속 돌리는 과정을 발효라 한다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">젖산 발효와 알코올 발효</span></span>
+            <p>젖산 발효는 피루브산이 NADH의 전자를 받아 젖산이 되는 과정이다(근육, 젖산균). 알코올 발효는 피루브산이 이산화 탄소를 내놓고 아세트알데하이드가 된 뒤 NADH의 전자를 받아 에탄올이 되는 과정이다(효모). 두 발효 모두 포도당 1분자당 ATP는 해당 과정의 2개뿐이다.</p>
+          </div>
+          <p>젖산이나 에탄올을 만드는 것 자체로는 ATP가 생기지 않는다. 그 목적은 NAD⁺를 되살려 해당 과정을 계속하는 데 있다. 그리고 젖산과 에탄올에는 포도당의 에너지가 아직 많이 남아 있다. 그래서 같은 ATP를 얻으려면 포도당을 훨씬 많이 분해해야 한다.<sup class="fn"><a href="#fn-cell-fermentation-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>산소 호흡과 발효의 비교</h3>
+          <p>그림 1에서 필요한 ATP를 바꾸어 보자. 어느 경우든 발효는 산소 호흡보다 포도당을 16배 쓴다. 그 대신 발효는 미토콘드리아가 필요 없고 매우 빠르다. 그래서 전력 질주처럼 짧은 시간에 많은 ATP가 필요할 때 근육은 발효에 기댄다. 운동이 끝나면 쌓인 젖산은 간으로 옮겨져 다시 포도당으로 바뀌거나, 산소가 충분해지면 피루브산으로 돌아가 세포 호흡에 쓰인다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="산소 호흡, 젖산 발효, 알코올 발효의 비교">
+              <g class="s">
+                <text x="20" y="22">과정</text><text x="150" y="22">산소</text><text x="230" y="22">최종 산물</text><text x="420" y="22">ATP</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">산소 호흡</text><text x="150" y="52">필요</text><text x="230" y="52">CO₂, H₂O</text><text x="420" y="52">약 32</text>
+                <text x="20" y="74">젖산 발효</text><text x="150" y="74">불필요</text><text x="230" y="74">젖산</text><text x="420" y="74">2</text>
+                <text x="20" y="96">알코올 발효</text><text x="150" y="96">불필요</text><text x="230" y="96">에탄올, CO₂</text><text x="420" y="96">2</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 발효는 최종 산물에 에너지가 남아 있어 포도당 1분자당 ATP가 적다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>근육이 1분에 ATP 64 mmol을 쓴다. 산소 호흡만으로 공급하면 포도당이 1분에 몇 mmol 필요한가? 젖산 발효만으로 공급하면 몇 mmol이며 젖산은 몇 mmol 생기는가? 효모가 포도당 180 g(1 mol)을 알코올 발효하면 이산화 탄소는 0 °C, 1 atm에서 몇 L 나오는가?</p>
+          </div>
+          <p>산소 호흡은 \(\dfrac{64}{32} = 2\) mmol, 젖산 발효는 \(\dfrac{64}{2} = 32\) mmol의 포도당이 필요하다. 포도당 1분자에서 젖산 2분자가 생기므로 젖산은 64 mmol이다.</p>
+          <p>알코올 발효는 \(\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2\text{C}_2\text{H}_5\text{OH} + 2\text{CO}_2\)이므로 이산화 탄소 2 mol, 곧 \(2 \times 22.4 = 44.8\) L가 나온다. 빵 반죽이 부푸는 것은 이 이산화 탄소 때문이고, 막걸리와 포도주의 알코올은 에탄올 때문이다. 그래서 같은 발효라도 미생물의 종류에 따라 김치, 요구르트, 빵, 술처럼 전혀 다른 음식이 된다.</p>
+          <p>아래 탐구 카드에서 산소가 없을 때 세포가 포도당을 훨씬 많이 쓰는 까닭과, 김치와 빵 속 미생물이 하는 일을 살펴보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-cell-fermentation-1">에탄올 1 mol을 완전히 태우면 약 1370 kJ이 나온다. 포도당 1 mol이 알코올 발효로 에탄올 2 mol이 되면, 원래 에너지 2870 kJ 가운데 2740 kJ이 에탄올에 그대로 남는 셈이다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>산소가 없으면 전자 전달계가 멈추어 NAD⁺가 바닥나므로, 세포는 피루브산을 젖산이나 에탄올로 바꾸어 NAD⁺를 되살리고 해당 과정을 계속한다. 이것이 발효이며 포도당 1분자당 ATP가 2개뿐이다. 그래서 처음 질문의 세포는 산소 호흡보다 16배 적은 ATP밖에 얻지 못하므로, 같은 일을 하려면 포도당을 훨씬 많이 써야 한다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cell/3-2.html#card-cell-carbon"><small class="mono">세포와 물질대사 3.2</small>포도당의 탄소 6개는 어디로 가고, 에너지는 어디에 실릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/1-11.html#card-labbio-yeast"><small class="mono">생명과학 실험 1.11</small>효모는 어떤 당을, 몇 도에서 가장 잘 발효할까?</a></div></nav>
+
       <article class="card" id="card-cell-ferment">
         <header class="card-head">
-          <span class="no">3.4.1</span><h2>산소가 없으면 세포는 왜 포도당을 훨씬 많이 쓸까?</h2><span class="kind">산소 호흡과 발효 · NAD⁺ 재생 · 모식 모형</span>
+          <span class="no">3.4.2</span><h2>산소가 없으면 세포는 왜 포도당을 훨씬 많이 쓸까?</h2><span class="kind">산소 호흡과 발효 · NAD⁺ 재생 · 모식 모형</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -100,7 +152,7 @@
 
       <article class="card reading" id="text-cell-ferment-use">
         <header class="card-head">
-          <span class="no">3.4.2</span><h2>김치, 빵, 막걸리 속 미생물은 무엇을 하고 있을까?</h2><span class="kind">읽기 · 발효 이용 사례와 조사 계획</span>
+          <span class="no">3.4.3</span><h2>김치, 빵, 막걸리 속 미생물은 무엇을 하고 있을까?</h2><span class="kind">읽기 · 발효 이용 사례와 조사 계획</span>
         </header>
         <div class="reading-body">
           <p class="ask">김치가 시어지고, 빵 반죽이 부풀고, 막걸리에서 톡 쏘는 맛이 나는 것은 모두 미생물이 산소가 부족한 곳에서 에너지를 얻으며 남긴 흔적입니다. 사람들은 이 부산물을 음식의 맛과 보존에 이용해 왔습니다.</p>
@@ -158,10 +210,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/cell/body.js"></script>
 <script src="../../js/cards/cell/ferment.js"></script>
 </body>
 </html>
