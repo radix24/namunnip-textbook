@@ -7774,6 +7774,7 @@
        "code": "12확통01-01",
        "blocks": [
         "intro-stat-1-1",
+        "text-stat-perm-rep",
         "card-stat-rep-perm",
         "card-stat-same-perm",
         "card-stat-grid-path"
@@ -7785,6 +7786,7 @@
        "code": "12확통01-02",
        "blocks": [
         "intro-stat-1-2",
+        "text-stat-comb-rep",
         "card-stat-stars-bars",
         "card-stat-int-solutions"
        ]
@@ -7795,6 +7797,7 @@
        "code": "12확통01-03",
        "blocks": [
         "intro-stat-1-3",
+        "text-stat-binomial-thm",
         "card-stat-binom-expand",
         "card-stat-pascal"
        ]
@@ -7811,6 +7814,7 @@
        "code": "12확통02-01",
        "blocks": [
         "intro-stat-2-1",
+        "text-stat-probability",
         "card-stat-freq-prob",
         "card-stat-sample-grid"
        ]
@@ -7821,6 +7825,7 @@
        "code": "12확통02-02",
        "blocks": [
         "intro-stat-2-2",
+        "text-stat-addition",
         "card-stat-add-rule",
         "card-stat-add-multiples"
        ]
@@ -7831,6 +7836,7 @@
        "code": "12확통02-03",
        "blocks": [
         "intro-stat-2-3",
+        "text-stat-complement",
         "card-stat-birthday",
         "card-stat-at-least"
        ]
@@ -7841,6 +7847,7 @@
        "code": "12확통02-04",
        "blocks": [
         "intro-stat-2-4",
+        "text-stat-conditional",
         "card-stat-cond-table",
         "card-stat-cond-test"
        ]
@@ -7851,6 +7858,7 @@
        "code": "12확통02-05",
        "blocks": [
         "intro-stat-2-5",
+        "text-stat-independence",
         "card-stat-indep-dice",
         "card-stat-indep-area"
        ]
@@ -7861,6 +7869,7 @@
        "code": "12확통02-06",
        "blocks": [
         "intro-stat-2-6",
+        "text-stat-multiplication",
         "card-stat-tree-draw",
         "card-stat-indep-trials"
        ]
@@ -7877,6 +7886,7 @@
        "code": "12확통03-01",
        "blocks": [
         "intro-stat-3-1",
+        "text-stat-random-var",
         "card-stat-rv-coins",
         "card-stat-density"
        ]
@@ -7887,6 +7897,7 @@
        "code": "12확통03-02",
        "blocks": [
         "intro-stat-3-2",
+        "text-stat-expectation",
         "card-stat-balance",
         "card-stat-linear-rv"
        ]
@@ -7897,6 +7908,7 @@
        "code": "12확통03-03",
        "blocks": [
         "intro-stat-3-3",
+        "text-stat-binomial",
         "card-stat-binom-shape",
         "card-stat-large-numbers"
        ]
@@ -7907,6 +7919,7 @@
        "code": "12확통03-04",
        "blocks": [
         "intro-stat-3-4",
+        "text-stat-normal",
         "card-stat-normal-curve",
         "card-stat-standardize",
         "card-stat-binom-normal"
@@ -7918,6 +7931,7 @@
        "code": "12확통03-05",
        "blocks": [
         "intro-stat-3-5",
+        "text-stat-sampling",
         "card-stat-random-sample",
         "card-stat-draw-replace"
        ]
@@ -7928,6 +7942,7 @@
        "code": "12확통03-06",
        "blocks": [
         "intro-stat-3-6",
+        "text-stat-sample-mean",
         "card-stat-xbar-dist",
         "card-stat-phat-dist"
        ]
@@ -7938,6 +7953,7 @@
        "code": "12확통03-07",
        "blocks": [
         "intro-stat-3-7",
+        "text-stat-estimation",
         "card-stat-ci-mean",
         "card-stat-ci-prop"
        ]
