@@ -1208,6 +1208,7 @@
        "code": "12지구01-01",
        "blocks": [
         "intro-earth-1-1",
+        "text-earth-seawater",
         "card-earth-thermocline",
         "card-earth-salinity",
         "text-earth-oxygen",
@@ -1221,6 +1222,7 @@
        "code": "12지구01-02",
        "blocks": [
         "intro-earth-1-2",
+        "text-earth-deep-circulation",
         "card-earth-ts",
         "card-earth-amoc",
         "video-earth-conveyor",
@@ -1234,6 +1236,7 @@
        "code": "12지구01-03",
        "blocks": [
         "intro-earth-1-3",
+        "text-earth-cyclone",
         "card-earth-isobar",
         "card-earth-updown",
         "card-earth-front",
@@ -1248,6 +1251,7 @@
        "code": "12지구01-04",
        "blocks": [
         "intro-earth-1-4",
+        "text-earth-typhoon",
         "card-earth-typhoon-energy",
         "card-earth-danger",
         "card-earth-thunder",
@@ -1261,6 +1265,7 @@
        "code": "12지구01-05",
        "blocks": [
         "intro-earth-1-5",
+        "text-earth-enso",
         "card-earth-upwelling",
         "card-earth-enso",
         "card-earth-oni"
@@ -1272,6 +1277,7 @@
        "code": "12지구01-06",
        "blocks": [
         "intro-earth-1-6",
+        "text-earth-climate",
         "card-earth-milankovitch",
         "card-earth-forcing",
         "card-earth-attrib",
@@ -1290,6 +1296,7 @@
        "code": "12지구02-01",
        "blocks": [
         "intro-earth-2-1",
+        "text-earth-age",
         "card-earth-relative-age",
         "card-earth-half-life",
         "card-earth-correlate"
@@ -1301,6 +1308,7 @@
        "code": "12지구02-02",
        "blocks": [
         "intro-earth-2-2",
+        "text-earth-geotime",
         "card-earth-geotime",
         "text-earth-sediment",
         "video-earth-day",
@@ -1317,6 +1325,7 @@
        "code": "12지구02-03",
        "blocks": [
         "intro-earth-2-3",
+        "text-earth-igneous",
         "card-earth-magma",
         "card-earth-igneous"
        ]
@@ -1327,6 +1336,7 @@
        "code": "12지구02-04",
        "blocks": [
         "intro-earth-2-4",
+        "text-earth-metamorphic",
         "card-earth-deform",
         "card-earth-foliation",
         "card-earth-rock-cycle"
@@ -1338,6 +1348,7 @@
        "code": "12지구02-05",
        "blocks": [
         "intro-earth-2-5",
+        "text-earth-korea-geology",
         "card-earth-korea-rocks",
         "card-earth-columnar",
         "card-earth-geopark"
@@ -1355,6 +1366,7 @@
        "code": "12지구03-01",
        "blocks": [
         "intro-earth-3-1",
+        "text-earth-planets-motion",
         "card-earth-eclipse",
         "text-earth-eclipse-types",
         "card-earth-retro"
@@ -1366,6 +1378,7 @@
        "code": "12지구03-02",
        "blocks": [
         "intro-earth-3-2",
+        "text-earth-blackbody",
         "card-earth-blackbody",
         "card-earth-spectral",
         "card-space-distance"
@@ -1377,6 +1390,7 @@
        "code": "12지구03-03",
        "blocks": [
         "intro-earth-3-3",
+        "text-earth-hr",
         "card-earth-hrd",
         "card-earth-evolve",
         "text-earth-star-life",
@@ -1389,6 +1403,7 @@
        "code": "12지구03-04",
        "blocks": [
         "intro-earth-3-4",
+        "text-earth-galaxies",
         "card-earth-hubble",
         "card-earth-quasar",
         "text-earth-active-galaxy",
@@ -1401,6 +1416,7 @@
        "code": "12지구03-05",
        "blocks": [
         "intro-earth-3-5",
+        "text-earth-expansion",
         "card-earth-hlaw",
         "card-earth-nocenter",
         "text-earth-cosmology"
