@@ -373,7 +373,7 @@ def page_html(course, ch, sec, blocks):
   </footer>
 </main>
 
-<script src="../../js/toc.js"></script>
+<script src="toc.js"></script>
 <script src="../../js/core.js"></script>
 {math_js}<script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
@@ -495,7 +495,12 @@ def main():
         wr(p, page_html(c, ch, s, blocks))
 
     (out / "js").mkdir(parents=True, exist_ok=True)
-    wr(out / "js" / "toc.js", "/* 자동 생성: python3 tools/build.py — 직접 고치지 말 것 */\nwindow.TOC = " + json.dumps(toc, ensure_ascii=False, indent=1) + ";\n")
+    head = "/* 자동 생성: python3 tools/build.py — 직접 고치지 말 것 */\nwindow.TOC = "
+    # 전 과목 목차는 첫 화면·연습 시험·노트·개념 지도만 읽는다. 절 페이지는 자기 과목 것(c/<과목>/toc.js)만 읽어 받는 양을 줄인다
+    wr(out / "js" / "toc.js", head + json.dumps(toc, ensure_ascii=False, separators=(",", ":")) + ";\n")
+    for c in toc:
+        (out / "c" / c["id"]).mkdir(parents=True, exist_ok=True)
+        wr(out / "c" / c["id"] / "toc.js", head + json.dumps([c], ensure_ascii=False, separators=(",", ":")) + ";\n")
     build_graph(blocks, used, out)
     if out == ROOT:
         build_sw()   # 페이지를 모두 만든 뒤에 해시를 잰다
