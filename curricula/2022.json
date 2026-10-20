@@ -7290,6 +7290,7 @@
        "code": "12대수01-01",
        "blocks": [
         "intro-alg-1-1",
+        "text-alg-nth-root",
         "card-alg-nth-root",
         "card-alg-root-rules"
        ]
@@ -7300,6 +7301,7 @@
        "code": "12대수01-02",
        "blocks": [
         "intro-alg-1-2",
+        "text-alg-exp-extend",
         "card-alg-exp-zero-neg",
         "card-alg-rational-exp",
         "card-alg-real-exp"
@@ -7311,6 +7313,7 @@
        "code": "12대수01-03",
        "blocks": [
         "intro-alg-1-3",
+        "text-alg-exp-laws",
         "card-alg-exp-law-count",
         "card-alg-exp-law-graph",
         "card-alg-exp-simplify"
@@ -7322,6 +7325,7 @@
        "code": "12대수01-04",
        "blocks": [
         "intro-alg-1-4",
+        "text-alg-log",
         "card-alg-log-def",
         "card-alg-log-rules",
         "card-alg-log-base-change"
@@ -7333,6 +7337,7 @@
        "code": "12대수01-05",
        "blocks": [
         "intro-alg-1-5",
+        "text-alg-common-log",
         "card-alg-log-digits",
         "card-alg-log-scale"
        ]
@@ -7343,6 +7348,7 @@
        "code": "12대수01-06",
        "blocks": [
         "intro-alg-1-6",
+        "text-alg-exp-log-func",
         "card-alg-exp-func-def",
         "card-alg-log-func-def"
        ]
@@ -7353,6 +7359,7 @@
        "code": "12대수01-07",
        "blocks": [
         "intro-alg-1-7",
+        "text-alg-exp-log-graph",
         "card-alg-exp-graph",
         "card-alg-inverse-graph"
        ]
@@ -7363,6 +7370,7 @@
        "code": "12대수01-08",
        "blocks": [
         "intro-alg-1-8",
+        "text-alg-exp-log-apply",
         "card-alg-exp-ineq",
         "card-alg-growth-time"
        ]
@@ -7379,6 +7387,7 @@
        "code": "12대수02-01",
        "blocks": [
         "intro-alg-2-1",
+        "text-alg-radian",
         "card-alg-general-angle",
         "card-alg-radian"
        ]
@@ -7389,6 +7398,7 @@
        "code": "12대수02-02",
        "blocks": [
         "intro-alg-2-2",
+        "text-alg-trig-func",
         "card-alg-trig-def",
         "card-alg-trig-graph",
         "card-alg-sin-param"
@@ -7400,6 +7410,7 @@
        "code": "12대수02-03",
        "blocks": [
         "intro-alg-2-3",
+        "text-alg-sine-cosine-law",
         "card-alg-sine-law",
         "card-alg-cosine-law",
         "card-alg-tri-area"
@@ -7417,6 +7428,7 @@
        "code": "12대수03-01",
        "blocks": [
         "intro-alg-3-1",
+        "text-alg-sequence",
         "card-alg-seq-func",
         "card-alg-seq-guess"
        ]
@@ -7427,6 +7439,7 @@
        "code": "12대수03-02",
        "blocks": [
         "intro-alg-3-2",
+        "text-alg-arithmetic",
         "card-alg-arith-term",
         "card-alg-arith-sum",
         "card-alg-arith-sn"
@@ -7438,6 +7451,7 @@
        "code": "12대수03-03",
        "blocks": [
         "intro-alg-3-3",
+        "text-alg-geometric",
         "card-alg-geo-term",
         "card-alg-geo-sum"
        ]
@@ -7448,6 +7462,7 @@
        "code": "12대수03-04",
        "blocks": [
         "intro-alg-3-4",
+        "text-alg-sigma",
         "card-alg-sigma-read",
         "card-alg-sigma-rules"
        ]
@@ -7458,6 +7473,7 @@
        "code": "12대수03-05",
        "blocks": [
         "intro-alg-3-5",
+        "text-alg-sum-formulas",
         "card-alg-sum-square",
         "card-alg-sum-cube",
         "card-alg-sum-telescope"
@@ -7469,6 +7485,7 @@
        "code": "12대수03-06",
        "blocks": [
         "intro-alg-3-6",
+        "text-alg-recursion",
         "card-alg-recur-rule",
         "card-alg-recur-tiling"
        ]
@@ -7479,6 +7496,7 @@
        "code": "12대수03-07",
        "blocks": [
         "intro-alg-3-7",
+        "text-alg-induction",
         "card-alg-induct-domino",
         "card-alg-induct-proof"
        ]

@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "bb8e9394b23b",
+"version": "6782ce8b634d",
 "files": [
 "404.html",
 "bank.html",
@@ -1303,6 +1303,7 @@ self.PRECACHE = {
 "js/cards/alg/arith-sn.js",
 "js/cards/alg/arith-sum.js",
 "js/cards/alg/arith-term.js",
+"js/cards/alg/body.js",
 "js/cards/alg/cosine-law.js",
 "js/cards/alg/exp-func-def.js",
 "js/cards/alg/exp-graph.js",
@@ -1402,6 +1403,7 @@ self.PRECACHE = {
 "js/cards/calc1/area-axis.js",
 "js/cards/calc1/area-between.js",
 "js/cards/calc1/area-function.js",
+"js/cards/calc1/body.js",
 "js/cards/calc1/chase.js",
 "js/cards/calc1/cont-interval.js",
 "js/cards/calc1/cont-three.js",

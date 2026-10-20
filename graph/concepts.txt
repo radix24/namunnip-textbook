@@ -704,35 +704,35 @@ hs-citizen | 과학기술 쟁점의 집단적 의사결정 | card-hist-values te
 
 # ── 수학 (자동 병합: .omo/math/merge.py) ──
 # alg-1
-alg-nth-root | 거듭제곱근 | card-alg-nth-root | 
+alg-nth-root | 거듭제곱근 | card-alg-nth-root text-alg-nth-root | 
 alg-root-rules | 거듭제곱근의 성질 | card-alg-root-rules | alg-nth-root
-alg-exp-integer | 0과 음의 정수 지수 | card-alg-exp-zero-neg | 
+alg-exp-integer | 0과 음의 정수 지수 | card-alg-exp-zero-neg text-alg-exp-extend | 
 alg-exp-rational | 유리수 지수 | card-alg-rational-exp | alg-exp-integer alg-root-rules
 alg-exp-real | 실수 지수 | card-alg-real-exp | alg-exp-rational
-alg-exp-laws | 지수법칙 | card-alg-exp-law-count card-alg-exp-law-graph card-alg-exp-simplify | alg-exp-real
-alg-log | 로그의 뜻 | card-alg-log-def | alg-exp-real
+alg-exp-laws | 지수법칙 | card-alg-exp-law-count card-alg-exp-law-graph card-alg-exp-simplify text-alg-exp-laws | alg-exp-real
+alg-log | 로그의 뜻 | card-alg-log-def text-alg-log | alg-exp-real
 alg-log-rules | 로그의 성질과 밑 변환 | card-alg-log-rules card-alg-log-base-change | alg-log alg-exp-laws
-alg-common-log | 상용로그 | card-alg-log-digits card-alg-log-scale | alg-log-rules
-alg-exp-func | 지수함수 | card-alg-exp-func-def | alg-exp-real
+alg-common-log | 상용로그 | card-alg-log-digits card-alg-log-scale text-alg-common-log | alg-log-rules
+alg-exp-func | 지수함수 | card-alg-exp-func-def text-alg-exp-log-func | alg-exp-real
 alg-log-func | 로그함수 | card-alg-log-func-def | alg-exp-func alg-log
-alg-exp-log-graph | 지수함수와 로그함수의 그래프 | card-alg-exp-graph card-alg-inverse-graph | alg-exp-func alg-log-func
-alg-exp-log-apply | 지수함수와 로그함수의 활용 | card-alg-exp-ineq card-alg-growth-time | alg-exp-log-graph alg-common-log
+alg-exp-log-graph | 지수함수와 로그함수의 그래프 | card-alg-exp-graph card-alg-inverse-graph text-alg-exp-log-graph | alg-exp-func alg-log-func
+alg-exp-log-apply | 지수함수와 로그함수의 활용 | card-alg-exp-ineq card-alg-growth-time text-alg-exp-log-apply | alg-exp-log-graph alg-common-log
 # alg-2
-alg-general-angle | 일반각 | card-alg-general-angle | 
+alg-general-angle | 일반각 | card-alg-general-angle text-alg-radian | 
 alg-radian | 호도법 | card-alg-radian | alg-general-angle
-alg-trig-func | 삼각함수 | card-alg-trig-def | alg-general-angle alg-radian
+alg-trig-func | 삼각함수 | card-alg-trig-def text-alg-trig-func | alg-general-angle alg-radian
 alg-trig-graph | 삼각함수의 그래프와 주기 | card-alg-trig-graph card-alg-sin-param | alg-trig-func
-alg-sine-law | 사인법칙 | card-alg-sine-law | alg-trig-func
+alg-sine-law | 사인법칙 | card-alg-sine-law text-alg-sine-cosine-law | alg-trig-func
 alg-cosine-law | 코사인법칙 | card-alg-cosine-law | alg-trig-func
 alg-triangle-area | 삼각형의 넓이 | card-alg-tri-area | alg-sine-law alg-cosine-law
 # alg-3
-alg-seq | 수열의 뜻 | card-alg-seq-func card-alg-seq-guess | 
-alg-arith-seq | 등차수열 | card-alg-arith-term card-alg-arith-sum card-alg-arith-sn | alg-seq
-alg-geo-seq | 등비수열 | card-alg-geo-term card-alg-geo-sum | alg-seq
-alg-sigma | 합의 기호 ∑ | card-alg-sigma-read card-alg-sigma-rules | alg-seq
-alg-seq-sums | 여러 가지 수열의 합 | card-alg-sum-square card-alg-sum-cube card-alg-sum-telescope | alg-sigma alg-arith-seq
-alg-recursive | 수열의 귀납적 정의 | card-alg-recur-rule card-alg-recur-tiling | alg-arith-seq alg-geo-seq
-alg-induction | 수학적 귀납법 | card-alg-induct-domino card-alg-induct-proof | alg-recursive alg-seq-sums
+alg-seq | 수열의 뜻 | card-alg-seq-func card-alg-seq-guess text-alg-sequence | 
+alg-arith-seq | 등차수열 | card-alg-arith-term card-alg-arith-sum card-alg-arith-sn text-alg-arithmetic | alg-seq
+alg-geo-seq | 등비수열 | card-alg-geo-term card-alg-geo-sum text-alg-geometric | alg-seq
+alg-sigma | 합의 기호 ∑ | card-alg-sigma-read card-alg-sigma-rules text-alg-sigma | alg-seq
+alg-seq-sums | 여러 가지 수열의 합 | card-alg-sum-square card-alg-sum-cube card-alg-sum-telescope text-alg-sum-formulas | alg-sigma alg-arith-seq
+alg-recursive | 수열의 귀납적 정의 | card-alg-recur-rule card-alg-recur-tiling text-alg-recursion | alg-arith-seq alg-geo-seq
+alg-induction | 수학적 귀납법 | card-alg-induct-domino card-alg-induct-proof text-alg-induction | alg-recursive alg-seq-sums
 # calc1-1
 calc1-limit | 함수의 극한 | card-calc1-lim-approach | 
 calc1-one-sided | 좌극한과 우극한 | card-calc1-one-sided | calc1-limit
