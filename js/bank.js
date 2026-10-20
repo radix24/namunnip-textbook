@@ -21,7 +21,7 @@
          기출을 섞으면 한 장 PER문항, 장 수는 MAXS까지. 기출을 빼면 범위의 AI 문항을 남김없이 round(문항/PER)장에 나눈다.
          무작위 시험지(s=x)는 같은 방식으로 한 장을 뽑되 Math.random을 써서 풀 때마다 새로 뽑는다.
    기록: 문항마다 NMStore.recordAnswer(id, 0, …) — 처음에 틀린 문항은 오답노트(notes.html)에 모인다. 기출은 기출 연습 화면과 같은 id·형식.
-         시험지 점수는 localStorage "namunnip-bank-v4" = { "<과목>/<범위>/<장>[/ai]": { n, ok, at } } (/ai는 기출을 뺀 시험지). */
+         시험지 점수는 localStorage "namunnip-bank-v5" = { "<과목>/<범위>/<장>[/ai]": { n, ok, at } } (/ai는 기출을 뺀 시험지). */
 (() => {
   "use strict";
   const S = window.NMStore;
@@ -33,7 +33,7 @@
   const PER = 20;    // 시험지 한 장의 문항 수(대략). tools/bank.py의 SHEET와 같게
   const MAXS = 10;   // 기출을 섞을 때 범위마다 시험지 수
   const FREE_EX = 2; // 기출을 섞을 때 장마다 서술형 수(많아야)
-  const KEY = "namunnip-bank-v4";  // v1~v3은 고정 시험지(모두 같은 시험지) 점수라 버린다
+  const KEY = "namunnip-bank-v5";  // v1~v3은 고정 시험지 점수, v4는 심화 문항 보강 전 시험지 점수라 버린다
   const SEED_KEY = "namunnip-bank-seed", EX_KEY = "namunnip-bank-ex";
   const KIND = { csat: "수능", mock: "모의평가", hakp: "학력평가" };
 
@@ -61,7 +61,7 @@
   const ls = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* 저장 못 해도 화면은 돈다 */ } } };
   let scores = {};
   try { scores = JSON.parse(ls.get(KEY) || "{}") || {}; } catch (e) { scores = {}; }
-  try { ["namunnip-bank-v1", "namunnip-bank-v2", "namunnip-bank-v3"].forEach((k) => localStorage.removeItem(k)); } catch (e) { /* 지울 수 없어도 v4만 읽는다 */ }
+  try { ["namunnip-bank-v1", "namunnip-bank-v2", "namunnip-bank-v3", "namunnip-bank-v4"].forEach((k) => localStorage.removeItem(k)); } catch (e) { /* 지울 수 없어도 v5만 읽는다 */ }
   const saveScore = (k, v) => { scores[k] = v; ls.set(KEY, JSON.stringify(scores)); };
 
   /* 씨앗: 브라우저마다 한 번 만들어 둔다. 저장할 수 없으면 이번 화면에서만 쓰는 씨앗이 된다 */
