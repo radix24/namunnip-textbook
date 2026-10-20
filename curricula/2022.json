@@ -1443,6 +1443,7 @@
        "code": "12역학01-01",
        "blocks": [
         "intro-mech-1-1",
+        "text-mech-forces",
         "card-phy-truss",
         "card-mech-incline"
        ]
@@ -1453,6 +1454,7 @@
        "code": "12역학01-02",
        "blocks": [
         "intro-mech-1-2",
+        "text-mech-projectile",
         "card-is1-projectile",
         "card-mech-projectile"
        ]
@@ -1463,6 +1465,7 @@
        "code": "12역학01-03",
        "blocks": [
         "intro-mech-1-3",
+        "text-mech-circular",
         "card-mech-circular",
         "card-inverse-square",
         "video-apple-moon"
@@ -1474,6 +1477,7 @@
        "code": "12역학01-04",
        "blocks": [
         "intro-mech-1-4",
+        "text-mech-kepler",
         "card-mech-kepler",
         "text-mech-kepler-history"
        ]
@@ -1484,6 +1488,7 @@
        "code": "12역학01-05",
        "blocks": [
         "intro-mech-1-5",
+        "text-mech-escape",
         "card-phy-rocket",
         "card-mech-escape"
        ]
@@ -1494,6 +1499,7 @@
        "code": "12역학01-06",
        "blocks": [
         "intro-mech-1-6",
+        "text-mech-equivalence",
         "card-phy-lm-gps",
         "text-mech-gr"
        ]
@@ -1510,6 +1516,7 @@
        "code": "12역학02-01",
        "blocks": [
         "intro-mech-2-1",
+        "text-mech-heat-transfer",
         "card-mech-insulation",
         "text-mech-heat-tech"
        ]
@@ -1520,6 +1527,7 @@
        "code": "12역학02-02",
        "blocks": [
         "intro-mech-2-2",
+        "text-mech-ideal-gas",
         "card-mech-heating-curve",
         "card-mech-ideal-gas"
        ]
@@ -1530,6 +1538,7 @@
        "code": "12역학02-03",
        "blocks": [
         "intro-mech-2-3",
+        "text-mech-first-law",
         "card-phy-joule",
         "card-phy-brake",
         "card-mech-first-law"
@@ -1541,6 +1550,7 @@
        "code": "12역학02-04",
        "blocks": [
         "intro-mech-2-4",
+        "text-mech-engine",
         "card-phy-engine",
         "card-phy-wheel",
         "text-is2-power-plants",
@@ -1554,6 +1564,7 @@
        "code": "12역학02-05",
        "blocks": [
         "intro-mech-2-5",
+        "text-mech-entropy",
         "card-mech-entropy",
         "card-is2-efficiency"
        ]
@@ -1570,6 +1581,7 @@
        "code": "12역학03-01",
        "blocks": [
         "intro-mech-3-1",
+        "text-mech-shm",
         "text-phy-spring",
         "card-pendulum",
         "card-mech-shm"
@@ -1581,6 +1593,7 @@
        "code": "12역학03-02",
        "blocks": [
         "intro-mech-3-2",
+        "text-mech-pulse",
         "card-mech-pulse",
         "text-mech-elastic-use"
        ]
@@ -1591,6 +1604,7 @@
        "code": "12역학03-03",
        "blocks": [
         "intro-mech-3-3",
+        "text-mech-doppler",
         "card-mech-doppler"
        ]
       },
@@ -1600,6 +1614,7 @@
        "code": "12역학03-04",
        "blocks": [
         "intro-mech-3-4",
+        "text-mech-interference",
         "card-phy-lm-dslit",
         "card-mech-two-speaker"
        ]
@@ -1610,6 +1625,7 @@
        "code": "12역학03-05",
        "blocks": [
         "intro-mech-3-5",
+        "text-mech-standing",
         "card-mech-standing"
        ]
       }

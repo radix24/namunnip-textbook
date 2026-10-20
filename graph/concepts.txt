@@ -50,17 +50,17 @@ titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-tit
 
 # ── 힘과 에너지 ──
 inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus text-is1-momentum text-phy-newton |
-free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump text-is1-gravity-motion |
+free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump text-is1-gravity-motion text-mech-projectile |
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
 newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
 impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop | inertia free-fall
-torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque |
+torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque text-mech-forces |
 action-reaction | 작용 반작용 | card-phy-horse text-phy-momentum-cons | newton2
-momentum | 운동량 보존 | card-phy-rocket card-phy-collision | impulse action-reaction
+momentum | 운동량 보존 | card-phy-rocket card-phy-collision text-mech-escape | impulse action-reaction
 work-energy | 일과 운동 에너지 | card-phy-work text-phy-energy | newton2
-mech-energy | 역학적 에너지 보존 | card-phy-coaster text-phy-spring card-pendulum | work-energy free-fall
-heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer text-phy-heat | mech-energy
-heat-engine | 열기관과 효율 | card-phy-engine card-phy-wheel video-phy-engine text-phy-engine | heat-energy
+mech-energy | 역학적 에너지 보존 | card-phy-coaster text-phy-spring card-pendulum text-mech-shm | work-energy free-fall
+heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer text-phy-heat text-mech-first-law | mech-energy
+heat-engine | 열기관과 효율 | card-phy-engine card-phy-wheel video-phy-engine text-phy-engine text-mech-engine | heat-energy
 efficiency | 에너지 효율과 신재생 에너지 | card-is2-efficiency card-is2-renewable card-is2-energy-design text-is2-efficiency | power-gen heat-energy
 solar-cell | 태양 전지 | card-is2-solar-cell | semicond spectrum
 
@@ -75,12 +75,12 @@ power-gen | 발전소 | text-is2-power-plants | em-induction
 transmission | 송전과 전력 수송 | card-is2-transmission video-is2-grid | power-gen elec-power
 
 # ── 빛과 현대 물리 ──
-interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference | 
+interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference | 
 lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens | 
 photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality | interference
 matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro | photon lens
 energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels | photon spectrum
-relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity | inertia gps-time
+relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence | inertia gps-time
 
 # ── 지구 ──
 earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system |
@@ -148,21 +148,21 @@ phyllotaxis | 잎차례와 황금각 | card-phyllo | photosyn
 # ── 진로선택: 역학과 에너지 ──
 force-vector | 힘의 합성과 빗면 | card-mech-incline | newton2 torque
 projectile2 | 포물선 운동의 정량 분석 | card-mech-projectile | free-fall mech-energy force-vector
-circular | 원운동과 구심력 | card-mech-circular | force-vector inertia
-kepler | 케플러 법칙과 만유인력 | card-mech-kepler text-mech-kepler-history | circular gravity
+circular | 원운동과 구심력 | card-mech-circular text-mech-circular | force-vector inertia
+kepler | 케플러 법칙과 만유인력 | card-mech-kepler text-mech-kepler-history text-mech-kepler | circular gravity
 escape | 탈출 속도와 대기 | card-mech-escape | kepler mech-energy momentum
 gen-rel | 등가 원리와 일반 상대론 | text-mech-gr | escape relativity
-heat-transfer | 열의 이동과 열팽창 | card-mech-insulation text-mech-heat-tech | heat-energy
-latent-heat | 비열과 잠열 | card-mech-heating-curve | heat-energy
+heat-transfer | 열의 이동과 열팽창 | card-mech-insulation text-mech-heat-tech text-mech-heat-transfer | heat-energy
+latent-heat | 비열과 잠열 | card-mech-heating-curve text-mech-ideal-gas | heat-energy
 ideal-gas | 이상 기체 | card-mech-ideal-gas | heat-energy
 first-law | 열역학 제1법칙 | card-mech-first-law | ideal-gas heat-energy
 cycle | 열기관의 순환 과정 | card-mech-cycle | first-law heat-engine
-entropy | 엔트로피와 비가역 현상 | card-mech-entropy | first-law cycle
+entropy | 엔트로피와 비가역 현상 | card-mech-entropy text-mech-entropy | first-law cycle
 shm | 단진동 | card-mech-shm | mech-energy force-vector
-elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use | shm
-doppler | 도플러 효과 | card-mech-doppler | elastic-wave
+elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use text-mech-pulse | shm
+doppler | 도플러 효과 | card-mech-doppler text-mech-doppler | elastic-wave
 sound-interference | 음파의 간섭과 소음 제어 | card-mech-two-speaker | elastic-wave interference
-standing-wave | 정상파와 악기 | card-mech-standing | elastic-wave sound-interference
+standing-wave | 정상파와 악기 | card-mech-standing text-mech-standing | elastic-wave sound-interference
 
 # ── 진로선택: 물질과 에너지 ──
 mateng-gas-law | 이상 기체 방정식의 활용 | card-mateng-gas-use | ideal-gas mole
