@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
 </head>
 <body data-course="phy" data-sec="3-6">
 
@@ -42,11 +43,12 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-phy-lm-clock"><span class="mono">3.6.1</span>빠르게 움직이면 정말 시간이 느리게 갈까?</a></li>
-        <li><a href="#card-phy-lm-gps"><span class="mono">3.6.2</span>GPS 위성의 시계는 왜 보정해야 할까?</a></li>
+        <li><a href="#text-phy-relativity"><span class="mono">3.6.1</span>본문 · 특수 상대성 이론</a></li>
+        <li><a href="#card-phy-lm-clock"><span class="mono">3.6.2</span>빠르게 움직이면 정말 시간이 느리게 갈까?</a></li>
+        <li><a href="#card-phy-lm-gps"><span class="mono">3.6.3</span>GPS 위성의 시계는 왜 보정해야 할까?</a></li>
         <li><a href="#video-phy-lm-muon"><span class="mono">영상</span>뮤온은 어떻게 지표까지 올까</a></li>
-        <li><a href="#text-phy-length"><span class="mono">3.6.3</span>빠르게 움직이면 길이도 줄어들까? 상대성 이론은 무엇을 바꿨을까?</a></li>
-        <li><a href="#text-phy-relativity-society"><span class="mono">3.6.4</span>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</a></li>
+        <li><a href="#text-phy-length"><span class="mono">3.6.4</span>빠르게 움직이면 길이도 줄어들까? 상대성 이론은 무엇을 바꿨을까?</a></li>
+        <li><a href="#text-phy-relativity-society"><span class="mono">3.6.5</span>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=phy&amp;sec=3-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">13문항 →</span></a>
@@ -55,9 +57,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-phy-relativity" data-kind="본문">
+        <header class="card-head"><span class="no">3.6.1</span><h2>빠르게 움직이면 정말 시간이 느리게 갈까?</h2><span class="kind">본문 · 특수 상대성 이론</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">달리는 기차 안에서 공을 앞으로 던지면, 밖에 선 사람에게는 공이 기차의 속력만큼 더 빠르게 보인다. 그런데 기차에서 빛을 앞으로 쏘면, 밖에 선 사람이 재어도 빛의 속력은 그대로 초속 30만 km이다. 속력이 더해지지 않는다면 무엇이 대신 바뀌어야 할까?</p>
+          <figure class="q-fig" data-q="phy-lclock">
+            <svg viewBox="0 0 520 240" role="img" aria-label="정지한 빛 시계와 움직이는 빛 시계에서 빛이 지나는 경로의 길이 비교"></svg>
+            <div class="q-ctl"><label>시계의 속력 \(v/c\) <input type="range" data-k="b" min="0" max="0.95" step="0.05" value="0.6"><output data-k="b"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 거울 두 장 사이를 빛이 오가는 빛 시계. 밖에서 보면 움직이는 시계의 빛은 비스듬한 더 긴 길을 가는데 빛의 속력은 같으므로, 한 번 왕복하는 데 더 오래 걸린다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>속력과 상대 속도, 피타고라스 정리, 빛의 속력 \(c \approx 3 \times 10^8\) m/s.</div>
+
+          <h3><span class="mono">1</span>두 가지 가정</h3>
+          <p>1905년 아인슈타인은 두 가지를 출발점으로 삼았다. 첫째, 서로 일정한 속도로 움직이는 관찰자들에게 물리 법칙은 똑같다. 둘째, 진공에서 빛의 속력은 광원이나 관찰자의 운동과 상관없이 누구에게나 \(c\)이다. 두 번째 가정은 상식과 어긋나 보이지만, 마이컬슨과 몰리의 실험을 비롯한 수많은 측정이 이를 뒷받침한다.</p>
+          <p>속력은 거리를 시간으로 나눈 값이다. 서로 다른 관찰자가 같은 빛의 이동 거리를 다르게 재는데도 속력이 같으려면, 시간도 서로 다르게 재어야 한다.</p>
+
+          <h3><span class="mono">2</span>시간 팽창</h3>
+          <p>높이 \(L\)인 빛 시계를 생각하자. 시계와 함께 움직이는 사람에게 빛은 위아래로 곧게 오가므로 한 번 올라가는 데 \(t_0 = \tfrac{L}{c}\)가 걸린다. 그런데 시계가 속력 \(v\)로 움직이는 것을 밖에서 보면, 빛이 올라가는 동안 거울이 옆으로 \(vt\)만큼 이동하므로 빛은 비스듬한 빗변을 따라 간다.</p>
+          <p>빗변의 길이는 \(ct\)이므로 피타고라스 정리에서 \((ct)^2 = L^2 + (vt)^2\)이다. \(L = ct_0\)를 넣어 정리하면 \(t^2(c^2 - v^2) = c^2t_0^2\), 곧 다음 식을 얻는다.<sup class="fn"><a href="#fn-phy-relativity-1">1</a></sup></p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">시간 팽창</span></span>
+            <p>속력 \(v\)로 움직이는 시계에서 \(t_0\) 동안 일어난 일을 정지한 관찰자가 재면 \[t = \frac{t_0}{\sqrt{1 - v^2/c^2}}\] 이다. 분모가 1보다 작으므로 \(t > t_0\), 곧 움직이는 시계는 느리게 간다.</p>
+          </div>
+          <p>그림 1의 슬라이더로 속력을 올려 보면, 빛의 빗변이 길어지며 바깥에서 잰 시간이 늘어난다. \(v\)가 \(c\)의 절반일 때는 약 1.15배에 불과하지만, \(c\)에 가까워질수록 급격히 커진다. 같은 이유로 움직이는 물체의 길이는 운동 방향으로 \(\sqrt{1 - v^2/c^2}\)배만큼 짧게 측정되는데, 이것을 길이 수축이라 한다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 150" role="img" aria-label="속력 v/c에 따라 시간이 늘어나는 비율 그래프">
+              <line x1="50" y1="130" x2="300" y2="130" class="ax"/><line x1="50" y1="130" x2="50" y2="15" class="ax"/>
+              <path d="M50 113 L56 113 L62 113 L68 113 L75 113 L81 113 L87 113 L93 113 L99 113 L105 113 L112 112 L118 112 L124 112 L130 112 L136 112 L142 112 L148 112 L155 111 L161 111 L167 111 L173 110 L179 110 L185 110 L192 109 L198 109 L204 108 L210 108 L216 107 L222 107 L229 106 L235 105 L241 104 L247 102 L253 101 L259 99 L265 96 L272 93 L278 89 L284 82 L290 69" class="c"/>
+              <text x="300" y="145" class="s" text-anchor="end">v/c → 1</text><text x="56" y="22" class="s">시간이 늘어나는 비율</text>
+              <text x="40" y="117" class="s" text-anchor="end">1</text>
+              <text x="330" y="60" class="s">v = 0.6c 에서 1.25배</text><text x="330" y="85" class="s">v = 0.8c 에서 1.67배</text><text x="330" y="110" class="s">v = 0.99c 에서 약 7배</text>
+            </svg>
+            <figcaption>그림 2. 시간이 늘어나는 비율 \(\tfrac{1}{\sqrt{1 - v^2/c^2}}\)은 일상의 속력에서는 거의 1이지만, 빛의 속력에 가까워지면 끝없이 커진다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>우주선이 지구에 대해 \(0.6c\)로 날아가며, 우주선 안의 시계로 3시간이 지났다. 지구의 관찰자가 잰 시간은 얼마인가? 또 우주선 안의 사람이 재는 지구 시계는 빠르게 갈까, 느리게 갈까?</p>
+          </div>
+          <p>\(\sqrt{1 - 0.6^2} = \sqrt{0.64} = 0.8\)이므로 \(t = \dfrac{3}{0.8} = 3.75\) 시간이다. 지구에서는 3시간 45분이 지난 것으로 잰다.</p>
+          <p>우주선의 사람에게는 지구가 \(0.6c\)로 움직이므로, 거꾸로 지구의 시계가 0.8배로 느리게 가는 것으로 보인다. 어느 쪽이 '정말' 느린지 묻는 것은 의미가 없다. 시간은 관찰자의 운동 상태에 따라 다르게 측정되는 양이기 때문이다.</p>
+          <p>이 효과는 실제로 측정된다. 상공에서 만들어지는 뮤온은 수명이 아주 짧아 원래는 지표까지 오지 못해야 하지만, 빛에 가까운 속력으로 날아오기 때문에 지표에서 보면 수명이 늘어나 많은 수가 도착한다. GPS 위성의 시계도 이 효과를 보정하지 않으면 위치 오차가 하루에 수 km씩 쌓인다. 아래 탐구 카드에서 빛 시계와 GPS, 뮤온을 직접 따져 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-phy-relativity-1">위성의 시계는 중력이 약한 높은 곳에 있어 일반 상대성 이론에 따라 오히려 빨리 가는 효과도 받는다. GPS는 속력에 의한 늦어짐과 중력에 의한 빨라짐을 모두 계산하여 보정한다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>빛의 속력이 누구에게나 같다면, 움직이는 시계의 빛은 더 긴 길을 가야 하므로 바깥에서 재는 시간이 \(\tfrac{1}{\sqrt{1 - v^2/c^2}}\)배로 늘어난다. 그래서 처음 질문의 답은 시간이다. 속력이 더해지지 않는 대신 관찰자마다 재는 시간과 길이가 달라진다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+
       <article class="card" id="card-phy-lm-clock">
         <header class="card-head">
-          <span class="no">3.6.1</span><h2>빠르게 움직이면 정말 시간이 느리게 갈까?</h2><span class="kind">빛 시계 · 시간 팽창</span>
+          <span class="no">3.6.2</span><h2>빠르게 움직이면 정말 시간이 느리게 갈까?</h2><span class="kind">빛 시계 · 시간 팽창</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -98,11 +150,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/is1/1-1.html#card-is1-gps"><small class="mono">통합과학1 1.1</small>GPS는 어떻게 시간으로 위치를 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
 
       <article class="card" id="card-phy-lm-gps">
         <header class="card-head">
-          <span class="no">3.6.2</span><h2>GPS 위성의 시계는 왜 보정해야 할까?</h2><span class="kind">시간 팽창 · 중력 효과</span>
+          <span class="no">3.6.3</span><h2>GPS 위성의 시계는 왜 보정해야 할까?</h2><span class="kind">시간 팽창 · 중력 효과</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -143,7 +195,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/is1/1-1.html#card-is1-gps"><small class="mono">통합과학1 1.1</small>GPS는 어떻게 시간으로 위치를 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
 
       <section class="video-block" id="video-phy-lm-muon" aria-label="통통사과 영상">
         <div>
@@ -166,7 +218,7 @@
 
       <article class="card reading" id="text-phy-length">
         <header class="card-head">
-          <span class="no">3.6.3</span><h2>빠르게 움직이면 길이도 줄어들까? 상대성 이론은 무엇을 바꿨을까?</h2><span class="kind">읽기 · 길이 수축과 상대성 이론의 영향</span>
+          <span class="no">3.6.4</span><h2>빠르게 움직이면 길이도 줄어들까? 상대성 이론은 무엇을 바꿨을까?</h2><span class="kind">읽기 · 길이 수축과 상대성 이론의 영향</span>
         </header>
         <div class="reading-body">
           <p class="ask">대기 위쪽에서 만들어진 뮤온은 금방 붕괴하는데도 지표까지 내려옵니다. 지상에서 보면 뮤온의 시간이 느리게 가기 때문입니다(시간 팽창). 그런데 뮤온과 함께 움직이는 관찰자에게는 자기 시간이 느려지지 않습니다. 그렇다면 뮤온의 입장에서는 어떻게 지표까지 올 수 있을까요?</p>
@@ -221,11 +273,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/is1/1-1.html#card-is1-gps"><small class="mono">통합과학1 1.1</small>GPS는 어떻게 시간으로 위치를 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
 
       <article class="card reading" id="text-phy-relativity-society">
         <header class="card-head">
-          <span class="no">3.6.4</span><h2>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</h2><span class="kind">읽기 · 상대성 이론의 활용과 사회적 영향</span>
+          <span class="no">3.6.5</span><h2>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</h2><span class="kind">읽기 · 상대성 이론의 활용과 사회적 영향</span>
         </header>
         <div class="reading-body">
           <p class="ask">상대성 이론은 빛에 가까운 속력이나 아주 강한 중력에서만 필요한 이론처럼 보입니다. 그런데 오늘 우리가 쓰는 기술과 20세기의 역사에도 깊이 스며 있습니다.</p>
@@ -252,7 +304,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/is1/1-1.html#card-is1-gps"><small class="mono">통합과학1 1.1</small>GPS는 어떻게 시간으로 위치를 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=phy&amp;sec=3-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
       <a class="px-go" href="../../practice.html?sec=phy-3-6"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">152문항</span></a>
@@ -268,10 +320,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/phy/body.js"></script>
 <script src="../../js/cards/phy/lm-light-clock.js"></script>
 <script src="../../js/cards/phy/lm-gps.js"></script>
 <script src="../../js/cards/phy/lm-reel-muon.js"></script>
