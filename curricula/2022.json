@@ -6849,6 +6849,7 @@
        "code": "10공수1-02-05",
        "blocks": [
         "intro-cm1-2-5",
+        "text-cm1-line-parabola",
         "card-cm1-line-parabola",
         "card-cm1-tangent-point"
        ]
@@ -6859,6 +6860,7 @@
        "code": "10공수1-02-06",
        "blocks": [
         "intro-cm1-2-6",
+        "text-cm1-quad-minmax",
         "card-cm1-minmax-interval",
         "card-cm1-fence"
        ]
@@ -6869,6 +6871,7 @@
        "code": "10공수1-02-07",
        "blocks": [
         "intro-cm1-2-7",
+        "text-cm1-higher-eq",
         "card-cm1-cubic-solve",
         "card-cm1-biquad"
        ]
@@ -6879,6 +6882,7 @@
        "code": "10공수1-02-08",
        "blocks": [
         "intro-cm1-2-8",
+        "text-cm1-quad-system",
         "card-cm1-line-conic",
         "card-cm1-factor-system"
        ]
@@ -6889,6 +6893,7 @@
        "code": "10공수1-02-09",
        "blocks": [
         "intro-cm1-2-9",
+        "text-cm1-lin-ineq",
         "card-cm1-lin-ineq",
         "card-cm1-ineq-system"
        ]
@@ -6899,6 +6904,7 @@
        "code": "10공수1-02-10",
        "blocks": [
         "intro-cm1-2-10",
+        "text-cm1-abs-ineq",
         "card-cm1-abs-dist",
         "card-cm1-abs-cases"
        ]
@@ -6909,6 +6915,7 @@
        "code": "10공수1-02-11",
        "blocks": [
         "intro-cm1-2-11",
+        "text-cm1-quad-ineq",
         "card-cm1-quad-ineq",
         "card-cm1-quad-system"
        ]
@@ -6925,6 +6932,7 @@
        "code": "10공수1-03-01",
        "blocks": [
         "intro-cm1-3-1",
+        "text-cm1-counting",
         "card-cm1-sum-rule",
         "card-cm1-product-rule",
         "card-cm1-divisors"
@@ -6936,6 +6944,7 @@
        "code": "10공수1-03-02",
        "blocks": [
         "intro-cm1-3-2",
+        "text-cm1-perm",
         "card-cm1-perm-slots",
         "card-cm1-perm-tree"
        ]
@@ -6946,6 +6955,7 @@
        "code": "10공수1-03-03",
        "blocks": [
         "intro-cm1-3-3",
+        "text-cm1-comb",
         "card-cm1-comb-group",
         "card-cm1-comb-bars"
        ]
@@ -6962,6 +6972,7 @@
        "code": "10공수1-04-01",
        "blocks": [
         "intro-cm1-4-1",
+        "text-cm1-matrix",
         "card-cm1-matrix-entry",
         "card-cm1-road-matrix"
        ]
@@ -6972,6 +6983,7 @@
        "code": "10공수1-04-02",
        "blocks": [
         "intro-cm1-4-2",
+        "text-cm1-matrix-ops",
         "card-cm1-matrix-add",
         "card-cm1-matrix-mult"
        ]

@@ -816,22 +816,22 @@ cm1-complex-ops | 복소수의 사칙연산과 켤레복소수 | card-cm1-comple
 cm1-discriminant | 이차방정식의 판별식과 실근·허근 | card-cm1-discriminant card-cm1-root-path text-cm1-discriminant | cm1-complex-ops
 cm1-vieta | 근과 계수의 관계 | card-cm1-vieta card-cm1-sum-product text-cm1-vieta | cm1-discriminant
 cm1-quad-graph | 이차방정식과 이차함수의 관계 | card-cm1-parabola-xaxis card-cm1-level-line text-cm1-quad-func | cm1-discriminant
-cm1-line-parabola | 이차함수의 그래프와 직선의 위치 관계 | card-cm1-line-parabola card-cm1-tangent-point | cm1-quad-graph
-cm1-quad-minmax | 제한된 범위에서 이차함수의 최대·최소 | card-cm1-minmax-interval card-cm1-fence | cm1-quad-graph
+cm1-line-parabola | 이차함수의 그래프와 직선의 위치 관계 | card-cm1-line-parabola card-cm1-tangent-point text-cm1-line-parabola | cm1-quad-graph
+cm1-quad-minmax | 제한된 범위에서 이차함수의 최대·최소 | card-cm1-minmax-interval card-cm1-fence text-cm1-quad-minmax | cm1-quad-graph
 # cm1-2b
-cm1-eq-higher | 삼차방정식과 사차방정식 | card-cm1-cubic-solve card-cm1-biquad | 
-cm1-eq-sys2 | 연립이차방정식 | card-cm1-line-conic card-cm1-factor-system | 
-cm1-ineq-lin-sys | 일차부등식과 연립일차부등식 | card-cm1-lin-ineq card-cm1-ineq-system | 
-cm1-ineq-abs | 절댓값을 포함한 부등식 | card-cm1-abs-dist card-cm1-abs-cases | cm1-ineq-lin-sys
-cm1-ineq-quad | 이차부등식과 연립이차부등식 | card-cm1-quad-ineq card-cm1-quad-system | cm1-ineq-lin-sys
+cm1-eq-higher | 삼차방정식과 사차방정식 | card-cm1-cubic-solve card-cm1-biquad text-cm1-higher-eq | 
+cm1-eq-sys2 | 연립이차방정식 | card-cm1-line-conic card-cm1-factor-system text-cm1-quad-system | 
+cm1-ineq-lin-sys | 일차부등식과 연립일차부등식 | card-cm1-lin-ineq card-cm1-ineq-system text-cm1-lin-ineq | 
+cm1-ineq-abs | 절댓값을 포함한 부등식 | card-cm1-abs-dist card-cm1-abs-cases text-cm1-abs-ineq | cm1-ineq-lin-sys
+cm1-ineq-quad | 이차부등식과 연립이차부등식 | card-cm1-quad-ineq card-cm1-quad-system text-cm1-quad-ineq | cm1-ineq-lin-sys
 # cm1-3
-cm1-sum-rule | 합의 법칙 | card-cm1-sum-rule | 
+cm1-sum-rule | 합의 법칙 | card-cm1-sum-rule text-cm1-counting | 
 cm1-product-rule | 곱의 법칙 | card-cm1-product-rule card-cm1-divisors | cm1-sum-rule
-cm1-permutation | 순열과 계승 | card-cm1-perm-slots card-cm1-perm-tree | cm1-product-rule
-cm1-combination | 조합 | card-cm1-comb-group card-cm1-comb-bars | cm1-permutation cm1-sum-rule
+cm1-permutation | 순열과 계승 | card-cm1-perm-slots card-cm1-perm-tree text-cm1-perm | cm1-product-rule
+cm1-combination | 조합 | card-cm1-comb-group card-cm1-comb-bars text-cm1-comb | cm1-permutation cm1-sum-rule
 # cm1-4
-cm1-matrix | 행렬의 뜻과 성분 | card-cm1-matrix-entry card-cm1-road-matrix | 
-cm1-matrix-ops | 행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add | cm1-matrix
+cm1-matrix | 행렬의 뜻과 성분 | card-cm1-matrix-entry card-cm1-road-matrix text-cm1-matrix | 
+cm1-matrix-ops | 행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add text-cm1-matrix-ops | cm1-matrix
 cm1-matrix-mult | 행렬의 곱셈 | card-cm1-matrix-mult | cm1-matrix
 # cm2-1
 cm2-distance | 두 점 사이의 거리 | card-cm2-distance | 
