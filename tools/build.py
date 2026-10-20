@@ -12,6 +12,7 @@
 import json, re, sys, pathlib, html as H
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+SITE_URL = "https://radix24.github.io/namunnip-textbook/"   # 공유 미리보기(og:image)와 sitemap.xml의 절대 주소
 
 # Windows에서도 맥·리눅스와 같은 결과를 내도록 읽기·쓰기는 UTF-8, 줄바꿈은 LF로 고정한다.
 def rd(p):
@@ -69,7 +70,11 @@ FOOT_ORG = ('<p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><sv
 
 def pwa_head(p):
     """모든 페이지 <head>에 들어가는 아이콘·글꼴·앱 설치(PWA)·다크 모드 태그. p는 최상위까지의 상대 경로('', '../../')."""
-    return f'''  <link rel="icon" href="{p}assets/favicon.svg" type="image/svg+xml">
+    return f'''  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="나뭇잎 디지털 교과서">
+  <meta property="og:image" content="{SITE_URL}assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{p}assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{p}assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="{p}manifest.webmanifest">
   <meta name="theme-color" content="#f3f4ef">
@@ -502,6 +507,11 @@ def main():
         (out / "c" / c["id"]).mkdir(parents=True, exist_ok=True)
         wr(out / "c" / c["id"] / "toc.js", head + json.dumps([c], ensure_ascii=False, separators=(",", ":")) + ";\n")
     build_graph(blocks, used, out)
+    # 검색 엔진용 사이트맵: 첫 화면·연습 화면과 과목·절 페이지 (robots.txt는 radix24.github.io 저장소에 있다)
+    urls = ["", "practice.html", "bank.html", "graph.html"] + [f'c/{c["id"]}/' for c in toc] + \
+        [f'c/{c["id"]}/{ch["n"]}-{s["n"]}.html' for c in toc for ch in c["chapters"] for s in ch["sections"] if s["page"]]
+    wr(out / "sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+       + "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in dict.fromkeys(urls)) + "</urlset>\n")
     if out == ROOT:
         build_sw()   # 페이지를 모두 만든 뒤에 해시를 잰다
     unused = sorted(set(blocks) - set(used))

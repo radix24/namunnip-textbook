@@ -1,7 +1,8 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "ae1181057c8a",
+"version": "af45af5f85e4",
 "files": [
+"404.html",
 "bank.html",
 "graph.html",
 "index.html",
@@ -2636,6 +2637,7 @@ self.PRECACHE = {
 "assets/katex/fonts/KaTeX_Typewriter-Regular.woff2",
 "assets/katex/katex.min.css",
 "assets/katex/katex.min.js",
+"assets/og.png",
 "assets/symbol.svg",
 "assets/wordmark.svg",
 "basics/b-l-angle-360.html",
