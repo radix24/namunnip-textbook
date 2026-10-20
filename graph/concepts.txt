@@ -1072,24 +1072,24 @@ ai-loss | 손실함수 | card-aimath-loss-curve card-aimath-loss-outlier text-ai
 ai-gradient | 경사하강법 | card-aimath-gradient-descent card-aimath-gd-contour text-aimath-gd | ai-loss
 ai-cases | 인공지능의 문제 해결 사례 | card-aimath-recommend card-aimath-neuron text-aimath-cases | ai-text-analysis ai-gradient
 ai-explore | 인공지능 수학 주제 탐구 | card-aimath-explore-plan card-aimath-fairness text-aimath-explore | ai-bigdata ai-prob-predict
-jm-arith | 직무 속의 수와 사칙연산 | card-jmath-cafe-bill card-jmath-recipe-scale | 
-jm-estimate | 큰 수의 어림 | card-jmath-paint-estimate card-jmath-round-budget | jm-arith
-jm-units | 표준 단위와 단위 환산 | card-jmath-dose-convert card-jmath-unit-error | jm-arith
-jm-ratio | 비와 비례배분 | card-jmath-mix-ratio card-jmath-scale-drawing | jm-arith
-jm-percent | 비율과 백분율 | card-jmath-discount-chain card-jmath-margin-markup | jm-ratio
-jm-correspond | 대응 관계와 규칙 | card-jmath-tile-pattern card-jmath-pay-table | jm-arith
-jm-change-graph | 변화를 나타내는 그래프 | card-jmath-tank-graph card-jmath-delivery-graph | jm-correspond
-jm-linear | 일차방정식과 일차부등식의 활용 | card-jmath-rent-or-buy card-jmath-dilution | jm-correspond jm-percent
-jm-net | 겨냥도와 전개도 | card-jmath-box-net card-jmath-package-board | 
-jm-views | 위, 앞, 옆에서 본 모양 | card-jmath-three-views card-jmath-view-count | 
-jm-transform | 도형의 이동, 합동과 닮음 | card-jmath-tile-transform card-jmath-sign-enlarge | jm-ratio
-jm-area | 평면도형의 둘레와 넓이 | card-jmath-floor-area card-jmath-fence | jm-estimate
-jm-volume | 입체도형의 겉넓이와 부피 | card-jmath-tank-volume card-jmath-paint-surface | jm-net jm-area
-jm-counting | 경우의 수 | card-jmath-shift-schedule card-jmath-password | 
-jm-probability | 가능성의 수치화 | card-jmath-defect-sample card-jmath-overbooking | jm-counting
-jm-tables | 표와 그래프로 정리하기 | card-jmath-choose-chart card-jmath-class-width | 
-jm-interpret | 표와 그래프의 해석 | card-jmath-misleading-graph card-jmath-dashboard | jm-tables
-jm-decision | 목적에 맞는 표현과 의사 결정 | card-jmath-supplier-score card-jmath-stock-decision | jm-interpret jm-probability
+jm-arith | 직무 속의 수와 사칙연산 | card-jmath-cafe-bill card-jmath-recipe-scale text-jmath-arith | 
+jm-estimate | 큰 수의 어림 | card-jmath-paint-estimate card-jmath-round-budget text-jmath-estimate | jm-arith
+jm-units | 표준 단위와 단위 환산 | card-jmath-dose-convert card-jmath-unit-error text-jmath-units | jm-arith
+jm-ratio | 비와 비례배분 | card-jmath-mix-ratio card-jmath-scale-drawing text-jmath-ratio | jm-arith
+jm-percent | 비율과 백분율 | card-jmath-discount-chain card-jmath-margin-markup text-jmath-percent | jm-ratio
+jm-correspond | 대응 관계와 규칙 | card-jmath-tile-pattern card-jmath-pay-table text-jmath-pattern | jm-arith
+jm-change-graph | 변화를 나타내는 그래프 | card-jmath-tank-graph card-jmath-delivery-graph text-jmath-graphs | jm-correspond
+jm-linear | 일차방정식과 일차부등식의 활용 | card-jmath-rent-or-buy card-jmath-dilution text-jmath-equations | jm-correspond jm-percent
+jm-net | 겨냥도와 전개도 | card-jmath-box-net card-jmath-package-board text-jmath-nets | 
+jm-views | 위, 앞, 옆에서 본 모양 | card-jmath-three-views card-jmath-view-count text-jmath-views | 
+jm-transform | 도형의 이동, 합동과 닮음 | card-jmath-tile-transform card-jmath-sign-enlarge text-jmath-similar | jm-ratio
+jm-area | 평면도형의 둘레와 넓이 | card-jmath-floor-area card-jmath-fence text-jmath-area | jm-estimate
+jm-volume | 입체도형의 겉넓이와 부피 | card-jmath-tank-volume card-jmath-paint-surface text-jmath-volume | jm-net jm-area
+jm-counting | 경우의 수 | card-jmath-shift-schedule card-jmath-password text-jmath-counting | 
+jm-probability | 가능성의 수치화 | card-jmath-defect-sample card-jmath-overbooking text-jmath-probability | jm-counting
+jm-tables | 표와 그래프로 정리하기 | card-jmath-choose-chart card-jmath-class-width text-jmath-tables | 
+jm-interpret | 표와 그래프의 해석 | card-jmath-misleading-graph card-jmath-dashboard text-jmath-interpret | jm-tables
+jm-decision | 목적에 맞는 표현과 의사 결정 | card-jmath-supplier-score card-jmath-stock-decision text-jmath-decision | jm-interpret jm-probability
 mcu-music | 음악과 수학 | card-mcult-string-ratio card-mcult-equal-temperament |
 mcu-art | 미술과 수학 | card-mcult-perspective card-mcult-golden-myth |
 mcu-literature | 문학과 수학 | card-mcult-fib-poem card-mcult-babel-library |

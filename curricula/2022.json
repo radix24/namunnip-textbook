@@ -10171,6 +10171,7 @@
        "code": "12직수01-01",
        "blocks": [
         "intro-jmath-1-1",
+        "text-jmath-arith",
         "card-jmath-cafe-bill",
         "card-jmath-recipe-scale"
        ]
@@ -10181,6 +10182,7 @@
        "code": "12직수01-02",
        "blocks": [
         "intro-jmath-1-2",
+        "text-jmath-estimate",
         "card-jmath-paint-estimate",
         "card-jmath-round-budget"
        ]
@@ -10191,6 +10193,7 @@
        "code": "12직수01-03",
        "blocks": [
         "intro-jmath-1-3",
+        "text-jmath-units",
         "card-jmath-dose-convert",
         "card-jmath-unit-error"
        ]
@@ -10207,6 +10210,7 @@
        "code": "12직수02-01",
        "blocks": [
         "intro-jmath-2-1",
+        "text-jmath-ratio",
         "card-jmath-mix-ratio",
         "card-jmath-scale-drawing"
        ]
@@ -10217,6 +10221,7 @@
        "code": "12직수02-02",
        "blocks": [
         "intro-jmath-2-2",
+        "text-jmath-percent",
         "card-jmath-discount-chain",
         "card-jmath-margin-markup"
        ]
@@ -10227,6 +10232,7 @@
        "code": "12직수02-03",
        "blocks": [
         "intro-jmath-2-3",
+        "text-jmath-pattern",
         "card-jmath-tile-pattern",
         "card-jmath-pay-table"
        ]
@@ -10237,6 +10243,7 @@
        "code": "12직수02-04",
        "blocks": [
         "intro-jmath-2-4",
+        "text-jmath-graphs",
         "card-jmath-tank-graph",
         "card-jmath-delivery-graph"
        ]
@@ -10247,6 +10254,7 @@
        "code": "12직수02-05",
        "blocks": [
         "intro-jmath-2-5",
+        "text-jmath-equations",
         "card-jmath-rent-or-buy",
         "card-jmath-dilution"
        ]
@@ -10263,6 +10271,7 @@
        "code": "12직수03-01",
        "blocks": [
         "intro-jmath-3-1",
+        "text-jmath-nets",
         "card-jmath-box-net",
         "card-jmath-package-board"
        ]
@@ -10273,6 +10282,7 @@
        "code": "12직수03-02",
        "blocks": [
         "intro-jmath-3-2",
+        "text-jmath-views",
         "card-jmath-three-views",
         "card-jmath-view-count"
        ]
@@ -10283,6 +10293,7 @@
        "code": "12직수03-03",
        "blocks": [
         "intro-jmath-3-3",
+        "text-jmath-similar",
         "card-jmath-tile-transform",
         "card-jmath-sign-enlarge"
        ]
@@ -10293,6 +10304,7 @@
        "code": "12직수03-04",
        "blocks": [
         "intro-jmath-3-4",
+        "text-jmath-area",
         "card-jmath-floor-area",
         "card-jmath-fence"
        ]
@@ -10303,6 +10315,7 @@
        "code": "12직수03-05",
        "blocks": [
         "intro-jmath-3-5",
+        "text-jmath-volume",
         "card-jmath-tank-volume",
         "card-jmath-paint-surface"
        ]
@@ -10319,6 +10332,7 @@
        "code": "12직수04-01",
        "blocks": [
         "intro-jmath-4-1",
+        "text-jmath-counting",
         "card-jmath-shift-schedule",
         "card-jmath-password"
        ]
@@ -10329,6 +10343,7 @@
        "code": "12직수04-02",
        "blocks": [
         "intro-jmath-4-2",
+        "text-jmath-probability",
         "card-jmath-defect-sample",
         "card-jmath-overbooking"
        ]
@@ -10339,6 +10354,7 @@
        "code": "12직수04-03",
        "blocks": [
         "intro-jmath-4-3",
+        "text-jmath-tables",
         "card-jmath-choose-chart",
         "card-jmath-class-width"
        ]
@@ -10349,6 +10365,7 @@
        "code": "12직수04-04",
        "blocks": [
         "intro-jmath-4-4",
+        "text-jmath-interpret",
         "card-jmath-misleading-graph",
         "card-jmath-dashboard"
        ]
@@ -10359,6 +10376,7 @@
        "code": "12직수04-05",
        "blocks": [
         "intro-jmath-4-5",
+        "text-jmath-decision",
         "card-jmath-supplier-score",
         "card-jmath-stock-decision"
        ]
