@@ -4,12 +4,12 @@
 # 한 블록이 여러 개념에 속해도 된다. 선수 관계는 과목을 넘나들어도 된다.
 
 # ── 측정과 정보 ──
-measure | 측정과 규모 | card-is1-scale card-is1-clock video-is1-meter |
+measure | 측정과 규모 | card-is1-scale card-is1-clock video-is1-meter text-is1-measure-space-time |
 gps-time | 시간으로 위치 찾기 | card-is1-gps | measure
-units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standards card-is1-new-unit card-is1-standard | measure
-error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure | measure
+units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standards card-is1-new-unit card-is1-standard text-is1-base-units | measure
+error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement | measure
 estimate | 어림 | card-is1-fermi | units
-digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history | measure
+digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital | measure
 data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident | error
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat | digital data
@@ -19,17 +19,17 @@ ethics | 과학기술과 윤리 | card-is2-ethics text-is2-science-role text-is2
 sci-method | 가설과 대조 실험 | card-bio-control | error
 
 # ── 원소와 화학 결합 ──
-spectrum | 선 스펙트럼 | card-is1-spectrum |
+spectrum | 선 스펙트럼 | card-is1-spectrum text-is1-spectrum-elements |
 bbn | 빅뱅과 가벼운 원소 | card-is1-bbn | spectrum
-fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-path | bbn
+fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-path text-is1-nucleosynthesis | bbn
 heavy-el | 무거운 원소의 생성 | card-is1-ncap video-is1-body | fusion
-periodic | 주기율과 전자 껍질 | card-is1-shells |
+periodic | 주기율과 전자 껍질 | card-is1-shells text-is1-periodicity |
 alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | periodic
-bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel | periodic
-silicate | 규산염 광물 | card-is1-silicate | bonding
+bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond | periodic
+silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
 polymer | 생명체의 고분자 | card-is1-polymer | bonding
-bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands | bonding spectrum
+bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole | bonding
 lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes | bonding
@@ -49,8 +49,8 @@ neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-po
 titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-titration | neutral-q water-ion
 
 # ── 힘과 에너지 ──
-inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus |
-free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump |
+inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus text-is1-momentum |
+free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump text-is1-gravity-motion |
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
 newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
 impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop | inertia free-fall
@@ -83,9 +83,9 @@ energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-sp
 relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society | inertia gps-time
 
 # ── 지구 ──
-earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget |
+earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system |
 carbon-cycle | 탄소 순환과 인간 활동 | card-is1-carbon-cycle text-is1-human-impact | earth-system
-plate | 판 구조론 | card-is1-seafloor card-is1-plate-boundary video-is1-atlantic text-is1-geosphere-effects card-is1-quake-map card-is1-quake-damage | earth-system
+plate | 판 구조론 | card-is1-seafloor card-is1-plate-boundary video-is1-atlantic text-is1-geosphere-effects card-is1-quake-map card-is1-quake-damage text-is1-plate-tectonics | earth-system
 rel-age | 지층의 상대 연령 | card-earth-relative-age |
 abs-age | 방사성 동위 원소와 절대 연령 | card-earth-half-life | rel-age
 geotime | 지질 시대와 화석 | card-is2-deep-time card-is2-index-fossil card-is2-extinction card-earth-geotime video-earth-day card-is2-paleoenv card-is2-mass-extinction card-earth-correlate card-earth-fossil-map | rel-age
@@ -120,7 +120,7 @@ life | 생명의 특성 | card-bio-alive text-bio-modern |
 bio-levels | 생명 시스템의 구성 단계 | card-bio-levels text-bio-eco-levels |
 membrane | 세포막과 물질 출입 | card-is1-membrane | bio-levels
 enzyme | 효소 | card-is1-enzyme-fit card-is1-activation text-is1-enzymes-life card-is1-catalase | polymer
-dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon | polymer
+dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon text-is1-gene-protein | polymer
 pcr | PCR 진단 | card-is2-pcr card-is2-rapid-test | dogma
 chromosome | 염색체와 DNA | card-bio-dna-pack card-bio-gene-chromo card-bio-karyotype | dogma
 division | 세포 분열 | card-bio-division card-bio-assort video-bio-meiosis | chromosome
@@ -183,7 +183,7 @@ mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate
 # ── 진로선택: 세포와 물질대사 ──
 cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid | polymer
 cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-protein | polymer
-cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction | bio-levels
+cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions | bio-levels
 cell-endomembrane | 내막계와 분비 경로 | card-cell-pulse | cell-organelle dogma
 cell-pro-eu | 원핵세포와 진핵세포 | card-cell-size text-cell-pro-eu | cell-organelle
 cell-transport | 막 수송과 삼투 | card-cell-transport card-cell-osmosis | membrane

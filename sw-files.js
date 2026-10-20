@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "d1d998ca7831",
+"version": "68a0990898b3",
 "files": [
 "404.html",
 "bank.html",
@@ -1972,6 +1972,7 @@ self.PRECACHE = {
 "js/cards/info/i3-unit-test.js",
 "js/cards/inverse-square.js",
 "js/cards/is1/atomic-clock.js",
+"js/cards/is1/body.js",
 "js/cards/is1/carbon-cycle.js",
 "js/cards/is1/catalase.js",
 "js/cards/is1/dimension.js",
@@ -2022,6 +2023,7 @@ self.PRECACHE = {
 "js/cards/is1/thermistor.js",
 "js/cards/is1/units.js",
 "js/cards/is2/acid-plate.js",
+"js/cards/is2/body.js",
 "js/cards/is2/e-co2-forcing.js",
 "js/cards/is2/e-efficiency.js",
 "js/cards/is2/e-energy-pyramid.js",
