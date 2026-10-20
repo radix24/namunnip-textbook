@@ -729,6 +729,7 @@
        "code": "12화학01-01",
        "blocks": [
         "intro-chem-1-1",
+        "text-chem-society",
         "card-chem-haber",
         "video-chem-society",
         "card-chem-safety",
@@ -741,6 +742,7 @@
        "code": "12화학01-02",
        "blocks": [
         "intro-chem-1-2",
+        "text-chem-mol",
         "card-chem-mole",
         "card-chem-cup",
         "card-chem-molvol",
@@ -754,6 +756,7 @@
        "code": "12화학01-03",
        "blocks": [
         "intro-chem-1-3",
+        "text-chem-stoich",
         "card-chem-balance",
         "card-chem-gasvol",
         "card-chem-limit",
@@ -772,6 +775,7 @@
        "code": "12화학02-01",
        "blocks": [
         "intro-chem-2-1",
+        "text-chem-bond-elec",
         "card-chem-h2oel",
         "card-chem-nacl"
        ]
@@ -782,6 +786,7 @@
        "code": "12화학02-02",
        "blocks": [
         "intro-chem-2-2",
+        "text-chem-polarity",
         "card-chem-en",
         "card-chem-dipole",
         "card-chem-polar-lab"
@@ -793,6 +798,7 @@
        "code": "12화학02-03",
        "blocks": [
         "intro-chem-2-3",
+        "text-chem-shape",
         "card-chem-lewis",
         "card-chem-vsepr",
         "video-chem-shapes"
@@ -804,6 +810,7 @@
        "code": "12화학02-04",
        "blocks": [
         "intro-chem-2-4",
+        "text-chem-hbond",
         "card-chem-bp",
         "card-chem-ice",
         "card-chem-mix"
@@ -821,6 +828,7 @@
        "code": "12화학03-01",
        "blocks": [
         "intro-chem-3-1",
+        "text-chem-equilibrium",
         "card-chem-dyn-eq",
         "card-chem-vapor-eq",
         "card-chem-color-rev",
@@ -833,6 +841,7 @@
        "code": "12화학03-02",
        "blocks": [
         "intro-chem-3-2",
+        "text-chem-kc",
         "card-chem-k-hi",
         "card-chem-k-solid"
        ]
@@ -843,6 +852,7 @@
        "code": "12화학03-03",
        "blocks": [
         "intro-chem-3-3",
+        "text-chem-qk",
         "card-chem-qk"
        ]
       },
@@ -852,6 +862,7 @@
        "code": "12화학03-04",
        "blocks": [
         "intro-chem-3-4",
+        "text-chem-lechatelier",
         "card-chem-lechat",
         "card-chem-soda",
         "card-chem-haber-eq",
@@ -872,6 +883,7 @@
        "code": "12화학04-01",
        "blocks": [
         "intro-chem-4-1",
+        "text-chem-ph",
         "card-chem-autoion",
         "card-chem-ph-scale",
         "card-chem-kw-temp",
@@ -884,6 +896,7 @@
        "code": "12화학04-02",
        "blocks": [
         "intro-chem-4-2",
+        "text-chem-molarity",
         "card-chem-molar-lab",
         "card-chem-dilution"
        ]
@@ -894,6 +907,7 @@
        "code": "12화학04-03",
        "blocks": [
         "intro-chem-4-3",
+        "text-chem-neutralize",
         "card-chem-ion-count",
         "card-chem-eq-point",
         "card-chem-antacid",
@@ -906,6 +920,7 @@
        "code": "12화학04-04",
        "blocks": [
         "intro-chem-4-4",
+        "text-chem-titration",
         "card-chem-vinegar",
         "card-chem-indicator",
         "video-chem-titration"

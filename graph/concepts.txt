@@ -25,28 +25,28 @@ fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-pat
 heavy-el | 무거운 원소의 생성 | card-is1-ncap video-is1-body | fusion
 periodic | 주기율과 전자 껍질 | card-is1-shells text-is1-periodicity |
 alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | periodic
-bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond | periodic
+bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond text-chem-bond-elec | periodic
 silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
 polymer | 생명체의 고분자 | card-is1-polymer | bonding
 bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
-en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole | bonding
-lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes | bonding
-imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-chem-mix card-chem-polar-lab | en lewis
-chem-society | 화학과 우리 사회 | card-chem-haber video-chem-society card-chem-safety text-chem-green | 
-mole | 몰 | card-chem-mole card-chem-cup card-chem-molvol card-chem-molar-mass text-chem-avogadro | units
-stoich | 화학 반응식과 양적 관계 | card-chem-balance card-chem-gasvol card-chem-limit card-chem-caco3 | mole
+en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
+lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes text-chem-shape | bonding
+imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-chem-mix card-chem-polar-lab text-chem-hbond | en lewis
+chem-society | 화학과 우리 사회 | card-chem-haber video-chem-society card-chem-safety text-chem-green text-chem-society | 
+mole | 몰 | card-chem-mole card-chem-cup card-chem-molvol card-chem-molar-mass text-chem-avogadro text-chem-mol | units
+stoich | 화학 반응식과 양적 관계 | card-chem-balance card-chem-gasvol card-chem-limit card-chem-caco3 text-chem-stoich | mole
 redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox | bonding
 acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-log card-is2-neutral card-is2-acid-plate text-is2-acid-base | bonding
 reaction-heat | 발열 반응과 흡열 반응 | card-is2-hand-warmer card-is2-cold-pack text-is2-reaction-heat | bonding
-equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase | stoich
-eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk | equilibrium
-le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases | eq-const chem-society
-water-ion | 물의 자동 이온화와 pH | card-chem-autoion card-chem-ph-scale card-chem-kw-temp card-chem-dilute-ph | acid-base eq-const
-molarity | 몰 농도 | card-chem-molar-lab card-chem-dilution | mole
-neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env | acid-base molarity
-titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-titration | neutral-q water-ion
+equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium | stoich
+eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk text-chem-kc text-chem-qk | equilibrium
+le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier | eq-const chem-society
+water-ion | 물의 자동 이온화와 pH | card-chem-autoion card-chem-ph-scale card-chem-kw-temp card-chem-dilute-ph text-chem-ph | acid-base eq-const
+molarity | 몰 농도 | card-chem-molar-lab card-chem-dilution text-chem-molarity | mole
+neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env text-chem-neutralize | acid-base molarity
+titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-titration text-chem-titration | neutral-q water-ion
 
 # ── 힘과 에너지 ──
 inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus text-is1-momentum text-phy-newton |
