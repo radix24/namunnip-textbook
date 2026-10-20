@@ -7,16 +7,16 @@
 measure | 측정과 규모 | card-is1-scale card-is1-clock video-is1-meter text-is1-measure-space-time |
 gps-time | 시간으로 위치 찾기 | card-is1-gps | measure
 units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standards card-is1-new-unit card-is1-standard text-is1-base-units | measure
-error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement | measure
+error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis | measure
 estimate | 어림 | card-is1-fermi | units
-digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital | measure
+digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration | measure
 data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data | error
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat text-is2-ai-robot | digital data
 robot | 로봇과 되먹임 제어 | card-is2-robot card-is2-robot-design | digital
-iot | 사물인터넷 | text-is2-iot | digital ai
-ethics | 과학기술과 윤리 | card-is2-ethics text-is2-science-role text-is2-genai text-is2-ethics | data
-sci-method | 가설과 대조 실험 | card-bio-control | error
+iot | 사물인터넷 | text-is2-iot text-sie2-co2-classroom | digital ai
+ethics | 과학기술과 윤리 | card-is2-ethics text-is2-science-role text-is2-genai text-is2-ethics text-sie2-data-integrity | data
+sci-method | 가설과 대조 실험 | card-bio-control text-sie1-pasteur-flask | error
 
 # ── 원소와 화학 결합 ──
 spectrum | 선 스펙트럼 | card-is1-spectrum text-is1-spectrum-elements |
@@ -53,7 +53,7 @@ inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus text-i
 free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump text-is1-gravity-motion text-mech-projectile |
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
 newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
-impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop | inertia free-fall
+impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop text-sie2-paper-column | inertia free-fall
 torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque text-mech-forces |
 action-reaction | 작용 반작용 | card-phy-horse text-phy-momentum-cons | newton2
 momentum | 운동량 보존 | card-phy-rocket card-phy-collision text-mech-escape | impulse action-reaction
@@ -290,14 +290,14 @@ space-survey | 적색 편이 탐사 | card-space-redshift-survey | expansion
 space-lss | 우주 거대 구조 | card-space-cosmic-web text-space-large-structure | space-survey space-darkmatter cosmology
 
 # ── 과학탐구실험 ──
-sie-galileo | 갈릴레이의 빗면 실험 | card-sie1-galileo | free-fall
-sie-nature | 과학의 본성과 과학사 | text-sie1-nature |
-sie-induction | 귀납적 탐구 | card-sie1-pendulum | error
+sie-galileo | 갈릴레이의 빗면 실험 | card-sie1-galileo text-sie1-galileo-incline | free-fall
+sie-nature | 과학의 본성과 과학사 | text-sie1-nature text-sie1-light-speed |
+sie-induction | 귀납적 탐구 | card-sie1-pendulum text-sie1-pendulum-induction | error
 sie-deduction | 가설 연역적 탐구 | card-sie1-pasteur | sci-method sie-induction
 sie-represent | 자료의 분석과 표현 | card-sie1-plot | error
-sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer | error sie-deduction
-sie-everyday | 생활 속 과학 원리 탐구 (확산 시간) | card-sie2-egg | sie-represent
-sie-question | 탐구 문제와 탐구 계획 | text-sie2-question | sie-deduction
+sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer text-sie1-replication | error sie-deduction
+sie-everyday | 생활 속 과학 원리 탐구 (확산 시간) | card-sie2-egg text-sie2-egg-cooking | sie-represent
+sie-question | 탐구 문제와 탐구 계획 | text-sie2-question text-sie2-sampling-days | sie-deduction
 sie-design | 공학적 설계 | card-sie2-column | impulse sie-question
 sie-calib | 센서 보정 | card-sie2-calib | digital sie-represent
 sie-iot-data | 실시간 센서 데이터와 공유 | card-sie2-co2 | iot sie-calib

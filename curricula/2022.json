@@ -3078,6 +3078,7 @@
        "code": "10과탐1-01-01",
        "blocks": [
         "intro-sie1-1-1",
+        "text-sie1-galileo-incline",
         "card-sie1-galileo",
         "text-is1-inertia"
        ]
@@ -3088,6 +3089,7 @@
        "code": "10과탐1-01-02",
        "blocks": [
         "intro-sie1-1-2",
+        "text-sie1-light-speed",
         "text-sie1-nature",
         "text-cell-photo-history",
         "text-gene-dna-history"
@@ -3105,6 +3107,7 @@
        "code": "10과탐1-02-01",
        "blocks": [
         "intro-sie1-2-1",
+        "text-sie1-pendulum-induction",
         "card-sie1-pendulum"
        ]
       },
@@ -3114,6 +3117,7 @@
        "code": "10과탐1-02-02",
        "blocks": [
         "intro-sie1-2-2",
+        "text-sie1-pasteur-flask",
         "card-bio-control",
         "card-sie1-pasteur"
        ]
@@ -3124,6 +3128,7 @@
        "code": "10과탐1-02-03",
        "blocks": [
         "intro-sie1-2-3",
+        "text-sie1-graph-axis",
         "card-is1-error",
         "card-sie1-plot"
        ]
@@ -3134,6 +3139,7 @@
        "code": "10과탐1-02-04",
        "blocks": [
         "intro-sie1-2-4",
+        "text-sie1-replication",
         "text-sie1-peer",
         "text-bio-epidemiology"
        ]
@@ -3159,6 +3165,7 @@
        "code": "10과탐2-01-01",
        "blocks": [
         "intro-sie2-1-1",
+        "text-sie2-egg-cooking",
         "card-sie2-egg"
        ]
       },
@@ -3168,6 +3175,7 @@
        "code": "10과탐2-01-02",
        "blocks": [
         "intro-sie2-1-2",
+        "text-sie2-sampling-days",
         "text-sie2-question"
        ]
       },
@@ -3177,6 +3185,7 @@
        "code": "10과탐2-01-03",
        "blocks": [
         "intro-sie2-1-3",
+        "text-sie2-paper-column",
         "card-is1-egg-drop",
         "card-sie2-column"
        ]
@@ -3193,6 +3202,7 @@
        "code": "10과탐2-02-01",
        "blocks": [
         "intro-sie2-2-1",
+        "text-sie2-sensor-calibration",
         "card-is1-sensor",
         "card-is1-sampling",
         "card-sie2-calib"
@@ -3204,6 +3214,7 @@
        "code": "10과탐2-02-02",
        "blocks": [
         "intro-sie2-2-2",
+        "text-sie2-co2-classroom",
         "text-is2-iot",
         "card-sie2-co2"
        ]
@@ -3214,6 +3225,7 @@
        "code": "10과탐2-02-03",
        "blocks": [
         "intro-sie2-2-3",
+        "text-sie2-data-integrity",
         "card-is2-ethics",
         "text-sie2-ethics"
        ]
