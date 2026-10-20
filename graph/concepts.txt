@@ -14,7 +14,7 @@ data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat text-is2-ai-robot | digital data
 robot | 로봇과 되먹임 제어 | card-is2-robot card-is2-robot-design | digital
-iot | 사물인터넷 | text-is2-iot text-sie2-co2-classroom | digital ai
+iot | 사물인터넷 | text-is2-iot text-sie2-co2-classroom text-hist-six-degrees | digital ai
 ethics | 과학기술과 윤리 | card-is2-ethics text-is2-science-role text-is2-genai text-is2-ethics text-sie2-data-integrity | data
 sci-method | 가설과 대조 실험 | card-bio-control text-sie1-pasteur-flask | error
 
@@ -80,7 +80,7 @@ lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-lith
 photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric | interference
 matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro text-emq-single-quantum | photon lens
 energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels | photon spectrum
-relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence | inertia gps-time
+relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence text-hist-light-bending | inertia gps-time
 
 # ── 지구 ──
 earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system text-esys-frost-line |
@@ -138,7 +138,7 @@ homeostasis | 항상성 | card-bio-glucose card-bio-thermo video-bio-fever card-
 metab-disease | 물질대사와 질환 | card-bio-diabetes card-bio-energy text-bio-epidemiology card-bio-metabolic text-bio-disease | homeostasis
 immunity | 병원체와 면역 | card-bio-pathogen card-bio-immune text-bio-immunity | life
 blood-type | 항원–항체 반응과 혈액형 | card-bio-blood text-bio-bloodtype text-gene-abo | immunity
-vaccine | 백신과 집단 면역 | card-bio-vtypes card-bio-herd text-bio-vaccine | immunity
+vaccine | 백신과 집단 면역 | card-bio-vtypes card-bio-herd text-bio-vaccine text-hist-cholera-map | immunity
 eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat text-is2-ecosystem | bio-levels
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
 cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem text-esys-oxygen-rise | food-web photosyn
@@ -681,26 +681,26 @@ if-test | 테스트와 디버깅 | card-info-unit-test text-info-debug | if-proj
 if-evaluate | 산출물의 기능적·윤리적 평가와 공유 | card-info-eval-groups text-info-share | if-test data ethics
 
 # ── 융합선택: 과학의 역사와 문화 ──
-hs-calendar | 고대 문명의 역법과 측량 | card-hist-calendar text-hist-ancient |
-hs-greek | 고대 그리스의 우주관과 자연관 | card-hist-eratosthenes text-hist-greek | hs-calendar
-hs-medieval | 중세 이슬람·유럽·조선의 과학 | card-hist-aljabr text-hist-medieval text-hist-sejong | hs-greek
-hs-revolution | 과학혁명과 과학·예술의 융합 | card-hist-venus card-hist-perspective text-hist-revolution | hs-greek
-hs-belief | 과학자의 신념과 세계관 | card-hist-kepler-solids text-hist-belief | hs-revolution sie-nature
+hs-calendar | 고대 문명의 역법과 측량 | card-hist-calendar text-hist-ancient text-hist-lunisolar |
+hs-greek | 고대 그리스의 우주관과 자연관 | card-hist-eratosthenes text-hist-greek text-hist-earth-size | hs-calendar
+hs-medieval | 중세 이슬람·유럽·조선의 과학 | card-hist-aljabr text-hist-medieval text-hist-sejong text-hist-completing-square | hs-greek
+hs-revolution | 과학혁명과 과학·예술의 융합 | card-hist-venus card-hist-perspective text-hist-revolution text-hist-venus-phase | hs-greek
+hs-belief | 과학자의 신념과 세계관 | card-hist-kepler-solids text-hist-belief text-hist-kepler-polyhedra | hs-revolution sie-nature
 hs-modern-society | 현대 과학의 등장과 사회문화 | card-hist-eclipse text-hist-modern-culture | relativity
-hs-communication | 과학자의 논쟁과 과학적 의사소통 규범 | card-hist-pasteur text-hist-debates | sci-method ethics
-hs-art-science | 예술·건축 속 과학 원리 | card-hist-catenary text-hist-art-science |
+hs-communication | 과학자의 논쟁과 과학적 의사소통 규범 | card-hist-pasteur text-hist-debates text-hist-spontaneous-debate | sci-method ethics
+hs-art-science | 예술·건축 속 과학 원리 | card-hist-catenary text-hist-art-science text-hist-catenary-arch |
 hs-epidemic-society | 감염병과 사회, 역학 조사 | card-hist-snow text-hist-epidemics | vaccine data
-hs-transport | 교통수단의 발달과 미래 사회 | card-hist-transport-energy text-hist-transport |
-hs-dual-use | 산업혁명 이후 과학기술의 명암 | card-hist-chain text-hist-dual-use | ethics
-hs-tech-culture | 과학기술과 문화의 상호 작용 | text-hist-newculture |
+hs-transport | 교통수단의 발달과 미래 사회 | card-hist-transport-energy text-hist-transport text-hist-energy-per-passenger |
+hs-dual-use | 산업혁명 이후 과학기술의 명암 | card-hist-chain text-hist-dual-use text-hist-chain-reaction | ethics
+hs-tech-culture | 과학기술과 문화의 상호 작용 | text-hist-newculture text-hist-pixel-acuity |
 hs-pointillism | 점묘법·화소와 눈의 분해능 | card-hist-pixel |
-hs-sci-terms | 과학 용어의 일상적 쓰임과 오용 | text-hist-terms card-hist-quantum-leap | spectrum
-hs-temperament | 음률: 삼분손익법·피타고라스 음률·평균율 | card-hist-tuning |
+hs-sci-terms | 과학 용어의 일상적 쓰임과 오용 | text-hist-terms card-hist-quantum-leap text-hist-quantum-scale | spectrum
+hs-temperament | 음률: 삼분손익법·피타고라스 음률·평균율 | card-hist-tuning text-hist-pythagorean-comma |
 hs-timbre | 배음과 음색, 소리 합성 | card-hist-synth |
 hs-ai-music | 인공지능 작곡과 음악 기술의 역사 | card-hist-markov text-hist-music-tech | ai hs-temperament
 hs-network | 연결망과 좁은 세상 | card-hist-smallworld text-hist-connected | iot
-hs-xr | 가상·증강 현실의 원리와 활용 | card-hist-stereo card-hist-latency text-hist-xr | digital
-hs-citizen | 과학기술 쟁점의 집단적 의사결정 | card-hist-values text-hist-citizen | ethics
+hs-xr | 가상·증강 현실의 원리와 활용 | card-hist-stereo card-hist-latency text-hist-xr text-hist-vr-latency | digital
+hs-citizen | 과학기술 쟁점의 집단적 의사결정 | card-hist-values text-hist-citizen text-hist-risk-values | ethics
 
 # ── 수학 (자동 병합: .omo/math/merge.py) ──
 # alg-1

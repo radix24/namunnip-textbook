@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-hist-eclipse .fig-note { line-height: 1.5; }
     #card-hist-eclipse .tbl-host { max-height: 150px; }
@@ -46,9 +47,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#text-phy-relativity-society"><span class="mono">2.1.1</span>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</a></li>
-        <li><a href="#card-hist-eclipse"><span class="mono">2.1.2</span>1919년 일식 관측</a></li>
-        <li><a href="#text-hist-modern-culture"><span class="mono">2.1.3</span>상대성 이론과 20세기 문화</a></li>
+        <li><a href="#text-hist-light-bending"><span class="mono">2.1.1</span>본문 · 현대 과학과 사회문화</a></li>
+        <li><a href="#text-phy-relativity-society"><span class="mono">2.1.2</span>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</a></li>
+        <li><a href="#card-hist-eclipse"><span class="mono">2.1.3</span>1919년 일식 관측</a></li>
+        <li><a href="#text-hist-modern-culture"><span class="mono">2.1.4</span>상대성 이론과 20세기 문화</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=hist&amp;sec=2-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">12문항 →</span></a>
@@ -56,9 +58,58 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-hist-light-bending" data-kind="본문">
+        <header class="card-head"><span class="no">2.1.1</span><h2>일식 사진 몇 장이 어떻게 아인슈타인을 세계적 유명인으로 만들었을까?</h2><span class="kind">본문 · 현대 과학과 사회문화</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">1919년 11월 영국 신문들은 "과학의 혁명, 뉴턴의 생각이 뒤집혔다"고 대서특필했다. 그해 5월의 개기 일식 때 찍은 별 사진 몇 장이 아인슈타인의 일반 상대성 이론을 확인했다는 것이었다. 하룻밤 사이에 아인슈타인은 세계에서 가장 유명한 과학자가 되었다. 일식 사진은 무엇을 보여 주었을까? 그리고 새로운 과학은 사람들의 생각과 문화를 어떻게 바꾸었을까?</p>
+          <figure class="q-fig" data-q="hist-bend">
+            <svg viewBox="0 0 520 230" role="img" aria-label="태양 곁을 지나는 별빛이 휘는 각"></svg>
+            <div class="q-ctl"><label>별빛이 지나는 거리 (태양 반지름) <input type="range" data-k="b" min="1" max="6" step="0.1" value="1"><output data-k="b"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 태양 곁을 지나는 별빛이 휘는 각. 일반 상대론은 태양 가장자리에서 1.75초(파랑)를, 빛을 입자처럼 다룬 뉴턴식 계산은 그 절반(주황)을 예측한다. 태양에서 멀수록 휘는 각이 작아진다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>특수 상대성 이론, 중력과 만유인력(물리학, 역학과 에너지), 측정의 오차, 과학자의 신념(<a href="1-5.html">과학자의 신념과 세계관</a>).</div>
+
+          <h3><span class="mono">1</span>휘는 빛</h3>
+          <p>일반 상대성 이론에서 질량은 시공간을 휘게 하고, 빛도 휘어진 시공간을 따라 나아간다. 그래서 태양 곁을 지나는 별빛은 태양 쪽으로 조금 휜다. 지구에서 보면 별이 태양에서 조금 바깥쪽으로 밀려난 위치에 보인다. 평소에는 햇빛 때문에 태양 곁의 별을 볼 수 없지만, 개기 일식 때는 낮에도 별이 보인다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">빛의 휨 (태양)</span></span>
+            <p>일반 상대론에 따르면 태양 중심에서 태양 반지름의 \(b\)배 거리를 지나는 별빛은 약 \(\dfrac{1.75''}{b}\) 휜다. 빛을 질량 있는 입자로 보고 뉴턴 역학으로 계산하면 그 절반인 약 \(\dfrac{0.87''}{b}\)이다.</p>
+          </div>
+          <p>1.75초는 1 km 밖에서 본 8 mm 정도의 아주 작은 각이다. 에딩턴의 관측대는 일식 때 별 사진을 찍고, 몇 달 뒤 밤하늘의 같은 별 사진과 비교하여 별의 위치가 얼마나 밀려났는지 쟀다. 결과는 약 1.6~2.0초로, 뉴턴식 값보다 상대론의 값에 가까웠다. 그림 1에서 거리를 바꾸어 보자.<sup class="fn"><a href="#fn-hist-light-bending-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>과학과 사회문화</h3>
+          <p>제1차 세계 대전이 막 끝난 때, 영국 과학자가 독일 과학자의 이론을 확인했다는 사실은 화해의 상징처럼 받아들여졌다. '모든 것은 상대적'이라는 말이 유행하여, 과학 이론과 상관없이 예술과 철학, 대중문화에서 절대적인 기준이 흔들리는 시대를 상징하는 말이 되었다. 오늘날 상대성 이론은 GPS 위성 시계를 보정하는 데 쓰이고, 중력 렌즈로 먼 은하와 암흑 물질을 관측하는 도구가 되었다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="일식 관측으로 별의 위치가 밀려난 모습">
+              <g class="s">
+                <circle cx="160" cy="60" r="30" class="lk"/><text x="160" y="105" text-anchor="middle">가려진 태양</text>
+                <circle cx="215" cy="40" r="3" class="fb"/><circle cx="222" cy="36" r="3" class="fd"/>
+                <text x="232" y="34">실제로 보인 위치 (바깥으로 밀림)</text><text x="232" y="56">밤하늘의 원래 위치</text>
+                <text x="40" y="20">별빛 →</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 태양 곁의 별은 빛이 휘어 원래 위치보다 태양에서 조금 바깥에 보인다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>일식 사진에서 태양 반지름의 2배 거리에 보이는 별이 있다. 일반 상대론과 뉴턴식 계산은 각각 얼마의 휨을 예측하는가? 관측값이 0.90″ ± 0.15″였다면 어느 예측을 지지하는가?</p>
+          </div>
+          <p>일반 상대론은 \(\dfrac{1.75}{2} \approx 0.88''\), 뉴턴식은 \(\dfrac{0.87}{2} \approx 0.44''\)을 예측한다.</p>
+          <p>관측값 0.90″의 오차 범위 0.75″~1.05″ 안에 상대론의 예측 0.88″이 들어 있고, 뉴턴식 0.44″는 크게 벗어난다. 그래서 이 관측은 상대론을 지지한다. 다만 1919년의 실제 사진은 흐리고 오차가 커서 결과를 둘러싼 논쟁도 있었다. 그 뒤 전파 망원경으로 훨씬 정밀하게 재어 상대론의 예측이 0.1% 수준까지 확인되었다. 즉 한 번의 극적인 관측이 사회를 흔들었지만, 과학적 결론은 반복된 정밀 측정으로 굳어졌다.</p>
+          <p>아래 탐구 카드에서 상대성 이론이 생활과 사회를 바꾼 방식, 일식 사진이 아인슈타인을 유명하게 만든 과정, 시공간 개념의 변화가 예술에 준 영향을 살펴보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-hist-light-bending-1">아인슈타인은 1911년에는 뉴턴식 값과 같은 0.87초를 예측했다가, 1915년 일반 상대론을 완성하며 1.75초로 고쳤다. 1914년 일식 관측이 전쟁으로 무산된 것이 오히려 다행이었던 셈이다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>일반 상대론은 태양 곁을 지나는 별빛이 태양 가장자리에서 1.75초 휜다고 예측했고, 1919년 일식 관측은 뉴턴식 예측의 두 배인 이 값에 가까운 결과를 얻었다. 이 소식은 전쟁 직후의 사회와 문화에 큰 반향을 일으켰다. 그래서 처음 질문의 일식 사진 몇 장은 뉴턴의 이론을 넘어서는 새 이론의 예측을 확인했다는 상징이 되어 아인슈타인을 세계적 유명인으로 만들었다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-4.html#text-is1-inertia"><small class="mono">통합과학1 3.4</small>밀어 주는 힘이 없으면 물체는 멈출까?</a><a href="../../c/phy/1-2.html#card-phy-inertia"><small class="mono">물리학 1.2</small>힘을 주지 않으면 물체는 멈출까?</a><a href="../../c/is1/3-4.html#text-is1-momentum"><small class="mono">통합과학1 3.4</small>멈추는 일은 같은데, 왜 어떻게 멈추느냐에 따라 다칠 수도 있고 안 다칠 수도 있을까?</a><a href="../../c/phy/1-2.html#text-phy-newton"><small class="mono">물리학 1.2</small>힘은 물체의 무엇을 바꿀까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/3-6.html#card-phy-lm-clock"><small class="mono">물리학 3.6</small>빠르게 움직이면 정말 시간이 느리게 갈까?</a><a href="../../c/phy/3-6.html#card-phy-lm-gps"><small class="mono">물리학 3.6</small>GPS 위성의 시계는 왜 보정해야 할까?</a><a href="../../c/phy/3-6.html#text-phy-length"><small class="mono">물리학 3.6</small>빠르게 움직이면 길이도 줄어들까? 상대성 이론은 무엇을 바꿨을까?</a><a href="../../c/phy/3-6.html#text-phy-relativity"><small class="mono">물리학 3.6</small>빠르게 움직이면 정말 시간이 느리게 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a><a href="../../c/adphy/4-2.html#card-adphy-spacetime"><small class="mono">고급 물리학 4.2</small>동시에 일어난 두 사건이 다른 관찰자에게는 동시가 아닐 수 있을까?</a><a href="../../c/adphy/4-2.html#text-adphy-sr"><small class="mono">고급 물리학 4.2</small>상대성 이론은 어떤 모순에서 출발해 시간과 공간을 어떻게 바꾸었을까?</a><a href="../../c/adphy/4-2.html#card-adphy-mass-energy"><small class="mono">고급 물리학 4.2</small>가속기에서 에너지를 계속 넣으면 전자는 빛보다 빨라질까?</a></div></nav>
+
       <article class="card reading" id="text-phy-relativity-society">
         <header class="card-head">
-          <span class="no">2.1.1</span><h2>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</h2><span class="kind">읽기 · 상대성 이론의 활용과 사회적 영향</span>
+          <span class="no">2.1.2</span><h2>상대성 이론은 우리 생활과 사회를 어떻게 바꾸었을까?</h2><span class="kind">읽기 · 상대성 이론의 활용과 사회적 영향</span>
         </header>
         <div class="reading-body">
           <p class="ask">상대성 이론은 빛에 가까운 속력이나 아주 강한 중력에서만 필요한 이론처럼 보입니다. 그런데 오늘 우리가 쓰는 기술과 20세기의 역사에도 깊이 스며 있습니다.</p>
@@ -89,7 +140,7 @@
 
       <article class="card" id="card-hist-eclipse">
         <header class="card-head">
-          <span class="no">2.1.2</span><h2>일식 사진 몇 장이 어떻게 아인슈타인을 세계적 유명인으로 만들었을까?</h2><span class="kind">현대 과학과 사회 · 1919년 일식 관측 · 모식 재현</span>
+          <span class="no">2.1.3</span><h2>일식 사진 몇 장이 어떻게 아인슈타인을 세계적 유명인으로 만들었을까?</h2><span class="kind">현대 과학과 사회 · 1919년 일식 관측 · 모식 재현</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -137,7 +188,7 @@
 
       <article class="card reading" id="text-hist-modern-culture">
         <header class="card-head">
-          <span class="no">2.1.3</span><h2>시간과 공간이 바뀌자 예술과 생각도 바뀌었을까?</h2><span class="kind">읽기 · 현대 과학의 등장과 20세기 사회문화</span>
+          <span class="no">2.1.4</span><h2>시간과 공간이 바뀌자 예술과 생각도 바뀌었을까?</h2><span class="kind">읽기 · 현대 과학의 등장과 20세기 사회문화</span>
         </header>
         <div class="reading-body">
           <p class="ask">20세기 초 물리학은 두 번 크게 바뀌었습니다. 상대성 이론은 누구에게나 똑같이 흐르는 절대 시간을 버렸고, 양자 역학은 원자 세계가 확률로만 예측된다고 말했습니다. 실험실 안의 이 변화가 어떻게 신문, 그림, 철학, 일상의 말에까지 번졌을까요?</p>
@@ -215,10 +266,14 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/hist/body.js"></script>
 <script src="../../js/lib/lab.js"></script>
 <script src="../../js/cards/hist/h2-eclipse.js"></script>
 </body>

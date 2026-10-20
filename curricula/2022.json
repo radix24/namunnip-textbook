@@ -3251,6 +3251,7 @@
        "code": "12과사01-01",
        "blocks": [
         "intro-hist-1-1",
+        "text-hist-lunisolar",
         "card-hist-calendar",
         "text-hist-ancient"
        ]
@@ -3261,6 +3262,7 @@
        "code": "12과사01-02",
        "blocks": [
         "intro-hist-1-2",
+        "text-hist-earth-size",
         "card-hist-eratosthenes",
         "text-hist-greek"
        ]
@@ -3271,6 +3273,7 @@
        "code": "12과사01-03",
        "blocks": [
         "intro-hist-1-3",
+        "text-hist-completing-square",
         "card-hist-aljabr",
         "text-hist-medieval",
         "text-hist-sejong"
@@ -3282,6 +3285,7 @@
        "code": "12과사01-04",
        "blocks": [
         "intro-hist-1-4",
+        "text-hist-venus-phase",
         "card-hist-venus",
         "card-sie1-galileo",
         "card-hist-perspective",
@@ -3294,6 +3298,7 @@
        "code": "12과사01-05",
        "blocks": [
         "intro-hist-1-5",
+        "text-hist-kepler-polyhedra",
         "card-hist-kepler-solids",
         "text-hist-belief"
        ]
@@ -3310,6 +3315,7 @@
        "code": "12과사02-01",
        "blocks": [
         "intro-hist-2-1",
+        "text-hist-light-bending",
         "text-phy-relativity-society",
         "card-hist-eclipse",
         "text-hist-modern-culture"
@@ -3321,6 +3327,7 @@
        "code": "12과사02-02",
        "blocks": [
         "intro-hist-2-2",
+        "text-hist-spontaneous-debate",
         "card-hist-pasteur",
         "text-hist-debates",
         "text-sie1-peer"
@@ -3332,6 +3339,7 @@
        "code": "12과사02-03",
        "blocks": [
         "intro-hist-2-3",
+        "text-hist-catenary-arch",
         "card-hist-catenary",
         "text-hist-art-science"
        ]
@@ -3342,6 +3350,7 @@
        "code": "12과사02-04",
        "blocks": [
         "intro-hist-2-4",
+        "text-hist-cholera-map",
         "card-bio-herd",
         "card-hist-snow",
         "text-hist-epidemics"
@@ -3353,6 +3362,7 @@
        "code": "12과사02-05",
        "blocks": [
         "intro-hist-2-5",
+        "text-hist-energy-per-passenger",
         "card-hist-transport-energy",
         "text-hist-transport"
        ]
@@ -3363,6 +3373,7 @@
        "code": "12과사02-06",
        "blocks": [
         "intro-hist-2-6",
+        "text-hist-chain-reaction",
         "card-hist-chain",
         "text-hist-dual-use"
        ]
@@ -3379,6 +3390,7 @@
        "code": "12과사03-01",
        "blocks": [
         "intro-hist-3-1",
+        "text-hist-pixel-acuity",
         "text-hist-newculture",
         "card-hist-pixel"
        ]
@@ -3389,6 +3401,7 @@
        "code": "12과사03-02",
        "blocks": [
         "intro-hist-3-2",
+        "text-hist-quantum-scale",
         "text-hist-terms",
         "card-hist-quantum-leap"
        ]
@@ -3399,6 +3412,7 @@
        "code": "12과사03-03",
        "blocks": [
         "intro-hist-3-3",
+        "text-hist-pythagorean-comma",
         "card-hist-tuning",
         "card-hist-synth",
         "card-hist-markov",
@@ -3411,6 +3425,7 @@
        "code": "12과사03-04",
        "blocks": [
         "intro-hist-3-4",
+        "text-hist-six-degrees",
         "text-is2-iot",
         "text-hist-connected",
         "card-hist-smallworld"
@@ -3422,6 +3437,7 @@
        "code": "12과사03-05",
        "blocks": [
         "intro-hist-3-5",
+        "text-hist-vr-latency",
         "card-hist-stereo",
         "card-hist-latency",
         "text-hist-xr"
@@ -3433,6 +3449,7 @@
        "code": "12과사03-06",
        "blocks": [
         "intro-hist-3-6",
+        "text-hist-risk-values",
         "card-hist-values",
         "text-hist-citizen"
        ]
