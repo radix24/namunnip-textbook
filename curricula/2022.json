@@ -258,6 +258,7 @@
        "code": "10통과2-01-01",
        "blocks": [
         "intro-is2-1-1",
+        "text-is2-geologic-time",
         "card-is2-deep-time",
         "card-is2-index-fossil",
         "card-is2-extinction",
@@ -271,6 +272,7 @@
        "code": "10통과2-01-02",
        "blocks": [
         "intro-is2-1-2",
+        "text-is2-natural-selection",
         "card-is2-selection",
         "card-is2-resistance",
         "card-is2-lamarck",
@@ -284,6 +286,7 @@
        "code": "10통과2-01-03",
        "blocks": [
         "intro-is2-1-3",
+        "text-is2-redox",
         "card-is2-redox-electron",
         "card-is2-reactivity",
         "card-is2-redox-life"
@@ -295,6 +298,7 @@
        "code": "10통과2-01-04",
        "blocks": [
         "intro-is2-1-4",
+        "text-is2-acid-base",
         "card-is2-ion-migration",
         "card-is2-ph-log",
         "card-is2-neutral",
@@ -307,6 +311,7 @@
        "code": "10통과2-01-05",
        "blocks": [
         "intro-is2-1-5",
+        "text-is2-reaction-heat",
         "card-is2-hand-warmer",
         "card-is2-cold-pack"
        ]
@@ -323,6 +328,7 @@
        "code": "10통과2-02-01",
        "blocks": [
         "intro-is2-2-1",
+        "text-is2-ecosystem",
         "card-is2-forest-light",
         "card-is2-fox-heat"
        ]
@@ -333,6 +339,7 @@
        "code": "10통과2-02-02",
        "blocks": [
         "intro-is2-2-2",
+        "text-is2-eco-balance",
         "card-is2-food-chain",
         "card-is2-energy-pyramid"
        ]
@@ -343,6 +350,7 @@
        "code": "10통과2-02-03",
        "blocks": [
         "intro-is2-2-3",
+        "text-is2-greenhouse",
         "card-is2-greenhouse",
         "card-is2-co2",
         "card-is2-sea-level",
@@ -358,6 +366,7 @@
        "code": "10통과2-02-04",
        "blocks": [
         "intro-is2-2-4",
+        "text-is2-solar-energy",
         "card-is2-sun-fusion",
         "card-leaf-color",
         "card-photo-rate",
@@ -370,6 +379,7 @@
        "code": "10통과2-02-05",
        "blocks": [
         "intro-is2-2-5",
+        "text-is2-power",
         "card-is2-generator",
         "text-is2-power-plants",
         "card-is2-transmission",
@@ -382,6 +392,7 @@
        "code": "10통과2-02-06",
        "blocks": [
         "intro-is2-2-6",
+        "text-is2-efficiency",
         "card-is2-efficiency",
         "card-is2-solar-cell",
         "card-is2-renewable",
@@ -400,6 +411,7 @@
        "code": "10통과2-03-01",
        "blocks": [
         "intro-is2-3-1",
+        "text-is2-diagnosis",
         "card-is2-pcr",
         "card-is2-test",
         "card-is2-rapid-test"
@@ -411,6 +423,7 @@
        "code": "10통과2-03-02",
        "blocks": [
         "intro-is2-3-2",
+        "text-is2-big-data",
         "card-is2-confound",
         "card-is2-dredge",
         "card-is2-reident"
@@ -422,6 +435,7 @@
        "code": "10통과2-03-03",
        "blocks": [
         "intro-is2-3-3",
+        "text-is2-ai-robot",
         "card-is2-learn",
         "card-is2-trust",
         "video-is2-ai-cat",
@@ -436,6 +450,7 @@
        "code": "10통과2-03-04",
        "blocks": [
         "intro-is2-3-4",
+        "text-is2-ethics",
         "card-is2-ethics",
         "text-is2-science-role",
         "text-is2-genai"
