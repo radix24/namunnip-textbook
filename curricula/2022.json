@@ -9967,6 +9967,7 @@
        "code": "12인수01-01",
        "blocks": [
         "intro-aimath-1-1",
+        "text-aimath-learning",
         "card-aimath-teach-machine",
         "card-aimath-rule-vs-learn"
        ]
@@ -9977,6 +9978,7 @@
        "code": "12인수01-02",
        "blocks": [
         "intro-aimath-1-2",
+        "text-aimath-history",
         "card-aimath-timeline",
         "card-aimath-perceptron-xor"
        ]
@@ -9987,6 +9989,7 @@
        "code": "12인수01-03",
        "blocks": [
         "intro-aimath-1-3",
+        "text-aimath-bigdata",
         "card-aimath-bigdata-sample",
         "card-aimath-data-bias"
        ]
@@ -10003,6 +10006,7 @@
        "code": "12인수02-01",
        "blocks": [
         "intro-aimath-2-1",
+        "text-aimath-text-vec",
         "card-aimath-jaccard",
         "card-aimath-onehot"
        ]
@@ -10013,6 +10017,7 @@
        "code": "12인수02-02",
        "blocks": [
         "intro-aimath-2-2",
+        "text-aimath-tfidf",
         "card-aimath-word-count",
         "card-aimath-tfidf"
        ]
@@ -10023,6 +10028,7 @@
        "code": "12인수02-03",
        "blocks": [
         "intro-aimath-2-3",
+        "text-aimath-text-analysis",
         "card-aimath-cosine-doc",
         "card-aimath-spam"
        ]
@@ -10039,6 +10045,7 @@
        "code": "12인수03-01",
        "blocks": [
         "intro-aimath-3-1",
+        "text-aimath-image-matrix",
         "card-aimath-pixel-grid",
         "card-aimath-rgb"
        ]
@@ -10049,6 +10056,7 @@
        "code": "12인수03-02",
        "blocks": [
         "intro-aimath-3-2",
+        "text-aimath-image-ops",
         "card-aimath-image-ops",
         "card-aimath-convolution"
        ]
@@ -10059,6 +10067,7 @@
        "code": "12인수03-03",
        "blocks": [
         "intro-aimath-3-3",
+        "text-aimath-classify",
         "card-aimath-digit-distance",
         "card-aimath-knn"
        ]
@@ -10075,6 +10084,7 @@
        "code": "12인수04-01",
        "blocks": [
         "intro-aimath-4-1",
+        "text-aimath-prob",
         "card-aimath-weather-predict",
         "card-aimath-base-rate"
        ]
@@ -10085,6 +10095,7 @@
        "code": "12인수04-02",
        "blocks": [
         "intro-aimath-4-2",
+        "text-aimath-trend",
         "card-aimath-trendline",
         "card-aimath-extrapolate"
        ]
@@ -10095,6 +10106,7 @@
        "code": "12인수04-03",
        "blocks": [
         "intro-aimath-4-3",
+        "text-aimath-loss",
         "card-aimath-loss-curve",
         "card-aimath-loss-outlier"
        ]
@@ -10105,6 +10117,7 @@
        "code": "12인수04-04",
        "blocks": [
         "intro-aimath-4-4",
+        "text-aimath-gd",
         "card-aimath-gradient-descent",
         "card-aimath-gd-contour"
        ]
@@ -10121,6 +10134,7 @@
        "code": "12인수05-01",
        "blocks": [
         "intro-aimath-5-1",
+        "text-aimath-cases",
         "card-aimath-recommend",
         "card-aimath-neuron"
        ]
@@ -10131,6 +10145,7 @@
        "code": "12인수05-02",
        "blocks": [
         "intro-aimath-5-2",
+        "text-aimath-explore",
         "card-aimath-explore-plan",
         "card-aimath-fairness"
        ]

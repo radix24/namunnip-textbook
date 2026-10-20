@@ -1057,21 +1057,21 @@ econ-marginal | 한계비용과 한계수입 | card-econ-marginal-cost card-econ
 econ-shape | 경제 함수의 그래프 개형 | card-econ-avg-marginal card-econ-revenue-shape text-econ-avg-cost | econ-marginal
 econ-elasticity | 가격 탄력성 | card-econ-elasticity card-econ-price-hike text-econ-elasticity | econ-marginal econ-demand
 econ-optimize | 경제의 최적화 | card-econ-profit-max card-econ-ticket-price text-econ-optimize | econ-shape
-ai-learn | 인공지능의 학습과 수학 | card-aimath-teach-machine card-aimath-rule-vs-learn | 
-ai-history | 인공지능과 수학의 역사 | card-aimath-timeline card-aimath-perceptron-xor | ai-learn
-ai-bigdata | 빅데이터와 표본 | card-aimath-bigdata-sample card-aimath-data-bias | 
-ai-text-set | 집합과 벡터로 나타낸 텍스트 | card-aimath-jaccard card-aimath-onehot | cm2-set-ops
-ai-text-freq | 빈도수 벡터와 요약 | card-aimath-word-count card-aimath-tfidf | ai-text-set
-ai-text-analysis | 텍스트 분석의 수학 | card-aimath-cosine-doc card-aimath-spam | ai-text-freq
-ai-image-matrix | 행렬로 나타낸 이미지 | card-aimath-pixel-grid card-aimath-rgb | cm1-matrix
-ai-image-ops | 행렬 연산과 이미지 변환 | card-aimath-image-ops card-aimath-convolution | ai-image-matrix cm1-matrix-ops cm1-matrix-mult
-ai-image-classify | 이미지 분류의 수학 | card-aimath-digit-distance card-aimath-knn | ai-image-matrix ai-learn
-ai-prob-predict | 확률과 예측 | card-aimath-weather-predict card-aimath-base-rate | 
-ai-trendline | 추세선 | card-aimath-trendline card-aimath-extrapolate | cm1-quad-graph
-ai-loss | 손실함수 | card-aimath-loss-curve card-aimath-loss-outlier | ai-trendline
-ai-gradient | 경사하강법 | card-aimath-gradient-descent card-aimath-gd-contour | ai-loss
-ai-cases | 인공지능의 문제 해결 사례 | card-aimath-recommend card-aimath-neuron | ai-text-analysis ai-gradient
-ai-explore | 인공지능 수학 주제 탐구 | card-aimath-explore-plan card-aimath-fairness | ai-bigdata ai-prob-predict
+ai-learn | 인공지능의 학습과 수학 | card-aimath-teach-machine card-aimath-rule-vs-learn text-aimath-learning | 
+ai-history | 인공지능과 수학의 역사 | card-aimath-timeline card-aimath-perceptron-xor text-aimath-history | ai-learn
+ai-bigdata | 빅데이터와 표본 | card-aimath-bigdata-sample card-aimath-data-bias text-aimath-bigdata | 
+ai-text-set | 집합과 벡터로 나타낸 텍스트 | card-aimath-jaccard card-aimath-onehot text-aimath-text-vec | cm2-set-ops
+ai-text-freq | 빈도수 벡터와 요약 | card-aimath-word-count card-aimath-tfidf text-aimath-tfidf | ai-text-set
+ai-text-analysis | 텍스트 분석의 수학 | card-aimath-cosine-doc card-aimath-spam text-aimath-text-analysis | ai-text-freq
+ai-image-matrix | 행렬로 나타낸 이미지 | card-aimath-pixel-grid card-aimath-rgb text-aimath-image-matrix | cm1-matrix
+ai-image-ops | 행렬 연산과 이미지 변환 | card-aimath-image-ops card-aimath-convolution text-aimath-image-ops | ai-image-matrix cm1-matrix-ops cm1-matrix-mult
+ai-image-classify | 이미지 분류의 수학 | card-aimath-digit-distance card-aimath-knn text-aimath-classify | ai-image-matrix ai-learn
+ai-prob-predict | 확률과 예측 | card-aimath-weather-predict card-aimath-base-rate text-aimath-prob | 
+ai-trendline | 추세선 | card-aimath-trendline card-aimath-extrapolate text-aimath-trend | cm1-quad-graph
+ai-loss | 손실함수 | card-aimath-loss-curve card-aimath-loss-outlier text-aimath-loss | ai-trendline
+ai-gradient | 경사하강법 | card-aimath-gradient-descent card-aimath-gd-contour text-aimath-gd | ai-loss
+ai-cases | 인공지능의 문제 해결 사례 | card-aimath-recommend card-aimath-neuron text-aimath-cases | ai-text-analysis ai-gradient
+ai-explore | 인공지능 수학 주제 탐구 | card-aimath-explore-plan card-aimath-fairness text-aimath-explore | ai-bigdata ai-prob-predict
 jm-arith | 직무 속의 수와 사칙연산 | card-jmath-cafe-bill card-jmath-recipe-scale | 
 jm-estimate | 큰 수의 어림 | card-jmath-paint-estimate card-jmath-round-budget | jm-arith
 jm-units | 표준 단위와 단위 환산 | card-jmath-dose-convert card-jmath-unit-error | jm-arith
