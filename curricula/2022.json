@@ -2690,6 +2690,7 @@
        "code": "12지시01-01",
        "blocks": [
         "intro-esys-1-1",
+        "text-esys-frost-line",
         "text-is1-spheres",
         "card-esys-snowline",
         "text-esys-early-earth"
@@ -2701,6 +2702,7 @@
        "code": "12지시01-02",
        "blocks": [
         "intro-esys-1-2",
+        "text-esys-oxygen-rise",
         "card-bio-carbon",
         "card-esys-oxygen",
         "card-is1-water-budget"
@@ -2712,6 +2714,7 @@
        "code": "12지시01-03",
        "blocks": [
         "intro-esys-1-3",
+        "text-esys-plume",
         "card-is1-seafloor",
         "card-is1-plate-boundary",
         "card-esys-hotspot"
@@ -2723,6 +2726,7 @@
        "code": "12지시01-04",
        "blocks": [
         "intro-esys-1-4",
+        "text-esys-volcano-type",
         "card-earth-magma",
         "card-earth-igneous",
         "card-earth-columnar",
@@ -2735,6 +2739,7 @@
        "code": "12지시01-05",
        "blocks": [
         "intro-esys-1-5",
+        "text-esys-seismic-shadow",
         "card-esys-seismic"
        ]
       }
@@ -2750,6 +2755,7 @@
        "code": "12지시02-01",
        "blocks": [
         "intro-esys-2-1",
+        "text-esys-ekman-transport",
         "card-earth-upwelling",
         "card-esys-ekman"
        ]
@@ -2760,6 +2766,7 @@
        "code": "12지시02-02",
        "blocks": [
         "intro-esys-2-2",
+        "text-esys-wave-speed",
         "card-esys-waves"
        ]
       },
@@ -2769,6 +2776,7 @@
        "code": "12지시02-03",
        "blocks": [
         "intro-esys-2-3",
+        "text-esys-tsunami-height",
         "card-earth-danger",
         "card-esys-tsunami",
         "text-esys-surge"
@@ -2780,6 +2788,7 @@
        "code": "12지시02-04",
        "blocks": [
         "intro-esys-2-4",
+        "text-esys-tide-cycle",
         "card-esys-tide"
        ]
       }
@@ -2795,6 +2804,7 @@
        "code": "12지시03-01",
        "blocks": [
         "intro-esys-3-1",
+        "text-esys-selective-absorb",
         "card-is2-greenhouse",
         "card-earth-blackbody",
         "card-esys-absorb"
@@ -2806,6 +2816,7 @@
        "code": "12지시03-02",
        "blocks": [
         "intro-esys-3-2",
+        "text-esys-heat-budget",
         "card-esys-budget",
         "card-is1-earth-energy"
        ]
@@ -2816,6 +2827,7 @@
        "code": "12지시03-03",
        "blocks": [
         "intro-esys-3-3",
+        "text-esys-stability-lift",
         "card-earth-updown",
         "card-esys-stability",
         "text-esys-precip",
@@ -2828,6 +2840,7 @@
        "code": "12지시03-04",
        "blocks": [
         "intro-esys-3-4",
+        "text-esys-hydrostatic",
         "card-esys-hydro"
        ]
       },
@@ -2837,6 +2850,7 @@
        "code": "12지시03-05",
        "blocks": [
         "intro-esys-3-5",
+        "text-esys-geostrophic",
         "card-earth-isobar",
         "card-esys-winds"
        ]
@@ -2847,6 +2861,7 @@
        "code": "12지시03-06",
        "blocks": [
         "intro-esys-3-6",
+        "text-esys-planetary-wave",
         "card-earth-front",
         "card-esys-rossby"
        ]

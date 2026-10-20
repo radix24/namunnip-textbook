@@ -83,25 +83,25 @@ energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-sp
 relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence | inertia gps-time
 
 # ── 지구 ──
-earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system |
+earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system text-esys-frost-line |
 carbon-cycle | 탄소 순환과 인간 활동 | card-is1-carbon-cycle text-is1-human-impact | earth-system
-plate | 판 구조론 | card-is1-seafloor card-is1-plate-boundary video-is1-atlantic text-is1-geosphere-effects card-is1-quake-map card-is1-quake-damage text-is1-plate-tectonics | earth-system
+plate | 판 구조론 | card-is1-seafloor card-is1-plate-boundary video-is1-atlantic text-is1-geosphere-effects card-is1-quake-map card-is1-quake-damage text-is1-plate-tectonics text-esys-plume | earth-system
 rel-age | 지층의 상대 연령 | card-earth-relative-age text-earth-age |
 abs-age | 방사성 동위 원소와 절대 연령 | card-earth-half-life text-mateng-first-order | rel-age
 geotime | 지질 시대와 화석 | card-is2-deep-time card-is2-index-fossil card-is2-extinction card-earth-geotime video-earth-day card-is2-paleoenv card-is2-mass-extinction card-earth-correlate card-earth-fossil-map text-is2-geologic-time text-earth-geotime | rel-age
 sediment | 퇴적 구조와 퇴적 환경 | text-earth-sediment | rel-age
 paleoclimate | 고기후 연구 | text-earth-paleoclimate | geotime
-magma | 마그마와 화성암 | card-earth-magma card-earth-igneous card-earth-columnar text-earth-igneous | plate
+magma | 마그마와 화성암 | card-earth-magma card-earth-igneous card-earth-columnar text-earth-igneous text-esys-volcano-type | plate
 metamorph | 변성 작용과 지질 구조 | card-earth-deform card-earth-foliation text-earth-metamorphic | plate
 rock-cycle | 암석의 순환 | card-earth-rock-cycle card-earth-sedrock | magma metamorph sediment
 korea-geo | 한반도의 지질 | card-earth-korea-rocks card-earth-geopark text-earth-korea-geology | rock-cycle abs-age
 seawater | 해수의 성질 | card-earth-thermocline card-earth-salinity text-earth-oxygen card-earth-argo card-earth-gas text-earth-seawater | earth-system
 deep-circ | 심층 순환 | card-earth-ts card-earth-amoc video-earth-conveyor card-earth-gyre text-earth-deep-circulation | seawater
-wind | 기압과 바람 | card-earth-isobar card-earth-updown text-earth-cyclone | earth-system
-front | 전선과 중위도 저기압 | card-earth-front text-earth-satellite card-earth-forecast text-earth-moving-highs | wind
-typhoon | 태풍과 악기상 | card-earth-typhoon-energy card-earth-danger card-earth-thunder text-earth-severe-weather card-earth-typhoon-track text-earth-typhoon | wind
-enso | 용승과 엘니뇨 | card-earth-upwelling card-earth-enso text-is2-enso-desert card-earth-oni text-earth-enso | seawater wind
-greenhouse | 온실 효과와 지구 온난화 | card-is2-greenhouse card-is2-co2 card-is2-sea-level video-is2-keeling card-is2-ssp text-is2-greenhouse | earth-system
+wind | 기압과 바람 | card-earth-isobar card-earth-updown text-earth-cyclone text-esys-geostrophic text-esys-stability-lift | earth-system
+front | 전선과 중위도 저기압 | card-earth-front text-earth-satellite card-earth-forecast text-earth-moving-highs text-esys-planetary-wave | wind
+typhoon | 태풍과 악기상 | card-earth-typhoon-energy card-earth-danger card-earth-thunder text-earth-severe-weather card-earth-typhoon-track text-earth-typhoon text-esys-tsunami-height | wind
+enso | 용승과 엘니뇨 | card-earth-upwelling card-earth-enso text-is2-enso-desert card-earth-oni text-earth-enso text-esys-ekman-transport | seawater wind
+greenhouse | 온실 효과와 지구 온난화 | card-is2-greenhouse card-is2-co2 card-is2-sea-level video-is2-keeling card-is2-ssp text-is2-greenhouse text-esys-selective-absorb | earth-system
 climate-factor | 기후 변화의 요인 | card-earth-milankovitch card-earth-forcing card-earth-attrib card-earth-mitigate text-earth-climate | greenhouse
 
 # ── 우주 ──
@@ -141,7 +141,7 @@ blood-type | 항원–항체 반응과 혈액형 | card-bio-blood text-bio-blood
 vaccine | 백신과 집단 면역 | card-bio-vtypes card-bio-herd text-bio-vaccine | immunity
 eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat text-is2-ecosystem | bio-levels
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
-cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem | food-web photosyn
+cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem text-esys-oxygen-rise | food-web photosyn
 population | 개체군과 군집 | card-bio-logistic text-bio-social card-bio-interact text-bio-niche card-bio-quadrat text-bio-population | eco-parts
 phyllotaxis | 잎차례와 황금각 | card-phyllo | photosyn
 
@@ -206,15 +206,15 @@ esys-origin | 태양계와 초기 지구의 형성 | card-esys-snowline text-esy
 esys-coevolution | 생명과 지구의 공진화 | card-esys-oxygen | esys-origin photosyn cycles
 esys-plume | 플룸과 열점 | card-esys-hotspot | plate
 esys-volcano | 마그마의 성질과 화산 활동 | card-esys-volcano | magma
-esys-interior | 지진파와 지구 내부 구조 | card-esys-seismic | esys-origin lens
+esys-interior | 지진파와 지구 내부 구조 | card-esys-seismic text-esys-seismic-shadow | esys-origin lens
 esys-geostrophic | 에크만 수송과 지형류 | card-esys-ekman | enso wind
-esys-waves | 심해파와 천해파 | card-esys-waves | seawater
+esys-waves | 심해파와 천해파 | card-esys-waves text-esys-wave-speed | seawater
 esys-surge | 해일 | card-esys-tsunami text-esys-surge | esys-waves typhoon
-esys-tide | 조석 | card-esys-tide | gravity
+esys-tide | 조석 | card-esys-tide text-esys-tide-cycle | gravity
 esys-absorb | 대기의 선택적 흡수와 생명체 | card-esys-absorb | greenhouse blackbody esys-coevolution
-esys-budget | 지구의 열수지 | card-esys-budget | esys-absorb
+esys-budget | 지구의 열수지 | card-esys-budget text-esys-heat-budget | esys-absorb
 esys-stability | 대기 안정도와 구름·강수 | card-esys-stability text-esys-precip | wind
-esys-hydro | 정역학 평형과 연직 운동 | card-esys-hydro | wind
+esys-hydro | 정역학 평형과 연직 운동 | card-esys-hydro text-esys-hydrostatic | wind
 esys-winds | 지균풍·경도풍·지상풍 | card-esys-winds | esys-hydro wind
 esys-rossby | 행성파와 편서풍 파동 | card-esys-rossby | esys-winds front
 
