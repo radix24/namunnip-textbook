@@ -120,9 +120,9 @@ life | 생명의 특성 | card-bio-alive text-bio-modern text-bio-science |
 bio-levels | 생명 시스템의 구성 단계 | card-bio-levels text-bio-eco-levels text-bio-levels |
 membrane | 세포막과 물질 출입 | card-is1-membrane text-mateng-osmotic text-cell-membrane-transport | bio-levels
 enzyme | 효소 | card-is1-enzyme-fit card-is1-activation text-is1-enzymes-life card-is1-catalase text-cell-enzyme-kinetics | polymer
-dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon text-is1-gene-protein | polymer
+dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon text-is1-gene-protein text-gene-chromosome-error text-gene-transcription | polymer
 pcr | PCR 진단 | card-is2-pcr card-is2-rapid-test text-is2-diagnosis | dogma
-chromosome | 염색체와 DNA | card-bio-dna-pack card-bio-gene-chromo card-bio-karyotype text-bio-chromosome | dogma
+chromosome | 염색체와 DNA | card-bio-dna-pack card-bio-gene-chromo card-bio-karyotype text-bio-chromosome text-gene-genome-size text-gene-sexlinked | dogma
 division | 세포 분열 | card-bio-division card-bio-assort video-bio-meiosis text-bio-division | chromosome
 evolution | 변이와 자연선택 | card-is2-selection card-is2-resistance card-is2-lamarck video-is2-moth card-bio-selection card-bio-finch video-bio-whale card-bio-genepool text-bio-evo-methods text-is2-natural-selection text-bio-evolution | dogma
 biodiversity | 생물다양성 | text-is2-biodiversity | evolution
@@ -137,7 +137,7 @@ nervous | 신경계 | card-bio-reflex card-bio-autonomic text-bio-brain card-bio
 homeostasis | 항상성 | card-bio-glucose card-bio-thermo video-bio-fever card-bio-hormone card-bio-wearable text-bio-homeostasis | nervous organ-sys
 metab-disease | 물질대사와 질환 | card-bio-diabetes card-bio-energy text-bio-epidemiology card-bio-metabolic text-bio-disease | homeostasis
 immunity | 병원체와 면역 | card-bio-pathogen card-bio-immune text-bio-immunity | life
-blood-type | 항원–항체 반응과 혈액형 | card-bio-blood text-bio-bloodtype | immunity
+blood-type | 항원–항체 반응과 혈액형 | card-bio-blood text-bio-bloodtype text-gene-abo | immunity
 vaccine | 백신과 집단 면역 | card-bio-vtypes card-bio-herd text-bio-vaccine | immunity
 eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat text-is2-ecosystem | bio-levels
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
@@ -182,7 +182,7 @@ mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate
 
 # ── 진로선택: 세포와 물질대사 ──
 cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid | polymer
-cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-protein | polymer
+cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-protein text-gene-hershey | polymer
 cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions text-cell-centrifuge | bio-levels
 cell-endomembrane | 내막계와 분비 경로 | card-cell-pulse | cell-organelle dogma
 cell-pro-eu | 원핵세포와 진핵세포 | card-cell-size text-cell-pro-eu text-cell-surface-volume | cell-organelle
@@ -256,21 +256,21 @@ rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber | rxn
 # ── 진로선택: 생물의 유전 ──
 gene-sexlinked | 상염색체 유전과 반성 유전 | card-gene-sexlinked | division
 gene-pedigree | 가계도 분석 | card-gene-pedigree | gene-sexlinked blood-type
-gene-polygenic | 다유전자 유전 | card-gene-polygenic | division
+gene-polygenic | 다유전자 유전 | card-gene-polygenic text-gene-polygenic | division
 gene-disorder | 염색체 이상과 유전자 이상 | card-gene-nondisjunction text-gene-disorders | division dogma
 gene-material | 유전 물질의 규명과 DNA 구조 | card-gene-hershey text-gene-dna-history | chromosome cell-protein-na
 gene-genome | 유전자 구조와 유전체 | card-gene-genome | chromosome
-gene-replication | 반보존적 DNA 복제 | card-gene-replication | gene-material
+gene-replication | 반보존적 DNA 복제 | card-gene-replication text-gene-replication | gene-material
 gene-expression | 전사와 번역, RNA 가공 | card-gene-central | dogma gene-genome
-gene-code | 유전 부호와 돌연변이 | card-gene-codon | gene-expression
-gene-regulation | 유전자 발현 조절 | card-gene-lac | gene-expression
-gene-differentiation | 세포 분화와 발생 | card-gene-differentiation | gene-regulation
-gene-welfare | 발현 조절 연구와 인류 복지 | text-gene-regulation-welfare | gene-differentiation
-gene-biotech-history | 생명공학기술의 발달 | text-gene-biotech-history | gene-replication gene-expression
-gene-editing | 유전자 편집·줄기세포·단일클론항체 | card-gene-crispr text-gene-therapies | gene-biotech-history gene-differentiation
-gene-fingerprint | PCR과 전기 영동, DNA 지문 | card-gene-gel | gene-biotech-history
-gene-lmo | 유전자 변형 생물체 | card-gene-bt | gene-biotech-history
-gene-ethics | 생명 윤리 | text-gene-bioethics | gene-editing gene-lmo
+gene-code | 유전 부호와 돌연변이 | card-gene-codon text-gene-codon | gene-expression
+gene-regulation | 유전자 발현 조절 | card-gene-lac text-gene-operon | gene-expression
+gene-differentiation | 세포 분화와 발생 | card-gene-differentiation text-gene-differentiation | gene-regulation
+gene-welfare | 발현 조절 연구와 인류 복지 | text-gene-regulation-welfare text-gene-rnai | gene-differentiation
+gene-biotech-history | 생명공학기술의 발달 | text-gene-biotech-history text-gene-restriction | gene-replication gene-expression
+gene-editing | 유전자 편집·줄기세포·단일클론항체 | card-gene-crispr text-gene-therapies text-gene-crispr | gene-biotech-history gene-differentiation
+gene-fingerprint | PCR과 전기 영동, DNA 지문 | card-gene-gel text-gene-profile | gene-biotech-history
+gene-lmo | 유전자 변형 생물체 | card-gene-bt text-gene-bt-refuge | gene-biotech-history
+gene-ethics | 생명 윤리 | text-gene-bioethics text-gene-screening | gene-editing gene-lmo
 
 # ── 진로선택: 행성우주과학 ──
 space-exploration | 태양계 탐사와 탐사선 궤도 | card-space-hohmann text-space-exploration | kepler
