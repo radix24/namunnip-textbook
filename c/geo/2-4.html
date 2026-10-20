@@ -52,9 +52,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-geo-coord-point"><span class="mono">2.4.1</span>좌표공간과 공간좌표</a></li>
-        <li><a href="#card-geo-dist3"><span class="mono">2.4.2</span>두 점 사이의 거리</a></li>
-        <li><a href="#card-geo-section3"><span class="mono">2.4.3</span>선분의 내분점</a></li>
+        <li><a href="#text-geo-coord3"><span class="mono">2.4.1</span>본문 · 공간좌표</a></li>
+        <li><a href="#card-geo-coord-point"><span class="mono">2.4.2</span>좌표공간과 공간좌표</a></li>
+        <li><a href="#card-geo-dist3"><span class="mono">2.4.3</span>두 점 사이의 거리</a></li>
+        <li><a href="#card-geo-section3"><span class="mono">2.4.4</span>선분의 내분점</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=geo&amp;sec=2-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">15문항 →</span></a>
@@ -63,9 +64,59 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-geo-coord3" data-kind="본문">
+        <header class="card-head"><span class="no">2.4.1</span><h2>공간에서 두 점 사이의 거리는 어떻게 잴까?</h2><span class="kind">본문 · 공간좌표</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">교실 바닥 한구석에서 반대편 천장 구석까지 줄을 팽팽하게 당기면 길이가 얼마일까? 가로 8 m, 세로 6 m, 높이 3 m인 교실이라면 피타고라스 정리를 쓰면 될 것 같다. 그런데 직각삼각형이 공중에 비스듬히 놓여 있다. 공간의 점을 수로 나타내면 이런 계산을 체계적으로 할 수 있지 않을까?</p>
+          <figure class="q-fig" data-q="geo-coord3">
+            <svg viewBox="0 0 520 230" role="img" aria-label="좌표공간의 점 P(a, b, c)와 원점까지의 거리"></svg>
+            <div class="q-ctl"><label>\(a\) <input type="range" data-k="a" min="0" max="5" step="0.5" value="4"><output data-k="a"></output></label><label>\(b\) <input type="range" data-k="b" min="0" max="5" step="0.5" value="3"><output data-k="b"></output></label><label>\(c\) <input type="range" data-k="c" min="0" max="5" step="0.5" value="2"><output data-k="c"></output></label></div>
+            <p class="q-read"></p>
+            <figcaption>그림 1. 점 \(P(a, b, c)\)는 세 모서리가 \(a\), \(b\), \(c\)인 직육면체의 꼭짓점이다. 밑면의 대각선(주황)과 높이 \(c\)로 직각삼각형을 만들면 \(\overline{OP} = \sqrt{a^2 + b^2 + c^2}\)이다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>좌표평면 위의 두 점 사이의 거리와 내분점(공통수학2), 정사영(<a href="2-3.html">정사영</a>), 피타고라스 정리.</div>
+
+          <h3><span class="mono">1</span>공간좌표</h3>
+          <p>공간의 한 점 O에서 서로 수직인 세 수직선을 \(x\)축, \(y\)축, \(z\)축이라 하고, 두 축이 정하는 세 평면을 \(xy\)평면, \(yz\)평면, \(zx\)평면이라 한다. 공간의 점 P에서 세 좌표평면에 수직인 평면을 그어 각 축과 만나는 점의 좌표를 \(a\), \(b\), \(c\)라 하면, 점 P를 세 실수의 순서쌍 \((a, b, c)\)로 나타낼 수 있다. 이를 점 P의 공간좌표라 한다.</p>
+          <p>점 \((a, b, c)\)를 \(xy\)평면에 정사영하면 \((a, b, 0)\)이 되고, \(xy\)평면에 대해 대칭이동하면 \((a, b, -c)\)가 된다. 좌표평면에서처럼 대칭이동한 축이나 평면에 해당하는 좌표만 부호가 바뀌지 않는다.</p>
+
+          <h3><span class="mono">2</span>두 점 사이의 거리와 내분점</h3>
+          <p>원점 O와 점 \(P(a, b, c)\) 사이의 거리를 구하자. P의 \(xy\)평면 위로의 정사영 \(P'(a, b, 0)\)에 대하여 \(\overline{OP'} = \sqrt{a^2 + b^2}\)이다. 삼각형 \(OP'P\)는 \(P'\)에서 직각인 직각삼각형이므로 \(\overline{OP}^2 = a^2 + b^2 + c^2\)이다. 피타고라스 정리를 두 번 쓴 셈이다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">두 점 사이의 거리와 내분점</span></span>
+            <p>\(A(x_1, y_1, z_1)\), \(B(x_2, y_2, z_2)\)에 대하여 \[\overline{AB} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}\] 선분 AB를 \(m : n\)으로 내분하는 점은 \(\left(\dfrac{mx_2 + nx_1}{m + n}, \dfrac{my_2 + ny_1}{m + n}, \dfrac{mz_2 + nz_1}{m + n}\right)\)이다.</p>
+          </div>
+          <p>내분점은 선분을 세 좌표축에 각각 정사영하여 생각하면, 축마다 좌표평면에서와 같은 비로 나뉜다. 그래서 좌표마다 따로 계산하면 된다. 그림 1에서 \(a\), \(b\), \(c\)를 바꾸어 보며 거리가 어떻게 변하는지 확인해 보자.<sup class="fn"><a href="#fn-geo-coord3-1">1</a></sup></p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="좌표평면과 좌표공간의 공식 비교">
+              <g class="s">
+                <text x="30" y="25">구분</text><text x="140" y="25">좌표평면</text><text x="330" y="25">좌표공간</text>
+                <line x1="20" y1="33" x2="500" y2="33" class="gd"/>
+                <text x="30" y="60">거리</text><text x="140" y="60">√(Δx² + Δy²)</text><text x="330" y="60">√(Δx² + Δy² + Δz²)</text>
+                <text x="30" y="90">내분점</text><text x="140" y="90">좌표 2개를 따로</text><text x="330" y="90">좌표 3개를 따로</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 좌표공간의 공식은 좌표평면의 공식에 \(z\)좌표 하나를 더한 꼴이다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>가로 8 m, 세로 6 m, 높이 3 m인 교실의 바닥 한구석에서 반대편 천장 구석까지의 거리를 구하여라. 또 두 점 \(A(1, -2, 3)\), \(B(4, 4, -3)\)을 잇는 선분을 \(1 : 2\)로 내분하는 점을 구하여라.</p>
+          </div>
+          <p>바닥 구석을 원점으로 잡으면 반대편 천장 구석은 \((8, 6, 3)\)이다. 거리는 \(\sqrt{64 + 36 + 9} = \sqrt{109} \approx 10.4\) m이다. 바닥 대각선이 \(\sqrt{64 + 36} = 10\) m이고, 그것과 높이 3 m로 다시 직각삼각형을 만든 것과 같다.</p>
+          <p>내분점은 \(\left(\dfrac{1 \cdot 4 + 2 \cdot 1}{3}, \dfrac{1 \cdot 4 + 2 \cdot (-2)}{3}, \dfrac{1 \cdot (-3) + 2 \cdot 3}{3}\right) = (2, 0, 1)\)이다. 확인하면 \(\overline{AP} = \sqrt{1 + 4 + 4} = 3\), \(\overline{PB} = \sqrt{4 + 16 + 16} = 6\)으로 비가 \(1 : 2\)이다.</p>
+          <p>아래 탐구 카드에서 공간의 점을 좌표로 나타내고, 두 점 사이의 거리와 내분점을 직접 구해 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-geo-coord3-1">삼각형의 무게중심도 좌표평면에서와 같이 세 꼭짓점 좌표의 평균, 곧 \(\left(\dfrac{x_1 + x_2 + x_3}{3}, \dfrac{y_1 + y_2 + y_3}{3}, \dfrac{z_1 + z_2 + z_3}{3}\right)\)이다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>공간의 점은 세 좌표축에 대한 순서쌍 \((a, b, c)\)로 나타내며, 두 점 사이의 거리는 피타고라스 정리를 두 번 써서 \(\sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}\)로 구하고, 내분점은 좌표마다 따로 계산한다. 그래서 처음 질문의 교실 대각선 길이는 \(\sqrt{8^2 + 6^2 + 3^2} = \sqrt{109} \approx 10.4\) m이다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>기울어진 판의 그림자 넓이는 어떻게 구할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a></div></nav>
+
       <article class="card" id="card-geo-coord-point">
         <header class="card-head">
-          <span class="no">2.4.1</span><h2>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</h2><span class="kind">좌표공간 · 공간좌표 · 대칭점</span>
+          <span class="no">2.4.2</span><h2>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</h2><span class="kind">좌표공간 · 공간좌표 · 대칭점</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -114,11 +165,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>기울어진 판의 그림자 넓이는 어떻게 구할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a></div></nav>
 
       <article class="card" id="card-geo-dist3">
         <header class="card-head">
-          <span class="no">2.4.2</span><h2>공간에서 두 점 사이의 거리는 피타고라스 정리를 몇 번 쓰면 될까?</h2><span class="kind">두 점 사이의 거리 · 좌표공간</span>
+          <span class="no">2.4.3</span><h2>공간에서 두 점 사이의 거리는 피타고라스 정리를 몇 번 쓰면 될까?</h2><span class="kind">두 점 사이의 거리 · 좌표공간</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -171,11 +222,11 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a><a href="../../c/pmath/2-5.html#card-pmath-section3d"><small class="mono">전문 수학 2.5</small>선분 밖에서도 선분을 m : n으로 나눌 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구를 평면으로 자르면 단면의 크기는 어떻게 정해질까?</a><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a></div></nav>
 
       <article class="card" id="card-geo-section3">
         <header class="card-head">
-          <span class="no">2.4.3</span><h2>공간의 선분을 m : n으로 나누는 점은 좌표마다 따로 구해도 될까?</h2><span class="kind">선분의 내분점 · 중점</span>
+          <span class="no">2.4.4</span><h2>공간의 선분을 m : n으로 나누는 점은 좌표마다 따로 구해도 될까?</h2><span class="kind">선분의 내분점 · 중점</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -241,6 +292,8 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/lib/qfig.js"></script>
+<script src="../../js/cards/geo/body.js"></script>
 <script src="../../js/cards/geo/space3d.js"></script>
 <script src="../../js/cards/geo/sp-coord-point.js"></script>
 <script src="../../js/cards/geo/sp-dist3.js"></script>

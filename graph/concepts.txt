@@ -858,35 +858,35 @@ cm2-inverse | 역함수 | card-cm2-inverse-map card-cm2-inverse-graph text-cm2-i
 cm2-rational-func | 유리함수 | card-cm2-rational-shift card-cm2-rational-form text-cm2-rational | cm2-function
 cm2-irrational-func | 무리함수 | card-cm2-sqrt-shift card-cm2-sqrt-line text-cm2-irrational | cm2-function cm2-inverse
 # geo-1
-geo-parabola | 포물선의 정의와 방정식 | card-geo-parabola-def card-geo-parabola-shift | 
-geo-ellipse | 타원의 정의와 방정식 | card-geo-ellipse-def card-geo-ellipse-eq | 
-geo-hyperbola | 쌍곡선의 정의와 방정식 | card-geo-hyperbola-def card-geo-hyperbola-asym | geo-ellipse
-geo-conic-tangent | 이차곡선의 접선 | card-geo-tangent-slope card-geo-tangent-point | geo-parabola geo-ellipse geo-hyperbola
+geo-parabola | 포물선의 정의와 방정식 | card-geo-parabola-def card-geo-parabola-shift text-geo-parabola | 
+geo-ellipse | 타원의 정의와 방정식 | card-geo-ellipse-def card-geo-ellipse-eq text-geo-ellipse | 
+geo-hyperbola | 쌍곡선의 정의와 방정식 | card-geo-hyperbola-def card-geo-hyperbola-asym text-geo-hyperbola | geo-ellipse
+geo-conic-tangent | 이차곡선의 접선 | card-geo-tangent-slope card-geo-tangent-point text-geo-conic-tangent | geo-parabola geo-ellipse geo-hyperbola
 geo-conic-uses | 이차곡선의 활용 | text-geo-conic-uses | geo-parabola geo-ellipse geo-hyperbola
 # geo-2
-geo-plane-determine | 평면의 결정 조건 | text-geo-plane-determine | 
+geo-plane-determine | 평면의 결정 조건 | text-geo-plane-determine text-geo-space-lines | 
 geo-line-line | 두 직선의 위치 관계와 꼬인 위치 | card-geo-line-pos | geo-plane-determine
 geo-line-plane | 직선과 평면의 위치 관계와 수직 | card-geo-line-plane | geo-line-line geo-plane-determine
 geo-plane-plane | 두 평면의 위치 관계와 교선 | card-geo-plane-cut | geo-plane-determine geo-line-line
-geo-three-perp | 삼수선 정리 | card-geo-three-perp | geo-line-plane
+geo-three-perp | 삼수선 정리 | card-geo-three-perp text-geo-three-perp | geo-line-plane
 geo-dihedral | 이면각과 두 평면이 이루는 각 | card-geo-dihedral | geo-plane-plane geo-three-perp
-geo-projection | 정사영과 정사영의 길이 | card-geo-proj-segment | geo-line-plane
+geo-projection | 정사영과 정사영의 길이 | card-geo-proj-segment text-geo-projection | geo-line-plane
 geo-proj-area | 정사영의 넓이 | card-geo-proj-area | geo-projection geo-dihedral
-geo-space-coord | 좌표공간과 공간좌표 | card-geo-coord-point | geo-projection
+geo-space-coord | 좌표공간과 공간좌표 | card-geo-coord-point text-geo-coord3 | geo-projection
 geo-dist3 | 좌표공간에서 두 점 사이의 거리 | card-geo-dist3 | geo-space-coord
 geo-section3 | 좌표공간에서 선분의 내분점 | card-geo-section3 | geo-space-coord geo-dist3
-geo-sphere-eq | 구의 방정식 | card-geo-sphere-eq card-geo-sphere-complete | geo-dist3
+geo-sphere-eq | 구의 방정식 | card-geo-sphere-eq card-geo-sphere-complete text-geo-sphere | geo-dist3
 geo-sphere-section | 구와 평면의 위치 관계 | card-geo-sphere-section | geo-sphere-eq
 # geo-3
-geo-vec-def | 벡터의 뜻 | text-geo-vec-terms | 
+geo-vec-def | 벡터의 뜻 | text-geo-vec-terms text-geo-vectors | 
 geo-vec-add | 벡터의 덧셈과 뺄셈 | card-geo-vec-add | geo-vec-def
 geo-vec-scalar | 벡터의 실수배 | card-geo-vec-scalar | geo-vec-def
-geo-pos-vec | 위치벡터 | card-geo-pos-section | geo-vec-add geo-vec-scalar
+geo-pos-vec | 위치벡터 | card-geo-pos-section text-geo-position-vec | geo-vec-add geo-vec-scalar
 geo-vec-comp | 벡터의 성분 | card-geo-components card-geo-space-components | geo-pos-vec
-geo-dot | 벡터의 내적 | card-geo-dot-angle card-geo-dot-space | geo-vec-comp
-geo-line-vec | 벡터를 이용한 직선의 방정식 | card-geo-line-dir card-geo-line-space | geo-pos-vec geo-vec-comp
+geo-dot | 벡터의 내적 | card-geo-dot-angle card-geo-dot-space text-geo-dot | geo-vec-comp
+geo-line-vec | 벡터를 이용한 직선의 방정식 | card-geo-line-dir card-geo-line-space text-geo-line-eq | geo-pos-vec geo-vec-comp
 geo-line-normal | 법선벡터와 직선 | card-geo-line-normal | geo-dot geo-line-vec
-geo-plane-vec | 평면의 방정식 | card-geo-plane-normal | geo-dot geo-line-normal
+geo-plane-vec | 평면의 방정식 | card-geo-plane-normal text-geo-plane-eq | geo-dot geo-line-normal
 geo-sphere-vec | 구의 벡터방정식 | card-geo-sphere-vec | geo-pos-vec geo-vec-comp
 # stat-1
 stat-rep-perm | 중복순열 | card-stat-rep-perm text-stat-perm-rep | 
