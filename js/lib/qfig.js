@@ -33,20 +33,21 @@ window.NMQ = (() => {
       iy: (p) => y0 + (Y1 - p) / sy,
     };
   }
-  // 모눈과 축. o = { step: 1, label: true, xs: "x", ys: "y" }
+  // 모눈과 축. o = { step: 1, label: true, xs: "x", ys: "y" }. step, lstep은 [x 간격, y 간격]으로도 줄 수 있다.
   function axes(g, F, o) {
     o = o || {};
-    const st = o.step || 1, gs = o.grid === false ? null : el("g", {}, g);
+    const two = (v, d) => (Array.isArray(v) ? v : [v == null ? d : v, v == null ? d : v]);
+    const [sx, sy] = two(o.step, 1), gs = o.grid === false ? null : el("g", {}, g);
     if (gs) {
-      for (let v = Math.ceil(F.x0 / st) * st; v <= F.x1 + 1e-9; v += st) el("line", { x1: F.x(v), y1: F.Y0, x2: F.x(v), y2: F.Y1, class: "gd" }, gs);
-      for (let v = Math.ceil(F.y0 / st) * st; v <= F.y1 + 1e-9; v += st) el("line", { x1: F.X0, y1: F.y(v), x2: F.X1, y2: F.y(v), class: "gd" }, gs);
+      for (let v = Math.ceil(F.x0 / sx) * sx; v <= F.x1 + 1e-9; v += sx) el("line", { x1: F.x(v), y1: F.Y0, x2: F.x(v), y2: F.Y1, class: "gd" }, gs);
+      for (let v = Math.ceil(F.y0 / sy) * sy; v <= F.y1 + 1e-9; v += sy) el("line", { x1: F.X0, y1: F.y(v), x2: F.X1, y2: F.y(v), class: "gd" }, gs);
     }
     if (F.y0 <= 0 && F.y1 >= 0) el("line", { x1: F.X0, y1: F.y(0), x2: F.X1, y2: F.y(0), class: "ax" }, g);
     if (F.x0 <= 0 && F.x1 >= 0) el("line", { x1: F.x(0), y1: F.Y0, x2: F.x(0), y2: F.Y1, class: "ax" }, g);
     if (o.label !== false) {
-      const ls = o.lstep || st * (o.every || 1);
-      for (let v = Math.ceil(F.x0 / ls) * ls; v <= F.x1 + 1e-9; v += ls) if (Math.abs(v) > 1e-9 && F.y0 <= 0 && F.y1 >= 0) txt(g, F.x(v), F.y(0) + 14, num(v), "s", "middle");
-      for (let v = Math.ceil(F.y0 / ls) * ls; v <= F.y1 + 1e-9; v += ls) if (Math.abs(v) > 1e-9 && F.x0 <= 0 && F.x1 >= 0) txt(g, F.x(0) - 5, F.y(v) + 4, num(v), "s", "end");
+      const [lx, ly] = o.lstep ? two(o.lstep) : [sx * (o.every || 1), sy * (o.every || 1)];
+      for (let v = Math.ceil(F.x0 / lx) * lx; v <= F.x1 + 1e-9; v += lx) if (Math.abs(v) > 1e-9 && F.y0 <= 0 && F.y1 >= 0) txt(g, F.x(v), F.y(0) + 14, num(v), "s", "middle");
+      for (let v = Math.ceil(F.y0 / ly) * ly; v <= F.y1 + 1e-9; v += ly) if (Math.abs(v) > 1e-9 && F.x0 <= 0 && F.x1 >= 0) txt(g, F.x(0) - 5, F.y(v) + 4, num(v), "s", "end");
       if (F.y0 <= 0 && F.y1 >= 0) txt(g, F.X1 - 4, F.y(0) - 6, o.xs || "x", "i", "end");
       if (F.x0 <= 0 && F.x1 >= 0) txt(g, F.x(0) + 6, F.Y0 + 14, o.ys || "y", "i");
     }

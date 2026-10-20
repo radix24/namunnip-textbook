@@ -769,39 +769,39 @@ calc1-ftc | 부정적분과 정적분의 관계 | card-calc1-area-function card-
 calc1-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc1-area-axis card-calc1-area-between text-calc1-area | calc1-ftc
 calc1-int-motion | 속도와 거리 | card-calc1-vel-dist card-calc1-chase text-calc1-distance | calc1-ftc calc1-area
 # calc2-1
-calc2-seq-limit | 수열의 수렴과 발산 | card-calc2-seq-converge card-calc2-seq-far | 
-calc2-seq-limit-laws | 수열의 극한에 대한 성질 | card-calc2-lim-laws card-calc2-rational-seq | calc2-seq-limit
+calc2-seq-limit | 수열의 수렴과 발산 | card-calc2-seq-converge card-calc2-seq-far text-calc2-seq-limit | 
+calc2-seq-limit-laws | 수열의 극한에 대한 성질 | card-calc2-lim-laws card-calc2-rational-seq text-calc2-lim-props | calc2-seq-limit
 calc2-seq-squeeze | 수열의 극한의 대소 관계 | card-calc2-squeeze | calc2-seq-limit
-calc2-geo-seq-limit | 등비수열의 극한 | card-calc2-geo-ratio card-calc2-geo-compare | calc2-seq-limit-laws
-calc2-series | 급수와 부분합 | card-calc2-partial-sum card-calc2-nth-term | calc2-seq-limit-laws
-calc2-geo-series | 등비급수 | card-calc2-geo-series card-calc2-bounce | calc2-series calc2-geo-seq-limit
+calc2-geo-seq-limit | 등비수열의 극한 | card-calc2-geo-ratio card-calc2-geo-compare text-calc2-geo-seq | calc2-seq-limit-laws
+calc2-series | 급수와 부분합 | card-calc2-partial-sum card-calc2-nth-term text-calc2-series | calc2-seq-limit-laws
+calc2-geo-series | 등비급수 | card-calc2-geo-series card-calc2-bounce text-calc2-geo-series | calc2-series calc2-geo-seq-limit
 # calc2-2a
-calc2-e-natlog | 자연상수 e와 자연로그 | card-calc2-e-limit | 
+calc2-e-natlog | 자연상수 e와 자연로그 | card-calc2-e-limit text-calc2-exp-log | 
 calc2-exp-log-deriv | 지수함수와 로그함수의 도함수 | card-calc2-exp-slope card-calc2-log-deriv | calc2-e-natlog
-calc2-trig-addition | 삼각함수의 덧셈정리 | card-calc2-chord-add card-calc2-line-angle card-calc2-wave-sum | 
-calc2-trig-limit | 삼각함수의 극한 | card-calc2-sinx-x | 
+calc2-trig-addition | 삼각함수의 덧셈정리 | card-calc2-chord-add card-calc2-line-angle card-calc2-wave-sum text-calc2-addition | 
+calc2-trig-limit | 삼각함수의 극한 | card-calc2-sinx-x text-calc2-trig-deriv | 
 calc2-trig-deriv | 사인함수와 코사인함수의 도함수 | card-calc2-sin-deriv | calc2-trig-addition calc2-trig-limit
-calc2-quotient-rule | 몫의 미분법 | card-calc2-quotient | 
+calc2-quotient-rule | 몫의 미분법 | card-calc2-quotient text-calc2-quotient | 
 calc2-trig-deriv-more | 여러 가지 삼각함수의 도함수 | card-calc2-trig-table | calc2-quotient-rule calc2-trig-deriv
-calc2-chain-rule | 합성함수의 미분법 | card-calc2-chain-lines | 
+calc2-chain-rule | 합성함수의 미분법 | card-calc2-chain-lines text-calc2-chain | 
 calc2-power-real | 실수 지수 거듭제곱의 도함수와 로그미분법 | card-calc2-power-real | calc2-chain-rule calc2-exp-log-deriv
-calc2-param-deriv | 매개변수로 나타낸 함수의 미분 | card-calc2-param-tangent card-calc2-param-reparam | calc2-chain-rule
+calc2-param-deriv | 매개변수로 나타낸 함수의 미분 | card-calc2-param-tangent card-calc2-param-reparam text-calc2-param | calc2-chain-rule
 # calc2-2b
-calc2-implicit-deriv | 음함수의 미분법 | card-calc2-implicit-slope | 
+calc2-implicit-deriv | 음함수의 미분법 | card-calc2-implicit-slope text-calc2-implicit | 
 calc2-inverse-deriv | 역함수의 미분법 | card-calc2-inverse-slope | calc2-implicit-deriv
-calc2-tangent-curves | 여러 가지 곡선의 접선 | card-calc2-tangent-from-point card-calc2-slope-tangent | calc2-implicit-deriv
-calc2-second-deriv | 이계도함수와 볼록, 변곡점 | card-calc2-concavity | 
+calc2-tangent-curves | 여러 가지 곡선의 접선 | card-calc2-tangent-from-point card-calc2-slope-tangent text-calc2-tangent | calc2-implicit-deriv
+calc2-second-deriv | 이계도함수와 볼록, 변곡점 | card-calc2-concavity text-calc2-graph-shape | 
 calc2-curve-sketch | 그래프의 개형 | card-calc2-curve-sketch | calc2-second-deriv
-calc2-eq-ineq | 방정식과 부등식에의 활용 | card-calc2-root-count card-calc2-exp-bound | calc2-curve-sketch calc2-tangent-curves
-calc2-velocity-accel | 속도와 가속도 | card-calc2-line-motion card-calc2-plane-motion | calc2-second-deriv
+calc2-eq-ineq | 방정식과 부등식에의 활용 | card-calc2-root-count card-calc2-exp-bound text-calc2-eq-ineq | calc2-curve-sketch calc2-tangent-curves
+calc2-velocity-accel | 속도와 가속도 | card-calc2-line-motion card-calc2-plane-motion text-calc2-motion | calc2-second-deriv
 # calc2-3
-calc2-int-functions | 여러 가지 함수의 적분 | card-calc2-xn-integral card-calc2-antideriv-check | 
-calc2-int-substitution | 치환적분법 | card-calc2-substitution card-calc2-sub-bounds | calc2-int-functions
-calc2-int-parts | 부분적분법 | card-calc2-parts-area card-calc2-parts-choice | calc2-int-functions
-calc2-int-series | 정적분과 급수의 합 | card-calc2-sum-read card-calc2-sum-to-int | calc2-int-functions
-calc2-int-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc2-area-slices card-calc2-area-cross | calc2-int-functions calc2-int-parts
-calc2-int-volume | 입체도형의 부피 | card-calc2-cross-section card-calc2-cavalieri | calc2-int-series
-calc2-int-distance | 속도와 거리 | card-calc2-distance-area card-calc2-path-length | calc2-int-functions calc2-int-series
+calc2-int-functions | 여러 가지 함수의 적분 | card-calc2-xn-integral card-calc2-antideriv-check text-calc2-integrals | 
+calc2-int-substitution | 치환적분법 | card-calc2-substitution card-calc2-sub-bounds text-calc2-substitution | calc2-int-functions
+calc2-int-parts | 부분적분법 | card-calc2-parts-area card-calc2-parts-choice text-calc2-parts | calc2-int-functions
+calc2-int-series | 정적분과 급수의 합 | card-calc2-sum-read card-calc2-sum-to-int text-calc2-riemann | calc2-int-functions
+calc2-int-area | 곡선으로 둘러싸인 도형의 넓이 | card-calc2-area-slices card-calc2-area-cross text-calc2-area | calc2-int-functions calc2-int-parts
+calc2-int-volume | 입체도형의 부피 | card-calc2-cross-section card-calc2-cavalieri text-calc2-volume | calc2-int-series
+calc2-int-distance | 속도와 거리 | card-calc2-distance-area card-calc2-path-length text-calc2-distance | calc2-int-functions calc2-int-series
 # cm1-1
 cm1-poly-ops | 다항식의 덧셈·뺄셈·곱셈 | card-cm1-poly-mult text-cm1-poly-ops | 
 cm1-poly-div | 다항식의 나눗셈 | card-cm1-poly-div | cm1-poly-ops

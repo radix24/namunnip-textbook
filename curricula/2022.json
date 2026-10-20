@@ -8047,6 +8047,7 @@
        "code": "12미적Ⅱ-01-01",
        "blocks": [
         "intro-calc2-1-1",
+        "text-calc2-seq-limit",
         "card-calc2-seq-converge",
         "card-calc2-seq-far"
        ]
@@ -8057,6 +8058,7 @@
        "code": "12미적Ⅱ-01-02",
        "blocks": [
         "intro-calc2-1-2",
+        "text-calc2-lim-props",
         "card-calc2-lim-laws",
         "card-calc2-rational-seq",
         "card-calc2-squeeze"
@@ -8068,6 +8070,7 @@
        "code": "12미적Ⅱ-01-03",
        "blocks": [
         "intro-calc2-1-3",
+        "text-calc2-geo-seq",
         "card-calc2-geo-ratio",
         "card-calc2-geo-compare"
        ]
@@ -8078,6 +8081,7 @@
        "code": "12미적Ⅱ-01-04",
        "blocks": [
         "intro-calc2-1-4",
+        "text-calc2-series",
         "card-calc2-partial-sum",
         "card-calc2-nth-term"
        ]
@@ -8088,6 +8092,7 @@
        "code": "12미적Ⅱ-01-05",
        "blocks": [
         "intro-calc2-1-5",
+        "text-calc2-geo-series",
         "card-calc2-geo-series",
         "card-calc2-bounce"
        ]
@@ -8104,6 +8109,7 @@
        "code": "12미적Ⅱ-02-01",
        "blocks": [
         "intro-calc2-2-1",
+        "text-calc2-exp-log",
         "card-calc2-e-limit",
         "card-calc2-exp-slope",
         "card-calc2-log-deriv"
@@ -8115,6 +8121,7 @@
        "code": "12미적Ⅱ-02-02",
        "blocks": [
         "intro-calc2-2-2",
+        "text-calc2-addition",
         "card-calc2-chord-add",
         "card-calc2-line-angle",
         "card-calc2-wave-sum"
@@ -8126,6 +8133,7 @@
        "code": "12미적Ⅱ-02-03",
        "blocks": [
         "intro-calc2-2-3",
+        "text-calc2-trig-deriv",
         "card-calc2-sinx-x",
         "card-calc2-sin-deriv"
        ]
@@ -8136,6 +8144,7 @@
        "code": "12미적Ⅱ-02-04",
        "blocks": [
         "intro-calc2-2-4",
+        "text-calc2-quotient",
         "card-calc2-quotient",
         "card-calc2-trig-table"
        ]
@@ -8146,6 +8155,7 @@
        "code": "12미적Ⅱ-02-05",
        "blocks": [
         "intro-calc2-2-5",
+        "text-calc2-chain",
         "card-calc2-chain-lines",
         "card-calc2-power-real"
        ]
@@ -8156,6 +8166,7 @@
        "code": "12미적Ⅱ-02-06",
        "blocks": [
         "intro-calc2-2-6",
+        "text-calc2-param",
         "card-calc2-param-tangent",
         "card-calc2-param-reparam"
        ]
@@ -8166,6 +8177,7 @@
        "code": "12미적Ⅱ-02-07",
        "blocks": [
         "intro-calc2-2-7",
+        "text-calc2-implicit",
         "card-calc2-implicit-slope",
         "card-calc2-inverse-slope"
        ]
@@ -8176,6 +8188,7 @@
        "code": "12미적Ⅱ-02-08",
        "blocks": [
         "intro-calc2-2-8",
+        "text-calc2-tangent",
         "card-calc2-tangent-from-point",
         "card-calc2-slope-tangent"
        ]
@@ -8186,6 +8199,7 @@
        "code": "12미적Ⅱ-02-09",
        "blocks": [
         "intro-calc2-2-9",
+        "text-calc2-graph-shape",
         "card-calc2-concavity",
         "card-calc2-curve-sketch"
        ]
@@ -8196,6 +8210,7 @@
        "code": "12미적Ⅱ-02-10",
        "blocks": [
         "intro-calc2-2-10",
+        "text-calc2-eq-ineq",
         "card-calc2-root-count",
         "card-calc2-exp-bound"
        ]
@@ -8206,6 +8221,7 @@
        "code": "12미적Ⅱ-02-11",
        "blocks": [
         "intro-calc2-2-11",
+        "text-calc2-motion",
         "card-calc2-line-motion",
         "card-calc2-plane-motion"
        ]
@@ -8222,6 +8238,7 @@
        "code": "12미적Ⅱ-03-01",
        "blocks": [
         "intro-calc2-3-1",
+        "text-calc2-integrals",
         "card-calc2-xn-integral",
         "card-calc2-antideriv-check"
        ]
@@ -8232,6 +8249,7 @@
        "code": "12미적Ⅱ-03-02",
        "blocks": [
         "intro-calc2-3-2",
+        "text-calc2-substitution",
         "card-calc2-substitution",
         "card-calc2-sub-bounds"
        ]
@@ -8242,6 +8260,7 @@
        "code": "12미적Ⅱ-03-03",
        "blocks": [
         "intro-calc2-3-3",
+        "text-calc2-parts",
         "card-calc2-parts-area",
         "card-calc2-parts-choice"
        ]
@@ -8252,6 +8271,7 @@
        "code": "12미적Ⅱ-03-04",
        "blocks": [
         "intro-calc2-3-4",
+        "text-calc2-riemann",
         "card-calc2-sum-read",
         "card-calc2-sum-to-int"
        ]
@@ -8262,6 +8282,7 @@
        "code": "12미적Ⅱ-03-05",
        "blocks": [
         "intro-calc2-3-5",
+        "text-calc2-area",
         "card-calc2-area-slices",
         "card-calc2-area-cross"
        ]
@@ -8272,6 +8293,7 @@
        "code": "12미적Ⅱ-03-06",
        "blocks": [
         "intro-calc2-3-6",
+        "text-calc2-volume",
         "card-calc2-cross-section",
         "card-calc2-cavalieri"
        ]
@@ -8282,6 +8304,7 @@
        "code": "12미적Ⅱ-03-07",
        "blocks": [
         "intro-calc2-3-7",
+        "text-calc2-distance",
         "card-calc2-distance-area",
         "card-calc2-path-length"
        ]
