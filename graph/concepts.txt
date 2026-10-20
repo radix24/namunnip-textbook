@@ -23,7 +23,7 @@ spectrum | 선 스펙트럼 | card-is1-spectrum text-is1-spectrum-elements |
 bbn | 빅뱅과 가벼운 원소 | card-is1-bbn | spectrum
 fusion | 별의 핵융합 | card-is1-fusion card-is2-sun-fusion text-is2-sun-path text-is1-nucleosynthesis text-is2-solar-energy text-emq-stellar | bbn
 heavy-el | 무거운 원소의 생성 | card-is1-ncap video-is1-body | fusion
-periodic | 주기율과 전자 껍질 | card-is1-shells text-is1-periodicity |
+periodic | 주기율과 전자 껍질 | card-is1-shells text-is1-periodicity text-adchem-electron-config |
 alkali-hal | 알칼리 금속과 할로젠 | card-is1-alkali card-is1-halogen | periodic
 bonding | 이온 결합과 공유 결합 | card-is1-bond card-is1-conduct card-chem-nacl card-chem-h2oel text-is1-chem-bond text-chem-bond-elec | periodic
 silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks | bonding
@@ -32,7 +32,7 @@ polymer | 생명체의 고분자 | card-is1-polymer text-rxn-polymerization text
 bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor text-emq-semiconductor | bonding spectrum
 semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
-lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes text-chem-shape | bonding
+lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes text-chem-shape text-adchem-formal-charge text-adchem-hybrid | bonding
 imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-chem-mix card-chem-polar-lab text-chem-hbond text-mateng-intermolecular text-mateng-water-props | en lewis
 chem-society | 화학과 우리 사회 | card-chem-haber video-chem-society card-chem-safety text-chem-green text-chem-society | 
 mole | 몰 | card-chem-mole card-chem-cup card-chem-molvol card-chem-molar-mass text-chem-avogadro text-chem-mol | units
@@ -40,9 +40,9 @@ stoich | 화학 반응식과 양적 관계 | card-chem-balance card-chem-gasvol 
 redox | 산화와 환원 | card-is2-redox-electron card-is2-reactivity card-is2-redox-life text-is2-redox text-rxn-galvanic text-rxn-oxidation-number text-cell-two-etc | bonding
 acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-log card-is2-neutral card-is2-acid-plate text-is2-acid-base text-rxn-bronsted text-rxn-ph | bonding
 reaction-heat | 발열 반응과 흡열 반응 | card-is2-hand-warmer card-is2-cold-pack text-is2-reaction-heat text-mateng-enthalpy | bonding
-equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium | stoich
-eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk text-chem-kc text-chem-qk | equilibrium
-le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier text-rxn-buffer | eq-const chem-society
+equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium text-adchem-common-ion | stoich
+eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk text-chem-kc text-chem-qk text-adchem-reaction-quotient | equilibrium
+le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier text-rxn-buffer text-adchem-vant-hoff | eq-const chem-society
 water-ion | 물의 자동 이온화와 pH | card-chem-autoion card-chem-ph-scale card-chem-kw-temp card-chem-dilute-ph text-chem-ph | acid-base eq-const
 molarity | 몰 농도 | card-chem-molar-lab card-chem-dilution text-chem-molarity | mole
 neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env text-chem-neutralize text-rxn-titration | acid-base molarity
@@ -154,10 +154,10 @@ escape | 탈출 속도와 대기 | card-mech-escape | kepler mech-energy momentu
 gen-rel | 등가 원리와 일반 상대론 | text-mech-gr | escape relativity
 heat-transfer | 열의 이동과 열팽창 | card-mech-insulation text-mech-heat-tech text-mech-heat-transfer | heat-energy
 latent-heat | 비열과 잠열 | card-mech-heating-curve text-mech-ideal-gas | heat-energy
-ideal-gas | 이상 기체 | card-mech-ideal-gas text-mateng-gas-law text-adphy-expansion-work | heat-energy
-first-law | 열역학 제1법칙 | card-mech-first-law | ideal-gas heat-energy
+ideal-gas | 이상 기체 | card-mech-ideal-gas text-mateng-gas-law text-adphy-expansion-work text-adchem-speed-distribution | heat-energy
+first-law | 열역학 제1법칙 | card-mech-first-law text-adchem-internal-energy | ideal-gas heat-energy
 cycle | 열기관의 순환 과정 | card-mech-cycle text-adphy-entropy-flow | first-law heat-engine
-entropy | 엔트로피와 비가역 현상 | card-mech-entropy text-mech-entropy text-mateng-spontaneity | first-law cycle
+entropy | 엔트로피와 비가역 현상 | card-mech-entropy text-mech-entropy text-mateng-spontaneity text-adchem-microstates | first-law cycle
 shm | 단진동 | card-mech-shm | mech-energy force-vector
 elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use text-mech-pulse | shm
 doppler | 도플러 효과 | card-mech-doppler text-mech-doppler text-space-transit | elastic-wave
@@ -166,19 +166,19 @@ standing-wave | 정상파와 악기 | card-mech-standing text-mech-standing | el
 
 # ── 진로선택: 물질과 에너지 ──
 mateng-gas-law | 이상 기체 방정식의 활용 | card-mateng-gas-use | ideal-gas mole
-mateng-partial | 부분 압력과 몰 분율 | card-mateng-partial text-mateng-partial-pressure | mateng-gas-law
-mateng-imf | 분산력과 끓는점 | card-mateng-bp-data | imf
-mateng-solids | 결정성 고체의 분류 | card-mateng-solids text-mateng-crystal | bonding imf
+mateng-partial | 부분 압력과 몰 분율 | card-mateng-partial text-mateng-partial-pressure text-adchem-gas-over-water | mateng-gas-law
+mateng-imf | 분산력과 끓는점 | card-mateng-bp-data text-adchem-capillary | imf
+mateng-solids | 결정성 고체의 분류 | card-mateng-solids text-mateng-crystal text-adchem-unit-cell | bonding imf
 mateng-water | 물의 특별한 성질 | text-mateng-water | imf
-mateng-colligative | 끓는점 오름과 어는점 내림 | card-mateng-colligative text-mateng-colligative | mateng-water molarity
+mateng-colligative | 끓는점 오름과 어는점 내림 | card-mateng-colligative text-mateng-colligative text-adchem-molar-mass | mateng-water molarity
 mateng-osmosis | 삼투 현상 | card-mateng-osmosis | mateng-colligative membrane
 mateng-enthalpy | 엔탈피와 열화학 반응식 | card-mateng-thermo-eq | reaction-heat stoich
-mateng-hess | 헤스 법칙 | card-mateng-hess text-mateng-hess | mateng-enthalpy
-mateng-spont | 엔트로피와 자발성 | card-mateng-spont | mateng-enthalpy entropy
-mateng-rate-law | 반응 속도식과 반응 차수 | card-mateng-rate-law text-mateng-rate-law | molarity stoich
+mateng-hess | 헤스 법칙 | card-mateng-hess text-mateng-hess text-adchem-bond-enthalpy | mateng-enthalpy
+mateng-spont | 엔트로피와 자발성 | card-mateng-spont text-adchem-gibbs-dissolve | mateng-enthalpy entropy
+mateng-rate-law | 반응 속도식과 반응 차수 | card-mateng-rate-law text-mateng-rate-law text-adchem-integrated-rate | molarity stoich
 mateng-half-life | 1차 반응과 반감기 | card-mateng-half-life | mateng-rate-law abs-age
-mateng-ea | 유효 충돌과 활성화 에너지 | card-mateng-ea text-mateng-activation | mateng-rate-law ideal-gas
-mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control | mateng-ea enzyme
+mateng-ea | 유효 충돌과 활성화 에너지 | card-mateng-ea text-mateng-activation text-adchem-collision | mateng-rate-law ideal-gas
+mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control text-adchem-ten-degree | mateng-ea enzyme
 
 # ── 진로선택: 세포와 물질대사 ──
 cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid | polymer
@@ -234,21 +234,21 @@ emq-laser | 레이저와 광통신 | card-emq-laser text-emq-fiber text-emq-lase
 emq-single-quantum | 단일 양자의 간섭과 입자–파동 이중성 | card-emq-single-photon text-adphy-uncertainty | interference matter-wave
 emq-superposition | 중첩과 측정, 양자 기술 | card-emq-qubit text-emq-quantum-tech text-emq-superposition | emq-single-quantum emq-polarization
 emq-tunnel | 터널 효과 | card-emq-tunnel text-emq-tunneling | matter-wave
-emq-orbital | 불확정성 원리와 오비탈 | card-emq-orbital text-emq-atom | matter-wave spectrum
+emq-orbital | 불확정성 원리와 오비탈 | card-emq-orbital text-emq-atom text-adchem-orbital-1s | matter-wave spectrum
 emq-star-spectrum | 별의 핵융합과 흡수 스펙트럼 | card-emq-star-spectrum | fusion spectrum blackbody
 
 # ── 진로선택: 화학 반응의 세계 ──
-rxn-bronsted | 브뢴스테드–라우리 산과 염기 | card-rxn-conjugate | acid-base
-rxn-ka | 이온화 상수와 약산의 pH | card-rxn-weak-acid | rxn-bronsted eq-const water-ion
-rxn-titration | 중화 적정 곡선 | card-rxn-titration | rxn-ka neutral-q
+rxn-bronsted | 브뢴스테드–라우리 산과 염기 | card-rxn-conjugate text-adchem-ionization-degree | acid-base
+rxn-ka | 이온화 상수와 약산의 pH | card-rxn-weak-acid text-adchem-weak-base | rxn-bronsted eq-const water-ion
+rxn-titration | 중화 적정 곡선 | card-rxn-titration text-adchem-titration-curve | rxn-ka neutral-q
 rxn-hydrolysis | 염의 가수 분해 | card-rxn-hydrolysis text-rxn-hydrolysis | rxn-ka
 rxn-buffer | 완충 용액 | card-rxn-buffer | rxn-ka le-chat
-rxn-oxnum | 산화수와 반쪽 반응식 | card-rxn-oxnum | redox
+rxn-oxnum | 산화수와 반쪽 반응식 | card-rxn-oxnum text-adchem-redox-titration | redox
 rxn-battery | 화학 전지의 발달 | text-rxn-battery-history | redox
-rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell text-rxn-potential | rxn-oxnum rxn-battery
-rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis text-rxn-electrolysis | rxn-cell
+rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell text-rxn-potential text-adchem-cell-potential | rxn-oxnum rxn-battery
+rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis text-rxn-electrolysis text-adchem-electroplating | rxn-cell
 rxn-redox-life | 생명과 전지 속 산화·환원 | text-rxn-redox-life text-rxn-bio-redox | rxn-cell
-rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional text-rxn-functional-group | bonding
+rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional text-rxn-functional-group text-adchem-functional-bp | bonding
 rxn-organic-rxn | 작용기의 변화와 반응 | card-rxn-reaction-map text-rxn-organic-reaction | rxn-functional redox
 rxn-polymerization | 첨가 중합과 축합 중합 | card-rxn-polymer | rxn-organic-rxn polymer
 rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber | rxn-polymerization
@@ -343,7 +343,7 @@ lp-franck-hertz | 프랑크–헤르츠 실험 | card-labphy-franck-hertz | ener
 lc-sigfig | 기구 눈금 읽기와 유효숫자 | card-labchem-sigfig | error
 lc-tools | 측정 도구의 선택과 허용 오차 | card-labchem-tools | lc-sigfig lp-uncertainty water-ion
 lc-instrument | 분광·질량 분석 자료 해석 | card-labchem-instrument | molarity photon rxn-functional
-lc-solution | 용액 제조와 여러 농도 표현 | card-labchem-solution | molarity lc-tools
+lc-solution | 용액 제조와 여러 농도 표현 | card-labchem-solution text-adchem-solubility-curve | molarity lc-tools
 lc-spectrum | 원소의 선 스펙트럼과 에너지 준위 측정 | card-labchem-spectrum | energy-level spectrum
 lc-gas-r | 기체 상수 측정 | card-labchem-gas-r | ideal-gas stoich equilibrium
 lc-dumas | 증기 밀도로 분자량 구하기 | card-labchem-dumas | lc-gas-r mateng-gas-law
@@ -521,15 +521,15 @@ ap-gamow | 별 속 핵융합과 가모프 봉우리 | card-adphy-gamow | fusion 
 # ── 과학계열: 고급 화학 ──
 ac-wavefn | 파동 함수와 지름 분포 | card-adchem-wavefn | emq-orbital matter-wave
 ac-config | 전형·전이 원소의 전자 배치 | card-adchem-config | ac-wavefn periodic
-ac-potential | 입자 간 거리와 퍼텐셜 에너지 | card-adchem-potential | bonding imf e-field
+ac-potential | 입자 간 거리와 퍼텐셜 에너지 | card-adchem-potential text-adchem-ion-pair | bonding imf e-field
 ac-formal | 형식 전하와 공명 구조 | card-adchem-formal | lewis en
 ac-hybrid | 원자가 결합 이론과 혼성 오비탈 | card-adchem-hybrid text-adchem-bond-theories | lewis ac-wavefn
-ac-isomer | 탄화수소의 이성질체 | card-adchem-isomer | ac-hybrid rxn-functional
+ac-isomer | 탄화수소의 이성질체 | card-adchem-isomer text-adchem-isomer-count | ac-hybrid rxn-functional
 ac-fg-acid | 작용기의 산 세기와 pKa | card-adchem-fg-acid | rxn-ka rxn-functional ac-formal
 ac-oxlevel | 작용기의 산화 수준 | card-adchem-oxlevel | rxn-oxnum rxn-functional
 ac-kinetic | 기체 분자 운동론과 속력 분포 | card-adchem-maxwell | ideal-gas
 ac-dalton | 혼합 기체와 부분 압력 | card-adchem-stopcock | ac-kinetic mateng-partial
-ac-real-gas | 실제 기체와 상태 방정식 | card-adchem-real-gas | ac-kinetic imf
+ac-real-gas | 실제 기체와 상태 방정식 | card-adchem-real-gas text-adchem-real-gas | ac-kinetic imf
 ac-surface | 표면 장력과 모세관 현상 | card-adchem-capillary | imf lc-vapor
 ac-unit-cell | 이온 결정·공유 결정의 단위세포 | card-adchem-ionic-cell | lc-unit-cell bonding
 ac-solubility | 농도 단위와 용해도 | card-adchem-solubility | lc-solution le-chat
@@ -540,7 +540,7 @@ ac-entropy | 열역학적 엔트로피와 우주의 엔트로피 | card-adchem-s
 ac-gibbs | 깁스 자유 에너지와 자발성 | card-adchem-gibbs-t | ac-entropy mateng-spont
 ac-redox-balance | 산화수와 산화·환원 반응식 완성 | card-adchem-balance | rxn-oxnum
 ac-ered | 표준 환원 전위와 전지 전위 | card-adchem-ered | ac-redox-balance rxn-cell
-ac-nernst | 전지 전위와 자유 에너지·평형 상수 | card-adchem-nernst | ac-ered ac-gibbs eq-const
+ac-nernst | 전지 전위와 자유 에너지·평형 상수 | card-adchem-nernst text-adchem-nernst | ac-ered ac-gibbs eq-const
 ac-electrolysis | 분해 전압과 패러데이 법칙 | card-adchem-elec-v | ac-nernst rxn-electrolysis
 ac-mass-action | 질량 작용 법칙과 평형 계산 | card-adchem-ice | eq-const mateng-partial
 ac-vanthoff | 깁스 자유 에너지와 평형 상수의 온도 변화 | card-adchem-vanthoff | ac-mass-action mateng-spont le-chat
@@ -551,8 +551,8 @@ ac-polyprotic | 다양성자 산의 적정과 완충 능력 | card-adchem-polypr
 ac-arrhenius | 아레니우스 식과 온도 | card-adchem-arrhenius | mateng-rate-factors mateng-ea
 ac-integrated-rate | 적분 속도식과 반감기 | card-adchem-integrated | mateng-rate-law
 ac-collision | 충돌 이론 | card-adchem-collision | mateng-ea ac-arrhenius ideal-gas
-ac-mechanism | 반응 메커니즘과 속도 결정 단계 | card-adchem-mechanism | mateng-rate-law ac-integrated-rate
-ac-catalysis | 촉매와 활성화 에너지 | card-adchem-catalyst text-adchem-catalysts | ac-arrhenius ac-mechanism eq-const enzyme
+ac-mechanism | 반응 메커니즘과 속도 결정 단계 | card-adchem-mechanism text-adchem-mechanism | mateng-rate-law ac-integrated-rate
+ac-catalysis | 촉매와 활성화 에너지 | card-adchem-catalyst text-adchem-catalysts text-adchem-catalyst-rate | ac-arrhenius ac-mechanism eq-const enzyme
 
 # ── 과학계열: 고급 지구과학 ──
 ae-prem | 지진파 속도와 탄성 계수로 본 지구 내부 물질 | card-adearth-prem | esys-interior le-epicenter elastic-wave

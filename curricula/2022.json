@@ -4167,6 +4167,7 @@
        "code": "12고화01-01",
        "blocks": [
         "intro-adchem-1-1",
+        "text-adchem-orbital-1s",
         "card-emq-orbital",
         "card-adchem-wavefn"
        ]
@@ -4177,6 +4178,7 @@
        "code": "12고화01-02",
        "blocks": [
         "intro-adchem-1-2",
+        "text-adchem-electron-config",
         "card-is1-shells",
         "card-adchem-config"
        ]
@@ -4187,6 +4189,7 @@
        "code": "12고화01-03",
        "blocks": [
         "intro-adchem-1-3",
+        "text-adchem-ion-pair",
         "card-adchem-potential"
        ]
       },
@@ -4196,6 +4199,7 @@
        "code": "12고화01-04",
        "blocks": [
         "intro-adchem-1-4",
+        "text-adchem-formal-charge",
         "card-chem-lewis",
         "card-adchem-formal"
        ]
@@ -4206,6 +4210,7 @@
        "code": "12고화01-05",
        "blocks": [
         "intro-adchem-1-5",
+        "text-adchem-hybrid",
         "card-chem-vsepr",
         "card-adchem-hybrid",
         "text-adchem-bond-theories",
@@ -4218,6 +4223,7 @@
        "code": "12고화01-06",
        "blocks": [
         "intro-adchem-1-6",
+        "text-adchem-isomer-count",
         "card-adchem-isomer",
         "card-labchem-hydrocarbon"
        ]
@@ -4228,6 +4234,7 @@
        "code": "12고화01-07",
        "blocks": [
         "intro-adchem-1-7",
+        "text-adchem-functional-bp",
         "card-rxn-functional",
         "card-adchem-fg-acid",
         "card-adchem-oxlevel",
@@ -4246,6 +4253,7 @@
        "code": "12고화02-01",
        "blocks": [
         "intro-adchem-2-1",
+        "text-adchem-speed-distribution",
         "card-mech-ideal-gas",
         "card-adchem-maxwell"
        ]
@@ -4256,6 +4264,7 @@
        "code": "12고화02-02",
        "blocks": [
         "intro-adchem-2-2",
+        "text-adchem-gas-over-water",
         "card-mateng-partial",
         "card-adchem-stopcock"
        ]
@@ -4266,6 +4275,7 @@
        "code": "12고화02-03",
        "blocks": [
         "intro-adchem-2-3",
+        "text-adchem-real-gas",
         "card-adchem-real-gas"
        ]
       },
@@ -4275,6 +4285,7 @@
        "code": "12고화02-04",
        "blocks": [
         "intro-adchem-2-4",
+        "text-adchem-capillary",
         "card-mateng-bp-data",
         "card-labchem-vapor",
         "card-adchem-capillary"
@@ -4286,6 +4297,7 @@
        "code": "12고화02-05",
        "blocks": [
         "intro-adchem-2-5",
+        "text-adchem-unit-cell",
         "card-mateng-solids",
         "card-labchem-unit-cell",
         "card-adchem-ionic-cell"
@@ -4297,6 +4309,7 @@
        "code": "12고화02-06",
        "blocks": [
         "intro-adchem-2-6",
+        "text-adchem-solubility-curve",
         "card-labchem-solution",
         "card-chem-soda",
         "card-adchem-solubility"
@@ -4308,6 +4321,7 @@
        "code": "12고화02-07",
        "blocks": [
         "intro-adchem-2-7",
+        "text-adchem-molar-mass",
         "card-mateng-colligative",
         "card-adchem-colligative",
         "card-mateng-osmosis"
@@ -4325,6 +4339,7 @@
        "code": "12고화03-01",
        "blocks": [
         "intro-adchem-3-1",
+        "text-adchem-internal-energy",
         "card-mech-first-law",
         "card-adchem-path"
        ]
@@ -4335,6 +4350,7 @@
        "code": "12고화03-02",
        "blocks": [
         "intro-adchem-3-2",
+        "text-adchem-bond-enthalpy",
         "card-mateng-hess",
         "card-adchem-formation",
         "card-labchem-calorimetry"
@@ -4346,6 +4362,7 @@
        "code": "12고화03-03",
        "blocks": [
         "intro-adchem-3-3",
+        "text-adchem-microstates",
         "card-mech-entropy",
         "card-adchem-suniv"
        ]
@@ -4356,6 +4373,7 @@
        "code": "12고화03-04",
        "blocks": [
         "intro-adchem-3-4",
+        "text-adchem-gibbs-dissolve",
         "card-mateng-spont",
         "card-adchem-gibbs-t"
        ]
@@ -4366,6 +4384,7 @@
        "code": "12고화03-05",
        "blocks": [
         "intro-adchem-3-5",
+        "text-adchem-redox-titration",
         "card-rxn-oxnum",
         "card-adchem-balance",
         "card-labchem-redox-titration"
@@ -4377,6 +4396,7 @@
        "code": "12고화03-06",
        "blocks": [
         "intro-adchem-3-6",
+        "text-adchem-cell-potential",
         "card-rxn-cell",
         "card-adchem-ered",
         "card-labchem-cell-emf"
@@ -4388,6 +4408,7 @@
        "code": "12고화03-07",
        "blocks": [
         "intro-adchem-3-7",
+        "text-adchem-nernst",
         "card-adchem-nernst",
         "text-rxn-battery-history"
        ]
@@ -4398,6 +4419,7 @@
        "code": "12고화03-08",
        "blocks": [
         "intro-adchem-3-8",
+        "text-adchem-electroplating",
         "card-rxn-electrolysis",
         "card-adchem-elec-v",
         "card-labchem-electrolysis"
@@ -4415,6 +4437,7 @@
        "code": "12고화04-01",
        "blocks": [
         "intro-adchem-4-1",
+        "text-adchem-reaction-quotient",
         "card-chem-qk",
         "card-adchem-ice",
         "card-labchem-fescn"
@@ -4426,6 +4449,7 @@
        "code": "12고화04-02",
        "blocks": [
         "intro-adchem-4-2",
+        "text-adchem-vant-hoff",
         "card-chem-lechat",
         "card-chem-haber-eq",
         "card-adchem-vanthoff"
@@ -4437,6 +4461,7 @@
        "code": "12고화04-03",
        "blocks": [
         "intro-adchem-4-3",
+        "text-adchem-common-ion",
         "card-chem-phase",
         "card-adchem-ksp"
        ]
@@ -4447,6 +4472,7 @@
        "code": "12고화04-04",
        "blocks": [
         "intro-adchem-4-4",
+        "text-adchem-ionization-degree",
         "card-rxn-conjugate",
         "card-adchem-lewis"
        ]
@@ -4457,6 +4483,7 @@
        "code": "12고화04-05",
        "blocks": [
         "intro-adchem-4-5",
+        "text-adchem-weak-base",
         "card-rxn-weak-acid",
         "card-adchem-pka",
         "card-rxn-hydrolysis"
@@ -4468,6 +4495,7 @@
        "code": "12고화04-06",
        "blocks": [
         "intro-adchem-4-6",
+        "text-adchem-titration-curve",
         "card-rxn-titration",
         "card-rxn-buffer",
         "card-adchem-polyprotic"
@@ -4479,6 +4507,7 @@
        "code": "12고화04-07",
        "blocks": [
         "intro-adchem-4-7",
+        "text-adchem-ten-degree",
         "card-mateng-rate-factors",
         "card-adchem-arrhenius",
         "card-labchem-rate-design"
@@ -4490,6 +4519,7 @@
        "code": "12고화04-08",
        "blocks": [
         "intro-adchem-4-8",
+        "text-adchem-integrated-rate",
         "card-mateng-rate-law",
         "card-adchem-integrated"
        ]
@@ -4500,6 +4530,7 @@
        "code": "12고화04-09",
        "blocks": [
         "intro-adchem-4-9",
+        "text-adchem-collision",
         "card-mateng-ea",
         "card-adchem-collision"
        ]
@@ -4510,6 +4541,7 @@
        "code": "12고화04-10",
        "blocks": [
         "intro-adchem-4-10",
+        "text-adchem-mechanism",
         "card-adchem-mechanism"
        ]
       },
@@ -4519,6 +4551,7 @@
        "code": "12고화04-11",
        "blocks": [
         "intro-adchem-4-11",
+        "text-adchem-catalyst-rate",
         "card-adchem-catalyst",
         "text-adchem-catalysts"
        ]
