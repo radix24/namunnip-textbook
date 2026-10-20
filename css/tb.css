@@ -442,7 +442,8 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 .reading-body .tb-env > .lb .nm { font-weight: 500; color: var(--ink-2); }
 .reading-body .tb-env > * + * { margin-top: .5em; }
 .reading-body .tb-proof > .lb { font-weight: 800; color: var(--fb); margin-right: 8px; }
-.reading-body .tb-proof .qed { float: right; margin-left: 8px; color: var(--ink-3); }
+.reading-body .qed { float: right; margin-left: 8px; color: var(--ink-3); }
+.reading-body .qed:empty::before { content: "∎"; }
 .reading-body .tb-note { padding: 10px 14px; background: var(--warn-bg); font-size: 15px; }
 .reading-body .tb-note > b:first-child { color: var(--warn); margin-right: 6px; }
 .reading-body .tb-aside { padding: 2px 0 2px 14px; border-left: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-2); }

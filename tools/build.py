@@ -20,6 +20,12 @@ def rd(p):
 
 
 def wr(p, s):
+    # 내용이 같으면 쓰지 않는다. Windows에서는 파일을 새로 쓸 때마다 검사가 붙어 전체 빌드가 수 분씩 걸린다.
+    try:
+        if p.read_bytes() == s.encode("utf-8"):
+            return
+    except OSError:
+        pass
     p.write_text(s, encoding="utf-8", newline="\n")
 
 

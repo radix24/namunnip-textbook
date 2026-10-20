@@ -834,29 +834,29 @@ cm1-matrix | 행렬의 뜻과 성분 | card-cm1-matrix-entry card-cm1-road-matri
 cm1-matrix-ops | 행렬의 덧셈·뺄셈·실수배 | card-cm1-matrix-add text-cm1-matrix-ops | cm1-matrix
 cm1-matrix-mult | 행렬의 곱셈 | card-cm1-matrix-mult | cm1-matrix
 # cm2-1
-cm2-distance | 두 점 사이의 거리 | card-cm2-distance | 
+cm2-distance | 두 점 사이의 거리 | card-cm2-distance text-cm2-division-point | 
 cm2-internal-div | 선분의 내분점 | card-cm2-internal-div | cm2-distance
-cm2-line-relation | 두 직선의 평행과 수직 | card-cm2-parallel card-cm2-perp | 
-cm2-point-line-dist | 점과 직선 사이의 거리 | card-cm2-point-line card-cm2-tri-area | cm2-distance cm2-line-relation
-cm2-circle-eq | 원의 방정식 | card-cm2-circle-eq card-cm2-general-circle | cm2-distance
-cm2-circle-line | 원과 직선의 위치 관계 | card-cm2-circle-line card-cm2-tangent | cm2-circle-eq cm2-point-line-dist
-cm2-translation | 평행이동 | card-cm2-translate-point card-cm2-translate-graph | 
-cm2-reflection | 대칭이동 | card-cm2-reflect card-cm2-reflect-graph card-cm2-shortest-path | cm2-internal-div cm2-line-relation cm2-distance
+cm2-line-relation | 두 직선의 평행과 수직 | card-cm2-parallel card-cm2-perp text-cm2-parallel-perp | 
+cm2-point-line-dist | 점과 직선 사이의 거리 | card-cm2-point-line card-cm2-tri-area text-cm2-point-line-dist | cm2-distance cm2-line-relation
+cm2-circle-eq | 원의 방정식 | card-cm2-circle-eq card-cm2-general-circle text-cm2-circle | cm2-distance
+cm2-circle-line | 원과 직선의 위치 관계 | card-cm2-circle-line card-cm2-tangent text-cm2-circle-line | cm2-circle-eq cm2-point-line-dist
+cm2-translation | 평행이동 | card-cm2-translate-point card-cm2-translate-graph text-cm2-translate | 
+cm2-reflection | 대칭이동 | card-cm2-reflect card-cm2-reflect-graph card-cm2-shortest-path text-cm2-reflect | cm2-internal-div cm2-line-relation cm2-distance
 # cm2-2
-cm2-set | 집합과 원소 | card-cm2-set-roster card-cm2-set-interval | 
-cm2-subset | 부분집합과 포함관계 | card-cm2-subset-venn card-cm2-subset-count | cm2-set
-cm2-set-ops | 집합의 연산 | card-cm2-set-ops card-cm2-set-laws | cm2-subset
-cm2-prop | 명제와 조건 | card-cm2-all-some card-cm2-prop-truthset text-cm2-prop-terms | cm2-subset
-cm2-converse | 명제의 역과 대우 | card-cm2-converse card-cm2-contra-venn | cm2-prop cm2-set-ops
-cm2-suff-nec | 충분조건과 필요조건 | card-cm2-suff-nec card-cm2-cond-plane | cm2-prop
-cm2-proof | 대우를 이용한 증명과 귀류법 | card-cm2-contra-square card-cm2-sqrt2-absurd text-cm2-proof-ways | cm2-converse
-cm2-abs-ineq | 절대부등식 | card-cm2-ineq-graph card-cm2-amgm | cm2-prop
+cm2-set | 집합과 원소 | card-cm2-set-roster card-cm2-set-interval text-cm2-set | 
+cm2-subset | 부분집합과 포함관계 | card-cm2-subset-venn card-cm2-subset-count text-cm2-subset | cm2-set
+cm2-set-ops | 집합의 연산 | card-cm2-set-ops card-cm2-set-laws text-cm2-set-ops | cm2-subset
+cm2-prop | 명제와 조건 | card-cm2-all-some card-cm2-prop-truthset text-cm2-prop-terms text-cm2-proposition | cm2-subset
+cm2-converse | 명제의 역과 대우 | card-cm2-converse card-cm2-contra-venn text-cm2-converse | cm2-prop cm2-set-ops
+cm2-suff-nec | 충분조건과 필요조건 | card-cm2-suff-nec card-cm2-cond-plane text-cm2-suff-nec | cm2-prop
+cm2-proof | 대우를 이용한 증명과 귀류법 | card-cm2-contra-square card-cm2-sqrt2-absurd text-cm2-proof-ways text-cm2-proof | cm2-converse
+cm2-abs-ineq | 절대부등식 | card-cm2-ineq-graph card-cm2-amgm text-cm2-abs-ineq | cm2-prop
 # cm2-3
-cm2-function | 함수와 그래프 | card-cm2-func-map card-cm2-func-graph | 
-cm2-composite | 합성함수 | card-cm2-compose-arrow card-cm2-compose-machine | cm2-function
-cm2-inverse | 역함수 | card-cm2-inverse-map card-cm2-inverse-graph | cm2-function cm2-composite
-cm2-rational-func | 유리함수 | card-cm2-rational-shift card-cm2-rational-form | cm2-function
-cm2-irrational-func | 무리함수 | card-cm2-sqrt-shift card-cm2-sqrt-line | cm2-function cm2-inverse
+cm2-function | 함수와 그래프 | card-cm2-func-map card-cm2-func-graph text-cm2-function | 
+cm2-composite | 합성함수 | card-cm2-compose-arrow card-cm2-compose-machine text-cm2-compose | cm2-function
+cm2-inverse | 역함수 | card-cm2-inverse-map card-cm2-inverse-graph text-cm2-inverse | cm2-function cm2-composite
+cm2-rational-func | 유리함수 | card-cm2-rational-shift card-cm2-rational-form text-cm2-rational | cm2-function
+cm2-irrational-func | 무리함수 | card-cm2-sqrt-shift card-cm2-sqrt-line text-cm2-irrational | cm2-function cm2-inverse
 # geo-1
 geo-parabola | 포물선의 정의와 방정식 | card-geo-parabola-def card-geo-parabola-shift | 
 geo-ellipse | 타원의 정의와 방정식 | card-geo-ellipse-def card-geo-ellipse-eq | 
