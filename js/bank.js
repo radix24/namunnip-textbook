@@ -7,7 +7,7 @@
    시험지: 범위의 문항을 절 순서대로 늘어놓고 차례로 1, 2, …, n번 시험지에 나눠 담는다(장마다 문항이 겹치지 않고 모든 절이 고루 들어간다).
            서술형(free)은 따로 이어서 나눠 담아 장마다 고르게 들어가고 시험지 끝에 온다. 서술형은 모범 답안과 채점 기준을 보고 학생이 스스로 채점한다.
    기록: 문항마다 NMStore.recordAnswer(id, 0, …) — 처음에 틀린 문항은 오답노트(notes.html)에 모인다.
-         시험지 점수는 localStorage "namunnip-bank-v2" = { "<과목>/<범위>/<장>": { n, ok, at } } (없어도 화면은 돈다). */
+         시험지 점수는 localStorage "namunnip-bank-v3" = { "<과목>/<범위>/<장>": { n, ok, at } } (없어도 화면은 돈다). */
 (() => {
   "use strict";
   const S = window.NMStore;
@@ -17,7 +17,7 @@
   const CIRCLE = ["①", "②", "③", "④", "⑤"];
   const R = ["", "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
   const PER = 20;   // 시험지 한 장의 문항 수(대략). tools/bank.py의 SHEET와 같게
-  const KEY = "namunnip-bank-v2";  // v1은 층별로 나누기 전 시험지 점수라 버린다
+  const KEY = "namunnip-bank-v3";  // v1·v2는 층별 재배치·문항 교체 전 시험지 점수라 버린다
   const AI = `<span class="bk-ai">AI 출제 연습 문항</span>`;
 
   const P = new URLSearchParams(location.search);
@@ -43,7 +43,7 @@
 
   let scores = {};
   try { scores = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { scores = {}; }
-  try { localStorage.removeItem("namunnip-bank-v1"); } catch (e) { /* 지울 수 없어도 v2만 읽는다 */ }
+  try { ["namunnip-bank-v1", "namunnip-bank-v2"].forEach((k) => localStorage.removeItem(k)); } catch (e) { /* 지울 수 없어도 v3만 읽는다 */ }
   const saveScore = (k, v) => { scores[k] = v; try { localStorage.setItem(KEY, JSON.stringify(scores)); } catch (e) { /* 저장 못 해도 채점은 된다 */ } };
 
   const bySec = (a, b) => secOrder[a.sec].i - secOrder[b.sec].i || (a.id < b.id ? -1 : 1);
