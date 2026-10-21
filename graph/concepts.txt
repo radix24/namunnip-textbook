@@ -1106,19 +1106,19 @@ mcu-food | 식생활과 수학 | card-mcult-nutrition-label card-mcult-food-mile
 mcu-air | 대기 오염과 수학 | card-mcult-pm-average card-mcult-emission-path text-mcult-emission |
 mcu-desert | 사막화와 수학 | card-mcult-desert-automata card-mcult-ndvi text-mcult-desert |
 mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcult-simpson-index text-mcult-biodiv |
-pst-useful | 통계의 유용성과 통계적 질문 | card-pstat-cholera-map card-pstat-stat-question |
-pst-process | 통계적 문제해결 과정 | card-pstat-ppdac-order card-pstat-question-refine | pst-useful
-pst-sampling | 모집단과 표본추출 방법 | card-pstat-sampling-methods card-pstat-volunteer-bias | pst-process
-pst-datatype | 자료의 종류(범주형·수치형) | card-pstat-data-types card-pstat-number-not-number | pst-useful
-pst-collect | 자료의 수집 방법(설문·실험) | card-pstat-survey-wording card-pstat-random-assign | pst-sampling
-pst-graphs | 상자그림과 산점도 | card-pstat-boxplot-build card-pstat-scatter-r | pst-datatype
-pst-summary | 대푯값과 산포도 | card-pstat-mean-median card-pstat-sd-spread | pst-datatype
-pst-tdist | 정규분포와 t분포 | card-pstat-t-vs-z card-pstat-why-t | pst-summary
-pst-ci-mean | 모평균의 추정(t분포) | card-pstat-ci-t-cover card-pstat-sample-size | pst-tdist pst-sampling
-pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat-lead-margin | pst-sampling
-pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking | pst-ci-prop
-pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat-error-cost | pst-test
-pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias | pst-test pst-collect
+pst-useful | 통계의 유용성과 통계적 질문 | card-pstat-cholera-map card-pstat-stat-question text-pstat-nightingale |
+pst-process | 통계적 문제해결 과정 | card-pstat-ppdac-order card-pstat-question-refine text-pstat-cycle | pst-useful
+pst-sampling | 모집단과 표본추출 방법 | card-pstat-sampling-methods card-pstat-volunteer-bias text-pstat-sampling | pst-process
+pst-datatype | 자료의 종류(범주형·수치형) | card-pstat-data-types card-pstat-number-not-number text-pstat-datatypes | pst-useful
+pst-collect | 자료의 수집 방법(설문·실험) | card-pstat-survey-wording card-pstat-random-assign text-pstat-collect | pst-sampling
+pst-graphs | 상자그림과 산점도 | card-pstat-boxplot-build card-pstat-scatter-r text-pstat-graphs | pst-datatype
+pst-summary | 대푯값과 산포도 | card-pstat-mean-median card-pstat-sd-spread text-pstat-center | pst-datatype
+pst-tdist | 정규분포와 t분포 | card-pstat-t-vs-z card-pstat-why-t text-pstat-tdist | pst-summary
+pst-ci-mean | 모평균의 추정(t분포) | card-pstat-ci-t-cover card-pstat-sample-size text-pstat-mean-ci | pst-tdist pst-sampling
+pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat-lead-margin text-pstat-prop-ci | pst-sampling
+pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking text-pstat-test | pst-ci-prop
+pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat-error-cost text-pstat-decision | pst-test
+pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias text-pstat-reflect | pst-test pst-collect
 mrs-meaning | 수학과제 탐구의 의미 | card-mres-collatz-explore card-mres-circle-regions |
 mrs-ethics | 연구 윤리 | card-mres-benford-check card-mres-citation-ethics | mrs-meaning
 mrs-literature | 문헌 조사 | card-mres-source-eval card-mres-sequence-search | mrs-ethics
