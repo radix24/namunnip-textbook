@@ -294,7 +294,7 @@ sie-galileo | 갈릴레이의 빗면 실험 | card-sie1-galileo text-sie1-galile
 sie-nature | 과학의 본성과 과학사 | text-sie1-nature text-sie1-light-speed |
 sie-induction | 귀납적 탐구 | card-sie1-pendulum text-sie1-pendulum-induction | error
 sie-deduction | 가설 연역적 탐구 | card-sie1-pasteur | sci-method sie-induction
-sie-represent | 자료의 분석과 표현 | card-sie1-plot text-fusi-area-distortion | error
+sie-represent | 자료의 분석과 표현 | card-sie1-plot text-fusi-area-distortion text-resr-linearize | error
 sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer text-sie1-replication | error sie-deduction
 sie-everyday | 생활 속 과학 원리 탐구 (확산 시간) | card-sie2-egg text-sie2-egg-cooking | sie-represent
 sie-question | 탐구 문제와 탐구 계획 | text-sie2-question text-sie2-sampling-days | sie-deduction
@@ -606,20 +606,20 @@ ae-cmb | 우주 배경 복사와 대폭발 우주론의 증거 | card-adearth-cm
 ae-friedmann | 프리드만 방정식과 ΛCDM 표준 모형 | card-adearth-friedmann | cosmology ae-cmb space-darkmatter
 
 # ── 과학계열: 과학과제 연구 ──
-rs-induct-deduct | 귀납적 연구와 가설 연역적 연구 | card-resr-semmelweis text-resr-twoways | sie-induction sie-deduction
-rs-elements | 과학 탐구의 요소 (변인 통제·결론·일반화) | card-resr-elements | sci-method rs-induct-deduct
-rs-ethics | 연구 윤리 규정과 부정행위 사례 | text-resr-ethics | sie-ethics ethics
+rs-induct-deduct | 귀납적 연구와 가설 연역적 연구 | card-resr-semmelweis text-resr-twoways text-resr-semmelweis | sie-induction sie-deduction
+rs-elements | 과학 탐구의 요소 (변인 통제·결론·일반화) | card-resr-elements text-resr-cans | sci-method rs-induct-deduct
+rs-ethics | 연구 윤리 규정과 부정행위 사례 | text-resr-ethics text-resr-multiple-tests | sie-ethics ethics
 rs-phack | p-해킹과 선택적 보고 | card-resr-phack | data rs-ethics
-rs-topic | 연구 주제 선정 (FINER 기준) | card-resr-topic | sie-question rs-elements
-rs-literature | 문헌 조사와 인용 (DOI) | text-resr-literature | rs-topic
+rs-topic | 연구 주제 선정 (FINER 기준) | card-resr-topic text-resr-sample-size | sie-question rs-elements
+rs-literature | 문헌 조사와 인용 (DOI) | text-resr-literature text-resr-search-terms | rs-topic
 rs-source | 자료의 신뢰도 판단 | card-resr-source | rs-literature sie-evidence
-rs-hypothesis | 연구 문제와 연구 가설 | text-resr-hypothesis card-resr-hypo | rs-induct-deduct rs-literature
-rs-design | 연구 설계: 대조군·무작위 배정·표본 크기 | card-resr-design text-resr-plan | sci-method sie-question
+rs-hypothesis | 연구 문제와 연구 가설 | text-resr-hypothesis card-resr-hypo text-resr-precise-hypothesis | rs-induct-deduct rs-literature
+rs-design | 연구 설계: 대조군·무작위 배정·표본 크기 | card-resr-design text-resr-plan text-resr-replication | sci-method sie-question
 rs-datarep | 연구 일지와 자료의 표·그래프 변환 | card-resr-graph text-resr-logbook | sie-represent error
-rs-ttest | t 검정·p값·효과 크기 | card-resr-ttest | rs-design data
-rs-conclude | 교란 변인과 결론 도출 | card-resr-simpson text-resr-discuss | rs-ttest data
-rs-report | 연구 보고서 작성과 인용 | card-resr-abstract text-resr-report | rs-conclude ethics
-rs-present | 구두·포스터 발표 | card-resr-poster text-resr-present | rs-report
+rs-ttest | t 검정·p값·효과 크기 | card-resr-ttest text-resr-confidence | rs-design data
+rs-conclude | 교란 변인과 결론 도출 | card-resr-simpson text-resr-discuss text-resr-extrapolation | rs-ttest data
+rs-report | 연구 보고서 작성과 인용 | card-resr-abstract text-resr-report text-resr-error-propagation | rs-conclude ethics
+rs-present | 구두·포스터 발표 | card-resr-poster text-resr-present text-resr-poster-font | rs-report
 
 # ── 융합선택: 융합과학 탐구 ──
 fs-convergence | 융합 탐구의 사례: X선 회절과 DNA 구조 | card-fusi-helix text-fusi-dna text-fusi-xray-helix |

@@ -5290,6 +5290,7 @@
        "code": "12과연01-01",
        "blocks": [
         "intro-resr-1-1",
+        "text-resr-semmelweis",
         "card-resr-semmelweis",
         "text-resr-twoways"
        ]
@@ -5300,6 +5301,7 @@
        "code": "12과연01-02",
        "blocks": [
         "intro-resr-1-2",
+        "text-resr-cans",
         "card-resr-elements"
        ]
       },
@@ -5309,6 +5311,7 @@
        "code": "12과연01-03",
        "blocks": [
         "intro-resr-1-3",
+        "text-resr-multiple-tests",
         "text-resr-ethics",
         "card-resr-phack"
        ]
@@ -5319,6 +5322,7 @@
        "code": "12과연01-04",
        "blocks": [
         "intro-resr-1-4",
+        "text-resr-sample-size",
         "card-resr-topic"
        ]
       }
@@ -5334,6 +5338,7 @@
        "code": "12과연02-01",
        "blocks": [
         "intro-resr-2-1",
+        "text-resr-search-terms",
         "text-resr-literature",
         "card-resr-source"
        ]
@@ -5344,6 +5349,7 @@
        "code": "12과연02-02",
        "blocks": [
         "intro-resr-2-2",
+        "text-resr-precise-hypothesis",
         "text-resr-hypothesis",
         "card-resr-hypo"
        ]
@@ -5354,6 +5360,7 @@
        "code": "12과연02-03",
        "blocks": [
         "intro-resr-2-3",
+        "text-resr-replication",
         "card-resr-design",
         "text-resr-plan"
        ]
@@ -5364,6 +5371,7 @@
        "code": "12과연02-04",
        "blocks": [
         "intro-resr-2-4",
+        "text-resr-linearize",
         "card-sie1-plot",
         "card-resr-graph",
         "text-resr-logbook"
@@ -5381,6 +5389,7 @@
        "code": "12과연03-01",
        "blocks": [
         "intro-resr-3-1",
+        "text-resr-confidence",
         "card-resr-ttest",
         "card-labphy-lsq"
        ]
@@ -5391,6 +5400,7 @@
        "code": "12과연03-02",
        "blocks": [
         "intro-resr-3-2",
+        "text-resr-extrapolation",
         "card-resr-simpson",
         "text-resr-discuss"
        ]
@@ -5401,6 +5411,7 @@
        "code": "12과연03-03",
        "blocks": [
         "intro-resr-3-3",
+        "text-resr-error-propagation",
         "card-resr-abstract",
         "text-resr-report"
        ]
@@ -5411,6 +5422,7 @@
        "code": "12과연03-04",
        "blocks": [
         "intro-resr-3-4",
+        "text-resr-poster-font",
         "card-resr-poster",
         "text-resr-present"
        ]
