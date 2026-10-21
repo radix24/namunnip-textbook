@@ -5822,6 +5822,7 @@
        "code": "12물실02-10",
        "blocks": [
         "intro-labphy-2-10",
+        "text-labphy-stirring",
         "card-phy-joule",
         "card-labphy-joule"
        ]
@@ -5838,6 +5839,7 @@
        "code": "12물실03-01",
        "blocks": [
         "intro-labphy-3-1",
+        "text-labphy-field-map",
         "card-labphy-equipotential"
        ]
       },
@@ -5847,6 +5849,7 @@
        "code": "12물실03-02",
        "blocks": [
         "intro-labphy-3-2",
+        "text-labphy-foil",
         "card-labphy-capacitor"
        ]
       },
@@ -5856,6 +5859,7 @@
        "code": "12물실03-03",
        "blocks": [
         "intro-labphy-3-3",
+        "text-labphy-filament",
         "card-phy-circuit-meter",
         "card-labphy-ohm"
        ]
@@ -5866,6 +5870,7 @@
        "code": "12물실03-04",
        "blocks": [
         "intro-labphy-3-4",
+        "text-labphy-terminal",
         "card-labphy-internal-r"
        ]
       },
@@ -5875,6 +5880,7 @@
        "code": "12물실03-05",
        "blocks": [
         "intro-labphy-3-5",
+        "text-labphy-bridge-error",
         "card-labphy-wheatstone"
        ]
       },
@@ -5884,6 +5890,7 @@
        "code": "12물실03-06",
        "blocks": [
         "intro-labphy-3-6",
+        "text-labphy-balance",
         "card-labphy-current-balance"
        ]
       },
@@ -5893,6 +5900,7 @@
        "code": "12물실03-07",
        "blocks": [
         "intro-labphy-3-7",
+        "text-labphy-magnet-drop",
         "card-labphy-induction"
        ]
       },
@@ -5902,6 +5910,7 @@
        "code": "12물실03-08",
        "blocks": [
         "intro-labphy-3-8",
+        "text-labphy-time-constant",
         "card-labphy-rc"
        ]
       },
@@ -5911,6 +5920,7 @@
        "code": "12물실03-09",
        "blocks": [
         "intro-labphy-3-9",
+        "text-labphy-q-factor",
         "card-labphy-rlc"
        ]
       },
@@ -5920,6 +5930,7 @@
        "code": "12물실03-10",
        "blocks": [
         "intro-labphy-3-10",
+        "text-labphy-ripple",
         "card-phy-diode-iv",
         "card-labphy-rectifier"
        ]
@@ -5936,6 +5947,7 @@
        "code": "12물실04-01",
        "blocks": [
         "intro-labphy-4-1",
+        "text-labphy-water-column",
         "card-mech-standing",
         "card-labphy-standing"
        ]
@@ -5946,6 +5958,7 @@
        "code": "12물실04-02",
        "blocks": [
         "intro-labphy-4-2",
+        "text-labphy-concave",
         "card-labphy-mirror"
        ]
       },
@@ -5955,6 +5968,7 @@
        "code": "12물실04-03",
        "blocks": [
         "intro-labphy-4-3",
+        "text-labphy-critical",
         "card-labphy-refraction"
        ]
       },
@@ -5964,6 +5978,7 @@
        "code": "12물실04-04",
        "blocks": [
         "intro-labphy-4-4",
+        "text-labphy-bessel",
         "card-phy-lens-bench",
         "card-labphy-lens2"
        ]
@@ -5974,6 +5989,7 @@
        "code": "12물실04-05",
        "blocks": [
         "intro-labphy-4-5",
+        "text-labphy-fringe",
         "card-labphy-double-slit"
        ]
       },
@@ -5983,6 +5999,7 @@
        "code": "12물실04-06",
        "blocks": [
         "intro-labphy-4-6",
+        "text-labphy-envelope",
         "card-emq-diffraction",
         "card-labphy-slit-pattern"
        ]
@@ -5993,6 +6010,7 @@
        "code": "12물실04-07",
        "blocks": [
         "intro-labphy-4-7",
+        "text-labphy-malus",
         "card-emq-polarizer",
         "card-labphy-polarization"
        ]
@@ -6009,6 +6027,7 @@
        "code": "12물실05-01",
        "blocks": [
         "intro-labphy-5-1",
+        "text-labphy-stopping",
         "card-phy-lm-photo",
         "card-labphy-photoelectric"
        ]
@@ -6019,6 +6038,7 @@
        "code": "12물실05-02",
        "blocks": [
         "intro-labphy-5-2",
+        "text-labphy-deflect",
         "card-labphy-cathode"
        ]
       },
@@ -6028,6 +6048,7 @@
        "code": "12물실05-03",
        "blocks": [
         "intro-labphy-5-3",
+        "text-labphy-beam-ring",
         "card-labphy-em-ratio"
        ]
       },
@@ -6037,6 +6058,7 @@
        "code": "12물실05-04",
        "blocks": [
         "intro-labphy-5-4",
+        "text-labphy-mercury",
         "card-labphy-franck-hertz"
        ]
       }

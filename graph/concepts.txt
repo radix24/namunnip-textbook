@@ -30,7 +30,7 @@ silicate | 규산염 광물 | card-is1-silicate text-is1-building-blocks text-ad
 rare-earth | 희토류와 자원 개발 쟁점 | text-is1-rare-earth | silicate
 polymer | 생명체의 고분자 | card-is1-polymer text-rxn-polymerization text-cell-dna-base | bonding
 bands | 에너지띠와 도체·반도체 | card-is1-bands card-phy-lm-bands text-is1-electric-materials text-phy-semiconductor text-emq-semiconductor | bonding spectrum
-semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel | bands
+semicond | 도핑과 반도체 소자 | card-is1-doping video-is1-chip card-phy-lm-led card-phy-diode-iv card-phy-solar-panel text-labphy-ripple | bands
 en | 전기 음성도와 결합의 극성 | card-chem-en card-chem-dipole text-chem-polarity | bonding
 lewis | 루이스 구조와 분자 모양 | card-chem-lewis card-chem-vsepr video-chem-shapes text-chem-shape text-adchem-formal-charge text-adchem-hybrid | bonding
 imf | 수소 결합과 분자 사이의 힘 | card-chem-bp card-chem-ice card-chem-mix card-chem-polar-lab text-chem-hbond text-mateng-intermolecular text-mateng-water-props | en lewis
@@ -59,14 +59,14 @@ action-reaction | 작용 반작용 | card-phy-horse text-phy-momentum-cons | new
 momentum | 운동량 보존 | card-phy-rocket card-phy-collision text-mech-escape text-adphy-elastic | impulse action-reaction
 work-energy | 일과 운동 에너지 | card-phy-work text-phy-energy | newton2
 mech-energy | 역학적 에너지 보존 | card-phy-coaster text-phy-spring card-pendulum text-mech-shm | work-energy free-fall
-heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer text-phy-heat text-mech-first-law | mech-energy
+heat-energy | 열과 에너지 보존 | card-phy-brake card-phy-joule card-phy-heat-transfer text-phy-heat text-mech-first-law text-labphy-stirring | mech-energy
 heat-engine | 열기관과 효율 | card-phy-engine card-phy-wheel video-phy-engine text-phy-engine text-mech-engine | heat-energy
 efficiency | 에너지 효율과 신재생 에너지 | card-is2-efficiency card-is2-renewable card-is2-energy-design text-is2-efficiency | power-gen heat-energy
 solar-cell | 태양 전지 | card-is2-solar-cell | semicond spectrum
 
 # ── 전기와 자기 ──
 e-field | 전기장과 전위차 | card-phy-field card-phy-potential text-phy-efield text-emq-field text-adphy-gauss-sphere |
-elec-power | 저항의 연결과 전력 | card-phy-multitap card-phy-bulbs card-phy-circuit-meter text-phy-circuit text-adphy-kirchhoff-rules | e-field
+elec-power | 저항의 연결과 전력 | card-phy-multitap card-phy-bulbs card-phy-circuit-meter text-phy-circuit text-adphy-kirchhoff-rules text-labphy-filament | e-field
 capacitor | 축전기 | card-phy-capacitor card-phy-touch text-phy-capacitor text-adphy-dielectric | e-field
 magnet | 자성체 | card-phy-magnet text-phy-magnetism text-emq-bfield |
 current-mag | 전류의 자기 작용 | card-phy-oersted card-phy-motor video-phy-speaker text-phy-current-mag | magnet
@@ -76,8 +76,8 @@ transmission | 송전과 전력 수송 | card-is2-transmission video-is2-grid | 
 
 # ── 빛과 현대 물리 ──
 interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-superpose text-phy-interference text-mech-interference text-emq-grating text-adphy-michelson | 
-lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens text-adphy-microscope | 
-photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric text-adphy-matter-wave | interference
+lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens text-adphy-microscope text-labphy-bessel | 
+photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric text-adphy-matter-wave text-labphy-stopping | interference
 matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro text-emq-single-quantum | photon lens
 energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels text-adphy-quantum-box | photon spectrum
 relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence text-hist-light-bending text-adphy-muon | inertia gps-time
@@ -162,7 +162,7 @@ shm | 단진동 | card-mech-shm text-labphy-energy-sum | mech-energy force-vecto
 elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use text-mech-pulse | shm
 doppler | 도플러 효과 | card-mech-doppler text-mech-doppler text-space-transit | elastic-wave
 sound-interference | 음파의 간섭과 소음 제어 | card-mech-two-speaker | elastic-wave interference
-standing-wave | 정상파와 악기 | card-mech-standing text-mech-standing | elastic-wave sound-interference
+standing-wave | 정상파와 악기 | card-mech-standing text-mech-standing text-labphy-water-column | elastic-wave sound-interference
 
 # ── 진로선택: 물질과 에너지 ──
 mateng-gas-law | 이상 기체 방정식의 활용 | card-mateng-gas-use | ideal-gas mole
@@ -226,9 +226,9 @@ emq-lorentz | 로런츠 힘과 질량 분석기 | card-emq-lorentz text-emq-lore
 emq-transformer | 자기 선속과 변압기 | card-emq-transformer | em-induction
 emq-rlc | 저항·축전기·인덕터의 에너지 | card-emq-rlc text-emq-circuit | capacitor emq-transformer
 emq-semis | 다이오드와 트랜지스터 | card-emq-semis | semicond
-emq-diffraction | 회절과 회절 격자, 홀로그램 | card-emq-diffraction text-emq-hologram text-adphy-resolution | interference
+emq-diffraction | 회절과 회절 격자, 홀로그램 | card-emq-diffraction text-emq-hologram text-adphy-resolution text-labphy-envelope | interference
 emq-aberration | 광학 기기와 수차 | card-emq-aberration | lens
-emq-polarization | 편광 | card-emq-polarizer text-emq-polarize text-adphy-brewster |
+emq-polarization | 편광 | card-emq-polarizer text-emq-polarize text-adphy-brewster text-labphy-malus |
 emq-photosensor | 광센서와 이미지 센서 | card-emq-pixels | photon bands
 emq-laser | 레이저와 광통신 | card-emq-laser text-emq-fiber text-emq-laser | spectrum
 emq-single-quantum | 단일 양자의 간섭과 입자–파동 이중성 | card-emq-single-photon text-adphy-uncertainty | interference matter-wave
@@ -317,27 +317,27 @@ lp-momentum | 운동량 보존 실험 (분리) | card-labphy-explode text-labphy
 lp-spring-energy | 용수철 진자의 역학적 에너지 | card-labphy-spring-energy | shm mech-energy
 lp-latent | 얼음의 융해열 측정 | card-labphy-ice-fusion | latent-heat
 lp-joule | 열의 일당량 측정 | card-labphy-joule | work-energy heat-energy
-lp-equipotential | 등전위선과 전기력선 측정 | card-labphy-equipotential | e-field
-lp-capacitor | 평행판 축전기의 전기 용량 측정 | card-labphy-capacitor | lp-equipotential lp-lsq
+lp-equipotential | 등전위선과 전기력선 측정 | card-labphy-equipotential text-labphy-field-map | e-field
+lp-capacitor | 평행판 축전기의 전기 용량 측정 | card-labphy-capacitor text-labphy-foil | lp-equipotential lp-lsq
 lp-ohm | 옴의 법칙과 비옴 소자 | card-labphy-ohm | lp-lsq
-lp-internal-r | 기전력과 내부 저항 | card-labphy-internal-r | lp-ohm
-lp-wheatstone | 휘트스톤 브리지 영점법 | card-labphy-wheatstone | lp-ohm
-lp-lorentz-wire | 자기장 속 도선이 받는 힘 측정 | card-labphy-current-balance | emq-lorentz
-lp-induction | 유도 기전력과 렌츠 법칙 실험 | card-labphy-induction | free-fall lp-lorentz-wire
-lp-rc | RC·RL 회로의 시간 상수 | card-labphy-rc | lp-scope
-lp-rlc | RLC 직렬 회로의 공진 | card-labphy-rlc | lp-rc shm
+lp-internal-r | 기전력과 내부 저항 | card-labphy-internal-r text-labphy-terminal | lp-ohm
+lp-wheatstone | 휘트스톤 브리지 영점법 | card-labphy-wheatstone text-labphy-bridge-error | lp-ohm
+lp-lorentz-wire | 자기장 속 도선이 받는 힘 측정 | card-labphy-current-balance text-labphy-balance | emq-lorentz
+lp-induction | 유도 기전력과 렌츠 법칙 실험 | card-labphy-induction text-labphy-magnet-drop | free-fall lp-lorentz-wire
+lp-rc | RC·RL 회로의 시간 상수 | card-labphy-rc text-labphy-time-constant | lp-scope
+lp-rlc | RLC 직렬 회로의 공진 | card-labphy-rlc text-labphy-q-factor | lp-rc shm
 lp-rectifier | 정류 회로와 평활 | card-labphy-rectifier | lp-rc lp-scope
 lp-resonance | 기주 공명과 음속 측정 | card-labphy-standing | standing-wave
-lp-mirror | 구면 거울의 상과 시차법 | card-labphy-mirror | lens
-lp-refraction | 굴절률과 전반사 측정 | card-labphy-refraction | lens
+lp-mirror | 구면 거울의 상과 시차법 | card-labphy-mirror text-labphy-concave | lens
+lp-refraction | 굴절률과 전반사 측정 | card-labphy-refraction text-labphy-critical | lens
 lp-lens | 오목 렌즈의 초점 거리 측정 | card-labphy-lens2 | lens lp-mirror
-lp-wavelength | 이중 슬릿으로 파장 측정 | card-labphy-double-slit | interference
+lp-wavelength | 이중 슬릿으로 파장 측정 | card-labphy-double-slit text-labphy-fringe | interference
 lp-slit | 슬릿 폭·간격과 회절·간섭무늬 | card-labphy-slit-pattern | lp-wavelength emq-diffraction
 lp-polarization | 말뤼스 법칙과 브루스터 각 | card-labphy-polarization | emq-polarization lp-refraction
 lp-photoelectric | 광전 효과 실험과 플랑크 상수 | card-labphy-photoelectric | photon lp-lsq
-lp-cathode | 음극선의 성질 | card-labphy-cathode | e-field emq-lorentz
-lp-em | 전자의 비전하 측정 | card-labphy-em-ratio | circular emq-lorentz lp-cathode
-lp-franck-hertz | 프랑크–헤르츠 실험 | card-labphy-franck-hertz | energy-level lp-cathode
+lp-cathode | 음극선의 성질 | card-labphy-cathode text-labphy-deflect | e-field emq-lorentz
+lp-em | 전자의 비전하 측정 | card-labphy-em-ratio text-labphy-beam-ring | circular emq-lorentz lp-cathode
+lp-franck-hertz | 프랑크–헤르츠 실험 | card-labphy-franck-hertz text-labphy-mercury | energy-level lp-cathode
 
 # ── 과학계열: 화학 실험 ──
 lc-sigfig | 기구 눈금 읽기와 유효숫자 | card-labchem-sigfig | error
