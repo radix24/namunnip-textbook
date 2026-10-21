@@ -10739,6 +10739,7 @@
        "code": "12수문01-01",
        "blocks": [
         "intro-mcult-1-1",
+        "text-mcult-temperament",
         "card-mcult-string-ratio",
         "card-mcult-equal-temperament"
        ]
@@ -10749,6 +10750,7 @@
        "code": "12수문01-02",
        "blocks": [
         "intro-mcult-1-2",
+        "text-mcult-perspective",
         "card-mcult-perspective",
         "card-mcult-golden-myth"
        ]
@@ -10759,6 +10761,7 @@
        "code": "12수문01-03",
        "blocks": [
         "intro-mcult-1-3",
+        "text-mcult-babel",
         "card-mcult-fib-poem",
         "card-mcult-babel-library"
        ]
@@ -10769,6 +10772,7 @@
        "code": "12수문01-04",
        "blocks": [
         "intro-mcult-1-4",
+        "text-mcult-film",
         "card-mcult-wagon-wheel",
         "card-mcult-bezier-path"
        ]
@@ -10785,6 +10789,7 @@
        "code": "12수문02-01",
        "blocks": [
         "intro-mcult-2-1",
+        "text-mcult-sports",
         "card-mcult-shot-angle",
         "card-mcult-elo-rating"
        ]
@@ -10795,6 +10800,7 @@
        "code": "12수문02-02",
        "blocks": [
         "intro-mcult-2-2",
+        "text-mcult-games",
         "card-mcult-nim",
         "card-mcult-gacha"
        ]
@@ -10805,6 +10811,7 @@
        "code": "12수문02-03",
        "blocks": [
         "intro-mcult-2-3",
+        "text-mcult-checkdigit",
         "card-mcult-barcode-check",
         "card-mcult-run-length"
        ]
@@ -10815,6 +10822,7 @@
        "code": "12수문02-04",
        "blocks": [
         "intro-mcult-2-4",
+        "text-mcult-voting",
         "card-mcult-voting-methods",
         "card-mcult-apportionment"
        ]
@@ -10831,6 +10839,7 @@
        "code": "12수문03-01",
        "blocks": [
         "intro-mcult-3-1",
+        "text-mcult-yut",
         "card-mcult-yut-probability",
         "card-mcult-frieze"
        ]
@@ -10841,6 +10850,7 @@
        "code": "12수문03-02",
        "blocks": [
         "intro-mcult-3-2",
+        "text-mcult-braille",
         "card-mcult-braille-count",
         "card-mcult-braille-number"
        ]
@@ -10851,6 +10861,7 @@
        "code": "12수문03-03",
        "blocks": [
         "intro-mcult-3-3",
+        "text-mcult-media",
         "card-mcult-poll-margin",
         "card-mcult-relative-risk"
        ]
@@ -10861,6 +10872,7 @@
        "code": "12수문03-04",
        "blocks": [
         "intro-mcult-3-4",
+        "text-mcult-value",
         "card-mcult-unit-price",
         "card-mcult-carbon-choice"
        ]
@@ -10877,6 +10889,7 @@
        "code": "12수문04-01",
        "blocks": [
         "intro-mcult-4-1",
+        "text-mcult-food",
         "card-mcult-nutrition-label",
         "card-mcult-food-mileage"
        ]
@@ -10887,6 +10900,7 @@
        "code": "12수문04-02",
        "blocks": [
         "intro-mcult-4-2",
+        "text-mcult-emission",
         "card-mcult-pm-average",
         "card-mcult-emission-path"
        ]
@@ -10897,6 +10911,7 @@
        "code": "12수문04-03",
        "blocks": [
         "intro-mcult-4-3",
+        "text-mcult-desert",
         "card-mcult-desert-automata",
         "card-mcult-ndvi"
        ]
@@ -10907,6 +10922,7 @@
        "code": "12수문04-04",
        "blocks": [
         "intro-mcult-4-4",
+        "text-mcult-biodiv",
         "card-mcult-capture-recapture",
         "card-mcult-simpson-index"
        ]

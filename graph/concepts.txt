@@ -1090,22 +1090,22 @@ jm-probability | 가능성의 수치화 | card-jmath-defect-sample card-jmath-ov
 jm-tables | 표와 그래프로 정리하기 | card-jmath-choose-chart card-jmath-class-width text-jmath-tables | 
 jm-interpret | 표와 그래프의 해석 | card-jmath-misleading-graph card-jmath-dashboard text-jmath-interpret | jm-tables
 jm-decision | 목적에 맞는 표현과 의사 결정 | card-jmath-supplier-score card-jmath-stock-decision text-jmath-decision | jm-interpret jm-probability
-mcu-music | 음악과 수학 | card-mcult-string-ratio card-mcult-equal-temperament |
-mcu-art | 미술과 수학 | card-mcult-perspective card-mcult-golden-myth |
-mcu-literature | 문학과 수학 | card-mcult-fib-poem card-mcult-babel-library |
-mcu-film | 영화와 수학 | card-mcult-wagon-wheel card-mcult-bezier-path | mcu-art
-mcu-sports | 스포츠와 수학 | card-mcult-shot-angle card-mcult-elo-rating |
-mcu-games | 게임과 수학 | card-mcult-nim card-mcult-gacha |
-mcu-digital | 디지털 기술과 수학 | card-mcult-barcode-check card-mcult-run-length | mcu-games
-mcu-voting | 투표와 수학 | card-mcult-voting-methods card-mcult-apportionment |
-mcu-folk | 민속 수학과 건축 | card-mcult-yut-probability card-mcult-frieze |
-mcu-braille | 점자와 수학 | card-mcult-braille-count card-mcult-braille-number |
-mcu-media | 대중매체와 데이터 | card-mcult-poll-margin card-mcult-relative-risk |
-mcu-consume | 가치소비와 의사 결정 | card-mcult-unit-price card-mcult-carbon-choice |
-mcu-food | 식생활과 수학 | card-mcult-nutrition-label card-mcult-food-mileage |
-mcu-air | 대기 오염과 수학 | card-mcult-pm-average card-mcult-emission-path |
-mcu-desert | 사막화와 수학 | card-mcult-desert-automata card-mcult-ndvi |
-mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcult-simpson-index |
+mcu-music | 음악과 수학 | card-mcult-string-ratio card-mcult-equal-temperament text-mcult-temperament |
+mcu-art | 미술과 수학 | card-mcult-perspective card-mcult-golden-myth text-mcult-perspective |
+mcu-literature | 문학과 수학 | card-mcult-fib-poem card-mcult-babel-library text-mcult-babel |
+mcu-film | 영화와 수학 | card-mcult-wagon-wheel card-mcult-bezier-path text-mcult-film | mcu-art
+mcu-sports | 스포츠와 수학 | card-mcult-shot-angle card-mcult-elo-rating text-mcult-sports |
+mcu-games | 게임과 수학 | card-mcult-nim card-mcult-gacha text-mcult-games |
+mcu-digital | 디지털 기술과 수학 | card-mcult-barcode-check card-mcult-run-length text-mcult-checkdigit | mcu-games
+mcu-voting | 투표와 수학 | card-mcult-voting-methods card-mcult-apportionment text-mcult-voting |
+mcu-folk | 민속 수학과 건축 | card-mcult-yut-probability card-mcult-frieze text-mcult-yut |
+mcu-braille | 점자와 수학 | card-mcult-braille-count card-mcult-braille-number text-mcult-braille |
+mcu-media | 대중매체와 데이터 | card-mcult-poll-margin card-mcult-relative-risk text-mcult-media |
+mcu-consume | 가치소비와 의사 결정 | card-mcult-unit-price card-mcult-carbon-choice text-mcult-value |
+mcu-food | 식생활과 수학 | card-mcult-nutrition-label card-mcult-food-mileage text-mcult-food |
+mcu-air | 대기 오염과 수학 | card-mcult-pm-average card-mcult-emission-path text-mcult-emission |
+mcu-desert | 사막화와 수학 | card-mcult-desert-automata card-mcult-ndvi text-mcult-desert |
+mcu-biodiv | 생물 다양성과 수학 | card-mcult-capture-recapture card-mcult-simpson-index text-mcult-biodiv |
 pst-useful | 통계의 유용성과 통계적 질문 | card-pstat-cholera-map card-pstat-stat-question |
 pst-process | 통계적 문제해결 과정 | card-pstat-ppdac-order card-pstat-question-refine | pst-useful
 pst-sampling | 모집단과 표본추출 방법 | card-pstat-sampling-methods card-pstat-volunteer-bias | pst-process
