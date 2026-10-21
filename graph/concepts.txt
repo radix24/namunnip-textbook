@@ -9,7 +9,7 @@ gps-time | 시간으로 위치 찾기 | card-is1-gps | measure
 units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standards card-is1-new-unit card-is1-standard text-is1-base-units | measure
 error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis | measure
 estimate | 어림 | card-is1-fermi | units
-digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration | measure
+digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration text-labphy-aliasing | measure
 data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data text-fusi-simpson-paradox text-info-group-eval | error
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat text-is2-ai-robot | digital data
@@ -52,7 +52,7 @@ titration | 중화 적정 | card-chem-vinegar card-chem-indicator video-chem-tit
 inertia | 관성 법칙 | text-is1-inertia card-phy-inertia video-phy-bus text-is1-momentum text-phy-newton |
 free-fall | 자유 낙하와 포물선 운동 | card-free-fall card-is1-projectile card-is1-moon-jump text-is1-gravity-motion text-mech-projectile |
 gravity | 만유인력과 원운동 | card-inverse-square video-apple-moon | free-fall
-newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track | inertia
+newton2 | 가속도 법칙 | card-phy-stopping card-phy-vt card-phy-video-track text-labphy-tape | inertia
 impulse | 충격량과 운동량 | card-is1-airbag card-is1-egg-drop text-sie2-paper-column | inertia free-fall
 torque | 힘의 평형과 돌림힘 | card-phy-seesaw card-phy-crane card-phy-truss text-phy-torque text-mech-forces text-adphy-rolling-energy |
 action-reaction | 작용 반작용 | card-phy-horse text-phy-momentum-cons | newton2
@@ -153,12 +153,12 @@ kepler | 케플러 법칙과 만유인력 | card-mech-kepler text-mech-kepler-hi
 escape | 탈출 속도와 대기 | card-mech-escape | kepler mech-energy momentum
 gen-rel | 등가 원리와 일반 상대론 | text-mech-gr | escape relativity
 heat-transfer | 열의 이동과 열팽창 | card-mech-insulation text-mech-heat-tech text-mech-heat-transfer | heat-energy
-latent-heat | 비열과 잠열 | card-mech-heating-curve text-mech-ideal-gas | heat-energy
+latent-heat | 비열과 잠열 | card-mech-heating-curve text-mech-ideal-gas text-labphy-latent | heat-energy
 ideal-gas | 이상 기체 | card-mech-ideal-gas text-mateng-gas-law text-adphy-expansion-work text-adchem-speed-distribution | heat-energy
 first-law | 열역학 제1법칙 | card-mech-first-law text-adchem-internal-energy | ideal-gas heat-energy
 cycle | 열기관의 순환 과정 | card-mech-cycle text-adphy-entropy-flow | first-law heat-engine
 entropy | 엔트로피와 비가역 현상 | card-mech-entropy text-mech-entropy text-mateng-spontaneity text-adchem-microstates | first-law cycle
-shm | 단진동 | card-mech-shm | mech-energy force-vector
+shm | 단진동 | card-mech-shm text-labphy-energy-sum | mech-energy force-vector
 elastic-wave | 탄성파의 반사와 투과 | card-mech-pulse text-mech-elastic-use text-mech-pulse | shm
 doppler | 도플러 효과 | card-mech-doppler text-mech-doppler text-space-transit | elastic-wave
 sound-interference | 음파의 간섭과 소음 제어 | card-mech-two-speaker | elastic-wave interference
@@ -292,7 +292,7 @@ space-lss | 우주 거대 구조 | card-space-cosmic-web text-space-large-struct
 # ── 과학탐구실험 ──
 sie-galileo | 갈릴레이의 빗면 실험 | card-sie1-galileo text-sie1-galileo-incline | free-fall
 sie-nature | 과학의 본성과 과학사 | text-sie1-nature text-sie1-light-speed |
-sie-induction | 귀납적 탐구 | card-sie1-pendulum text-sie1-pendulum-induction | error
+sie-induction | 귀납적 탐구 | card-sie1-pendulum text-sie1-pendulum-induction text-labphy-amplitude | error
 sie-deduction | 가설 연역적 탐구 | card-sie1-pasteur | sci-method sie-induction
 sie-represent | 자료의 분석과 표현 | card-sie1-plot text-fusi-area-distortion text-resr-linearize | error
 sie-evidence | 재현성과 증거에 근거한 해석 | text-sie1-peer text-sie1-replication | error sie-deduction
@@ -304,16 +304,16 @@ sie-iot-data | 실시간 센서 데이터와 공유 | card-sie2-co2 | iot sie-ca
 sie-ethics | 연구 윤리와 실험실 안전 | text-sie2-ethics | ethics sie-evidence
 
 # ── 과학계열: 물리학 실험 ──
-lp-uncertainty | 정확도·정밀도와 오차의 전파 | card-labphy-precision | error units
-lp-lsq | 최소 제곱법과 신뢰구간 | card-labphy-lsq | lp-uncertainty
-lp-scope | 오실로스코프와 함수 발생기 | card-labphy-scope | error units
+lp-uncertainty | 정확도·정밀도와 오차의 전파 | card-labphy-precision text-labphy-density | error units
+lp-lsq | 최소 제곱법과 신뢰구간 | card-labphy-lsq text-labphy-fit-slope | lp-uncertainty
+lp-scope | 오실로스코프와 함수 발생기 | card-labphy-scope text-labphy-divisions | error units
 lp-daq | 센서·표본화와 에일리어싱 | card-labphy-logger | digital shm
 lp-uniform-accel | 등가속도 직선 운동 측정 | card-labphy-ticker | newton2 lp-lsq
-lp-newton2 | 가속도와 질량의 관계 실험 | card-labphy-newton2 | newton2 lp-lsq
-lp-friction | 마찰력과 마찰 계수 측정 | card-labphy-friction | force-vector newton2
-lp-g | 중력 가속도 측정 | card-labphy-g | free-fall lp-lsq
-lp-circular | 구심력 측정 실험 | card-labphy-centripetal | circular
-lp-momentum | 운동량 보존 실험 (분리) | card-labphy-explode | momentum
+lp-newton2 | 가속도와 질량의 관계 실험 | card-labphy-newton2 text-labphy-cart-mass | newton2 lp-lsq
+lp-friction | 마찰력과 마찰 계수 측정 | card-labphy-friction text-labphy-static-kinetic | force-vector newton2
+lp-g | 중력 가속도 측정 | card-labphy-g text-labphy-free-fall | free-fall lp-lsq
+lp-circular | 구심력 측정 실험 | card-labphy-centripetal text-labphy-stopper | circular
+lp-momentum | 운동량 보존 실험 (분리) | card-labphy-explode text-labphy-recoil | momentum
 lp-spring-energy | 용수철 진자의 역학적 에너지 | card-labphy-spring-energy | shm mech-energy
 lp-latent | 얼음의 융해열 측정 | card-labphy-ice-fusion | latent-heat
 lp-joule | 열의 일당량 측정 | card-labphy-joule | work-energy heat-energy

@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "1c5eab348c8c",
+"version": "ae2916b31459",
 "files": [
 "404.html",
 "bank.html",
@@ -2256,6 +2256,7 @@ self.PRECACHE = {
 "js/cards/labearth/trackway.js",
 "js/cards/labearth/wave-tank.js",
 "js/cards/labearth/zonal-mean-data.js",
+"js/cards/labphy/body.js",
 "js/cards/labphy/capacitor.js",
 "js/cards/labphy/cathode.js",
 "js/cards/labphy/centripetal.js",

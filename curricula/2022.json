@@ -5679,6 +5679,7 @@
        "code": "12물실01-01",
        "blocks": [
         "intro-labphy-1-1",
+        "text-labphy-density",
         "card-labphy-precision"
        ]
       },
@@ -5688,6 +5689,7 @@
        "code": "12물실01-02",
        "blocks": [
         "intro-labphy-1-2",
+        "text-labphy-fit-slope",
         "card-labphy-lsq"
        ]
       },
@@ -5697,6 +5699,7 @@
        "code": "12물실01-03",
        "blocks": [
         "intro-labphy-1-3",
+        "text-labphy-divisions",
         "card-labphy-scope"
        ]
       },
@@ -5706,6 +5709,7 @@
        "code": "12물실01-04",
        "blocks": [
         "intro-labphy-1-4",
+        "text-labphy-aliasing",
         "card-is1-sampling",
         "card-is1-sensor",
         "card-labphy-logger",
@@ -5724,6 +5728,7 @@
        "code": "12물실02-01",
        "blocks": [
         "intro-labphy-2-1",
+        "text-labphy-tape",
         "card-phy-video-track",
         "card-labphy-ticker"
        ]
@@ -5734,6 +5739,7 @@
        "code": "12물실02-02",
        "blocks": [
         "intro-labphy-2-2",
+        "text-labphy-cart-mass",
         "card-labphy-newton2"
        ]
       },
@@ -5743,6 +5749,7 @@
        "code": "12물실02-03",
        "blocks": [
         "intro-labphy-2-3",
+        "text-labphy-static-kinetic",
         "card-labphy-friction"
        ]
       },
@@ -5752,6 +5759,7 @@
        "code": "12물실02-04",
        "blocks": [
         "intro-labphy-2-4",
+        "text-labphy-free-fall",
         "card-labphy-g"
        ]
       },
@@ -5761,6 +5769,7 @@
        "code": "12물실02-05",
        "blocks": [
         "intro-labphy-2-5",
+        "text-labphy-stopper",
         "card-labphy-centripetal"
        ]
       },
@@ -5770,6 +5779,7 @@
        "code": "12물실02-06",
        "blocks": [
         "intro-labphy-2-6",
+        "text-labphy-amplitude",
         "card-sie1-pendulum",
         "card-pendulum"
        ]
@@ -5780,6 +5790,7 @@
        "code": "12물실02-07",
        "blocks": [
         "intro-labphy-2-7",
+        "text-labphy-recoil",
         "card-labphy-explode"
        ]
       },
@@ -5789,6 +5800,7 @@
        "code": "12물실02-08",
        "blocks": [
         "intro-labphy-2-8",
+        "text-labphy-energy-sum",
         "card-mech-shm",
         "card-labphy-spring-energy"
        ]
@@ -5799,6 +5811,7 @@
        "code": "12물실02-09",
        "blocks": [
         "intro-labphy-2-9",
+        "text-labphy-latent",
         "card-mech-heating-curve",
         "card-labphy-ice-fusion"
        ]
