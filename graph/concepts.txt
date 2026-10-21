@@ -10,7 +10,7 @@ units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standar
 error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis | measure
 estimate | 어림 | card-is1-fermi | units
 digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration | measure
-data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data text-fusi-simpson-paradox | error
+data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data text-fusi-simpson-paradox text-info-group-eval | error
 diag-test | 진단 검사의 해석 | card-is2-test | error
 ai | 인공지능과 기계 학습 | card-is2-learn card-is2-trust video-is2-ai-cat text-is2-ai-robot | digital data
 robot | 로봇과 되먹임 제어 | card-is2-robot card-is2-robot-design | digital
@@ -658,26 +658,26 @@ cl-neutral | 탄소 예산과 탄소중립 기술 | card-clim-budget text-clim-t
 cl-cooperate | 국제 협약과 시민 참여 | card-clim-cooperate text-clim-agreements text-clim-public-goods | cl-neutral biodiversity
 
 # ── 과학계열: 정보과학 ──
-if-function | 함수 정의·호출과 매개변수 | card-info-scope text-info-params |
-if-recursion | 재귀 함수와 호출 스택 | card-info-callstack text-info-induction | if-function
-if-iter-vs-rec | 반복구조와 재귀구조의 비교 | card-info-fibtree text-info-loop-rec | if-recursion
-if-stack-queue | 스택과 큐의 구현 | card-info-sq text-info-adt | if-function
-if-sq-use | 스택·큐를 활용한 문제 해결 | card-info-bracket card-info-printer | if-stack-queue
-if-graph-rep | 그래프의 인접 행렬·인접 리스트 | card-info-graphrep | if-stack-queue
+if-function | 함수 정의·호출과 매개변수 | card-info-scope text-info-params text-info-call-stack |
+if-recursion | 재귀 함수와 호출 스택 | card-info-callstack text-info-induction text-info-hanoi | if-function
+if-iter-vs-rec | 반복구조와 재귀구조의 비교 | card-info-fibtree text-info-loop-rec text-info-fib-calls | if-recursion
+if-stack-queue | 스택과 큐의 구현 | card-info-sq text-info-adt text-info-queue-impl | if-function
+if-sq-use | 스택·큐를 활용한 문제 해결 | card-info-bracket card-info-printer text-info-print-queue | if-stack-queue
+if-graph-rep | 그래프의 인접 행렬·인접 리스트 | card-info-graphrep text-info-graph-store | if-stack-queue
 if-tree-rep | 이진 트리의 배열·자식 목록 표현 | card-info-treerep | if-graph-rep if-recursion
-if-graph-search | 그래프 탐색 (BFS·DFS) | card-info-maze | if-graph-rep if-sq-use
+if-graph-search | 그래프 탐색 (BFS·DFS) | card-info-maze text-info-bst-height | if-graph-rep if-sq-use
 if-bst | 이진 탐색 트리 | card-info-bst | if-tree-rep
-if-state-space | 상태 공간과 완전 탐색 | card-info-space | if-recursion
-if-backtracking | 백트래킹과 가지치기 | card-info-queens | if-state-space
+if-state-space | 상태 공간과 완전 탐색 | card-info-space text-info-state-space | if-recursion
+if-backtracking | 백트래킹과 가지치기 | card-info-queens text-info-n-queens | if-state-space
 if-bnb-greedy | 분기 한정법과 탐욕법 | card-info-bnb | if-backtracking
-if-decompose | 문제 분해와 관계식 | card-info-hanoi text-info-decompose | if-recursion
-if-divide-conquer | 분할 정복 | card-info-sort card-info-power | if-decompose
-if-dp | 동적 계획법 (메모이제이션·표 채우기) | card-info-dp-memo card-info-dp-knapsack text-info-dp-dc | if-divide-conquer
-if-bigo | 빅오 표기법과 알고리즘 복잡도 | card-info-bigo-count card-info-bigo-growth | if-dp if-divide-conquer
-if-problem | 컴퓨터과학으로 풀 문제 발견 | text-info-find-problem | if-bigo
-if-project | 프로젝트 설계와 임계 경로 | text-info-project-plan card-info-critical-path | if-problem
-if-oss | 버전 관리 협업과 오픈소스 라이선스 | card-info-git-merge text-info-oss-license | if-project
-if-test | 테스트와 디버깅 | card-info-unit-test text-info-debug | if-project
+if-decompose | 문제 분해와 관계식 | card-info-hanoi text-info-decompose text-info-grid-paths | if-recursion
+if-divide-conquer | 분할 정복 | card-info-sort card-info-power text-info-merge-sort | if-decompose
+if-dp | 동적 계획법 (메모이제이션·표 채우기) | card-info-dp-memo card-info-dp-knapsack text-info-dp-dc text-info-coin-dp | if-divide-conquer
+if-bigo | 빅오 표기법과 알고리즘 복잡도 | card-info-bigo-count card-info-bigo-growth text-info-big-o | if-dp if-divide-conquer
+if-problem | 컴퓨터과학으로 풀 문제 발견 | text-info-find-problem text-info-route-count | if-bigo
+if-project | 프로젝트 설계와 임계 경로 | text-info-project-plan card-info-critical-path text-info-team-size | if-problem
+if-oss | 버전 관리 협업과 오픈소스 라이선스 | card-info-git-merge text-info-oss-license text-info-code-review | if-project
+if-test | 테스트와 디버깅 | card-info-unit-test text-info-debug text-info-boundary-test | if-project
 if-evaluate | 산출물의 기능적·윤리적 평가와 공유 | card-info-eval-groups text-info-share | if-test data ethics
 
 # ── 융합선택: 과학의 역사와 문화 ──

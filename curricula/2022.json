@@ -5448,6 +5448,7 @@
        "code": "12정과01-01",
        "blocks": [
         "intro-info-1-1",
+        "text-info-call-stack",
         "card-info-scope",
         "text-info-params"
        ]
@@ -5458,6 +5459,7 @@
        "code": "12정과01-02",
        "blocks": [
         "intro-info-1-2",
+        "text-info-hanoi",
         "card-info-callstack",
         "text-info-induction"
        ]
@@ -5468,6 +5470,7 @@
        "code": "12정과01-03",
        "blocks": [
         "intro-info-1-3",
+        "text-info-fib-calls",
         "card-info-fibtree",
         "text-info-loop-rec"
        ]
@@ -5484,6 +5487,7 @@
        "code": "12정과02-01",
        "blocks": [
         "intro-info-2-1",
+        "text-info-queue-impl",
         "card-info-sq",
         "text-info-adt"
        ]
@@ -5494,6 +5498,7 @@
        "code": "12정과02-02",
        "blocks": [
         "intro-info-2-2",
+        "text-info-print-queue",
         "card-info-bracket",
         "card-info-printer"
        ]
@@ -5504,6 +5509,7 @@
        "code": "12정과02-03",
        "blocks": [
         "intro-info-2-3",
+        "text-info-graph-store",
         "card-info-graphrep",
         "card-info-treerep"
        ]
@@ -5514,6 +5520,7 @@
        "code": "12정과02-04",
        "blocks": [
         "intro-info-2-4",
+        "text-info-bst-height",
         "card-info-maze",
         "card-info-bst"
        ]
@@ -5530,6 +5537,7 @@
        "code": "12정과03-01",
        "blocks": [
         "intro-info-3-1",
+        "text-info-state-space",
         "card-info-space"
        ]
       },
@@ -5539,6 +5547,7 @@
        "code": "12정과03-02",
        "blocks": [
         "intro-info-3-2",
+        "text-info-n-queens",
         "card-info-queens",
         "card-info-bnb"
        ]
@@ -5549,6 +5558,7 @@
        "code": "12정과03-03",
        "blocks": [
         "intro-info-3-3",
+        "text-info-grid-paths",
         "card-info-hanoi",
         "text-info-decompose"
        ]
@@ -5559,6 +5569,7 @@
        "code": "12정과03-04",
        "blocks": [
         "intro-info-3-4",
+        "text-info-merge-sort",
         "card-info-sort",
         "card-info-power"
        ]
@@ -5569,6 +5580,7 @@
        "code": "12정과03-05",
        "blocks": [
         "intro-info-3-5",
+        "text-info-coin-dp",
         "card-info-dp-memo",
         "card-info-dp-knapsack",
         "text-info-dp-dc"
@@ -5580,6 +5592,7 @@
        "code": "12정과03-06",
        "blocks": [
         "intro-info-3-6",
+        "text-info-big-o",
         "card-info-bigo-count",
         "card-info-bigo-growth"
        ]
@@ -5596,6 +5609,7 @@
        "code": "12정과04-01",
        "blocks": [
         "intro-info-4-1",
+        "text-info-route-count",
         "text-info-find-problem"
        ]
       },
@@ -5605,6 +5619,7 @@
        "code": "12정과04-02",
        "blocks": [
         "intro-info-4-2",
+        "text-info-team-size",
         "text-info-project-plan",
         "card-info-critical-path"
        ]
@@ -5615,6 +5630,7 @@
        "code": "12정과04-03",
        "blocks": [
         "intro-info-4-3",
+        "text-info-code-review",
         "card-info-git-merge",
         "text-info-oss-license"
        ]
@@ -5625,6 +5641,7 @@
        "code": "12정과04-04",
        "blocks": [
         "intro-info-4-4",
+        "text-info-boundary-test",
         "card-info-unit-test",
         "text-info-debug"
        ]
@@ -5635,6 +5652,7 @@
        "code": "12정과04-05",
        "blocks": [
         "intro-info-4-5",
+        "text-info-group-eval",
         "card-is2-reident",
         "card-info-eval-groups",
         "text-info-share"
