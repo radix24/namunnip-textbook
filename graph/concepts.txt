@@ -1119,13 +1119,13 @@ pst-ci-prop | 모비율의 추정과 해석 | card-pstat-ci-prop-read card-pstat
 pst-test | 가설검정 | card-pstat-coin-test card-pstat-p-hacking text-pstat-test | pst-ci-prop
 pst-decision | 통계적 탐구와 의사 결정 | card-pstat-ab-test card-pstat-error-cost text-pstat-decision | pst-test
 pst-reflect | 통계적 탐구의 성찰 | card-pstat-simpson-paradox card-pstat-publication-bias text-pstat-reflect | pst-test pst-collect
-mrs-meaning | 수학과제 탐구의 의미 | card-mres-collatz-explore card-mres-circle-regions |
-mrs-ethics | 연구 윤리 | card-mres-benford-check card-mres-citation-ethics | mrs-meaning
-mrs-literature | 문헌 조사 | card-mres-source-eval card-mres-sequence-search | mrs-ethics
-mrs-case | 사례 조사 | card-mres-tiling-case card-mres-paper-ratio | mrs-meaning
-mrs-experiment | 수학 실험 | card-mres-buffon-needle card-mres-trials-error | mrs-meaning
-mrs-develop | 개발 연구 | card-mres-fair-game-design card-mres-prime-algorithm | mrs-experiment
-mrs-plan | 주제 선정과 탐구 계획 | card-mres-topic-matrix card-mres-critical-path | mrs-meaning
-mrs-perform | 탐구 수행 | card-mres-magic-square-log card-mres-border-tiles | mrs-plan
-mrs-present | 산출물과 발표 | card-mres-chart-redesign card-mres-proof-order | mrs-perform
-mrs-reflect | 반성과 평가 | card-mres-rubric-eval card-mres-euler-polynomial | mrs-present mrs-ethics
+mrs-meaning | 수학과제 탐구의 의미 | card-mres-collatz-explore card-mres-circle-regions text-mres-pattern |
+mrs-ethics | 연구 윤리 | card-mres-benford-check card-mres-citation-ethics text-mres-benford | mrs-meaning
+mrs-literature | 문헌 조사 | card-mres-source-eval card-mres-sequence-search text-mres-literature | mrs-ethics
+mrs-case | 사례 조사 | card-mres-tiling-case card-mres-paper-ratio text-mres-tiling | mrs-meaning
+mrs-experiment | 수학 실험 | card-mres-buffon-needle card-mres-trials-error text-mres-buffon | mrs-meaning
+mrs-develop | 개발 연구 | card-mres-fair-game-design card-mres-prime-algorithm text-mres-develop | mrs-experiment
+mrs-plan | 주제 선정과 탐구 계획 | card-mres-topic-matrix card-mres-critical-path text-mres-plan | mrs-meaning
+mrs-perform | 탐구 수행 | card-mres-magic-square-log card-mres-border-tiles text-mres-magic | mrs-plan
+mrs-present | 산출물과 발표 | card-mres-chart-redesign card-mres-proof-order text-mres-present | mrs-perform
+mrs-reflect | 반성과 평가 | card-mres-rubric-eval card-mres-euler-polynomial text-mres-reflect | mrs-present mrs-ethics

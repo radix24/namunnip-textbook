@@ -11124,6 +11124,7 @@
        "code": "12수과01-01",
        "blocks": [
         "intro-mres-1-1",
+        "text-mres-pattern",
         "card-mres-collatz-explore",
         "card-mres-circle-regions"
        ]
@@ -11134,6 +11135,7 @@
        "code": "12수과01-02",
        "blocks": [
         "intro-mres-1-2",
+        "text-mres-benford",
         "card-mres-benford-check",
         "card-mres-citation-ethics"
        ]
@@ -11150,6 +11152,7 @@
        "code": "12수과02-01",
        "blocks": [
         "intro-mres-2-1",
+        "text-mres-literature",
         "card-mres-source-eval",
         "card-mres-sequence-search"
        ]
@@ -11160,6 +11163,7 @@
        "code": "12수과02-02",
        "blocks": [
         "intro-mres-2-2",
+        "text-mres-tiling",
         "card-mres-tiling-case",
         "card-mres-paper-ratio"
        ]
@@ -11170,6 +11174,7 @@
        "code": "12수과02-03",
        "blocks": [
         "intro-mres-2-3",
+        "text-mres-buffon",
         "card-mres-buffon-needle",
         "card-mres-trials-error"
        ]
@@ -11180,6 +11185,7 @@
        "code": "12수과02-04",
        "blocks": [
         "intro-mres-2-4",
+        "text-mres-develop",
         "card-mres-fair-game-design",
         "card-mres-prime-algorithm"
        ]
@@ -11196,6 +11202,7 @@
        "code": "12수과03-01",
        "blocks": [
         "intro-mres-3-1",
+        "text-mres-plan",
         "card-mres-topic-matrix",
         "card-mres-critical-path"
        ]
@@ -11206,6 +11213,7 @@
        "code": "12수과03-02",
        "blocks": [
         "intro-mres-3-2",
+        "text-mres-magic",
         "card-mres-magic-square-log",
         "card-mres-border-tiles"
        ]
@@ -11216,6 +11224,7 @@
        "code": "12수과03-03",
        "blocks": [
         "intro-mres-3-3",
+        "text-mres-present",
         "card-mres-chart-redesign",
         "card-mres-proof-order"
        ]
@@ -11226,6 +11235,7 @@
        "code": "12수과03-04",
        "blocks": [
         "intro-mres-3-4",
+        "text-mres-reflect",
         "card-mres-rubric-eval",
         "card-mres-euler-polynomial"
        ]
