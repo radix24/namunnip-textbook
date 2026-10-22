@@ -68,6 +68,8 @@ def measure(p):
         "conn": 100 * sum(s.startswith(CONN) for s in ss) / n,
         "label": sum(bool(LABEL.match(s)) for s in ss),
         "mixed": min(da, nida) >= 3 and min(da, nida) / n > 0.15,
+        # 절 머리말(intro)과 영상 카드는 화면이 독자에게 말을 거는 안내라 존댓말을 쓴다
+        "nida": nida if nida >= 3 and nida / n > 0.3 and not p.name.startswith(("intro-", "video-")) else 0,
         "figure": bool(re.search(r"<figure|<svg|<canvas|<img", h)),
         "step_hon": hon, "step_frag": frag,
     }
@@ -81,6 +83,8 @@ def problems(m):
         out.append(f"꼬리표 문장 {m['label']}개")
     if m["mixed"]:
         out.append("'~다'체와 '~니다'체가 섞임")
+    elif m["nida"]:
+        out.append(f"'~니다'체 문장 {m['nida']}개")
     if m["kind"] == "본문" and not m["figure"]:
         out.append("그림 없음")
     if m["step_hon"]:
