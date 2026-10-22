@@ -143,7 +143,7 @@ eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat te
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
 cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem text-esys-oxygen-rise | food-web photosyn
 population | 개체군과 군집 | card-bio-logistic text-bio-social card-bio-interact text-bio-niche card-bio-quadrat text-bio-population text-labbio-quadrat | eco-parts
-phyllotaxis | 잎차례와 황금각 | card-phyllo | photosyn
+phyllotaxis | 잎차례와 황금각 | card-phyllo text-extra-golden-angle | photosyn
 
 # ── 진로선택: 역학과 에너지 ──
 force-vector | 힘의 합성과 빗면 | card-mech-incline | newton2 torque
