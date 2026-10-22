@@ -6904,6 +6904,7 @@
        "code": "12지실01-01",
        "blocks": [
         "intro-labearth-1-1",
+        "text-labearth-heights",
         "card-labearth-geoid"
        ]
       },
@@ -6913,6 +6914,7 @@
        "code": "12지실01-02",
        "blocks": [
         "intro-labearth-1-2",
+        "text-labearth-sp-time",
         "card-labearth-epicenter"
        ]
       },
@@ -6922,6 +6924,7 @@
        "code": "12지실01-03",
        "blocks": [
         "intro-labearth-1-3",
+        "text-labearth-bouguer",
         "card-labearth-gravity"
        ]
       },
@@ -6931,6 +6934,7 @@
        "code": "12지실01-04",
        "blocks": [
         "intro-labearth-1-4",
+        "text-labearth-inclination",
         "card-labearth-apwp"
        ]
       },
@@ -6940,6 +6944,7 @@
        "code": "12지실01-05",
        "blocks": [
         "intro-labearth-1-5",
+        "text-labearth-stripes",
         "card-labearth-spreading"
        ]
       },
@@ -6949,6 +6954,7 @@
        "code": "12지실01-06",
        "blocks": [
         "intro-labearth-1-6",
+        "text-labearth-minerals",
         "card-labearth-mineral-id"
        ]
       },
@@ -6958,6 +6964,7 @@
        "code": "12지실01-07",
        "blocks": [
         "intro-labearth-1-7",
+        "text-labearth-retardation",
         "card-labearth-polarizing"
        ]
       },
@@ -6967,6 +6974,7 @@
        "code": "12지실01-08",
        "blocks": [
         "intro-labearth-1-8",
+        "text-labearth-rock-texture",
         "card-earth-igneous",
         "card-earth-foliation",
         "card-earth-sedrock",
@@ -6979,6 +6987,7 @@
        "code": "12지실01-09",
        "blocks": [
         "intro-labearth-1-9",
+        "text-labearth-sequence",
         "card-earth-relative-age",
         "card-labearth-section",
         "card-earth-correlate"
@@ -6990,6 +6999,7 @@
        "code": "12지실01-10",
        "blocks": [
         "intro-labearth-1-10",
+        "text-labearth-clocks",
         "card-earth-half-life",
         "card-labearth-isochron"
        ]
@@ -7000,6 +7010,7 @@
        "code": "12지실01-11",
        "blocks": [
         "intro-labearth-1-11",
+        "text-labearth-trackway",
         "card-earth-fossil-map",
         "card-is2-paleoenv",
         "card-labearth-trackway"
@@ -7011,6 +7022,7 @@
        "code": "12지실01-12",
        "blocks": [
         "intro-labearth-1-12",
+        "text-labearth-dip",
         "card-labearth-strike-dip"
        ]
       }
@@ -7026,6 +7038,7 @@
        "code": "12지실02-01",
        "blocks": [
         "intro-labearth-2-1",
+        "text-labearth-mixing",
         "card-labearth-humidity"
        ]
       },
@@ -7035,6 +7048,7 @@
        "code": "12지실02-02",
        "blocks": [
         "intro-labearth-2-2",
+        "text-labearth-lcl",
         "card-labearth-skewt"
        ]
       },
@@ -7044,6 +7058,7 @@
        "code": "12지실02-03",
        "blocks": [
         "intro-labearth-2-3",
+        "text-labearth-stability",
         "card-esys-stability",
         "card-labearth-stability"
        ]
@@ -7054,6 +7069,7 @@
        "code": "12지실02-04",
        "blocks": [
         "intro-labearth-2-4",
+        "text-labearth-coriolis",
         "card-labearth-coriolis"
        ]
       },
@@ -7063,6 +7079,7 @@
        "code": "12지실02-05",
        "blocks": [
         "intro-labearth-2-5",
+        "text-labearth-geowind",
         "card-esys-winds",
         "card-labearth-geowind"
        ]
@@ -7073,6 +7090,7 @@
        "code": "12지실02-06",
        "blocks": [
         "intro-labearth-2-6",
+        "text-labearth-circulation",
         "card-labearth-circulation"
        ]
       },
@@ -7082,6 +7100,7 @@
        "code": "12지실02-07",
        "blocks": [
         "intro-labearth-2-7",
+        "text-labearth-argo",
         "card-earth-argo",
         "card-labearth-argo-float"
        ]
@@ -7092,6 +7111,7 @@
        "code": "12지실02-08",
        "blocks": [
         "intro-labearth-2-8",
+        "text-labearth-wave-tank",
         "card-esys-tsunami",
         "card-labearth-wave-tank"
        ]
@@ -7102,6 +7122,7 @@
        "code": "12지실02-09",
        "blocks": [
         "intro-labearth-2-9",
+        "text-labearth-geostrophic",
         "card-esys-ekman",
         "card-labearth-geostrophic"
        ]
@@ -7112,6 +7133,7 @@
        "code": "12지실02-10",
        "blocks": [
         "intro-labearth-2-10",
+        "text-labearth-thermohaline",
         "card-earth-amoc",
         "card-labearth-thermohaline"
        ]
@@ -7122,6 +7144,7 @@
        "code": "12지실02-11",
        "blocks": [
         "intro-labearth-2-11",
+        "text-labearth-tide",
         "card-esys-tide",
         "card-labearth-tide"
        ]
@@ -7138,6 +7161,7 @@
        "code": "12지실03-01",
        "blocks": [
         "intro-labearth-3-1",
+        "text-labearth-culmination",
         "card-labearth-celestial"
        ]
       },
@@ -7147,6 +7171,7 @@
        "code": "12지실03-02",
        "blocks": [
         "intro-labearth-3-2",
+        "text-labearth-retrograde",
         "card-labearth-analemma"
        ]
       },
@@ -7156,6 +7181,7 @@
        "code": "12지실03-03",
        "blocks": [
         "intro-labearth-3-3",
+        "text-labearth-eot",
         "card-labearth-equation-time"
        ]
       },
@@ -7165,6 +7191,7 @@
        "code": "12지실03-04",
        "blocks": [
         "intro-labearth-3-4",
+        "text-labearth-orbit",
         "card-labearth-orbit-mass"
        ]
       },
@@ -7174,6 +7201,7 @@
        "code": "12지실03-05",
        "blocks": [
         "intro-labearth-3-5",
+        "text-labearth-resolution",
         "card-labearth-telescope"
        ]
       },
@@ -7183,6 +7211,7 @@
        "code": "12지실03-06",
        "blocks": [
         "intro-labearth-3-6",
+        "text-labearth-crater-depth",
         "card-labearth-crater"
        ]
       },
@@ -7192,6 +7221,7 @@
        "code": "12지실03-07",
        "blocks": [
         "intro-labearth-3-7",
+        "text-labearth-diffrot",
         "card-labearth-sunspot"
        ]
       },
@@ -7201,6 +7231,7 @@
        "code": "12지실03-08",
        "blocks": [
         "intro-labearth-3-8",
+        "text-labearth-standard-candle",
         "card-labearth-msfit",
         "card-labearth-cepheid"
        ]
@@ -7211,6 +7242,7 @@
        "code": "12지실03-09",
        "blocks": [
         "intro-labearth-3-9",
+        "text-labearth-blackbody",
         "card-earth-spectral",
         "card-labearth-stellar-spectrum"
        ]
@@ -7221,6 +7253,7 @@
        "code": "12지실03-10",
        "blocks": [
         "intro-labearth-3-10",
+        "text-labearth-photometry",
         "card-labearth-photometry"
        ]
       },
@@ -7230,6 +7263,7 @@
        "code": "12지실03-11",
        "blocks": [
         "intro-labearth-3-11",
+        "text-labearth-turnoff",
         "card-space-cluster",
         "card-labearth-cluster-hr"
        ]
@@ -7240,6 +7274,7 @@
        "code": "12지실03-12",
        "blocks": [
         "intro-labearth-3-12",
+        "text-labearth-reddening",
         "card-space-extinction",
         "card-labearth-extinction"
        ]
@@ -7250,6 +7285,7 @@
        "code": "12지실03-13",
        "blocks": [
         "intro-labearth-3-13",
+        "text-labearth-galactic-center",
         "card-labearth-shapley"
        ]
       },
@@ -7259,6 +7295,7 @@
        "code": "12지실03-14",
        "blocks": [
         "intro-labearth-3-14",
+        "text-labearth-rotation",
         "card-space-rotation",
         "card-labearth-rotation-mass"
        ]
@@ -7269,6 +7306,7 @@
        "code": "12지실03-15",
        "blocks": [
         "intro-labearth-3-15",
+        "text-labearth-hubble",
         "card-earth-hlaw",
         "card-labearth-hubble-age"
        ]

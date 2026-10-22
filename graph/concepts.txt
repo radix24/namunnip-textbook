@@ -86,17 +86,17 @@ relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-p
 earth-system | 지구시스템과 권역 | text-is1-spheres card-is1-earth-energy card-is1-water-budget text-is1-earth-system text-esys-frost-line |
 carbon-cycle | 탄소 순환과 인간 활동 | card-is1-carbon-cycle text-is1-human-impact | earth-system
 plate | 판 구조론 | card-is1-seafloor card-is1-plate-boundary video-is1-atlantic text-is1-geosphere-effects card-is1-quake-map card-is1-quake-damage text-is1-plate-tectonics text-esys-plume | earth-system
-rel-age | 지층의 상대 연령 | card-earth-relative-age text-earth-age |
-abs-age | 방사성 동위 원소와 절대 연령 | card-earth-half-life text-mateng-first-order | rel-age
-geotime | 지질 시대와 화석 | card-is2-deep-time card-is2-index-fossil card-is2-extinction card-earth-geotime video-earth-day card-is2-paleoenv card-is2-mass-extinction card-earth-correlate card-earth-fossil-map text-is2-geologic-time text-earth-geotime text-adearth-fossil-range text-adearth-zircon-age | rel-age
+rel-age | 지층의 상대 연령 | card-earth-relative-age text-earth-age text-labearth-sequence |
+abs-age | 방사성 동위 원소와 절대 연령 | card-earth-half-life text-mateng-first-order text-labearth-clocks | rel-age
+geotime | 지질 시대와 화석 | card-is2-deep-time card-is2-index-fossil card-is2-extinction card-earth-geotime video-earth-day card-is2-paleoenv card-is2-mass-extinction card-earth-correlate card-earth-fossil-map text-is2-geologic-time text-earth-geotime text-adearth-fossil-range text-adearth-zircon-age text-labearth-trackway | rel-age
 sediment | 퇴적 구조와 퇴적 환경 | text-earth-sediment | rel-age
 paleoclimate | 고기후 연구 | text-earth-paleoclimate | geotime
-magma | 마그마와 화성암 | card-earth-magma card-earth-igneous card-earth-columnar text-earth-igneous text-esys-volcano-type | plate
+magma | 마그마와 화성암 | card-earth-magma card-earth-igneous card-earth-columnar text-earth-igneous text-esys-volcano-type text-labearth-rock-texture | plate
 metamorph | 변성 작용과 지질 구조 | card-earth-deform card-earth-foliation text-earth-metamorphic | plate
 rock-cycle | 암석의 순환 | card-earth-rock-cycle card-earth-sedrock | magma metamorph sediment
 korea-geo | 한반도의 지질 | card-earth-korea-rocks card-earth-geopark text-earth-korea-geology | rock-cycle abs-age
-seawater | 해수의 성질 | card-earth-thermocline card-earth-salinity text-earth-oxygen card-earth-argo card-earth-gas text-earth-seawater | earth-system
-deep-circ | 심층 순환 | card-earth-ts card-earth-amoc video-earth-conveyor card-earth-gyre text-earth-deep-circulation text-adearth-sofar text-adearth-sverdrup | seawater
+seawater | 해수의 성질 | card-earth-thermocline card-earth-salinity text-earth-oxygen card-earth-argo card-earth-gas text-earth-seawater text-labearth-argo | earth-system
+deep-circ | 심층 순환 | card-earth-ts card-earth-amoc video-earth-conveyor card-earth-gyre text-earth-deep-circulation text-adearth-sofar text-adearth-sverdrup text-labearth-thermohaline | seawater
 wind | 기압과 바람 | card-earth-isobar card-earth-updown text-earth-cyclone text-esys-geostrophic text-esys-stability-lift | earth-system
 front | 전선과 중위도 저기압 | card-earth-front text-earth-satellite card-earth-forecast text-earth-moving-highs text-esys-planetary-wave | wind
 typhoon | 태풍과 악기상 | card-earth-typhoon-energy card-earth-danger card-earth-thunder text-earth-severe-weather card-earth-typhoon-track text-earth-typhoon text-esys-tsunami-height | wind
@@ -108,11 +108,11 @@ climate-factor | 기후 변화의 요인 | card-earth-milankovitch card-earth-fo
 eclipse | 일식과 월식 | card-earth-eclipse text-earth-eclipse-types text-earth-planets-motion |
 retro | 행성의 겉보기 운동 | card-earth-retro |
 blackbody | 흑체 복사와 별의 온도 | card-earth-blackbody text-earth-blackbody text-space-photosphere | spectrum
-stellar-spec | 별의 분광형 | card-earth-spectral | blackbody spectrum
+stellar-spec | 별의 분광형 | card-earth-spectral text-labearth-blackbody | blackbody spectrum
 hrd | H–R도 | card-earth-hrd text-earth-hr text-space-binary-mass | stellar-spec
 star-evol | 별의 진화 | card-earth-evolve text-earth-star-life card-earth-star-core text-space-cepheid | hrd fusion
 galaxy | 은하의 분류와 특이 은하 | card-earth-hubble card-earth-quasar text-earth-active-galaxy card-earth-galaxy-ai text-earth-galaxies text-space-dark-matter text-adearth-agn-size | star-evol
-expansion | 우주 팽창 | card-earth-hlaw card-earth-nocenter text-earth-expansion text-space-redshift text-space-structure-growth | galaxy
+expansion | 우주 팽창 | card-earth-hlaw card-earth-nocenter text-earth-expansion text-space-redshift text-space-structure-growth text-labearth-hubble | galaxy
 cosmology | 현대 우주론 | text-earth-cosmology text-adearth-universe-age | expansion bbn
 
 # ── 생명 ──
@@ -207,15 +207,15 @@ esys-coevolution | 생명과 지구의 공진화 | card-esys-oxygen | esys-origi
 esys-plume | 플룸과 열점 | card-esys-hotspot text-adearth-seafloor-depth | plate
 esys-volcano | 마그마의 성질과 화산 활동 | card-esys-volcano | magma
 esys-interior | 지진파와 지구 내부 구조 | card-esys-seismic text-esys-seismic-shadow text-adearth-moho | esys-origin lens
-esys-geostrophic | 에크만 수송과 지형류 | card-esys-ekman text-adearth-geostrophic-current | enso wind
+esys-geostrophic | 에크만 수송과 지형류 | card-esys-ekman text-adearth-geostrophic-current text-labearth-geostrophic | enso wind
 esys-waves | 심해파와 천해파 | card-esys-waves text-esys-wave-speed text-adearth-storm-surge | seawater
-esys-surge | 해일 | card-esys-tsunami text-esys-surge | esys-waves typhoon
-esys-tide | 조석 | card-esys-tide text-esys-tide-cycle text-adearth-tidal-resonance | gravity
+esys-surge | 해일 | card-esys-tsunami text-esys-surge text-labearth-wave-tank | esys-waves typhoon
+esys-tide | 조석 | card-esys-tide text-esys-tide-cycle text-adearth-tidal-resonance text-labearth-tide | gravity
 esys-absorb | 대기의 선택적 흡수와 생명체 | card-esys-absorb | greenhouse blackbody esys-coevolution
 esys-budget | 지구의 열수지 | card-esys-budget text-esys-heat-budget | esys-absorb
-esys-stability | 대기 안정도와 구름·강수 | card-esys-stability text-esys-precip text-adearth-cloud-base text-adearth-droplet-growth | wind
+esys-stability | 대기 안정도와 구름·강수 | card-esys-stability text-esys-precip text-adearth-cloud-base text-adearth-droplet-growth text-labearth-stability | wind
 esys-hydro | 정역학 평형과 연직 운동 | card-esys-hydro text-esys-hydrostatic | wind
-esys-winds | 지균풍·경도풍·지상풍 | card-esys-winds text-adearth-gradient-wind | esys-hydro wind
+esys-winds | 지균풍·경도풍·지상풍 | card-esys-winds text-adearth-gradient-wind text-labearth-geowind | esys-hydro wind
 esys-rossby | 행성파와 편서풍 파동 | card-esys-rossby | esys-winds front
 
 # ── 진로선택: 전자기와 양자 ──
@@ -283,9 +283,9 @@ space-distance | 별까지의 거리와 거리 사다리 | card-space-distance t
 space-motion | 별의 공간 운동 | card-space-proper-motion text-space-velocity | space-distance doppler
 space-binary | 쌍성과 별의 질량 | card-space-binary | space-kepler3 hrd
 space-variables | 변광성과 초신성 | card-space-variables | star-evol space-distance
-space-cluster | 성단의 C–M도와 우리은하 | card-space-cluster text-space-turnoff | hrd space-distance space-variables
-space-dust | 성간 소광과 성간 티끌 | card-space-extinction text-space-dust text-adearth-stromgren | space-cluster
-space-darkmatter | 회전 곡선과 암흑 물질 | card-space-rotation | space-kepler3 galaxy doppler
+space-cluster | 성단의 C–M도와 우리은하 | card-space-cluster text-space-turnoff text-labearth-turnoff | hrd space-distance space-variables
+space-dust | 성간 소광과 성간 티끌 | card-space-extinction text-space-dust text-adearth-stromgren text-labearth-reddening | space-cluster
+space-darkmatter | 회전 곡선과 암흑 물질 | card-space-rotation text-labearth-rotation | space-kepler3 galaxy doppler
 space-survey | 적색 편이 탐사 | card-space-redshift-survey | expansion
 space-lss | 우주 거대 구조 | card-space-cosmic-web text-space-large-structure | space-survey space-darkmatter cosmology
 
@@ -416,42 +416,42 @@ lb-plant-tissue | 식물의 조직계와 기관 | card-labbio-plant-tissue text-
 lb-dissection | 동물 기관의 해부와 구조·기능 | card-labbio-dissection text-labbio-heart | organ-sys classify sie-ethics
 
 # ── 과학계열: 지구과학 실험 ──
-le-geoid | 지구타원체와 지오이드 | card-labearth-geoid text-adearth-gravity-anomaly | gravity
-le-epicenter | 진앙·진원 결정과 지각 두께 | card-labearth-epicenter | esys-interior plate
-le-gravity | 중력 측정과 중력 보정 | card-labearth-gravity | gravity le-geoid
-le-apwp | 고지자기와 극의 겉보기 이동 | card-labearth-apwp text-adearth-paleolatitude | plate magnet
-le-spreading | 해저 확장 속도 | card-labearth-spreading | plate le-apwp
-le-mineral | 광물의 성질과 분류 | card-labearth-mineral-id | silicate
-le-polarizing | 편광 현미경과 광물의 광학적 성질 | card-labearth-polarizing text-adearth-birefringence | le-mineral emq-polarization interference
+le-geoid | 지구타원체와 지오이드 | card-labearth-geoid text-adearth-gravity-anomaly text-labearth-heights | gravity
+le-epicenter | 진앙·진원 결정과 지각 두께 | card-labearth-epicenter text-labearth-sp-time | esys-interior plate
+le-gravity | 중력 측정과 중력 보정 | card-labearth-gravity text-labearth-bouguer | gravity le-geoid
+le-apwp | 고지자기와 극의 겉보기 이동 | card-labearth-apwp text-adearth-paleolatitude text-labearth-inclination | plate magnet
+le-spreading | 해저 확장 속도 | card-labearth-spreading text-labearth-stripes | plate le-apwp
+le-mineral | 광물의 성질과 분류 | card-labearth-mineral-id text-labearth-minerals | silicate
+le-polarizing | 편광 현미경과 광물의 광학적 성질 | card-labearth-polarizing text-adearth-birefringence text-labearth-retardation | le-mineral emq-polarization interference
 le-rock-id | 암석의 성인과 분류 | card-labearth-rock-id | magma metamorph rock-cycle sediment
 le-section | 접촉 관계와 층서 대비 | card-labearth-section text-adearth-isochron | rel-age sediment metamorph
 le-isochron | 방사성 동위 원소 절대 연령 측정 | card-labearth-isochron | abs-age lp-lsq
 le-trackway | 화석과 고환경 추론 | card-labearth-trackway | geotime sediment
-le-strike-dip | 주향·경사와 지질도 해석 | card-labearth-strike-dip text-adearth-apparent-dip | le-section metamorph
-le-humidity | 혼합비·비습과 수증기량 측정 | card-labearth-humidity | esys-stability mateng-partial
-le-skewt | 단열선도와 LCL·CCL·LFC | card-labearth-skewt | le-humidity esys-stability
+le-strike-dip | 주향·경사와 지질도 해석 | card-labearth-strike-dip text-adearth-apparent-dip text-labearth-dip | le-section metamorph
+le-humidity | 혼합비·비습과 수증기량 측정 | card-labearth-humidity text-labearth-mixing | esys-stability mateng-partial
+le-skewt | 단열선도와 LCL·CCL·LFC | card-labearth-skewt text-labearth-lcl | le-humidity esys-stability
 le-stability | 기온·이슬점 연직 분포와 대기 안정도 | card-labearth-stability | le-skewt esys-stability
-le-coriolis | 회전 원판으로 보는 전향력 | card-labearth-coriolis text-adearth-rossby-number | inertia circular
+le-coriolis | 회전 원판으로 보는 전향력 | card-labearth-coriolis text-adearth-rossby-number text-labearth-coriolis | inertia circular
 le-geowind | 일기도로 구하는 지균풍과 경도풍 | card-labearth-geowind | esys-winds le-coriolis
-le-circulation | 대기 대순환과 평균 자오면 순환 | card-labearth-circulation text-adearth-angular-momentum | le-coriolis esys-budget wind
+le-circulation | 대기 대순환과 평균 자오면 순환 | card-labearth-circulation text-adearth-angular-momentum text-labearth-circulation | le-coriolis esys-budget wind
 le-argo-float | Argo 플로트 자료 분석과 품질 관리 | card-labearth-argo-float | seawater
 le-wave-tank | 조파 실험과 천해파 | card-labearth-wave-tank | esys-waves esys-surge
 le-geostrophic | 밀도 구조와 지형류 계산 | card-labearth-geostrophic | esys-geostrophic seawater
 le-thermohaline | 열염분 순환 실험 설계 | card-labearth-thermohaline | deep-circ
 le-tide | 조석 자료 분석과 조석 유형 | card-labearth-tide | esys-tide
-le-celestial | 천구 좌표계와 시간각 | card-labearth-celestial text-adearth-sidereal-day |
-le-analemma | 아날렘마와 행성의 겉보기 운동 | card-labearth-analemma text-adearth-synodic | le-celestial retro
-le-equation-time | 시태양시·평균 태양시와 균시차 | card-labearth-equation-time | le-celestial le-analemma
-le-orbit-mass | 인공위성 궤도로 행성 질량 구하기 | card-labearth-orbit-mass | space-kepler3 kepler
-le-telescope | 망원경의 분해능·배율·시야 | card-labearth-telescope | lens emq-diffraction
-le-crater | 달 크레이터의 크기와 높이 | card-labearth-crater | le-telescope
-le-sunspot | 흑점 관측과 태양의 차등 자전 | card-labearth-sunspot | space-sun
-le-msfit-cepheid | 주계열 맞추기와 세페이드 거리 | card-labearth-msfit card-labearth-cepheid | space-distance space-variables hrd
+le-celestial | 천구 좌표계와 시간각 | card-labearth-celestial text-adearth-sidereal-day text-labearth-culmination |
+le-analemma | 아날렘마와 행성의 겉보기 운동 | card-labearth-analemma text-adearth-synodic text-labearth-retrograde | le-celestial retro
+le-equation-time | 시태양시·평균 태양시와 균시차 | card-labearth-equation-time text-labearth-eot | le-celestial le-analemma
+le-orbit-mass | 인공위성 궤도로 행성 질량 구하기 | card-labearth-orbit-mass text-labearth-orbit | space-kepler3 kepler
+le-telescope | 망원경의 분해능·배율·시야 | card-labearth-telescope text-labearth-resolution | lens emq-diffraction
+le-crater | 달 크레이터의 크기와 높이 | card-labearth-crater text-labearth-crater-depth | le-telescope
+le-sunspot | 흑점 관측과 태양의 차등 자전 | card-labearth-sunspot text-labearth-diffrot | space-sun
+le-msfit-cepheid | 주계열 맞추기와 세페이드 거리 | card-labearth-msfit card-labearth-cepheid text-labearth-standard-candle | space-distance space-variables hrd
 le-stellar-spectrum | 별의 스펙트럼과 흑체 복사 관측 | card-labearth-stellar-spectrum | blackbody stellar-spec spectrum
-le-photometry | 차등 측광과 색지수 | card-labearth-photometry | blackbody space-distance
+le-photometry | 차등 측광과 색지수 | card-labearth-photometry text-labearth-photometry | blackbody space-distance
 le-cluster-hr | 성단의 H–R도와 나이 | card-labearth-cluster-hr | space-cluster star-evol le-msfit-cepheid
 le-extinction | 성간 소광과 색초과 | card-labearth-extinction | space-dust le-photometry
-le-shapley | 구상 성단으로 찾는 은하 중심 | card-labearth-shapley text-adearth-rotation-curve | space-cluster space-distance
+le-shapley | 구상 성단으로 찾는 은하 중심 | card-labearth-shapley text-adearth-rotation-curve text-labearth-galactic-center | space-cluster space-distance
 le-rotation-mass | 회전 곡선과 은하의 질량 | card-labearth-rotation-mass | space-darkmatter space-kepler3 doppler
 le-hubble-age | 허블–르메트르 법칙과 우주의 나이 | card-labearth-hubble-age text-adearth-hubble-time | expansion le-msfit-cepheid doppler
 
