@@ -102,6 +102,7 @@ def main():
         args.remove(kind)
     paths = [Path(a) for a in args] or [ROOT / "blocks"]
     files = [f for p in paths for f in ([p] if p.is_file() else sorted(p.rglob("*.html")))]
+    files = [f for f in files if not f.name.startswith("related-")]   # 관련 카드 상자는 링크 목록이라 글로 재지 않는다
     bad, rows = [], []
     for f in files:
         m = measure(f)
