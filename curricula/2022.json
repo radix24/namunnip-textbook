@@ -6449,6 +6449,7 @@
        "code": "12생실01-01",
        "blocks": [
         "intro-labbio-1-1",
+        "text-labbio-micrometer",
         "card-labbio-plankton"
        ]
       },
@@ -6458,6 +6459,7 @@
        "code": "12생실01-02",
        "blocks": [
         "intro-labbio-1-2",
+        "text-labbio-electron",
         "card-labbio-sem"
        ]
       },
@@ -6467,6 +6469,7 @@
        "code": "12생실01-03",
        "blocks": [
         "intro-labbio-1-3",
+        "text-labbio-plasmolysis",
         "card-cell-osmosis",
         "card-labbio-plasmolysis"
        ]
@@ -6477,6 +6480,7 @@
        "code": "12생실01-04",
        "blocks": [
         "intro-labbio-1-4",
+        "text-labbio-water-potential",
         "card-labbio-water-potential"
        ]
       },
@@ -6486,6 +6490,7 @@
        "code": "12생실01-05",
        "blocks": [
         "intro-labbio-1-5",
+        "text-labbio-osmosis-rate",
         "card-labbio-osmosis-design"
        ]
       },
@@ -6495,6 +6500,7 @@
        "code": "12생실01-06",
        "blocks": [
         "intro-labbio-1-6",
+        "text-labbio-stomata",
         "card-labbio-plant-tissue"
        ]
       },
@@ -6504,6 +6510,7 @@
        "code": "12생실01-07",
        "blocks": [
         "intro-labbio-1-7",
+        "text-labbio-heart",
         "card-labbio-dissection"
        ]
       },
@@ -6513,6 +6520,7 @@
        "code": "12생실01-08",
        "blocks": [
         "intro-labbio-1-8",
+        "text-labbio-enzyme",
         "card-cell-enzyme-lab",
         "card-labbio-enzyme-rate"
        ]
@@ -6523,6 +6531,7 @@
        "code": "12생실01-09",
        "blocks": [
         "intro-labbio-1-9",
+        "text-labbio-limiting",
         "card-photo-rate",
         "card-labbio-photosynthesis"
        ]
@@ -6533,6 +6542,7 @@
        "code": "12생실01-10",
        "blocks": [
         "intro-labbio-1-10",
+        "text-labbio-respirometer",
         "card-labbio-respirometer"
        ]
       },
@@ -6542,6 +6552,7 @@
        "code": "12생실01-11",
        "blocks": [
         "intro-labbio-1-11",
+        "text-labbio-yeast",
         "card-labbio-yeast"
        ]
       },
@@ -6551,6 +6562,7 @@
        "code": "12생실01-12",
        "blocks": [
         "intro-labbio-1-12",
+        "text-labbio-hematocrit",
         "card-labbio-hematocrit",
         "text-labbio-rbc"
        ]
@@ -6567,6 +6579,7 @@
        "code": "12생실02-01",
        "blocks": [
         "intro-labbio-2-1",
+        "text-labbio-choice",
         "card-labbio-taxis"
        ]
       },
@@ -6576,6 +6589,7 @@
        "code": "12생실02-02",
        "blocks": [
         "intro-labbio-2-2",
+        "text-labbio-tropism",
         "card-labbio-tropism"
        ]
       }
@@ -6591,6 +6605,7 @@
        "code": "12생실03-01",
        "blocks": [
         "intro-labbio-3-1",
+        "text-labbio-mitotic-index",
         "card-labbio-mitosis"
        ]
       },
@@ -6600,6 +6615,7 @@
        "code": "12생실03-02",
        "blocks": [
         "intro-labbio-3-2",
+        "text-labbio-pollen",
         "card-labbio-pollen"
        ]
       },
@@ -6609,6 +6625,7 @@
        "code": "12생실03-03",
        "blocks": [
         "intro-labbio-3-3",
+        "text-labbio-fly-cycle",
         "card-labbio-fly-dev"
        ]
       },
@@ -6618,6 +6635,7 @@
        "code": "12생실03-04",
        "blocks": [
         "intro-labbio-3-4",
+        "text-labbio-somite",
         "card-labbio-chick"
        ]
       },
@@ -6627,6 +6645,7 @@
        "code": "12생실03-05",
        "blocks": [
         "intro-labbio-3-5",
+        "text-labbio-polytene",
         "card-labbio-polytene"
        ]
       },
@@ -6636,6 +6655,7 @@
        "code": "12생실03-06",
        "blocks": [
         "intro-labbio-3-6",
+        "text-labbio-mutants",
         "card-labbio-fly-mutants"
        ]
       },
@@ -6645,6 +6665,7 @@
        "code": "12생실03-07",
        "blocks": [
         "intro-labbio-3-7",
+        "text-labbio-mendel-fly",
         "card-labbio-fly-cross"
        ]
       },
@@ -6654,6 +6675,7 @@
        "code": "12생실03-08",
        "blocks": [
         "intro-labbio-3-8",
+        "text-labbio-x-linked",
         "card-gene-sexlinked",
         "card-labbio-sex-linked"
        ]
@@ -6664,6 +6686,7 @@
        "code": "12생실03-09",
        "blocks": [
         "intro-labbio-3-9",
+        "text-labbio-pedigree",
         "card-gene-pedigree",
         "card-labbio-survey"
        ]
@@ -6674,6 +6697,7 @@
        "code": "12생실03-10",
        "blocks": [
         "intro-labbio-3-10",
+        "text-labbio-hardy",
         "card-bio-genepool",
         "card-labbio-bead-sim"
        ]
@@ -6684,6 +6708,7 @@
        "code": "12생실03-11",
        "blocks": [
         "intro-labbio-3-11",
+        "text-labbio-beak",
         "text-bio-evo-methods",
         "text-labbio-evo-cases"
        ]
@@ -6694,6 +6719,7 @@
        "code": "12생실03-12",
        "blocks": [
         "intro-labbio-3-12",
+        "text-labbio-key",
         "card-bio-key",
         "card-labbio-specimen"
        ]
@@ -6710,6 +6736,7 @@
        "code": "12생실04-01",
        "blocks": [
         "intro-labbio-4-1",
+        "text-labbio-quadrat",
         "card-bio-quadrat",
         "card-labbio-transect"
        ]
@@ -6720,6 +6747,7 @@
        "code": "12생실04-02",
        "blocks": [
         "intro-labbio-4-2",
+        "text-labbio-pitfall",
         "card-labbio-pitfall"
        ]
       },
@@ -6729,6 +6757,7 @@
        "code": "12생실04-03",
        "blocks": [
         "intro-labbio-4-3",
+        "text-labbio-abiotic",
         "card-labbio-eco-survey"
        ]
       },
@@ -6738,6 +6767,7 @@
        "code": "12생실04-04",
        "blocks": [
         "intro-labbio-4-4",
+        "text-labbio-logistic",
         "card-labbio-culture"
        ]
       },
@@ -6747,6 +6777,7 @@
        "code": "12생실04-05",
        "blocks": [
         "intro-labbio-4-5",
+        "text-labbio-density",
         "card-labbio-mark-recapture"
        ]
       },
@@ -6756,6 +6787,7 @@
        "code": "12생실04-06",
        "blocks": [
         "intro-labbio-4-6",
+        "text-labbio-dose",
         "card-labbio-pollutant"
        ]
       }
@@ -6771,6 +6803,7 @@
        "code": "12생실05-01",
        "blocks": [
         "intro-labbio-5-1",
+        "text-labbio-passage",
         "card-labbio-cell-culture",
         "text-labbio-cell-research"
        ]
@@ -6781,6 +6814,7 @@
        "code": "12생실05-02",
        "blocks": [
         "intro-labbio-5-2",
+        "text-labbio-callus",
         "card-labbio-tissue-culture",
         "text-labbio-plant-culture-uses"
        ]
@@ -6791,6 +6825,7 @@
        "code": "12생실05-03",
        "blocks": [
         "intro-labbio-5-3",
+        "text-labbio-dna-yield",
         "card-labbio-dna-extract"
        ]
       },
@@ -6800,6 +6835,7 @@
        "code": "12생실05-04",
        "blocks": [
         "intro-labbio-5-4",
+        "text-labbio-gel",
         "card-gene-gel",
         "card-labbio-electrophoresis"
        ]
@@ -6810,6 +6846,7 @@
        "code": "12생실05-05",
        "blocks": [
         "intro-labbio-5-5",
+        "text-labbio-restriction",
         "card-labbio-restriction"
        ]
       },
@@ -6819,6 +6856,7 @@
        "code": "12생실05-06",
        "blocks": [
         "intro-labbio-5-6",
+        "text-labbio-transform",
         "card-labbio-transformation"
        ]
       },
@@ -6828,6 +6866,7 @@
        "code": "12생실05-07",
        "blocks": [
         "intro-labbio-5-7",
+        "text-labbio-pcr-cycles",
         "card-is2-pcr",
         "card-labbio-pcr"
        ]
@@ -6838,6 +6877,7 @@
        "code": "12생실05-08",
        "blocks": [
         "intro-labbio-5-8",
+        "text-labbio-alignment",
         "card-bio-seq-tree",
         "card-labbio-bioinfo",
         "text-labbio-genome-med"

@@ -121,15 +121,15 @@ bio-levels | 생명 시스템의 구성 단계 | card-bio-levels text-bio-eco-le
 membrane | 세포막과 물질 출입 | card-is1-membrane text-mateng-osmotic text-cell-membrane-transport | bio-levels
 enzyme | 효소 | card-is1-enzyme-fit card-is1-activation text-is1-enzymes-life card-is1-catalase text-cell-enzyme-kinetics | polymer
 dogma | 유전 정보의 흐름 | card-is1-dogma card-is1-mutation video-is1-codon text-is1-gene-protein text-gene-chromosome-error text-gene-transcription | polymer
-pcr | PCR 진단 | card-is2-pcr card-is2-rapid-test text-is2-diagnosis | dogma
+pcr | PCR 진단 | card-is2-pcr card-is2-rapid-test text-is2-diagnosis text-labbio-pcr-cycles | dogma
 chromosome | 염색체와 DNA | card-bio-dna-pack card-bio-gene-chromo card-bio-karyotype text-bio-chromosome text-gene-genome-size text-gene-sexlinked | dogma
 division | 세포 분열 | card-bio-division card-bio-assort video-bio-meiosis text-bio-division | chromosome
-evolution | 변이와 자연선택 | card-is2-selection card-is2-resistance card-is2-lamarck video-is2-moth card-bio-selection card-bio-finch video-bio-whale card-bio-genepool text-bio-evo-methods text-is2-natural-selection text-bio-evolution | dogma
+evolution | 변이와 자연선택 | card-is2-selection card-is2-resistance card-is2-lamarck video-is2-moth card-bio-selection card-bio-finch video-bio-whale card-bio-genepool text-bio-evo-methods text-is2-natural-selection text-bio-evolution text-labbio-beak text-labbio-hardy | dogma
 biodiversity | 생물다양성 | text-is2-biodiversity | evolution
-classify | 분류 체계와 종 | card-bio-rank card-bio-species card-bio-domains card-bio-key text-bio-phylogeny text-bio-taxonomy | evolution
-phylo | 계통수 | card-bio-tree-read card-bio-tree-build card-bio-seq-tree | classify
+classify | 분류 체계와 종 | card-bio-rank card-bio-species card-bio-domains card-bio-key text-bio-phylogeny text-bio-taxonomy text-labbio-key | evolution
+phylo | 계통수 | card-bio-tree-read card-bio-tree-build card-bio-seq-tree text-labbio-alignment | classify
 metabolism | 세포 호흡과 ATP | card-bio-resp card-bio-atp text-bio-metabolism text-cell-atp-cycle text-cell-respiration-steps | enzyme redox
-photosyn | 광합성 | card-leaf-color card-photo-rate text-cell-pigment | redox
+photosyn | 광합성 | card-leaf-color card-photo-rate text-cell-pigment text-labbio-limiting | redox
 organ-sys | 기관계의 통합 작용 | card-bio-systems card-bio-exercise card-bio-digest text-bio-organ-systems | metabolism bio-levels
 neuron | 뉴런과 흥분 전도 | card-bio-ap card-bio-saltatory card-bio-snapshot text-bio-neuron text-adbio-goldman | membrane
 synapse | 시냅스 | card-bio-syndir card-bio-syndrug text-bio-synapse text-adbio-summation | neuron
@@ -142,7 +142,7 @@ vaccine | 백신과 집단 면역 | card-bio-vtypes card-bio-herd text-bio-vacci
 eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat text-is2-ecosystem | bio-levels
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
 cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem text-esys-oxygen-rise | food-web photosyn
-population | 개체군과 군집 | card-bio-logistic text-bio-social card-bio-interact text-bio-niche card-bio-quadrat text-bio-population | eco-parts
+population | 개체군과 군집 | card-bio-logistic text-bio-social card-bio-interact text-bio-niche card-bio-quadrat text-bio-population text-labbio-quadrat | eco-parts
 phyllotaxis | 잎차례와 황금각 | card-phyllo | photosyn
 
 # ── 진로선택: 역학과 에너지 ──
@@ -186,10 +186,10 @@ cell-protein-na | 단백질과 핵산의 구조 | card-cell-chargaff text-cell-p
 cell-organelle | 세포 소기관과 연구 방법 | text-cell-organelles card-cell-fraction text-is1-life-reactions text-cell-centrifuge | bio-levels
 cell-endomembrane | 내막계와 분비 경로 | card-cell-pulse | cell-organelle dogma
 cell-pro-eu | 원핵세포와 진핵세포 | card-cell-size text-cell-pro-eu text-cell-surface-volume | cell-organelle
-cell-transport | 막 수송과 삼투 | card-cell-transport card-cell-osmosis | membrane
+cell-transport | 막 수송과 삼투 | card-cell-transport card-cell-osmosis text-labbio-plasmolysis | membrane
 cell-metab-energy | 물질대사와 에너지 출입 | card-cell-coupling text-cell-energy-coupling | enzyme
 cell-energy-flow | 광합성·세포 호흡과 ATP | card-cell-plant-day | metabolism photosyn
-cell-enzyme-kind | 효소의 종류와 활성 요인 | text-cell-enzyme-kind card-cell-enzyme-lab text-cell-enzyme-condition | enzyme sci-method
+cell-enzyme-kind | 효소의 종류와 활성 요인 | text-cell-enzyme-kind card-cell-enzyme-lab text-cell-enzyme-condition text-labbio-enzyme | enzyme sci-method
 cell-enzyme-kinetics | 효소 작용 기작과 저해 | card-cell-inhibit | enzyme
 cell-enzyme-use | 효소의 이용 | text-cell-enzyme-use text-cell-thermostable | cell-enzyme-kind
 cell-mito | 미토콘드리아의 구조 | card-cell-mito text-cell-mitochondria | cell-organelle
@@ -254,8 +254,8 @@ rxn-polymerization | 첨가 중합과 축합 중합 | card-rxn-polymer | rxn-org
 rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber text-labchem-aspirin | rxn-polymerization
 
 # ── 진로선택: 생물의 유전 ──
-gene-sexlinked | 상염색체 유전과 반성 유전 | card-gene-sexlinked | division
-gene-pedigree | 가계도 분석 | card-gene-pedigree | gene-sexlinked blood-type
+gene-sexlinked | 상염색체 유전과 반성 유전 | card-gene-sexlinked text-labbio-x-linked | division
+gene-pedigree | 가계도 분석 | card-gene-pedigree text-labbio-pedigree | gene-sexlinked blood-type
 gene-polygenic | 다유전자 유전 | card-gene-polygenic text-gene-polygenic | division
 gene-disorder | 염색체 이상과 유전자 이상 | card-gene-nondisjunction text-gene-disorders | division dogma
 gene-material | 유전 물질의 규명과 DNA 구조 | card-gene-hershey text-gene-dna-history | chromosome cell-protein-na
@@ -268,7 +268,7 @@ gene-differentiation | 세포 분화와 발생 | card-gene-differentiation text-
 gene-welfare | 발현 조절 연구와 인류 복지 | text-gene-regulation-welfare text-gene-rnai | gene-differentiation
 gene-biotech-history | 생명공학기술의 발달 | text-gene-biotech-history text-gene-restriction | gene-replication gene-expression
 gene-editing | 유전자 편집·줄기세포·단일클론항체 | card-gene-crispr text-gene-therapies text-gene-crispr | gene-biotech-history gene-differentiation
-gene-fingerprint | PCR과 전기 영동, DNA 지문 | card-gene-gel text-gene-profile | gene-biotech-history
+gene-fingerprint | PCR과 전기 영동, DNA 지문 | card-gene-gel text-gene-profile text-labbio-gel | gene-biotech-history
 gene-lmo | 유전자 변형 생물체 | card-gene-bt text-gene-bt-refuge | gene-biotech-history
 gene-ethics | 생명 윤리 | text-gene-bioethics text-gene-screening text-adbio-off-target | gene-editing gene-lmo
 
@@ -375,12 +375,12 @@ lc-aspirin | 아스피린 합성과 수득률 | card-labchem-aspirin | lc-functi
 
 # ── 과학계열: 생명과학 실험 ──
 lb-transect | 방형구법과 띠 횡단 조사 | card-labbio-transect | population
-lb-pitfall | 함정 트랩과 종 다양도 지수 | card-labbio-pitfall | population biodiversity
-lb-eco-survey | 생물·비생물 요소 측정과 상관 | card-labbio-eco-survey | eco-parts food-web digital
-lb-growth-curve | 미생물 배양과 생장 곡선 측정 | card-labbio-culture | population
-lb-mark-recapture | 표지 재포획법과 개체군 조절 요인 | card-labbio-mark-recapture | population eco-parts
-lb-dose-response | 오염 물질의 농도–반응 실험 | card-labbio-pollutant | sci-method cell-transport
-lb-fly-cross | 초파리 교배와 멘델 법칙 (카이제곱 검정) | card-labbio-fly-cross | division error
+lb-pitfall | 함정 트랩과 종 다양도 지수 | card-labbio-pitfall text-labbio-pitfall | population biodiversity
+lb-eco-survey | 생물·비생물 요소 측정과 상관 | card-labbio-eco-survey text-labbio-abiotic | eco-parts food-web digital
+lb-growth-curve | 미생물 배양과 생장 곡선 측정 | card-labbio-culture text-labbio-logistic | population
+lb-mark-recapture | 표지 재포획법과 개체군 조절 요인 | card-labbio-mark-recapture text-labbio-density | population eco-parts
+lb-dose-response | 오염 물질의 농도–반응 실험 | card-labbio-pollutant text-labbio-dose | sci-method cell-transport
+lb-fly-cross | 초파리 교배와 멘델 법칙 (카이제곱 검정) | card-labbio-fly-cross text-labbio-mendel-fly | division error
 lb-sex-linked | X 염색체 연관 유전 교배 실험 | card-labbio-sex-linked | gene-sexlinked lb-fly-cross
 lb-survey | 가계 조사와 통계 조사로 보는 사람의 유전 | card-labbio-survey | gene-pedigree gene-polygenic blood-type data
 lb-bead-sim | 대립유전자 빈도 모의실험 | card-labbio-bead-sim | evolution lb-fly-cross
@@ -388,32 +388,32 @@ lb-evo-cases | 구조와 기능의 진화 사례 조사 | text-labbio-evo-cases 
 lb-specimen | 채집·표본 제작과 동정 | card-labbio-specimen | classify
 lb-enzyme-rate | 효소 반응 속도 측정 실험 | card-labbio-enzyme-rate | cell-enzyme-kind sci-method
 lb-photosyn-rate | 광합성 속도와 제한 요인 실험 | card-labbio-photosynthesis | photosyn sci-method
-lb-respirometer | 호흡계로 세포 호흡 속도 측정 | card-labbio-respirometer | metabolism sci-method
-lb-ferment | 효모의 발효 실험 설계 | card-labbio-yeast | cell-ferment sci-method
-lb-hematocrit | 적혈구 용적률과 산소 운반 | card-labbio-hematocrit text-labbio-rbc | organ-sys homeostasis
-lb-taxis | 동물의 주성과 무정위 운동성 | card-labbio-taxis | nervous data
-lb-tropism | 식물의 굴성과 옥신 | card-labbio-tropism | sci-method
-lb-division-obs | 세포 분열 관찰과 분열 지수 | card-labbio-mitosis | division
-lb-pollen | 꽃가루관 발아 | card-labbio-pollen | cell-transport
-lb-fly-dev | 초파리의 발생 시기 | card-labbio-fly-dev | division gene-differentiation
-lb-chick-dev | 닭의 발생 단계 | card-labbio-chick | gene-differentiation
-lb-polytene | 다사 염색체와 퍼프 | card-labbio-polytene | chromosome gene-replication gene-expression
-lb-fly-mutants | 초파리 돌연변이 형질과 암수 구별 | card-labbio-fly-mutants | gene-sexlinked
-lb-cell-culture | 동물 세포 계대 배양과 생장 곡선 | card-labbio-cell-culture text-labbio-cell-research | division population
-lb-tissue-culture | 식물 조직 배양과 호르몬 비율 | card-labbio-tissue-culture text-labbio-plant-culture-uses text-adbio-limiting-dilution | gene-differentiation division
-lb-dna-extract | DNA 추출 단계의 의미 | card-labbio-dna-extract | membrane gene-material enzyme
+lb-respirometer | 호흡계로 세포 호흡 속도 측정 | card-labbio-respirometer text-labbio-respirometer | metabolism sci-method
+lb-ferment | 효모의 발효 실험 설계 | card-labbio-yeast text-labbio-yeast | cell-ferment sci-method
+lb-hematocrit | 적혈구 용적률과 산소 운반 | card-labbio-hematocrit text-labbio-rbc text-labbio-hematocrit | organ-sys homeostasis
+lb-taxis | 동물의 주성과 무정위 운동성 | card-labbio-taxis text-labbio-choice | nervous data
+lb-tropism | 식물의 굴성과 옥신 | card-labbio-tropism text-labbio-tropism | sci-method
+lb-division-obs | 세포 분열 관찰과 분열 지수 | card-labbio-mitosis text-labbio-mitotic-index | division
+lb-pollen | 꽃가루관 발아 | card-labbio-pollen text-labbio-pollen | cell-transport
+lb-fly-dev | 초파리의 발생 시기 | card-labbio-fly-dev text-labbio-fly-cycle | division gene-differentiation
+lb-chick-dev | 닭의 발생 단계 | card-labbio-chick text-labbio-somite | gene-differentiation
+lb-polytene | 다사 염색체와 퍼프 | card-labbio-polytene text-labbio-polytene | chromosome gene-replication gene-expression
+lb-fly-mutants | 초파리 돌연변이 형질과 암수 구별 | card-labbio-fly-mutants text-labbio-mutants | gene-sexlinked
+lb-cell-culture | 동물 세포 계대 배양과 생장 곡선 | card-labbio-cell-culture text-labbio-cell-research text-labbio-passage | division population
+lb-tissue-culture | 식물 조직 배양과 호르몬 비율 | card-labbio-tissue-culture text-labbio-plant-culture-uses text-adbio-limiting-dilution text-labbio-callus | gene-differentiation division
+lb-dna-extract | DNA 추출 단계의 의미 | card-labbio-dna-extract text-labbio-dna-yield | membrane gene-material enzyme
 lb-electrophoresis | 전기 영동과 표준 곡선 | card-labbio-electrophoresis | lb-dna-extract gene-fingerprint
-lb-restriction | 제한 효소의 인식 서열과 기능 확인 | card-labbio-restriction text-adbio-pcr | lb-electrophoresis gene-biotech-history enzyme
-lb-transformation | 대장균 형질 전환과 선택 배지 | card-labbio-transformation | lb-restriction gene-lmo gene-expression
+lb-restriction | 제한 효소의 인식 서열과 기능 확인 | card-labbio-restriction text-adbio-pcr text-labbio-restriction | lb-electrophoresis gene-biotech-history enzyme
+lb-transformation | 대장균 형질 전환과 선택 배지 | card-labbio-transformation text-labbio-transform | lb-restriction gene-lmo gene-expression
 lb-pcr | PCR 온도 단계와 시약의 역할 | card-labbio-pcr | gene-replication pcr lb-electrophoresis
 lb-bioinfo | 생물정보학과 유전체 분석의 의료 활용 | card-labbio-bioinfo text-labbio-genome-med | gene-code gene-disorder phylo
-lb-plankton | 플랑크톤 관찰과 마이크로미터 | card-labbio-plankton | food-web cell-organelle
-lb-sem | 주사 전자 현미경 | card-labbio-sem | matter-wave cell-organelle
+lb-plankton | 플랑크톤 관찰과 마이크로미터 | card-labbio-plankton text-labbio-micrometer | food-web cell-organelle
+lb-sem | 주사 전자 현미경 | card-labbio-sem text-labbio-electron | matter-wave cell-organelle
 lb-plasmolysis | 원형질 분리와 등장 농도 | card-labbio-plasmolysis | cell-transport
-lb-water-potential | 삼투압과 수분 퍼텐셜 측정 | card-labbio-water-potential | lb-plasmolysis mateng-osmosis
-lb-osmosis-design | 삼투에 영향을 주는 요인 탐구 설계 | card-labbio-osmosis-design | lb-water-potential sci-method
-lb-plant-tissue | 식물의 조직계와 기관 | card-labbio-plant-tissue | bio-levels photosyn
-lb-dissection | 동물 기관의 해부와 구조·기능 | card-labbio-dissection | organ-sys classify sie-ethics
+lb-water-potential | 삼투압과 수분 퍼텐셜 측정 | card-labbio-water-potential text-labbio-water-potential | lb-plasmolysis mateng-osmosis
+lb-osmosis-design | 삼투에 영향을 주는 요인 탐구 설계 | card-labbio-osmosis-design text-labbio-osmosis-rate | lb-water-potential sci-method
+lb-plant-tissue | 식물의 조직계와 기관 | card-labbio-plant-tissue text-labbio-stomata | bio-levels photosyn
+lb-dissection | 동물 기관의 해부와 구조·기능 | card-labbio-dissection text-labbio-heart | organ-sys classify sie-ethics
 
 # ── 과학계열: 지구과학 실험 ──
 le-geoid | 지구타원체와 지오이드 | card-labearth-geoid text-adearth-gravity-anomaly | gravity

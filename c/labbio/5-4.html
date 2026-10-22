@@ -18,6 +18,7 @@
   <meta name="apple-mobile-web-app-title" content="나뭇잎 교과서">
   <link rel="stylesheet" href="../../css/fonts.css">
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../assets/katex/katex.min.css">
   <style>
     #card-labbio-electrophoresis .ep-opts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 6px 0 2px; }
     #card-labbio-electrophoresis .ep-msg { font-size: 13px; color: var(--ink-2); min-height: 1.4em; margin: 4px 0 0; }
@@ -46,8 +47,9 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-gene-gel"><span class="mono">5.4.1</span>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</a></li>
-        <li><a href="#card-labbio-electrophoresis"><span class="mono">5.4.2</span>젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?</a></li>
+        <li><a href="#text-labbio-gel"><span class="mono">5.4.1</span>본문 · DNA 전기 영동</a></li>
+        <li><a href="#card-gene-gel"><span class="mono">5.4.2</span>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</a></li>
+        <li><a href="#card-labbio-electrophoresis"><span class="mono">5.4.3</span>젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=labbio&amp;sec=5-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">5문항 →</span></a>
@@ -55,9 +57,66 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-labbio-gel" data-kind="본문">
+        <header class="card-head"><span class="no">5.4.1</span><h2>젤 위의 띠가 32 mm 내려갔다면 그 DNA는 몇 염기쌍일까?</h2><span class="kind">본문 · DNA 전기 영동</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">아가로스 젤의 홈에 크기를 아는 DNA 조각들의 혼합물인 크기 표지와 미지 DNA를 나란히 넣고 전기를 걸었다. 30분 뒤 염색해 보니 크기 표지는 10 000 염기쌍부터 500 염기쌍까지 여섯 개의 띠로 갈라졌고, 미지 DNA는 홈에서 32 mm 내려간 곳에 띠 하나를 만들었다. 짧은 조각일수록 멀리 갔다. 띠의 위치로 미지 DNA의 크기를 어떻게 알아낼 수 있을까? 거리와 크기 사이에는 어떤 규칙이 있을까?</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 200" role="img" aria-label="크기 표지와 미지 DNA의 전기 영동 결과">
+              <rect x="80" y="20" width="200" height="170" class="lk"/>
+              <rect x="110" y="20" width="40" height="6" class="fk"/><rect x="200" y="20" width="40" height="6" class="fk"/>
+              <rect x="110" y="40" width="40" height="3" class="fb"/><rect x="110" y="56" width="40" height="3" class="fb"/><rect x="110" y="68" width="40" height="3" class="fb"/><rect x="110" y="78" width="40" height="3" class="fb"/><rect x="110" y="94" width="40" height="3" class="fb"/><rect x="110" y="110" width="40" height="3" class="fb"/>
+              <rect x="200" y="84" width="40" height="3" class="fd"/>
+              <text x="130" y="186" class="s" text-anchor="middle">크기 표지</text><text x="220" y="186" class="s" text-anchor="middle">미지</text>
+              <g class="s"><text x="290" y="44">10 000 bp (10 mm)</text><text x="290" y="60">5 000 (18 mm)</text><text x="290" y="72">3 000 (24 mm)</text><text x="290" y="84">2 000 (29 mm)</text><text x="290" y="98">1 000 (37 mm)</text><text x="290" y="114">500 (45 mm)</text></g>
+              <text x="290" y="140" class="s td">미지 띠 32 mm</text>
+              <text x="40" y="30" class="s">−</text><text x="40" y="186" class="s">+</text>
+            </svg>
+            <figcaption>그림 1. DNA는 음전하를 띠어 양극 쪽으로 이동하며, 짧은 조각일수록 젤의 그물을 빠져나가 멀리 간다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>DNA의 구조와 전하, DNA 추출(<a href="5-3.html">DNA 추출</a>), 상용로그와 직선 보간.</div>
+
+          <h3><span class="mono">1</span>체를 빠져나가는 빠르기</h3>
+          <p>DNA는 인산기 때문에 길이에 비례해 음전하를 띤다. 전기를 걸면 모든 DNA가 양극 쪽으로 끌려가는데, 단위 길이당 전하가 같으므로 전기력만으로는 크기를 가릴 수 없다. 그런데 아가로스 젤은 촘촘한 그물 구조여서, 긴 DNA는 그물에 자주 걸려 느리게, 짧은 DNA는 그물 사이를 쉽게 빠져나가 빨리 움직인다. 그래서 같은 시간 동안 크기에 따라 다른 거리를 이동해 띠로 갈라진다. DNA 자체는 보이지 않으므로 형광 염료로 염색한 뒤 자외선이나 청색광을 비추어 띠를 본다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">크기와 이동 거리</span></span>
+            <p>일정한 범위 안에서 DNA 조각의 크기(염기쌍 수)의 로그는 이동 거리에 대해 거의 직선으로 줄어든다. \[\log(\text{크기}) \approx a - b \times (\text{이동 거리})\] 크기를 아는 표지로 이 직선을 정하고, 미지 띠의 거리를 넣어 크기를 구한다.</p>
+          </div>
+          <p>크기가 두 배가 될 때마다 이동 거리가 거의 같은 만큼 줄어든다. 그림 1의 크기 표지에서 10 000에서 5000으로 절반이 될 때 8 mm, 2000에서 1000으로 절반이 될 때도 8 mm 더 내려간다. 그래서 크기 자체가 아니라 그 로그를 거리에 대해 그리면 직선이 된다. 미지 띠는 반드시 크기 표지와 같은 젤에서 함께 전개해야 한다. 젤의 농도, 전압, 시간이 달라지면 같은 크기도 다른 거리를 가기 때문이다.<sup class="fn"><a href="#fn-labbio-gel-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>젤 농도의 선택</h3>
+          <p>젤이 진할수록 그물이 촘촘해져 작은 조각을 잘 가르고, 묽을수록 큰 조각을 잘 가른다. 수백 염기쌍의 PCR 산물은 2% 젤에서, 수천 염기쌍의 조각은 0.8% 젤에서 띠 사이가 넓게 벌어진다. 전압을 너무 높이면 젤이 데워져 띠가 번지므로, 젤 길이 1 cm당 5 V 안팎으로 건다. 홈은 음극 쪽에 두어야 하며, 반대로 꽂으면 DNA가 젤 밖으로 빠져나간다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="크기 표지의 로그와 이동 거리">
+              <g class="s">
+                <text x="20" y="22">크기 (bp)</text><text x="110" y="22">10 000</text><text x="180" y="22">5 000</text><text x="250" y="22">3 000</text><text x="320" y="22">2 000</text><text x="390" y="22">1 000</text><text x="450" y="22">500</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">log(크기)</text><text x="110" y="52">4.00</text><text x="180" y="52">3.70</text><text x="250" y="52">3.48</text><text x="320" y="52">3.30</text><text x="390" y="52">3.00</text><text x="450" y="52">2.70</text>
+                <text x="20" y="74">거리 (mm)</text><text x="110" y="74">10</text><text x="180" y="74">18</text><text x="250" y="74">24</text><text x="320" y="74">29</text><text x="390" y="74">37</text><text x="450" y="74">45</text>
+                <text x="20" y="98">거리가 1 mm 늘 때마다 log(크기)가 약 0.037씩 준다</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 크기의 로그와 이동 거리가 거의 직선 관계여서, 표지로 정한 직선에 미지 띠의 거리를 넣는다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>그림 2의 양 끝 점 (10 mm, 4.00)과 (45 mm, 2.70)으로 직선을 정하고, 32 mm에 있는 미지 띠의 크기를 구하여라. 2000 bp와 1000 bp 띠 사이에서 직선 보간으로 구한 값과 비교하여라.</p>
+          </div>
+          <p>기울기는 \((2.70 - 4.00)/(45 - 10) = -1.30/35 \approx -0.0371\)이다. 32 mm에서 \(\log(\text{크기}) = 4.00 - 0.0371 \times 22 \approx 3.18\)이므로 크기는 \(10^{3.18} \approx 1500\) bp이다.</p>
+          <p>2000 bp(29 mm, 3.30)와 1000 bp(37 mm, 3.00) 사이에서 보간하면 \(3.30 - 0.30 \times 3/8 \approx 3.19\)이고, \(10^{3.19} \approx 1540\) bp이다. 두 방법이 약 3% 안쪽으로 맞는다. 미지 띠에 가까운 두 표지로 보간하는 편이 직선에서 조금 벗어나는 부분의 영향을 덜 받는다. 즉 전기 영동은 DNA를 크기에 따라 가르고, 크기의 로그와 이동 거리의 직선 관계를 이용해 띠 하나의 위치로 그 크기를 읽어 낸다.</p>
+          <p>아래 탐구 카드에서 DNA를 전기 영동하여 크기 표지와 비교하고, 미지 띠의 크기를 구해 보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-labbio-gel-1">아가로스는 우뭇가사리 같은 붉은 바닷말에서 얻는 물질로, 한천의 주성분이다. 젤의 그물 구조가 균일하고 DNA와 반응하지 않아, 1970년대부터 DNA를 크기별로 가르는 표준 재료가 되었다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>DNA는 음전하를 띠어 전기장에서 양극으로 이동하고, 아가로스 젤의 그물 때문에 짧은 조각일수록 멀리 가서 크기별 띠로 갈라진다. 일정한 범위에서 크기의 로그가 이동 거리에 대해 직선으로 줄어들므로, 같은 젤에서 전개한 크기 표지로 직선을 정하고 미지 띠의 거리를 넣어 크기를 구한다. 처음 질문의 32 mm 띠는 약 1500 염기쌍이다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/3-1.html#text-gene-biotech-history"><small class="mono">생물의 유전 3.1</small>생명공학은 어떤 도구를 하나씩 손에 넣었을까?</a><a href="../../c/gene/3-1.html#text-gene-restriction"><small class="mono">생물의 유전 3.1</small>DNA를 원하는 자리에서 자르고 붙이려면 무엇이 필요할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/gene/3-3.html#text-gene-profile"><small class="mono">생물의 유전 3.3</small>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</a></div></nav>
+
       <article class="card" id="card-gene-gel">
         <header class="card-head">
-          <span class="no">5.4.1</span><h2>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</h2><span class="kind">PCR과 전기 영동 · DNA 지문 분석</span>
+          <span class="no">5.4.2</span><h2>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</h2><span class="kind">PCR과 전기 영동 · DNA 지문 분석</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -99,7 +158,7 @@
 
       <article class="card" id="card-labbio-electrophoresis">
         <header class="card-head">
-          <span class="no">5.4.2</span><h2>젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?</h2><span class="kind">실험 · 아가로스 젤 전기 영동 · 표준 곡선</span>
+          <span class="no">5.4.3</span><h2>젤 속에서 이동한 거리만 재고 DNA 조각의 크기를 알 수 있을까?</h2><span class="kind">실험 · 아가로스 젤 전기 영동 · 표준 곡선</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -146,7 +205,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labbio/5-3.html#card-labbio-dna-extract"><small class="mono">생명과학 실험 5.3</small>딸기 한 알에서 DNA를 눈에 보이게 꺼낼 수 있을까?</a><a href="../../c/gene/3-3.html#text-gene-profile"><small class="mono">생물의 유전 3.3</small>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-2.html#card-labbio-restriction"><small class="mono">고급 생명과학 4.2</small>제한 효소가 정말 그 염기 서열만 자르는지 어떻게 확인할까?</a><a href="../../c/adbio/4-2.html#text-adbio-pcr"><small class="mono">고급 생명과학 4.2</small>DNA 몇 분자로 어떻게 몇 시간 만에 수십억 개를 만들까?</a><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labbio/5-3.html#card-labbio-dna-extract"><small class="mono">생명과학 실험 5.3</small>딸기 한 알에서 DNA를 눈에 보이게 꺼낼 수 있을까?</a><a href="../../c/labbio/5-3.html#text-labbio-dna-yield"><small class="mono">생명과학 실험 5.3</small>딸기에서 뽑아낸 흰 실 덩어리가 DNA라는 것을 어떻게 확인할까?</a><a href="../../c/gene/3-3.html#text-gene-profile"><small class="mono">생물의 유전 3.3</small>머리카락 한 올의 DNA로 사람을 가려낼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-2.html#card-labbio-restriction"><small class="mono">고급 생명과학 4.2</small>제한 효소가 정말 그 염기 서열만 자르는지 어떻게 확인할까?</a><a href="../../c/adbio/4-2.html#text-adbio-pcr"><small class="mono">고급 생명과학 4.2</small>DNA 몇 분자로 어떻게 몇 시간 만에 수십억 개를 만들까?</a><a href="../../c/labbio/5-5.html#text-labbio-restriction"><small class="mono">생명과학 실험 5.5</small>여섯 글자를 알아보는 가위는 DNA를 몇 조각으로 자를까?</a><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=labbio&amp;sec=5-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">5문항</span></a>
 
@@ -161,6 +220,8 @@
 
 <script src="toc.js"></script>
 <script src="../../js/core.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/math.js"></script>
 <script src="../../js/store.js"></script>
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
