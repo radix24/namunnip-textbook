@@ -44,6 +44,7 @@
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
         <li><a href="#text-extra-square-cube"><span class="mono">1.8.1</span>본문 · 제곱-세제곱 법칙</a></li>
+        <li><a href="#card-extra-scale"><span class="mono">1.8.2</span>모양은 그대로 두고 크기만 바꾸면 무엇이 먼저 버티지 못할까?</a></li>
       </ol>
       <p class="progress mono small"></p>
       <p class="toc-links mono small"><a href="../../graph.html?sec=extra-1-8">이 절을 개념 지도에서 보기</a></p>
@@ -97,12 +98,57 @@
           </div>
           <p>길이의 배율은 \(1700/5 = 340\)이다. 무게는 \(340^3 \approx 3.9\times10^7\)배, 다리 단면은 \(340^2 \approx 1.16\times10^5\)배이므로, 다리가 받는 압력은 \(340\)배가 된다.</p>
           <p>원래 개미의 다리는 몸무게의 10배를 버틸 수 있으니, 압력이 340배가 되면 버틸 수 있는 하중은 몸무게의 \(10/340 \approx 0.03\)배, 곧 3%로 줄어든다. 그래서 거대 개미는 자기 몸무게조차 버티지 못하고 주저앉는다. 큰 동물이 다리가 굵고 몸에 비해 둔한 것은 이 때문이다. 즉 닮은 모양을 \(k\)배 키우면 무게는 \(k^3\)배, 버티는 힘은 \(k^2\)배여서 크기만으로도 몸의 능력이 크게 달라지며, 작은 동물이 떨어져도 덜 다치는 것도 같은 법칙의 결과이다.</p>
-          <p>한 변이 1 cm, 2 cm, 3 cm인 정육면체의 겉넓이와 부피를 계산해 겉넓이를 부피로 나눈 값을 비교하고, 작은 각설탕이 큰 덩어리보다 물에 빨리 녹는 까닭을 생각해 보자.</p>
+          <p>아래 탐구 카드에서 몸길이를 개미에서 거인까지 바꾸며 무게, 뼈의 압력, 떨어지는 속도가 어떻게 변하는지 비교해 보자. 집에서는 한 변이 1 cm, 2 cm, 3 cm인 정육면체의 겉넓이와 부피를 계산해 겉넓이를 부피로 나눈 값을 비교하고, 작은 각설탕이 큰 덩어리보다 물에 빨리 녹는 까닭을 생각해 보자.</p>
 
           <ol class="fn-list">
             <li id="fn-extra-square-cube-1">이 법칙은 1638년 갈릴레이가 『새로운 두 과학』에서 큰 동물의 뼈가 몸에 비해 훨씬 굵어야 한다는 것을 보이며 처음 설명했다. 영국의 생물학자 홀데인은 1926년 수필 「알맞은 크기에 대하여」에서 같은 원리로 동물마다 알맞은 크기가 있다고 썼다.</li>
           </ol>
           <div class="tb-summary"><span class="lb">마무리</span><p>모양이 닮은 물체의 길이를 \(k\)배 하면 넓이는 \(k^2\)배, 부피와 무게는 \(k^3\)배가 되어, 뼈가 받는 압력과 단위 겉넓이당 무게가 \(k\)배로 커진다. 그래서 큰 동물은 다리가 굵어야 하고 떨어질 때 종단 속도가 빨라 크게 다치며, 작은 동물은 겉넓이가 커서 열을 빨리 잃는다. 처음 질문의 개미는 몸이 작아 무게에 비해 공기 저항이 커서 천천히 떨어지므로 다치지 않는다.</p></div>
+        </div>
+      </article>
+
+      <article class="card" id="card-extra-scale">
+        <header class="card-head">
+          <span class="no">1.8.2</span><h2>모양은 그대로 두고 크기만 바꾸면 무엇이 먼저 버티지 못할까?</h2><span class="kind">제곱-세제곱 법칙 · 로그 그래프</span>
+        </header>
+        <div class="card-body">
+          <div class="card-fig">
+            <canvas class="cv-sq" aria-label="몸길이에 따른 넓이, 부피, 뼈의 압력, 종단 속도의 변화"></canvas>
+            <div class="ctl">
+              <div class="presets">
+                <button class="chip" data-L="0.005">개미 5 mm</button>
+                <button class="chip" data-L="0.08">생쥐 8 cm</button>
+                <button class="chip" data-L="1.7">사람 1.7 m</button>
+                <button class="chip" data-L="20">거인 20 m</button>
+              </div>
+              <label class="mono">몸길이 = <output class="L-out">1.7 m</output></label>
+              <input class="L" type="range" min="-3" max="2" step="0.01" value="0.2304" aria-label="몸길이(로그 눈금)">
+              <dl class="nums n4">
+                <div><dt>무게 (사람 = 1)</dt><dd class="mass">—</dd></div>
+                <div><dt>뼈가 받는 압력</dt><dd class="press">—</dd></div>
+                <div><dt>겉넓이 ÷ 부피</dt><dd class="sv">—</dd></div>
+                <div><dt>떨어지는 최고 속도</dt><dd class="vt">—</dd></div>
+              </dl>
+              <p class="fig-note">사람과 모양이 똑같다고 보고 크기만 바꾼 어림이다. 그래프는 두 축 모두 로그 눈금이어서 거듭제곱 관계가 직선으로 보인다.</p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><span class="tag">질문</span>사람을 모양 그대로 열 배 크게 만들면 힘도 열 배일까? 개미처럼 작게 만들면 떨어져도 다치지 않을까?</li>
+            <li><span class="tag">복원</span>길이를 \(k\)배 하면 넓이는 \(k^2\)배, 부피는 \(k^3\)배가 된다. 무게는 부피를 따르고, 뼈가 버티는 힘과 공기가 붙잡는 힘은 넓이를 따른다.</li>
+            <li><span class="tag">설명</span>그래서 무게를 넓이로 나눈 양, 곧 뼈가 받는 압력은 \(k\)배가 된다. 그래프에서 무게의 직선 기울기는 3, 넓이는 2여서 두 직선의 간격이 크기가 커질수록 벌어진다.</li>
+            <li><span class="tag">연결</span>떨어질 때 최고 속도는 무게와 공기 저항이 같아지는 속도이고, 저항은 넓이와 속도의 제곱에 비례하므로 최고 속도는 \(\sqrt k\)에 비례한다. 작은 동물일수록 천천히 떨어진다.</li>
+            <li><span class="tag">적용</span>개미, 생쥐, 사람, 거인 버튼을 차례로 눌러 보자. 거인은 뼈의 압력이 사람의 열 배가 넘고, 개미는 떨어지는 최고 속도가 사람의 20분의 1 남짓이다.</li>
+            <li class="warn"><span class="tag">판단</span>실제 동물은 크기에 따라 모양 자체가 달라진다. 코끼리는 다리가 몸에 비해 훨씬 굵고, 곤충은 외골격을 가진다. 이 카드의 숫자는 모양이 그대로라는 가정에서만 맞는 어림이다.</li>
+          </ol>
+        </div>
+        <div class="quiz">
+          <h3><span class="mono">확인</span>조건이 달라지면</h3>
+          <p class="q">각설탕 하나를 한 변의 길이가 절반인 작은 정육면체 8개로 잘랐습니다. 전체 겉넓이는 어떻게 됩니까?</p>
+          <ol>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>그대로이다<span class="why"><b>부피는 그대로이지만 겉넓이는 아닙니다.</b> 자를 때마다 새 면이 드러납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>두 배가 된다<span class="why"><b>맞습니다.</b> 작은 조각 하나의 겉넓이는 \(1/4\)이고 조각이 8개이므로 \(8\times\tfrac14 = 2\)배입니다. 그래서 잘게 자른 설탕이 더 빨리 녹습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>여덟 배가 된다<span class="why"><b>조각마다 겉넓이가 줄어드는 것을 빠뜨렸습니다.</b> 한 변이 절반이면 겉넓이는 \(1/4\)입니다.</span></span></button></li>
+          </ol>
         </div>
       </article>
 
@@ -124,5 +170,6 @@
 <script src="../../js/notes.js"></script>
 <script src="../../js/reader.js"></script>
 <script src="../../js/prereq.js"></script>
+<script src="../../js/cards/extra-scale.js"></script>
 </body>
 </html>
