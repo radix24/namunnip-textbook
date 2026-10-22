@@ -916,43 +916,43 @@ stat-sample-prop | 표본비율의 분포 | card-stat-phat-dist | stat-sampling 
 stat-est-mean | 모평균의 추정 | card-stat-ci-mean text-stat-estimation | stat-sample-mean
 stat-est-prop | 모비율의 추정 | card-stat-ci-prop | stat-sample-prop
 # 전문 수학 Ⅰ. 삼각함수와 미적분
-pm-trig-addition-proof | 덧셈정리의 증명 | card-pmath-add-proof | alg-trig-func calc2-trig-addition
+pm-trig-addition-proof | 덧셈정리의 증명 | card-pmath-add-proof text-pmath-trig-formulas | alg-trig-func calc2-trig-addition
 pm-double-angle | 배각·반각 공식 | card-pmath-double-angle | pm-trig-addition-proof
 pm-sum-product | 삼각함수의 합과 곱의 변환 | card-pmath-beats | pm-trig-addition-proof
-pm-reciprocal-trig | 코시컨트·시컨트·코탄젠트함수 | card-pmath-recip-circle card-pmath-csc-predict | alg-trig-graph cm2-rational-func
-pm-inverse-trig | 역삼각함수 | card-pmath-arc-restrict card-pmath-arc-sawtooth | alg-trig-graph cm2-inverse
-pm-trig-deriv-more | 여러 가지 삼각함수와 역삼각함수의 도함수 | card-pmath-deriv-trace card-pmath-museum | calc2-trig-deriv-more calc2-inverse-deriv pm-reciprocal-trig pm-inverse-trig
+pm-reciprocal-trig | 코시컨트·시컨트·코탄젠트함수 | card-pmath-recip-circle card-pmath-csc-predict text-pmath-reciprocal-trig | alg-trig-graph cm2-rational-func
+pm-inverse-trig | 역삼각함수 | card-pmath-arc-restrict card-pmath-arc-sawtooth text-pmath-inverse-trig | alg-trig-graph cm2-inverse
+pm-trig-deriv-more | 여러 가지 삼각함수와 역삼각함수의 도함수 | card-pmath-deriv-trace card-pmath-museum text-pmath-derivatives | calc2-trig-deriv-more calc2-inverse-deriv pm-reciprocal-trig pm-inverse-trig
 pm-higher-deriv | 고계도함수 | card-pmath-jerk | calc2-velocity-accel
-pm-lhopital | 로피탈의 정리 | card-pmath-lhopital-zoom card-pmath-lhopital-errors card-pmath-growth-race | calc1-limit-laws calc1-mvt calc2-exp-log-deriv
-pm-riemann | 구분구적법과 정적분의 뜻 | card-pmath-riemann card-pmath-pyramid | alg-sigma calc1-definite
-pm-int-methods | 여러 가지 적분법 | card-pmath-int-choose card-pmath-partial-frac | calc2-int-substitution calc2-int-parts
+pm-lhopital | 로피탈의 정리 | card-pmath-lhopital-zoom card-pmath-lhopital-errors card-pmath-growth-race text-pmath-lhopital | calc1-limit-laws calc1-mvt calc2-exp-log-deriv
+pm-riemann | 구분구적법과 정적분의 뜻 | card-pmath-riemann card-pmath-pyramid text-pmath-riemann-sum | alg-sigma calc1-definite
+pm-int-methods | 여러 가지 적분법 | card-pmath-int-choose card-pmath-partial-frac text-pmath-integration | calc2-int-substitution calc2-int-parts
 pm-trig-sub | 삼각치환 | card-pmath-trig-sub | pm-int-methods pm-inverse-trig alg-radian
 # 전문 수학 Ⅱ. 기하
-pm-conic-section | 원뿔곡선 | card-pmath-cone-cut | geo-parabola geo-ellipse geo-hyperbola
+pm-conic-section | 원뿔곡선 | card-pmath-cone-cut text-pmath-conics | geo-parabola geo-ellipse geo-hyperbola
 pm-eccentricity | 이심률 | card-pmath-eccentricity | pm-conic-section
-pm-conic-reflect | 이차곡선의 접선과 반사 성질 | card-pmath-parabolic-mirror card-pmath-ellipse-billiard | geo-conic-tangent
-pm-space-proof | 직선과 평면에 관한 명제의 증명 | card-pmath-three-perp-proof card-pmath-space-counter | geo-line-line geo-line-plane geo-three-perp
-pm-proj-area | 정사영의 넓이와 활용 | card-pmath-disk-shadow card-pmath-solar-panel | geo-proj-area
-pm-space-dist | 공간의 거리와 내분점·외분점 | card-pmath-treasure3d card-pmath-section3d | geo-dist3 geo-section3
+pm-conic-reflect | 이차곡선의 접선과 반사 성질 | card-pmath-parabolic-mirror card-pmath-ellipse-billiard text-pmath-conic-tangent | geo-conic-tangent
+pm-space-proof | 직선과 평면에 관한 명제의 증명 | card-pmath-three-perp-proof card-pmath-space-counter text-pmath-three-perp | geo-line-line geo-line-plane geo-three-perp
+pm-proj-area | 정사영의 넓이와 활용 | card-pmath-disk-shadow card-pmath-solar-panel text-pmath-projection | geo-proj-area
+pm-space-dist | 공간의 거리와 내분점·외분점 | card-pmath-treasure3d card-pmath-section3d text-pmath-sphere-eq | geo-dist3 geo-section3
 pm-trilateration | 구 세 개의 교점과 위치 측정 | card-pmath-trilateration | geo-sphere-eq pm-space-dist
-pm-vec-ops | 벡터의 연산과 활용 | card-pmath-river card-pmath-vec-puzzle | geo-vec-add geo-vec-scalar geo-vec-comp
-pm-dot-work | 내적과 일 | card-pmath-work-dot | geo-dot
+pm-vec-ops | 벡터의 연산과 활용 | card-pmath-river card-pmath-vec-puzzle text-pmath-vector-ops | geo-vec-add geo-vec-scalar geo-vec-comp
+pm-dot-work | 내적과 일 | card-pmath-work-dot text-pmath-dot-cross | geo-dot
 pm-cross | 벡터의 외적 | card-pmath-cross card-pmath-torque | geo-dot geo-pos-vec
 pm-shading | 법선과 조명 | card-pmath-shading | pm-cross pm-dot-work
-pm-vec-figures | 벡터로 나타낸 직선·평면·원·구 | card-pmath-param-line-plane card-pmath-circle-sphere-vec | geo-line-vec geo-plane-vec geo-sphere-vec pm-cross
+pm-vec-figures | 벡터로 나타낸 직선·평면·원·구 | card-pmath-param-line-plane card-pmath-circle-sphere-vec text-pmath-vector-equations | geo-line-vec geo-plane-vec geo-sphere-vec pm-cross
 pm-raytrace | 직선과 구의 교점 | card-pmath-raytrace | pm-vec-figures pm-shading
 # 전문 수학 Ⅲ. 확률과 통계
-pm-circular-perm | 원순열과 염주순열 | card-pmath-round-table card-pmath-necklace | cm1-permutation
+pm-circular-perm | 원순열과 염주순열 | card-pmath-round-table card-pmath-necklace text-pmath-circular-combination | cm1-permutation
 pm-rep-comb | 중복조합(별과 막대) | card-pmath-candy | stat-rep-comb
-pm-binom-thm | 이항정리와 갈톤 보드 | card-pmath-galton card-pmath-binom-approx | stat-binom-thm stat-pascal
-pm-stat-prob | 통계적 확률과 수학적 확률 | card-pmath-buffon card-pmath-thumbtack | stat-prob-def stat-large-numbers
-pm-prob-theorems | 확률의 여러 가지 정리 | card-pmath-monty-hall card-pmath-bayes-area card-pmath-gambler | stat-cond-prob stat-independence stat-mult-rule
-pm-rv-dist | 확률변수와 확률분포 | card-pmath-dice-dist card-pmath-hist-density | stat-rv stat-continuous-rv
-pm-expect-binom | 기댓값과 이항분포 | card-pmath-fair-game card-pmath-binom-slider | stat-expectation stat-binomial
-pm-cont-expect | 연속확률변수의 기댓값과 표준편차 | card-pmath-cont-expect | pm-rv-dist pm-riemann
+pm-binom-thm | 이항정리와 갈톤 보드 | card-pmath-galton card-pmath-binom-approx text-pmath-binomial-theorem | stat-binom-thm stat-pascal
+pm-stat-prob | 통계적 확률과 수학적 확률 | card-pmath-buffon card-pmath-thumbtack text-pmath-statistical-prob | stat-prob-def stat-large-numbers
+pm-prob-theorems | 확률의 여러 가지 정리 | card-pmath-monty-hall card-pmath-bayes-area card-pmath-gambler text-pmath-bayes | stat-cond-prob stat-independence stat-mult-rule
+pm-rv-dist | 확률변수와 확률분포 | card-pmath-dice-dist card-pmath-hist-density text-pmath-random-variable | stat-rv stat-continuous-rv
+pm-expect-binom | 기댓값과 이항분포 | card-pmath-fair-game card-pmath-binom-slider text-pmath-binomial-dist | stat-expectation stat-binomial
+pm-cont-expect | 연속확률변수의 기댓값과 표준편차 | card-pmath-cont-expect text-pmath-normal | pm-rv-dist pm-riemann
 pm-normal | 정규분포와 연속성 보정 | card-pmath-continuity-corr card-pmath-height-normal | stat-normal stat-binom-normal
-pm-sampling | 표본추출 방법과 편향 | card-pmath-sampling-methods text-pmath-literary-digest | stat-sampling
-pm-estimation | 모평균·모비율의 추정 | card-pmath-ci-100 card-pmath-sample-size | stat-est-mean stat-est-prop
+pm-sampling | 표본추출 방법과 편향 | card-pmath-sampling-methods text-pmath-literary-digest text-pmath-sampling | stat-sampling
+pm-estimation | 모평균·모비율의 추정 | card-pmath-ci-100 card-pmath-sample-size text-pmath-estimation | stat-est-mean stat-est-prop
 # 고급 미적분 Ⅰ. 미적분의 활용
 adc-newton | 뉴턴의 방법 | card-adcalc-newton-tangent card-adcalc-newton-sqrt card-adcalc-newton-basin | calc1-tangent calc1-ivt
 adc-hyperbolic | 쌍곡선함수 | card-adcalc-hyp-unit card-adcalc-catenary | calc2-e-natlog

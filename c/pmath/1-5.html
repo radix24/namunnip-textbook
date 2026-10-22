@@ -52,9 +52,10 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#card-pmath-lhopital-zoom"><span class="mono">1.5.1</span>확대경으로 보는 로피탈의 정리</a></li>
-        <li><a href="#card-pmath-lhopital-errors"><span class="mono">1.5.2</span>로피탈을 잘못 쓴 풀이 찾기</a></li>
-        <li><a href="#card-pmath-growth-race"><span class="mono">1.5.3</span>무한대 경주</a></li>
+        <li><a href="#text-pmath-lhopital"><span class="mono">1.5.1</span>본문 · 로피탈의 정리</a></li>
+        <li><a href="#card-pmath-lhopital-zoom"><span class="mono">1.5.2</span>확대경으로 보는 로피탈의 정리</a></li>
+        <li><a href="#card-pmath-lhopital-errors"><span class="mono">1.5.3</span>로피탈을 잘못 쓴 풀이 찾기</a></li>
+        <li><a href="#card-pmath-growth-race"><span class="mono">1.5.4</span>무한대 경주</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=pmath&amp;sec=1-5"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">10문항 →</span></a>
@@ -62,9 +63,66 @@
     </aside>
 
     <div>
+      <article class="card reading" id="text-pmath-lhopital" data-kind="본문">
+        <header class="card-head"><span class="no">1.5.1</span><h2>0/0 꼴의 극한은 두 그래프를 크게 확대하면 보일까?</h2><span class="kind">본문 · 로피탈의 정리</span></header>
+        <div class="reading-body q-text">
+          <p class="q-ask">\(\dfrac{1 - \cos x}{x^2}\)에 \(x = 0\)을 넣으면 분자와 분모가 모두 0이 되어 값을 알 수 없다. 계산기로 \(x = 0.1\), \(0.01\), \(0.001\)을 넣으니 0.4996, 0.499996, 0.5000에 가까워졌다. 분자와 분모가 함께 0으로 갈 때 두 함수의 그래프를 원점 근처에서 크게 확대하면 어떻게 보일까? 그 모습에서 극한값 0.5를 계산 없이 읽어 낼 방법이 있을까? 그리고 \(x^{10}\)과 \(e^x\) 가운데 무한대로 갈 때 누가 더 빨리 커질까?</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 132" role="img" aria-label="0 근처에서 두 0/0 꼴 극한의 값">
+              <g class="s">
+                <text x="20" y="22">x</text><text x="150" y="22">0.1</text><text x="250" y="22">0.01</text><text x="350" y="22">0.001</text><text x="440" y="22">극한</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">(sin x)/x</text><text x="150" y="52">0.99833</text><text x="250" y="52">0.99998</text><text x="350" y="52">1.00000</text><text x="440" y="52" class="td">1</text>
+                <text x="20" y="74">(1 − cos x)/x²</text><text x="150" y="74">0.49958</text><text x="250" y="74">0.49999</text><text x="350" y="74">0.50000</text><text x="440" y="74" class="td">1/2</text>
+                <text x="20" y="96">(eˣ − 1)/x</text><text x="150" y="96">1.05171</text><text x="250" y="96">1.00502</text><text x="350" y="96">1.00050</text><text x="440" y="96" class="td">1</text>
+                <text x="20" y="122">x를 0에 가까이 할수록 분수의 값이 하나의 수로 모인다.</text>
+              </g>
+            </svg>
+            <figcaption>그림 1. 분자와 분모가 함께 0으로 가도 그 비는 일정한 값으로 모일 수 있다.</figcaption>
+          </figure>
+          <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>함수의 극한, 미분계수의 기하적 의미, 평균값 정리, 지수함수와 로그함수의 도함수.</div>
+
+          <h3><span class="mono">1</span>확대하면 직선이 남는다</h3>
+          <p>미분 가능한 함수의 그래프는 한 점 근처를 크게 확대하면 그 점에서의 접선과 거의 구별되지 않는다. \(f(a) = g(a) = 0\)이면 \(a\) 근처에서 \(f(x) \approx f'(a)(x - a)\), \(g(x) \approx g'(a)(x - a)\)이다. 그래서 두 함수의 비는 \((x - a)\)가 약분되어 두 접선의 기울기의 비 \(f'(a)/g'(a)\)에 가까워진다. 이것이 로피탈의 정리를 그림으로 본 것이다. 예를 들어 \(\sin x\)와 \(x\)는 원점에서 기울기가 둘 다 1이므로 \((\sin x)/x\)의 극한은 1이다.</p>
+          <div class="tb-env thm"><span class="lb">정리 <span class="nm">로피탈의 정리</span></span>
+            <p>\(\lim f(x) = \lim g(x) = 0\)이거나 둘 다 \(\pm\infty\)이고, \(\lim\dfrac{f'(x)}{g'(x)}\)가 존재하면 \[\lim\frac{f(x)}{g(x)} = \lim\frac{f'(x)}{g'(x)}\]이다. 우변이 다시 \(0/0\) 꼴이면 같은 정리를 거듭 쓸 수 있다.</p>
+          </div>
+          <p>정리를 쓸 때는 먼저 \(0/0\)이나 \(\infty/\infty\) 꼴인지 확인해야 한다. 예를 들어 \(\lim_{x\to0}\dfrac{x + 1}{x + 2}\)는 값을 넣으면 바로 \(1/2\)인데, 확인하지 않고 분자와 분모를 미분하면 \(1/1 = 1\)이라는 틀린 답이 나온다. 또 분수 전체를 몫의 미분법으로 미분하는 것이 아니라, 분자와 분모를 따로 미분해야 한다. 엄밀한 증명은 코시의 평균값 정리를 쓴다.<sup class="fn"><a href="#fn-pmath-lhopital-1">1</a></sup></p>
+
+          <h3><span class="mono">2</span>누가 더 빨리 커질까</h3>
+          <p>로피탈의 정리는 \(\infty/\infty\) 꼴에도 쓸 수 있어, 두 함수 가운데 무엇이 더 빨리 커지는지 겨루는 데 쓴다. \(x^{10}/e^x\)에 정리를 열 번 쓰면 분자는 \(10!\)이라는 상수가 되고 분모는 그대로 \(e^x\)이므로 극한은 0이다. 그래서 \(x^{10}\)은 처음에는 \(e^x\)보다 훨씬 크지만 결국 뒤처진다. 같은 방법으로 \(\ln x\)는 어떤 양수 거듭제곱 \(x^p\)보다도 느리게 커진다. 그래서 무한대로 갈 때 지수함수, 거듭제곱 함수, 로그함수의 순서로 빨리 커진다.</p>
+          <figure class="q-fig">
+            <svg viewBox="0 0 520 110" role="img" aria-label="x^10과 e^x의 값 비교">
+              <g class="s">
+                <text x="20" y="22">x</text><text x="140" y="22">10</text><text x="230" y="22">30</text><text x="320" y="22">35.8</text><text x="420" y="22">40</text>
+                <line x1="15" y1="30" x2="505" y2="30" class="gd"/>
+                <text x="20" y="52">x¹⁰</text><text x="140" y="52" class="tb">10¹⁰</text><text x="230" y="52" class="tb">5.9 × 10¹⁴</text><text x="320" y="52">약 3.5 × 10¹⁵</text><text x="420" y="52">1.0 × 10¹⁶</text>
+                <text x="20" y="74">eˣ</text><text x="140" y="74">2.2 × 10⁴</text><text x="230" y="74">1.1 × 10¹³</text><text x="320" y="74">약 3.5 × 10¹⁵</text><text x="420" y="74" class="td">2.4 × 10¹⁷</text>
+                <text x="20" y="100">x ≈ 35.8에서 둘이 같아지고, 그 뒤로는 eˣ가 앞선다.</text>
+              </g>
+            </svg>
+            <figcaption>그림 2. 거듭제곱 함수는 처음에 크게 앞서지만, 지수함수가 결국 따라잡아 앞지른다.</figcaption>
+          </figure>
+
+          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제</span>
+            <p>로피탈의 정리로 \(\lim_{x\to0}\dfrac{1 - \cos x}{x^2}\)와 \(\lim_{x\to0}\dfrac{e^x - 1 - x}{x^2}\)를 구하여라. 각 단계에서 정리를 쓸 수 있는 꼴인지 확인하여라.</p>
+          </div>
+          <p>\(x \to 0\)이면 \(1 - \cos x \to 0\), \(x^2 \to 0\)이므로 \(0/0\) 꼴이다. 분자와 분모를 미분하면 \(\dfrac{\sin x}{2x}\)이고, 이것도 \(0/0\) 꼴이다. 한 번 더 미분하면 \(\dfrac{\cos x}{2} \to \dfrac12\)이다. 그래서 극한은 \(1/2\)로, 처음 질문의 계산기 값과 맞는다.</p>
+          <p>\(e^x - 1 - x\)와 \(x^2\)도 모두 0으로 가므로 \(0/0\) 꼴이다. 미분하면 \(\dfrac{e^x - 1}{2x}\)로 다시 \(0/0\) 꼴이고, 한 번 더 미분하면 \(\dfrac{e^x}{2} \to \dfrac12\)이다. 두 극한이 모두 \(1/2\)인 것은 \(1 - \cos x\)와 \(e^x - 1 - x\)가 원점 근처에서 모두 \(x^2/2\)와 거의 같기 때문이다. 즉 \(0/0\) 꼴의 극한은 확대했을 때 남는 접선의 기울기, 그것도 0이면 그다음 도함수의 비로 정해진다.</p>
+          <p>아래 탐구 카드에서 \(0/0\) 꼴 극한의 두 그래프를 확대해 보고, 로피탈의 정리를 잘못 쓴 풀이의 틀린 곳을 찾고, \(x^{10}\)과 \(e^x\)의 경주를 지켜보자.</p>
+
+          <ol class="fn-list">
+            <li id="fn-pmath-lhopital-1">이 정리는 1696년 프랑스의 귀족 로피탈이 낸 세계 최초의 미분학 교과서에 실렸다. 그러나 실제로 정리를 찾은 사람은 로피탈에게 돈을 받고 연구 결과를 보내 주던 스위스의 수학자 요한 베르누이였다.</li>
+          </ol>
+          <div class="tb-summary"><span class="lb">마무리</span><p>분자와 분모가 함께 0으로 가는 극한은 한 점 근처를 확대하면 두 그래프가 접선처럼 보여, 그 기울기의 비인 \(f'/g'\)의 극한과 같아지며, 이것이 로피탈의 정리이다. 정리는 \(0/0\)이나 \(\infty/\infty\) 꼴에서만 쓰고 분자와 분모를 따로 미분하며, 무한대에서 지수함수가 거듭제곱 함수보다, 거듭제곱 함수가 로그함수보다 빨리 커진다는 것도 보여 준다. 처음 질문의 \((1 - \cos x)/x^2\)은 정리를 두 번 써서 \(1/2\)로 모인다.</p></div>
+        </div>
+      </article>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/1-2.html#card-calc1-lim-laws"><small class="mono">미적분Ⅰ 1.2</small>두 함수를 더하고 곱하면 극한값도 더하고 곱하면 될까?</a><a href="../../c/calc1/1-2.html#text-calc1-limit-laws"><small class="mono">미적분Ⅰ 1.2</small>대입하면 tfrac00이 나오는 식의 극한값은 어떻게 구할까?</a><a href="../../c/calc1/2-6.html#card-calc1-mvt"><small class="mono">미적분Ⅰ 2.6</small>평균 기울기와 같은 순간 기울기는 어디에 있을까?</a><a href="../../c/calc2/2-1.html#card-calc2-exp-slope"><small class="mono">미적분Ⅱ 2.1</small>접선의 기울기가 높이와 같은 지수함수의 밑은?</a></div></nav>
+
       <article class="card" id="card-pmath-lhopital-zoom">
         <header class="card-head">
-          <span class="no">1.5.1</span><h2>0/0 근처를 크게 확대하면 무엇이 남을까?</h2><span class="kind">로피탈의 정리 · 조작</span>
+          <span class="no">1.5.2</span><h2>0/0 근처를 크게 확대하면 무엇이 남을까?</h2><span class="kind">로피탈의 정리 · 조작</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -110,7 +168,7 @@
 
       <article class="card" id="card-pmath-lhopital-errors">
         <header class="card-head">
-          <span class="no">1.5.2</span><h2>로피탈의 정리를 쓴 이 풀이, 어디가 틀렸을까?</h2><span class="kind">로피탈의 정리의 조건 · 오류 찾기</span>
+          <span class="no">1.5.3</span><h2>로피탈의 정리를 쓴 이 풀이, 어디가 틀렸을까?</h2><span class="kind">로피탈의 정리의 조건 · 오류 찾기</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -181,7 +239,7 @@
 
       <article class="card" id="card-pmath-growth-race">
         <header class="card-head">
-          <span class="no">1.5.3</span><h2>\(x^{10}\)과 \(e^x\)가 무한대까지 달리면 누가 이길까?</h2><span class="kind">로피탈의 정리 · 증가 속도 비교 · 도전</span>
+          <span class="no">1.5.4</span><h2>\(x^{10}\)과 \(e^x\)가 무한대까지 달리면 누가 이길까?</h2><span class="kind">로피탈의 정리 · 증가 속도 비교 · 도전</span>
         </header>
         <div class="card-body">
           <div class="card-fig">

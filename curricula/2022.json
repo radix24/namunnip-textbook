@@ -8988,6 +8988,7 @@
        "code": "12전수01-01",
        "blocks": [
         "intro-pmath-1-1",
+        "text-pmath-trig-formulas",
         "card-pmath-add-proof",
         "card-pmath-double-angle",
         "card-pmath-beats"
@@ -8999,6 +9000,7 @@
        "code": "12전수01-02",
        "blocks": [
         "intro-pmath-1-2",
+        "text-pmath-reciprocal-trig",
         "card-pmath-recip-circle",
         "card-pmath-csc-predict"
        ]
@@ -9009,6 +9011,7 @@
        "code": "12전수01-03",
        "blocks": [
         "intro-pmath-1-3",
+        "text-pmath-inverse-trig",
         "card-pmath-arc-restrict",
         "card-pmath-arc-sawtooth"
        ]
@@ -9019,6 +9022,7 @@
        "code": "12전수01-04",
        "blocks": [
         "intro-pmath-1-4",
+        "text-pmath-derivatives",
         "card-pmath-deriv-trace",
         "card-pmath-museum",
         "card-pmath-jerk"
@@ -9030,6 +9034,7 @@
        "code": "12전수01-05",
        "blocks": [
         "intro-pmath-1-5",
+        "text-pmath-lhopital",
         "card-pmath-lhopital-zoom",
         "card-pmath-lhopital-errors",
         "card-pmath-growth-race"
@@ -9041,6 +9046,7 @@
        "code": "12전수01-06",
        "blocks": [
         "intro-pmath-1-6",
+        "text-pmath-riemann-sum",
         "card-pmath-riemann",
         "card-pmath-pyramid"
        ]
@@ -9051,6 +9057,7 @@
        "code": "12전수01-07",
        "blocks": [
         "intro-pmath-1-7",
+        "text-pmath-integration",
         "card-pmath-int-choose",
         "card-pmath-partial-frac",
         "card-pmath-trig-sub"
@@ -9068,6 +9075,7 @@
        "code": "12전수02-01",
        "blocks": [
         "intro-pmath-2-1",
+        "text-pmath-conics",
         "card-pmath-cone-cut",
         "card-pmath-eccentricity"
        ]
@@ -9078,6 +9086,7 @@
        "code": "12전수02-02",
        "blocks": [
         "intro-pmath-2-2",
+        "text-pmath-conic-tangent",
         "card-pmath-parabolic-mirror",
         "card-pmath-ellipse-billiard"
        ]
@@ -9088,6 +9097,7 @@
        "code": "12전수02-03",
        "blocks": [
         "intro-pmath-2-3",
+        "text-pmath-three-perp",
         "card-pmath-three-perp-proof",
         "card-pmath-space-counter"
        ]
@@ -9098,6 +9108,7 @@
        "code": "12전수02-04",
        "blocks": [
         "intro-pmath-2-4",
+        "text-pmath-projection",
         "card-pmath-disk-shadow",
         "card-pmath-solar-panel"
        ]
@@ -9108,6 +9119,7 @@
        "code": "12전수02-05",
        "blocks": [
         "intro-pmath-2-5",
+        "text-pmath-sphere-eq",
         "card-pmath-treasure3d",
         "card-pmath-section3d",
         "card-pmath-trilateration"
@@ -9119,6 +9131,7 @@
        "code": "12전수02-06",
        "blocks": [
         "intro-pmath-2-6",
+        "text-pmath-vector-ops",
         "card-pmath-river",
         "card-pmath-vec-puzzle"
        ]
@@ -9129,6 +9142,7 @@
        "code": "12전수02-07",
        "blocks": [
         "intro-pmath-2-7",
+        "text-pmath-dot-cross",
         "card-pmath-work-dot",
         "card-pmath-cross",
         "card-pmath-torque",
@@ -9141,6 +9155,7 @@
        "code": "12전수02-08",
        "blocks": [
         "intro-pmath-2-8",
+        "text-pmath-vector-equations",
         "card-pmath-param-line-plane",
         "card-pmath-circle-sphere-vec",
         "card-pmath-raytrace"
@@ -9158,6 +9173,7 @@
        "code": "12전수03-01",
        "blocks": [
         "intro-pmath-3-1",
+        "text-pmath-circular-combination",
         "card-pmath-round-table",
         "card-pmath-necklace",
         "card-pmath-candy"
@@ -9169,6 +9185,7 @@
        "code": "12전수03-02",
        "blocks": [
         "intro-pmath-3-2",
+        "text-pmath-binomial-theorem",
         "card-pmath-galton",
         "card-pmath-binom-approx"
        ]
@@ -9179,6 +9196,7 @@
        "code": "12전수03-03",
        "blocks": [
         "intro-pmath-3-3",
+        "text-pmath-statistical-prob",
         "card-pmath-buffon",
         "card-pmath-thumbtack"
        ]
@@ -9189,6 +9207,7 @@
        "code": "12전수03-04",
        "blocks": [
         "intro-pmath-3-4",
+        "text-pmath-bayes",
         "card-pmath-monty-hall",
         "card-pmath-bayes-area",
         "card-pmath-gambler"
@@ -9200,6 +9219,7 @@
        "code": "12전수03-05",
        "blocks": [
         "intro-pmath-3-5",
+        "text-pmath-random-variable",
         "card-pmath-dice-dist",
         "card-pmath-hist-density"
        ]
@@ -9210,6 +9230,7 @@
        "code": "12전수03-06",
        "blocks": [
         "intro-pmath-3-6",
+        "text-pmath-binomial-dist",
         "card-pmath-fair-game",
         "card-pmath-binom-slider"
        ]
@@ -9220,6 +9241,7 @@
        "code": "12전수03-07",
        "blocks": [
         "intro-pmath-3-7",
+        "text-pmath-normal",
         "card-pmath-cont-expect",
         "card-pmath-continuity-corr",
         "card-pmath-height-normal"
@@ -9231,6 +9253,7 @@
        "code": "12전수03-08",
        "blocks": [
         "intro-pmath-3-8",
+        "text-pmath-sampling",
         "card-pmath-sampling-methods",
         "text-pmath-literary-digest"
        ]
@@ -9241,6 +9264,7 @@
        "code": "12전수03-09",
        "blocks": [
         "intro-pmath-3-9",
+        "text-pmath-estimation",
         "card-pmath-ci-100",
         "card-pmath-sample-size"
        ]
