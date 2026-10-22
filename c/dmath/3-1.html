@@ -135,18 +135,18 @@
               <div><label class="mono">수 = <output class="n-out">45</output></label><input class="n" type="range" min="0" max="255" step="1" value="45" aria-label="십진법의 수"></div>
               <div><label class="mono">진법 = <output class="b-out">2</output></label><input class="b" type="range" min="2" max="16" step="1" value="2" aria-label="밑"></div>
             </div>
-            <p><span class="digits">—</span></p>
+          <p><span class="digits">—</span></p>
             <canvas aria-label="자리마다 밑의 거듭제곱 묶음이 몇 개인지 보여 주는 블록 그림"></canvas>
             <div class="presets"><button class="chip" type="button" data-b="2">2진법</button><button class="chip" type="button" data-b="8">8진법</button><button class="chip" type="button" data-b="10">10진법</button><button class="chip" type="button" data-b="16">16진법</button></div>
             <p class="div" aria-label="나눗셈으로 바꾸는 과정"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>우리는 10개씩 묶어 세지만 컴퓨터는 2개씩, 색상 코드(#FF8800)는 16개씩 묶어 셉니다. 같은 수 45를 2개씩 묶어 세면 어떻게 쓰게 될까요?</li>
-            <li><span class="tag">복원</span>십진법의 \(345 = 3 \times 10^2 + 4 \times 10 + 5\). 자리마다 10의 거듭제곱이 몇 개인지를 적은 것입니다.</li>
-            <li><span class="tag">설명</span>밑 \(b\)를 써서 \(N = a_kb^k + \cdots + a_1b + a_0\) \((0 \le a_i < b)\)로 나타내는 것을 <em>\(b\)진법</em>이라 합니다. 십진법의 수를 \(b\)진법으로 바꾸려면 \(b\)로 나눈 나머지 \(a_0\)을 적고, 몫을 다시 \(b\)로 나누기를 반복한 뒤 나머지를 거꾸로 읽습니다. 16진법은 10~15를 A~F로 씁니다. 2진법 네 자리가 16진법 한 자리와 꼭 맞으므로(\(2^4 = 16\)) 둘 사이는 네 자리씩 끊어 바로 바꿀 수 있습니다.</li>
-            <li><span class="tag">연결</span>컴퓨터는 전기 신호의 있고 없음(1과 0)만 구별하므로 2진법을 씁니다. 사람이 읽기 쉽게 하려고 메모리 주소나 색상은 16진법으로 적습니다.</li>
-            <li><span class="tag">적용</span>수를 바꾸며 2진법 자리 수가 언제 하나 늘어나는지 보세요. 그 수들에는 어떤 공통점이 있나요? 255를 2진법과 16진법으로 쓰고 네 자리씩 끊어 비교하세요.</li>
-            <li class="warn"><span class="tag">판단</span>"\(101\)"은 진법을 밝히지 않으면 십진법 백일인지 이진법 5인지 알 수 없습니다. \(101_{(2)}\)처럼 밑을 함께 적어야 합니다. 또 \(b\)진법에는 \(b\) 이상의 숫자가 나올 수 없습니다(2진법에 2는 없음).</li>
+            <li><span class="tag">질문</span>우리는 10개씩 묶어 세지만 컴퓨터는 2개씩, 색상 코드(#FF8800)는 16개씩 묶어 센다. 같은 수 45를 2개씩 묶어 세면 어떻게 쓰게 될까?</li>
+            <li><span class="tag">복원</span>십진법의 \(345 = 3 \times 10^2 + 4 \times 10 + 5\). 자리마다 10의 거듭제곱이 몇 개인지를 적은 것이다.</li>
+            <li><span class="tag">설명</span>밑 \(b\)를 써서 \(N = a_kb^k + \cdots + a_1b + a_0\) \((0 \le a_i < b)\)로 나타내는 것을 <em>\(b\)진법</em>이라 한다. 십진법의 수를 \(b\)진법으로 바꾸려면 \(b\)로 나눈 나머지 \(a_0\)을 적고, 몫을 다시 \(b\)로 나누기를 반복한 뒤 나머지를 거꾸로 읽는다. 16진법은 10~15를 A~F로 쓴다. 2진법 네 자리가 16진법 한 자리와 꼭 맞으므로(\(2^4 = 16\)) 둘 사이는 네 자리씩 끊어 바로 바꿀 수 있다.</li>
+            <li><span class="tag">연결</span>컴퓨터는 전기 신호의 있고 없음(1과 0)만 구별하므로 2진법을 쓴다. 사람이 읽기 쉽게 하려고 메모리 주소나 색상은 16진법으로 적는다.</li>
+            <li><span class="tag">적용</span>수를 바꾸며 2진법 자리 수가 언제 하나 늘어나는지 보자. 그 수들에는 어떤 공통점이 있는가? 255를 2진법과 16진법으로 쓰고 네 자리씩 끊어 비교해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>"\(101\)"은 진법을 밝히지 않으면 십진법 백일인지 이진법 5인지 알 수 없다. \(101_{(2)}\)처럼 밑을 함께 적어야 한다. 또 \(b\)진법에는 \(b\) 이상의 숫자가 나올 수 없다(2진법에 2는 없음).</li>
           </ol>
         </div>
         <div class="quiz">
@@ -168,18 +168,18 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">1부터 63까지의 수 하나를 마음속으로 정하세요. 그 수가 있는 카드에 "있다"를 누르세요.</p>
+            <p class="small">1부터 63까지의 수 하나를 마음속으로 정해 보자. 그 수가 있는 카드에 "있다"를 누르자.</p>
             <div class="deck" role="group" aria-label="숫자 카드 여섯 장"></div>
             <div class="presets"><button class="chip go-reveal" type="button">마음속의 수 맞히기</button><button class="chip go-why" type="button" aria-pressed="false">비밀 보기</button><button class="chip go-reset" type="button">다시</button></div>
             <p class="verdict" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>마술사가 카드 여섯 장을 보여 주며 "당신의 수가 이 카드에 있나요?"라고만 묻고는 수를 맞힙니다. 카드의 수는 어떻게 고른 것이고, 마술사는 무슨 계산을 했을까요?</li>
-            <li><span class="tag">복원</span>모든 자연수는 2의 거듭제곱 \(1, 2, 4, 8, \ldots\)의 합으로 한 가지로만 나타낼 수 있습니다. 이것이 이진법 표기입니다.</li>
-            <li><span class="tag">설명</span>\(k\)번째 카드에는 이진법으로 썼을 때 \(2^{k-1}\)의 자리가 1인 수만 모여 있습니다. 그래서 "있다/없다"는 그 자리의 숫자 1/0이고, 여섯 번의 대답이 수의 이진법 여섯 자리를 그대로 알려 줍니다. 마술사는 "있다"고 한 카드의 첫 수(1, 2, 4, 8, 16, 32)를 더하기만 하면 됩니다. 카드 여섯 장으로 \(2^6 - 1 = 63\)개의 수를 구별할 수 있습니다.</li>
-            <li><span class="tag">연결</span>질문 하나가 "예/아니요" 한 비트의 정보를 줍니다. 앞 단원의 이진 탐색, 컴퓨터가 수를 저장하는 방식이 모두 같은 원리입니다.</li>
-            <li><span class="tag">적용</span>수를 하나 정해 마술을 해 보세요. 그다음 "비밀 보기"로 각 카드의 첫 수와 이진법 자리를 확인하세요. 수를 127까지 맞히려면 카드가 몇 장 필요할까요?</li>
-            <li class="warn"><span class="tag">판단</span>대답을 하나라도 잘못하면 그 자리의 2의 거듭제곱만큼 틀린 수가 나옵니다. 정보를 옮길 때 한 비트의 오류가 결과를 크게 바꿀 수 있어서, 실제 통신에서는 오류를 찾아내는 여분의 비트를 덧붙입니다.</li>
+            <li><span class="tag">질문</span>마술사가 카드 여섯 장을 보여 주며 "당신의 수가 이 카드에 있나요?"라고만 묻고는 수를 맞힌다. 카드의 수는 어떻게 고른 것이고, 마술사는 무슨 계산을 했을까?</li>
+            <li><span class="tag">복원</span>모든 자연수는 2의 거듭제곱 \(1, 2, 4, 8, \ldots\)의 합으로 한 가지로만 나타낼 수 있다. 이것이 이진법 표기이다.</li>
+            <li><span class="tag">설명</span>\(k\)번째 카드에는 이진법으로 썼을 때 \(2^{k-1}\)의 자리가 1인 수만 모여 있다. 그래서 "있다/없다"는 그 자리의 숫자 1/0이고, 여섯 번의 대답이 수의 이진법 여섯 자리를 그대로 알려 준다. 마술사는 "있다"고 한 카드의 첫 수(1, 2, 4, 8, 16, 32)를 더하기만 하면 된다. 카드 여섯 장으로 \(2^6 - 1 = 63\)개의 수를 구별할 수 있다.</li>
+            <li><span class="tag">연결</span>질문 하나가 "예/아니요" 한 비트의 정보를 준다. 앞 단원의 이진 탐색, 컴퓨터가 수를 저장하는 방식이 모두 같은 원리이다.</li>
+            <li><span class="tag">적용</span>수를 하나 정해 마술을 해 보자. 그다음 "비밀 보기"로 각 카드의 첫 수와 이진법 자리를 확인해 보자. 수를 127까지 맞히려면 카드가 몇 장 필요할까?</li>
+            <li class="warn"><span class="tag">판단</span>대답을 하나라도 잘못하면 그 자리의 2의 거듭제곱만큼 틀린 수가 나온다. 정보를 옮길 때 한 비트의 오류가 결과를 크게 바꿀 수 있어서, 실제 통신에서는 오류를 찾아내는 여분의 비트를 덧붙인다.</li>
           </ol>
         </div>
         <div class="quiz">

@@ -131,19 +131,19 @@
               <div><label class="mono">사탕 r = <output class="r-out">5</output></label><input class="r" type="range" min="1" max="8" step="1" value="5" aria-label="사탕 수"></div>
               <div><label class="mono">친구 n = <output class="n-out">3</output></label><input class="n" type="range" min="2" max="5" step="1" value="3" aria-label="친구 수"></div>
             </div>
-            <p class="small">아래 칸을 누르면 사탕(★)과 칸막이(|)가 서로 바뀝니다. 칸막이는 늘 n − 1개입니다.</p>
+            <p class="small">아래 칸을 누르면 사탕(★)과 칸막이(|)가 서로 바뀐다. 칸막이는 늘 n − 1개이다.</p>
             <div class="row" role="group" aria-label="별과 막대 줄"></div>
             <p class="mono small give">—</p>
             <div class="presets"><button class="chip go-save" type="button">이 나눔 기록</button><button class="chip go-all" type="button">모두 보기</button></div>
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>똑같은 사탕 5개를 세 친구에게 나눠 줍니다. 못 받는 친구가 있어도 됩니다. (5, 0, 0), (2, 2, 1), … 하나씩 적다 보면 빠뜨리기 쉽습니다. 한 번에 세는 방법이 있을까요?</li>
-            <li><span class="tag">복원</span>같은 것이 있는 순열: ★ 5개와 | 2개를 늘어놓는 방법은 \(\frac{7!}{5!\,2!}\)가지입니다.</li>
-            <li><span class="tag">설명</span>사탕을 ★, 친구 사이의 경계를 |로 그리면 ★★|★★|★은 (2, 2, 1)입니다. 나눔 하나가 ★ \(r\)개와 | \(n - 1\)개의 줄 하나에 꼭 맞게 대응하므로, 나누는 방법의 수는 \(r + n - 1\)칸 중 | 자리를 고르는 수 \({}_{r+n-1}\mathrm{C}_{n-1} = {}_{r+n-1}\mathrm{C}_r\)입니다. 이것을 서로 다른 \(n\)개에서 중복을 허락해 \(r\)개를 고르는 <em>중복조합</em> \({}_n\mathrm{H}_r\)이라고 합니다.</li>
-            <li><span class="tag">연결</span>\({}_n\mathrm{H}_r\)은 방정식 \(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수이기도 합니다(다음 카드). 아이스크림 맛 고르기, 다항식 \((x + y + z)^r\)의 항의 개수도 같은 수입니다.</li>
-            <li><span class="tag">적용</span>칸을 눌러 여러 나눔을 만들고 기록하세요. 중복 없이 모두 모으면 몇 개인가요? 식으로 구한 \({}_n\mathrm{H}_r\)과 같은가요?</li>
-            <li class="warn"><span class="tag">판단</span>"모든 친구가 적어도 하나씩 받는다"면 먼저 한 개씩 나눠 준 뒤 남은 \(r - n\)개를 나누므로 \({}_n\mathrm{H}_{r-n}\)입니다. 사탕이 서로 다르면 친구 선택을 사탕마다 하므로 \(n^r\)(중복순열)입니다. 무엇이 같고 무엇이 다른지 먼저 확인하세요.</li>
+            <li><span class="tag">질문</span>똑같은 사탕 5개를 세 친구에게 나눠 준다. 못 받는 친구가 있어도 된다. (5, 0, 0), (2, 2, 1), … 하나씩 적다 보면 빠뜨리기 쉽다. 한 번에 세는 방법이 있을까?</li>
+            <li><span class="tag">복원</span>같은 것이 있는 순열로 보면 ★ 5개와 | 2개를 늘어놓는 방법은 \(\frac{7!}{5!\,2!}\)가지이다.</li>
+            <li><span class="tag">설명</span>사탕을 ★, 친구 사이의 경계를 |로 그리면 ★★|★★|★은 (2, 2, 1)이다. 나눔 하나가 ★ \(r\)개와 | \(n - 1\)개의 줄 하나에 꼭 맞게 대응하므로, 나누는 방법의 수는 \(r + n - 1\)칸 중 | 자리를 고르는 수 \({}_{r+n-1}\mathrm{C}_{n-1} = {}_{r+n-1}\mathrm{C}_r\)이다. 이것을 서로 다른 \(n\)개에서 중복을 허락해 \(r\)개를 고르는 <em>중복조합</em> \({}_n\mathrm{H}_r\)이라고 한다.</li>
+            <li><span class="tag">연결</span>\({}_n\mathrm{H}_r\)은 방정식 \(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수이기도 하다(다음 카드). 아이스크림 맛 고르기, 다항식 \((x + y + z)^r\)의 항의 개수도 같은 수이다.</li>
+            <li><span class="tag">적용</span>칸을 눌러 여러 나눔을 만들고 기록해 보자. 중복 없이 모두 모으면 몇 개인가? 식으로 구한 \({}_n\mathrm{H}_r\)과 같은가?</li>
+            <li class="warn"><span class="tag">판단</span>"모든 친구가 적어도 하나씩 받는다"면 먼저 한 개씩 나눠 준 뒤 남은 \(r - n\)개를 나누므로 \({}_n\mathrm{H}_{r-n}\)이다. 사탕이 서로 다르면 친구 선택을 사탕마다 하므로 \(n^r\)(중복순열)이다. 무엇이 같고 무엇이 다른지 먼저 확인해 보자.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -166,18 +166,18 @@
         <div class="card-body">
           <div class="card-fig">
             <div class="ctl-row"><label class="mono">문제 <select class="pick" aria-label="문제 고르기"><option value="0">1. x + y + z = 8, 모두 0 이상</option><option value="1">2. x + y + z = 8, 모두 1 이상</option><option value="2">3. x + y + z = 8, x ≥ 3</option><option value="3">4. x + y + z = 8, 모두 4 이하</option></select></label></div>
-            <p class="small">예측: 해의 개수는?</p>
+            <p class="small">먼저 예측해 보자. 해의 개수는?</p>
             <div class="gp" role="group" aria-label="예측"></div>
             <canvas aria-label="x + y + z = 8의 음이 아닌 정수해를 삼각형 격자의 점으로 나타냄. 조건을 만족하는 점은 초록"></canvas>
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>방정식 \(x + y + z = 8\)의 음이 아닌 정수해는 중복조합으로 셀 수 있었습니다. 그런데 "모두 1 이상", "\(x \ge 3\)", "모두 4 이하" 같은 조건이 붙으면 어떻게 셀까요?</li>
-            <li><span class="tag">복원</span>\(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수는 \({}_n\mathrm{H}_r = {}_{n+r-1}\mathrm{C}_r\)입니다.</li>
-            <li><span class="tag">설명</span>아래로 막힌 조건은 <b>미리 나눠 주고</b> 셉니다. \(x \ge 3\)이면 \(x = x' + 3\)으로 두어 \(x' + y + z = 5\), 곧 \({}_3\mathrm{H}_5 = 21\)개입니다. "모두 1 이상"은 하나씩 먼저 주고 \({}_3\mathrm{H}_5\)입니다. 위로 막힌 조건 "4 이하"는 이렇게 바꿀 수 없어서, 전체에서 "어느 하나가 5 이상"인 해를 빼야 하며 이때 겹치는 것을 조심해야 합니다(다음 절의 포함배제의 원리).</li>
-            <li><span class="tag">연결</span>세 변수의 해는 정삼각형 모양 격자의 점으로 그릴 수 있습니다. 꼭짓점이 \((8, 0, 0)\), \((0, 8, 0)\), \((0, 0, 8)\)이고, 아래로 막힌 조건은 작은 삼각형을, 위로 막힌 조건은 모서리를 잘라 낸 육각형을 남깁니다.</li>
-            <li><span class="tag">적용</span>네 문제의 답을 먼저 예측한 뒤 그림으로 확인하세요. 문제 4에서 잘려 나간 세 모서리 삼각형은 각각 몇 개의 점을 가지나요? 서로 겹치나요?</li>
-            <li class="warn"><span class="tag">판단</span>"양의 정수해"와 "음이 아닌 정수해"는 다릅니다. 문제를 읽을 때 0을 허용하는지 먼저 확인해야 합니다.</li>
+            <li><span class="tag">질문</span>방정식 \(x + y + z = 8\)의 음이 아닌 정수해는 중복조합으로 셀 수 있었다. 그런데 "모두 1 이상", "\(x \ge 3\)", "모두 4 이하" 같은 조건이 붙으면 어떻게 셀까?</li>
+            <li><span class="tag">복원</span>\(x_1 + \cdots + x_n = r\)의 음이 아닌 정수해의 개수는 \({}_n\mathrm{H}_r = {}_{n+r-1}\mathrm{C}_r\)이다.</li>
+            <li><span class="tag">설명</span>아래로 막힌 조건은 미리 나눠 주고 센다. \(x \ge 3\)이면 \(x = x' + 3\)으로 두어 \(x' + y + z = 5\), 곧 \({}_3\mathrm{H}_5 = 21\)개이다. "모두 1 이상"은 하나씩 먼저 주고 \({}_3\mathrm{H}_5\)이다. 위로 막힌 조건 "4 이하"는 이렇게 바꿀 수 없어서, 전체에서 "어느 하나가 5 이상"인 해를 빼야 하며 이때 겹치는 것을 조심해야 한다(다음 절의 포함배제의 원리).</li>
+            <li><span class="tag">연결</span>세 변수의 해는 정삼각형 모양 격자의 점으로 그릴 수 있다. 꼭짓점이 \((8, 0, 0)\), \((0, 8, 0)\), \((0, 0, 8)\)이고, 아래로 막힌 조건은 작은 삼각형을, 위로 막힌 조건은 모서리를 잘라 낸 육각형을 남긴다.</li>
+            <li><span class="tag">적용</span>네 문제의 답을 먼저 예측한 뒤 그림으로 확인해 보자. 문제 4에서 잘려 나간 세 모서리 삼각형은 각각 몇 개의 점을 가지는가? 서로 겹치는가?</li>
+            <li class="warn"><span class="tag">판단</span>"양의 정수해"와 "음이 아닌 정수해"는 다르다. 문제를 읽을 때 0을 허용하는지 먼저 확인해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
