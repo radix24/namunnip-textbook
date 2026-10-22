@@ -1021,24 +1021,24 @@ dm-planar | 평면그래프와 오일러 공식 | card-dmath-untangle card-dmath
 dm-euler-hamilton | 오일러그래프와 해밀턴그래프 | card-dmath-euler-trail card-dmath-hamilton text-dmath-euler-hamilton | dm-degree
 dm-tree | 수형도와 생성수형도 | card-dmath-tree-facts card-dmath-kruskal text-dmath-tree | dm-degree
 dm-coloring | 채색수와 채색다항식 | card-dmath-map-color card-dmath-chromatic-poly text-dmath-coloring | dm-planar cm1-product-rule
-agx-construct | 기초적인 작도 | card-adgeo-construct-replay card-adgeo-construct-challenge |
-agx-construct2 | 여러 가지 작도(외접원·내접원, 정다각형) | card-adgeo-center-construct card-adgeo-regular-polygon | agx-construct
-agx-constructible | 작도 가능성과 대수 | card-adgeo-constructible-number card-adgeo-gauss-polygon | agx-construct2
-agx-proof | 평면도형의 증명 | card-adgeo-isosceles-proof card-adgeo-fallacy | agx-construct
-agx-triangle | 삼각형에 관한 정리(체바, 오일러 직선) | card-adgeo-ceva card-adgeo-euler-line | agx-proof agx-construct2
-agx-circle | 원에 관한 정리(방멱, 톨레미) | card-adgeo-power-point card-adgeo-ptolemy | agx-proof
-agx-param-plane | 평면곡선의 매개변수 방정식 | card-adgeo-cycloid card-adgeo-lissajous | calc2-param-deriv
-agx-locus | 점의 자취 | card-adgeo-ladder card-adgeo-apollonius | agx-param-plane geo-ellipse
-agx-space-curve | 공간곡선의 매개변수 방정식 | card-adgeo-helix card-adgeo-curve-match | agx-param-plane
-agx-vel-acc | 공간에서의 속도와 가속도 | card-adgeo-vel-acc card-adgeo-drone | agx-space-curve
-agx-regular-length | 정칙곡선과 곡선의 길이 | card-adgeo-regular-cusp card-adgeo-arc-length | agx-vel-acc calc2-int-distance
-agx-unit-speed | 단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param card-adgeo-milestones | agx-regular-length
-agx-reparam | 단위속력곡선으로 재매개화 | card-adgeo-reparam card-adgeo-reparam-spot | agx-unit-speed
-agx-curvature | 곡률과 곡률반경 | card-adgeo-osculating card-adgeo-road-curve | agx-reparam pm-cross
-agx-level | 등위곡선과 곡면 | card-adgeo-contour card-adgeo-level-match | geo-space-coord
-agx-quadric | 이차곡면 | card-adgeo-quadric card-adgeo-slice-predict | agx-level geo-ellipse geo-hyperbola geo-parabola geo-sphere-eq
-agx-sph-tri | 구면삼각형 | card-adgeo-sphere-triangle card-adgeo-flight-route | geo-sphere-eq
-agx-sph-law | 구면코사인법칙과 구면사인법칙 | card-adgeo-spherical-law card-adgeo-city-distance | agx-sph-tri alg-cosine-law geo-dot
+agx-construct | 기초적인 작도 | card-adgeo-construct-replay card-adgeo-construct-challenge text-adgeo-basic-construction |
+agx-construct2 | 여러 가지 작도(외접원·내접원, 정다각형) | card-adgeo-center-construct card-adgeo-regular-polygon text-adgeo-construction2 | agx-construct
+agx-constructible | 작도 가능성과 대수 | card-adgeo-constructible-number card-adgeo-gauss-polygon text-adgeo-constructible | agx-construct2
+agx-proof | 평면도형의 증명 | card-adgeo-isosceles-proof card-adgeo-fallacy text-adgeo-proof | agx-construct
+agx-triangle | 삼각형에 관한 정리(체바, 오일러 직선) | card-adgeo-ceva card-adgeo-euler-line text-adgeo-triangle-theorems | agx-proof agx-construct2
+agx-circle | 원에 관한 정리(방멱, 톨레미) | card-adgeo-power-point card-adgeo-ptolemy text-adgeo-circle-theorems | agx-proof
+agx-param-plane | 평면곡선의 매개변수 방정식 | card-adgeo-cycloid card-adgeo-lissajous text-adgeo-plane-param | calc2-param-deriv
+agx-locus | 점의 자취 | card-adgeo-ladder card-adgeo-apollonius text-adgeo-locus | agx-param-plane geo-ellipse
+agx-space-curve | 공간곡선의 매개변수 방정식 | card-adgeo-helix card-adgeo-curve-match text-adgeo-space-curve | agx-param-plane
+agx-vel-acc | 공간에서의 속도와 가속도 | card-adgeo-vel-acc card-adgeo-drone text-adgeo-space-motion | agx-space-curve
+agx-regular-length | 정칙곡선과 곡선의 길이 | card-adgeo-regular-cusp card-adgeo-arc-length text-adgeo-regular-curve | agx-vel-acc calc2-int-distance
+agx-unit-speed | 단위속력곡선과 호의 길이 매개변수 | card-adgeo-speed-param card-adgeo-milestones text-adgeo-arc-length | agx-regular-length
+agx-reparam | 단위속력곡선으로 재매개화 | card-adgeo-reparam card-adgeo-reparam-spot text-adgeo-reparam | agx-unit-speed
+agx-curvature | 곡률과 곡률반경 | card-adgeo-osculating card-adgeo-road-curve text-adgeo-curvature | agx-reparam pm-cross
+agx-level | 등위곡선과 곡면 | card-adgeo-contour card-adgeo-level-match text-adgeo-level-curves | geo-space-coord
+agx-quadric | 이차곡면 | card-adgeo-quadric card-adgeo-slice-predict text-adgeo-quadric | agx-level geo-ellipse geo-hyperbola geo-parabola geo-sphere-eq
+agx-sph-tri | 구면삼각형 | card-adgeo-sphere-triangle card-adgeo-flight-route text-adgeo-spherical-triangle | geo-sphere-eq
+agx-sph-law | 구면코사인법칙과 구면사인법칙 | card-adgeo-spherical-law card-adgeo-city-distance text-adgeo-spherical-law | agx-sph-tri alg-cosine-law geo-dot
 econ-index | 경제지표와 물가지수 | card-econ-cpi-basket card-econ-index-trap text-econ-index | 
 econ-fx | 환율 | card-econ-exchange card-econ-cross-rate text-econ-exchange | econ-index
 econ-tax | 누진세와 세율 | card-econ-progressive-tax card-econ-tax-myth text-econ-tax | cm2-function
