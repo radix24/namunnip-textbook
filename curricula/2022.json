@@ -9821,6 +9821,7 @@
        "code": "12이수01-01",
        "blocks": [
         "intro-dmath-1-1",
+        "text-dmath-permutations",
         "card-dmath-round-table",
         "card-dmath-grid-path"
        ]
@@ -9831,6 +9832,7 @@
        "code": "12이수01-02",
        "blocks": [
         "intro-dmath-1-2",
+        "text-dmath-multiset",
         "card-dmath-stars-bars",
         "card-dmath-int-solutions"
        ]
@@ -9841,6 +9843,7 @@
        "code": "12이수01-03",
        "blocks": [
         "intro-dmath-1-3",
+        "text-dmath-inclusion-exclusion",
         "card-dmath-venn-count",
         "card-dmath-derange"
        ]
@@ -9851,6 +9854,7 @@
        "code": "12이수01-04",
        "blocks": [
         "intro-dmath-1-4",
+        "text-dmath-partition",
         "card-dmath-set-partition",
         "card-dmath-young"
        ]
@@ -9861,6 +9865,7 @@
        "code": "12이수01-05",
        "blocks": [
         "intro-dmath-1-5",
+        "text-dmath-pigeonhole",
         "card-dmath-birthday",
         "card-dmath-pigeon-pairs"
        ]
@@ -9877,6 +9882,7 @@
        "code": "12이수02-01",
        "blocks": [
         "intro-dmath-2-1",
+        "text-dmath-recursive",
         "card-dmath-hanoi",
         "card-dmath-domino"
        ]
@@ -9887,6 +9893,7 @@
        "code": "12이수02-02",
        "blocks": [
         "intro-dmath-2-2",
+        "text-dmath-recurrence",
         "card-dmath-recur-plot",
         "card-dmath-loan"
        ]
@@ -9897,6 +9904,7 @@
        "code": "12이수02-03",
        "blocks": [
         "intro-dmath-2-3",
+        "text-dmath-algorithm",
         "card-dmath-euclid-flow",
         "card-dmath-algo-bug"
        ]
@@ -9907,6 +9915,7 @@
        "code": "12이수02-04",
        "blocks": [
         "intro-dmath-2-4",
+        "text-dmath-recursion",
         "card-dmath-call-tree",
         "card-dmath-fast-power"
        ]
@@ -9917,6 +9926,7 @@
        "code": "12이수02-05",
        "blocks": [
         "intro-dmath-2-5",
+        "text-dmath-algorithms",
         "card-dmath-sort-race",
         "card-dmath-updown"
        ]
@@ -9933,6 +9943,7 @@
        "code": "12이수03-01",
        "blocks": [
         "intro-dmath-3-1",
+        "text-dmath-bases",
         "card-dmath-base-convert",
         "card-dmath-binary-cards"
        ]
@@ -9943,6 +9954,7 @@
        "code": "12이수03-02",
        "blocks": [
         "intro-dmath-3-2",
+        "text-dmath-binary-arith",
         "card-dmath-binary-add",
         "card-dmath-twos-comp"
        ]
@@ -9953,6 +9965,7 @@
        "code": "12이수03-03",
        "blocks": [
         "intro-dmath-3-3",
+        "text-dmath-boolean",
         "card-dmath-truth-table",
         "card-dmath-karnaugh"
        ]
@@ -9963,6 +9976,7 @@
        "code": "12이수03-04",
        "blocks": [
         "intro-dmath-3-4",
+        "text-dmath-logic-circuit",
         "card-dmath-gate-lab",
         "card-dmath-adder"
        ]
@@ -9979,6 +9993,7 @@
        "code": "12이수04-01",
        "blocks": [
         "intro-dmath-4-1",
+        "text-dmath-graph-model",
         "card-dmath-konigsberg",
         "card-dmath-graph-model"
        ]
@@ -9989,6 +10004,7 @@
        "code": "12이수04-02",
        "blocks": [
         "intro-dmath-4-2",
+        "text-dmath-degree",
         "card-dmath-handshake",
         "card-dmath-degree-seq"
        ]
@@ -9999,6 +10015,7 @@
        "code": "12이수04-03",
        "blocks": [
         "intro-dmath-4-3",
+        "text-dmath-adjacency",
         "card-dmath-adj-matrix",
         "card-dmath-walk-count"
        ]
@@ -10009,6 +10026,7 @@
        "code": "12이수04-04",
        "blocks": [
         "intro-dmath-4-4",
+        "text-dmath-planar",
         "card-dmath-untangle",
         "card-dmath-euler-formula"
        ]
@@ -10019,6 +10037,7 @@
        "code": "12이수04-05",
        "blocks": [
         "intro-dmath-4-5",
+        "text-dmath-euler-hamilton",
         "card-dmath-euler-trail",
         "card-dmath-hamilton"
        ]
@@ -10029,6 +10048,7 @@
        "code": "12이수04-06",
        "blocks": [
         "intro-dmath-4-6",
+        "text-dmath-tree",
         "card-dmath-tree-facts",
         "card-dmath-kruskal"
        ]
@@ -10039,6 +10059,7 @@
        "code": "12이수04-07",
        "blocks": [
         "intro-dmath-4-7",
+        "text-dmath-coloring",
         "card-dmath-map-color",
         "card-dmath-chromatic-poly"
        ]

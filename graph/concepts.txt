@@ -1000,27 +1000,27 @@ ada-diag | 행렬의 대각화 | card-adalg-diag-grid card-adalg-fibonacci text-
 ada-orth-diag | 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse card-adalg-orth-diag-proof text-adalg-orthogonal-diag | ada-diag ada-orthonormal ada-rot-ref
 ada-quadric | 이차곡선의 표준형 | card-adalg-conic-rotate card-adalg-conic-classify text-adalg-conic-form | ada-orth-diag geo-ellipse geo-hyperbola
 ada-diag-apply | 대각화의 활용(마르코프 연쇄·개체군 모형) | card-adalg-markov card-adalg-population text-adalg-markov | ada-diag ada-eigen
-dm-perm-var | 원순열과 같은 것이 있는 순열 | card-dmath-round-table card-dmath-grid-path | cm1-permutation
-dm-multichoose | 중복조합과 방정식의 정수해 | card-dmath-stars-bars card-dmath-int-solutions | cm1-combination dm-perm-var
-dm-incl-excl | 포함배제의 원리 | card-dmath-venn-count card-dmath-derange | dm-multichoose
-dm-partition | 집합의 분할과 자연수의 분할 | card-dmath-set-partition card-dmath-young | dm-multichoose dm-incl-excl
-dm-pigeonhole | 비둘기집의 원리 | card-dmath-birthday card-dmath-pigeon-pairs | dm-perm-var
-dm-recur-def | 수열의 귀납적 정의와 점화 관계 세우기 | card-dmath-hanoi card-dmath-domino | 
-dm-recur-solve | 점화 관계의 일반항 | card-dmath-recur-plot card-dmath-loan | dm-recur-def alg-geo-seq
-dm-algorithm | 알고리즘과 그 표현 | card-dmath-euclid-flow card-dmath-algo-bug | dm-recur-def
-dm-recursion | 재귀적 알고리즘 | card-dmath-call-tree card-dmath-fast-power | dm-algorithm dm-recur-def
-dm-sort-search | 정렬과 탐색 알고리즘 | card-dmath-sort-race card-dmath-updown | dm-recursion
-dm-base | 진법 | card-dmath-base-convert card-dmath-binary-cards |
-dm-binary-arith | 이진수의 사칙연산과 2의 보수 | card-dmath-binary-add card-dmath-twos-comp | dm-base
-dm-boolean | 부울 함수와 간소화 | card-dmath-truth-table card-dmath-karnaugh | dm-binary-arith cm2-prop
-dm-logic-circuit | 논리 회로와 가산기 | card-dmath-gate-lab card-dmath-adder | dm-boolean dm-binary-arith
-dm-graph | 그래프와 실생활 문제 | card-dmath-konigsberg card-dmath-graph-model | 
-dm-degree | 꼭짓점의 차수와 변의 개수 | card-dmath-handshake card-dmath-degree-seq | dm-graph
-dm-adjacency | 인접행렬 | card-dmath-adj-matrix card-dmath-walk-count | dm-degree cm1-matrix-mult
-dm-planar | 평면그래프와 오일러 공식 | card-dmath-untangle card-dmath-euler-formula | dm-degree
-dm-euler-hamilton | 오일러그래프와 해밀턴그래프 | card-dmath-euler-trail card-dmath-hamilton | dm-degree
-dm-tree | 수형도와 생성수형도 | card-dmath-tree-facts card-dmath-kruskal | dm-degree
-dm-coloring | 채색수와 채색다항식 | card-dmath-map-color card-dmath-chromatic-poly | dm-planar cm1-product-rule
+dm-perm-var | 원순열과 같은 것이 있는 순열 | card-dmath-round-table card-dmath-grid-path text-dmath-permutations | cm1-permutation
+dm-multichoose | 중복조합과 방정식의 정수해 | card-dmath-stars-bars card-dmath-int-solutions text-dmath-multiset | cm1-combination dm-perm-var
+dm-incl-excl | 포함배제의 원리 | card-dmath-venn-count card-dmath-derange text-dmath-inclusion-exclusion | dm-multichoose
+dm-partition | 집합의 분할과 자연수의 분할 | card-dmath-set-partition card-dmath-young text-dmath-partition | dm-multichoose dm-incl-excl
+dm-pigeonhole | 비둘기집의 원리 | card-dmath-birthday card-dmath-pigeon-pairs text-dmath-pigeonhole | dm-perm-var
+dm-recur-def | 수열의 귀납적 정의와 점화 관계 세우기 | card-dmath-hanoi card-dmath-domino text-dmath-recursive | 
+dm-recur-solve | 점화 관계의 일반항 | card-dmath-recur-plot card-dmath-loan text-dmath-recurrence | dm-recur-def alg-geo-seq
+dm-algorithm | 알고리즘과 그 표현 | card-dmath-euclid-flow card-dmath-algo-bug text-dmath-algorithm | dm-recur-def
+dm-recursion | 재귀적 알고리즘 | card-dmath-call-tree card-dmath-fast-power text-dmath-recursion | dm-algorithm dm-recur-def
+dm-sort-search | 정렬과 탐색 알고리즘 | card-dmath-sort-race card-dmath-updown text-dmath-algorithms | dm-recursion
+dm-base | 진법 | card-dmath-base-convert card-dmath-binary-cards text-dmath-bases |
+dm-binary-arith | 이진수의 사칙연산과 2의 보수 | card-dmath-binary-add card-dmath-twos-comp text-dmath-binary-arith | dm-base
+dm-boolean | 부울 함수와 간소화 | card-dmath-truth-table card-dmath-karnaugh text-dmath-boolean | dm-binary-arith cm2-prop
+dm-logic-circuit | 논리 회로와 가산기 | card-dmath-gate-lab card-dmath-adder text-dmath-logic-circuit | dm-boolean dm-binary-arith
+dm-graph | 그래프와 실생활 문제 | card-dmath-konigsberg card-dmath-graph-model text-dmath-graph-model | 
+dm-degree | 꼭짓점의 차수와 변의 개수 | card-dmath-handshake card-dmath-degree-seq text-dmath-degree | dm-graph
+dm-adjacency | 인접행렬 | card-dmath-adj-matrix card-dmath-walk-count text-dmath-adjacency | dm-degree cm1-matrix-mult
+dm-planar | 평면그래프와 오일러 공식 | card-dmath-untangle card-dmath-euler-formula text-dmath-planar | dm-degree
+dm-euler-hamilton | 오일러그래프와 해밀턴그래프 | card-dmath-euler-trail card-dmath-hamilton text-dmath-euler-hamilton | dm-degree
+dm-tree | 수형도와 생성수형도 | card-dmath-tree-facts card-dmath-kruskal text-dmath-tree | dm-degree
+dm-coloring | 채색수와 채색다항식 | card-dmath-map-color card-dmath-chromatic-poly text-dmath-coloring | dm-planar cm1-product-rule
 agx-construct | 기초적인 작도 | card-adgeo-construct-replay card-adgeo-construct-challenge |
 agx-construct2 | 여러 가지 작도(외접원·내접원, 정다각형) | card-adgeo-center-construct card-adgeo-regular-polygon | agx-construct
 agx-constructible | 작도 가능성과 대수 | card-adgeo-constructible-number card-adgeo-gauss-polygon | agx-construct2
