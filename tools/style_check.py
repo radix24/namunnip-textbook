@@ -48,6 +48,8 @@ def measure(p):
     hon, frag = step_issues(h)
     h = QUIZ.sub(" ", h)
     h = re.sub(r'<span class="src">.*?</span>', " ", h, flags=re.S)   # 출처 줄(사진: 저작자 · 라이선스)은 본문이 아니다
+    h = re.sub(r'<span class="(?:pf-)?why">.*?</span>(?=\s*</li>|\s*</span>)', " ", h, flags=re.S)   # 조작 칸의 판정 풀이는 확인 문제처럼 독자에게 답하는 존댓말 화면 문구이다
+    h = re.sub(r'<ol class="(?:spot|pf-pool)">.*?</ol>', lambda m: re.sub(r"<li\b", "<p", m.group(0)), h, flags=re.S)   # 틀린 줄 찾기·증명 조립 칸의 줄은 누르는 조작 목록이다
     h = re.sub(r">\s*[—–-]\s*<", "><", h)   # 스크립트가 채울 자리표시 '—'는 줄표가 아니다
     h = re.sub(r"<b>\s*</b>|<li\b[^>]*>\s*</li>|<li class=|<li><label", lambda m: "" if m.group(0).startswith("<b") or m.group(0).endswith("</li>") else ("<p class=" if "class" in m.group(0) else "<p><label"), h)   # 빈 자리표시, 스크립트가 다루는 조작 목록(class 붙은 li), 고르는 체크 목록(label 붙은 li)은 글의 목록이 아니다
     h = re.sub(r'(<p class="judge">)\s*<b>([^<]*)</b>', r"\1\2 ", h)   # 판단 상자 머리의 <b>는 강조가 아니라 꼬리표 서식이다

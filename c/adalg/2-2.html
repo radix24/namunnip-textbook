@@ -127,7 +127,7 @@
           <div class="card-fig">
             <div class="ctl-row"><label class="mono">행렬 A <select class="pick" aria-label="행렬 고르기"><option value="0">A₁</option><option value="1">A₂</option><option value="2">A₃</option><option value="3">A₄</option></select></label></div>
             <div class="mat a0"></div>
-            <p class="small">예측: 이 행렬은 역행렬이 있을까요?</p>
+            <p class="small">먼저 예측해 보자. 이 행렬은 역행렬이 있을까?</p>
             <div class="gp" role="group" aria-label="예측">
               <button class="chip" type="button" data-g="1">있다</button>
               <button class="chip" type="button" data-g="0">없다</button>
@@ -138,12 +138,12 @@
             <p class="verdict"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(2x = 6\)은 양변을 2로 나누어 풉니다. \(A\vec{x} = \vec{b}\)도 \(A\)로 "나눌" 수 있다면 \(\vec{x} = A^{-1}\vec{b}\)로 한 번에 풀립니다. \(A^{-1}\)은 어떻게 구하고, 언제 없을까요?</li>
-            <li><span class="tag">복원</span>\(AX = XA = I\)인 \(X\)를 \(A\)의 <em>역행렬</em> \(A^{-1}\)이라고 합니다. 기본 행 연산은 해를 바꾸지 않습니다.</li>
-            <li><span class="tag">설명</span>\(A\) 옆에 단위행렬을 붙인 \([A \mid I]\)에 행 연산을 해서 왼쪽을 \(I\)로 만들면 오른쪽이 \(A^{-1}\)이 됩니다(<em>가우스-조르당 소거법</em>). 행 연산 하나하나가 왼쪽에 어떤 행렬(기본행렬)을 곱하는 것과 같아서, 그 곱을 \(E\)라 하면 \(EA = I\)이고 같은 \(E\)가 오른쪽의 \(I\)를 \(E = A^{-1}\)로 바꾸기 때문입니다. 소거 중에 왼쪽에 피벗이 없는 열이 생기면 \(I\)를 만들 수 없고, 역행렬이 없습니다.</li>
-            <li><span class="tag">연결</span>역행렬이 없는 것은 열벡터들이 일차종속인 것, 다음 절의 행렬식이 0인 것과 같은 말입니다. 실제 계산에서는 \(A^{-1}\)을 따로 구하기보다 \(A\vec{x} = \vec{b}\)를 바로 소거해 푸는 편이 빠르고 정확합니다.</li>
-            <li><span class="tag">적용</span>네 행렬 각각에 대해 먼저 역행렬이 있을지 예측하세요. 열 사이에 눈에 띄는 관계가 있는지 보면 단서가 됩니다. 그다음 한 단계씩 소거를 따라가 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>첫 피벗 자리가 0이라고 역행렬이 없는 것은 아닙니다(A₄). 아래 행과 바꾸면 계속할 수 있습니다. 열 전체에서 피벗을 찾을 수 없을 때만 멈춥니다.</li>
+            <li><span class="tag">질문</span>\(2x = 6\)은 양변을 2로 나누어 푼다. \(A\vec{x} = \vec{b}\)도 \(A\)로 "나눌" 수 있다면 \(\vec{x} = A^{-1}\vec{b}\)로 한 번에 풀린다. \(A^{-1}\)은 어떻게 구하고, 언제 없을까?</li>
+            <li><span class="tag">복원</span>\(AX = XA = I\)인 \(X\)를 \(A\)의 <em>역행렬</em> \(A^{-1}\)이라고 한다. 기본 행 연산은 해를 바꾸지 않는다.</li>
+            <li><span class="tag">설명</span>\(A\) 옆에 단위행렬을 붙인 \([A \mid I]\)에 행 연산을 해서 왼쪽을 \(I\)로 만들면 오른쪽이 \(A^{-1}\)이 된다(<em>가우스-조르당 소거법</em>). 행 연산 하나하나가 왼쪽에 어떤 행렬(기본행렬)을 곱하는 것과 같아서, 그 곱을 \(E\)라 하면 \(EA = I\)이고 같은 \(E\)가 오른쪽의 \(I\)를 \(E = A^{-1}\)로 바꾸기 때문이다. 소거 중에 왼쪽에 피벗이 없는 열이 생기면 \(I\)를 만들 수 없고, 역행렬이 없다.</li>
+            <li><span class="tag">연결</span>역행렬이 없는 것은 열벡터들이 일차종속인 것, 다음 절의 행렬식이 0인 것과 같은 말이다. 실제 계산에서는 \(A^{-1}\)을 따로 구하기보다 \(A\vec{x} = \vec{b}\)를 바로 소거해 푸는 편이 빠르고 정확하다.</li>
+            <li><span class="tag">적용</span>네 행렬 각각에 대해 먼저 역행렬이 있을지 예측해 보자. 열 사이에 눈에 띄는 관계가 있는지 보면 단서가 된다. 그다음 한 단계씩 소거를 따라가 보자.</li>
+            <li class="warn"><span class="tag">판단</span>첫 피벗 자리가 0이라고 역행렬이 없는 것은 아니다(A₄). 아래 행과 바꾸면 계속할 수 있다. 열 전체에서 피벗을 찾을 수 없을 때만 멈춘다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -175,15 +175,15 @@
             <p>해독 결과 <span class="big pt">—</span></p>
             <div class="presets"><button class="chip go-bad" type="button">det가 13인 열쇠로 바꾸기</button><button class="chip go-ok" type="button">처음 열쇠로</button></div>
             <p class="verdict" role="status"></p>
-            <p class="fig-note">A = 0, B = 1, …, Z = 25로 바꾸고 두 글자씩 묶어 벡터로 만듭니다. 계산은 모두 26으로 나눈 나머지로 합니다. 글자 수가 홀수이면 끝에 X를 붙입니다.</p>
+            <p class="fig-note">A = 0, B = 1, …, Z = 25로 바꾸고 두 글자씩 묶어 벡터로 만든다. 계산은 모두 26으로 나눈 나머지로 한다. 글자 수가 홀수이면 끝에 X를 붙인다.</p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>1929년 수학자 힐(L. S. Hill)은 글자를 숫자 벡터로 바꾸고 행렬을 곱해 암호를 만들었습니다. 받는 사람은 암호문을 어떻게 원래 글로 되돌릴까요? 아무 행렬이나 열쇠로 써도 될까요?</li>
-            <li><span class="tag">복원</span>\(2 \times 2\) 행렬 \(K = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\)의 역행렬은 \(ad - bc \ne 0\)일 때 \(K^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}\)입니다.</li>
-            <li><span class="tag">설명</span>평문 벡터 \(\vec{p}\)를 \(\vec{c} = K\vec{p}\)로 바꾸는 것이 암호화이고, \(\vec{p} = K^{-1}\vec{c}\)가 해독입니다. 다만 글자는 26개뿐이라 계산을 26으로 나눈 나머지로 하므로, \(\frac{1}{ad - bc}\) 대신 "곱해서 26으로 나눈 나머지가 1이 되는 수"를 씁니다. 그런 수는 \(ad - bc\)가 26과 서로소일 때만 있습니다. 예를 들어 처음 열쇠는 \(\det K = 9\)이고 \(9 \times 3 = 27\)이라 3을 곱합니다.</li>
-            <li><span class="tag">연결</span>역행렬이 없으면 서로 다른 평문이 같은 암호문이 되어 되돌릴 수 없습니다. 이것이 "역변환이 없다"는 뜻입니다. 힐 암호는 지금은 쉽게 깨지지만, 오늘날의 암호도 "되돌리기 쉬운 계산과 어려운 계산"의 차이를 씁니다.</li>
-            <li><span class="tag">적용</span>평문을 바꾸며 암호문이 어떻게 달라지는지 보세요. 같은 글자가 늘 같은 글자로 바뀌나요? "det가 13인 열쇠"로 바꾸면 해독이 어떻게 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>실수에서는 \(\det K \ne 0\)이면 충분했지만, 나머지 계산에서는 \(\det K\)가 26과 서로소여야 합니다. 2나 13의 배수이면 실수에서는 역행렬이 있어도 암호는 풀리지 않습니다. 조건은 계산하는 세계에 따라 달라집니다.</li>
+            <li><span class="tag">질문</span>1929년 수학자 힐(L. S. Hill)은 글자를 숫자 벡터로 바꾸고 행렬을 곱해 암호를 만들었다. 받는 사람은 암호문을 어떻게 원래 글로 되돌릴까? 아무 행렬이나 열쇠로 써도 될까?</li>
+            <li><span class="tag">복원</span>\(2 \times 2\) 행렬 \(K = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\)의 역행렬은 \(ad - bc \ne 0\)일 때 \(K^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}\)이다.</li>
+            <li><span class="tag">설명</span>평문 벡터 \(\vec{p}\)를 \(\vec{c} = K\vec{p}\)로 바꾸는 것이 암호화이고, \(\vec{p} = K^{-1}\vec{c}\)가 해독이다. 다만 글자는 26개뿐이라 계산을 26으로 나눈 나머지로 하므로, \(\frac{1}{ad - bc}\) 대신 "곱해서 26으로 나눈 나머지가 1이 되는 수"를 쓴다. 그런 수는 \(ad - bc\)가 26과 서로소일 때만 있다. 예를 들어 처음 열쇠는 \(\det K = 9\)이고 \(9 \times 3 = 27\)이라 3을 곱한다.</li>
+            <li><span class="tag">연결</span>역행렬이 없으면 서로 다른 평문이 같은 암호문이 되어 되돌릴 수 없다. 이것이 "역변환이 없다"는 뜻이다. 힐 암호는 지금은 쉽게 깨지지만, 오늘날의 암호도 "되돌리기 쉬운 계산과 어려운 계산"의 차이를 쓴다.</li>
+            <li><span class="tag">적용</span>평문을 바꾸며 암호문이 어떻게 달라지는지 보자. 같은 글자가 늘 같은 글자로 바뀌는가? "det가 13인 열쇠"로 바꾸면 해독이 어떻게 되는가?</li>
+            <li class="warn"><span class="tag">판단</span>실수에서는 \(\det K \ne 0\)이면 충분했지만, 나머지 계산에서는 \(\det K\)가 26과 서로소여야 한다. 2나 13의 배수이면 실수에서는 역행렬이 있어도 암호는 풀리지 않는다. 조건은 계산하는 세계에 따라 달라진다.</li>
           </ol>
         </div>
         <div class="quiz">

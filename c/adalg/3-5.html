@@ -134,12 +134,12 @@
             <p class="mono small std" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(5x^2 - 4xy + 8y^2 = 36\)은 타원일까요, 쌍곡선일까요? \(xy\)항 때문에 표준형으로 바로 읽을 수 없습니다. 좌표축을 얼마나 돌리면 \(xy\)항이 사라질까요?</li>
-            <li><span class="tag">복원</span>대칭행렬은 \(A = QDQ^T\)로 직교대각화되고, \(Q\)는 회전(또는 대칭)입니다.</li>
-            <li><span class="tag">설명</span>\(ax^2 + 2bxy + cy^2 = \vec{x}^TA\vec{x}\), \(A = \begin{pmatrix} a & b \\ b & c \end{pmatrix}\)로 씁니다(<em>이차형식</em>). 새 좌표 \(\vec{X} = Q^T\vec{x}\)를 쓰면 \(\vec{x}^TA\vec{x} = \vec{X}^TD\vec{X} = \lambda_1X^2 + \lambda_2Y^2\)이 되어 \(XY\)항이 사라집니다. 새 축은 \(A\)의 고유벡터 방향이고, 고윳값의 부호로 모양이 정해집니다: 둘 다 양수이면 타원, 부호가 다르면 쌍곡선입니다.</li>
-            <li><span class="tag">연결</span>회전한 각 \(\theta\)는 \(\tan2\theta = \dfrac{2b}{a - c}\)로도 구할 수 있습니다. 3차원에서는 같은 방법으로 \(x^2 + y^2 + z^2 + 2xy + \cdots\) 꼴의 이차곡면을 타원면, 쌍곡면으로 분류합니다.</li>
-            <li><span class="tag">적용</span>"좌표축 돌리기"를 100%까지 움직이며 곡선이 새 축에 대해 반듯해지는 것을 보세요. 표준형의 계수가 고윳값과 같은지 확인하세요. \(a\), \(c\)를 작게 하고 \(b\)를 키우면 모양이 타원에서 쌍곡선으로 바뀌는 순간이 있나요? 그때 \(\det A = ac - b^2\)은 얼마인가요?</li>
-            <li class="warn"><span class="tag">판단</span>곡선은 그대로이고 좌표축만 돌린 것입니다. 표준형에서 읽은 꼭짓점과 초점은 새 좌표 \((X, Y)\)의 값이므로, 원래 좌표로 돌려놓으려면 \(\vec{x} = Q\vec{X}\)를 계산해야 합니다.</li>
+            <li><span class="tag">질문</span>\(5x^2 - 4xy + 8y^2 = 36\)은 타원일까요, 쌍곡선일까? \(xy\)항 때문에 표준형으로 바로 읽을 수 없다. 좌표축을 얼마나 돌리면 \(xy\)항이 사라질까?</li>
+            <li><span class="tag">복원</span>대칭행렬은 \(A = QDQ^T\)로 직교대각화되고, \(Q\)는 회전(또는 대칭)이다.</li>
+            <li><span class="tag">설명</span>\(ax^2 + 2bxy + cy^2 = \vec{x}^TA\vec{x}\), \(A = \begin{pmatrix} a & b \\ b & c \end{pmatrix}\)로 쓴다(<em>이차형식</em>). 새 좌표 \(\vec{X} = Q^T\vec{x}\)를 쓰면 \(\vec{x}^TA\vec{x} = \vec{X}^TD\vec{X} = \lambda_1X^2 + \lambda_2Y^2\)이 되어 \(XY\)항이 사라진다. 새 축은 \(A\)의 고유벡터 방향이고, 고윳값의 부호로 모양이 정해진다. 둘 다 양수이면 타원, 부호가 다르면 쌍곡선이다.</li>
+            <li><span class="tag">연결</span>회전한 각 \(\theta\)는 \(\tan2\theta = \dfrac{2b}{a - c}\)로도 구할 수 있다. 3차원에서는 같은 방법으로 \(x^2 + y^2 + z^2 + 2xy + \cdots\) 꼴의 이차곡면을 타원면, 쌍곡면으로 분류한다.</li>
+            <li><span class="tag">적용</span>"좌표축 돌리기"를 100%까지 움직이며 곡선이 새 축에 대해 반듯해지는 것을 보자. 표준형의 계수가 고윳값과 같은지 확인해 보자. \(a\), \(c\)를 작게 하고 \(b\)를 키우면 모양이 타원에서 쌍곡선으로 바뀌는 순간이 있는가? 그때 \(\det A = ac - b^2\)은 얼마인가?</li>
+            <li class="warn"><span class="tag">판단</span>곡선은 그대로이고 좌표축만 돌린 것이다. 표준형에서 읽은 꼭짓점과 초점은 새 좌표 \((X, Y)\)의 값이므로, 원래 좌표로 돌려놓으려면 \(\vec{x} = Q\vec{X}\)를 계산해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -174,12 +174,12 @@
             <div class="presets"><button class="chip go-next" type="button" disabled>다음 식</button></div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(x^2 + 4xy + y^2 = 3\)은 \(x^2\)과 \(y^2\)의 계수가 모두 양수라 타원처럼 보입니다. 정말 그럴까요? 계산 몇 번으로 모양을 알아낼 수 있을까요?</li>
-            <li><span class="tag">복원</span>\(ax^2 + 2bxy + cy^2 = k\)는 축을 돌려 \(\lambda_1X^2 + \lambda_2Y^2 = k\)로 바꿀 수 있고, \(\lambda_1, \lambda_2\)는 \(A = \begin{pmatrix} a & b \\ b & c \end{pmatrix}\)의 고윳값입니다.</li>
-            <li><span class="tag">설명</span>\(k > 0\)일 때 ① \(\lambda_1, \lambda_2\)가 모두 양수이면 타원, ② 부호가 다르면 쌍곡선, ③ 하나가 0이고 하나가 양수이면 평행한 두 직선, ④ 모두 0 이하이면 그래프가 없습니다. 고윳값을 다 구하지 않아도 \(\det A = \lambda_1\lambda_2\), \(\mathrm{tr}\,A = \lambda_1 + \lambda_2\)로 부호를 알 수 있습니다: \(\det A > 0\)이고 \(\mathrm{tr}\,A > 0\)이면 타원, \(\det A < 0\)이면 쌍곡선입니다.</li>
-            <li><span class="tag">연결</span>이 판정은 다변수 함수의 극대·극소 판정(헤세 행렬), 구조물이 안정한지 판정하는 데도 같은 모양으로 나옵니다. 모두 "대칭행렬의 고윳값 부호"를 봅니다.</li>
-            <li><span class="tag">적용</span>여섯 식의 모양을 먼저 고르고 확인하세요. 확인할 때마다 \(\det A\)와 \(\mathrm{tr}\,A\)만으로도 같은 답이 나오는지 따져 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>\(x^2\)과 \(y^2\)의 계수만 보고 판단하면 \(xy\)항의 효과를 놓칩니다. 또 우변 \(k\)의 부호도 봐야 합니다. \(k < 0\)이면 양변에 \(-1\)을 곱해 생각합니다.</li>
+            <li><span class="tag">질문</span>\(x^2 + 4xy + y^2 = 3\)은 \(x^2\)과 \(y^2\)의 계수가 모두 양수라 타원처럼 보인다. 정말 그럴까? 계산 몇 번으로 모양을 알아낼 수 있을까?</li>
+            <li><span class="tag">복원</span>\(ax^2 + 2bxy + cy^2 = k\)는 축을 돌려 \(\lambda_1X^2 + \lambda_2Y^2 = k\)로 바꿀 수 있고, \(\lambda_1, \lambda_2\)는 \(A = \begin{pmatrix} a & b \\ b & c \end{pmatrix}\)의 고윳값이다.</li>
+            <li><span class="tag">설명</span>\(k > 0\)일 때 ① \(\lambda_1, \lambda_2\)가 모두 양수이면 타원, ② 부호가 다르면 쌍곡선, ③ 하나가 0이고 하나가 양수이면 평행한 두 직선, ④ 모두 0 이하이면 그래프가 없다. 고윳값을 다 구하지 않아도 \(\det A = \lambda_1\lambda_2\), \(\mathrm{tr}\,A = \lambda_1 + \lambda_2\)로 부호를 알 수 있다. \(\det A > 0\)이고 \(\mathrm{tr}\,A > 0\)이면 타원, \(\det A < 0\)이면 쌍곡선이다.</li>
+            <li><span class="tag">연결</span>이 판정은 다변수 함수의 극대·극소 판정(헤세 행렬), 구조물이 안정한지 판정하는 데도 같은 모양으로 나온다. 모두 "대칭행렬의 고윳값 부호"를 본다.</li>
+            <li><span class="tag">적용</span>여섯 식의 모양을 먼저 고르고 확인해 보자. 확인할 때마다 \(\det A\)와 \(\mathrm{tr}\,A\)만으로도 같은 답이 나오는지 따져 보자.</li>
+            <li class="warn"><span class="tag">판단</span>\(x^2\)과 \(y^2\)의 계수만 보고 판단하면 \(xy\)항의 효과를 놓친다. 또 우변 \(k\)의 부호도 봐야 한다. \(k < 0\)이면 양변에 \(-1\)을 곱해 생각한다.</li>
           </ol>
         </div>
         <div class="quiz">
