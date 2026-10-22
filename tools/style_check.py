@@ -60,8 +60,8 @@ def measure(p):
     C = max(len(t), 1)
     ss = [s.strip() for s in re.split(r"(?<=[.?!])\s+", t) if len(s) > 8 and re.search(r"[가-힣]", s)]
     n = max(len(ss), 1)
-    da = sum(bool(re.search(r"다\.$", s)) and not re.search(r"니다\.$", s) for s in ss)
-    nida = sum(bool(re.search(r"니다\.$", s)) for s in ss)
+    da = sum(bool(re.search(r"다\.$", s)) and not re.search(r"(?<!아)니다\.$", s) for s in ss)
+    nida = sum(bool(re.search(r"(?<!아)니다\.$", s)) for s in ss)   # '아니다.'는 '~다'체이다
     return {
         "kind": kind, "chars": len(t), "sents": len(ss),
         "li": 1000 * len(re.findall(r"<li\b", body)) / C,

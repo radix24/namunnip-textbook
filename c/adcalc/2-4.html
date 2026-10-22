@@ -127,7 +127,7 @@
             <canvas aria-label="두 극곡선. 교점이라고 생각하는 곳을 누르면 표시된다. θ를 움직이면 두 곡선 위에서 같은 θ에 해당하는 두 점이 함께 움직인다"></canvas>
             <div class="ctl">
               <p class="mono small">그림에서 교점을 모두 찾아 누르세요.</p>
-              <label class="mono">같은 \(\theta\)의 두 점: \(\theta\) = <output class="t-out">0°</output></label>
+              <label class="mono">같은 \(\theta\)의 두 점, \(\theta\) = <output class="t-out">0°</output></label>
               <input class="st" type="range" min="0" max="360" step="0.5" value="20" aria-label="각 θ (도)">
               <div class="presets"><button class="chip go-eq" type="button" aria-pressed="false">연립해서 얻은 교점 보기</button><button class="chip go-reset" type="button">다시 찾기</button></div>
               <dl class="nums">
@@ -138,12 +138,12 @@
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>직교좌표에서는 두 방정식을 연립하면 교점이 모두 나옵니다. 극좌표에서도 \(1 + \cos\theta = 3\cos\theta\)를 풀면 \(r = 1 + \cos\theta\)와 \(r = 3\cos\theta\)의 교점이 모두 나올까요?</li>
-            <li><span class="tag">복원</span>극좌표에서 한 점은 \((r, \theta)\), \((r, \theta + 2\pi)\), \((-r, \theta + \pi)\) 등 여러 이름을 가집니다. 극은 \(r = 0\)이기만 하면 \(\theta\)와 상관없이 같은 점입니다.</li>
-            <li><span class="tag">설명</span>연립방정식 \(f(\theta) = g(\theta)\)는 "<b>같은 \(\theta\)</b>에서 같은 \(r\)"인 점만 찾습니다. 그런데 두 곡선이 같은 점을 <b>서로 다른 이름</b>으로 지날 수 있습니다. ① 극: 카디오이드는 \(\theta = \pi\)일 때, 원은 \(\theta = \frac{\pi}{2}\)일 때 극을 지나므로 방정식에는 나오지 않습니다. ② 음의 \(r\): \(\cos 2\theta = -\frac{1}{2}\)인 점 \(\left(-\frac{1}{2}, \theta\right)\)은 원 \(r = \frac{1}{2}\) 위의 점 \(\left(\frac{1}{2}, \theta + \pi\right)\)과 같습니다. 그래서 교점은 \(f(\theta) = g(\theta)\), \(f(\theta) = -g(\theta + \pi)\)를 풀고 극을 따로 확인한 뒤, 그림으로 빠진 것이 없는지 보아야 합니다.</li>
-            <li><span class="tag">연결</span>같은 \(\theta\)에서 두 점이 움직이는 것은, 두 사람이 서로 다른 길을 각자의 시간표대로 걷는 것과 같습니다. 두 길이 겹치는 곳(교점)과 두 사람이 실제로 만나는 곳(같은 \(\theta\))은 다를 수 있습니다. 매개변수로 나타낸 운동에서도 같은 구분이 필요합니다.</li>
-            <li><span class="tag">적용</span>두 보기에서 교점을 모두 찾아 누른 다음, 연립해서 얻은 교점과 비교하세요. 빠진 교점은 어떤 이유로 빠졌나요? \(\theta\)를 움직이며 같은 \(\theta\)의 두 점 사이 거리가 0이 되는 곳이 몇 군데인지 세어 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>극곡선의 교점 문제에서 식만 풀고 끝내면 교점을 빠뜨리기 쉽습니다. 특히 극은 거의 언제나 따로 확인해야 합니다. 그래프를 함께 그리는 것이 가장 확실한 점검입니다.</li>
+            <li><span class="tag">질문</span>직교좌표에서는 두 방정식을 연립하면 교점이 모두 나온다. 극좌표에서도 \(1 + \cos\theta = 3\cos\theta\)를 풀면 \(r = 1 + \cos\theta\)와 \(r = 3\cos\theta\)의 교점이 모두 나올까?</li>
+            <li><span class="tag">복원</span>극좌표에서 한 점은 \((r, \theta)\), \((r, \theta + 2\pi)\), \((-r, \theta + \pi)\) 등 여러 이름을 가진다. 극은 \(r = 0\)이기만 하면 \(\theta\)와 상관없이 같은 점이다.</li>
+            <li><span class="tag">설명</span>연립방정식 \(f(\theta) = g(\theta)\)는 "같은 \(\theta\)에서 같은 \(r\)"인 점만 찾는다. 그런데 두 곡선이 같은 점을 서로 다른 이름으로 지날 수 있다. ① 먼저 극이다. 카디오이드는 \(\theta = \pi\)일 때, 원은 \(\theta = \frac{\pi}{2}\)일 때 극을 지나므로 방정식에는 나오지 않는다. ② 다음은 음의 \(r\)이다. \(\cos 2\theta = -\frac{1}{2}\)인 점 \(\left(-\frac{1}{2}, \theta\right)\)은 원 \(r = \frac{1}{2}\) 위의 점 \(\left(\frac{1}{2}, \theta + \pi\right)\)과 같다. 그래서 교점은 \(f(\theta) = g(\theta)\), \(f(\theta) = -g(\theta + \pi)\)를 풀고 극을 따로 확인한 뒤, 그림으로 빠진 것이 없는지 보아야 한다.</li>
+            <li><span class="tag">연결</span>같은 \(\theta\)에서 두 점이 움직이는 것은, 두 사람이 서로 다른 길을 각자의 시간표대로 걷는 것과 같다. 두 길이 겹치는 곳(교점)과 두 사람이 실제로 만나는 곳(같은 \(\theta\))은 다를 수 있다. 매개변수로 나타낸 운동에서도 같은 구분이 필요하다.</li>
+            <li><span class="tag">적용</span>두 보기에서 교점을 모두 찾아 누른 다음, 연립해서 얻은 교점과 비교해 보자. 빠진 교점은 어떤 이유로 빠졌는가? \(\theta\)를 움직이며 같은 \(\theta\)의 두 점 사이 거리가 0이 되는 곳이 몇 군데인지 세어 보자.</li>
+            <li class="warn"><span class="tag">판단</span>극곡선의 교점 문제에서 식만 풀고 끝내면 교점을 빠뜨리기 쉽다. 특히 극은 거의 언제나 따로 확인해야 한다. 그래프를 함께 그리는 것이 가장 확실한 점검이다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -182,16 +182,16 @@
                 <div><dt>\(\psi_2\)</dt><dd class="n-2">—</dd></div>
                 <div><dt>두 곡선의 사잇각</dt><dd class="n-g">—</dd></div>
               </dl>
-              <p class="fig-note">사잇각은 교점에서 두 접선이 이루는 각 가운데 \(90^\circ\) 이하인 것입니다.</p>
+              <p class="fig-note">사잇각은 교점에서 두 접선이 이루는 각 가운데 \(90^\circ\) 이하인 것이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>오른쪽을 향한 카디오이드 \(r = a(1 + \cos\theta)\)와 왼쪽을 향한 카디오이드 \(r = b(1 - \cos\theta)\)가 극이 아닌 곳에서 만납니다. 크기 \(a\), \(b\)를 바꾸면 만나는 각도도 바뀔까요?</li>
-            <li><span class="tag">복원</span>극곡선에서 반지름 방향과 접선이 이루는 각 \(\psi\)는 \(\tan\psi = \frac{r}{dr/d\theta}\)입니다(\(0 &lt; \psi &lt; \pi\)로 잡습니다).</li>
-            <li><span class="tag">설명</span>두 곡선이 같은 점 \((r, \theta)\)에서 만나면 두 접선은 모두 같은 반지름 선분과 각을 이루므로, 두 곡선의 사잇각은 \(|\psi_1 - \psi_2|\)(또는 \(\pi\)에서 뺀 값)입니다. 기울기 \(\frac{dy}{dx}\)를 두 번 구하는 것보다 간단합니다. 마주 보는 카디오이드에서는 \(\tan\psi_1 = \frac{1 + \cos\theta}{-\sin\theta}\), \(\tan\psi_2 = \frac{1 - \cos\theta}{\sin\theta}\)이고 \[\tan\psi_1\tan\psi_2 = -\frac{1 - \cos^2\theta}{\sin^2\theta} = -1\]이므로 두 접선은 \(a\), \(b\)와 상관없이 언제나 <b>수직</b>입니다.</li>
-            <li><span class="tag">연결</span>\(\tan\psi_1\tan\psi_2 = -1\)은 직교좌표에서 두 직선의 기울기의 곱이 \(-1\)이면 수직이라는 조건과 같은 모양입니다. 한 곡선족의 모든 곡선과 수직으로 만나는 곡선족을 <em>직교 곡선족</em>이라고 하며, 전기장의 전기력선과 등전위선이 그 예입니다.</li>
-            <li><span class="tag">적용</span>\(a\)와 \(b\)를 여러 값으로 바꾸어도 사잇각이 \(90^\circ\)인지 확인하세요. 두 번째 보기에서는 사잇각이 몇 도인가요? \(\psi_1\)과 \(\psi_2\)를 직접 계산해 맞추어 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>극에서 만나는 경우에는 \(r = 0\)이라 \(\tan\psi = \frac{r}{r'}\)로 각을 구할 수 없습니다. 극에서 곡선의 접선은 \(r = 0\)이 되는 \(\theta\)의 방향이므로, 그 방향끼리의 각으로 따로 구해야 합니다.</li>
+            <li><span class="tag">질문</span>오른쪽을 향한 카디오이드 \(r = a(1 + \cos\theta)\)와 왼쪽을 향한 카디오이드 \(r = b(1 - \cos\theta)\)가 극이 아닌 곳에서 만난다. 크기 \(a\), \(b\)를 바꾸면 만나는 각도도 바뀔까?</li>
+            <li><span class="tag">복원</span>극곡선에서 반지름 방향과 접선이 이루는 각 \(\psi\)는 \(\tan\psi = \frac{r}{dr/d\theta}\)이다(\(0 &lt; \psi &lt; \pi\)로 잡는다).</li>
+            <li><span class="tag">설명</span>두 곡선이 같은 점 \((r, \theta)\)에서 만나면 두 접선은 모두 같은 반지름 선분과 각을 이루므로, 두 곡선의 사잇각은 \(|\psi_1 - \psi_2|\)(또는 \(\pi\)에서 뺀 값)이다. 기울기 \(\frac{dy}{dx}\)를 두 번 구하는 것보다 간단하다. 마주 보는 카디오이드에서는 \(\tan\psi_1 = \frac{1 + \cos\theta}{-\sin\theta}\), \(\tan\psi_2 = \frac{1 - \cos\theta}{\sin\theta}\)이고 \[\tan\psi_1\tan\psi_2 = -\frac{1 - \cos^2\theta}{\sin^2\theta} = -1\]이므로 두 접선은 \(a\), \(b\)와 상관없이 언제나 수직이다.</li>
+            <li><span class="tag">연결</span>\(\tan\psi_1\tan\psi_2 = -1\)은 직교좌표에서 두 직선의 기울기의 곱이 \(-1\)이면 수직이라는 조건과 같은 모양이다. 한 곡선족의 모든 곡선과 수직으로 만나는 곡선족을 <em>직교 곡선족</em>이라고 하며, 전기장의 전기력선과 등전위선이 그 예이다.</li>
+            <li><span class="tag">적용</span>\(a\)와 \(b\)를 여러 값으로 바꾸어도 사잇각이 \(90^\circ\)인지 확인해 보자. 두 번째 보기에서는 사잇각이 몇 도인가? \(\psi_1\)과 \(\psi_2\)를 직접 계산해 맞추어 보자.</li>
+            <li class="warn"><span class="tag">판단</span>극에서 만나는 경우에는 \(r = 0\)이라 \(\tan\psi = \frac{r}{r'}\)로 각을 구할 수 없다. 극에서 곡선의 접선은 \(r = 0\)이 되는 \(\theta\)의 방향이므로, 그 방향끼리의 각으로 따로 구해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
