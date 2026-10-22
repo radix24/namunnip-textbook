@@ -72,7 +72,7 @@ THEME_BTN = ('<button type="button" class="theme-btn" aria-label="다크 모드"
 # 푸터 첫 줄: 나뭇잎 홈페이지와 연락처. 손으로 쓴 페이지와 QURI(tools/build.py)에도 같은 줄이 있다.
 FOOT_ORG = ('<p class="foot-org"><a class="foot-home" href="https://nmnp.kr"><svg class="brand-mark" aria-hidden="true"><use href="#nm"/></svg>'
             '<b>나뭇잎</b><span class="mono">nmnp.kr</span></a><a class="foot-mail mono" href="mailto:contact@nmnp.kr">contact@nmnp.kr</a>'
-            '<a class="foot-mail mono" href="../../credits.html">출처와 라이선스</a></p>')
+            '<a class="foot-mail mono" href="../../credits.html">크레딧</a></p>')
 
 
 def pwa_head(p):
