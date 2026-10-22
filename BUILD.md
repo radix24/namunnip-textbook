@@ -103,6 +103,8 @@
 </article>
 ```
 
+단계 꼬리표 여섯 개(질문·복원·설명·연결·적용·판단)와 순서는 모든 탐구 카드에서 같게 둔다(STYLE.md 결정 기록 2026-10-22). '한 단계씩' 보기에서는 각 단계 오른쪽의 화살표나 꼬리표를 눌러 접고 펴며, reader.js가 화살표를 붙인다. 단계 문장은 '~다'체로 쓰고 앞 단계의 결론을 받아 잇는다.
+
 - 카드 스크립트는 `(() => { const root = document.getElementById("card-…"); if (!root) return; … })();` 형태로 쓰고, 요소는 `root.querySelector`로만 찾는다.
 - 공용 도구 `window.NM`: `C`(색), `F`(글꼴), `fit(canvas, draw)`(DPR 맞춤, 첫 그리기는 비동기라 `draw` 안에서 `if (!w) return;`), `loop(el, frame)`(보일 때만 도는 애니메이션), `axes(ctx, {...})`, `clamp`, `ease`, `reduce`.
 - 캔버스 크기: `.cv-wide`(16:9), `.cv-sq`(1:1), 두 캔버스 나란히 `.card-fig.fig-2`. 카드 그림 칸은 넓은 화면에서도 폭이 430px 안팎이다.
