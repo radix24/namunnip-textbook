@@ -1,6 +1,6 @@
 /* 자동 생성: python3 tools/build.py — 오프라인 저장 목록. 직접 고치지 말 것 */
 self.PRECACHE = {
-"version": "7698d8125fce",
+"version": "f613dede0482",
 "files": [
 "404.html",
 "bank.html",
@@ -1013,6 +1013,7 @@ self.PRECACHE = {
 "c/stat/index.html",
 "c/stat/toc.js",
 "css/fonts.css",
+"css/shared.css",
 "css/tb.css",
 "js/bank.js",
 "js/cards/adalg/axiom-test.js",

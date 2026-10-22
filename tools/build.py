@@ -354,6 +354,7 @@ def page_html(course, ch, sec, blocks):
   <meta name="description" content="{H.escape(desc)}">
 {pwa_head("../../")}
   <link rel="stylesheet" href="../../css/tb.css">
+  <link rel="stylesheet" href="../../css/shared.css">
 {math_css}{style}</head>
 <body data-course="{course["id"]}" data-sec="{ch["n"]}-{sec["n"]}">
 
