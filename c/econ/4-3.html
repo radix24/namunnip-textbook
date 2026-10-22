@@ -120,7 +120,7 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">수요 \(Q = 100 - 2P\)(가상). 기울기는 어디서나 같습니다.</p>
+            <p class="small">수요는 \(Q = 100 - 2P\)(가상)이고, 기울기는 어디서나 같다.</p>
             <div class="ctl-row"><div><label class="mono">가격 P = <output class="p-out"></output></label><input class="p" type="range" min="2" max="48" step="1" value="10" aria-label="가격"></div></div>
             <div class="two">
               <canvas class="dd" aria-label="수요곡선과 현재 점, 총수입 사각형, 탄력적·비탄력적 구간"></canvas>
@@ -129,12 +129,12 @@
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>가격이 10에서 11로 오르면 수요량은 2 줄고, 40에서 41로 올라도 2 줄어듭니다. 그런데 소비자의 반응이 "같은 크기"라고 할 수 있을까요?</li>
-            <li><span class="tag">복원</span>변화율은 \(\dfrac{\text{변화량}}{\text{처음 값}}\)입니다. 수요량 \(Q\)를 가격 \(P\)의 함수로 보고 미분한 도함수를 \(\dfrac{dQ}{dP}\)로도 씁니다. 이 값은 \(P\)가 조금 변할 때 \(Q\)가 변하는 비율입니다.</li>
-            <li><span class="tag">설명</span>가격이 1% 변할 때 수요량이 몇 % 변하는지를 <em>수요의 가격 탄력성</em> \(\varepsilon = -\dfrac{dQ}{dP} \cdot \dfrac{P}{Q}\)라 합니다. 직선 수요 \(Q = 100 - 2P\)에서는 \(\varepsilon = \dfrac{2P}{100 - 2P}\)라서 가격이 높을수록 커집니다. \(\varepsilon > 1\)이면 <em>탄력적</em>, \(\varepsilon < 1\)이면 <em>비탄력적</em>이고, 가운데 점 \(P = 25\)에서 \(\varepsilon = 1\)입니다.</li>
-            <li><span class="tag">연결</span>총수입 \(R = PQ\)를 \(P\)로 미분하면 \(R' = Q(1 - \varepsilon)\)입니다. 그래서 비탄력적인 구간에서는 값을 올리면 수입이 늘고, 탄력적인 구간에서는 줄며, \(\varepsilon = 1\)에서 수입이 가장 큽니다(다음 카드).</li>
-            <li><span class="tag">적용</span>가격을 움직여 탄력성이 1이 되는 곳을 찾고, 그때 총수입 그래프의 모양을 확인하세요. 가격 10과 40에서 1% 올릴 때 수요량은 각각 몇 % 줄어드나요?</li>
-            <li class="warn"><span class="tag">판단</span>기울기와 탄력성은 다릅니다. 기울기는 단위에 따라 달라지지만, 탄력성은 %의 비라서 단위와 상관없이 비교할 수 있습니다. 직선 수요곡선이라도 점마다 탄력성이 다릅니다.</li>
+            <li><span class="tag">질문</span>가격이 10에서 11로 오르면 수요량은 2 줄고, 40에서 41로 올라도 2 줄어든다. 그런데 소비자의 반응이 같은 크기라고 할 수 있을까?</li>
+            <li><span class="tag">복원</span>변화율은 \(\dfrac{\text{변화량}}{\text{처음 값}}\)이다. 그리고 수요량 \(Q\)를 가격 \(P\)의 함수로 보고 미분한 도함수 \(\dfrac{dQ}{dP}\)는 \(P\)가 조금 변할 때 \(Q\)가 변하는 비율이다.</li>
+            <li><span class="tag">설명</span>가격이 1% 변할 때 수요량이 몇 % 변하는지를 <em>수요의 가격 탄력성</em> \(\varepsilon = -\dfrac{dQ}{dP} \cdot \dfrac{P}{Q}\)라 한다. 직선 수요 \(Q = 100 - 2P\)에서는 \(\varepsilon = \dfrac{2P}{100 - 2P}\)라서 가격이 높을수록 커지며, \(\varepsilon &gt; 1\)이면 <em>탄력적</em>, \(\varepsilon &lt; 1\)이면 <em>비탄력적</em>이고, 가운데 점 \(P = 25\)에서 \(\varepsilon = 1\)이다.</li>
+            <li><span class="tag">연결</span>총수입 \(R = PQ\)를 \(P\)로 미분하면 \(R' = Q(1 - \varepsilon)\)이다. 그래서 비탄력적인 구간에서는 값을 올리면 수입이 늘고, 탄력적인 구간에서는 줄며, \(\varepsilon = 1\)에서 수입이 가장 크다(다음 카드).</li>
+            <li><span class="tag">적용</span>가격을 움직여 탄력성이 1이 되는 곳을 찾고, 그때 총수입 그래프의 모양을 확인해 보자. 그리고 가격 10과 40에서 1% 올릴 때 수요량이 각각 몇 % 줄어드는지 구해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>기울기와 탄력성은 다르다. 기울기는 단위에 따라 달라지지만 탄력성은 %의 비라서 단위와 상관없이 비교할 수 있고, 직선 수요곡선이라도 점마다 탄력성이 다르다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -156,18 +156,18 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">네 상품의 가격 탄력성(가상)을 보고, 값을 10% 올렸을 때 매출(가격 × 판매량)이 어떻게 될지 예측하세요.</p>
+            <p class="small">네 상품의 가격 탄력성(가상)을 보고, 값을 10% 올렸을 때 매출(가격 × 판매량)이 어떻게 될지 예측해 보자.</p>
             <div class="items"></div>
             <p class="mono small say" role="status"></p>
-            <p class="fig-note">탄력성 값은 수업용 가상 값이며, 가격 변화가 작을 때 탄력성이 거의 일정하다고 가정했습니다.</p>
+            <p class="fig-note">탄력성 값은 수업용 가상 값이며, 가격 변화가 작을 때 탄력성이 거의 일정하다고 가정했다.</p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>매출을 늘리려면 값을 올려야 할까요, 내려야 할까요? 상품마다 답이 다를까요?</li>
-            <li><span class="tag">복원</span>탄력성 \(\varepsilon\): 가격이 1% 오를 때 수요량이 약 \(\varepsilon\)% 줄어듭니다(가격 탄력성).</li>
-            <li><span class="tag">설명</span>가격이 \(r\)만큼 오르면 판매량은 약 \(\varepsilon r\)만큼 줄어, 새 매출은 원래의 약 \((1 + r)(1 - \varepsilon r)\)배입니다. \(r\)이 작으면 이 값은 약 \(1 + r(1 - \varepsilon)\)이므로 <em>\(\varepsilon < 1\)이면 매출이 늘고, \(\varepsilon > 1\)이면 줄어듭니다</em>. 생필품처럼 대신할 것이 적은 상품은 비탄력적이고, 대체재가 많은 상품은 탄력적입니다.</li>
-            <li><span class="tag">연결</span>정부가 담배에 세금을 매기면 세수가 크게 느는 이유, 항공사가 출장객(비탄력적)과 여행객(탄력적)에게 다른 가격을 받는 이유가 탄력성으로 설명됩니다.</li>
-            <li><span class="tag">적용</span>네 상품을 모두 예측한 뒤 결과를 확인하세요. 탄력성이 정확히 1이면 매출은 어떻게 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>\((1 + r)(1 - \varepsilon r)\)의 근사는 가격 변화가 작을 때만 맞습니다. 가격을 50%씩 크게 바꾸면 탄력성 자체가 달라져 직접 계산해야 합니다.</li>
+            <li><span class="tag">질문</span>매출을 늘리려면 값을 올려야 할까, 내려야 할까? 상품마다 답이 다를까?</li>
+            <li><span class="tag">복원</span>가격 탄력성이 \(\varepsilon\)이면 가격이 1% 오를 때 수요량이 약 \(\varepsilon\)% 줄어든다.</li>
+            <li><span class="tag">설명</span>가격이 \(r\)만큼 오르면 판매량은 약 \(\varepsilon r\)만큼 줄어, 새 매출은 원래의 약 \((1 + r)(1 - \varepsilon r)\)배이다. \(r\)이 작으면 이 값은 약 \(1 + r(1 - \varepsilon)\)이므로 <em>\(\varepsilon &lt; 1\)이면 매출이 늘고, \(\varepsilon &gt; 1\)이면 줄어든다</em>. 생필품처럼 대신할 것이 적은 상품은 비탄력적이고, 대체재가 많은 상품은 탄력적이다.</li>
+            <li><span class="tag">연결</span>정부가 담배에 세금을 매기면 세수가 크게 느는 이유, 항공사가 출장객(비탄력적)과 여행객(탄력적)에게 다른 가격을 받는 이유가 탄력성으로 설명된다.</li>
+            <li><span class="tag">적용</span>네 상품을 모두 예측한 뒤 결과를 확인하고, 탄력성이 정확히 1이면 매출이 어떻게 되는지 보자.</li>
+            <li class="warn"><span class="tag">판단</span>\((1 + r)(1 - \varepsilon r)\)의 근사는 가격 변화가 작을 때만 맞는다. 가격을 50%씩 크게 바꾸면 탄력성 자체가 달라지므로 직접 계산해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
