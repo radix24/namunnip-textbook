@@ -19,9 +19,38 @@ LIMITS = {"li": 2.0, "bold": 0.5, "dash": 0.1, "colon": 1.0, "stock": 0.3}   # 1
 MIN_CONN = 4.0   # 100문장당 하한 (본문)
 
 
+QUIZ = re.compile(r'<div class="quiz">.*?(?=</article>)', re.S)   # 확인 문제는 존댓말 화면 문구이고 보기·판정 서식이 정해져 있어 재지 않는다
+STEPS = re.compile(r'<ol class="steps">(.*?)</ol>', re.S)
+STEP_LI = re.compile(r'<li\b[^>]*>\s*<span class="tag">[^<]*</span>(.*?)</li>', re.S)
+STEP_END = re.compile(r"(다|까|자|가|라|나|지)(\s*\([^()]*\)|\s*식\s*)?[.?!]?[\"'”’)]*$")   # 단계 문장은 '~다'체 완결 문장으로 끝난다(2026-10-22 결정)
+HON_END = re.compile(r"((?<!아)니다|세요|까요|에요|해요|가요|나요)(\s*\([^()]*\))?[.?!]?[\"'”’)]*$")
+HON_MID = re.compile(r"((?<!아)니다|세요)[.?!]\s")
+
+
+def step_issues(h):
+    """탐구 카드 단계: 존댓말 끝맺음과 문장이 아닌 조각을 센다."""
+    m = STEPS.search(h)
+    if not m:
+        return 0, 0
+    hon = frag = 0
+    for body in STEP_LI.findall(m.group(1)):
+        t = re.sub(r"\s+", " ", ALLTAG.sub(" ", MATH.sub(" 식 ", body))).strip()
+        if HON_END.search(t) or HON_MID.search(t):
+            hon += 1
+        elif not STEP_END.search(t):
+            frag += 1
+    return hon, frag
+
+
 def measure(p):
     h = p.read_text(encoding="utf-8", errors="ignore")
     kind = (re.search(r'data-kind="([^"]+)"', h) or [None, "?"])[1]
+    hon, frag = step_issues(h)
+    h = QUIZ.sub(" ", h)
+    h = re.sub(r">\s*[—–-]\s*<", "><", h)   # 스크립트가 채울 자리표시 '—'는 줄표가 아니다
+    h = re.sub(r'(<p class="judge">)\s*<b>([^<]*)</b>', r"\1\2 ", h)   # 판단 상자 머리의 <b>는 강조가 아니라 꼬리표 서식이다
+    # 탐구 카드의 여섯 단계는 정해진 짜임이라 목록으로 세지 않는다
+    h = STEPS.sub(lambda m: re.sub(r"<li\b", "<p", m.group(0)), h)
     body = TAG.sub(" ", h)
     t = re.sub(r"\s+", " ", ALLTAG.sub(" ", MATH.sub(" 식 ", body)))
     C = max(len(t), 1)
@@ -40,6 +69,7 @@ def measure(p):
         "label": sum(bool(LABEL.match(s)) for s in ss),
         "mixed": min(da, nida) >= 3 and min(da, nida) / n > 0.15,
         "figure": bool(re.search(r"<figure|<svg|<canvas|<img", h)),
+        "step_hon": hon, "step_frag": frag,
     }
 
 
@@ -53,6 +83,10 @@ def problems(m):
         out.append("'~다'체와 '~니다'체가 섞임")
     if m["kind"] == "본문" and not m["figure"]:
         out.append("그림 없음")
+    if m["step_hon"]:
+        out.append(f"존댓말로 끝나는 단계 {m['step_hon']}개")
+    if m["step_frag"]:
+        out.append(f"문장으로 끝나지 않는 단계 {m['step_frag']}개")
     return out
 
 
