@@ -6083,6 +6083,7 @@
        "code": "12화실01-01",
        "blocks": [
         "intro-labchem-1-1",
+        "text-labchem-digits",
         "card-is1-sigfig",
         "card-labchem-sigfig"
        ]
@@ -6093,6 +6094,7 @@
        "code": "12화실01-02",
        "blocks": [
         "intro-labchem-1-2",
+        "text-labchem-tools",
         "card-labchem-tools"
        ]
       },
@@ -6102,6 +6104,7 @@
        "code": "12화실01-03",
        "blocks": [
         "intro-labchem-1-3",
+        "text-labchem-beer",
         "card-labchem-instrument"
        ]
       },
@@ -6111,6 +6114,7 @@
        "code": "12화실01-04",
        "blocks": [
         "intro-labchem-1-4",
+        "text-labchem-solution",
         "card-labchem-solution"
        ]
       }
@@ -6126,6 +6130,7 @@
        "code": "12화실02-01",
        "blocks": [
         "intro-labchem-2-1",
+        "text-labchem-lines",
         "card-phy-lm-hyd",
         "card-labchem-spectrum"
        ]
@@ -6136,6 +6141,7 @@
        "code": "12화실02-02",
        "blocks": [
         "intro-labchem-2-2",
+        "text-labchem-gas-constant",
         "card-labchem-gas-r"
        ]
       },
@@ -6145,6 +6151,7 @@
        "code": "12화실02-03",
        "blocks": [
         "intro-labchem-2-3",
+        "text-labchem-dumas",
         "card-labchem-dumas"
        ]
       },
@@ -6154,6 +6161,7 @@
        "code": "12화실02-04",
        "blocks": [
         "intro-labchem-2-4",
+        "text-labchem-cell-count",
         "card-labchem-unit-cell"
        ]
       },
@@ -6163,6 +6171,7 @@
        "code": "12화실02-05",
        "blocks": [
         "intro-labchem-2-5",
+        "text-labchem-filter",
         "card-labchem-filtration"
        ]
       },
@@ -6172,6 +6181,7 @@
        "code": "12화실02-06",
        "blocks": [
         "intro-labchem-2-6",
+        "text-labchem-partition",
         "card-labchem-extraction"
        ]
       },
@@ -6181,6 +6191,7 @@
        "code": "12화실02-07",
        "blocks": [
         "intro-labchem-2-7",
+        "text-labchem-rotavap",
         "card-labchem-rotavap"
        ]
       },
@@ -6190,6 +6201,7 @@
        "code": "12화실02-08",
        "blocks": [
         "intro-labchem-2-8",
+        "text-labchem-recrystal",
         "card-labchem-recrystal"
        ]
       },
@@ -6199,6 +6211,7 @@
        "code": "12화실02-09",
        "blocks": [
         "intro-labchem-2-9",
+        "text-labchem-rf",
         "card-labchem-chroma"
        ]
       },
@@ -6208,6 +6221,7 @@
        "code": "12화실02-10",
        "blocks": [
         "intro-labchem-2-10",
+        "text-labchem-azeotrope",
         "card-labchem-distill"
        ]
       },
@@ -6217,6 +6231,7 @@
        "code": "12화실02-11",
        "blocks": [
         "intro-labchem-2-11",
+        "text-labchem-vapor",
         "card-labchem-vapor",
         "card-mateng-bp-data"
        ]
@@ -6227,6 +6242,7 @@
        "code": "12화실02-12",
        "blocks": [
         "intro-labchem-2-12",
+        "text-labchem-raoult",
         "card-labchem-raoult"
        ]
       },
@@ -6236,6 +6252,7 @@
        "code": "12화실02-13",
        "blocks": [
         "intro-labchem-2-13",
+        "text-labchem-freeze",
         "card-labchem-freezing"
        ]
       },
@@ -6245,6 +6262,7 @@
        "code": "12화실02-14",
        "blocks": [
         "intro-labchem-2-14",
+        "text-labchem-osmotic",
         "card-labchem-osmometer"
        ]
       }
@@ -6260,6 +6278,7 @@
        "code": "12화실03-01",
        "blocks": [
         "intro-labchem-3-1",
+        "text-labchem-hess",
         "card-mateng-hess",
         "card-labchem-calorimetry"
        ]
@@ -6270,6 +6289,7 @@
        "code": "12화실03-02",
        "blocks": [
         "intro-labchem-3-2",
+        "text-labchem-keq",
         "card-chem-shift-lab",
         "card-labchem-fescn"
        ]
@@ -6280,6 +6300,7 @@
        "code": "12화실03-03",
        "blocks": [
         "intro-labchem-3-3",
+        "text-labchem-titration",
         "card-labchem-acid-titration",
         "card-rxn-titration"
        ]
@@ -6290,6 +6311,7 @@
        "code": "12화실03-04",
        "blocks": [
         "intro-labchem-3-4",
+        "text-labchem-permanganate",
         "card-labchem-redox-titration"
        ]
       },
@@ -6299,6 +6321,7 @@
        "code": "12화실03-05",
        "blocks": [
         "intro-labchem-3-5",
+        "text-labchem-emf",
         "card-rxn-cell",
         "card-labchem-cell-emf"
        ]
@@ -6309,6 +6332,7 @@
        "code": "12화실03-06",
        "blocks": [
         "intro-labchem-3-6",
+        "text-labchem-faraday",
         "card-rxn-electrolysis",
         "card-labchem-electrolysis"
        ]
@@ -6319,6 +6343,7 @@
        "code": "12화실03-07",
        "blocks": [
         "intro-labchem-3-7",
+        "text-labchem-clock",
         "card-mateng-rate-law",
         "card-labchem-clock"
        ]
@@ -6329,6 +6354,7 @@
        "code": "12화실03-08",
        "blocks": [
         "intro-labchem-3-8",
+        "text-labchem-variables",
         "card-mateng-rate-factors",
         "card-labchem-rate-design"
        ]
@@ -6345,6 +6371,7 @@
        "code": "12화실04-01",
        "blocks": [
         "intro-labchem-4-1",
+        "text-labchem-hexene",
         "card-labchem-hydrocarbon"
        ]
       },
@@ -6354,6 +6381,7 @@
        "code": "12화실04-02",
        "blocks": [
         "intro-labchem-4-2",
+        "text-labchem-alcohol",
         "card-labchem-alcohol-ox"
        ]
       },
@@ -6363,6 +6391,7 @@
        "code": "12화실04-03",
        "blocks": [
         "intro-labchem-4-3",
+        "text-labchem-group-tests",
         "card-rxn-functional",
         "card-rxn-reaction-map",
         "card-labchem-functional-tests"
@@ -6374,6 +6403,7 @@
        "code": "12화실04-04",
        "blocks": [
         "intro-labchem-4-4",
+        "text-labchem-soap",
         "card-labchem-soap"
        ]
       },
@@ -6383,6 +6413,7 @@
        "code": "12화실04-05",
        "blocks": [
         "intro-labchem-4-5",
+        "text-labchem-benzene",
         "card-labchem-aromatic"
        ]
       },
@@ -6392,6 +6423,7 @@
        "code": "12화실04-06",
        "blocks": [
         "intro-labchem-4-6",
+        "text-labchem-aspirin",
         "text-rxn-society",
         "card-labchem-aspirin"
        ]

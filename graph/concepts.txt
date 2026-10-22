@@ -7,7 +7,7 @@
 measure | 측정과 규모 | card-is1-scale card-is1-clock video-is1-meter text-is1-measure-space-time |
 gps-time | 시간으로 위치 찾기 | card-is1-gps | measure
 units | 기본량과 단위 | card-is1-units card-is1-dimension text-is1-standards card-is1-new-unit card-is1-standard text-is1-base-units | measure
-error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis | measure
+error | 오차와 유효숫자 | card-is1-error card-is1-sigfig card-is1-four-measure text-is1-measurement text-sie1-graph-axis text-labchem-digits | measure
 estimate | 어림 | card-is1-fermi | units
 digital | 센서와 디지털 신호 | card-is1-sampling card-is1-sensor video-is1-sensors text-is1-ict-history text-is1-digital text-sie2-sensor-calibration text-labphy-aliasing | measure
 data | 빅데이터와 통계적 판단 | card-is2-confound card-is2-dredge card-is2-reident text-is2-big-data text-fusi-simpson-paradox text-info-group-eval | error
@@ -42,7 +42,7 @@ acid-base | 산과 염기, 중화 반응 | card-is2-ion-migration card-is2-ph-lo
 reaction-heat | 발열 반응과 흡열 반응 | card-is2-hand-warmer card-is2-cold-pack text-is2-reaction-heat text-mateng-enthalpy | bonding
 equilibrium | 동적 평형 | card-chem-dyn-eq card-chem-vapor-eq card-chem-color-rev card-chem-phase text-chem-equilibrium text-adchem-common-ion | stoich
 eq-const | 평형 상수와 반응 지수 | card-chem-k-hi card-chem-k-solid card-chem-qk text-chem-kc text-chem-qk text-adchem-reaction-quotient | equilibrium
-le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier text-rxn-buffer text-adchem-vant-hoff | eq-const chem-society
+le-chat | 평형 이동 | card-chem-lechat card-chem-soda card-chem-haber-eq video-chem-altitude card-chem-shift-lab text-chem-eq-cases text-chem-lechatelier text-rxn-buffer text-adchem-vant-hoff text-labchem-keq | eq-const chem-society
 water-ion | 물의 자동 이온화와 pH | card-chem-autoion card-chem-ph-scale card-chem-kw-temp card-chem-dilute-ph text-chem-ph | acid-base eq-const
 molarity | 몰 농도 | card-chem-molar-lab card-chem-dilution text-chem-molarity | mole
 neutral-q | 중화 반응의 양적 관계 | card-chem-ion-count card-chem-eq-point card-chem-antacid text-chem-neutral-env text-chem-neutralize text-rxn-titration | acid-base molarity
@@ -79,7 +79,7 @@ interference | 빛의 간섭 | card-phy-lm-dslit card-phy-lm-film card-phy-super
 lens | 굴절과 렌즈 | card-phy-lm-refract card-phy-lm-image card-phy-lm-litho card-phy-lens-bench text-phy-lens text-emq-lens text-adphy-microscope text-labphy-bessel | 
 photon | 광전 효과와 광자 | card-phy-lm-photo text-phy-image-sensor card-phy-compton text-phy-duality text-emq-photoelectric text-adphy-matter-wave text-labphy-stopping | interference
 matter-wave | 물질파와 전자 현미경 | card-phy-lm-emicro text-emq-single-quantum | photon lens
-energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels text-adphy-quantum-box | photon spectrum
+energy-level | 에너지 준위와 스펙트럼 | card-phy-lm-hyd card-phy-lm-spec card-phy-prism text-phy-levels text-adphy-quantum-box text-labchem-lines | photon spectrum
 relativity | 특수 상대성 이론 | card-phy-lm-clock card-phy-lm-gps video-phy-lm-muon text-phy-length text-phy-relativity-society text-phy-relativity text-mech-equivalence text-hist-light-bending text-adphy-muon | inertia gps-time
 
 # ── 지구 ──
@@ -173,12 +173,12 @@ mateng-water | 물의 특별한 성질 | text-mateng-water | imf
 mateng-colligative | 끓는점 오름과 어는점 내림 | card-mateng-colligative text-mateng-colligative text-adchem-molar-mass | mateng-water molarity
 mateng-osmosis | 삼투 현상 | card-mateng-osmosis | mateng-colligative membrane
 mateng-enthalpy | 엔탈피와 열화학 반응식 | card-mateng-thermo-eq | reaction-heat stoich
-mateng-hess | 헤스 법칙 | card-mateng-hess text-mateng-hess text-adchem-bond-enthalpy | mateng-enthalpy
+mateng-hess | 헤스 법칙 | card-mateng-hess text-mateng-hess text-adchem-bond-enthalpy text-labchem-hess | mateng-enthalpy
 mateng-spont | 엔트로피와 자발성 | card-mateng-spont text-adchem-gibbs-dissolve | mateng-enthalpy entropy
-mateng-rate-law | 반응 속도식과 반응 차수 | card-mateng-rate-law text-mateng-rate-law text-adchem-integrated-rate | molarity stoich
+mateng-rate-law | 반응 속도식과 반응 차수 | card-mateng-rate-law text-mateng-rate-law text-adchem-integrated-rate text-labchem-clock | molarity stoich
 mateng-half-life | 1차 반응과 반감기 | card-mateng-half-life | mateng-rate-law abs-age
 mateng-ea | 유효 충돌과 활성화 에너지 | card-mateng-ea text-mateng-activation text-adchem-collision | mateng-rate-law ideal-gas
-mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control text-adchem-ten-degree | mateng-ea enzyme
+mateng-rate-factors | 농도·온도·촉매와 반응 속도 | card-mateng-rate-factors text-mateng-rate-control text-adchem-ten-degree text-labchem-variables | mateng-ea enzyme
 
 # ── 진로선택: 세포와 물질대사 ──
 cell-carb-lipid | 탄수화물과 지질 | card-cell-fat text-cell-carb-lipid text-cell-fatty-acid text-adbio-dna-melting | polymer
@@ -245,13 +245,13 @@ rxn-hydrolysis | 염의 가수 분해 | card-rxn-hydrolysis text-rxn-hydrolysis 
 rxn-buffer | 완충 용액 | card-rxn-buffer | rxn-ka le-chat
 rxn-oxnum | 산화수와 반쪽 반응식 | card-rxn-oxnum text-adchem-redox-titration | redox
 rxn-battery | 화학 전지의 발달 | text-rxn-battery-history | redox
-rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell text-rxn-potential text-adchem-cell-potential | rxn-oxnum rxn-battery
-rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis text-rxn-electrolysis text-adchem-electroplating | rxn-cell
+rxn-cell | 표준 환원 전위와 전지 전위 | card-rxn-cell text-rxn-potential text-adchem-cell-potential text-labchem-emf | rxn-oxnum rxn-battery
+rxn-electrolysis | 전기 분해와 패러데이 법칙 | card-rxn-electrolysis text-rxn-electrolysis text-adchem-electroplating text-labchem-faraday | rxn-cell
 rxn-redox-life | 생명과 전지 속 산화·환원 | text-rxn-redox-life text-rxn-bio-redox | rxn-cell
-rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional text-rxn-functional-group text-adchem-functional-bp | bonding
+rxn-functional | 작용기와 탄소 화합물 | card-rxn-functional text-rxn-functional-group text-adchem-functional-bp text-labchem-group-tests | bonding
 rxn-organic-rxn | 작용기의 변화와 반응 | card-rxn-reaction-map text-rxn-organic-reaction | rxn-functional redox
 rxn-polymerization | 첨가 중합과 축합 중합 | card-rxn-polymer | rxn-organic-rxn polymer
-rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber | rxn-polymerization
+rxn-society | 탄소 화합물과 사회 | text-rxn-society text-rxn-haber text-labchem-aspirin | rxn-polymerization
 
 # ── 진로선택: 생물의 유전 ──
 gene-sexlinked | 상염색체 유전과 반성 유전 | card-gene-sexlinked | division
@@ -341,36 +341,36 @@ lp-franck-hertz | 프랑크–헤르츠 실험 | card-labphy-franck-hertz text-l
 
 # ── 과학계열: 화학 실험 ──
 lc-sigfig | 기구 눈금 읽기와 유효숫자 | card-labchem-sigfig | error
-lc-tools | 측정 도구의 선택과 허용 오차 | card-labchem-tools | lc-sigfig lp-uncertainty water-ion
-lc-instrument | 분광·질량 분석 자료 해석 | card-labchem-instrument | molarity photon rxn-functional
-lc-solution | 용액 제조와 여러 농도 표현 | card-labchem-solution text-adchem-solubility-curve | molarity lc-tools
+lc-tools | 측정 도구의 선택과 허용 오차 | card-labchem-tools text-labchem-tools | lc-sigfig lp-uncertainty water-ion
+lc-instrument | 분광·질량 분석 자료 해석 | card-labchem-instrument text-labchem-beer | molarity photon rxn-functional
+lc-solution | 용액 제조와 여러 농도 표현 | card-labchem-solution text-adchem-solubility-curve text-labchem-solution | molarity lc-tools
 lc-spectrum | 원소의 선 스펙트럼과 에너지 준위 측정 | card-labchem-spectrum | energy-level spectrum
-lc-gas-r | 기체 상수 측정 | card-labchem-gas-r | ideal-gas stoich equilibrium
-lc-dumas | 증기 밀도로 분자량 구하기 | card-labchem-dumas | lc-gas-r mateng-gas-law
-lc-unit-cell | 결정 구조와 단위세포 | card-labchem-unit-cell | mateng-solids mole
-lc-filtration | 여과법과 장치 | card-labchem-filtration | error
-lc-extraction | 추출과 분배 계수 | card-labchem-extraction | imf molarity
-lc-rotavap | 회전 증발 농축과 증기압 | card-labchem-rotavap | equilibrium imf
-lc-recrystal | 재결정과 분별 결정 | card-labchem-recrystal | lc-filtration molarity
-lc-chroma | 크로마토그래피 | card-labchem-chroma | imf lc-extraction
-lc-distill | 분별 증류와 끓는점–조성 도표 | card-labchem-distill | equilibrium imf
-lc-vapor | 증기압 측정과 증발열 | card-labchem-vapor | equilibrium imf
-lc-raoult | 증기압 내림과 라울 법칙 | card-labchem-raoult | lc-vapor entropy molarity
-lc-freezing | 어는점 내림으로 화학식량 구하기 | card-labchem-freezing | mateng-colligative lc-raoult
-lc-osmometer | 삼투압으로 고분자 몰질량 구하기 | card-labchem-osmometer | mateng-osmosis lc-raoult
+lc-gas-r | 기체 상수 측정 | card-labchem-gas-r text-labchem-gas-constant | ideal-gas stoich equilibrium
+lc-dumas | 증기 밀도로 분자량 구하기 | card-labchem-dumas text-labchem-dumas | lc-gas-r mateng-gas-law
+lc-unit-cell | 결정 구조와 단위세포 | card-labchem-unit-cell text-labchem-cell-count | mateng-solids mole
+lc-filtration | 여과법과 장치 | card-labchem-filtration text-labchem-filter | error
+lc-extraction | 추출과 분배 계수 | card-labchem-extraction text-labchem-partition | imf molarity
+lc-rotavap | 회전 증발 농축과 증기압 | card-labchem-rotavap text-labchem-rotavap | equilibrium imf
+lc-recrystal | 재결정과 분별 결정 | card-labchem-recrystal text-labchem-recrystal | lc-filtration molarity
+lc-chroma | 크로마토그래피 | card-labchem-chroma text-labchem-rf | imf lc-extraction
+lc-distill | 분별 증류와 끓는점–조성 도표 | card-labchem-distill text-labchem-azeotrope | equilibrium imf
+lc-vapor | 증기압 측정과 증발열 | card-labchem-vapor text-labchem-vapor | equilibrium imf
+lc-raoult | 증기압 내림과 라울 법칙 | card-labchem-raoult text-labchem-raoult | lc-vapor entropy molarity
+lc-freezing | 어는점 내림으로 화학식량 구하기 | card-labchem-freezing text-labchem-freeze | mateng-colligative lc-raoult
+lc-osmometer | 삼투압으로 고분자 몰질량 구하기 | card-labchem-osmometer text-labchem-osmotic | mateng-osmosis lc-raoult
 lc-calorimetry | 반응열 측정과 헤스 법칙 확인 | card-labchem-calorimetry | mateng-hess mateng-enthalpy
 lc-eq-const | 분광 광도법으로 평형 상수 구하기 | card-labchem-fescn | eq-const le-chat
-lc-acid-titration | 중화 적정으로 미지 산의 농도 구하기 | card-labchem-acid-titration | titration neutral-q
-lc-redox-titration | 과망가니즈산 칼륨 산화·환원 적정 | card-labchem-redox-titration | rxn-oxnum lc-acid-titration
+lc-acid-titration | 중화 적정으로 미지 산의 농도 구하기 | card-labchem-acid-titration text-labchem-titration | titration neutral-q
+lc-redox-titration | 과망가니즈산 칼륨 산화·환원 적정 | card-labchem-redox-titration text-labchem-permanganate | rxn-oxnum lc-acid-titration
 lc-cell-emf | 화학 전지 꾸미기와 기전력 측정 | card-labchem-cell-emf | rxn-cell
 lc-electrolysis | 전기 분해 생성물의 양 측정 | card-labchem-electrolysis | rxn-electrolysis stoich
 lc-initial-rate | 초기 속도법으로 반응 차수 구하기 | card-labchem-clock | mateng-rate-law molarity
 lc-rate-design | 반응 속도 요인 실험 설계와 활성화 에너지 | card-labchem-rate-design | mateng-rate-factors mateng-ea
-lc-hydrocarbon | 탄화수소의 구조와 성질 | card-labchem-hydrocarbon | imf rxn-functional
-lc-alcohol-ox | 알코올의 산화와 생성물 확인 | card-labchem-alcohol-ox | rxn-organic-rxn rxn-oxnum
+lc-hydrocarbon | 탄화수소의 구조와 성질 | card-labchem-hydrocarbon text-labchem-hexene | imf rxn-functional
+lc-alcohol-ox | 알코올의 산화와 생성물 확인 | card-labchem-alcohol-ox text-labchem-alcohol | rxn-organic-rxn rxn-oxnum
 lc-functional-tests | 작용기 확인 반응 | card-labchem-functional-tests | lc-alcohol-ox rxn-organic-rxn
-lc-soap | 비누화와 미셀 | card-labchem-soap | lc-functional-tests imf
-lc-aromatic | 방향족 탄화수소와 비편재 전자 | card-labchem-aromatic | lc-hydrocarbon lewis
+lc-soap | 비누화와 미셀 | card-labchem-soap text-labchem-soap | lc-functional-tests imf
+lc-aromatic | 방향족 탄화수소와 비편재 전자 | card-labchem-aromatic text-labchem-benzene | lc-hydrocarbon lewis
 lc-aspirin | 아스피린 합성과 수득률 | card-labchem-aspirin | lc-functional-tests stoich rxn-society
 
 # ── 과학계열: 생명과학 실험 ──
