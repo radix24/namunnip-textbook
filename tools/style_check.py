@@ -48,6 +48,7 @@ def measure(p):
     hon, frag = step_issues(h)
     h = QUIZ.sub(" ", h)
     h = re.sub(r">\s*[—–-]\s*<", "><", h)   # 스크립트가 채울 자리표시 '—'는 줄표가 아니다
+    h = re.sub(r"<b>\s*</b>|<li\b[^>]*>\s*</li>|<li class=", lambda m: "" if m.group(0).startswith("<b") or m.group(0).endswith("</li>") else "<p class=", h)   # 빈 자리표시와 스크립트가 다루는 조작 목록(class 붙은 li)은 글의 목록이 아니다
     h = re.sub(r'(<p class="judge">)\s*<b>([^<]*)</b>', r"\1\2 ", h)   # 판단 상자 머리의 <b>는 강조가 아니라 꼬리표 서식이다
     # 탐구 카드의 여섯 단계는 정해진 짜임이라 목록으로 세지 않는다
     h = STEPS.sub(lambda m: re.sub(r"<li\b", "<p", m.group(0)), h)
