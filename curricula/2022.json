@@ -11581,6 +11581,46 @@
         "text-extra-gps",
         "card-extra-gps"
        ]
+      },
+      {
+       "n": 10,
+       "title": "마구 걷기와 √n",
+       "code": "교양",
+       "blocks": [
+        "intro-extra-1-10",
+        "text-extra-random-walk",
+        "card-extra-walk"
+       ]
+      },
+      {
+       "n": 11,
+       "title": "로지스틱 사상과 나비 효과",
+       "code": "교양",
+       "blocks": [
+        "intro-extra-1-11",
+        "text-extra-logistic",
+        "card-extra-logistic"
+       ]
+      },
+      {
+       "n": 12,
+       "title": "생명 게임",
+       "code": "교양",
+       "blocks": [
+        "intro-extra-1-12",
+        "text-extra-life",
+        "card-extra-life"
+       ]
+      },
+      {
+       "n": 13,
+       "title": "카오스 게임과 프랙털",
+       "code": "교양",
+       "blocks": [
+        "intro-extra-1-13",
+        "text-extra-chaos-game",
+        "card-extra-chaos"
+       ]
       }
      ]
     }
