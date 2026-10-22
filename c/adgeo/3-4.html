@@ -140,12 +140,12 @@
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>두 변과 끼인각을 알면 평면에서는 코사인법칙으로 나머지 변을 구합니다. 지구 위의 큰 삼각형에서도 같은 공식을 써도 될까요?</li>
+            <li><span class="tag">질문</span>두 변과 끼인각을 알면 평면에서는 코사인법칙으로 나머지 변을 구한다. 지구 위의 큰 삼각형에서도 같은 공식을 써도 될까?</li>
             <li><span class="tag">복원</span>평면 코사인법칙: \(a^2 = b^2 + c^2 - 2bc\cos A\). 벡터의 내적: \(\vec u \cdot \vec v = |\vec u||\vec v|\cos\theta\).</li>
-            <li><span class="tag">설명</span>단위구 위의 구면삼각형에서 변 \(a, b, c\)는 중심각입니다. A를 북극에 두면 B, C의 좌표를 \(b, c, A\)로 쓸 수 있고, 내적 \(\vec{OB}\cdot\vec{OC} = \cos a\)를 계산하면 <em>구면 코사인법칙</em> \(\cos a = \cos b\cos c + \sin b\sin c\cos A\)가 나옵니다. 같은 방법으로 <em>구면 사인법칙</em> \(\dfrac{\sin a}{\sin A} = \dfrac{\sin b}{\sin B} = \dfrac{\sin c}{\sin C}\)도 얻습니다.</li>
-            <li><span class="tag">연결</span>변이 아주 작으면 \(\cos x \approx 1 - \frac{x^2}{2}\), \(\sin x \approx x\)라서 구면 코사인법칙이 평면 코사인법칙으로 바뀝니다. 좁은 지역에서 평면 지도를 써도 되는 이유입니다. 다음 카드에서 이 공식으로 도시 사이 거리를 구합니다.</li>
-            <li><span class="tag">적용</span>"아주 작게"와 "크게"를 눌러 평면 공식의 오차를 비교하세요. 사인법칙의 세 비가 같은지도 표 아래에서 확인하세요.</li>
-            <li class="warn"><span class="tag">판단</span>각을 라디안으로 쓴 평면 공식은 작은 삼각형에서만 근삿값입니다. 넓은 범위(대륙 사이)에서 평면 공식을 쓰면 오차가 커집니다.</li>
+            <li><span class="tag">설명</span>단위구 위의 구면삼각형에서 변 \(a, b, c\)는 중심각이다. A를 북극에 두면 B, C의 좌표를 \(b, c, A\)로 쓸 수 있고, 내적 \(\vec{OB}\cdot\vec{OC} = \cos a\)를 계산하면 <em>구면 코사인법칙</em> \(\cos a = \cos b\cos c + \sin b\sin c\cos A\)가 나온다. 같은 방법으로 <em>구면 사인법칙</em> \(\dfrac{\sin a}{\sin A} = \dfrac{\sin b}{\sin B} = \dfrac{\sin c}{\sin C}\)도 얻는다.</li>
+            <li><span class="tag">연결</span>변이 아주 작으면 \(\cos x \approx 1 - \frac{x^2}{2}\), \(\sin x \approx x\)라서 구면 코사인법칙이 평면 코사인법칙으로 바뀐다. 좁은 지역에서 평면 지도를 써도 되는 이유이다. 다음 카드에서 이 공식으로 도시 사이 거리를 구한다.</li>
+            <li><span class="tag">적용</span>"아주 작게"와 "크게"를 눌러 평면 공식의 오차를 비교해 보자. 사인법칙의 세 비가 같은지도 표 아래에서 확인해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>각을 라디안으로 쓴 평면 공식은 작은 삼각형에서만 근삿값이다. 넓은 범위(대륙 사이)에서 평면 공식을 쓰면 오차가 커진다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -177,15 +177,15 @@
             </div>
             <canvas aria-label="두 도시를 잇는 대원호와 북극 P가 만드는 구면삼각형. 끌어서 돌려 볼 수 있다"></canvas>
             <div class="calc small" role="status"></div>
-            <p class="fig-note">도시의 위도·경도는 소수 둘째 자리까지 반올림한 대략값이고, 지구를 반지름 6371 km인 구로 본 계산입니다. 실제 지구는 약간 납작해서 정밀 측량 값과 0.5% 안팎 차이가 날 수 있습니다.</p>
+            <p class="fig-note">도시의 위도·경도는 소수 둘째 자리까지 반올림한 대략값이고, 지구를 반지름 6371 km인 구로 본 계산이다. 실제 지구는 약간 납작해서 정밀 측량 값과 0.5% 안팎 차이가 날 수 있다.</p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>서울에서 파리까지는 몇 km일까요? 지도에 자를 대지 않고 위도와 경도만으로 계산할 수 있을까요?</li>
+            <li><span class="tag">질문</span>서울에서 파리까지는 몇 km일까? 지도에 자를 대지 않고 위도와 경도만으로 계산할 수 있을까?</li>
             <li><span class="tag">복원</span>구면 코사인법칙: \(\cos a = \cos b\cos c + \sin b\sin c\cos A\). 대원 거리 = \(R \times\)(중심각, 라디안).</li>
-            <li><span class="tag">설명</span>북극 P와 두 도시 X, Y로 구면삼각형을 만듭니다. P에서 X, Y까지의 변은 여위도 \(90° - \varphi_1\), \(90° - \varphi_2\)이고, P의 각은 경도 차 \(\Delta\lambda\)입니다. 구면 코사인법칙에 넣으면 \(\cos d = \sin\varphi_1\sin\varphi_2 + \cos\varphi_1\cos\varphi_2\cos\Delta\lambda\)이고, 거리는 \(R \cdot d\)입니다.</li>
-            <li><span class="tag">연결</span>항공사의 운항 거리, 스마트폰 지도 앱의 "직선 거리", 위성 통신 범위 계산이 모두 이 공식(또는 같은 식을 바꾼 하버사인 공식)을 씁니다. 대원 항로 카드의 항로 길이도 이렇게 구했습니다.</li>
-            <li><span class="tag">적용</span>도시 쌍을 고르고 먼저 거리를 짐작해 적은 뒤 계산을 확인하세요. 위도·경도를 그대로 평면 좌표로 본 "지도 위 거리"와 얼마나 다른지도 비교하세요.</li>
-            <li class="warn"><span class="tag">판단</span>경도 1°의 길이는 위도마다 다릅니다(적도에서 약 111 km, 위도 60°에서 그 절반). 위도·경도를 평면 좌표처럼 쓰면 고위도로 갈수록 오차가 커집니다.</li>
+            <li><span class="tag">설명</span>북극 P와 두 도시 X, Y로 구면삼각형을 만든다. P에서 X, Y까지의 변은 여위도 \(90° - \varphi_1\), \(90° - \varphi_2\)이고, P의 각은 경도 차 \(\Delta\lambda\)이다. 구면 코사인법칙에 넣으면 \(\cos d = \sin\varphi_1\sin\varphi_2 + \cos\varphi_1\cos\varphi_2\cos\Delta\lambda\)이고, 거리는 \(R \cdot d\)이다.</li>
+            <li><span class="tag">연결</span>항공사의 운항 거리, 스마트폰 지도 앱의 "직선 거리", 위성 통신 범위 계산이 모두 이 공식(또는 같은 식을 바꾼 하버사인 공식)을 쓴다. 대원 항로 카드의 항로 길이도 이렇게 구했다.</li>
+            <li><span class="tag">적용</span>도시 쌍을 고르고 먼저 거리를 짐작해 적은 뒤 계산을 확인해 보자. 위도·경도를 그대로 평면 좌표로 본 "지도 위 거리"와 얼마나 다른지도 비교해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>경도 1°의 길이는 위도마다 다르다(적도에서 약 111 km, 위도 60°에서 그 절반). 위도·경도를 평면 좌표처럼 쓰면 고위도로 갈수록 오차가 커진다.</li>
           </ol>
         </div>
         <div class="quiz">
