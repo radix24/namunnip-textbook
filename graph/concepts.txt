@@ -981,25 +981,25 @@ adc-ode-field | 미분방정식과 방향장 | card-adcalc-slope-field card-adca
 adc-euler | 오일러의 방법 | card-adcalc-euler-steps card-adcalc-euler-orbit text-adcalc-euler | adc-ode-field calc2-e-natlog
 adc-separable | 변수분리형 미분방정식의 풀이 | card-adcalc-separable-proof card-adcalc-separable-spot text-adcalc-separable | adc-ode-field calc2-int-substitution calc2-exp-log-deriv
 adc-ode-models | 미분방정식의 활용 | card-adcalc-coffee card-adcalc-carbon14 card-adcalc-logistic text-adcalc-de-applications | adc-separable
-ada-vector-space | 벡터공간의 뜻 | card-adalg-nutrition card-adalg-rgb-mix card-adalg-axiom-test card-adalg-poly-vector | geo-vec-add geo-vec-scalar geo-vec-comp
-ada-subspace | 부분공간 | card-adalg-subspace-3d card-adalg-intersect-proof | ada-vector-space
-ada-span-indep | 일차결합·생성·일차독립 | card-adalg-span-3d card-adalg-indep-predict | ada-subspace
-ada-basis-dim | 기저와 차원, 좌표 | card-adalg-basis-grid card-adalg-basis-hunt | ada-span-indep
-ada-inner-product | ℝⁿ의 내적과 코시-슈바르츠 부등식 | card-adalg-cosine-sim card-adalg-cauchy | geo-dot ada-vector-space
-ada-projection | 정사영과 최소제곱법 | card-adalg-proj-shadow card-adalg-least-squares | ada-inner-product ada-basis-dim
-ada-orthonormal | 정규직교기저와 그람-슈미트 과정 | card-adalg-gram-schmidt card-adalg-ortho-coords | ada-projection ada-basis-dim
-ada-gauss | 가우스 소거법 | card-adalg-row-puzzle card-adalg-balance-eq | cm1-matrix ada-span-indep
-ada-inverse | 역행렬과 가우스-조르당 소거법 | card-adalg-inverse-elim card-adalg-hill-cipher | ada-gauss cm1-matrix-mult
-ada-det | 행렬식 | card-adalg-det-area card-adalg-det-spot | ada-inverse pm-cross
-ada-lin-map | 선형변환과 행렬 | card-adalg-grid-transform card-adalg-match-matrix | ada-basis-dim cm1-matrix-mult ada-det
-ada-rot-ref | 대칭변환·닮음변환·회전변환 | card-adalg-transform-target card-adalg-pixel-rotate | ada-lin-map
-ada-compose | 선형변환의 합성과 역변환 | card-adalg-compose-order card-adalg-undo | ada-lin-map ada-inverse ada-rot-ref
-ada-eigen | 고윳값과 고유벡터 | card-adalg-eigen-hunt card-adalg-pagerank | ada-det ada-lin-map
-ada-cayley | 케일리-해밀턴 정리 | card-adalg-cayley-check card-adalg-power-reduce | ada-eigen cm1-matrix-mult
-ada-diag | 행렬의 대각화 | card-adalg-diag-grid card-adalg-fibonacci | ada-eigen ada-basis-dim ada-inverse
-ada-orth-diag | 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse card-adalg-orth-diag-proof | ada-diag ada-orthonormal ada-rot-ref
-ada-quadric | 이차곡선의 표준형 | card-adalg-conic-rotate card-adalg-conic-classify | ada-orth-diag geo-ellipse geo-hyperbola
-ada-diag-apply | 대각화의 활용(마르코프 연쇄·개체군 모형) | card-adalg-markov card-adalg-population | ada-diag ada-eigen
+ada-vector-space | 벡터공간의 뜻 | card-adalg-nutrition card-adalg-rgb-mix card-adalg-axiom-test card-adalg-poly-vector text-adalg-nvector text-adalg-vector-space | geo-vec-add geo-vec-scalar geo-vec-comp
+ada-subspace | 부분공간 | card-adalg-subspace-3d card-adalg-intersect-proof text-adalg-subspace | ada-vector-space
+ada-span-indep | 일차결합·생성·일차독립 | card-adalg-span-3d card-adalg-indep-predict text-adalg-independence | ada-subspace
+ada-basis-dim | 기저와 차원, 좌표 | card-adalg-basis-grid card-adalg-basis-hunt text-adalg-basis | ada-span-indep
+ada-inner-product | ℝⁿ의 내적과 코시-슈바르츠 부등식 | card-adalg-cosine-sim card-adalg-cauchy text-adalg-ndot | geo-dot ada-vector-space
+ada-projection | 정사영과 최소제곱법 | card-adalg-proj-shadow card-adalg-least-squares text-adalg-projection | ada-inner-product ada-basis-dim
+ada-orthonormal | 정규직교기저와 그람-슈미트 과정 | card-adalg-gram-schmidt card-adalg-ortho-coords text-adalg-orthonormal | ada-projection ada-basis-dim
+ada-gauss | 가우스 소거법 | card-adalg-row-puzzle card-adalg-balance-eq text-adalg-gauss | cm1-matrix ada-span-indep
+ada-inverse | 역행렬과 가우스-조르당 소거법 | card-adalg-inverse-elim card-adalg-hill-cipher text-adalg-inverse | ada-gauss cm1-matrix-mult
+ada-det | 행렬식 | card-adalg-det-area card-adalg-det-spot text-adalg-determinant | ada-inverse pm-cross
+ada-lin-map | 선형변환과 행렬 | card-adalg-grid-transform card-adalg-match-matrix text-adalg-linear-map | ada-basis-dim cm1-matrix-mult ada-det
+ada-rot-ref | 대칭변환·닮음변환·회전변환 | card-adalg-transform-target card-adalg-pixel-rotate text-adalg-rotation | ada-lin-map
+ada-compose | 선형변환의 합성과 역변환 | card-adalg-compose-order card-adalg-undo text-adalg-composition | ada-lin-map ada-inverse ada-rot-ref
+ada-eigen | 고윳값과 고유벡터 | card-adalg-eigen-hunt card-adalg-pagerank text-adalg-eigen | ada-det ada-lin-map
+ada-cayley | 케일리-해밀턴 정리 | card-adalg-cayley-check card-adalg-power-reduce text-adalg-cayley-hamilton | ada-eigen cm1-matrix-mult
+ada-diag | 행렬의 대각화 | card-adalg-diag-grid card-adalg-fibonacci text-adalg-diagonalization | ada-eigen ada-basis-dim ada-inverse
+ada-orth-diag | 직교행렬과 직교대각화 | card-adalg-symmetric-ellipse card-adalg-orth-diag-proof text-adalg-orthogonal-diag | ada-diag ada-orthonormal ada-rot-ref
+ada-quadric | 이차곡선의 표준형 | card-adalg-conic-rotate card-adalg-conic-classify text-adalg-conic-form | ada-orth-diag geo-ellipse geo-hyperbola
+ada-diag-apply | 대각화의 활용(마르코프 연쇄·개체군 모형) | card-adalg-markov card-adalg-population text-adalg-markov | ada-diag ada-eigen
 dm-perm-var | 원순열과 같은 것이 있는 순열 | card-dmath-round-table card-dmath-grid-path | cm1-permutation
 dm-multichoose | 중복조합과 방정식의 정수해 | card-dmath-stars-bars card-dmath-int-solutions | cm1-combination dm-perm-var
 dm-incl-excl | 포함배제의 원리 | card-dmath-venn-count card-dmath-derange | dm-multichoose
