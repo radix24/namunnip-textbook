@@ -954,33 +954,33 @@ pm-normal | 정규분포와 연속성 보정 | card-pmath-continuity-corr card-p
 pm-sampling | 표본추출 방법과 편향 | card-pmath-sampling-methods text-pmath-literary-digest text-pmath-sampling | stat-sampling
 pm-estimation | 모평균·모비율의 추정 | card-pmath-ci-100 card-pmath-sample-size text-pmath-estimation | stat-est-mean stat-est-prop
 # 고급 미적분 Ⅰ. 미적분의 활용
-adc-newton | 뉴턴의 방법 | card-adcalc-newton-tangent card-adcalc-newton-sqrt card-adcalc-newton-basin | calc1-tangent calc1-ivt
-adc-hyperbolic | 쌍곡선함수 | card-adcalc-hyp-unit card-adcalc-catenary | calc2-e-natlog
+adc-newton | 뉴턴의 방법 | card-adcalc-newton-tangent card-adcalc-newton-sqrt card-adcalc-newton-basin text-adcalc-newton | calc1-tangent calc1-ivt
+adc-hyperbolic | 쌍곡선함수 | card-adcalc-hyp-unit card-adcalc-catenary text-adcalc-hyperbolic | calc2-e-natlog
 adc-inverse-hyp | 역쌍곡선함수 | card-adcalc-arsinh-proof | adc-hyperbolic
-adc-hyp-deriv | 쌍곡선함수의 도함수 | card-adcalc-hyp-slope card-adcalc-hyp-deriv-spot card-adcalc-skydiver | adc-hyperbolic calc2-exp-log-deriv calc2-chain-rule calc2-inverse-deriv
-adc-hyp-integral | 쌍곡선함수의 적분과 쌍곡선 치환 | card-adcalc-hyp-sub card-adcalc-cable-length | adc-hyp-deriv adc-inverse-hyp calc2-int-substitution calc2-int-distance
-adc-improper | 이상적분 | card-adcalc-improper-p card-adcalc-improper-spot card-adcalc-escape | calc1-ftc calc1-limit
-adc-revolution | 회전체의 부피와 겉넓이 | card-adcalc-vase card-adcalc-band-area | calc2-int-volume calc2-int-distance
+adc-hyp-deriv | 쌍곡선함수의 도함수 | card-adcalc-hyp-slope card-adcalc-hyp-deriv-spot card-adcalc-skydiver text-adcalc-hyp-derivative | adc-hyperbolic calc2-exp-log-deriv calc2-chain-rule calc2-inverse-deriv
+adc-hyp-integral | 쌍곡선함수의 적분과 쌍곡선 치환 | card-adcalc-hyp-sub card-adcalc-cable-length text-adcalc-hyp-integral | adc-hyp-deriv adc-inverse-hyp calc2-int-substitution calc2-int-distance
+adc-improper | 이상적분 | card-adcalc-improper-p card-adcalc-improper-spot card-adcalc-escape text-adcalc-improper | calc1-ftc calc1-limit
+adc-revolution | 회전체의 부피와 겉넓이 | card-adcalc-vase card-adcalc-band-area text-adcalc-revolution | calc2-int-volume calc2-int-distance
 adc-gabriel | 가브리엘의 나팔 | card-adcalc-gabriel | adc-improper adc-revolution
 # 고급 미적분 Ⅱ. 극좌표와 극곡선
-adc-polar-coord | 극좌표 | card-adcalc-radar card-adcalc-polar-spot | alg-radian alg-trig-func
-adc-polar-curve | 극곡선의 그래프와 대칭성 | card-adcalc-polar-trace card-adcalc-rose-predict card-adcalc-mic-pattern | adc-polar-coord alg-trig-graph
-adc-polar-tangent | 극곡선의 접선 | card-adcalc-polar-tangent card-adcalc-log-spiral | adc-polar-curve calc2-param-deriv
-adc-polar-meet | 두 극곡선의 교점과 사잇각 | card-adcalc-polar-meet card-adcalc-polar-angle | adc-polar-curve adc-polar-tangent
-adc-polar-area-length | 극곡선의 넓이와 길이 | card-adcalc-polar-area card-adcalc-roll-length | adc-polar-curve calc2-int-series calc2-int-distance
+adc-polar-coord | 극좌표 | card-adcalc-radar card-adcalc-polar-spot text-adcalc-polar | alg-radian alg-trig-func
+adc-polar-curve | 극곡선의 그래프와 대칭성 | card-adcalc-polar-trace card-adcalc-rose-predict card-adcalc-mic-pattern text-adcalc-polar-graph | adc-polar-coord alg-trig-graph
+adc-polar-tangent | 극곡선의 접선 | card-adcalc-polar-tangent card-adcalc-log-spiral text-adcalc-polar-tangent | adc-polar-curve calc2-param-deriv
+adc-polar-meet | 두 극곡선의 교점과 사잇각 | card-adcalc-polar-meet card-adcalc-polar-angle text-adcalc-polar-intersect | adc-polar-curve adc-polar-tangent
+adc-polar-area-length | 극곡선의 넓이와 길이 | card-adcalc-polar-area card-adcalc-roll-length text-adcalc-polar-area | adc-polar-curve calc2-int-series calc2-int-distance
 # 고급 미적분 Ⅲ. 급수
-adc-monotone | 단조수렴정리 | card-adcalc-monotone card-adcalc-monotone-proof | calc2-seq-limit alg-induction alg-recursive
-adc-positive-tests | 양항급수의 판정법 | card-adcalc-integral-test card-adcalc-test-pick card-adcalc-overhang | adc-monotone adc-improper calc2-series calc2-geo-series
-adc-alternating | 교대급수와 절대수렴·조건수렴 | card-adcalc-alt-zigzag card-adcalc-rearrange | adc-positive-tests
-adc-power-radius | 멱급수와 수렴반경 | card-adcalc-radius card-adcalc-radius-why | adc-positive-tests adc-alternating
-adc-power-ops | 멱급수의 미분·적분과 함수의 표현 | card-adcalc-series-build card-adcalc-pi-race | adc-power-radius pm-inverse-trig calc2-int-functions
-adc-taylor | 테일러다항식과 테일러급수 | card-adcalc-taylor-fit card-adcalc-taylor-build | adc-power-radius calc2-second-deriv pm-higher-deriv
-adc-taylor-uses | 테일러급수의 활용 | card-adcalc-calc-sin card-adcalc-pendulum card-adcalc-relativity | adc-taylor
+adc-monotone | 단조수렴정리 | card-adcalc-monotone card-adcalc-monotone-proof text-adcalc-monotone | calc2-seq-limit alg-induction alg-recursive
+adc-positive-tests | 양항급수의 판정법 | card-adcalc-integral-test card-adcalc-test-pick card-adcalc-overhang text-adcalc-series-tests | adc-monotone adc-improper calc2-series calc2-geo-series
+adc-alternating | 교대급수와 절대수렴·조건수렴 | card-adcalc-alt-zigzag card-adcalc-rearrange text-adcalc-alternating | adc-positive-tests
+adc-power-radius | 멱급수와 수렴반경 | card-adcalc-radius card-adcalc-radius-why text-adcalc-power-series | adc-positive-tests adc-alternating
+adc-power-ops | 멱급수의 미분·적분과 함수의 표현 | card-adcalc-series-build card-adcalc-pi-race text-adcalc-series-functions | adc-power-radius pm-inverse-trig calc2-int-functions
+adc-taylor | 테일러다항식과 테일러급수 | card-adcalc-taylor-fit card-adcalc-taylor-build text-adcalc-taylor | adc-power-radius calc2-second-deriv pm-higher-deriv
+adc-taylor-uses | 테일러급수의 활용 | card-adcalc-calc-sin card-adcalc-pendulum card-adcalc-relativity text-adcalc-taylor-use | adc-taylor
 # 고급 미적분 Ⅳ. 미분방정식
-adc-ode-field | 미분방정식과 방향장 | card-adcalc-slope-field card-adcalc-field-match | calc1-tangent calc1-derivative-fn
-adc-euler | 오일러의 방법 | card-adcalc-euler-steps card-adcalc-euler-orbit | adc-ode-field calc2-e-natlog
-adc-separable | 변수분리형 미분방정식의 풀이 | card-adcalc-separable-proof card-adcalc-separable-spot | adc-ode-field calc2-int-substitution calc2-exp-log-deriv
-adc-ode-models | 미분방정식의 활용 | card-adcalc-coffee card-adcalc-carbon14 card-adcalc-logistic | adc-separable
+adc-ode-field | 미분방정식과 방향장 | card-adcalc-slope-field card-adcalc-field-match text-adcalc-slope-field | calc1-tangent calc1-derivative-fn
+adc-euler | 오일러의 방법 | card-adcalc-euler-steps card-adcalc-euler-orbit text-adcalc-euler | adc-ode-field calc2-e-natlog
+adc-separable | 변수분리형 미분방정식의 풀이 | card-adcalc-separable-proof card-adcalc-separable-spot text-adcalc-separable | adc-ode-field calc2-int-substitution calc2-exp-log-deriv
+adc-ode-models | 미분방정식의 활용 | card-adcalc-coffee card-adcalc-carbon14 card-adcalc-logistic text-adcalc-de-applications | adc-separable
 ada-vector-space | 벡터공간의 뜻 | card-adalg-nutrition card-adalg-rgb-mix card-adalg-axiom-test card-adalg-poly-vector | geo-vec-add geo-vec-scalar geo-vec-comp
 ada-subspace | 부분공간 | card-adalg-subspace-3d card-adalg-intersect-proof | ada-vector-space
 ada-span-indep | 일차결합·생성·일차독립 | card-adalg-span-3d card-adalg-indep-predict | ada-subspace
