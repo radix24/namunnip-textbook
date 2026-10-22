@@ -110,8 +110,26 @@
   }
   Q.def("cm1-vieta", (fig, svg) => quadFig(fig, svg, ({ p, q }) => ({ a: 1, b: -(p + q), c: p * q }),
     ({ p, q }) => `x² − (${num(p + q)})x + (${num(p * q)}) = 0: 두 근의 합 ${num(p + q)}, 곱 ${num(p * q)}`, [-5, 5, -6, 8]));
-  Q.def("cm1-qf", (fig, svg) => quadFig(fig, svg, ({ k }) => ({ a: 1, b: -4, c: k }),
-    ({ k }, D) => `꼭짓점 (2, ${num(k - 4)}), D/4 = ${num(D / 4)}: ` + (D > 0 ? "x축과 두 점에서 만난다" : D === 0 ? "x축에 접한다" : "x축과 만나지 않는다"), [-2, 6, -4, 8]));
+  // y = x² − 4x + k. 허근일 때는 꼭짓점을 지나는 가로선에 대해 뒤집은 포물선을 점선으로 겹쳐, 그 x절편으로 허근의 실수부분과 허수부분을 보인다
+  Q.def("cm1-qf", (fig, svg) => {
+    const F = Q.frame(-2, 6, -4, 8, 20, 500, 10, 270);
+    const bg = el("g", {}, svg), g = el("g", {}, svg), read = fig.querySelector(".q-read");
+    Q.axes(bg, F, { step: 1 });
+    Q.bind(fig, ({ k }) => {
+      clear(g);
+      const q = k - 4;
+      Q.plot(g, F, (x) => (x - 2) ** 2 + q, "b");
+      if (q <= 0) {
+        [2 - Math.sqrt(-q), 2 + Math.sqrt(-q)].forEach((r) => Q.dot(g, F.x(r), F.y(0), "fd", 5));
+        read.textContent = `꼭짓점 (2, ${num(q)}), D/4 = ${num(-q)}: ` + (q < 0 ? "x축과 두 점에서 만난다" : "x축에 접한다");
+      } else {
+        Q.plot(g, F, (x) => q - (x - 2) ** 2, "c dsh");
+        const s = Math.sqrt(q);
+        [2 - s, 2 + s].forEach((r) => Q.dot(g, F.x(r), F.y(0), "fc", 5));
+        read.textContent = `꼭짓점 (2, ${num(q)}), D/4 = ${num(-q)}: x축과 만나지 않는다. 뒤집은 점선은 x = 2 ± ${num(s)}에서 x축과 만나고, 허근은 2 ± ${s === 1 ? "" : num(s)}i`;
+      }
+    });
+  });
   // 포물선 y = x²과 직선 y = 2x + k
   Q.def("cm1-lp", (fig, svg) => {
     const F = Q.frame(-3, 4, -3, 10, 20, 500, 10, 270);
