@@ -115,7 +115,7 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">택시 거리(km)와 요금(천 원)의 가상 자료 6개에 원점을 지나는 모델 \(y = wx\)를 맞춥니다.</p>
+            <p class="small">택시 거리(km)와 요금(천 원)의 가상 자료 6개에 원점을 지나는 모델 \(y = wx\)를 맞춘다.</p>
             <div class="ctl-row"><div><label class="mono">가중치 w = <output class="w-out"></output></label><input class="w" type="range" min="0" max="3" step="0.02" value="0.6" aria-label="가중치 w"></div></div>
             <div class="two">
               <canvas class="fitc" aria-label="자료와 직선 y = wx, 오차 선분"></canvas>
@@ -124,12 +124,12 @@
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>인공지능이 "학습한다"는 것은 무엇을 더 좋게 만드는 걸까요? "얼마나 틀렸는가"를 하나의 수로 나타낼 수 있을까요?</li>
-            <li><span class="tag">복원</span>이차함수 \(L(w) = pw^2 + qw + r\) \((p > 0)\)는 \(w = -\dfrac{q}{2p}\)에서 최솟값을 가집니다.</li>
-            <li><span class="tag">설명</span>모델의 예측값 \(wx_i\)와 실제 값 \(y_i\)의 차를 제곱해 평균 낸 \(L(w) = \dfrac1n\{(y_1 - wx_1)^2 + \cdots + (y_n - wx_n)^2\}\)를 <em>평균제곱오차</em>라 하고, 이처럼 모델이 틀린 정도를 나타내는 함수를 <em>손실함수</em>라 합니다. 이 손실은 \(w\)에 대한 이차함수(아래로 볼록)라서, 꼭짓점 \(w^* = \dfrac{x_1y_1 + \cdots + x_ny_n}{x_1^2 + \cdots + x_n^2}\)에서 가장 작습니다. 학습이란 손실을 가장 작게 하는 모델의 값(가중치)을 찾는 일입니다.</li>
-            <li><span class="tag">연결</span>가중치가 하나면 꼭짓점 공식으로 바로 구하지만, 실제 인공지능은 가중치가 수백만 개라 공식으로 풀 수 없습니다. 그래서 기울기를 따라 조금씩 내려가는 경사하강법을 씁니다.</li>
-            <li><span class="tag">적용</span>막대를 움직여 왼쪽 직선과 오른쪽 손실 곡선 위의 점을 함께 보세요. 손실이 가장 작은 \(w\)는 얼마이고, 그 뜻(1 km당 요금)은 무엇인가요?</li>
-            <li class="warn"><span class="tag">판단</span>손실이 0이 아니라고 모델이 잘못된 것은 아닙니다. 자료에는 측정 오차와 다른 요인이 섞여 있어서, 가장 좋은 모델도 손실이 남습니다.</li>
+            <li><span class="tag">질문</span>인공지능이 학습한다는 것은 무엇을 더 좋게 만드는 걸까? ‘얼마나 틀렸는가’를 하나의 수로 나타낼 수 있을까?</li>
+            <li><span class="tag">복원</span>이차함수 \(L(w) = pw^2 + qw + r\) \((p &gt; 0)\)는 \(w = -\dfrac{q}{2p}\)에서 최솟값을 가진다.</li>
+            <li><span class="tag">설명</span>모델의 예측값 \(wx_i\)와 실제 값 \(y_i\)의 차를 제곱해 평균 낸 \(L(w) = \dfrac1n\{(y_1 - wx_1)^2 + \cdots + (y_n - wx_n)^2\}\)를 <em>평균제곱오차</em>라 하고, 이렇게 모델이 틀린 정도를 나타내는 함수를 <em>손실함수</em>라 한다. 이 손실은 \(w\)에 대한 이차함수(아래로 볼록)라서 꼭짓점 \(w^* = \dfrac{x_1y_1 + \cdots + x_ny_n}{x_1^2 + \cdots + x_n^2}\)에서 가장 작다. 즉 학습이란 손실을 가장 작게 하는 모델의 값(가중치)을 찾는 일이다.</li>
+            <li><span class="tag">연결</span>가중치가 하나면 꼭짓점 공식으로 바로 구하지만, 실제 인공지능은 가중치가 수백만 개라 공식으로 풀 수 없다. 그래서 기울기를 따라 조금씩 내려가는 경사하강법을 쓴다.</li>
+            <li><span class="tag">적용</span>막대를 움직여 왼쪽 직선과 오른쪽 손실 곡선 위의 점을 함께 보자. 손실이 가장 작은 \(w\)가 얼마이고, 그 값이 뜻하는 1 km당 요금이 얼마인지 확인해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>손실이 0이 아니라고 모델이 잘못된 것은 아니다. 자료에는 측정 오차와 다른 요인이 섞여 있어서, 가장 좋은 모델도 손실이 남는다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -151,7 +151,7 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">자료 8개에 \(y = ax + b\)를 맞춥니다(가상). 자료 하나가 잘못 입력되어 크게 튀었다고 할 때, 두 손실함수로 학습한 직선 중 어느 쪽이 더 크게 움직일까요?</p>
+            <p class="small">자료 8개에 \(y = ax + b\)를 맞춘다(가상). 자료 하나가 잘못 입력되어 크게 튀었다고 할 때, 두 손실함수로 학습한 직선 중 어느 쪽이 더 크게 움직일까?</p>
             <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="mse">제곱오차(MSE)로 학습한 직선</button><button class="chip" type="button" data-g="mae">절댓값오차(MAE)로 학습한 직선</button><button class="chip" type="button" data-g="same">비슷하다</button></div>
             <p class="verdict" role="status"></p>
             <div class="presets"><button class="chip go-toggle" type="button" disabled>튀는 자료 넣기/빼기</button></div>
@@ -159,12 +159,12 @@
             <p class="mono small say"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>센서 오류로 엉뚱한 값 하나가 자료에 섞였습니다. 손실함수를 무엇으로 정하느냐에 따라 학습 결과가 얼마나 달라질까요?</li>
-            <li><span class="tag">복원</span>\(|e|\)와 \(e^2\)은 \(|e| > 1\)이면 \(e^2\)이 더 크고, \(e\)가 커질수록 차이가 빠르게 벌어집니다.</li>
-            <li><span class="tag">설명</span><em>평균제곱오차</em> \(\frac1n\sum e_i^2\)은 큰 오차를 제곱해서 아주 크게 셉니다. 그래서 튀는 자료 하나를 줄이려고 직선 전체가 그쪽으로 끌려갑니다. <em>평균절댓값오차</em> \(\frac1n\sum|e_i|\)는 오차를 그대로 세므로 튀는 자료의 영향이 작습니다. 대신 MAE는 꼭짓점이 뾰족해 미분하기 어려운 곳이 있습니다.</li>
-            <li><span class="tag">연결</span>평균과 중앙값의 관계와 같습니다. 제곱오차를 최소로 하는 상수는 평균, 절댓값오차를 최소로 하는 상수는 중앙값이고, 중앙값이 극단값에 덜 흔들립니다.</li>
-            <li><span class="tag">적용</span>예측한 뒤 튀는 자료를 넣었다 빼며 두 직선의 움직임을 비교하세요. 집값 예측처럼 가끔 아주 큰 값이 있는 자료에는 어떤 손실함수가 알맞을까요?</li>
-            <li class="warn"><span class="tag">판단</span>어느 손실함수가 늘 좋은 것은 아닙니다. 튀는 값이 오류라면 MAE가 낫지만, 드물지만 중요한 진짜 값이라면 그 값을 크게 반영하는 MSE가 맞을 수 있습니다.</li>
+            <li><span class="tag">질문</span>센서 오류로 엉뚱한 값 하나가 자료에 섞였다. 손실함수를 무엇으로 정하느냐에 따라 학습 결과가 얼마나 달라질까?</li>
+            <li><span class="tag">복원</span>\(|e| &gt; 1\)이면 \(e^2\)이 \(|e|\)보다 크고, \(e\)가 커질수록 둘의 차이가 빠르게 벌어진다.</li>
+            <li><span class="tag">설명</span><em>평균제곱오차</em> \(\frac1n\sum e_i^2\)은 큰 오차를 제곱해서 아주 크게 센다. 그래서 튀는 자료 하나를 줄이려고 직선 전체가 그쪽으로 끌려간다. 반면 <em>평균절댓값오차</em> \(\frac1n\sum|e_i|\)는 오차를 그대로 세므로 튀는 자료의 영향이 작은데, 대신 MAE는 꼭짓점이 뾰족해 미분하기 어려운 곳이 있다.</li>
+            <li><span class="tag">연결</span>이것은 평균과 중앙값의 관계와 같다. 제곱오차를 최소로 하는 상수는 평균, 절댓값오차를 최소로 하는 상수는 중앙값이고, 중앙값이 극단값에 덜 흔들린다.</li>
+            <li><span class="tag">적용</span>예측한 뒤 튀는 자료를 넣었다 빼며 두 직선의 움직임을 비교해 보자. 그리고 집값 예측처럼 가끔 아주 큰 값이 있는 자료에는 어떤 손실함수가 알맞을지 생각해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>어느 손실함수가 늘 좋은 것은 아니다. 튀는 값이 오류라면 MAE가 낫지만, 드물지만 중요한 진짜 값이라면 그 값을 크게 반영하는 MSE가 맞을 수 있다.</li>
           </ol>
         </div>
         <div class="quiz">

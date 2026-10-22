@@ -26,7 +26,7 @@
     #card-aimath-jaccard .venn .a { background: rgba(63,111,163,.14); }
     #card-aimath-jaccard .venn .ab { background: rgba(123,94,167,.2); }
     #card-aimath-jaccard .venn .b { background: rgba(224,160,42,.18); }
-    #card-aimath-jaccard .venn b { display: block; font-size: .78rem; margin-bottom: .2rem; }
+    #card-aimath-jaccard .venn .vh { display: block; font-size: .78rem; margin: 0 0 .2rem; font-weight: 700; }
     #card-aimath-jaccard .venn span { display: inline-block; margin: .1rem .25rem .1rem 0; }
     #card-aimath-onehot table { border-collapse: collapse; font-size: .82rem; margin: .4rem 0; font-family: var(--mono, monospace); }
     #card-aimath-onehot td, #card-aimath-onehot th { border: 1px solid var(--rule, #d9dad2); padding: .15rem .35rem; text-align: center; }
@@ -130,17 +130,17 @@
             <div class="presets" role="group" aria-label="예시 문장 쌍"><button class="chip" type="button" data-p="0">비슷한 질문</button><button class="chip" type="button" data-p="1">같은 낱말, 다른 뜻</button><button class="chip" type="button" data-p="2">다른 주제</button></div>
             <label class="small">문장 A<textarea class="ta" aria-label="문장 A"></textarea></label>
             <label class="small">문장 B<textarea class="tb" aria-label="문장 B"></textarea></label>
-            <div class="venn" aria-live="polite"><div class="a"><b>A에만</b><span class="oa"></span></div><div class="ab"><b>A ∩ B</b><span class="oab"></span></div><div class="b"><b>B에만</b><span class="ob"></span></div></div>
+            <div class="venn" aria-live="polite"><div class="a"><p class="vh">A에만</p><span class="oa"></span></div><div class="ab"><p class="vh">A ∩ B</p><span class="oab"></span></div><div class="b"><p class="vh">B에만</p><span class="ob"></span></div></div>
             <p class="mono small say" role="status"></p>
-            <p class="fig-note">낱말은 띄어쓰기로 나누고 흔한 조사(은, 는, 이, 가, 을, 를 등)만 떼는 아주 단순한 방법으로 나눴습니다.</p>
+            <p class="fig-note">낱말은 띄어쓰기로 나누고 흔한 조사(은, 는, 이, 가, 을, 를 등)만 떼는 아주 단순한 방법으로 나눴다.</p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>고객 상담 챗봇은 "비밀번호를 잊어버렸어요"와 "비밀번호가 기억나지 않아요"가 같은 질문임을 알아야 합니다. 컴퓨터가 두 문장의 비슷한 정도를 계산하려면 어떻게 해야 할까요?</li>
-            <li><span class="tag">복원</span>\(n(A \cup B) = n(A) + n(B) - n(A \cap B)\).</li>
-            <li><span class="tag">설명</span>문장을 낱말의 <em>집합</em>으로 나타내면, 두 문장에 함께 나오는 낱말은 교집합, 둘 중 하나라도 나오는 낱말은 합집합입니다. <em>자카드 유사도</em> \(J(A, B) = \dfrac{n(A \cap B)}{n(A \cup B)}\)는 0(공통 낱말 없음)과 1(낱말이 같음) 사이의 값입니다.</li>
-            <li><span class="tag">연결</span>검색 엔진의 중복 문서 찾기, 표절 검사, 추천 시스템(함께 산 상품의 집합 비교)에서 자카드 유사도를 씁니다. 다음 카드에서는 낱말의 횟수까지 담는 벡터로 나타냅니다.</li>
-            <li><span class="tag">적용</span>예시 세 쌍의 유사도를 비교하고, 직접 문장을 바꿔 유사도를 0.5 이상으로 만들어 보세요. "같은 낱말, 다른 뜻" 쌍에서는 무엇이 문제인가요?</li>
-            <li class="warn"><span class="tag">판단</span>집합은 순서와 횟수를 무시합니다. "고양이가 강아지를 쫓았다"와 "강아지가 고양이를 쫓았다"는 자카드 유사도가 1이지만 뜻은 전혀 다릅니다. 또 "잊어버렸다"와 "기억나지 않는다"처럼 낱말이 달라도 뜻이 같은 경우는 잡아내지 못합니다.</li>
+            <li><span class="tag">질문</span>고객 상담 챗봇은 “비밀번호를 잊어버렸어요”와 “비밀번호가 기억나지 않아요”가 같은 질문임을 알아야 한다. 컴퓨터가 두 문장의 비슷한 정도를 계산하려면 어떻게 해야 할까?</li>
+            <li><span class="tag">복원</span>두 집합의 합집합의 원소 개수는 \(n(A \cup B) = n(A) + n(B) - n(A \cap B)\)이다.</li>
+            <li><span class="tag">설명</span>문장을 낱말의 <em>집합</em>으로 나타내면, 두 문장에 함께 나오는 낱말은 교집합, 둘 중 하나라도 나오는 낱말은 합집합이 된다. 그래서 <em>자카드 유사도</em> \(J(A, B) = \dfrac{n(A \cap B)}{n(A \cup B)}\)는 0(공통 낱말 없음)과 1(낱말이 같음) 사이의 값이다.</li>
+            <li><span class="tag">연결</span>검색 엔진의 중복 문서 찾기, 표절 검사, 함께 산 상품의 집합을 비교하는 추천 시스템에서 자카드 유사도를 쓴다. 다음 카드에서는 낱말의 횟수까지 담는 벡터로 나타낸다.</li>
+            <li><span class="tag">적용</span>예시 세 쌍의 유사도를 비교하고, 직접 문장을 바꿔 유사도를 0.5 이상으로 만들어 보자. 그리고 ‘같은 낱말, 다른 뜻’ 쌍에서는 무엇이 문제인지 생각해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>집합은 순서와 횟수를 무시한다. 그래서 “고양이가 강아지를 쫓았다”와 “강아지가 고양이를 쫓았다”는 자카드 유사도가 1이지만 뜻은 전혀 다르다. 또 ‘잊어버렸다’와 ‘기억나지 않는다’처럼 낱말이 달라도 뜻이 같은 경우는 잡아내지 못한다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -162,7 +162,7 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">아래 낱말을 눌러 나만의 문장을 만드세요(같은 낱말을 여러 번 눌러도 됩니다). 표의 맨 아래 줄이 내 문장의 벡터입니다.</p>
+            <p class="small">아래 낱말을 눌러 나만의 문장을 만들어 보자(같은 낱말을 여러 번 눌러도 된다). 표의 맨 아래 줄이 내 문장의 벡터이다.</p>
             <div class="words" role="group" aria-label="낱말 고르기"></div>
             <div class="presets"><button class="chip go-clear" type="button">내 문장 지우기</button></div>
             <p class="mine mono small"></p>
@@ -170,12 +170,12 @@
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>컴퓨터는 글자를 그대로 계산할 수 없습니다. 문장을 수로 바꿔야 비교하거나 분류할 수 있는데, 어떻게 바꿀 수 있을까요?</li>
-            <li><span class="tag">복원</span>좌표평면의 두 점 \((a_1, a_2)\), \((b_1, b_2)\) 사이의 거리는 \(\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2}\)입니다.</li>
-            <li><span class="tag">설명</span>\(n\)개의 수를 순서대로 늘어놓은 \((a_1, a_2, \ldots, a_n)\)을 \(n\)차원 <em>벡터</em>라 하고, 두 벡터의 거리도 같은 방법으로 \(\sqrt{(a_1 - b_1)^2 + \cdots + (a_n - b_n)^2}\)라 합니다.쓰는 낱말을 모두 모아 순서를 정한 것을 <em>낱말 사전</em>이라 합니다. 사전의 \(k\)번째 낱말은 \(k\)번째 성분만 1이고 나머지는 0인 <em>원-핫 벡터</em>로 나타냅니다. 문장은 그 안의 낱말 벡터를 모두 더한 벡터, 곧 각 낱말이 몇 번 나왔는지를 적은 벡터로 나타낼 수 있습니다(<em>낱말 주머니</em>). 이렇게 하면 문장끼리의 거리를 계산할 수 있습니다.</li>
-            <li><span class="tag">연결</span>다음 절에서는 이 횟수 벡터로 글을 요약하고, 낱말마다 중요도를 다르게 줍니다. 실제 인공지능은 비슷한 뜻의 낱말이 가까운 벡터가 되도록 학습한 벡터(낱말 임베딩)를 씁니다.</li>
-            <li><span class="tag">적용</span>문장 1과 가장 가까운 문장을 만들어 보세요. 낱말 순서를 바꾸면 벡터는 어떻게 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>원-핫 벡터에서는 서로 다른 두 낱말의 거리가 모두 \(\sqrt2\)로 같습니다. "강아지"와 "개"가 "강아지"와 "비행기"만큼 다르다고 보는 셈이라, 뜻의 가까움은 담지 못합니다.</li>
+            <li><span class="tag">질문</span>컴퓨터는 글자를 그대로 계산할 수 없다. 문장을 수로 바꿔야 비교하거나 분류할 수 있는데, 어떻게 바꿀 수 있을까?</li>
+            <li><span class="tag">복원</span>좌표평면의 두 점 \((a_1, a_2)\), \((b_1, b_2)\) 사이의 거리는 \(\sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2}\)이다.</li>
+            <li><span class="tag">설명</span>\(n\)개의 수를 순서대로 늘어놓은 \((a_1, a_2, \ldots, a_n)\)을 \(n\)차원 <em>벡터</em>라 하고, 두 벡터의 거리도 같은 방법으로 \(\sqrt{(a_1 - b_1)^2 + \cdots + (a_n - b_n)^2}\)라 한다. 쓰는 낱말을 모두 모아 순서를 정한 것을 <em>낱말 사전</em>이라 하며, 사전의 \(k\)번째 낱말은 \(k\)번째 성분만 1이고 나머지는 0인 <em>원-핫 벡터</em>로 나타낸다. 그러면 문장은 그 안의 낱말 벡터를 모두 더한 벡터, 곧 각 낱말이 몇 번 나왔는지를 적은 벡터로 나타낼 수 있고(<em>낱말 주머니</em>), 문장끼리의 거리도 계산할 수 있다.</li>
+            <li><span class="tag">연결</span>다음 절에서는 이 횟수 벡터로 글을 요약하고, 낱말마다 중요도를 다르게 준다. 실제 인공지능은 비슷한 뜻의 낱말이 가까운 벡터가 되도록 학습한 벡터(낱말 임베딩)를 쓴다.</li>
+            <li><span class="tag">적용</span>문장 1과 가장 가까운 문장을 만들어 보자. 그리고 낱말 순서를 바꾸면 벡터가 어떻게 되는지 확인해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>원-핫 벡터에서는 서로 다른 두 낱말의 거리가 모두 \(\sqrt2\)로 같다. ‘강아지’와 ‘개’가 ‘강아지’와 ‘비행기’만큼 다르다고 보는 셈이라, 뜻의 가까움은 담지 못한다.</li>
           </ol>
         </div>
         <div class="quiz">
