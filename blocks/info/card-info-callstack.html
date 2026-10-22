@@ -73,7 +73,7 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">print가 재귀 호출 <em>다음</em>에 있습니다. <code>count_down(3)</code>은 무엇을 출력할까요?</p>
+    <p class="q">print가 재귀 호출 <em>다음</em>에 있다. <code>count_down(3)</code>은 무엇을 출력할까?</p>
     <pre class="code qcode">def count_down(n):
     if n == 0:
         return
@@ -82,9 +82,9 @@
 
 count_down(3)</pre>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3, 2, 1 순서로 한 줄씩<span class="why"><b>print가 재귀 호출보다 앞에 있을 때의 결과입니다.</b> 여기서는 각 프레임이 아래 호출이 모두 끝난 뒤에야 print합니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1, 2, 3 순서로 한 줄씩<span class="why"><b>맞습니다.</b> 스택의 맨 위(n = 1)가 가장 먼저 print를 실행하고 빠지므로, 나중에 호출된 프레임이 먼저 출력합니다(후입선출).</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0, 1, 2, 3 순서로 한 줄씩<span class="why"><b>기저 조건의 동작을 놓친 답입니다.</b> n == 0이면 print에 닿기 전에 return하므로 0은 출력되지 않습니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3, 2, 1 순서로 한 줄씩<span class="why"><b>print가 재귀 호출보다 앞에 있을 때의 결과이다.</b> 여기서는 각 프레임이 아래 호출이 모두 끝난 뒤에야 print한다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1, 2, 3 순서로 한 줄씩<span class="why"><b>맞다.</b> 스택의 맨 위(n = 1)가 가장 먼저 print를 실행하고 빠지므로, 나중에 호출된 프레임이 먼저 출력한다(후입선출).</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0, 1, 2, 3 순서로 한 줄씩<span class="why"><b>기저 조건의 동작을 놓친 답이다.</b> n == 0이면 print에 닿기 전에 return하므로 0은 출력되지 않는다.</span></span></button></li>
     </ol>
   </div>
 </article>

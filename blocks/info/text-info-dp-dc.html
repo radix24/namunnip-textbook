@@ -68,11 +68,11 @@ print(lcs("GATTACA", "TACGCA"))   # 4</pre>
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">정렬된 배열에서 이진 탐색을 재귀 함수로 짜고, 같은 구간을 다시 탐색하지 않도록 (왼쪽 끝, 오른쪽 끝)마다 결과를 사전에 저장했습니다. 효과는?</p>
+    <p class="q">정렬된 배열에서 이진 탐색을 재귀 함수로 짜고, 같은 구간을 다시 탐색하지 않도록 (왼쪽 끝, 오른쪽 끝)마다 결과를 사전에 저장했다. 효과는?</p>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>O(log n)이 O(1)에 가깝게 빨라진다<span class="why"><b>저장한 값을 다시 꺼내 쓸 일이 없습니다.</b> 한 번 탐색할 때 각 구간은 한 번씩만 방문됩니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>한 번의 탐색은 빨라지지 않고 메모리만 더 쓴다<span class="why"><b>맞습니다.</b> 이진 탐색의 부분 문제는 겹치지 않는 분할 정복이라 메모이제이션의 이득이 없습니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>동적 계획법이 되었으므로 O(n)으로 느려진다<span class="why"><b>저장을 덧붙였다고 방문하는 구간 수가 늘지는 않습니다.</b> 시간은 여전히 O(log n)이고 사전에 넣는 비용이 조금 더해질 뿐입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>O(log n)이 O(1)에 가깝게 빨라진다<span class="why"><b>저장한 값을 다시 꺼내 쓸 일이 없다.</b> 한 번 탐색할 때 각 구간은 한 번씩만 방문된다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>한 번의 탐색은 빨라지지 않고 메모리만 더 쓴다<span class="why"><b>맞다.</b> 이진 탐색의 부분 문제는 겹치지 않는 분할 정복이라 메모이제이션의 이득이 없다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>동적 계획법이 되었으므로 O(n)으로 느려진다<span class="why"><b>저장을 덧붙였다고 방문하는 구간 수가 늘지는 않는다.</b> 시간은 여전히 O(log n)이고 사전에 넣는 비용이 조금 더해질 뿐이다.</span></span></button></li>
     </ol>
   </div>
 </article>

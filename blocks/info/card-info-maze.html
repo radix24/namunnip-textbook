@@ -53,11 +53,11 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">지하철 노선도에서 "환승을 포함해 가장 적은 역을 거치는 경로"를 찾으려 합니다. 역은 정점, 이웃한 두 역은 간선입니다. 알맞은 방법은?</p>
+    <p class="q">지하철 노선도에서 "환승을 포함해 가장 적은 역을 거치는 경로"를 찾으려 한다. 역은 정점, 이웃한 두 역은 간선이다. 알맞은 방법은?</p>
     <ol>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>출발역에서 BFS를 하고 도착역을 처음 꺼낼 때 멈춘다<span class="why"><b>맞습니다.</b> 거치는 역의 수만 세면 모든 간선의 길이가 1인 그래프이므로 BFS가 최단 경로를 줍니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>DFS로 처음 찾은 경로가 가장 짧다<span class="why"><b>DFS는 한 방향으로 깊이 들어가므로</b> 처음 찾은 경로가 멀리 돌아가는 길일 수 있습니다. 미로 카드에서 직접 확인할 수 있습니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>역 사이 이동 시간이 서로 달라도 BFS의 답이 가장 빠른 경로이다<span class="why"><b>조건이 바뀌었습니다.</b> 역의 수가 가장 적은 경로와 시간이 가장 짧은 경로는 다를 수 있습니다. 간선마다 길이가 다르면 데이크스트라 같은 방법이 필요합니다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>출발역에서 BFS를 하고 도착역을 처음 꺼낼 때 멈춘다<span class="why"><b>맞다.</b> 거치는 역의 수만 세면 모든 간선의 길이가 1인 그래프이므로 BFS가 최단 경로를 준다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>DFS로 처음 찾은 경로가 가장 짧다<span class="why"><b>DFS는 한 방향으로 깊이 들어가므로</b> 처음 찾은 경로가 멀리 돌아가는 길일 수 있다. 미로 카드에서 직접 확인할 수 있다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>역 사이 이동 시간이 서로 달라도 BFS의 답이 가장 빠른 경로이다<span class="why"><b>조건이 바뀌었다.</b> 역의 수가 가장 적은 경로와 시간이 가장 짧은 경로는 다를 수 있다. 간선마다 길이가 다르면 데이크스트라 같은 방법이 필요하다.</span></span></button></li>
     </ol>
   </div>
 </article>

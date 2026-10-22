@@ -172,11 +172,11 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">계단을 한 번에 1칸 또는 2칸씩 오를 때 n칸을 오르는 방법의 수는 ways(n) = ways(n − 1) + ways(n − 2)입니다. ways(40)을 이 식 그대로 단순 재귀로 계산하면 매우 오래 걸립니다. 원인과 처방으로 옳은 것은?</p>
+          <p class="q">계단을 한 번에 1칸 또는 2칸씩 오를 때 n칸을 오르는 방법의 수는 ways(n) = ways(n − 1) + ways(n − 2)이다. ways(40)을 이 식 그대로 단순 재귀로 계산하면 매우 오래 걸린다. 원인과 처방으로 옳은 것은?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>스택 깊이가 한도를 넘기 때문이므로 재귀 한도를 늘린다<span class="why"><b>깊이는 40 정도라 한도 1000보다 훨씬 작습니다.</b> 오래 걸리는 까닭은 깊이가 아니라 호출 수입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 부분 문제를 되풀이해 계산하기 때문이므로 메모 재귀나 반복으로 바꾼다<span class="why"><b>맞습니다.</b> 피보나치와 같은 재귀 관계라서 호출 수가 지수적으로 늘어납니다. 값을 저장하거나 아래에서 위로 쌓으면 약 40번의 계산으로 끝납니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>결과가 너무 큰 정수라 계산이 느리기 때문이므로 실수로 계산한다<span class="why"><b>파이썬 정수는 크기 제한이 없고, ways(40)은 165,580,141로 크지 않습니다.</b> 실수로 바꾸면 큰 수에서 오차만 생깁니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>스택 깊이가 한도를 넘기 때문이므로 재귀 한도를 늘린다<span class="why"><b>깊이는 40 정도라 한도 1000보다 훨씬 작다.</b> 오래 걸리는 까닭은 깊이가 아니라 호출 수이다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 부분 문제를 되풀이해 계산하기 때문이므로 메모 재귀나 반복으로 바꾼다<span class="why"><b>맞다.</b> 피보나치와 같은 재귀 관계라서 호출 수가 지수적으로 늘어난다. 값을 저장하거나 아래에서 위로 쌓으면 약 40번의 계산으로 끝난다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>결과가 너무 큰 정수라 계산이 느리기 때문이므로 실수로 계산한다<span class="why"><b>파이썬 정수는 크기 제한이 없고, ways(40)은 165,580,141로 크지 않다.</b> 실수로 바꾸면 큰 수에서 오차만 생긴다.</span></span></button></li>
           </ol>
         </div>
       </article>
@@ -235,9 +235,9 @@
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
           <p class="q">다음 판단 중 옳은 것은?</p>
           <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>폴더 안의 하위 폴더까지 모든 파일 크기를 더할 때, 폴더 깊이가 수십 단계 이하라면 재귀로 쓰는 것이 자연스럽다<span class="why"><b>맞습니다.</b> 폴더는 “폴더 안에 폴더”가 들어 있는 중첩 구조라 재귀 정의와 잘 맞고, 깊이가 작아 재귀 한도도 문제가 되지 않습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1부터 1,000,000까지의 합은 <code>total_rec(n)</code> 재귀로 써도 문제없다<span class="why"><b>깊이가 백만이 됩니다.</b> 파이썬의 기본 재귀 한도(1000)를 훨씬 넘어 RecursionError가 납니다. 반복문이나 공식 n(n + 1)/2를 씁니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>재귀로만 풀 수 있고 반복으로는 바꿀 수 없는 문제가 있다<span class="why"><b>그럴듯하지만 틀렸습니다.</b> 호출 스택이 하던 일을 리스트로 만든 스택이 대신하면 어떤 재귀도 반복으로 바꿀 수 있습니다. 다만 코드가 더 복잡해질 수 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>폴더 안의 하위 폴더까지 모든 파일 크기를 더할 때, 폴더 깊이가 수십 단계 이하라면 재귀로 쓰는 것이 자연스럽다<span class="why"><b>맞다.</b> 폴더는 “폴더 안에 폴더”가 들어 있는 중첩 구조라 재귀 정의와 잘 맞고, 깊이가 작아 재귀 한도도 문제가 되지 않는다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>1부터 1,000,000까지의 합은 <code>total_rec(n)</code> 재귀로 써도 문제없다<span class="why"><b>깊이가 백만이 된다.</b> 파이썬의 기본 재귀 한도(1000)를 훨씬 넘어 RecursionError가 난다. 반복문이나 공식 n(n + 1)/2를 쓴다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>재귀로만 풀 수 있고 반복으로는 바꿀 수 없는 문제가 있다<span class="why"><b>그럴듯하지만 틀렸다.</b> 호출 스택이 하던 일을 리스트로 만든 스택이 대신하면 어떤 재귀도 반복으로 바꿀 수 있다. 다만 코드가 더 복잡해질 수 있다.</span></span></button></li>
           </ol>
         </div>
       </article>

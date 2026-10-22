@@ -175,7 +175,7 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">print가 재귀 호출 <em>다음</em>에 있습니다. <code>count_down(3)</code>은 무엇을 출력할까요?</p>
+          <p class="q">print가 재귀 호출 <em>다음</em>에 있다. <code>count_down(3)</code>은 무엇을 출력할까?</p>
           <pre class="code qcode">def count_down(n):
           if n == 0:
               return
@@ -184,9 +184,9 @@
 
       count_down(3)</pre>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3, 2, 1 순서로 한 줄씩<span class="why"><b>print가 재귀 호출보다 앞에 있을 때의 결과입니다.</b> 여기서는 각 프레임이 아래 호출이 모두 끝난 뒤에야 print합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1, 2, 3 순서로 한 줄씩<span class="why"><b>맞습니다.</b> 스택의 맨 위(n = 1)가 가장 먼저 print를 실행하고 빠지므로, 나중에 호출된 프레임이 먼저 출력합니다(후입선출).</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0, 1, 2, 3 순서로 한 줄씩<span class="why"><b>기저 조건의 동작을 놓친 답입니다.</b> n == 0이면 print에 닿기 전에 return하므로 0은 출력되지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>3, 2, 1 순서로 한 줄씩<span class="why"><b>print가 재귀 호출보다 앞에 있을 때의 결과이다.</b> 여기서는 각 프레임이 아래 호출이 모두 끝난 뒤에야 print한다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>1, 2, 3 순서로 한 줄씩<span class="why"><b>맞다.</b> 스택의 맨 위(n = 1)가 가장 먼저 print를 실행하고 빠지므로, 나중에 호출된 프레임이 먼저 출력한다(후입선출).</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>0, 1, 2, 3 순서로 한 줄씩<span class="why"><b>기저 조건의 동작을 놓친 답이다.</b> n == 0이면 print에 닿기 전에 return하므로 0은 출력되지 않는다.</span></span></button></li>
           </ol>
         </div>
       </article>
@@ -251,11 +251,11 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">자연수 n의 각 자리 숫자의 합(예: 472 → 13)을 구하는 재귀 함수 <code>dsum(n)</code>을 만들려고 합니다. 기저 조건을 “n &lt; 10이면 n을 돌려준다”로 둘 때, 재귀 단계로 옳은 것은?</p>
+          <p class="q">자연수 n의 각 자리 숫자의 합(예: 472 → 13)을 구하는 재귀 함수 <code>dsum(n)</code>을 만들려고 한다. 기저 조건을 “n &lt; 10이면 n을 돌려준다”로 둘 때, 재귀 단계로 옳은 것은?</p>
           <ol>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span><code>return n % 10 + dsum(n // 10)</code><span class="why"><b>맞습니다.</b> 일의 자리(n % 10)를 떼고 남은 수(n // 10)의 자리 합은 재귀 호출이 구해 준다고 믿으면 됩니다. n // 10은 자릿수가 하나 줄어 반드시 10보다 작아집니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span><code>return n // 10 + dsum(n % 10)</code><span class="why"><b>끝나기는 하지만 답이 틀립니다.</b> n % 10은 한 자리라 곧바로 기저 조건에 닿지만, n // 10(472 → 47)을 자리 합이 아니라 수 그대로 더합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span><code>return n % 10 + dsum(n)</code><span class="why"><b>문제가 작아지지 않습니다.</b> 같은 n으로 다시 부르므로 기저 조건에 닿지 못하고 RecursionError가 납니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span><code>return n % 10 + dsum(n // 10)</code><span class="why"><b>맞다.</b> 일의 자리(n % 10)를 떼고 남은 수(n // 10)의 자리 합은 재귀 호출이 구해 준다고 믿으면 된다. n // 10은 자릿수가 하나 줄어 반드시 10보다 작아진다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span><code>return n // 10 + dsum(n % 10)</code><span class="why"><b>끝나기는 하지만 답이 틀린다.</b> n % 10은 한 자리라 곧바로 기저 조건에 닿지만, n // 10(472 → 47)을 자리 합이 아니라 수 그대로 더한다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span><code>return n % 10 + dsum(n)</code><span class="why"><b>문제가 작아지지 않는다.</b> 같은 n으로 다시 부르므로 기저 조건에 닿지 못하고 RecursionError가 난다.</span></span></button></li>
           </ol>
         </div>
       </article>

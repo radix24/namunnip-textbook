@@ -59,11 +59,11 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">이번에는 한 번에 1칸, 2칸, 3칸 중 하나를 오를 수 있습니다. ways(n) = ways(n−1) + ways(n−2) + ways(n−3)을 메모이제이션으로 구할 때, n이 커지면 함수 호출 수는 어떻게 늘어날까요?</p>
+    <p class="q">이번에는 한 번에 1칸, 2칸, 3칸 중 하나를 오를 수 있다. ways(n) = ways(n−1) + ways(n−2) + ways(n−3)을 메모이제이션으로 구할 때, n이 커지면 함수 호출 수는 어떻게 늘어날까?</p>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>호출마다 세 갈래로 나뉘므로 약 3ⁿ에 비례한다<span class="why"><b>단순 재귀일 때의 생각입니다.</b> 메모가 있으면 각 n은 한 번만 계산되고, 나머지 호출은 저장된 값을 바로 돌려줍니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>각 n을 한 번씩만 계산하므로 n에 비례한다 (약 3n번)<span class="why"><b>맞습니다.</b> 서로 다른 부분 문제는 n+1개뿐이고, 하나를 계산할 때 호출을 세 번 하므로 호출 수는 약 3n입니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>표를 채우는 것과 같으므로 n²에 비례한다<span class="why"><b>표의 칸은 n+1개이고</b> 칸 하나를 채우는 데 덧셈 두 번이면 됩니다. 2차원 표가 필요한 문제(배낭, 최장 공통 부분 수열)와 헷갈린 것입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>호출마다 세 갈래로 나뉘므로 약 3ⁿ에 비례한다<span class="why"><b>단순 재귀일 때의 생각이다.</b> 메모가 있으면 각 n은 한 번만 계산되고, 나머지 호출은 저장된 값을 바로 돌려준다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>각 n을 한 번씩만 계산하므로 n에 비례한다 (약 3n번)<span class="why"><b>맞다.</b> 서로 다른 부분 문제는 n+1개뿐이고, 하나를 계산할 때 호출을 세 번 하므로 호출 수는 약 3n이다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>표를 채우는 것과 같으므로 n²에 비례한다<span class="why"><b>표의 칸은 n+1개이고</b> 칸 하나를 채우는 데 덧셈 두 번이면 된다. 2차원 표가 필요한 문제(배낭, 최장 공통 부분 수열)와 헷갈린 것이다.</span></span></button></li>
     </ol>
   </div>
 </article>

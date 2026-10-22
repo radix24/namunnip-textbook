@@ -71,11 +71,11 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">계단을 한 번에 1칸 또는 2칸씩 오를 때 n칸을 오르는 방법의 수는 ways(n) = ways(n − 1) + ways(n − 2)입니다. ways(40)을 이 식 그대로 단순 재귀로 계산하면 매우 오래 걸립니다. 원인과 처방으로 옳은 것은?</p>
+    <p class="q">계단을 한 번에 1칸 또는 2칸씩 오를 때 n칸을 오르는 방법의 수는 ways(n) = ways(n − 1) + ways(n − 2)이다. ways(40)을 이 식 그대로 단순 재귀로 계산하면 매우 오래 걸린다. 원인과 처방으로 옳은 것은?</p>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>스택 깊이가 한도를 넘기 때문이므로 재귀 한도를 늘린다<span class="why"><b>깊이는 40 정도라 한도 1000보다 훨씬 작습니다.</b> 오래 걸리는 까닭은 깊이가 아니라 호출 수입니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 부분 문제를 되풀이해 계산하기 때문이므로 메모 재귀나 반복으로 바꾼다<span class="why"><b>맞습니다.</b> 피보나치와 같은 재귀 관계라서 호출 수가 지수적으로 늘어납니다. 값을 저장하거나 아래에서 위로 쌓으면 약 40번의 계산으로 끝납니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>결과가 너무 큰 정수라 계산이 느리기 때문이므로 실수로 계산한다<span class="why"><b>파이썬 정수는 크기 제한이 없고, ways(40)은 165,580,141로 크지 않습니다.</b> 실수로 바꾸면 큰 수에서 오차만 생깁니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>스택 깊이가 한도를 넘기 때문이므로 재귀 한도를 늘린다<span class="why"><b>깊이는 40 정도라 한도 1000보다 훨씬 작다.</b> 오래 걸리는 까닭은 깊이가 아니라 호출 수이다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>같은 부분 문제를 되풀이해 계산하기 때문이므로 메모 재귀나 반복으로 바꾼다<span class="why"><b>맞다.</b> 피보나치와 같은 재귀 관계라서 호출 수가 지수적으로 늘어난다. 값을 저장하거나 아래에서 위로 쌓으면 약 40번의 계산으로 끝난다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>결과가 너무 큰 정수라 계산이 느리기 때문이므로 실수로 계산한다<span class="why"><b>파이썬 정수는 크기 제한이 없고, ways(40)은 165,580,141로 크지 않다.</b> 실수로 바꾸면 큰 수에서 오차만 생긴다.</span></span></button></li>
     </ol>
   </div>
 </article>

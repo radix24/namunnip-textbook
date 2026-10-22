@@ -143,10 +143,10 @@
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
           <p class="q">구간 \([-1, 1]\)에서 롤의 정리를 그대로 쓸 수 있는 함수는?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>\(f(x) = |x|\)<span class="why"><b>미분가능 조건이 깨집니다.</b> \(f(-1) = f(1) = 1\)이고 연속이지만, \(x = 0\)에서 뾰족해 미분가능하지 않습니다. 실제로 \(f'(x) = 0\)인 점도 없습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(f(x) = x^3\)<span class="why"><b>양 끝 높이가 다릅니다.</b> 다항함수라 연속이고 미분가능하지만 \(f(-1) = -1, f(1) = 1\)입니다. \(f'(0) = 0\)인 점이 있기는 해도, 롤의 정리로 얻은 결론은 아닙니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄷ</span><span>\(f(x) = x^4 - x^2\)<span class="why"><b>맞습니다.</b> 다항함수라 연속이고 미분가능하며 \(f(-1) = f(1) = 0\)입니다. 실제로 \(f'(x) = 4x^3 - 2x = 0\)에서 \(x = 0, \pm \frac{1}{\sqrt{2}}\)가 모두 \((-1, 1)\) 안에 있습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(f(x) = x^2 + x\)<span class="why"><b>양 끝 높이가 다릅니다.</b> \(f(-1) = 0, f(1) = 2\)입니다. 이차함수라 꼭짓점 \(x = -\frac{1}{2}\)에서 기울기가 0이지만, 롤의 정리의 조건을 갖춘 것은 아닙니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>\(f(x) = |x|\)<span class="why"><b>미분가능 조건이 깨진다.</b> \(f(-1) = f(1) = 1\)이고 연속이지만, \(x = 0\)에서 뾰족해 미분가능하지 않다. 실제로 \(f'(x) = 0\)인 점도 없다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>\(f(x) = x^3\)<span class="why"><b>양 끝 높이가 다르다.</b> 다항함수라 연속이고 미분가능하지만 \(f(-1) = -1, f(1) = 1\)이다. \(f'(0) = 0\)인 점이 있기는 해도, 롤의 정리로 얻은 결론은 아니다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄷ</span><span>\(f(x) = x^4 - x^2\)<span class="why"><b>맞다.</b> 다항함수라 연속이고 미분가능하며 \(f(-1) = f(1) = 0\)이다. 실제로 \(f'(x) = 4x^3 - 2x = 0\)에서 \(x = 0, \pm \frac{1}{\sqrt{2}}\)가 모두 \((-1, 1)\) 안에 있다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>\(f(x) = x^2 + x\)<span class="why"><b>양 끝 높이가 다르다.</b> \(f(-1) = 0, f(1) = 2\)이다. 이차함수라 꼭짓점 \(x = -\frac{1}{2}\)에서 기울기가 0이지만, 롤의 정리의 조건을 갖춘 것은 아니다.</span></span></button></li>
           </ol>
         </div>
       </article>
@@ -194,10 +194,10 @@
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
           <p class="q">\(f(x) = x^3\)에 대하여 구간 [0, 3]에서 평균값 정리를 만족하는 \(c\)는?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>\(\frac{3}{2}\)<span class="why"><b>이차함수에서만 맞는 지름길입니다.</b> 가운데 점에서 \(f'(\frac{3}{2}) = \frac{27}{4} = 6.75\)인데, 평균변화율은 \(\frac{27 - 0}{3} = 9\)입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>\(\sqrt{3}\)<span class="why"><b>맞습니다.</b> 평균변화율은 9이고, \(f'(c) = 3c^2 = 9\)에서 \(c = \pm \sqrt{3}\)입니다. 이 가운데 (0, 3) 안에 있는 것은 \(\sqrt{3}\)뿐입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\sqrt{3}\)과 \(-\sqrt{3}\)<span class="why"><b>구간 밖의 해를 버리지 않았습니다.</b> \(-\sqrt{3}\)은 방정식의 해이지만 (0, 3)에 들어 있지 않습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3<span class="why"><b>평균변화율 9를 \(f(c)\)와 같게 놓았습니다.</b> \(c^3 = 9\)가 아니라 \(f'(c) = 9\)를 풀어야 하고, 끝점 3은 열린 구간 (0, 3)에 들지 않습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>\(\frac{3}{2}\)<span class="why"><b>이차함수에서만 맞는 지름길이다.</b> 가운데 점에서 \(f'(\frac{3}{2}) = \frac{27}{4} = 6.75\)인데, 평균변화율은 \(\frac{27 - 0}{3} = 9\)이다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>\(\sqrt{3}\)<span class="why"><b>맞다.</b> 평균변화율은 9이고, \(f'(c) = 3c^2 = 9\)에서 \(c = \pm \sqrt{3}\)이다. 이 가운데 (0, 3) 안에 있는 것은 \(\sqrt{3}\)뿐이다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>\(\sqrt{3}\)과 \(-\sqrt{3}\)<span class="why"><b>구간 밖의 해를 버리지 않았다.</b> \(-\sqrt{3}\)은 방정식의 해이지만 (0, 3)에 들어 있지 않는다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄹ</span><span>3<span class="why"><b>평균변화율 9를 \(f(c)\)와 같게 놓았다.</b> \(c^3 = 9\)가 아니라 \(f'(c) = 9\)를 풀어야 하고, 끝점 3은 열린 구간 (0, 3)에 들지 않는다.</span></span></button></li>
           </ol>
         </div>
       </article>

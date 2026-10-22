@@ -148,11 +148,11 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">헤어드라이어(1500 W)를 아침마다 4분씩 씁니다. 스마트 플러그가 15분마다 한 번씩만 순간 전력을 재서 전력량을 계산한다면, 30일 동안의 기록은 어떻게 될까요?</p>
+          <p class="q">헤어드라이어(1500 W)를 아침마다 4분씩 쓴다. 스마트 플러그가 15분마다 한 번씩만 순간 전력을 재서 전력량을 계산한다면, 30일 동안의 기록은 어떻게 될까?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>매일 정확히 0.1 kWh가 기록된다<span class="why"><b>실제 전력량이 1500 W × 4/60 h = 0.1 kWh이지만</b>, 15분 간격으로는 그렇게 기록되지 않습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>대부분의 날은 0으로, 가끔은 0.375 kWh로 기록되어 하루하루의 값은 크게 틀리지만 긴 기간의 평균은 참값에 가까워질 수 있다<span class="why"><b>맞습니다.</b> 측정 순간이 사용 시간에 걸릴 확률은 4/15이고, 걸리면 15분 동안 썼다고 셉니다. 평균은 (4/15) × 0.375 = 0.1 kWh입니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>측정 간격과 상관없이 플러그는 순간 전력을 재므로 오차가 없다<span class="why"><b>순간 전력이 정확해도</b> 그 사이의 변화를 모르면 전력량은 틀립니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>매일 정확히 0.1 kWh가 기록된다<span class="why"><b>실제 전력량이 1500 W × 4/60 h = 0.1 kWh이지만</b>, 15분 간격으로는 그렇게 기록되지 않는다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>대부분의 날은 0으로, 가끔은 0.375 kWh로 기록되어 하루하루의 값은 크게 틀리지만 긴 기간의 평균은 참값에 가까워질 수 있다<span class="why"><b>맞다.</b> 측정 순간이 사용 시간에 걸릴 확률은 4/15이고, 걸리면 15분 동안 썼다고 센다. 평균은 (4/15) × 0.375 = 0.1 kWh이다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>측정 간격과 상관없이 플러그는 순간 전력을 재므로 오차가 없다<span class="why"><b>순간 전력이 정확해도</b> 그 사이의 변화를 모르면 전력량은 틀린다.</span></span></button></li>
           </ol>
         </div>
       </article>
@@ -199,11 +199,11 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">피부 사진으로 피부 질환을 찾는 인공지능을 만들었는데, 학습 사진의 대부분이 밝은 피부색인 사람의 것이었습니다. 하나씩 빼기 검증의 정확도는 95 %였습니다. 이 인공지능에 대한 판단으로 옳은 것은?</p>
+          <p class="q">피부 사진으로 피부 질환을 찾는 인공지능을 만들었는데, 학습 사진의 대부분이 밝은 피부색인 사람의 것이었다. 하나씩 빼기 검증의 정확도는 95 %였다. 이 인공지능에 대한 판단으로 옳은 것은?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>정확도가 95 %이므로 누구에게 써도 95 %를 맞힌다<span class="why"><b>검증 자료도 같은 치우침을 가지고 있습니다.</b> 학습 데이터에 드문 집단에서의 정확도는 따로 확인해야 합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>어두운 피부색의 사진에서는 성능이 낮을 수 있으므로, 집단별 정확도를 따로 확인하고 데이터를 보충해야 한다<span class="why"><b>맞습니다.</b> '황화물 빼기'에서 본 것처럼, 분류기는 학습 데이터에 적게 나온 경우를 잘 다루지 못합니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>k를 크게 하면 치우침이 사라진다<span class="why"><b>k는 이웃을 몇 개 보느냐일 뿐입니다.</b> 오히려 다수인 집단 쪽으로 더 끌려갈 수 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>정확도가 95 %이므로 누구에게 써도 95 %를 맞힌다<span class="why"><b>검증 자료도 같은 치우침을 가지고 있다.</b> 학습 데이터에 드문 집단에서의 정확도는 따로 확인해야 한다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>어두운 피부색의 사진에서는 성능이 낮을 수 있으므로, 집단별 정확도를 따로 확인하고 데이터를 보충해야 한다<span class="why"><b>맞다.</b> '황화물 빼기'에서 본 것처럼, 분류기는 학습 데이터에 적게 나온 경우를 잘 다루지 못한다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>k를 크게 하면 치우침이 사라진다<span class="why"><b>k는 이웃을 몇 개 보느냐일 뿐이다.</b> 오히려 다수인 집단 쪽으로 더 끌려갈 수 있다.</span></span></button></li>
           </ol>
         </div>
       </article>
@@ -242,11 +242,11 @@
         </div>
         <div class="quiz">
           <h3><span class="mono">확인</span>조건이 달라지면</h3>
-          <p class="q">한 학생이 생성형 인공지능에게 "우리 지역 하천의 수질 변화"를 물었더니, 연도별 수치와 함께 논문 두 편을 출처로 알려 주었습니다. 탐구 보고서에 쓰기 전에 해야 할 일로 가장 알맞은 것은?</p>
+          <p class="q">한 학생이 생성형 인공지능에게 "우리 지역 하천의 수질 변화"를 물었더니, 연도별 수치와 함께 논문 두 편을 출처로 알려 주었다. 탐구 보고서에 쓰기 전에 해야 할 일로 가장 알맞은 것은?</p>
           <ol>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>출처가 붙어 있으므로 그대로 인용한다<span class="why"><b>출처가 붙어 있어도 실제로 존재하는지 모릅니다.</b> 생성형 인공지능은 그럴듯한 가짜 출처를 만들 수 있습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>논문과 수치를 원래 자료(학술 데이터베이스, 물환경정보시스템 등)에서 찾아 확인하고, 인공지능을 사용한 방식을 보고서에 밝힌다<span class="why"><b>맞습니다.</b> 확인한 원자료를 인용하고, 도구를 어떻게 썼는지 밝히는 것이 연구 윤리에 맞습니다.</span></span></button></li>
-            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>다른 인공지능에게 한 번 더 물어 답이 같으면 믿는다<span class="why"><b>같은 종류의 도구끼리 맞춰 보는 것은 검증이 아닙니다.</b> 둘 다 같은 잘못된 정보를 학습했을 수 있습니다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>출처가 붙어 있으므로 그대로 인용한다<span class="why"><b>출처가 붙어 있어도 실제로 존재하는지 모른다.</b> 생성형 인공지능은 그럴듯한 가짜 출처를 만들 수 있다.</span></span></button></li>
+            <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>논문과 수치를 원래 자료(학술 데이터베이스, 물환경정보시스템 등)에서 찾아 확인하고, 인공지능을 사용한 방식을 보고서에 밝힌다<span class="why"><b>맞다.</b> 확인한 원자료를 인용하고, 도구를 어떻게 썼는지 밝히는 것이 연구 윤리에 맞다.</span></span></button></li>
+            <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>다른 인공지능에게 한 번 더 물어 답이 같으면 믿는다<span class="why"><b>같은 종류의 도구끼리 맞춰 보는 것은 검증이 아니다.</b> 둘 다 같은 잘못된 정보를 학습했을 수 있다.</span></span></button></li>
           </ol>
         </div>
       </article>

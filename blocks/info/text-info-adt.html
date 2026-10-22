@@ -56,11 +56,11 @@ len(q) == 0                  <span class="c"># 비었는지 확인 (또는 not q
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">문서 편집기의 ‘실행 취소’ 기록을 저장하려 합니다. 기록은 최대 100개만 남기고, 넘치면 <em>가장 오래된</em> 기록을 버립니다. 가장 알맞은 구현은?</p>
+    <p class="q">문서 편집기의 ‘실행 취소’ 기록을 저장하려 한다. 기록은 최대 100개만 남기고, 넘치면 <em>가장 오래된</em> 기록을 버린다. 가장 알맞은 구현은?</p>
     <ol>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>리스트를 큐로 써서 앞에서 꺼낸다<span class="why"><b>실행 취소는 가장 최근 기록부터 꺼내므로 기본은 스택입니다.</b> 큐처럼 앞에서 꺼내면 가장 오래된 작업이 취소됩니다.</span></span></button></li>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>deque를 써서 뒤에 넣고 뒤에서 꺼내며, 넘치면 앞에서 버린다<span class="why"><b>맞습니다.</b> 실행 취소는 스택처럼 뒤에서 넣고 꺼내고, 오래된 기록은 앞에서 버려야 하므로 양쪽 끝이 모두 빠른 deque가 알맞습니다. <code>deque(maxlen=100)</code>은 이 일을 자동으로 해 줍니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>리스트를 스택으로 쓰고, 넘치면 <code>pop(0)</code>으로 버린다<span class="why"><b>동작은 맞지만 넘칠 때마다 원소 99개를 옮깁니다.</b> 작업이 잦으면 비효율적입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄱ</span><span>리스트를 큐로 써서 앞에서 꺼낸다<span class="why"><b>실행 취소는 가장 최근 기록부터 꺼내므로 기본은 스택이다.</b> 큐처럼 앞에서 꺼내면 가장 오래된 작업이 취소된다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄴ</span><span>deque를 써서 뒤에 넣고 뒤에서 꺼내며, 넘치면 앞에서 버린다<span class="why"><b>맞다.</b> 실행 취소는 스택처럼 뒤에서 넣고 꺼내고, 오래된 기록은 앞에서 버려야 하므로 양쪽 끝이 모두 빠른 deque가 알맞다. <code>deque(maxlen=100)</code>은 이 일을 자동으로 해 준다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>리스트를 스택으로 쓰고, 넘치면 <code>pop(0)</code>으로 버린다<span class="why"><b>동작은 맞지만 넘칠 때마다 원소 99개를 옮긴다.</b> 작업이 잦으면 비효율적이다.</span></span></button></li>
     </ol>
   </div>
 </article>

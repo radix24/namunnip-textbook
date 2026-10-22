@@ -66,7 +66,7 @@
   </div>
   <div class="quiz">
     <h3><span class="mono">확인</span>조건이 달라지면</h3>
-    <p class="q">다음 코드를 실행하면 무엇이 출력될까요?</p>
+    <p class="q">다음 코드를 실행하면 무엇이 출력될까?</p>
     <pre class="code qcode">def f(xs, k):
     xs[0] = 99
     k = k + 1
@@ -76,9 +76,9 @@ b = 3
 f(a, b)
 print(a, b)</pre>
     <ol>
-      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>[99, 2] 3<span class="why"><b>맞습니다.</b> xs와 a는 같은 리스트를 가리키므로 xs[0] = 99가 a에도 보입니다. k = k + 1은 지역 이름 k만 새 정수 4로 옮깁니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>[1, 2] 3<span class="why"><b>인자를 복사해서 넘긴다고 본 답입니다.</b> 파이썬은 리스트를 복사하지 않습니다. xs는 a와 같은 객체를 가리킵니다.</span></span></button></li>
-      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>[99, 2] 4<span class="why"><b>대입이 호출한 쪽 변수까지 바꾼다고 본 답입니다.</b> 함수 안의 대입은 지역 이름표만 옮깁니다. 정수는 고칠 수 없으므로 b가 가리키는 3은 그대로입니다.</span></span></button></li>
+      <li><button class="opt" data-ok="1"><span class="mono">ㄱ</span><span>[99, 2] 3<span class="why"><b>맞다.</b> xs와 a는 같은 리스트를 가리키므로 xs[0] = 99가 a에도 보인다. k = k + 1은 지역 이름 k만 새 정수 4로 옮긴다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄴ</span><span>[1, 2] 3<span class="why"><b>인자를 복사해서 넘긴다고 본 답이다.</b> 파이썬은 리스트를 복사하지 않는다. xs는 a와 같은 객체를 가리킨다.</span></span></button></li>
+      <li><button class="opt" data-ok="0"><span class="mono">ㄷ</span><span>[99, 2] 4<span class="why"><b>대입이 호출한 쪽 변수까지 바꾼다고 본 답이다.</b> 함수 안의 대입은 지역 이름표만 옮긴다. 정수는 고칠 수 없으므로 b가 가리키는 3은 그대로이다.</span></span></button></li>
     </ol>
   </div>
 </article>
