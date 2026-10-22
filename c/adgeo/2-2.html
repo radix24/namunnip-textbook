@@ -122,14 +122,14 @@
         <div class="card-body">
           <div class="card-fig">
             <div class="ctl-row"><div><label class="mono">사다리 위 점의 위치 k = <output class="k-out">0.5</output></label><input class="k" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="바닥 끝에서부터 사다리 길이의 몇 배 위치"></div></div>
-            <p class="small">예측: 이 점의 자취는?</p>
+            <p class="small">먼저 예측해 보자. 이 점의 자취는?</p>
             <div class="gp" role="group" aria-label="예측"><button class="chip" type="button" data-g="circle">원의 일부</button><button class="chip" type="button" data-g="ellipse">타원의 일부</button><button class="chip" type="button" data-g="line">선분</button><button class="chip" type="button" data-g="parabola">포물선의 일부</button></div>
             <canvas aria-label="벽(세로축)과 바닥(가로축) 사이를 미끄러지는 사다리와 점의 자취"></canvas>
             <div class="presets"><button class="chip go-slide" type="button">미끄러뜨리기</button></div>
             <p class="verdict" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>길이 \(L\)인 사다리가 벽에 기대어 있다가 아래쪽이 벽에서 멀어지며 미끄러진다. 사다리의 한가운데에 앉은 고양이는 어떤 길을 따라 내려올까? 가운데가 아닌 점은요?</li>
+            <li><span class="tag">질문</span>길이 \(L\)인 사다리가 벽에 기대어 있다가 아래쪽이 벽에서 멀어지며 미끄러진다. 사다리의 한가운데에 앉은 고양이는 어떤 길을 따라 내려올까? 가운데가 아닌 점은 어떨까?</li>
             <li><span class="tag">복원</span>직각삼각형의 빗변의 중점은 세 꼭짓점에서 같은 거리에 있다. \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)은 타원이다.</li>
             <li><span class="tag">설명</span>주어진 조건을 만족하며 움직이는 점이 그리는 도형을 <em>자취</em>라 한다. 사다리가 바닥과 이루는 각을 \(\theta\)라 하면 바닥 끝은 \((L\cos\theta, 0)\), 벽 끝은 \((0, L\sin\theta)\)이고, 바닥 끝에서 \(k\)배 위치의 점은 \(x = (1 - k)L\cos\theta\), \(y = kL\sin\theta\)이다. \(\theta\)를 지우면 \(\frac{x^2}{((1-k)L)^2} + \frac{y^2}{(kL)^2} = 1\)이므로 타원이고, 가운데(\(k = \frac{1}{2}\))이면 반지름 \(\frac{L}{2}\)인 원이다. 매개변수를 지워 자취의 방정식을 얻는 것이 핵심이다.</li>
             <li><span class="tag">연결</span>이 원리로 타원을 그리는 도구가 "타원 컴퍼스(아르키메데스의 트래멜)"이다. 막대의 두 끝을 서로 수직인 홈에 끼워 움직이면 막대 위의 펜이 타원을 그린다.</li>
@@ -164,7 +164,7 @@
           <ol class="steps">
             <li><span class="tag">질문</span>두 기지국 A, B에서 보낸 신호의 세기를 비교하면 휴대폰이 "A까지의 거리가 B까지의 거리의 2배"인 곳에 있다는 것을 알 수 있다. 그런 곳은 어떤 모양으로 모여 있을까?</li>
             <li><span class="tag">복원</span>두 점에서 같은 거리에 있는 점들(비가 1 : 1)은 수직이등분선 위에 있다. 원의 방정식은 \((x - a)^2 + (y - b)^2 = r^2\)이다.</li>
-            <li><span class="tag">설명</span>\(A(-1, 0)\), \(B(1, 0)\)일 때 \(PA = k \cdot PB\)를 제곱해 정리하면 \((k^2 - 1)(x^2 + y^2) - 2(k^2 + 1)x + (k^2 - 1) = 0\)이 되어, \(k \ne 1\)이면 원이다(<em>아폴로니오스의 원</em>). 이 원은 선분 \(AB\)를 \(k : 1\)로 내분하는 점과 외분하는 점을 지름의 양 끝으로 한다. \(k = 1\)이면 수직이등분선(직선)이 된다. 이처럼 자취를 구할 때는 점을 \((x, y)\)로 두고 조건을 식으로 쓴 뒤 정리한다.</li>
+            <li><span class="tag">설명</span>\(A(-1, 0)\), \(B(1, 0)\)일 때 \(PA = k \cdot PB\)를 제곱해 정리하면 \((k^2 - 1)(x^2 + y^2) - 2(k^2 + 1)x + (k^2 - 1) = 0\)이 되어, \(k \ne 1\)이면 원이다(<em>아폴로니오스의 원</em>). 이 원은 선분 \(AB\)를 \(k : 1\)로 내분하는 점과 외분하는 점을 지름의 양 끝으로 한다. \(k = 1\)이면 수직이등분선(직선)이 된다. 이렇게 자취를 구할 때는 점을 \((x, y)\)로 두고 조건을 식으로 쓴 뒤 정리한다.</li>
             <li><span class="tag">연결</span>거리의 "합"이 일정하면 타원, "차"가 일정하면 쌍곡선이 되었다. 거리의 "비"가 일정하면 원이 된다. 비가 같은 두 신호원의 위치를 찾는 문제, 음원의 위치 추정에 이런 자취가 쓰인다.</li>
             <li><span class="tag">적용</span>P를 끌어 비가 \(k\)에 가까운 곳을 여러 군데 찾아 보자(초록으로 남음). 그 점들이 어떤 모양을 이루는가? 자취를 켜고 \(k\)를 1에 가깝게 하면 원은 어떻게 되는가?</li>
             <li class="warn"><span class="tag">판단</span>\(k\)와 \(\frac{1}{k}\)의 원은 서로 다르다(B 쪽과 A 쪽). 비의 순서(PA : PB인지 PB : PA인지)를 확인해야 한다.</li>
