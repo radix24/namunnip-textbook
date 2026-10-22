@@ -149,16 +149,16 @@
                 <div><dt>\(\overrightarrow{OB} = \vec{b}\)</dt><dd class="n-b">—</dd></div>
                 <div><dt>\(\overrightarrow{OP} = \vec{p}\)</dt><dd class="n-p">—</dd></div>
               </dl>
-              <p class="fig-note">점 A와 B를 끌고 \(m, n\)을 바꾸어 보세요. 괄호 안 수는 점의 좌표이자 위치벡터의 성분입니다.</p>
+              <p class="fig-note">점 A와 B를 끌고 \(m, n\)을 바꾸어 보자. 괄호 안 수는 점의 좌표이자 위치벡터의 성분이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>두 점 A, B를 잇는 선분을 2 : 1로 나누는 점 P는 좌표 공식으로 구할 수 있습니다. 같은 일을 벡터로 하면 평면과 공간에서 한 번에 해결할 수 있을까요?</li>
-            <li><span class="tag">복원</span>공통수학에서 \(A(x_1, y_1), B(x_2, y_2)\)를 \(m : n\)으로 내분하는 점의 좌표가 \((\frac{mx_2 + nx_1}{m + n}, \frac{my_2 + ny_1}{m + n})\)임을 배웠습니다. 또 \(\overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA}\)였습니다.</li>
-            <li><span class="tag">설명</span>기준점 O를 정하면 점 A에 벡터 \(\overrightarrow{OA}\)가 하나씩 대응합니다. 이 \(\overrightarrow{OA}\)를 점 A의 <em>위치벡터</em>라고 하고 \(\vec{a}\)로 씁니다. 두 점의 위치벡터를 알면 \(\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \vec{b} - \vec{a}\)입니다. 점 P가 선분 AB를 \(m : n(m \gt 0, n \gt 0)\)으로 내분하면 \(\overrightarrow{AP} = \frac{m}{m + n} \overrightarrow{AB}\)이므로<br>\(\vec{p} = \vec{a} + \frac{m}{m + n}(\vec{b} - \vec{a}) = \frac{m\vec{b} + n\vec{a}}{m + n}\)<br>입니다. 외분\((m \ne n)\)이면 \(\vec{p} = \frac{m\vec{b} - n\vec{a}}{m - n}\)입니다. 중점은 \(\frac{\vec{a} + \vec{b}}{2}\), 삼각형 ABC의 무게중심은 \(\frac{\vec{a} + \vec{b} + \vec{c}}{3}\)입니다.</li>
-            <li><span class="tag">연결</span>위치벡터를 성분으로 쓰면 이 식이 그대로 내분점의 좌표 공식이 됩니다. 식에 차원이 들어 있지 않으므로 좌표공간에서도 같은 식이 성립합니다. 또 \(\vec{p} = \vec{a} + t(\vec{b} - \vec{a})\)에서 \(t\)를 모든 실수로 넓히면 직선 AB 전체가 되는데, 이것이 직선의 방정식으로 이어집니다.</li>
-            <li><span class="tag">적용</span>\(m = n\)으로 두고 P가 중점인지 확인하세요. 외분으로 바꾸어 \(m \gt n\)일 때와 \(m \lt n\)일 때 P가 각각 어느 쪽 바깥에 생기는지 보세요. \(m = n\)인 외분은 왜 그려지지 않을까요?</li>
-            <li class="warn"><span class="tag">판단</span>위치벡터는 기준점 O에 따라 달라집니다. 그러나 \(\overrightarrow{AB} = \vec{b} - \vec{a}\)는 O를 어디에 두어도 같습니다. 외분점 식에서 \(m\vec{b} - n\vec{a}\)의 순서를 바꾸어 \(m\vec{a} - n\vec{b}\)로 쓰는 실수가 많습니다. 비의 앞쪽 \(m\)은 언제나 B 쪽 벡터 \(\vec{b}\)에 곱합니다.</li>
+            <li><span class="tag">질문</span>두 점 A, B를 잇는 선분을 2 : 1로 나누는 점 P는 좌표 공식으로 구할 수 있다. 같은 일을 벡터로 하면 평면과 공간에서 한 번에 해결할 수 있을까?</li>
+            <li><span class="tag">복원</span>공통수학에서 \(A(x_1, y_1), B(x_2, y_2)\)를 \(m : n\)으로 내분하는 점의 좌표가 \((\frac{mx_2 + nx_1}{m + n}, \frac{my_2 + ny_1}{m + n})\)임을 배웠다. 또 \(\overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA}\)였다.</li>
+            <li><span class="tag">설명</span>기준점 O를 정하면 점 A에 벡터 \(\overrightarrow{OA}\)가 하나씩 대응하는데, 이 \(\overrightarrow{OA}\)를 점 A의 <em>위치벡터</em>라고 하고 \(\vec{a}\)로 쓴다. 두 점의 위치벡터를 알면 \(\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \vec{b} - \vec{a}\)이다. 그래서 점 P가 선분 AB를 \(m : n(m \gt 0, n \gt 0)\)으로 내분하면 \(\overrightarrow{AP} = \frac{m}{m + n} \overrightarrow{AB}\)이므로 \(\vec{p} = \vec{a} + \frac{m}{m + n}(\vec{b} - \vec{a}) = \frac{m\vec{b} + n\vec{a}}{m + n}\)이고, 외분\((m \ne n)\)이면 \(\vec{p} = \frac{m\vec{b} - n\vec{a}}{m - n}\)이다. 또 중점은 \(\frac{\vec{a} + \vec{b}}{2}\), 삼각형 ABC의 무게중심은 \(\frac{\vec{a} + \vec{b} + \vec{c}}{3}\)이다.</li>
+            <li><span class="tag">연결</span>위치벡터를 성분으로 쓰면 이 식이 그대로 내분점의 좌표 공식이 되고, 식에 차원이 들어 있지 않으므로 좌표공간에서도 같은 식이 성립한다. 또 \(\vec{p} = \vec{a} + t(\vec{b} - \vec{a})\)에서 \(t\)를 모든 실수로 넓히면 직선 AB 전체가 되는데, 이것이 직선의 방정식으로 이어진다.</li>
+            <li><span class="tag">적용</span>\(m = n\)으로 두고 P가 중점인지 확인해 보자. 그리고 외분으로 바꾸어 \(m \gt n\)일 때와 \(m \lt n\)일 때 P가 각각 어느 쪽 바깥에 생기는지 보고, \(m = n\)인 외분은 왜 그려지지 않는지 생각해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>위치벡터는 기준점 O에 따라 달라지지만, \(\overrightarrow{AB} = \vec{b} - \vec{a}\)는 O를 어디에 두어도 같다. 또 외분점 식에서 \(m\vec{b} - n\vec{a}\)의 순서를 바꾸어 \(m\vec{a} - n\vec{b}\)로 쓰는 실수가 많은데, 비의 앞쪽 \(m\)은 언제나 B 쪽 벡터 \(\vec{b}\)에 곱한다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -188,16 +188,16 @@
                 <div><dt>\(\overrightarrow{AB}\)의 \(y\)성분</dt><dd class="n-y">—</dd></div>
                 <div><dt>\(|\overrightarrow{AB}|\)</dt><dd class="n-l">—</dd></div>
               </dl>
-              <p class="fig-note">점 A와 B를 끌어 보세요. 점선 화살표는 \(\overrightarrow{AB}\)를 시점이 원점 O가 되도록 옮긴 것입니다. 그 종점의 좌표가 곧 \(\overrightarrow{AB}\)의 성분입니다.</p>
+              <p class="fig-note">점 A와 B를 끌어 보자. 점선 화살표는 \(\overrightarrow{AB}\)를 시점이 원점 O가 되도록 옮긴 것이고, 그 종점의 좌표가 곧 \(\overrightarrow{AB}\)의 성분이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>좌표평면 위의 화살표 \(\overrightarrow{AB}\)를 그리지 않고 수만으로 전하려면 무엇을 알려 주면 될까요?</li>
-            <li><span class="tag">복원</span>벡터는 평행이동해도 같은 벡터입니다. 또 \(\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA}\)이고, 점 B의 위치벡터 \(\overrightarrow{OB}\)는 점 B의 좌표로 정해집니다.</li>
-            <li><span class="tag">설명</span>\(\vec{a}\)를 시점이 원점이 되도록 옮겼을 때 종점이 \((a_1, a_2)\)이면 \(\vec{a} = (a_1, a_2)\)로 쓰고, \(a_1, a_2\)를 \(\vec{a}\)의 \(x\)성분, \(y\)성분이라고 합니다. 단위벡터 \(\vec{e}_1 = (1, 0), \vec{e}_2 = (0, 1)\)을 쓰면 \(\vec{a} = a_1\vec{e}_1 + a_2\vec{e}_2\)입니다. \(A(x_1, y_1), B(x_2, y_2)\)이면 \(\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1)\)입니다. 크기는 피타고라스 정리로 \(|\vec{a}| = \sqrt{a_1^2 + a_2^2}\)입니다. 두 벡터가 같을 필요충분조건은 대응하는 성분이 각각 같은 것이고, 연산은 성분끼리 합니다: \((a_1, a_2) \pm (b_1, b_2) = (a_1 \pm b_1, a_2 \pm b_2), k(a_1, a_2) = (ka_1, ka_2)\).</li>
-            <li><span class="tag">연결</span>그림(화살표)으로 보면 방향과 크기의 관계가 잘 보이고, 성분(수)으로 보면 계산이 쉬워집니다. 벡터를 다루는 이 두 방법은 같은 대상을 다르게 표현한 것입니다. 공간에서는 성분이 세 개로 늘어날 뿐 규칙은 같습니다.</li>
-            <li><span class="tag">적용</span>A와 B를 함께 같은 방향으로 한 칸씩 옮겨 보세요. 성분은 바뀌나요? B를 A의 바로 오른쪽 3칸, 위쪽 4칸에 두면 \(|\overrightarrow{AB}|\)는 얼마인가요? 성분이 음수가 되는 경우도 만들어 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>벡터의 성분과 점의 좌표를 같은 것으로 여기면 안 됩니다. \(\overrightarrow{AB}\)의 성분은 B의 좌표가 아니라 '종점 좌표 − 시점 좌표'입니다. 시점이 원점일 때, 곧 위치벡터일 때만 성분과 종점의 좌표가 같습니다.</li>
+            <li><span class="tag">질문</span>좌표평면 위의 화살표 \(\overrightarrow{AB}\)를 그리지 않고 수만으로 전하려면 무엇을 알려 주면 될까?</li>
+            <li><span class="tag">복원</span>벡터는 평행이동해도 같은 벡터이다. 또 \(\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA}\)이고, 점 B의 위치벡터 \(\overrightarrow{OB}\)는 점 B의 좌표로 정해진다.</li>
+            <li><span class="tag">설명</span>\(\vec{a}\)를 시점이 원점이 되도록 옮겼을 때 종점이 \((a_1, a_2)\)이면 \(\vec{a} = (a_1, a_2)\)로 쓰고, \(a_1, a_2\)를 \(\vec{a}\)의 \(x\)성분, \(y\)성분이라고 한다. 단위벡터 \(\vec{e}_1 = (1, 0), \vec{e}_2 = (0, 1)\)을 쓰면 \(\vec{a} = a_1\vec{e}_1 + a_2\vec{e}_2\)이고, \(A(x_1, y_1), B(x_2, y_2)\)이면 \(\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1)\)이며, 크기는 피타고라스 정리로 \(|\vec{a}| = \sqrt{a_1^2 + a_2^2}\)이다. 두 벡터가 같을 필요충분조건은 대응하는 성분이 각각 같은 것이고, 연산도 \((a_1, a_2) \pm (b_1, b_2) = (a_1 \pm b_1, a_2 \pm b_2), k(a_1, a_2) = (ka_1, ka_2)\)처럼 성분끼리 한다.</li>
+            <li><span class="tag">연결</span>그림(화살표)으로 보면 방향과 크기의 관계가 잘 보이고, 성분(수)으로 보면 계산이 쉬워진다. 즉 벡터를 다루는 이 두 방법은 같은 대상을 다르게 표현한 것이며, 공간에서는 성분이 세 개로 늘어날 뿐 규칙은 같다.</li>
+            <li><span class="tag">적용</span>A와 B를 함께 같은 방향으로 한 칸씩 옮기며 성분이 바뀌는지 보자. 그리고 B를 A의 바로 오른쪽 3칸, 위쪽 4칸에 두면 \(|\overrightarrow{AB}|\)가 얼마인지 구하고, 성분이 음수가 되는 경우도 만들어 보자.</li>
+            <li class="warn"><span class="tag">판단</span>벡터의 성분과 점의 좌표를 같은 것으로 여기면 안 된다. \(\overrightarrow{AB}\)의 성분은 B의 좌표가 아니라 종점 좌표에서 시점 좌표를 뺀 값이고, 시점이 원점일 때, 곧 위치벡터일 때만 성분과 종점의 좌표가 같다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -234,16 +234,16 @@
                 <div><dt>바닥 대각선 \(\sqrt{a_1^2 + a_2^2}\)</dt><dd class="n-f">—</dd></div>
                 <div><dt>\(|\vec{a}|\)</dt><dd class="n-l">—</dd></div>
               </dl>
-              <p class="fig-note">세 성분을 바꾸고, 그림을 끌어 여러 방향에서 보세요. 초록 점선은 바닥(\(xy\)평면)의 대각선입니다.</p>
+              <p class="fig-note">세 성분을 바꾸고, 그림을 끌어 여러 방향에서 보자. 초록 점선은 바닥(\(xy\)평면)의 대각선이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>방 한쪽 구석에서 맞은편 천장 구석까지 줄을 팽팽하게 걸면 줄의 방향과 길이는 무엇으로 정해질까요?</li>
-            <li><span class="tag">복원</span>평면벡터는 성분 두 개로 정해지고 크기는 \(\sqrt{a_1^2 + a_2^2}\)입니다. 좌표공간의 점은 \((x, y, z)\)로 나타내고, 두 점 사이의 거리는 \(\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}\)입니다.</li>
-            <li><span class="tag">설명</span>공간벡터 \(\vec{a}\)를 시점이 원점이 되도록 옮겼을 때 종점이 \((a_1, a_2, a_3)\)이면 \(\vec{a} = (a_1, a_2, a_3)\)로 씁니다. 세 좌표축 방향의 단위벡터 \(\vec{e}_1, \vec{e}_2, \vec{e}_3\)을 쓰면 \(\vec{a} = a_1\vec{e}_1 + a_2\vec{e}_2 + a_3\vec{e}_3\)입니다. 크기는 피타고라스 정리를 두 번 써서 구합니다. 바닥의 대각선 길이가 \(\sqrt{a_1^2 + a_2^2}\)이고, 이것과 높이 \(|a_3|\)가 직각을 이루므로 \(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)입니다. 덧셈, 뺄셈, 실수배와 \(\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)\)도 평면과 똑같이 성분끼리 계산합니다.</li>
-            <li><span class="tag">연결</span>이 성분 표현 덕분에 공간에서도 내적, 직선과 평면의 방정식을 좌표 계산으로 다룰 수 있습니다. 점의 좌표와 위치벡터의 성분이 같다는 사실은 평면과 공간 모두에서 쓰입니다.</li>
-            <li><span class="tag">적용</span>\((3, 2, 2)\)의 크기를 바닥 대각선과 높이로 나누어 계산해 보세요. 성분 하나를 0으로 만들면 화살표는 어디에 놓이나요? 크기가 정수가 되는 성분 조합을 하나 더 찾아보세요. 예를 들어 \((1, 2, 2)\)는 어떨까요?</li>
-            <li class="warn"><span class="tag">판단</span>그림은 공간을 평면에 옮긴 것이라 화살표의 화면 길이는 실제 크기와 다릅니다. 같은 벡터도 돌리면 화면에서 길어지거나 짧아집니다. 크기는 반드시 성분으로 계산하세요.</li>
+            <li><span class="tag">질문</span>방 한쪽 구석에서 맞은편 천장 구석까지 줄을 팽팽하게 걸면 줄의 방향과 길이는 무엇으로 정해질까?</li>
+            <li><span class="tag">복원</span>평면벡터는 성분 두 개로 정해지고 크기는 \(\sqrt{a_1^2 + a_2^2}\)이다. 그리고 좌표공간의 점은 \((x, y, z)\)로 나타내고, 두 점 사이의 거리는 \(\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}\)이다.</li>
+            <li><span class="tag">설명</span>공간벡터 \(\vec{a}\)를 시점이 원점이 되도록 옮겼을 때 종점이 \((a_1, a_2, a_3)\)이면 \(\vec{a} = (a_1, a_2, a_3)\)로 쓰고, 세 좌표축 방향의 단위벡터 \(\vec{e}_1, \vec{e}_2, \vec{e}_3\)을 쓰면 \(\vec{a} = a_1\vec{e}_1 + a_2\vec{e}_2 + a_3\vec{e}_3\)이다. 크기는 피타고라스 정리를 두 번 써서 구하는데, 바닥의 대각선 길이가 \(\sqrt{a_1^2 + a_2^2}\)이고 이것과 높이 \(|a_3|\)가 직각을 이루므로 \(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)이다. 덧셈, 뺄셈, 실수배와 \(\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)\)도 평면과 똑같이 성분끼리 계산한다.</li>
+            <li><span class="tag">연결</span>이 성분 표현 덕분에 공간에서도 내적, 직선과 평면의 방정식을 좌표 계산으로 다룰 수 있다. 그리고 점의 좌표와 위치벡터의 성분이 같다는 사실은 평면과 공간 모두에서 쓰인다.</li>
+            <li><span class="tag">적용</span>\((3, 2, 2)\)의 크기를 바닥 대각선과 높이로 나누어 계산해 보자. 그리고 성분 하나를 0으로 만들면 화살표가 어디에 놓이는지 보고, \((1, 2, 2)\)처럼 크기가 정수가 되는 성분 조합을 하나 더 찾아보자.</li>
+            <li class="warn"><span class="tag">판단</span>그림은 공간을 평면에 옮긴 것이라 화살표의 화면 길이는 실제 크기와 다르고, 같은 벡터도 돌리면 화면에서 길어지거나 짧아진다. 그래서 크기는 반드시 성분으로 계산해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
