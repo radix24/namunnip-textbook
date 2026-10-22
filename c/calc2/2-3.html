@@ -132,16 +132,16 @@
                 <div><dt>\(\frac{1 - \cos x}{x}\)</dt><dd class="n-c">—</dd></div>
               </dl>
               <p class="mono eq">—</p>
-              <p class="fig-note">넓이는 삼각형 \(OAP = \frac{1}{2} \sin x\), 부채꼴 \(OAP = \frac{1}{2} x\), 삼각형 \(OAT = \frac{1}{2} \tan x\)입니다(반지름 1).</p>
+              <p class="fig-note">넓이는 삼각형 \(OAP = \frac{1}{2} \sin x\), 부채꼴 \(OAP = \frac{1}{2} x\), 삼각형 \(OAT = \frac{1}{2} \tan x\)이다(반지름 1).</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(x = 0\)을 넣으면 \(\frac{\sin x}{x}\)는 \(\frac{0}{0}\)이 되어 값이 없습니다. \(x\)가 0에 가까워질 때는 어떤 값으로 다가갈까요?</li>
-            <li><span class="tag">복원</span>호도법에서 반지름 1, 중심각 \(x\)인 부채꼴의 넓이는 \(\frac{1}{2}x\)입니다. 세 함수가 \(g(x) \le f(x) \le h(x)\)이고 \(g\)와 \(h\)의 극한이 같으면 \(f\)의 극한도 그 값입니다.</li>
-            <li><span class="tag">설명</span>\(0 &lt; x &lt; \frac{\pi}{2}\)일 때 그림의 세 도형은 차례로 포함되므로 \(\frac{1}{2} \sin x &lt; \frac{1}{2} x &lt; \frac{1}{2} \tan x\)입니다. 각 변을 \(\frac{1}{2} \sin x\)로 나누고 역수를 취하면 <b>\(\cos x &lt; \frac{\sin x}{x} &lt; 1\)</b>입니다. \(x \to 0^+\)일 때 \(\cos x \to 1\)이므로 <b>\(\lim_{x\to 0} \frac{\sin x}{x} = 1\)</b>입니다. \(\frac{\sin(-x)}{-x} = \frac{\sin x}{x}\)이므로 왼쪽에서 다가가도 같습니다. 또 \(\frac{1 - \cos x}{x} = (\frac{\sin x}{x}) \cdot \frac{\sin x}{1 + \cos x} \to 1 \cdot \frac{0}{2} = 0\)입니다. 같은 방법으로 \(\lim \frac{\tan x}{x} = 1\)입니다.</li>
-            <li><span class="tag">연결</span>\(\frac{\sin x}{x} \to 1\)은 \(x\)가 작을 때 \(\sin x \approx x\)라는 뜻입니다. 진자의 진동 주기를 구할 때 쓰는 근사도 이것입니다. 이 두 극한으로 다음 카드에서 사인함수와 코사인함수의 도함수를 구합니다.</li>
-            <li><span class="tag">적용</span>'\(x \div 2\)'를 여러 번 눌러 세 도형의 넓이가 어떻게 가까워지는지 보세요. \(\frac{\sin x}{x}\)는 아래 경계 \(\cos x\)와 위 경계 1 사이에 늘 있나요? \(\frac{1 - \cos x}{x}\)는 \(x\)가 절반이 될 때 대략 몇 배가 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>이 극한은 \(x\)를 라디안으로 잴 때만 1입니다. 각을 도(°)로 재면 부채꼴의 넓이가 달라져 \(\lim_{x\to 0} \frac{\sin x^\circ}{x} = \frac{\pi}{180}\)입니다. 또 \(\frac{0}{0}\) 꼴이라고 곧바로 1이라고 답할 수는 없습니다. 같은 \(\frac{0}{0}\) 꼴인 \(\frac{1 - \cos x}{x}\)는 0으로 갑니다. 극한값은 넓이 비교와 조임으로 얻은 것입니다.</li>
+            <li><span class="tag">질문</span>\(x = 0\)을 넣으면 \(\frac{\sin x}{x}\)는 \(\frac{0}{0}\)이 되어 값이 없다. \(x\)가 0에 가까워질 때는 어떤 값으로 다가갈까?</li>
+            <li><span class="tag">복원</span>호도법에서 반지름 1, 중심각 \(x\)인 부채꼴의 넓이는 \(\frac{1}{2}x\)이다. 그리고 세 함수가 \(g(x) \le f(x) \le h(x)\)이고 \(g\)와 \(h\)의 극한이 같으면 \(f\)의 극한도 그 값이다.</li>
+            <li><span class="tag">설명</span>\(0 &lt; x &lt; \frac{\pi}{2}\)일 때 그림의 세 도형은 차례로 포함되므로 \(\frac{1}{2} \sin x &lt; \frac{1}{2} x &lt; \frac{1}{2} \tan x\)이고, 각 변을 \(\frac{1}{2} \sin x\)로 나누고 역수를 취하면 \(\cos x &lt; \frac{\sin x}{x} &lt; 1\)이다. \(x \to 0^+\)일 때 \(\cos x \to 1\)이므로 \(\lim_{x\to 0} \frac{\sin x}{x} = 1\)이고, \(\frac{\sin(-x)}{-x} = \frac{\sin x}{x}\)이므로 왼쪽에서 다가가도 같다. 또 \(\frac{1 - \cos x}{x} = (\frac{\sin x}{x}) \cdot \frac{\sin x}{1 + \cos x} \to 1 \cdot \frac{0}{2} = 0\)이고, 같은 방법으로 \(\lim \frac{\tan x}{x} = 1\)이다.</li>
+            <li><span class="tag">연결</span>\(\frac{\sin x}{x} \to 1\)은 \(x\)가 작을 때 \(\sin x \approx x\)라는 뜻이며, 진자의 진동 주기를 구할 때 쓰는 근사도 이것이다. 이 두 극한으로 다음 카드에서 사인함수와 코사인함수의 도함수를 구한다.</li>
+            <li><span class="tag">적용</span>‘\(x \div 2\)’를 여러 번 눌러 세 도형의 넓이가 어떻게 가까워지는지, \(\frac{\sin x}{x}\)가 아래 경계 \(\cos x\)와 위 경계 1 사이에 늘 있는지 보자. 그리고 \(\frac{1 - \cos x}{x}\)는 \(x\)가 절반이 될 때 대략 몇 배가 되는지 확인해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>이 극한은 \(x\)를 라디안으로 잴 때만 1이다. 각을 도(°)로 재면 부채꼴의 넓이가 달라져 \(\lim_{x\to 0} \frac{\sin x^\circ}{x} = \frac{\pi}{180}\)이기 때문이다. 또 \(\frac{0}{0}\) 꼴이라고 곧바로 1이라고 답할 수는 없어서, 같은 \(\frac{0}{0}\) 꼴인 \(\frac{1 - \cos x}{x}\)는 0으로 간다. 극한값은 넓이 비교와 조임으로 얻은 것이다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -180,16 +180,16 @@
                 <div><dt>접선의 기울기</dt><dd class="n-m">—</dd></div>
                 <div><dt class="d-g">\(\cos x\)</dt><dd class="n-g">—</dd></div>
               </dl>
-              <p class="fig-note">\(P\)를 움직이면 그 \(x\)에서 잰 접선의 기울기가 아래 그림에 점으로 남습니다. 기울기는 아주 작은 \(h(0.00001)\)로 잰 값입니다.</p>
+              <p class="fig-note">\(P\)를 움직이면 그 \(x\)에서 잰 접선의 기울기가 아래 그림에 점으로 남는다. 기울기는 아주 작은 \(h(0.00001)\)로 잰 값이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(y = \sin x\) 위의 점마다 접선의 기울기를 재어, 그 값을 같은 \(x\)에 점으로 찍으면 어떤 곡선이 나타날까요?</li>
-            <li><span class="tag">복원</span>덧셈정리 \(\sin(x + h) = \sin x \cos h + \cos x \sin h\), 그리고 극한 \(\lim_{h\to 0} \frac{\sin h}{h} = 1\), \(\lim_{h\to 0} \frac{\cos h - 1}{h} = 0\)을 씁니다.</li>
-            <li><span class="tag">설명</span>\(\frac{\sin(x + h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdot \frac{\sin h}{h}\)입니다. \(h \to 0\)이면 \(\sin x \cdot 0 + \cos x \cdot 1\)이므로 <b>\((\sin x)' = \cos x\)</b>입니다. 같은 방법으로 \(\cos(x + h) = \cos x \cos h - \sin x \sin h\)를 쓰면 <b>\((\cos x)' = -\sin x\)</b>입니다. 두 공식 모두 \(x\)를 라디안으로 잴 때 성립합니다.</li>
-            <li><span class="tag">연결</span>\(\sin x\)를 두 번 미분하면 \(-\sin x\)로 돌아옵니다. 용수철에 매달린 물체처럼 가속도가 변위와 반대 방향으로 비례하는 운동이 사인 곡선을 그리는 까닭입니다. 다음 절에서는 몫의 미분법으로 \(\tan x\) 같은 다른 삼각함수도 미분합니다.</li>
-            <li><span class="tag">적용</span>'훑기'를 눌러 기울기 점들이 그리는 곡선을 보고 어떤 함수인지 짐작한 뒤 '후보 그래프 겹치기'로 확인하세요. 위 그래프가 가장 높은 곳에서 아래 점은 어디에 있나요? \(y = \cos x\)로 바꾸면 기울기 점들은 어떤 곡선을 그리나요?</li>
-            <li class="warn"><span class="tag">판단</span>\((\cos x)' = \sin x\)로 부호를 빠뜨리는 실수가 흔합니다. \(0 &lt; x &lt; \pi\)에서 \(\cos x\)는 감소하므로 기울기가 음수여야 하고, 그래서 \(-\sin x\)입니다. 또 각을 도로 잰 함수 \(y = \sin x^\circ\)의 도함수는 \((\frac{\pi}{180}) \cos x^\circ\)입니다.</li>
+            <li><span class="tag">질문</span>\(y = \sin x\) 위의 점마다 접선의 기울기를 재어, 그 값을 같은 \(x\)에 점으로 찍으면 어떤 곡선이 나타날까?</li>
+            <li><span class="tag">복원</span>덧셈정리 \(\sin(x + h) = \sin x \cos h + \cos x \sin h\)와 극한 \(\lim_{h\to 0} \frac{\sin h}{h} = 1\), \(\lim_{h\to 0} \frac{\cos h - 1}{h} = 0\)을 쓴다.</li>
+            <li><span class="tag">설명</span>\(\frac{\sin(x + h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdot \frac{\sin h}{h}\)이고, \(h \to 0\)이면 \(\sin x \cdot 0 + \cos x \cdot 1\)이므로 \((\sin x)' = \cos x\)이다. 같은 방법으로 \(\cos(x + h) = \cos x \cos h - \sin x \sin h\)를 쓰면 \((\cos x)' = -\sin x\)이며, 두 공식 모두 \(x\)를 라디안으로 잴 때 성립한다.</li>
+            <li><span class="tag">연결</span>\(\sin x\)를 두 번 미분하면 \(-\sin x\)로 돌아온다. 용수철에 매달린 물체처럼 가속도가 변위와 반대 방향으로 비례하는 운동이 사인 곡선을 그리는 까닭이 이것이다. 다음 절에서는 몫의 미분법으로 \(\tan x\) 같은 다른 삼각함수도 미분한다.</li>
+            <li><span class="tag">적용</span>‘훑기’를 눌러 기울기 점들이 그리는 곡선을 보고 어떤 함수인지 짐작한 뒤 ‘후보 그래프 겹치기’로 확인해 보자. 그리고 위 그래프가 가장 높은 곳에서 아래 점이 어디에 있는지, \(y = \cos x\)로 바꾸면 기울기 점들이 어떤 곡선을 그리는지 보자.</li>
+            <li class="warn"><span class="tag">판단</span>\((\cos x)' = \sin x\)로 부호를 빠뜨리는 실수가 흔하다. \(0 &lt; x &lt; \pi\)에서 \(\cos x\)는 감소하므로 기울기가 음수여야 하고, 그래서 \(-\sin x\)이다. 또 각을 도로 잰 함수 \(y = \sin x^\circ\)의 도함수는 \((\frac{\pi}{180}) \cos x^\circ\)이다.</li>
           </ol>
         </div>
         <div class="quiz">

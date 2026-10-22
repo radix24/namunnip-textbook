@@ -138,16 +138,16 @@
                 <div><dt>정적분 값</dt><dd class="n-i">—</dd></div>
                 <div><dt>차이</dt><dd class="n-d">—</dd></div>
               </dl>
-              <p class="fig-note">합 \(S_n\)는 주어진 식에 \(k\)를 차례로 넣어 더한 값입니다. 직사각형 하나의 넓이가 항 하나입니다.</p>
+              <p class="fig-note">합 \(S_n\)는 주어진 식에 \(k\)를 차례로 넣어 더한 값이고, 직사각형 하나의 넓이가 항 하나이다.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(\lim_{n\to \infty} \{\frac{1}{n + 1} + \frac{1}{n + 2} + \cdots + \frac{1}{2n}\}\)은 얼마일까요? 항은 점점 작아지지만 개수는 늘어납니다.</li>
-            <li><span class="tag">복원</span>\(f\)가 \([a, b]\)에서 연속이면 구간을 \(n\)등분해 \(\Delta x = \frac{b - a}{n}\), \(x_k = a + k\Delta x\)로 둘 때 \(\lim_{n\to \infty} \sum_{k=1}^n f(x_k)\Delta x = \int_a^b f(x)\,dx\)입니다.</li>
-            <li><span class="tag">설명</span>합의 각 항을 '높이 × 너비'로 쪼개 봅니다. \(\frac{1}{n + k} = (\frac{1}{n}) \cdot \frac{1}{1 + \frac{k}{n}}\)이므로 너비는 \(\frac{1}{n}\), 높이는 \(f(\frac{k}{n}) = \frac{1}{1 + \frac{k}{n}}\)입니다. \(\frac{k}{n}\)이 0에서 1까지 움직이므로 <b>\(\lim \sum_{k=1}^n (\frac{1}{n}) f(\frac{k}{n}) = \int_0^1 f(x)\,dx\)</b>를 써서 \(\int_0^1 \frac{1}{1 + x}\,dx = \ln 2\)를 얻습니다. 일반적으로 \(\frac{1}{n}\) 또는 \(\frac{b - a}{n}\)은 \(dx\), \(\frac{k}{n}\)을 포함한 식은 \(x\), \(k = 1\)과 \(k = n\)일 때의 값은 적분 구간의 끝으로 읽습니다.</li>
-            <li><span class="tag">연결</span>\(k\)를 0부터 \(n - 1\)까지 더하면 직사각형의 왼쪽 끝 높이를 쓰는 셈입니다. 두 합의 차는 맨 끝 직사각형 두 개의 차 \(\{f(b) - f(a)\}\Delta x\)뿐이므로 \(n \to \infty\)이면 0이 되어 극한은 같습니다. 이 생각은 부피, 움직인 거리처럼 '잘게 나누어 더하는' 모든 계산의 바탕이 됩니다.</li>
-            <li><span class="tag">적용</span>둘째 보기에서 \(n\)을 1, 10, 80으로 바꾸며 \(S_n\)가 \(\ln 2 \approx 0.6931\)로 다가가는지 보세요. 오른쪽 끝과 왼쪽 끝 중 어느 합이 더 큰가요? 함수가 감소하는 것과 어떤 관계인가요? 셋째 보기는 너비가 \(\frac{\pi}{n}\)입니다. 적분 구간은 어떻게 되나요?</li>
-            <li class="warn"><span class="tag">판단</span>각 항이 0으로 간다고 합도 0으로 간다고 생각하면 안 됩니다. 항의 개수가 함께 늘어나기 때문입니다. 또 너비를 잘못 읽기 쉽습니다. \((\frac{\pi}{n}) \sin(\frac{k\pi}{n})\)을 \(\int_0^1 \sin(\pi x)\,dx\)로 읽으면 너비 \(\frac{\pi}{n}\)과 \(\frac{1}{n}\)의 차이인 \(\pi\)배만큼 틀립니다.</li>
+            <li><span class="tag">질문</span>\(\lim_{n\to \infty} \{\frac{1}{n + 1} + \frac{1}{n + 2} + \cdots + \frac{1}{2n}\}\)은 얼마일까? 항은 점점 작아지지만 개수는 늘어난다.</li>
+            <li><span class="tag">복원</span>\(f\)가 \([a, b]\)에서 연속이면 구간을 \(n\)등분해 \(\Delta x = \frac{b - a}{n}\), \(x_k = a + k\Delta x\)로 둘 때 \(\lim_{n\to \infty} \sum_{k=1}^n f(x_k)\Delta x = \int_a^b f(x)\,dx\)이다.</li>
+            <li><span class="tag">설명</span>합의 각 항을 높이 × 너비로 쪼개 본다. \(\frac{1}{n + k} = (\frac{1}{n}) \cdot \frac{1}{1 + \frac{k}{n}}\)이므로 너비는 \(\frac{1}{n}\), 높이는 \(f(\frac{k}{n}) = \frac{1}{1 + \frac{k}{n}}\)이다. \(\frac{k}{n}\)이 0에서 1까지 움직이므로 \(\lim \sum_{k=1}^n (\frac{1}{n}) f(\frac{k}{n}) = \int_0^1 f(x)\,dx\)를 써서 \(\int_0^1 \frac{1}{1 + x}\,dx = \ln 2\)를 얻는다. 일반적으로 \(\frac{1}{n}\) 또는 \(\frac{b - a}{n}\)은 \(dx\)로, \(\frac{k}{n}\)을 포함한 식은 \(x\)로, \(k = 1\)과 \(k = n\)일 때의 값은 적분 구간의 끝으로 읽는다.</li>
+            <li><span class="tag">연결</span>\(k\)를 0부터 \(n - 1\)까지 더하면 직사각형의 왼쪽 끝 높이를 쓰는 셈이다. 두 합의 차는 맨 끝 직사각형 두 개의 차 \(\{f(b) - f(a)\}\Delta x\)뿐이므로 \(n \to \infty\)이면 0이 되어 극한은 같다. 이 생각은 부피, 움직인 거리처럼 잘게 나누어 더하는 모든 계산의 바탕이 된다.</li>
+            <li><span class="tag">적용</span>둘째 보기에서 \(n\)을 1, 10, 80으로 바꾸며 \(S_n\)가 \(\ln 2 \approx 0.6931\)로 다가가는지 보고, 오른쪽 끝과 왼쪽 끝 중 어느 합이 더 큰지, 그것이 함수가 감소하는 것과 어떤 관계인지 생각해 보자. 셋째 보기는 너비가 \(\frac{\pi}{n}\)인데, 적분 구간이 어떻게 되는지도 확인해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>각 항이 0으로 간다고 합도 0으로 간다고 생각하면 안 되는데, 항의 개수가 함께 늘어나기 때문이다. 또 너비를 잘못 읽기 쉬워서, \((\frac{\pi}{n}) \sin(\frac{k\pi}{n})\)을 \(\int_0^1 \sin(\pi x)\,dx\)로 읽으면 너비 \(\frac{\pi}{n}\)과 \(\frac{1}{n}\)의 차이인 \(\pi\)배만큼 틀린다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -185,16 +185,16 @@
                 <div><dt>이 해석의 정적분 값</dt><dd class="n-i">—</dd></div>
                 <div><dt>판정</dt><dd class="n-ok">—</dd></div>
               </dl>
-              <p class="fig-note">직사각형은 고른 정적분의 구간을 \(n\)등분하고 오른쪽 끝의 높이를 쓴 것입니다. 첫째 값과 둘째 값이 \(n\)마다 똑같은지 보세요.</p>
+              <p class="fig-note">직사각형은 고른 정적분의 구간을 \(n\)등분하고 오른쪽 끝의 높이를 쓴 것이다. 첫째 값과 둘째 값이 \(n\)마다 똑같은지 보자.</p>
             </div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>\(\lim \sum_{k=1}^n (\frac{2}{n})(1 + \frac{2k}{n})^2\)를 정적분으로 바꾸는 방법은 하나뿐일까요?</li>
-            <li><span class="tag">복원</span>구간 \([a, b]\)를 \(n\)등분하면 \(\Delta x = \frac{b - a}{n}\), \(x_k = a + k\Delta x\)이고 \(\lim \sum f(x_k)\Delta x = \int_a^b f(x)\,dx\)입니다.</li>
-            <li><span class="tag">설명</span>\(\frac{2}{n}\)을 \(\Delta x\)로 보면 구간 길이는 2입니다. \(x_k = 1 + \frac{2k}{n}\)으로 읽으면 \(x\)는 1에서 3까지 움직이고 높이는 \(x^2\)이므로 \(\int_1^3 x^2\,dx\)입니다. \(x_k = \frac{2k}{n}\)으로 읽으면 높이는 \((1 + x)^2\)이고 구간은 [0, 2]입니다. \(\frac{1}{n}\)을 \(\Delta x\)로 보면 남은 2는 높이에 들어가 \(\int_0^1 2(1 + 2x)^2\,dx\)가 됩니다. 세 해석은 <b>직사각형의 넓이가 하나하나 같으므로</b> 모두 같은 값 \(\frac{26}{3}\)을 줍니다. 핵심은 \(\Delta x\), \(x_k\), \(f\)를 하나의 짝으로 맞추어 읽는 것입니다.</li>
-            <li><span class="tag">연결</span>세 정적분이 같은 것은 치환적분으로도 확인됩니다. \(\int_1^3 x^2\,dx\)에서 \(x = 1 + t\)로 놓으면 \(\int_0^2 (1 + t)^2\,dt\), \(x = 1 + 2s\)로 놓으면 \(\int_0^1 2(1 + 2s)^2\,ds\)입니다. 급수의 합을 정적분으로 바꾸는 일과 변수를 바꾸는 일은 같은 생각입니다.</li>
-            <li><span class="tag">적용</span>네 해석을 차례로 골라 첫째 값과 둘째 값을 비교하세요. 어느 해석에서 두 값이 어긋나나요? \(n\)을 60까지 늘리면 \(S_n\)는 어떤 수에 다가가나요? \(\frac{26}{3} \approx 8.667\)과 비교해 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>\(\frac{2}{n}\)을 너비로 정했다면 구간 길이는 2이고 \(x_k\)도 \(\frac{2}{n}\) 간격으로 움직여야 합니다. 넷째 해석처럼 구간만 [0, 2]로 정하고 높이에서 1을 빠뜨리면 다른 값 \(\frac{8}{3}\)이 됩니다. 너비와 구간 길이, \(x_k\)의 간격이 서로 맞는지 꼭 확인하세요.</li>
+            <li><span class="tag">질문</span>\(\lim \sum_{k=1}^n (\frac{2}{n})(1 + \frac{2k}{n})^2\)를 정적분으로 바꾸는 방법은 하나뿐일까?</li>
+            <li><span class="tag">복원</span>구간 \([a, b]\)를 \(n\)등분하면 \(\Delta x = \frac{b - a}{n}\), \(x_k = a + k\Delta x\)이고 \(\lim \sum f(x_k)\Delta x = \int_a^b f(x)\,dx\)이다.</li>
+            <li><span class="tag">설명</span>\(\frac{2}{n}\)을 \(\Delta x\)로 보면 구간 길이는 2이다. 이때 \(x_k = 1 + \frac{2k}{n}\)으로 읽으면 \(x\)는 1에서 3까지 움직이고 높이는 \(x^2\)이므로 \(\int_1^3 x^2\,dx\)이고, \(x_k = \frac{2k}{n}\)으로 읽으면 높이는 \((1 + x)^2\)이고 구간은 [0, 2]이다. 한편 \(\frac{1}{n}\)을 \(\Delta x\)로 보면 남은 2는 높이에 들어가 \(\int_0^1 2(1 + 2x)^2\,dx\)가 된다. 세 해석은 직사각형의 넓이가 하나하나 같으므로 모두 같은 값 \(\frac{26}{3}\)을 주며, 그래서 \(\Delta x\), \(x_k\), \(f\)를 하나의 짝으로 맞추어 읽어야 한다.</li>
+            <li><span class="tag">연결</span>세 정적분이 같은 것은 치환적분으로도 확인된다. \(\int_1^3 x^2\,dx\)에서 \(x = 1 + t\)로 놓으면 \(\int_0^2 (1 + t)^2\,dt\), \(x = 1 + 2s\)로 놓으면 \(\int_0^1 2(1 + 2s)^2\,ds\)이다. 즉 급수의 합을 정적분으로 바꾸는 일과 변수를 바꾸는 일은 같은 생각이다.</li>
+            <li><span class="tag">적용</span>네 해석을 차례로 골라 첫째 값과 둘째 값을 비교하며 어느 해석에서 두 값이 어긋나는지 보자. 그리고 \(n\)을 60까지 늘리면 \(S_n\)가 어떤 수에 다가가는지 \(\frac{26}{3} \approx 8.667\)과 비교해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>\(\frac{2}{n}\)을 너비로 정했다면 구간 길이는 2이고 \(x_k\)도 \(\frac{2}{n}\) 간격으로 움직여야 한다. 넷째 해석처럼 구간만 [0, 2]로 정하고 높이에서 1을 빠뜨리면 다른 값 \(\frac{8}{3}\)이 되므로, 너비와 구간 길이, \(x_k\)의 간격이 서로 맞는지 꼭 확인해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">

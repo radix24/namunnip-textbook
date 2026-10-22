@@ -34,16 +34,16 @@
           <div><dt>\(\frac{1 - \cos x}{x}\)</dt><dd class="n-c">—</dd></div>
         </dl>
         <p class="mono eq">—</p>
-        <p class="fig-note">넓이는 삼각형 \(OAP = \frac{1}{2} \sin x\), 부채꼴 \(OAP = \frac{1}{2} x\), 삼각형 \(OAT = \frac{1}{2} \tan x\)입니다(반지름 1).</p>
+        <p class="fig-note">넓이는 삼각형 \(OAP = \frac{1}{2} \sin x\), 부채꼴 \(OAP = \frac{1}{2} x\), 삼각형 \(OAT = \frac{1}{2} \tan x\)이다(반지름 1).</p>
       </div>
     </div>
     <ol class="steps">
-      <li><span class="tag">질문</span>\(x = 0\)을 넣으면 \(\frac{\sin x}{x}\)는 \(\frac{0}{0}\)이 되어 값이 없습니다. \(x\)가 0에 가까워질 때는 어떤 값으로 다가갈까요?</li>
-      <li><span class="tag">복원</span>호도법에서 반지름 1, 중심각 \(x\)인 부채꼴의 넓이는 \(\frac{1}{2}x\)입니다. 세 함수가 \(g(x) \le f(x) \le h(x)\)이고 \(g\)와 \(h\)의 극한이 같으면 \(f\)의 극한도 그 값입니다.</li>
-      <li><span class="tag">설명</span>\(0 &lt; x &lt; \frac{\pi}{2}\)일 때 그림의 세 도형은 차례로 포함되므로 \(\frac{1}{2} \sin x &lt; \frac{1}{2} x &lt; \frac{1}{2} \tan x\)입니다. 각 변을 \(\frac{1}{2} \sin x\)로 나누고 역수를 취하면 <b>\(\cos x &lt; \frac{\sin x}{x} &lt; 1\)</b>입니다. \(x \to 0^+\)일 때 \(\cos x \to 1\)이므로 <b>\(\lim_{x\to 0} \frac{\sin x}{x} = 1\)</b>입니다. \(\frac{\sin(-x)}{-x} = \frac{\sin x}{x}\)이므로 왼쪽에서 다가가도 같습니다. 또 \(\frac{1 - \cos x}{x} = (\frac{\sin x}{x}) \cdot \frac{\sin x}{1 + \cos x} \to 1 \cdot \frac{0}{2} = 0\)입니다. 같은 방법으로 \(\lim \frac{\tan x}{x} = 1\)입니다.</li>
-      <li><span class="tag">연결</span>\(\frac{\sin x}{x} \to 1\)은 \(x\)가 작을 때 \(\sin x \approx x\)라는 뜻입니다. 진자의 진동 주기를 구할 때 쓰는 근사도 이것입니다. 이 두 극한으로 다음 카드에서 사인함수와 코사인함수의 도함수를 구합니다.</li>
-      <li><span class="tag">적용</span>'\(x \div 2\)'를 여러 번 눌러 세 도형의 넓이가 어떻게 가까워지는지 보세요. \(\frac{\sin x}{x}\)는 아래 경계 \(\cos x\)와 위 경계 1 사이에 늘 있나요? \(\frac{1 - \cos x}{x}\)는 \(x\)가 절반이 될 때 대략 몇 배가 되나요?</li>
-      <li class="warn"><span class="tag">판단</span>이 극한은 \(x\)를 라디안으로 잴 때만 1입니다. 각을 도(°)로 재면 부채꼴의 넓이가 달라져 \(\lim_{x\to 0} \frac{\sin x^\circ}{x} = \frac{\pi}{180}\)입니다. 또 \(\frac{0}{0}\) 꼴이라고 곧바로 1이라고 답할 수는 없습니다. 같은 \(\frac{0}{0}\) 꼴인 \(\frac{1 - \cos x}{x}\)는 0으로 갑니다. 극한값은 넓이 비교와 조임으로 얻은 것입니다.</li>
+      <li><span class="tag">질문</span>\(x = 0\)을 넣으면 \(\frac{\sin x}{x}\)는 \(\frac{0}{0}\)이 되어 값이 없다. \(x\)가 0에 가까워질 때는 어떤 값으로 다가갈까?</li>
+      <li><span class="tag">복원</span>호도법에서 반지름 1, 중심각 \(x\)인 부채꼴의 넓이는 \(\frac{1}{2}x\)이다. 그리고 세 함수가 \(g(x) \le f(x) \le h(x)\)이고 \(g\)와 \(h\)의 극한이 같으면 \(f\)의 극한도 그 값이다.</li>
+      <li><span class="tag">설명</span>\(0 &lt; x &lt; \frac{\pi}{2}\)일 때 그림의 세 도형은 차례로 포함되므로 \(\frac{1}{2} \sin x &lt; \frac{1}{2} x &lt; \frac{1}{2} \tan x\)이고, 각 변을 \(\frac{1}{2} \sin x\)로 나누고 역수를 취하면 \(\cos x &lt; \frac{\sin x}{x} &lt; 1\)이다. \(x \to 0^+\)일 때 \(\cos x \to 1\)이므로 \(\lim_{x\to 0} \frac{\sin x}{x} = 1\)이고, \(\frac{\sin(-x)}{-x} = \frac{\sin x}{x}\)이므로 왼쪽에서 다가가도 같다. 또 \(\frac{1 - \cos x}{x} = (\frac{\sin x}{x}) \cdot \frac{\sin x}{1 + \cos x} \to 1 \cdot \frac{0}{2} = 0\)이고, 같은 방법으로 \(\lim \frac{\tan x}{x} = 1\)이다.</li>
+      <li><span class="tag">연결</span>\(\frac{\sin x}{x} \to 1\)은 \(x\)가 작을 때 \(\sin x \approx x\)라는 뜻이며, 진자의 진동 주기를 구할 때 쓰는 근사도 이것이다. 이 두 극한으로 다음 카드에서 사인함수와 코사인함수의 도함수를 구한다.</li>
+      <li><span class="tag">적용</span>‘\(x \div 2\)’를 여러 번 눌러 세 도형의 넓이가 어떻게 가까워지는지, \(\frac{\sin x}{x}\)가 아래 경계 \(\cos x\)와 위 경계 1 사이에 늘 있는지 보자. 그리고 \(\frac{1 - \cos x}{x}\)는 \(x\)가 절반이 될 때 대략 몇 배가 되는지 확인해 보자.</li>
+      <li class="warn"><span class="tag">판단</span>이 극한은 \(x\)를 라디안으로 잴 때만 1이다. 각을 도(°)로 재면 부채꼴의 넓이가 달라져 \(\lim_{x\to 0} \frac{\sin x^\circ}{x} = \frac{\pi}{180}\)이기 때문이다. 또 \(\frac{0}{0}\) 꼴이라고 곧바로 1이라고 답할 수는 없어서, 같은 \(\frac{0}{0}\) 꼴인 \(\frac{1 - \cos x}{x}\)는 0으로 간다. 극한값은 넓이 비교와 조임으로 얻은 것이다.</li>
     </ol>
   </div>
   <div class="quiz">
