@@ -178,6 +178,11 @@ def practice_links(course, ch, sec, where):
 
 
 REL, USED, NAMES = {}, {}, {}   # main()이 채운다: 카드별 연관 카드, 블록 배치 위치, 과목 이름
+DOMAIN = {}   # main()이 채운다: 과목 id → "math" | "sci". 개념 지도와 연관 카드는 두 분야를 섞지 않는다
+
+
+def block_domains(bid):
+    return {DOMAIN.get(h.split()[0]) for h in USED.get(bid, [])}
 
 
 def related_map(blocks, used):
@@ -209,10 +214,12 @@ def related_map(blocks, used):
         if b not in used or blocks[b]["type"] not in NUMBERED:
             continue
         home = used[b][0].split()[0]
+        dom = DOMAIN.get(home)
+        keep = lambda xs: [x for x in xs if DOMAIN.get(used[x][0].split()[0]) == dom]   # 수학과 과학은 서로 잇지 않는다
         rel[b] = {
-            "before": cards([r for c in cids for r in cons[c][1]], b),
-            "same": [x for x in cards(cids, b) if used[x][0].split()[0] != home],
-            "after": cards([n for c in cids for n in next_of.get(c, [])], b),
+            "before": keep(cards([r for c in cids for r in cons[c][1]], b)),
+            "same": keep([x for x in cards(cids, b) if used[x][0].split()[0] != home]),
+            "after": keep(cards([n for c in cids for n in next_of.get(c, [])], b)),
         }
     return rel
 
@@ -421,6 +428,14 @@ def build_graph(blocks, used, out):
         for r in c["req"]:
             if r not in ids:
                 errors.append(f'{c["line"]}행 {c["id"]}: 없는 선수 개념 {r}')
+    # 수학(교양·심화 포함)과 과학은 개념 지도에서 서로 잇지 않는다
+    cdom = {c["id"]: set().union(*[block_domains(x) for x in c["blocks"]]) - {None} for c in concepts}
+    for c in concepts:
+        if len(cdom[c["id"]]) > 1:
+            errors.append(f'{c["line"]}행 {c["id"]}: 수학 블록과 과학 블록이 한 개념에 섞임')
+        for r in c["req"]:
+            if r in cdom and cdom[r] and cdom[c["id"]] and not (cdom[r] & cdom[c["id"]]):
+                errors.append(f'{c["line"]}행 {c["id"]}: 선수 개념 {r}이 다른 분야(수학·과학)에 있음')
     # 선수 관계에 순환이 있으면 안 된다
     req = {c["id"]: [r for r in c["req"] if r in ids] for c in concepts}
     state = {}
@@ -452,6 +467,8 @@ def build_graph(blocks, used, out):
             a, sep, b = (x.strip() for x in line.partition(">"))
             if not sep or a not in used or b not in used:
                 raise SystemExit(f"graph/links.txt {ln}행: '먼저 블록 > 다음 블록' 형식이 아니거나 배치되지 않은 블록")
+            if block_domains(a) != block_domains(b):
+                raise SystemExit(f"graph/links.txt {ln}행: 수학과 과학 블록은 잇지 않는다")
             extra.append([a, b])
     wr(out / "js" / "graph-data.js", "/* 자동 생성: python3 tools/build.py (원본: graph/concepts.txt, graph/links.txt) — 직접 고치지 말 것 */\n"
         + "window.GRAPH = " + json.dumps(data, ensure_ascii=False) + ";\nwindow.GRAPH_LINKS = " + json.dumps(extra, ensure_ascii=False) + ";\n")
@@ -472,6 +489,7 @@ def main():
     pages = []
     for c in cur["courses"]:
         NAMES[c["id"]] = c["name"]
+        DOMAIN[c["id"]] = "math" if c["track"] == "math" or c["id"] == "extra" else "sci"
         tc = {"id": c["id"], "name": c["name"], "meta": c["meta"], "track": c["track"], "level": c["level"], "split": exam_split(c), "chapters": []}
         toc.append(tc)
         for ch in c["chapters"]:

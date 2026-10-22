@@ -1,7 +1,7 @@
 # 개념 지도 데이터 — tools/build.py가 읽어 js/graph-data.js를 만든다.
 # 한 줄에 개념 하나:  개념 id | 이름 | 이 개념을 다루는 블록 id들(공백 구분) | 먼저 알아야 할 개념 id들(공백 구분)
 # 블록 id로 연결하므로 교육과정이 바뀌어 블록이 다른 절로 옮겨 가도 지도는 그대로 쓸 수 있다.
-# 한 블록이 여러 개념에 속해도 된다. 선수 관계는 과목을 넘나들어도 된다.
+# 한 블록이 여러 개념에 속해도 된다. 선수 관계는 과목을 넘나들어도 되지만, 수학(교양·심화 포함)과 과학 사이는 잇지 않는다. 빌드가 검사한다.
 
 # ── 측정과 정보 ──
 measure | 측정과 규모 | card-is1-scale card-is1-clock video-is1-meter text-is1-measure-space-time |
@@ -143,7 +143,7 @@ eco-parts | 생태계 구성 요소 | card-is2-forest-light card-is2-fox-heat te
 food-web | 먹이 사슬과 생태계 평형 | card-is2-food-chain card-is2-energy-pyramid text-is2-eco-balance | eco-parts
 cycles | 물질 순환과 에너지 흐름 | card-bio-carbon card-bio-nitrogen card-bio-flow card-bio-disturb text-bio-ecosystem text-esys-oxygen-rise | food-web photosyn
 population | 개체군과 군집 | card-bio-logistic text-bio-social card-bio-interact text-bio-niche card-bio-quadrat text-bio-population text-labbio-quadrat | eco-parts
-phyllotaxis | 잎차례와 황금각 | card-phyllo text-extra-golden-angle | photosyn
+phyllotaxis | 잎차례와 황금각 | card-phyllo text-extra-golden-angle |
 
 # ── 진로선택: 역학과 에너지 ──
 force-vector | 힘의 합성과 빗면 | card-mech-incline | newton2 torque
@@ -1129,3 +1129,16 @@ mrs-plan | 주제 선정과 탐구 계획 | card-mres-topic-matrix card-mres-cri
 mrs-perform | 탐구 수행 | card-mres-magic-square-log card-mres-border-tiles text-mres-magic | mrs-plan
 mrs-present | 산출물과 발표 | card-mres-chart-redesign card-mres-proof-order text-mres-present | mrs-perform
 mrs-reflect | 반성과 평가 | card-mres-rubric-eval card-mres-euler-polynomial text-mres-reflect | mrs-present mrs-ethics
+# extra (교양·심화, 수학 쪽)
+ex-pizza | 직선으로 나눈 조각 수 | text-extra-pizza card-extra-pizza | alg-recursive alg-seq-sums
+ex-queue | 줄 서기와 기다리는 시간 | text-extra-queue card-extra-queue | stat-expectation
+ex-fold | 종이 접기와 거듭제곱 | text-extra-paper-fold card-extra-fold | alg-geo-seq alg-common-log
+ex-temperament | 평균율과 2의 12제곱근 | text-extra-temperament card-extra-piano | alg-exp-rational alg-log
+ex-mobius | 뫼비우스의 띠 | text-extra-mobius card-extra-mobius |
+ex-rainbow | 무지개와 최소 편향각 | text-extra-rainbow card-extra-rainbow | alg-trig-func
+ex-square-cube | 제곱-세제곱 법칙 | text-extra-square-cube card-extra-scale | alg-exp-laws
+ex-gps | GPS 시계와 상대성 | text-extra-gps card-extra-gps |
+ex-random-walk | 마구 걷기와 √n | text-extra-random-walk card-extra-walk | stat-binomial stat-expectation
+ex-logistic | 로지스틱 사상과 혼돈 | text-extra-logistic card-extra-logistic | alg-recursive cm1-quad-graph
+ex-life | 생명 게임 | text-extra-life card-extra-life |
+ex-chaos | 카오스 게임과 프랙털 | text-extra-chaos-game card-extra-chaos | alg-geo-seq alg-log

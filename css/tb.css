@@ -1094,10 +1094,11 @@ body[data-domain="math"] #chips .chip { display: none; }
 .steps-fold li:not(.open):hover { background: color-mix(in srgb, var(--forest) 5%, transparent); }
 .steps-fold li:not(.open) .step-body { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink-3); }
 .steps-fold li:not(.open) .step-body .katex-display { display: inline; margin: 0; }
-.steps-fold li:not(.open) .step-next { display: none; }
-.steps-fold li.open .step-tg .tag::after { content: " ▾"; }
-.steps-fold li:not(.open) .step-tg .tag::after { content: " ▸"; }
-.step-next { display: block; margin-top: 8px; font: inherit; font-size: 12.5px; color: var(--forest); background: none; border: 1px solid var(--rule); border-radius: 2px; padding: 3px 10px; cursor: pointer; }
-.step-next:hover { border-color: var(--forest); }
+.step-arrow { display: none; position: absolute; right: 8px; top: 9px; width: 26px; height: 26px; padding: 6px; color: var(--ink-3); background: none; border: 0; border-radius: 2px; cursor: pointer; }
+.step-arrow svg { display: block; width: 14px; height: 14px; transition: transform .15s; }
+.step-arrow:hover { color: var(--forest); background: color-mix(in srgb, var(--forest) 8%, transparent); }
+.steps-fold .step-arrow { display: block; }
+.steps-fold li { padding-right: 40px; }
+.steps-fold li:not(.open) .step-arrow svg { transform: rotate(-90deg); }
 @media (max-width: 640px) { .step-tg { position: static; display: block; margin-bottom: 1px; } }
-@media print { .steps-fold li .step-body { display: block !important; -webkit-line-clamp: none !important; color: inherit !important; } .step-next, .steps-mode { display: none !important; } }
+@media print { .steps-fold li .step-body { display: block !important; -webkit-line-clamp: none !important; color: inherit !important; } .step-arrow, .steps-mode { display: none !important; } }
