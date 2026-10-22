@@ -130,12 +130,12 @@
             <div style="overflow-x:auto"><table></table></div>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>모표준편차를 모를 때는 표본에서 구한 표준편차로 표준화합니다. 그러면 표준화한 값의 분포는 여전히 표준정규분포일까요?</li>
-            <li><span class="tag">복원</span>표준정규분포 \(N(0, 1)\), \(P(-1.96 \le Z \le 1.96) \approx 0.95\).</li>
-            <li><span class="tag">설명</span>정규분포를 따르는 모집단에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - \mu}{S/\sqrt n}\)를 만들면, \(T\)는 자유도 \(n - 1\)인 <em>t분포</em>를 따릅니다. t분포는 0에 대해 대칭인 종 모양이지만 표준정규분포보다 <em>꼬리가 두껍습니다</em>. \(S\)도 표본마다 흔들리는 값이라 극단적인 \(T\)가 더 자주 나오기 때문입니다. 자유도가 커지면 t분포는 표준정규분포에 가까워집니다.</li>
-            <li><span class="tag">연결</span>t분포는 맥주 회사에서 일하던 윌리엄 고셋이 적은 표본으로 품질을 판단하려고 연구해 '스튜던트'라는 필명으로 발표한 것으로 알려져 있습니다.</li>
-            <li><span class="tag">적용</span>자유도를 1부터 늘리며 양쪽 2.5% 경계값 \(t_{0.025}\)가 1.96에 가까워지는 모습을 보세요. 자유도가 몇일 때 2.1보다 작아지나요?</li>
-            <li class="warn"><span class="tag">판단</span>t분포는 모집단이 정규분포에 가깝다는 가정에서 나온 것입니다. 표본이 작고 자료가 크게 치우쳐 있으면 결과를 조심해서 해석해야 합니다.</li>
+            <li><span class="tag">질문</span>모표준편차를 모를 때는 표본에서 구한 표준편차로 표준화한다. 그러면 표준화한 값의 분포는 여전히 표준정규분포일까?</li>
+            <li><span class="tag">복원</span>표준정규분포 \(N(0, 1)\), \(P(-1.96 \le Z \le 1.96) \approx 0.95\)이다.</li>
+            <li><span class="tag">설명</span>정규분포를 따르는 모집단에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - \mu}{S/\sqrt n}\)를 만들면, \(T\)는 자유도 \(n - 1\)인 <em>t분포</em>를 따른다. t분포는 0에 대해 대칭인 종 모양이지만 표준정규분포보다 <em>꼬리가 두껍다</em>. \(S\)도 표본마다 흔들리는 값이라 극단적인 \(T\)가 더 자주 나오기 때문이다. 자유도가 커지면 t분포는 표준정규분포에 가까워진다.</li>
+            <li><span class="tag">연결</span>t분포는 맥주 회사에서 일하던 윌리엄 고셋이 적은 표본으로 품질을 판단하려고 연구해 '스튜던트'라는 필명으로 발표한 것으로 알려져 있다.</li>
+            <li><span class="tag">적용</span>자유도를 1부터 늘리며 양쪽 2.5% 경계값 \(t_{0.025}\)가 1.96에 가까워지는 모습을 보자. 자유도가 몇일 때 2.1보다 작아지는가?</li>
+            <li class="warn"><span class="tag">판단</span>t분포는 모집단이 정규분포에 가깝다는 가정에서 나온 것이다. 표본이 작고 자료가 크게 치우쳐 있으면 결과를 조심해서 해석해야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -157,19 +157,19 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">모집단 \(N(50, 10^2)\)(가상)에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - 50}{S/\sqrt n}\)를 2000번 계산합니다.</p>
+            <p class="small">모집단 \(N(50, 10^2)\)(가상)에서 크기 \(n\)인 표본을 뽑아 \(T = \frac{\bar X - 50}{S/\sqrt n}\)를 2000번 계산한다.</p>
             <div class="ctl-row"><div><label class="mono">표본의 크기 \(n\) = <output class="n-out"></output></label><input class="n" type="range" min="3" max="40" step="1" value="5" aria-label="표본의 크기"></div></div>
             <div class="presets"><button class="chip run" type="button">2000번 뽑기</button></div>
             <canvas aria-label="T 값의 히스토그램과 표준정규분포, t분포 곡선"></canvas>
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>표본평균을 표준화할 때 모표준편차 \(\sigma\) 대신 표본표준편차 \(S\)를 넣으면 어떤 일이 생길까요? 1.96을 그대로 써도 될까요?</li>
-            <li><span class="tag">복원</span>\(\bar X\)의 분포: 평균 \(\mu\), 표준편차 \(\frac{\sigma}{\sqrt n}\).</li>
-            <li><span class="tag">설명</span>\(S\)는 표본마다 달라서, 우연히 \(S\)가 작게 나온 표본은 \(T\)가 크게 튀어 나갑니다. 그래서 \(T\)의 분포는 표준정규분포보다 꼬리가 두껍고, \(n\)이 작을수록 \(|T| > 1.96\)인 경우가 5%보다 훨씬 많아집니다. 시뮬레이션 막대는 자유도 \(n - 1\)인 t분포 곡선(빨강)과 잘 맞습니다. 그래서 작은 표본에서는 1.96 대신 t분포의 경계값을 씁니다.</li>
-            <li><span class="tag">연결</span>다음 절의 모평균의 신뢰구간 \(\bar x \pm t_{0.025}\frac{s}{\sqrt n}\)이 바로 이 결과를 이용합니다.</li>
-            <li><span class="tag">적용</span>\(n = 3, 5, 10, 30\)에서 \(|T| > 1.96\)의 비율을 비교하세요. \(n\)이 커지면 왜 5%에 가까워질까요?</li>
-            <li class="warn"><span class="tag">판단</span>시뮬레이션 결과는 할 때마다 조금씩 다릅니다. 2000번이면 비율의 오차가 대략 ±1%p 정도라는 것을 생각하며 읽습니다.</li>
+            <li><span class="tag">질문</span>표본평균을 표준화할 때 모표준편차 \(\sigma\) 대신 표본표준편차 \(S\)를 넣으면 어떤 일이 생길까? 1.96을 그대로 써도 될까?</li>
+            <li><span class="tag">복원</span>\(\bar X\)의 분포는 평균이 \(\mu\), 표준편차가 \(\frac{\sigma}{\sqrt n}\)이다.</li>
+            <li><span class="tag">설명</span>\(S\)는 표본마다 달라서, 우연히 \(S\)가 작게 나온 표본은 \(T\)가 크게 튀어 나간다. 그래서 \(T\)의 분포는 표준정규분포보다 꼬리가 두껍고, \(n\)이 작을수록 \(|T| > 1.96\)인 경우가 5%보다 훨씬 많아진다. 시뮬레이션 막대는 자유도 \(n - 1\)인 t분포 곡선(빨강)과 잘 맞다. 그래서 작은 표본에서는 1.96 대신 t분포의 경계값을 쓴다.</li>
+            <li><span class="tag">연결</span>다음 절의 모평균의 신뢰구간 \(\bar x \pm t_{0.025}\frac{s}{\sqrt n}\)이 바로 이 결과를 이용한다.</li>
+            <li><span class="tag">적용</span>\(n = 3, 5, 10, 30\)에서 \(|T| > 1.96\)의 비율을 비교해 보자. \(n\)이 커지면 왜 5%에 가까워질까?</li>
+            <li class="warn"><span class="tag">판단</span>시뮬레이션 결과는 할 때마다 조금씩 다르다. 2000번이면 비율의 오차가 대략 ±1%p 정도라는 것을 생각하며 읽는다.</li>
           </ol>
         </div>
         <div class="quiz">

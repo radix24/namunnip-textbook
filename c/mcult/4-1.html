@@ -85,7 +85,7 @@
                 <text x="20" y="52">열량</text><text x="150" y="52">150 kcal</text><text x="290" y="52">450 kcal</text><text x="420" y="52">따로 없음</text>
                 <text x="20" y="74">나트륨</text><text x="150" y="74">200 mg (10%)</text><text x="290" y="74">600 mg</text><text x="420" y="74" class="td">30%</text>
                 <text x="20" y="96">당류</text><text x="150" y="96">6 g (6%)</text><text x="290" y="96">18 g</text><text x="420" y="96">18%</text>
-                <text x="20" y="120">기준치: 나트륨 2000 mg, 당류 100 g</text>
+                <text x="20" y="120">기준치 나트륨 2000 mg, 당류 100 g</text>
               </g>
             </svg>
             <figcaption>그림 1. 영양성분표의 값은 기준량에 대한 값이므로, 먹은 양에 맞게 비례로 바꾸어 읽어야 한다.</figcaption>
@@ -136,7 +136,7 @@
               <h4>영양정보 <span class="small">(가상 과자)</span></h4>
               <p class="small" style="margin:.1rem 0">총 내용량 150 g · 1회 제공량 30 g(총 5회 제공량)</p>
               <table>
-                <tr><td><b>1회 제공량당</b></td><td><b>1일 영양성분 기준치에 대한 비율</b></td></tr>
+                <tr><th>1회 제공량당</th><th>1일 영양성분 기준치에 대한 비율</th></tr>
                 <tr><td>열량 160 kcal</td><td></td></tr>
                 <tr><td>나트륨 240 mg</td><td>12%</td></tr>
                 <tr><td>당류 9 g</td><td>9%</td></tr>
@@ -149,7 +149,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>과자 봉지 뒤 영양성분표에 "나트륨 240 mg, 12%"라고 쓰여 있다. 한 봉지를 다 먹었다면 하루에 권장되는 나트륨의 12%만 먹은 걸까?</li>
-            <li><span class="tag">복원</span>비례식, 백분율 \(= \frac{\text{비교하는 양}}{\text{기준량}} \times 100\).</li>
+            <li><span class="tag">복원</span>비례식과 백분율 \(= \frac{\text{비교하는 양}}{\text{기준량}} \times 100\)을 떠올리자.</li>
             <li><span class="tag">설명</span>영양성분표의 수치는 <em>1회 제공량</em>(여기서는 30 g) 기준인 경우가 많다. 한 봉지 150 g은 1회 제공량의 5배이므로 나트륨은 \(240 \times 5 = 1200\) mg이다. %는 <em>1일 영양성분 기준치</em>(나트륨 2000 mg)에 대한 비율이라 \(\frac{1200}{2000} \times 100 = 60\%\)이다. 먹은 양과 표시 기준량의 비를 곱하는 비례 계산이다.</li>
             <li><span class="tag">연결</span>국내 식품의 1일 영양성분 기준치는 나트륨 2000 mg, 당류 100 g, 포화지방 15 g 등으로 정해져 있다. 표시 기준(1회 제공량, 100 g당, 총 내용량)은 제품마다 다르니 꼭 확인한다.</li>
             <li><span class="tag">적용</span>먹은 양을 바꿔 나트륨이 하루 기준치의 100%를 넘는 양을 찾아보자. 같은 양을 먹을 때 가장 먼저 기준치에 다가가는 성분은 무엇인가?</li>
@@ -174,14 +174,14 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">식품 1 kg이 오는 세 경로(가상). 운송 수단별 배출 계수는 대략적인 <b>모식 값</b>이다(g CO₂ / t·km).</p>
+            <p class="small">식품 1 kg이 오는 세 경로(가상). 운송 수단별 배출 계수는 대략적인 모식 값이다(g CO₂ / t·km).</p>
             <div class="tw"><table></table></div>
             <canvas aria-label="세 경로의 푸드 마일리지와 운송 배출량 막대"></canvas>
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>가까운 곳에서 난 먹거리를 먹자는 말이 있다. 먹거리가 이동한 거리만 보면 환경에 주는 영향을 알 수 있을까?</li>
-            <li><span class="tag">복원</span>단위가 있는 양의 곱(예: t × km = t·km).</li>
+            <li><span class="tag">복원</span>단위가 있는 양을 곱하면 단위도 곱해진다(t × km = t·km).</li>
             <li><span class="tag">설명</span><em>푸드 마일리지</em>는 식품의 무게(t)와 이동 거리(km)를 곱한 값(t·km)이다. 운송 중 배출량은 여기에 운송 수단의 <em>배출 계수</em>(1 t을 1 km 옮길 때의 배출량)를 곱해 어림한다. 이 카드의 모식 값으로는 배로 9000 km 옮길 때의 배출이 트럭으로 1350 km 옮길 때와 같고, 비행기는 같은 거리에서 배의 수십 배이다. 그래서 거리만 보고는 판단할 수 없고, <em>어떤 수단으로</em> 왔는지가 함께 중요하다.</li>
             <li><span class="tag">연결</span>식품의 전체 영향에는 운송 외에도 재배 방식, 비닐하우스 난방, 냉장 보관, 포장이 들어간다(전과정 평가).</li>
             <li><span class="tag">적용</span>거리와 운송 수단을 바꿔 세 경로의 순서가 뒤바뀌는 경우를 만들어 보자. 가까운 지역 트럭 경로가 몇 km이면 배 + 트럭 경로와 배출이 같아지는가?</li>

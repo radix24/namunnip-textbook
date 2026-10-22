@@ -143,7 +143,7 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small"><b>예측</b>: 세로 3줄, 가로 2줄의 점 6개 중 일부를 볼록하게 만든다. 아무 점도 없는 칸을 빼면 몇 가지일까?</p>
+            <p class="small">먼저 예측해 보자. 세로 3줄, 가로 2줄의 점 6개 중 일부를 볼록하게 만든다. 아무 점도 없는 칸을 빼면 몇 가지일까?</p>
             <div class="presets" role="group" aria-label="예측"><button class="chip" type="button" data-g="6">6가지</button><button class="chip" type="button" data-g="36">36가지</button><button class="chip" type="button" data-g="63">63가지</button><button class="chip" type="button" data-g="720">720가지</button></div>
             <p class="verdict" role="status"></p>
             <div class="cellbox">
@@ -154,7 +154,7 @@
           </div>
           <ol class="steps">
             <li><span class="tag">질문</span>점자는 손끝으로 읽는 글자이다. 한 칸에 점이 6개 있고 각 점은 볼록하거나 평평하다. 이것만으로 글자를 얼마나 나타낼 수 있을까?</li>
-            <li><span class="tag">복원</span>곱의 법칙, 조합 \({}_n\mathrm{C}_r\).</li>
+            <li><span class="tag">복원</span>곱의 법칙과 조합 \({}_n\mathrm{C}_r\)를 떠올리자.</li>
             <li><span class="tag">설명</span>점마다 볼록 또는 평평의 2가지이므로 모양은 \(2^6 = 64\)가지이고, 빈 칸을 빼면 <em>63가지</em>이다. 볼록한 점이 \(k\)개인 모양은 \({}_6\mathrm{C}_k\)가지이므로 \(\sum_{k=1}^{6} {}_6\mathrm{C}_k = 63\)으로 세어도 같다. 한글은 자음, 모음, 받침을 합치면 63가지로는 부족해서, 한국 점자(1926년 박두성의 훈맹정음에서 시작)는 첫소리와 받침을 다른 모양으로 쓰고 자주 쓰는 글자를 줄인 약자를 둔다.</li>
             <li><span class="tag">연결</span>한 칸에 8개의 점을 쓰는 점자도 있어 \(2^8 - 1 = 255\)가지 모양을 쓴다. 컴퓨터가 글자를 비트로 나타내는 방법과 같은 생각이다.</li>
             <li><span class="tag">적용</span>점을 눌러 모양을 만들고, 볼록한 점의 개수별로 몇 가지가 있는지 표에서 확인해 보자. 왜 점 3개일 때가 가장 많을까?</li>
@@ -181,7 +181,7 @@
           <div class="card-fig">
             <label class="small">숫자를 입력하면 점자로 바뀝니다. <input class="num" inputmode="numeric" maxlength="8" value="2026" aria-label="점자로 바꿀 숫자"></label>
             <div class="line write" aria-live="polite"></div>
-            <p class="small q2"><b>읽기 도전</b>: 아래 점자는 어떤 수일까요? <button class="chip next" type="button">새 문제</button></p>
+            <p class="small q2">읽기에 도전해 보자. 아래 점자는 어떤 수일까? <button class="chip next" type="button">새 문제</button></p>
             <div class="line read"></div>
             <div class="row2"><input class="num ans" inputmode="numeric" maxlength="6" aria-label="읽은 숫자"><button class="chip go" type="button">확인</button></div>
             <p class="verdict" role="status"></p>

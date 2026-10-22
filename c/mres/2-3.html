@@ -110,7 +110,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>수학 실험은 직접 해 보거나 시뮬레이션하여 값을 어림하는 탐구이고, 길이가 선 간격과 같은 바늘이 선에 걸칠 확률 \(2/\pi\)를 이용하면 \(\pi \approx 2N/H\)로 어림한다. 실험 결과는 우연에 따라 흔들리므로 실험 횟수와 흔들리는 범위를 함께 보고하고, 정밀도는 횟수의 제곱근에 비례해서만 좋아진다. 처음 질문의 1000번 실험은 π를 ±0.15 정도로만 어림하므로, 3.140이 둘째 자리까지 맞았다고 해서 그만큼 정밀한 실험이라고 말할 수 없다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1, 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
 
       <article class="card" id="card-mres-buffon-needle">
         <header class="card-head">
@@ -124,12 +124,12 @@
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>간격이 \(d\)인 평행선이 그어진 바닥에 길이 \(l\)(\(l \le d\))인 바늘을 마구 떨어뜨립니다. 바늘이 선에 걸칠 확률은 얼마이고, 이 실험으로 π를 어림할 수 있을까요?</li>
-            <li><span class="tag">복원</span>기하적 확률, 정적분 \(\int_0^{\pi} \sin\theta \, d\theta = 2\).</li>
-            <li><span class="tag">설명</span>바늘이 선과 이루는 각을 \(\theta\), 바늘 중점과 가장 가까운 선 사이 거리를 \(x\)라 하면, \(x \le \frac{l}{2}\sin\theta\)일 때 걸칩니다. 이를 계산하면 걸칠 확률은 \(\frac{2l}{\pi d}\)입니다. 따라서 \(N\)개 중 \(H\)개가 걸쳤다면 \(\pi \approx \frac{2lN}{dH}\)로 어림할 수 있습니다. 18세기 뷔퐁이 제시한 문제로, 실험으로 수학 상수를 추정하는 <em>수학 실험</em>의 고전적인 예입니다.</li>
-            <li><span class="tag">연결</span>난수를 이용해 값을 어림하는 방법을 몬테카를로 방법이라 하며, 물리, 금융, 인공지능 등에서 널리 쓰입니다.</li>
-            <li><span class="tag">적용</span>10개, 100개, 1000개를 떨어뜨리며 π의 어림값이 어떻게 바뀌는지 기록하세요. 실제로 성냥개비와 공책으로 해 보고 결과를 비교해 보세요.</li>
-            <li class="warn"><span class="tag">판단</span>실험 횟수가 적으면 어림값이 크게 흔들립니다. 실험 결과를 보고할 때는 횟수와 함께 결과가 얼마나 흔들리는지(다음 카드)를 밝혀야 합니다.</li>
+            <li><span class="tag">질문</span>간격이 \(d\)인 평행선이 그어진 바닥에 길이 \(l\)(\(l \le d\))인 바늘을 마구 떨어뜨린다. 바늘이 선에 걸칠 확률은 얼마이고, 이 실험으로 π를 어림할 수 있을까?</li>
+            <li><span class="tag">복원</span>기하적 확률과 정적분 \(\int_0^{\pi} \sin\theta \, d\theta = 2\)를 떠올리자.</li>
+            <li><span class="tag">설명</span>바늘이 선과 이루는 각을 \(\theta\), 바늘 중점과 가장 가까운 선 사이 거리를 \(x\)라 하면, \(x \le \frac{l}{2}\sin\theta\)일 때 걸친다. 이를 계산하면 걸칠 확률은 \(\frac{2l}{\pi d}\)이다. 따라서 \(N\)개 중 \(H\)개가 걸쳤다면 \(\pi \approx \frac{2lN}{dH}\)로 어림할 수 있다. 18세기 뷔퐁이 제시한 문제로, 실험으로 수학 상수를 추정하는 <em>수학 실험</em>의 고전적인 예이다.</li>
+            <li><span class="tag">연결</span>난수를 이용해 값을 어림하는 방법을 몬테카를로 방법이라 하며, 물리, 금융, 인공지능 등에서 널리 쓰인다.</li>
+            <li><span class="tag">적용</span>10개, 100개, 1000개를 떨어뜨리며 π의 어림값이 어떻게 바뀌는지 기록해 보자. 실제로 성냥개비와 공책으로 해 보고 결과를 비교해 보자.</li>
+            <li class="warn"><span class="tag">판단</span>실험 횟수가 적으면 어림값이 크게 흔들린다. 실험 결과를 보고할 때는 횟수와 함께 결과가 얼마나 흔들리는지(다음 카드)를 밝혀야 한다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -143,7 +143,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1, 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
 
       <article class="card" id="card-mres-trials-error">
         <header class="card-head">
@@ -151,18 +151,18 @@
         </header>
         <div class="card-body">
           <div class="card-fig">
-            <p class="small">횟수마다 같은 실험을 40모둠이 각자 했다고 생각하고, 모둠별 상대도수를 점으로 찍습니다.</p>
+            <p class="small">횟수마다 같은 실험을 40모둠이 각자 했다고 생각하고, 모둠별 상대도수를 점으로 찍는다.</p>
             <div class="presets"><button class="chip run" type="button">40모둠 실험하기</button></div>
             <canvas aria-label="실험 횟수(로그 눈금)에 따른 상대도수의 흩어짐과 이론 범위"></canvas>
             <p class="mono small say" role="status"></p>
           </div>
           <ol class="steps">
-            <li><span class="tag">질문</span>모둠마다 주사위를 던져 합이 7인 비율을 구했더니 결과가 제각각입니다. 실험 횟수를 몇 배로 늘려야 결과가 믿을 만해질까요?</li>
-            <li><span class="tag">복원</span>큰 수의 법칙, 표본비율의 표준편차 \(\sqrt{\frac{p(1 - p)}{n}}\).</li>
-            <li><span class="tag">설명</span>합이 7일 확률은 \(\frac{6}{36} = \frac16\)입니다. 실험 횟수 \(n\)이 커질수록 상대도수는 \(\frac16\)에 가까워지지만, 흩어진 정도는 \(\sqrt{\frac{p(1 - p)}{n}}\)처럼 \(\frac{1}{\sqrt n}\)에 비례해 줄어듭니다. 그래서 흔들림을 절반으로 줄이려면 횟수를 <em>4배</em>, 10분의 1로 줄이려면 <em>100배</em> 늘려야 합니다. 수학 실험을 설계할 때는 원하는 정확도에 맞춰 횟수를 미리 정합니다.</li>
-            <li><span class="tag">연결</span>앞 카드의 뷔퐁의 바늘 실험도 같습니다. π를 소수 둘째 자리까지 믿을 만하게 얻으려면 매우 많은 횟수가 필요합니다.</li>
-            <li><span class="tag">적용</span>점들이 흩어진 폭이 횟수에 따라 어떻게 줄어드는지 보세요. 10번과 1000번의 폭은 대략 몇 배 차이인가요?</li>
-            <li class="warn"><span class="tag">판단</span>실험이 잘못 설계되었다면(주사위가 찌그러졌거나 기록이 틀렸다면) 횟수를 늘려도 엉뚱한 값으로 모일 뿐입니다. 횟수는 우연한 오차만 줄입니다.</li>
+            <li><span class="tag">질문</span>모둠마다 주사위를 던져 합이 7인 비율을 구했더니 결과가 제각각이다. 실험 횟수를 몇 배로 늘려야 결과가 믿을 만해질까?</li>
+            <li><span class="tag">복원</span>큰 수의 법칙과 표본비율의 표준편차 \(\sqrt{\frac{p(1 - p)}{n}}\)를 떠올리자.</li>
+            <li><span class="tag">설명</span>합이 7일 확률은 \(\frac{6}{36} = \frac16\)이다. 실험 횟수 \(n\)이 커질수록 상대도수는 \(\frac16\)에 가까워지지만, 흩어진 정도는 \(\sqrt{\frac{p(1 - p)}{n}}\)처럼 \(\frac{1}{\sqrt n}\)에 비례해 줄어든다. 그래서 흔들림을 절반으로 줄이려면 횟수를 <em>4배</em>, 10분의 1로 줄이려면 <em>100배</em> 늘려야 한다. 수학 실험을 설계할 때는 원하는 정확도에 맞춰 횟수를 미리 정한다.</li>
+            <li><span class="tag">연결</span>앞 카드의 뷔퐁의 바늘 실험도 같다. π를 소수 둘째 자리까지 믿을 만하게 얻으려면 매우 많은 횟수가 필요하다.</li>
+            <li><span class="tag">적용</span>점들이 흩어진 폭이 횟수에 따라 어떻게 줄어드는지 보자. 10번과 1000번의 폭은 대략 몇 배 차이인가?</li>
+            <li class="warn"><span class="tag">판단</span>실험이 잘못 설계되었다면(주사위가 찌그러졌거나 기록이 틀렸다면) 횟수를 늘려도 엉뚱한 값으로 모일 뿐이다. 횟수는 우연한 오차만 줄인다.</li>
           </ol>
         </div>
         <div class="quiz">
@@ -176,7 +176,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1 — 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mres/1-1.html#card-mres-collatz-explore"><small class="mono">수학과제 탐구 1.1</small>짝수면 반으로, 홀수면 3배 더하기 1, 언제나 1에 도착할까?</a><a href="../../c/mres/1-1.html#card-mres-circle-regions"><small class="mono">수학과제 탐구 1.1</small>원 위의 점을 모두 이으면 원이 몇 조각으로 나뉠까? 1, 2, 4, 8, 16, …</a><a href="../../c/mres/1-1.html#text-mres-pattern"><small class="mono">수학과제 탐구 1.1</small>1, 2, 4, 8, 16 다음은 정말 32일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mres/2-4.html#card-mres-fair-game-design"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개로 두 사람이 이길 확률이 똑같은 게임을 만들 수 있을까?</a><a href="../../c/mres/2-4.html#card-mres-prime-algorithm"><small class="mono">수학과제 탐구 2.4</small>N까지의 소수를 모두 찾는 방법, 어떻게 고치면 훨씬 빨라질까?</a><a href="../../c/mres/2-4.html#text-mres-develop"><small class="mono">수학과제 탐구 2.4</small>주사위 두 개의 곱이 홀수면 이기는 게임, 어떻게 고쳐야 공정해질까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=mres&amp;sec=2-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">18문항</span></a>
 
