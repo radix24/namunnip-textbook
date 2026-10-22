@@ -431,7 +431,8 @@ dialog.basic-card::backdrop { background: rgba(10, 10, 12, .45); }
 :root { --fa: #3b7c2a; --fb: #2f6db0; --fc: #b8740e; --fd: #b5532f; }
 [data-theme="dark"] { --fa: #8cc67a; --fb: #7fa6ea; --fc: #e0aa3e; --fd: #e8896b; }
 .reading-body.q-text { max-width: 760px; font-size: 16px; line-height: 1.85; }
-.reading-body .q-ask { font-size: 17px; font-weight: 600; line-height: 1.65; }
+.reading-body .q-ask { padding: 12px 16px; background: var(--paper); border: 1px solid var(--rule); font-size: inherit; font-weight: 400; line-height: inherit; }
+.reading-body .q-ask::before { content: "도입"; display: block; margin-bottom: 2px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
 .reading-body .tb-goal { padding: 12px 16px; background: var(--paper); border: 1px solid var(--rule); font-size: 14.5px; line-height: 1.7; }
 .reading-body .tb-goal > .lb { display: block; margin-bottom: 2px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
 .reading-body .tb-goal a { color: var(--forest); }
