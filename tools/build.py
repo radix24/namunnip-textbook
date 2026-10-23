@@ -5,7 +5,8 @@
 
 - 블록: blocks/<폴더>/<블록 id>.html. 맨 앞 <!--block {JSON} --> 머리, 선택적 <style>, 그다음 본문.
   type: intro(절 소개) · card(개념 카드) · text(읽기: 글·사진·그림·표) · video(영상) · related(관련 카드 상자)
-- 번호: 카드·읽기 블록에 대단원.절.순서를 매겨 <span class="no">에 넣는다. 영상은 '영상'으로 표시.
+- 번호: 카드·읽기 블록에 '종류 차례'(탐구 1, 읽기 2)를 <span class="no">에 넣는다. 본문은 번호 없이 '본문', 영상은 '영상'으로 표시.
+  절 번호 체계(2.10.1)는 본문 안의 소제목·정의·정리만 쓴다(STYLE.md 2절 9).
 - 교육과정이 바뀌면 curricula/*.json에서 블록 id의 위치만 옮기고 다시 빌드한다.
 - 한 블록을 여러 과목·절에 배치해도 된다(예: 일반선택 카드를 진로선택 절에서 재사용). 같은 절에 두 번은 안 된다.
 """
@@ -324,8 +325,11 @@ def page_html(course, ch, sec, blocks):
     for b in items:
         body = b["body"]
         if b["type"] in NUMBERED:
-            no += 1
-            label = f'{ch["n"]}.{sec["n"]}.{no}'
+            if 'data-kind="본문"' in body:
+                label = "본문"
+            else:
+                no += 1
+                label = f'{"탐구" if b["type"] == "card" else "읽기"} {no}'
             body = body.replace('<span class="no"></span>', f'<span class="no">{label}</span>', 1)
             toc.append(f'        <li><a href="#{b["id"]}"><span class="mono">{label}</span>{b["toc_title"]}</a></li>')
         elif b["type"] == "video":

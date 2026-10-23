@@ -54,9 +54,9 @@
     <aside class="toc" aria-label="이 절의 카드">
       <p class="mono small toc-title">이 절의 카드<button type="button" class="toc-fold" aria-expanded="true" aria-controls="toc-list" title="카드 목록 접기"><span>접기</span></button></p>
       <ol id="toc-list">
-        <li><a href="#text-adalg-cayley-hamilton"><span class="mono">3.2.1</span>본문 · 케일리-해밀턴 정리</a></li>
-        <li><a href="#card-adalg-cayley-check"><span class="mono">3.2.2</span>행렬을 자기 특성방정식에 넣으면</a></li>
-        <li><a href="#card-adalg-power-reduce"><span class="mono">3.2.3</span>케일리-해밀턴으로 거듭제곱 줄이기</a></li>
+        <li><a href="#text-adalg-cayley-hamilton"><span class="mono">본문</span>본문 · 케일리-해밀턴 정리</a></li>
+        <li><a href="#card-adalg-cayley-check"><span class="mono">탐구 1</span>행렬을 자기 특성방정식에 넣으면</a></li>
+        <li><a href="#card-adalg-power-reduce"><span class="mono">탐구 2</span>케일리-해밀턴으로 거듭제곱 줄이기</a></li>
       </ol>
       <p class="progress mono small"></p>
       <a class="toc-px" href="../../bank.html?c=adalg&amp;sec=3-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono">12문항 →</span></a>
@@ -65,7 +65,7 @@
 
     <div>
       <article class="card reading" id="text-adalg-cayley-hamilton" data-kind="본문">
-        <header class="card-head"><span class="no">3.2.1</span><h2>케일리-해밀턴 정리</h2><span class="kind">본문</span></header>
+        <header class="card-head"><span class="no">본문</span><h2>케일리-해밀턴 정리</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">행렬 \(A = \begin{pmatrix}2 & 1\\ 1 & 2\end{pmatrix}\)의 10제곱 \(A^{10}\)을 구하려면 행렬을 아홉 번 곱해야 할 것 같다. 그런데 \(A^2\)을 계산해 보면 \(\begin{pmatrix}5 & 4\\ 4 & 5\end{pmatrix}\)이고, 이것은 \(4A - 3I\)와 정확히 같다. 그렇다면 \(A^3 = A\cdot A^2 = 4A^2 - 3A\)이고, 다시 \(A^2\)을 \(4A - 3I\)로 바꾸면 \(A^3\)도 \(A\)와 \(I\)만으로 쓸 수 있다. \(A^2 = 4A - 3I\)라는 관계는 어디서 나왔을까? 이 관계로 \(A^{10}\)을 빨리 구할 수 있을까?</p>
           <figure class="q-fig">
@@ -123,7 +123,7 @@
 
       <article class="card" id="card-adalg-cayley-check">
         <header class="card-head">
-          <span class="no">3.2.2</span><h2>A² + pA + qI = O가 되는 p, q는 무엇일까?</h2><span class="kind">케일리-해밀턴 정리 · 도전</span>
+          <span class="no">탐구 1</span><h2>A² + pA + qI = O가 되는 p, q는 무엇일까?</h2><span class="kind">케일리-해밀턴 정리 · 도전</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
@@ -165,7 +165,7 @@
 
       <article class="card" id="card-adalg-power-reduce">
         <header class="card-head">
-          <span class="no">3.2.3</span><h2>A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?</h2><span class="kind">케일리-해밀턴 정리의 활용 · 만들기</span>
+          <span class="no">탐구 2</span><h2>A¹⁰을 행렬 곱셈 아홉 번 없이 구할 수 있을까?</h2><span class="kind">케일리-해밀턴 정리의 활용 · 만들기</span>
         </header>
         <div class="card-body">
           <div class="card-fig">
