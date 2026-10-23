@@ -331,7 +331,8 @@ def page_html(course, ch, sec, blocks):
                 no += 1
                 label = f'{"탐구" if b["type"] == "card" else "읽기"} {no}'
             body = body.replace('<span class="no"></span>', f'<span class="no">{label}</span>', 1)
-            toc.append(f'        <li><a href="#{b["id"]}"><span class="mono">{label}</span>{b["toc_title"]}</a></li>')
+            title = re.sub(r"^본문\s*·\s*", "", b["toc_title"]) if label == "본문" else b["toc_title"]   # 꼬리표와 겹치는 '본문 ·'는 뺀다
+            toc.append(f'        <li><a href="#{b["id"]}"><span class="mono">{label}</span>{title}</a></li>')
         elif b["type"] == "video":
             toc.append(f'        <li><a href="#{b["id"]}"><span class="mono">영상</span>{b["toc_title"]}</a></li>')
         bodies.append(indent(body, 6) + (rel_html(b["id"], here) if b["type"] in NUMBERED else ""))
