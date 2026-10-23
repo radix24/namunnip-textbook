@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc1-sketch" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>점 몇 개만으로 그래프의 뼈대를 세울 수 있을까?</h2><span class="kind">본문 · 그래프의 개형</span></header>
+  <header class="card-head"><span class="no"></span><h2>그래프의 개형</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">\(y = x^4 - 4x^3 + 10\)의 그래프를 그리려고 점을 많이 찍으면 시간이 오래 걸리고, 찍은 점 사이에서 무슨 일이 있는지는 여전히 모른다. 꼭 필요한 점만 골라 그래프의 대략적인 모양, 곧 개형을 그리는 방법은 무엇일까? 그리고 극댓값이 언제나 최댓값일까?</p>
     <figure class="q-fig" data-q="calc1-sketch">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>증가와 감소, 극대와 극소, 증감표(<a href="2-7.html">증가·감소와 극대·극소</a>), 인수분해.</div>
 
-    <h3><span class="mono">1</span>개형을 그리는 순서</h3>
+    <h3><span class="no">2.8.1</span>개형을 그리는 순서</h3>
     <p>그래프의 모양을 정하는 것은 어디서 오르고 어디서 내리는가이다. 따라서 도함수 \(f'(x)\)를 구해 \(f'(x) = 0\)인 점을 찾고, 그 점들로 나뉜 구간마다 \(f'\)의 부호를 증감표에 정리한다. 극댓값, 극솟값과 함께 \(y\)절편이나 \(x\)축과의 교점처럼 계산이 쉬운 점을 몇 개 더하면 개형이 완성된다.</p>
     <p>처음 질문의 함수는 \(f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)\)이다. \(f'(x) = 0\)인 점은 \(x = 0\)과 \(x = 3\)이다. \(x^2 \ge 0\)이므로 \(f'\)의 부호는 \(x - 3\)의 부호와 같아, \(x &lt; 3\)에서 음수(단 \(x = 0\)에서 0), \(x &gt; 3\)에서 양수이다.</p>
     <p>따라서 \(f\)는 \(x \le 3\)에서 감소하고 \(x \ge 3\)에서 증가한다. \(x = 0\)에서는 \(f' = 0\)이지만 앞뒤 부호가 모두 음수라 잠시 평평해질 뿐 극값이 아니다. \(x = 3\)에서는 음에서 양으로 바뀌므로 극소이고, 극솟값은 \(f(3) = 81 - 108 + 10 = -17\)이다. 그림 1의 단계를 하나씩 넘기면 이 뼈대가 차례로 세워진다.<sup class="fn"><a href="#fn-calc1-sketch-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>극값과 최댓값, 최솟값</h3>
+    <h3><span class="no">2.8.2</span>극값과 최댓값, 최솟값</h3>
     <p>극값은 근처에서만 가장 크거나 작은 값이고, 최댓값과 최솟값은 정해진 범위 전체에서 가장 크거나 작은 값이다. 닫힌구간에서 연속인 함수의 최댓값과 최솟값은 최대·최소 정리에 따라 반드시 있고, 그 후보는 구간 안의 극값과 양 끝값뿐이다.</p>
-    <div class="tb-env thm"><span class="lb">방법 <span class="nm">닫힌구간에서의 최댓값과 최솟값</span></span>
+    <div class="tb-env thm"><span class="lb">방법 2.8.1 <span class="nm">닫힌구간에서의 최댓값과 최솟값</span></span>
       <p>닫힌구간 \([a, b]\)에서 \(f'(x) = 0\)인 점의 함숫값과 \(f(a)\), \(f(b)\)를 모두 구해 비교한다. 그 가운데 가장 큰 값이 최댓값, 가장 작은 값이 최솟값이다.</p>
     </div>
     <figure class="q-fig">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 극댓값이 있어도 구간의 끝에서 더 큰 값이 나올 수 있으므로, 최댓값을 구할 때는 끝값과 함께 비교해야 한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.8.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.8.2</span>
       <p>\(f(x) = x^4 - 4x^3 + 10\)의 닫힌구간 \([-1, 4]\)에서의 최댓값과 최솟값을 구하여라.</p>
     </div>
     <p>구간 안에서 \(f'(x) = 0\)인 점은 \(x = 0\)과 \(x = 3\)이다. 후보는 \(f(-1) = 1 + 4 + 10 = 15\), \(f(0) = 10\), \(f(3) = -17\), \(f(4) = 256 - 256 + 10 = 10\)이다.</p>

@@ -53,7 +53,7 @@
 
     <div>
       <article class="card reading" id="text-extra-gps" data-kind="본문">
-        <header class="card-head"><span class="no">1.9.1</span><h2>GPS 위성의 시계는 왜 하루에 38 μs씩 고쳐야 할까?</h2><span class="kind">본문 · GPS와 상대성 이론</span></header>
+        <header class="card-head"><span class="no">1.9.1</span><h2>GPS와 상대성 이론</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">스마트폰은 여러 GPS 위성이 보낸 신호가 도착하는 데 걸린 시간을 재어 위치를 계산한다. 빛은 1초에 30만 km를 가므로, 시계가 100만분의 1초만 틀려도 거리가 300 m나 틀어진다. 그런데 GPS 위성의 시계는 땅 위의 시계보다 하루에 약 38 μs(100만분의 38초) 빨리 간다. 같은 원자시계인데 왜 위성에서만 빨리 갈까? 이 차이를 고치지 않으면 위치는 하루에 얼마나 틀어질까?</p>
           <figure class="q-fig">
@@ -71,14 +71,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>속력과 거리, 빛의 속력, 만유인력.</div>
 
-          <h3><span class="mono">1</span>시간으로 재는 거리</h3>
+          <h3><span class="no">1.9.1</span>시간으로 재는 거리</h3>
           <p>GPS 위성은 저마다 매우 정확한 원자시계를 싣고, 언제 어디서 신호를 보냈는지 끊임없이 알린다. 수신기는 신호가 도착한 시각과 보낸 시각의 차에 빛의 속력을 곱해 위성까지의 거리를 구하고, 위성 네 개 이상까지의 거리로 자기 위치를 정한다. 그래서 위치의 정확도는 시계의 정확도에 달려 있다. 빛이 1 μs 동안 300 m를 가므로, 몇 m 안으로 위치를 맞추려면 시계를 수십억 분의 1초까지 맞추어야 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">시계가 느려지고 빨라지는 정도</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.9.1 <span class="nm">시계가 느려지고 빨라지는 정도</span></span>
             <p>속력 \(v\)로 움직이는 시계는 멈춘 시계에 비해 시간의 비율 \(\dfrac{v^2}{2c^2}\)만큼 느리게 간다(특수 상대성). 중력이 약한 높은 곳의 시계는 땅 위의 시계보다 \(\dfrac{GM}{c^2}\left(\dfrac{1}{R} - \dfrac{1}{r}\right)\)만큼 빨리 간다(일반 상대성). 여기서 \(R\)은 지구 반지름, \(r\)은 위성 궤도 반지름, \(c\)는 빛의 속력이다.</p>
           </div>
           <p>GPS 위성은 지표에서 약 20200 km 높이, 곧 지구 중심에서 26600 km 떨어진 궤도를 초속 약 3.9 km로 돈다. 빠르게 움직이므로 시계가 느려지는 효과는 하루에 약 7 μs이다. 한편 지구 중력은 높이 올라갈수록 약해지는데, 일반 상대성 이론에 따르면 중력이 약한 곳일수록 시간이 빨리 간다. 이 효과는 하루에 약 46 μs이다. 두 효과를 합치면 위성 시계는 하루에 약 38 μs 빨리 간다.<sup class="fn"><a href="#fn-extra-gps-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>발사 전에 시계를 늦추다</h3>
+          <h3><span class="no">1.9.2</span>발사 전에 시계를 늦추다</h3>
           <p>그래서 GPS 위성의 원자시계는 발사 전에 일부러 조금 느리게 맞춘다. 원래 1초에 10.23 MHz로 떨리도록 해야 할 시계를 땅에서 10.22999999543 MHz로 맞추어 두면, 궤도에 올라가 상대성 효과로 빨라졌을 때 정확히 10.23 MHz가 된다. 그 비율은 \(4.465\times10^{-10}\)로, 하루로 따지면 38.6 μs에 해당한다. 상대성 이론은 우주를 다루는 어려운 이론이지만, 매일 쓰는 길 찾기 앱이 제대로 동작하는 것은 이 보정 덕분이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="두 효과의 계산">
@@ -93,8 +93,8 @@
             <figcaption>그림 2. 아주 작은 비율이지만, 하루 86400초를 곱하면 위치를 몇 km 틀어지게 할 만큼 커진다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.9.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.9.2</span>
             <p>GPS 위성의 속력 \(v = 3.87\) km/s, 빛의 속력 \(c = 3.0\times10^5\) km/s로 특수 상대성 효과의 하루 크기를 구하여라. 위성 시계가 하루에 38 μs 빨리 가는 것을 고치지 않으면 하루 뒤 거리 계산은 얼마나 틀어지는가? 일주일 뒤에는 어떤가?</p>
           </div>
           <p>\(\dfrac{v^2}{2c^2} = \dfrac{3.87^2}{2\times(3.0\times10^5)^2} = \dfrac{14.98}{1.8\times10^{11}} \approx 8.3\times10^{-11}\)이고, 하루 86400초를 곱하면 \(7.2\times10^{-6}\)초, 곧 약 7.2 μs이다.</p>

@@ -63,7 +63,7 @@
 
     <div>
       <article class="card reading" id="text-cm1-quad-minmax" data-kind="본문">
-        <header class="card-head"><span class="no">2.6.1</span><h2>범위가 정해지면 가장 큰 값과 작은 값은 어디서 나올까?</h2><span class="kind">본문 · 이차함수의 최대·최소</span></header>
+        <header class="card-head"><span class="no">2.6.1</span><h2>이차함수의 최대·최소</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">\(y = x^2 - 4x + 1\)은 꼭짓점 \(x = 2\)에서 가장 작은 값 \(-3\)을 갖는다. 그런데 \(x\)가 \(3 \le x \le 5\)처럼 꼭짓점을 비켜 간 범위에서만 움직인다면, 가장 작은 값과 가장 큰 값은 어디서 나올까?</p>
           <figure class="q-fig" data-q="cm1-minmax">
@@ -74,14 +74,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>중학교의 이차함수 \(y = a(x - p)^2 + q\)의 꼭짓점과 축, 완전제곱식 만들기, 이차함수의 그래프(<a href="2-4.html">이차방정식과 이차함수</a>).</div>
 
-          <h3><span class="mono">1</span>범위가 없을 때의 최대·최소</h3>
+          <h3><span class="no">2.6.1</span>범위가 없을 때의 최대·최소</h3>
           <p>\(y = x^2 - 4x + 1\)을 완전제곱식으로 바꾸면 \(y = (x - 2)^2 - 3\)이다. 제곱 \((x - 2)^2\)은 0 이상이므로 \(y\)는 \(-3\) 이상이고, \(x = 2\)일 때 정확히 \(-3\)이 된다. 따라서 최솟값은 \(-3\)이다. 그런데 \(x\)가 2에서 멀어질수록 \(y\)는 한없이 커지므로 최댓값은 없다.</p>
           <p>함수가 가질 수 있는 값 가운데 가장 큰 값을 <em>최댓값</em>, 가장 작은 값을 <em>최솟값</em>이라 한다. \(x\)의 범위에 제한이 없으면 \(y = a(x - p)^2 + q\)는 \(a &gt; 0\)일 때 최솟값 \(q\)만, \(a &lt; 0\)일 때 최댓값 \(q\)만 갖는다. 꼭짓점이 그래프의 맨 아래나 맨 위이기 때문이다.</p>
 
-          <h3><span class="mono">2</span>범위가 정해지면 끝점이 후보가 된다</h3>
+          <h3><span class="no">2.6.2</span>범위가 정해지면 끝점이 후보가 된다</h3>
           <p>이제 \(x\)를 \(3 \le x \le 5\)로 제한하자. 그림 1에서 \(p = 3\)에 두면 이 범위의 그래프는 꼭짓점의 오른쪽 부분이라 계속 올라가기만 한다. 그러면 가장 낮은 점은 왼쪽 끝 \(x = 3\)이고, 가장 높은 점은 오른쪽 끝 \(x = 5\)이다. 값을 계산하면 \(x = 3\)일 때 \(y = -2\), \(x = 5\)일 때 \(y = 6\)이므로 최솟값은 \(-2\), 최댓값은 6이다.</p>
           <p>슬라이더로 \(p\)를 1로 옮겨 범위를 \(1 \le x \le 3\)으로 바꾸면 사정이 달라진다. 꼭짓점 \(x = 2\)가 범위 안에 들어오므로 최솟값은 꼭짓점의 \(-3\)이다. 최댓값은 두 끝 \(x = 1\)과 \(x = 3\)에서의 값 가운데 큰 것인데, 둘 다 \(-2\)로 같다. 두 끝이 축 \(x = 2\)에서 같은 거리에 있기 때문이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">제한된 범위에서의 최대·최소</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">제한된 범위에서의 최대·최소</span></span>
             <p>\(\alpha \le x \le \beta\)에서 이차함수 \(f(x) = a(x - p)^2 + q\)의 최댓값과 최솟값은 \(f(\alpha)\), \(f(\beta)\), 그리고 꼭짓점이 범위 안에 있을 때의 \(f(p) = q\) 가운데에서 나온다.</p>
           </div>
           <p>정리가 후보를 세 개로 줄여 주는 까닭은 그래프의 모양에 있다. 포물선은 축의 한쪽에서는 계속 내려가거나 계속 올라가기만 한다. 그래서 범위 안에서 방향이 바뀔 수 있는 곳은 꼭짓점뿐이고, 나머지 가장 높거나 낮은 점은 범위가 끊기는 끝에서 생긴다.</p>
@@ -95,8 +95,8 @@
             <figcaption>그림 2. 굵은 선이 범위 안의 그래프이다. 파란 점이 최솟값, 붉은 점이 최댓값이며, 꼭짓점이 범위 밖이면 둘 다 끝점이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
             <p>길이가 40 m인 철망으로 한쪽 면이 담장인 직사각형 밭을 두르려고 한다. 담장에 수직인 변의 길이를 \(x\) m라 할 때, 밭의 넓이가 가장 큰 경우를 구하여라. 또 담장의 길이가 16 m여서 담장과 평행한 변이 16 m를 넘을 수 없다면 어떻게 되는지 구하여라.</p>
           </div>
           <p>담장에 수직인 두 변이 각각 \(x\)이므로 담장과 평행한 변은 \(40 - 2x\)이다. 변의 길이는 양수여야 하므로 \(0 &lt; x &lt; 20\)이다. 넓이는 \(S = x(40 - 2x) = -2x^2 + 40x\)이고, 완전제곱식으로 바꾸면 \(S = -2(x - 10)^2 + 200\)이다.</p>
@@ -109,7 +109,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>포물선은 축의 한쪽에서는 한 방향으로만 움직이므로, 범위가 정해진 이차함수의 최댓값과 최솟값은 양 끝점과 범위 안의 꼭짓점 가운데에서만 나온다. 처음 질문의 \(3 \le x \le 5\)는 꼭짓점 \(x = 2\)를 포함하지 않으므로, 최솟값 \(-2\)는 왼쪽 끝에서, 최댓값 6은 오른쪽 끝에서 나온다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>방정식의 근은 그래프의 어디에 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>이차방정식과 이차함수</a></div></nav>
 
       <article class="card" id="card-cm1-minmax-interval">
         <header class="card-head">
@@ -155,7 +155,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>방정식의 근은 그래프의 어디에 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>이차방정식과 이차함수</a></div></nav>
 
       <article class="card" id="card-cm1-fence">
         <header class="card-head">
@@ -200,7 +200,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>방정식의 근은 그래프의 어디에 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm1/2-4.html#card-cm1-parabola-xaxis"><small class="mono">공통수학1 2.4</small>그래프만 보고 이차방정식의 실근이 몇 개인지 알 수 있을까?</a><a href="../../c/cm1/2-4.html#card-cm1-level-line"><small class="mono">공통수학1 2.4</small>x² − 4x + 1 = k의 실근은 k에 따라 몇 개일까?</a><a href="../../c/cm1/2-4.html#text-cm1-quad-func"><small class="mono">공통수학1 2.4</small>이차방정식과 이차함수</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=cm1&amp;sec=2-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=cm1-2-6"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">71문항</span></a>

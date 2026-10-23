@@ -59,7 +59,7 @@
 
     <div>
       <article class="card reading" id="text-adcalc-monotone" data-kind="본문">
-        <header class="card-head"><span class="no">3.1.1</span><h2>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</h2><span class="kind">본문 · 단조수렴정리</span></header>
+        <header class="card-head"><span class="no">3.1.1</span><h2>단조수렴정리</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">계산기에 2를 넣고 \(\sqrt{\ }\) 단추를 누른 뒤, 2를 더하고 다시 \(\sqrt{\ }\)을 누르는 일을 되풀이했다. 화면에는 1.4142, 1.8478, 1.9616, 1.9904, 1.9976이 차례로 나왔다. 값은 매번 커지지만 2를 넘은 적은 없다. 이 수열 \(a_{n+1} = \sqrt{2 + a_n}\)은 2로 수렴할 것 같다. 그런데 극한을 \(L\)로 놓고 \(L = \sqrt{2 + L}\)을 풀어 \(L = 2\)를 얻는 풀이는, 수열 \(a_{n+1} = 2a_n\)에 똑같이 쓰면 \(L = 0\)이라는 엉터리 답을 준다. 무엇이 다를까?</p>
           <figure class="q-fig">
@@ -77,14 +77,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>수열의 수렴과 발산, 수학적 귀납법, 수열의 귀납적 정의.</div>
 
-          <h3><span class="mono">1</span>늘기만 하고 넘지 못하면</h3>
+          <h3><span class="no">3.1.1</span>늘기만 하고 넘지 못하면</h3>
           <p>수열의 항이 늘어나기만 하거나 줄어들기만 하면 단조 수열이라 한다. 늘어나기만 하는 수열은 둘 중 하나이다. 끝없이 커지거나, 어떤 수를 넘지 못한 채 어딘가에 쌓여 가거나이다. 넘지 못하는 수가 있다면, 그런 수들 가운데 가장 작은 수가 있고 수열은 그 수에 한없이 가까워진다. 실수에는 빈틈이 없어서 이런 가장 작은 수가 늘 존재한다. 그래서 위로 유계인 증가 수열은 극한값을 직접 몰라도 수렴한다는 것을 알 수 있다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">단조수렴정리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.1.1 <span class="nm">단조수렴정리</span></span>
             <p>증가하고 위로 유계인 수열은 수렴한다. 감소하고 아래로 유계인 수열도 수렴한다. 수열 \(a_{n+1} = g(a_n)\)이 수렴하고 \(g\)가 연속이면, 극한 \(L\)은 \(L = g(L)\)을 만족한다.</p>
           </div>
           <p>\(L = g(L)\)을 푸는 풀이는 수열이 수렴한다는 것이 먼저 밝혀졌을 때만 쓸 수 있다. 수렴한다면 \(a_n\)과 \(a_{n+1}\)이 모두 \(L\)로 가므로 등식이 성립하지만, 수렴하지 않는 수열에서는 \(L\)이라는 수 자체가 없다. \(a_{n+1} = 2a_n\)에서 \(L = 0\)이 나온 것은, 수열이 0으로 간다는 뜻이 아니라 만약 수렴한다면 0일 수밖에 없다는 뜻이다. 실제로는 수렴하지 않으므로 그 답은 아무 뜻이 없다.<sup class="fn"><a href="#fn-adcalc-monotone-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>귀납법으로 두 가지를 보이다</h3>
+          <h3><span class="no">3.1.2</span>귀납법으로 두 가지를 보이다</h3>
           <p>\(a_{n+1} = \sqrt{2 + a_n}\)이 수렴함을 보이려면, 수열이 증가한다는 것과 위로 유계라는 것을 수학적 귀납법으로 보인다. 위로 유계는 \(a_n &lt; 2\)이면 \(a_{n+1} = \sqrt{2 + a_n} &lt; \sqrt4 = 2\)라는 데서 나온다. 증가는 \(0 &lt; a_n &lt; 2\)일 때 \(a_n^2 &lt; a_n + 2\), 곧 \((a_n - 2)(a_n + 1) &lt; 0\)이므로 \(a_n &lt; \sqrt{2 + a_n} = a_{n+1}\)이라는 데서 나온다. 두 성질이 모두 성립하므로 단조수렴정리에 따라 수열은 수렴한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="단조수렴정리로 수렴을 보이는 단계">
@@ -99,8 +99,8 @@
             <figcaption>그림 2. 수렴을 먼저 보이고 나서야 극한을 \(L\)로 놓고 방정식을 푼다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
             <p>\(a_1 = 1\), \(a_{n+1} = \dfrac12\left(a_n + \dfrac{3}{a_n}\right)\)인 수열이 수렴함을 보이고 극한을 구하여라. 산술평균과 기하평균의 관계를 써도 된다.</p>
           </div>
           <p>\(a_2 = \tfrac12(1 + 3) = 2\)이다. \(n \ge 2\)이면 산술평균과 기하평균의 관계로 \(a_{n+1} = \tfrac12\left(a_n + \tfrac{3}{a_n}\right) \ge \sqrt{a_n\cdot\tfrac{3}{a_n}} = \sqrt3\)이므로 수열은 아래로 유계이다. 또 \(a_n \ge \sqrt3\)이면 \(a_n^2 \ge 3\)이므로 \(a_{n+1} - a_n = \dfrac{3 - a_n^2}{2a_n} \le 0\)이어서, 둘째 항부터 수열은 감소한다.</p>
@@ -113,7 +113,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>증가하면서 위로 유계이거나 감소하면서 아래로 유계인 단조 수열은, 실수에 빈틈이 없으므로 극한값을 몰라도 반드시 수렴한다. 귀납적으로 정의된 수열은 단조성과 유계성을 수학적 귀납법으로 보인 뒤, 극한을 \(L\)로 놓고 \(L = g(L)\)을 풀어 극한을 구한다. 처음 질문의 \(\sqrt{2 + a_n}\) 수열은 증가하고 2를 넘지 못해 2로 수렴하고, \(2a_n\) 수열은 수렴하지 않으므로 \(L = 0\)은 뜻이 없다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 책 한 권 길이보다 더 내밀 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열의 수렴과 발산</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>양항급수의 판정법</a></div></nav>
 
       <article class="card" id="card-adcalc-monotone">
         <header class="card-head">
@@ -157,7 +157,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 책 한 권 길이보다 더 내밀 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열의 수렴과 발산</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>양항급수의 판정법</a></div></nav>
 
       <article class="card" id="card-adcalc-monotone-proof">
         <header class="card-head">
@@ -204,7 +204,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 책 한 권 길이보다 더 내밀 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/1-1.html#card-calc2-seq-converge"><small class="mono">미적분Ⅱ 1.1</small>수열이 한 값에 '한없이 가까워진다'는 것은 무엇일까?</a><a href="../../c/calc2/1-1.html#card-calc2-seq-far"><small class="mono">미적분Ⅱ 1.1</small>처음 몇 항만 보고 수렴·발산을 판정해도 될까?</a><a href="../../c/calc2/1-1.html#text-calc2-seq-limit"><small class="mono">미적분Ⅱ 1.1</small>수열의 수렴과 발산</a><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/3-2.html#card-adcalc-integral-test"><small class="mono">고급 미적분 3.2</small>Σ1/n²은 유한하고 Σ1/n은 무한한 까닭은?</a><a href="../../c/adcalc/3-2.html#card-adcalc-test-pick"><small class="mono">고급 미적분 3.2</small>이 급수에는 어떤 판정법이 통할까?</a><a href="../../c/adcalc/3-2.html#card-adcalc-overhang"><small class="mono">고급 미적분 3.2</small>책을 쌓아 맨 위 책을 탁자 밖으로 얼마나 내밀 수 있을까?</a><a href="../../c/adcalc/3-2.html#text-adcalc-series-tests"><small class="mono">고급 미적분 3.2</small>양항급수의 판정법</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adcalc&amp;sec=3-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">9문항</span></a>
 

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-stat-complement" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>'적어도 하나'의 확률은 왜 반대쪽에서 세면 쉬울까?</h2><span class="kind">본문 · 여사건의 확률</span></header>
+  <header class="card-head"><span class="no"></span><h2>여사건의 확률</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">한 반에 학생이 23명 있다. 생일이 같은 두 사람이 적어도 한 쌍 있을 확률은 얼마일까? 같은 쌍이 한 쌍인 경우, 두 쌍인 경우, 세 사람이 같은 경우 …를 모두 세려면 끝이 없다. 더 쉬운 길이 있을까?</p>
     <figure class="q-fig" data-q="stat-birthday">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>확률의 덧셈정리와 배반사건(<a href="2-2.html">확률의 덧셈정리</a>), 순열과 조합(공통수학1).</div>
 
-    <h3><span class="mono">1</span>여사건</h3>
+    <h3><span class="no">2.3.1</span>여사건</h3>
     <p>사건 \(A\)가 일어나지 않는 사건을 \(A\)의 <em>여사건</em>이라 하고 \(A^C\)로 쓴다. \(A\)와 \(A^C\)는 동시에 일어나지 않는 배반사건이고, 둘 가운데 하나는 반드시 일어난다. 그러면 덧셈정리에 따라 \(P(A) + P(A^C) = P(S) = 1\)이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">여사건의 확률</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">여사건의 확률</span></span>
       <p>사건 \(A\)와 그 여사건 \(A^C\)에 대하여 \[P(A^C) = 1 - P(A)\]</p>
     </div>
     <p>'적어도 하나'가 붙은 사건은 경우가 여러 갈래로 나뉘지만, 그 여사건은 '하나도 없다'라는 한 가지 경우뿐이다. 그래서 여사건의 확률을 구해 1에서 빼는 쪽이 훨씬 쉽다.</p>
 
-    <h3><span class="mono">2</span>생일 문제</h3>
+    <h3><span class="no">2.3.2</span>생일 문제</h3>
     <p>\(n\)명의 생일이 모두 다를 확률을 구하자. 첫째 사람은 아무 날이나 되고, 둘째 사람은 첫째와 다른 364일 가운데 하나여야 하며, 셋째는 남은 363일 가운데 하나여야 한다. 따라서 모두 다를 확률은 \[\frac{365}{365} \times \frac{364}{365} \times \cdots \times \frac{365 - n + 1}{365} = \frac{{}_{365}\mathrm{P}_n}{365^n}\] 이다.</p>
     <p>같은 생일이 적어도 한 쌍 있을 확률은 이것을 1에서 뺀 값이다. 그림 1의 슬라이더로 사람 수를 늘려 보면, 23명에서 약 0.507로 절반을 넘고, 40명이면 약 0.89, 60명이면 0.99를 넘는다. 365일에 비해 사람 수가 훨씬 적어도 확률이 이렇게 큰 까닭은, 비교할 '쌍'이 사람 수보다 훨씬 빨리 늘어나기 때문이다. 23명이면 쌍이 \({}_{23}\mathrm{C}_2 = 253\)개이다.<sup class="fn"><a href="#fn-stat-complement-1">1</a></sup></p>
     <figure class="q-fig">
@@ -36,8 +36,8 @@
       <figcaption>그림 2. 여러 갈래로 나뉘는 사건은 한 가지로 정리되는 여사건 쪽에서 계산한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
       <p>제품 10개 가운데 불량품이 3개 있다. 3개를 꺼낼 때 불량품이 적어도 1개 섞여 있을 확률을 구하여라.</p>
     </div>
     <p>여사건은 '불량품이 하나도 없다', 곧 정상품 7개에서 3개를 모두 꺼내는 경우이다. 그 확률은 \(\dfrac{{}_7\mathrm{C}_3}{{}_{10}\mathrm{C}_3} = \dfrac{35}{120} = \dfrac{7}{24}\)이다.</p>

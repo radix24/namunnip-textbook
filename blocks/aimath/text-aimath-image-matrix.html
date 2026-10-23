@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-aimath-image-matrix" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>사진을 숫자로 된 표로 바꿀 수 있을까?</h2><span class="kind">본문 · 행렬로 나타낸 이미지</span></header>
+  <header class="card-head"><span class="no"></span><h2>행렬로 나타낸 이미지</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">휴대폰으로 찍은 사진을 아주 크게 확대하면 작은 색 사각형들이 바둑판처럼 늘어서 있다. 컴퓨터는 사진을 '고양이'로 기억하는 것이 아니라 이 사각형 하나하나의 밝기와 색을 숫자로 기억한다. 사진은 어떤 숫자 표로 바뀌며, 그 표의 크기는 얼마나 될까?</p>
     <figure class="q-fig" data-q="ai-pixels">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>행렬의 뜻과 성분(공통수학1), 이진법(정보).</div>
 
-    <h3><span class="mono">1</span>픽셀과 행렬</h3>
+    <h3><span class="no">3.1.1</span>픽셀과 행렬</h3>
     <p>디지털 이미지는 픽셀이라는 작은 사각형들이 가로세로로 늘어선 것이다. 흑백 이미지에서는 각 픽셀의 밝기를 하나의 수로 나타내는데, 보통 0(검정)부터 255(흰색)까지 256단계를 쓴다. 256은 \(2^8\)이므로 픽셀 하나에 8비트가 든다. 세로 \(m\)개, 가로 \(n\)개 픽셀의 밝기를 그대로 적으면 \(m \times n\) 행렬이 된다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">이미지와 행렬</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.1.1 <span class="nm">이미지와 행렬</span></span>
       <p>세로 \(m\)픽셀, 가로 \(n\)픽셀인 흑백 이미지는 \((i, j)\) 성분이 \(i\)행 \(j\)열 픽셀의 밝기인 \(m \times n\) 행렬로 나타낸다. 컬러 이미지는 빨강(R), 초록(G), 파랑(B)의 세기를 각각 담은 \(m \times n\) 행렬 세 개로 나타낸다.</p>
     </div>
     <p>그림 1의 슬라이더로 기준값을 정해 보자. 기준을 128로 하면 밝은 고리 모양만 1로 남고 나머지는 0이 된다. 기준을 높이면 1인 칸이 줄어든다. 이렇게 0과 1만으로 나타낸 이미지를 이진 이미지라 하며, 글자 인식처럼 모양만 중요할 때 쓴다. 이진 이미지는 픽셀 하나에 1비트면 되므로 저장 공간도 8분의 1로 줄어든다.<sup class="fn"><a href="#fn-aimath-image-matrix-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>컬러 이미지</h3>
+    <h3><span class="no">3.1.2</span>컬러 이미지</h3>
     <p>화면의 픽셀 하나는 빨강, 초록, 파랑의 아주 작은 빛 세 개로 이루어져 있고, 세 빛의 세기를 섞어 모든 색을 낸다. 세 값이 모두 255이면 흰색, 모두 0이면 검정, (255, 0, 0)이면 빨강, (255, 255, 0)이면 노랑이다. 세 값이 같으면 회색이 된다. 각 값이 256단계이므로 표현할 수 있는 색은 \(256^3\), 약 1677만 가지이다. 그래서 컬러 이미지는 같은 크기의 행렬 세 장을 겹친 것으로 볼 수 있다. 컬러 사진을 흑백으로 바꿀 때는 세 값의 가중평균을 쓰는데, 사람의 눈이 초록에 가장 민감하므로 초록에 가장 큰 가중치를 준다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 120" role="img" aria-label="컬러 이미지를 이루는 빨강, 초록, 파랑 세 행렬">
@@ -37,8 +37,8 @@
       <figcaption>그림 2. 컬러 이미지는 빨강, 초록, 파랑의 세기를 담은 행렬 세 장을 겹친 것이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
       <p>가로 1920픽셀, 세로 1080픽셀인 컬러 사진을 압축하지 않고 저장하면 몇 바이트가 필요한가? (1바이트 = 8비트) 같은 크기의 흑백 사진이면 얼마인가?</p>
     </div>
     <p>픽셀 수는 \(1920 \times 1080 = 2\,073\,600\)개이다. 컬러는 픽셀마다 R, G, B 각 8비트, 곧 3바이트이므로 \(2\,073\,600 \times 3 = 6\,220\,800\)바이트, 약 6.2 MB이다.</p>

@@ -53,7 +53,7 @@
 
     <div>
       <article class="card reading" id="text-extra-golden-angle" data-kind="본문">
-        <header class="card-head"><span class="no">1.1.1</span><h2>해바라기 씨앗은 왜 137.5°씩 돌며 자리를 잡을까?</h2><span class="kind">본문 · 잎차례와 황금각</span></header>
+        <header class="card-head"><span class="no">1.1.1</span><h2>잎차례와 황금각</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">해바라기 꽃판을 들여다보면 씨앗이 시계 방향과 반시계 방향의 나선을 이루며 빽빽하게 박혀 있고, 두 방향의 나선을 세어 보면 34개와 55개처럼 피보나치 수가 나온다. 식물학자들은 새 씨앗이나 새 잎이 바로 앞의 것에서 약 137.5°씩 돌아간 자리에 생긴다는 것을 알아냈다. 왜 하필 137.5°일까? 120°나 144°처럼 깔끔한 각으로 돌면 안 될까? 각도와 나머지만으로 이 물음에 답해 보자.</p>
           <figure class="q-fig">
@@ -67,14 +67,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>각도와 360°, 나머지, 분수와 비.</div>
 
-          <h3><span class="mono">1</span>돌아온 자리를 피하다</h3>
+          <h3><span class="no">1.1.1</span>돌아온 자리를 피하다</h3>
           <p>새 잎이 앞의 잎에서 각 \(\theta\)씩 돌아 난다면, \(n\)번째 잎의 방향은 \(n\theta\)를 360°로 나눈 나머지이다. \(\theta = 120°\)이면 셋째 잎마다 처음 방향으로 돌아와 잎이 세 줄로만 겹쳐 쌓이고, 줄 사이의 공간은 비어 버린다. \(\theta = 144°\), 곧 한 바퀴의 \(2/5\)이면 다섯째 잎마다 돌아와 다섯 줄이 된다. 이렇게 \(\theta\)가 한 바퀴의 유리수 배이면 언젠가 정확히 같은 방향으로 돌아와 줄이 생긴다. 햇빛을 고르게 받거나 씨앗을 빽빽하게 채우려면 어떤 잎도 앞의 잎과 겹치지 않는 각이 좋다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">황금각</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.1.1 <span class="nm">황금각</span></span>
             <p>황금비 \(\varphi = \dfrac{1 + \sqrt5}{2} \approx 1.618\)에 대해 한 바퀴를 \(1 : \varphi\)로 나눈 작은 쪽의 각 \[360°\times\left(1 - \frac{1}{\varphi}\right) = \frac{360°}{\varphi^2} \approx 137.5°\]를 황금각이라 한다. \(1/\varphi^2\)은 무리수이므로 \(n\times137.5°\)는 어떤 \(n\)에서도 정확히 360°의 배수가 되지 않는다.</p>
           </div>
           <p>무리수 배의 각이라고 다 좋은 것은 아니다. 무리수라도 어떤 분수에 아주 가까우면, 그 분수의 분모만큼 돌았을 때 거의 같은 방향으로 돌아와 줄처럼 보인다. 황금비는 연분수로 쓰면 \(1 + \cfrac{1}{1 + \cfrac{1}{1 + \cdots}}\)처럼 모든 자리가 1이어서, 분수로 어림하기가 가장 어려운 무리수이다. 그래서 황금각으로 돌면 오랫동안 어느 방향으로도 가깝게 돌아오지 않아, 잎과 씨앗이 가장 고르게 퍼진다.<sup class="fn"><a href="#fn-extra-golden-angle-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>나선의 수가 피보나치 수인 까닭</h3>
+          <h3><span class="no">1.1.2</span>나선의 수가 피보나치 수인 까닭</h3>
           <p>황금비를 가장 잘 어림하는 분수는 이웃한 피보나치 수의 비 \(2/1, 3/2, 5/3, 8/5, 13/8, \ldots\)이다. 그래서 황금각으로 돌 때 거의 처음 방향으로 돌아오는 잎은 피보나치 수 번째 잎이다. 해바라기에서 씨앗이 바깥으로 갈수록 서로 가까운 이웃 씨앗이 바뀌는데, 이웃이 늘 피보나치 수만큼 떨어진 번호의 씨앗이어서 눈에 보이는 나선의 개수가 피보나치 수가 된다. 꽃판이 클수록 더 큰 피보나치 수의 나선이 보인다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="137.5°씩 돌 때 처음 방향에 가까이 돌아오는 잎">
@@ -89,8 +89,8 @@
             <figcaption>그림 2. 처음 방향에 가깝게 돌아오는 잎이 3, 5, 8, 13, 21번째, 곧 피보나치 수 번째이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.1.2</span>
             <p>황금각이 약 137.5°임을 \(\varphi \approx 1.618\)로 확인하여라. 각 144°로 돌 때와 137.5°로 돌 때, 처음 열 잎의 방향이 몇 가지로 나뉘는지 비교하여라.</p>
           </div>
           <p>\(\varphi^2 = \varphi + 1 \approx 2.618\)이므로 \(360°/2.618 \approx 137.5°\)이다. 이것은 \(360°\times(1 - 1/1.618) = 360°\times0.382\)와 같다. 또 \(360° - 137.5° = 222.5°\)이고 \(222.5/137.5 \approx 1.618\)이어서, 한 바퀴를 두 각으로 나눈 비가 황금비이다.</p>

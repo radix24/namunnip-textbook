@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-adphy-circular-orbit" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>정지 위성은 왜 하필 고도 36000 km에 떠 있을까?</h2><span class="kind">본문 · 행성의 운동과 인공위성</span></header>
+  <header class="card-head"><span class="no"></span><h2>행성의 운동과 인공위성</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">국제 우주 정거장은 고도 약 400 km에서 90분마다 지구를 한 바퀴 돈다. 그래서 하루에 16번 해돋이를 본다. 반면 위성 방송을 보내는 정지 위성은 하늘의 한 자리에 멈춰 있는 것처럼 보여, 집의 위성 안테나를 한 방향으로 고정해 둘 수 있다. 정지 위성은 고도 약 36000 km를 돈다. 왜 그 높이일까? 위성의 높이와 속력, 주기 사이에는 어떤 관계가 있을까?</p>
     <figure class="q-fig" data-q="adphy-sat">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>만유인력 법칙, 케플러 법칙, 등속 원운동의 구심 가속도, 역학적 에너지 보존(물리학).</div>
 
-    <h3><span class="mono">1</span>원 궤도의 조건</h3>
+    <h3><span class="no">1.4.1</span>원 궤도의 조건</h3>
     <p>지구 둘레를 원으로 도는 위성은 늘 지구 중심을 향해 떨어지고 있다. 다만 옆으로 충분히 빠르게 움직이므로, 떨어지는 만큼 지구 표면도 둥글게 휘어 멀어져 땅에 닿지 않는다. 이 때 만유인력이 원운동에 필요한 구심력 노릇을 한다. 질량 \(m\)인 위성이 지구 중심에서 \(r\)만큼 떨어져 속력 \(v\)로 돌면 \(\dfrac{GMm}{r^2} = \dfrac{mv^2}{r}\)이다. 양변의 \(m\)이 지워지므로 궤도 속력은 위성의 질량과 관계없다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">원 궤도의 속력과 주기</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">원 궤도의 속력과 주기</span></span>
       <p>지구 질량 \(M\)에 대해 \(GM = 3.99 \times 10^{14}\ \text{m}^3/\text{s}^2\)이다. 반지름 \(r\)인 원 궤도의 속력과 주기는 \[v = \sqrt{\frac{GM}{r}},\qquad T = \frac{2\pi r}{v} = 2\pi\sqrt{\frac{r^3}{GM}}\]이다. 주기의 제곱은 반지름의 세제곱에 비례한다(케플러 제3법칙).</p>
     </div>
     <p>그림 1에서 고도를 바꾸어 보자. 고도 400 km에서는 \(r = 6771\) km이므로 속력이 약 7.67 km/s이고 한 바퀴에 약 92분이 걸린다. 고도를 높이면 속력은 줄고 둘레는 늘어나 주기가 빠르게 길어진다. 고도 약 35800 km에서 주기가 지구의 자전 주기 23시간 56분과 같아진다. 적도 위의 이 궤도를 지구와 같은 방향으로 돌면, 땅에서 볼 때 위성이 하늘의 한 점에 멈춰 있다.<sup class="fn"><a href="#fn-adphy-circular-orbit-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>궤도의 에너지</h3>
+    <h3><span class="no">1.4.2</span>궤도의 에너지</h3>
     <p>원 궤도를 도는 위성의 운동 에너지는 \(\dfrac{GMm}{2r}\)이고, 위치 에너지는 무한히 먼 곳을 0으로 잡으면 \(-\dfrac{GMm}{r}\)이다. 그래서 역학적 에너지는 \(-\dfrac{GMm}{2r}\)로 음수이며, 높은 궤도일수록 0에 가까워져 크다. 즉 위성을 높은 궤도로 올리려면 에너지를 더 주어야 하지만, 올라간 위성은 오히려 느리게 돈다. 역학적 에너지가 0 이상이 되면 위성은 지구를 벗어난다. 지표에서 이 조건을 만족하는 속력이 탈출 속도 \(\sqrt{2GM/R} \approx 11.2\) km/s이다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="대표적인 지구 궤도">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 쓰임에 따라 궤도의 높이가 다르고, 높이가 속력과 주기를 정한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.4.2</span>
       <p>주기가 정확히 23시간 56분(86160 s)인 원 궤도의 반지름과 고도, 속력을 구하여라. 지구 반지름은 6371 km이다.</p>
     </div>
     <p>\(T = 2\pi\sqrt{r^3/GM}\)을 \(r\)에 대해 풀면 \(r^3 = \dfrac{GMT^2}{4\pi^2} = \dfrac{3.99 \times 10^{14} \times (86160)^2}{39.5} \approx 7.50 \times 10^{22}\ \text{m}^3\)이다. 세제곱근을 구하면 \(r \approx 4.22 \times 10^7\) m, 곧 약 42200 km이다.</p>

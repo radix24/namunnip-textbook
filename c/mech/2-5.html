@@ -60,7 +60,7 @@
 
     <div>
       <article class="card reading" id="text-mech-entropy" data-kind="본문">
-        <header class="card-head"><span class="no">2.5.1</span><h2>퍼진 향기는 왜 저절로 병 속으로 돌아오지 않을까?</h2><span class="kind">본문 · 엔트로피와 비가역 현상</span></header>
+        <header class="card-head"><span class="no">2.5.1</span><h2>엔트로피와 비가역 현상</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">방 한구석에서 향수병을 열면 향기가 곧 방 전체로 퍼진다. 그런데 퍼진 향기가 저절로 다시 병 속으로 모여드는 일은 본 적이 없다. 뜨거운 커피는 식지만 식은 커피가 저절로 데워지지는 않는다. 에너지 보존 법칙은 어느 쪽도 막지 않는데, 자연은 왜 한쪽 방향으로만 일어날까?</p>
           <figure class="q-fig" data-q="mech-entropy">
@@ -71,13 +71,13 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>경우의 수와 확률(확률과 통계), 열기관과 열효율(<a href="2-4.html">열기관과 열효율</a>), 확산(중학교).</div>
 
-          <h3><span class="mono">1</span>가역 현상과 비가역 현상</h3>
+          <h3><span class="no">2.5.1</span>가역 현상과 비가역 현상</h3>
           <p>진자의 운동을 찍은 영상을 거꾸로 돌려도 이상해 보이지 않는다. 마찰이 없다면 거꾸로 일어나는 운동도 물리 법칙에 맞기 때문이다. 이렇게 거꾸로도 저절로 일어날 수 있는 현상을 가역 현상이라 한다. 반대로 잉크가 물에 퍼지는 영상을 거꾸로 돌리면 금방 이상하다는 것을 안다. 저절로는 한 방향으로만 일어나는 현상을 비가역 현상이라 한다. 열이 뜨거운 곳에서 차가운 곳으로 흐르는 것, 마찰로 운동 에너지가 열이 되는 것은 모두 비가역 현상이다.</p>
 
-          <h3><span class="mono">2</span>경우의 수로 본 방향</h3>
+          <h3><span class="no">2.5.2</span>경우의 수로 본 방향</h3>
           <p>분자 4개가 상자에 있으면, 각 분자가 왼쪽이나 오른쪽에 있는 배치는 \(2^4 = 16\)가지이다. 모두 왼쪽에 있는 배치는 1가지뿐이고, 2개씩 나뉜 배치는 \({}_4\mathrm{C}_2 = 6\)가지이다. 분자는 무작위로 움직이므로 모든 배치가 똑같이 일어나기 쉽고, 따라서 경우의 수가 많은 고르게 퍼진 상태가 더 자주 나타난다.</p>
           <p>그림 1에서 분자 수를 늘려 보자. 10개이면 모두 왼쪽에 모일 확률이 약 1000분의 1, 60개이면 \(10^{-18}\)쯤이다. 실제 방 안의 공기 분자는 \(10^{27}\)개쯤이므로 저절로 한쪽에 모이는 일은 사실상 일어나지 않는다. 그래서 자연은 경우의 수가 적은 상태에서 많은 상태로 나아간다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">열역학 제2법칙 (엔트로피 증가 법칙)</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.5.1 <span class="nm">열역학 제2법칙 (엔트로피 증가 법칙)</span></span>
             <p>무질서한 정도, 곧 한 상태가 될 수 있는 경우의 수를 나타내는 양을 엔트로피라 한다. 고립된 계에서 자연 현상은 엔트로피가 증가하는 방향으로 일어난다.</p>
           </div>
           <figure class="q-fig">
@@ -92,8 +92,8 @@
           </figure>
           <p>열기관이 열을 모두 일로 바꿀 수 없는 것도 같은 까닭이다. 질서 있게 한 방향으로 움직이는 일은 무질서한 분자 운동인 열로 쉽게 바뀌지만, 그 반대는 엔트로피를 줄이므로 저절로 일어나지 않는다. 그래서 반드시 일부 열을 저온으로 버려 엔트로피를 늘려야 한다.<sup class="fn"><a href="#fn-mech-entropy-1">1</a></sup></p>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.5.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.5.2</span>
             <p>상자 속 분자 10개가 무작위로 왼쪽, 오른쪽에 있다. 모두 왼쪽에 있을 확률과 정확히 5개씩 나뉠 확률을 구하여라.</p>
           </div>
           <p>전체 배치는 \(2^{10} = 1024\)가지이다. 모두 왼쪽인 배치는 1가지이므로 확률은 \(\dfrac{1}{1024} \approx 0.001\)이다.</p>
@@ -106,7 +106,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>저절로 한 방향으로만 일어나는 현상을 비가역 현상이라 한다. 분자 배치의 경우의 수로 보면 고르게 퍼진 상태가 압도적으로 많으므로, 자연은 경우의 수, 곧 엔트로피가 커지는 방향으로 나아간다. 그래서 처음 질문의 향기는 모두 병 속에 모일 확률이 사실상 0이라 돌아오지 않으며, 이것이 열역학 제2법칙이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>밀폐된 강철 통에서 잰 연소열은 왜 열린 그릇에서 잰 값과 다를까?</a><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화는 왜 저절로 일어날까?</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>뜨거운 물체와 차가운 물체를 맞대면 왜 늘 온도가 같아지는 쪽으로만 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/3-3.html#card-mateng-spont"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a><a href="../../c/adchem/3-4.html#text-adchem-gibbs-dissolve"><small class="mono">고급 화학 3.4</small>열을 빼앗는 냉찜질 팩의 반응은 어떻게 저절로 일어날까?</a><a href="../../c/labchem/2-12.html#card-labchem-raoult"><small class="mono">화학 실험 2.12</small>설탕물의 증기압은 맹물보다 얼마나 낮을까?</a><a href="../../c/labchem/2-12.html#text-labchem-raoult"><small class="mono">화학 실험 2.12</small>닿지도 않은 두 컵 사이에서 물은 왜 설탕물 쪽으로 옮겨 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>내부 에너지와 열역학 제1법칙</a><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>엔트로피와 자발성</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>엔트로피</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/3-3.html#card-mateng-spont"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a><a href="../../c/adchem/3-4.html#text-adchem-gibbs-dissolve"><small class="mono">고급 화학 3.4</small>깁스 자유 에너지와 자발성</a><a href="../../c/labchem/2-12.html#card-labchem-raoult"><small class="mono">화학 실험 2.12</small>설탕물의 증기압은 맹물보다 얼마나 낮을까?</a><a href="../../c/labchem/2-12.html#text-labchem-raoult"><small class="mono">화학 실험 2.12</small>증기압 내림</a></div></nav>
 
       <article class="card" id="card-mech-entropy">
         <header class="card-head">
@@ -147,7 +147,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>밀폐된 강철 통에서 잰 연소열은 왜 열린 그릇에서 잰 값과 다를까?</a><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화는 왜 저절로 일어날까?</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>뜨거운 물체와 차가운 물체를 맞대면 왜 늘 온도가 같아지는 쪽으로만 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/3-3.html#card-mateng-spont"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a><a href="../../c/adchem/3-4.html#text-adchem-gibbs-dissolve"><small class="mono">고급 화학 3.4</small>열을 빼앗는 냉찜질 팩의 반응은 어떻게 저절로 일어날까?</a><a href="../../c/labchem/2-12.html#card-labchem-raoult"><small class="mono">화학 실험 2.12</small>설탕물의 증기압은 맹물보다 얼마나 낮을까?</a><a href="../../c/labchem/2-12.html#text-labchem-raoult"><small class="mono">화학 실험 2.12</small>닿지도 않은 두 컵 사이에서 물은 왜 설탕물 쪽으로 옮겨 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>내부 에너지와 열역학 제1법칙</a><a href="../../c/mech/2-4.html#card-mech-cycle"><small class="mono">역학과 에너지 2.4</small>한 바퀴 돌 때 열기관은 얼마만큼 일을 할까?</a><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>엔트로피와 자발성</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>엔트로피</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/3-3.html#card-mateng-spont"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화도 저절로 일어날 수 있을까?</a><a href="../../c/adchem/3-4.html#text-adchem-gibbs-dissolve"><small class="mono">고급 화학 3.4</small>깁스 자유 에너지와 자발성</a><a href="../../c/labchem/2-12.html#card-labchem-raoult"><small class="mono">화학 실험 2.12</small>설탕물의 증기압은 맹물보다 얼마나 낮을까?</a><a href="../../c/labchem/2-12.html#text-labchem-raoult"><small class="mono">화학 실험 2.12</small>증기압 내림</a></div></nav>
 
       <article class="card" id="card-is2-efficiency">
         <header class="card-head">
@@ -196,7 +196,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/clim/3-3.html#card-clim-budget"><small class="mono">기후변화와 환경생태 3.3</small>탄소중립은 왜 ‘언제까지’만큼 ‘어떻게 줄이느냐’가 중요할까?</a><a href="../../c/clim/3-3.html#text-clim-tech"><small class="mono">기후변화와 환경생태 3.3</small>재생 에너지, 수소, 탄소 포집은 지금 어디까지 왔을까?</a><a href="../../c/clim/3-3.html#text-clim-carbon-budget"><small class="mono">기후변화와 환경생태 3.3</small>탄소중립은 왜 '언제까지'만큼 '어떻게 줄이느냐'가 중요할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/clim/3-3.html#card-clim-budget"><small class="mono">기후변화와 환경생태 3.3</small>탄소중립은 왜 ‘언제까지’만큼 ‘어떻게 줄이느냐’가 중요할까?</a><a href="../../c/clim/3-3.html#text-clim-tech"><small class="mono">기후변화와 환경생태 3.3</small>재생 에너지, 수소, 탄소 포집은 지금 어디까지 왔을까?</a><a href="../../c/clim/3-3.html#text-clim-carbon-budget"><small class="mono">기후변화와 환경생태 3.3</small>탄소중립 기술</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=mech&amp;sec=2-5"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">14문항</span></a>
       <a class="px-go" href="../../practice.html?sec=mech-2-5"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">7문항</span></a>

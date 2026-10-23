@@ -76,7 +76,7 @@
 
     <div>
       <article class="card reading" id="text-labbio-alignment" data-kind="본문">
-        <header class="card-head"><span class="no">5.8.1</span><h2>염기 30개만 비교해서 어느 두 종이 더 가까운지 알 수 있을까?</h2><span class="kind">본문 · 생물정보학과 유전체 분석</span></header>
+        <header class="card-head"><span class="no">5.8.1</span><h2>생물정보학과 유전체 분석</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">네 종의 동물에서 같은 유전자의 앞부분 염기 30개를 읽어 위아래로 나란히 놓았다. 대부분의 자리는 네 종이 같았지만 몇 자리에서 염기가 달랐다. 가와 나는 한 자리만 달랐고, 가와 라는 여섯 자리가 달랐다. 생김새만으로는 어느 종끼리 더 가까운지 판단하기 어려웠는데, 이 차이를 세는 것만으로 진화의 관계를 그릴 수 있을까? 그리고 수십억 개의 염기를 가진 유전체 전체는 어떻게 비교할까?</p>
           <figure class="q-fig">
@@ -93,14 +93,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>DNA 염기 서열과 돌연변이, 진화와 공통 조상, PCR(<a href="5-7.html">PCR 유전자 증폭</a>).</div>
 
-          <h3><span class="mono">1</span>차이가 쌓이는 시간</h3>
+          <h3><span class="no">5.8.1</span>차이가 쌓이는 시간</h3>
           <p>두 종이 공통 조상에서 갈라진 뒤에는 각 계통에서 따로 돌연변이가 쌓인다. 갈라진 지 오래될수록 쌓인 차이가 많다. 그래서 같은 유전자의 서열을 비교해 다른 자리가 적은 두 종일수록 최근에 갈라진 가까운 사이로 본다. 서열을 비교하려면 먼저 같은 자리끼리 맞추어 놓는 정렬을 해야 한다. 염기가 하나 빠지거나 끼어들면 그 뒤의 자리가 모두 어긋나므로, 컴퓨터는 차이가 가장 적어지도록 틈을 넣어 맞춘다. 이렇게 생물의 서열 자료를 컴퓨터로 분석하는 분야를 생물정보학이라 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">서열 차이와 계통수</span></span>
+          <div class="tb-env thm"><span class="lb">정리 5.8.1 <span class="nm">서열 차이와 계통수</span></span>
             <p>두 서열에서 다른 자리의 비율을 \(p = \dfrac{\text{다른 자리 수}}{\text{비교한 자리 수}}\)라 한다. 모든 쌍의 \(p\)를 구해 거리표를 만들고, 거리가 가장 가까운 쌍부터 차례로 묶으면 계통수를 그릴 수 있다.</p>
           </div>
           <p>그림 1의 네 종에서 가와 나는 30자리 가운데 1자리만 달라 \(p \approx 0.03\)으로 가장 가깝다. 다는 가나 나와 4~5자리, 라는 6~7자리가 달라 가장 멀다. 그래서 가와 나를 먼저 묶고, 그 다음 다를, 마지막에 라를 붙이는 계통수가 나온다. 다만 30자리는 매우 짧아 우연한 차이의 영향이 크므로, 실제 연구에서는 수천 자리 이상을 비교한다.<sup class="fn"><a href="#fn-labbio-alignment-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>데이터베이스와 유전체</h3>
+          <h3><span class="no">5.8.2</span>데이터베이스와 유전체</h3>
           <p>전 세계 연구자들이 읽은 서열은 공개 데이터베이스에 모인다. 새로 읽은 서열을 데이터베이스와 비교하면 비슷한 서열을 가진 생물과 그 유전자가 무슨 일을 하는지 빠르게 알 수 있다. 유전체 전체를 비교하는 일은 사람의 손으로는 불가능해서 컴퓨터 프로그램이 정렬하고 차이를 센다. 사람과 침팬지의 유전체는 정렬되는 부분에서 약 1.2%가 다르다. 사람끼리는 약 0.1%가 달라, 이 작은 차이가 개인의 특징과 질병에 걸리기 쉬운 정도와도 관련된다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="네 종 사이의 서열 차이 거리표">
@@ -115,8 +115,8 @@
             <figcaption>그림 2. 30자리 가운데 다른 자리의 수. 가와 나가 가장 가깝고 라가 가장 멀다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">5.8.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 5.8.2</span>
             <p>그림 2의 거리표로 가장 가까운 쌍을 찾고, 그 쌍과 나머지 종 사이의 평균 거리를 구해 묶는 순서를 정하여라. 이 유전자에서 100만 년마다 염기 1000개 가운데 1개꼴로 차이가 쌓인다면, 가와 다는 몇 년 전에 갈라졌다고 어림할 수 있는가? 두 계통 모두에서 차이가 쌓인다는 것을 생각하여라.</p>
           </div>
           <p>가장 가까운 쌍은 거리 1인 가와 나이다. 이 묶음과 다의 평균 거리는 \((4 + 5)/2 = 4.5\), 라와는 \((6 + 7)/2 = 6.5\)이다. 그래서 다음으로 다를 붙이고, 마지막에 라를 붙인다.</p>
@@ -227,7 +227,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-2.html#card-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/gene/2-2.html#text-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/adbio/3-3.html#text-adbio-code-cracking"><small class="mono">고급 생명과학 3.3</small>UUU가 페닐알라닌이라는 것은 어떻게 알아냈을까?</a><a href="../../c/bio/3-1.html#card-gene-nondisjunction"><small class="mono">생명과학 3.1</small>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-3.html#text-adbio-omics"><small class="mono">고급 생명과학 4.3</small>유전체를 다 읽은 뒤, 생명과학은 무엇을 더 알아내야 했을까?</a><a href="../../c/adbio/4-3.html#card-adbio-assembly"><small class="mono">고급 생명과학 4.3</small>유전체를 잘게 잘라 읽은 뒤, 컴퓨터는 어떻게 다시 이어 붙일까?</a><a href="../../c/adbio/4-3.html#text-adbio-coverage"><small class="mono">고급 생명과학 4.3</small>유전체를 한 번만 읽으면 왜 3분의 1이 빠질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-2.html#card-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/gene/2-2.html#text-gene-codon"><small class="mono">생물의 유전 2.2</small>유전 부호</a><a href="../../c/adbio/3-3.html#text-adbio-code-cracking"><small class="mono">고급 생명과학 3.3</small>유전 암호의 실험적 해독</a><a href="../../c/bio/3-1.html#card-gene-nondisjunction"><small class="mono">생명과학 3.1</small>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-3.html#text-adbio-omics"><small class="mono">고급 생명과학 4.3</small>유전체를 다 읽은 뒤, 생명과학은 무엇을 더 알아내야 했을까?</a><a href="../../c/adbio/4-3.html#card-adbio-assembly"><small class="mono">고급 생명과학 4.3</small>유전체를 잘게 잘라 읽은 뒤, 컴퓨터는 어떻게 다시 이어 붙일까?</a><a href="../../c/adbio/4-3.html#text-adbio-coverage"><small class="mono">고급 생명과학 4.3</small>생명공학기술의 활용과 학문 분야</a></div></nav>
 
       <article class="card reading" id="text-labbio-genome-med">
         <header class="card-head">
@@ -266,7 +266,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-2.html#card-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/gene/2-2.html#text-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/adbio/3-3.html#text-adbio-code-cracking"><small class="mono">고급 생명과학 3.3</small>UUU가 페닐알라닌이라는 것은 어떻게 알아냈을까?</a><a href="../../c/bio/3-1.html#card-gene-nondisjunction"><small class="mono">생명과학 3.1</small>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-3.html#text-adbio-omics"><small class="mono">고급 생명과학 4.3</small>유전체를 다 읽은 뒤, 생명과학은 무엇을 더 알아내야 했을까?</a><a href="../../c/adbio/4-3.html#card-adbio-assembly"><small class="mono">고급 생명과학 4.3</small>유전체를 잘게 잘라 읽은 뒤, 컴퓨터는 어떻게 다시 이어 붙일까?</a><a href="../../c/adbio/4-3.html#text-adbio-coverage"><small class="mono">고급 생명과학 4.3</small>유전체를 한 번만 읽으면 왜 3분의 1이 빠질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-2.html#card-gene-codon"><small class="mono">생물의 유전 2.2</small>염기 하나가 바뀌면 단백질은 얼마나 달라질까?</a><a href="../../c/gene/2-2.html#text-gene-codon"><small class="mono">생물의 유전 2.2</small>유전 부호</a><a href="../../c/adbio/3-3.html#text-adbio-code-cracking"><small class="mono">고급 생명과학 3.3</small>유전 암호의 실험적 해독</a><a href="../../c/bio/3-1.html#card-gene-nondisjunction"><small class="mono">생명과학 3.1</small>염색체 하나가 더 들어가는 일은 감수 분열의 어느 단계에서 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/4-3.html#text-adbio-omics"><small class="mono">고급 생명과학 4.3</small>유전체를 다 읽은 뒤, 생명과학은 무엇을 더 알아내야 했을까?</a><a href="../../c/adbio/4-3.html#card-adbio-assembly"><small class="mono">고급 생명과학 4.3</small>유전체를 잘게 잘라 읽은 뒤, 컴퓨터는 어떻게 다시 이어 붙일까?</a><a href="../../c/adbio/4-3.html#text-adbio-coverage"><small class="mono">고급 생명과학 4.3</small>생명공학기술의 활용과 학문 분야</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=labbio&amp;sec=5-8"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">6문항</span></a>
 

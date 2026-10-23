@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-adcalc-slope-field" data-kind="본문">
-        <header class="card-head"><span class="no">4.1.1</span><h2>식을 풀지 않고도 미분방정식의 해를 그릴 수 있을까?</h2><span class="kind">본문 · 미분방정식과 방향장</span></header>
+        <header class="card-head"><span class="no">4.1.1</span><h2>미분방정식과 방향장</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">미분방정식 \(y' = x - y\)는 곡선 위의 각 점 \((x, y)\)에서 접선의 기울기가 \(x - y\)라는 것만 알려 준다. 해의 식은 아직 모르지만, 평면의 여러 점에 그 점의 기울기만큼 기운 짧은 선분을 그려 두면, 선분들이 마치 물결처럼 한쪽으로 흐르는 무늬를 만든다. 그 무늬를 따라 펜을 움직이면 해의 그래프가 그려질까? 또 이 방정식에는 기울기가 늘 1인 직선 해가 하나 숨어 있다고 한다. 어떤 직선일까?</p>
           <figure class="q-fig">
@@ -79,14 +79,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>접선의 기울기, 미분계수의 기하적 의미, 지수함수의 도함수.</div>
 
-          <h3><span class="mono">1</span>기울기의 지도</h3>
+          <h3><span class="no">4.1.1</span>기울기의 지도</h3>
           <p>미분방정식은 미지의 함수와 그 도함수 사이의 관계식이다. \(y' = f(x, y)\) 꼴의 미분방정식은 평면의 각 점에서 해 곡선이 가져야 할 기울기를 정해 준다. 그래서 격자 위의 여러 점에 그 기울기를 가진 짧은 선분을 그리면, 해 곡선이 어떻게 흘러야 하는지 보여 주는 지도가 생긴다. 이것을 방향장이라 한다. 한 점에서 출발해 선분과 늘 나란하게 펜을 움직이면 그 점을 지나는 해 곡선이 그려진다. 출발점마다 다른 곡선이 나오며, 출발점을 정해 주는 조건을 초기 조건이라 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">방향장과 등경사선</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.1.1 <span class="nm">방향장과 등경사선</span></span>
             <p>미분방정식 \(y' = f(x, y)\)의 해 곡선은 지나는 모든 점에서 방향장의 선분에 접한다. 기울기가 같은 점들을 이은 곡선 \(f(x, y) = c\)를 등경사선이라 하며, 해 곡선은 등경사선 \(f(x, y) = c\)를 지날 때 기울기 \(c\)를 가진다.</p>
           </div>
           <p>방향장을 손으로 그릴 때는 등경사선부터 그리면 빠르다. \(y' = x - y\)에서 기울기가 0인 점들은 \(y = x\) 위에 있고, 기울기가 1인 점들은 \(y = x - 1\) 위에 있다. 그런데 \(y = x - 1\)은 그 자체가 기울기 1인 직선이어서, 이 직선 위에서는 선분들이 직선과 나란하다. 그래서 직선 \(y = x - 1\) 자체가 하나의 해 곡선이다. 직선 위쪽에서는 기울기가 1보다 작고 아래쪽에서는 1보다 커서, 다른 해 곡선들은 모두 이 직선 쪽으로 다가간다.<sup class="fn"><a href="#fn-adcalc-slope-field-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>무늬만 보고 방정식 맞히기</h3>
+          <h3><span class="no">4.1.2</span>무늬만 보고 방정식 맞히기</h3>
           <p>방향장의 무늬에는 방정식의 성질이 드러난다. 선분의 기울기가 \(x\)에만 따라 변해 같은 세로줄에서 모두 나란하면 \(y' = f(x)\) 꼴이고, 같은 가로줄에서 모두 나란하면 \(y' = g(y)\) 꼴이다. \(y' = g(y)\) 꼴에서 \(g(y) = 0\)이 되는 높이에서는 선분이 수평이어서, 그 높이의 수평선이 해가 된다. 개체 수나 온도처럼 시간에 따라 변하는 양의 방정식은 대부분 이 꼴이어서, 방향장만 보아도 양이 어느 값으로 다가가는지 알 수 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="세 가지 방향장의 특징">
@@ -101,8 +101,8 @@
             <figcaption>그림 2. 선분이 어느 줄에서 나란한지 보면 방정식이 무엇에 따라 변하는지 알 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.1.2</span>
             <p>\(y = x - 1 + Ce^{-x}\)가 \(y' = x - y\)의 해임을 확인하고, 초기 조건 \(y(0) = 0\)과 \(y(0) = 5\)에 맞는 해를 구하여라. \(x\)가 커질 때 두 해는 어떻게 되는가?</p>
           </div>
           <p>\(y' = 1 - Ce^{-x}\)이고 \(x - y = x - (x - 1 + Ce^{-x}) = 1 - Ce^{-x}\)이므로 두 식이 같아 해이다. \(C = 0\)이면 직선 해 \(y = x - 1\)이다. \(y(0) = 0\)이면 \(-1 + C = 0\)에서 \(C = 1\)이므로 \(y = x - 1 + e^{-x}\)이고, \(y(0) = 5\)이면 \(C = 6\)이므로 \(y = x - 1 + 6e^{-x}\)이다.</p>
@@ -115,7 +115,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>미분방정식 \(y' = f(x, y)\)는 평면의 각 점에서 해 곡선의 기울기를 정해 주므로, 그 기울기의 짧은 선분을 그린 방향장을 따라가면 식을 풀지 않고도 해 곡선을 그릴 수 있다. 기울기가 같은 점을 이은 등경사선을 먼저 그리면 방향장을 빨리 그리고, 등경사선이 해가 되는 경우도 찾는다. 처음 질문의 \(y' = x - y\)에서는 기울기 1인 등경사선 \(y = x - 1\)이 직선 해이고, 다른 해들은 모두 이 직선에 다가간다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>곡선에 접하는 직선의 식은 어떻게 세울까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>원을 그리며 돌아야 할 공이 컴퓨터 화면에서는 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>접선의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>오일러의 방법</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
 
       <article class="card" id="card-adcalc-slope-field">
         <header class="card-head">
@@ -161,7 +161,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>곡선에 접하는 직선의 식은 어떻게 세울까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>원을 그리며 돌아야 할 공이 컴퓨터 화면에서는 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>접선의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>오일러의 방법</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
 
       <article class="card" id="card-adcalc-field-match">
         <header class="card-head">
@@ -201,7 +201,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>곡선에 접하는 직선의 식은 어떻게 세울까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>원을 그리며 돌아야 할 공이 컴퓨터 화면에서는 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-5.html#card-calc1-tangent-line"><small class="mono">미적분Ⅰ 2.5</small>곡선 위의 한 점에서 그은 접선의 방정식은?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-slope"><small class="mono">미적분Ⅰ 2.5</small>기울기가 m인 접선은 몇 개일까?</a><a href="../../c/calc1/2-5.html#card-calc1-tangent-ext"><small class="mono">미적분Ⅰ 2.5</small>곡선 밖의 점에서 접선을 몇 개 그을 수 있을까?</a><a href="../../c/calc1/2-5.html#text-calc1-tangent"><small class="mono">미적분Ⅰ 2.5</small>접선의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-2.html#card-adcalc-euler-steps"><small class="mono">고급 미적분 4.2</small>접선을 따라 한 걸음씩 가면 해를 얼마나 정확히 그릴 수 있을까?</a><a href="../../c/adcalc/4-2.html#card-adcalc-euler-orbit"><small class="mono">고급 미적분 4.2</small>원을 그려야 할 공이 왜 점점 멀어질까?</a><a href="../../c/adcalc/4-2.html#text-adcalc-euler"><small class="mono">고급 미적분 4.2</small>오일러의 방법</a><a href="../../c/adcalc/4-3.html#card-adcalc-separable-proof"><small class="mono">고급 미적분 4.3</small>y' = 2xy의 해를 식으로 구하려면?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adcalc&amp;sec=4-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">9문항</span></a>
 

@@ -60,7 +60,7 @@
 
     <div>
       <article class="card reading" id="text-adphy-circular-orbit" data-kind="본문">
-        <header class="card-head"><span class="no">1.4.1</span><h2>정지 위성은 왜 하필 고도 36000 km에 떠 있을까?</h2><span class="kind">본문 · 행성의 운동과 인공위성</span></header>
+        <header class="card-head"><span class="no">1.4.1</span><h2>행성의 운동과 인공위성</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">국제 우주 정거장은 고도 약 400 km에서 90분마다 지구를 한 바퀴 돈다. 그래서 하루에 16번 해돋이를 본다. 반면 위성 방송을 보내는 정지 위성은 하늘의 한 자리에 멈춰 있는 것처럼 보여, 집의 위성 안테나를 한 방향으로 고정해 둘 수 있다. 정지 위성은 고도 약 36000 km를 돈다. 왜 그 높이일까? 위성의 높이와 속력, 주기 사이에는 어떤 관계가 있을까?</p>
           <figure class="q-fig" data-q="adphy-sat">
@@ -71,14 +71,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>만유인력 법칙, 케플러 법칙, 등속 원운동의 구심 가속도, 역학적 에너지 보존(물리학).</div>
 
-          <h3><span class="mono">1</span>원 궤도의 조건</h3>
+          <h3><span class="no">1.4.1</span>원 궤도의 조건</h3>
           <p>지구 둘레를 원으로 도는 위성은 늘 지구 중심을 향해 떨어지고 있다. 다만 옆으로 충분히 빠르게 움직이므로, 떨어지는 만큼 지구 표면도 둥글게 휘어 멀어져 땅에 닿지 않는다. 이 때 만유인력이 원운동에 필요한 구심력 노릇을 한다. 질량 \(m\)인 위성이 지구 중심에서 \(r\)만큼 떨어져 속력 \(v\)로 돌면 \(\dfrac{GMm}{r^2} = \dfrac{mv^2}{r}\)이다. 양변의 \(m\)이 지워지므로 궤도 속력은 위성의 질량과 관계없다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">원 궤도의 속력과 주기</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">원 궤도의 속력과 주기</span></span>
             <p>지구 질량 \(M\)에 대해 \(GM = 3.99 \times 10^{14}\ \text{m}^3/\text{s}^2\)이다. 반지름 \(r\)인 원 궤도의 속력과 주기는 \[v = \sqrt{\frac{GM}{r}},\qquad T = \frac{2\pi r}{v} = 2\pi\sqrt{\frac{r^3}{GM}}\]이다. 주기의 제곱은 반지름의 세제곱에 비례한다(케플러 제3법칙).</p>
           </div>
           <p>그림 1에서 고도를 바꾸어 보자. 고도 400 km에서는 \(r = 6771\) km이므로 속력이 약 7.67 km/s이고 한 바퀴에 약 92분이 걸린다. 고도를 높이면 속력은 줄고 둘레는 늘어나 주기가 빠르게 길어진다. 고도 약 35800 km에서 주기가 지구의 자전 주기 23시간 56분과 같아진다. 적도 위의 이 궤도를 지구와 같은 방향으로 돌면, 땅에서 볼 때 위성이 하늘의 한 점에 멈춰 있다.<sup class="fn"><a href="#fn-adphy-circular-orbit-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>궤도의 에너지</h3>
+          <h3><span class="no">1.4.2</span>궤도의 에너지</h3>
           <p>원 궤도를 도는 위성의 운동 에너지는 \(\dfrac{GMm}{2r}\)이고, 위치 에너지는 무한히 먼 곳을 0으로 잡으면 \(-\dfrac{GMm}{r}\)이다. 그래서 역학적 에너지는 \(-\dfrac{GMm}{2r}\)로 음수이며, 높은 궤도일수록 0에 가까워져 크다. 즉 위성을 높은 궤도로 올리려면 에너지를 더 주어야 하지만, 올라간 위성은 오히려 느리게 돈다. 역학적 에너지가 0 이상이 되면 위성은 지구를 벗어난다. 지표에서 이 조건을 만족하는 속력이 탈출 속도 \(\sqrt{2GM/R} \approx 11.2\) km/s이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="대표적인 지구 궤도">
@@ -93,8 +93,8 @@
             <figcaption>그림 2. 쓰임에 따라 궤도의 높이가 다르고, 높이가 속력과 주기를 정한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.4.2</span>
             <p>주기가 정확히 23시간 56분(86160 s)인 원 궤도의 반지름과 고도, 속력을 구하여라. 지구 반지름은 6371 km이다.</p>
           </div>
           <p>\(T = 2\pi\sqrt{r^3/GM}\)을 \(r\)에 대해 풀면 \(r^3 = \dfrac{GMT^2}{4\pi^2} = \dfrac{3.99 \times 10^{14} \times (86160)^2}{39.5} \approx 7.50 \times 10^{22}\ \text{m}^3\)이다. 세제곱근을 구하면 \(r \approx 4.22 \times 10^7\) m, 곧 약 42200 km이다.</p>
@@ -107,7 +107,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>원 궤도에서는 만유인력이 구심력 노릇을 하여 속력이 \(\sqrt{GM/r}\)로 정해지고, 주기의 제곱은 반지름의 세제곱에 비례한다. 높은 궤도일수록 느리게 돌지만 둘레가 길어 주기가 빠르게 늘어나고, 역학적 에너지는 커진다. 그래서 처음 질문의 정지 위성은 주기가 지구 자전 주기와 같아지는 유일한 높이인 고도 약 35800 km를 돈다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-3.html#card-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/mech/1-3.html#text-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/is1/3-3.html#card-inverse-square"><small class="mono">통합과학1 3.3</small>우주정거장에는 중력이 없을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-1.html#card-space-hohmann"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-1.html#text-space-exploration"><small class="mono">행성우주과학 1.1</small>탐사선과 인공위성은 무엇을 알아냈을까?</a><a href="../../c/space/1-1.html#text-space-hohmann-orbit"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-3.html#card-space-kepler3"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-3.html#card-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/mech/1-3.html#text-mech-circular"><small class="mono">역학과 에너지 1.3</small>원운동</a><a href="../../c/is1/3-3.html#card-inverse-square"><small class="mono">통합과학1 3.3</small>우주정거장에는 중력이 없을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>케플러 법칙과 만유인력</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>케플러 법칙과 태양계 천체의 운동</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-1.html#card-space-hohmann"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-1.html#text-space-exploration"><small class="mono">행성우주과학 1.1</small>탐사선과 인공위성은 무엇을 알아냈을까?</a><a href="../../c/space/1-1.html#text-space-hohmann-orbit"><small class="mono">행성우주과학 1.1</small>태양계 탐사</a><a href="../../c/space/1-3.html#card-space-kepler3"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div></nav>
 
       <article class="card" id="card-mech-kepler">
         <header class="card-head">
@@ -150,7 +150,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-3.html#card-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/mech/1-3.html#text-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/is1/3-3.html#card-inverse-square"><small class="mono">통합과학1 3.3</small>우주정거장에는 중력이 없을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-1.html#card-space-hohmann"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-1.html#text-space-exploration"><small class="mono">행성우주과학 1.1</small>탐사선과 인공위성은 무엇을 알아냈을까?</a><a href="../../c/space/1-1.html#text-space-hohmann-orbit"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-3.html#card-space-kepler3"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-3.html#card-mech-circular"><small class="mono">역학과 에너지 1.3</small>줄이 끊기면 공은 어느 쪽으로 날아갈까?</a><a href="../../c/mech/1-3.html#text-mech-circular"><small class="mono">역학과 에너지 1.3</small>원운동</a><a href="../../c/is1/3-3.html#card-inverse-square"><small class="mono">통합과학1 3.3</small>우주정거장에는 중력이 없을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>케플러 법칙과 태양계 천체의 운동</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-1.html#card-space-hohmann"><small class="mono">행성우주과학 1.1</small>화성에 가려면 왜 2년 2개월마다 한 번씩만 떠날 수 있을까?</a><a href="../../c/space/1-1.html#text-space-exploration"><small class="mono">행성우주과학 1.1</small>탐사선과 인공위성은 무엇을 알아냈을까?</a><a href="../../c/space/1-1.html#text-space-hohmann-orbit"><small class="mono">행성우주과학 1.1</small>태양계 탐사</a><a href="../../c/space/1-3.html#card-space-kepler3"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a></div></nav>
 
       <article class="card" id="card-mech-escape">
         <header class="card-head">
@@ -192,7 +192,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a><a href="../../c/phy/1-4.html#card-phy-coaster"><small class="mono">물리학 1.4</small>롤러코스터는 왜 첫 언덕이 가장 높을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>케플러 법칙과 만유인력</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>케플러 법칙과 태양계 천체의 운동</a><a href="../../c/phy/1-4.html#card-phy-coaster"><small class="mono">물리학 1.4</small>롤러코스터는 왜 첫 언덕이 가장 높을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/1-6.html#text-mech-gr"><small class="mono">역학과 에너지 1.6</small>중력은 힘일까, 휘어진 시공간일까?</a></div></nav>
 
       <article class="card" id="card-adphy-orbit">
         <header class="card-head">
@@ -246,7 +246,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>행성의 공전 주기와 거리 사이에는 어떤 규칙이 있을까?</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>위성의 궤도만 보고 목성의 질량을 잴 수 있을까?</a><a href="../../c/adphy/1-3.html#card-adphy-spin"><small class="mono">고급 물리학 1.3</small>회전의자에서 팔을 오므리면 왜 빨리 돌까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/1-4.html#text-mech-kepler-history"><small class="mono">역학과 에너지 1.4</small>관측 자료에서 만유인력까지, 무엇이 이어졌을까?</a><a href="../../c/mech/1-4.html#text-mech-kepler"><small class="mono">역학과 에너지 1.4</small>케플러 법칙과 만유인력</a><a href="../../c/space/1-3.html#text-space-kepler-mass"><small class="mono">행성우주과학 1.3</small>케플러 법칙과 태양계 천체의 운동</a><a href="../../c/adphy/1-3.html#card-adphy-spin"><small class="mono">고급 물리학 1.3</small>회전의자에서 팔을 오므리면 왜 빨리 돌까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adphy&amp;sec=1-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adphy-1-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">45문항</span></a>

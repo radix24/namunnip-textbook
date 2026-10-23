@@ -64,7 +64,7 @@
 
     <div>
       <article class="card reading" id="text-adbio-goldman" data-kind="본문">
-        <header class="card-head"><span class="no">2.3.1</span><h2>혈액 속 칼륨이 조금만 늘어도 왜 심장이 위험해질까?</h2><span class="kind">본문 · 막전위와 활동 전위</span></header>
+        <header class="card-head"><span class="no">2.3.1</span><h2>막전위와 활동 전위</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">혈액 속 칼륨 이온의 정상 농도는 3.5~5 mM이다. 콩팥이 제대로 일하지 못해 이 값이 7~8 mM으로만 올라도, 심장 박동이 흐트러져 목숨이 위험해질 수 있다. 몇 mM의 변화가 왜 이렇게 큰일을 일으킬까? 뉴런과 심장 근육 세포는 안쪽이 바깥보다 수십 mV 낮은 막전위를 유지한다. 이 전위는 무엇이 정하고, 바깥 칼륨 농도가 변하면 어떻게 바뀔까?</p>
           <figure class="q-fig" data-q="adbio-ghk">
@@ -75,14 +75,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>뉴런의 휴지 전위와 활동 전위(생명과학), 확산과 농도 기울기(<a href="2-1.html">세포 간 신호 전달</a>), 로그(수학).</div>
 
-          <h3><span class="mono">1</span>평형 전위</h3>
+          <h3><span class="no">2.3.1</span>평형 전위</h3>
           <p>세포 안에는 K⁺가 많고 바깥에는 적다. 막에 K⁺만 통과하는 통로가 열려 있으면 K⁺가 바깥으로 새어 나가고, 안쪽에 음전하가 남아 막전위가 생긴다. 이 전위가 K⁺를 다시 안으로 끌어당기므로, 농도 차로 나가려는 힘과 전위로 끌려오는 힘이 같아지는 곳에서 이동이 멈춘다. 이때의 막전위를 그 이온의 평형 전위라 한다. 평형 전위는 그 이온의 안팎 농도비로 정해진다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">네른스트 식과 골드만 식</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">네른스트 식과 골드만 식</span></span>
             <p>37 °C에서 1가 양이온의 평형 전위는 \(E = 61.5\log\dfrac{[\text{바깥}]}{[\text{안}]}\) mV이다. 여러 이온이 함께 통과하면 막전위는 각 이온의 투과도 \(P\)로 가중한 골드만 식 \[V = 61.5\log\frac{P_K[\text{K}^+]_o + P_{Na}[\text{Na}^+]_o + P_{Cl}[\text{Cl}^-]_i}{P_K[\text{K}^+]_i + P_{Na}[\text{Na}^+]_i + P_{Cl}[\text{Cl}^-]_o}\]으로 정해진다. 막전위는 투과도가 가장 큰 이온의 평형 전위 쪽으로 끌려간다.</p>
           </div>
           <p>그림 1에서 두 값을 바꾸어 보자. 쉬고 있는 세포는 K⁺ 통로가 주로 열려 있어 Na⁺ 투과도가 K⁺의 4%쯤이다. 그래서 막전위는 K⁺의 평형 전위 −89 mV에 가까운 약 −67 mV이다. 활동 전위가 일어나 Na⁺ 통로가 열리고 Na⁺ 투과도가 K⁺의 20배가 되면, 막전위는 Na⁺의 평형 전위 +61 mV 쪽으로 끌려가 약 +48 mV까지 오른다. 즉 활동 전위는 이온 농도가 바뀌어서가 아니라, 막의 투과도가 바뀌어서 생긴다.<sup class="fn"><a href="#fn-adbio-goldman-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>활동 전위와 불응기</h3>
+          <h3><span class="no">2.3.2</span>활동 전위와 불응기</h3>
           <p>막전위가 역치에 이르면 전압에 따라 열리는 Na⁺ 통로가 한꺼번에 열려, Na⁺가 들어오며 막전위가 더 오르고 더 많은 통로가 열린다. 이 양의 되먹임이 막전위를 몇 ms 만에 +40 mV 근처까지 끌어올린다. 그 뒤 Na⁺ 통로는 저절로 닫혀 한동안 다시 열리지 않고, 늦게 열린 K⁺ 통로로 K⁺가 나가며 막전위가 되돌아온다. Na⁺ 통로가 다시 열릴 수 없는 이 시간을 불응기라 하며, 활동 전위가 거꾸로 퍼지지 않고 한 방향으로만 나아가게 한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="막전위 단계와 투과도">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 어떤 통로가 열려 있느냐가 막전위를 어느 이온의 평형 전위 쪽으로 끌지를 정한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
             <p>그림 1의 조건에서 혈액 속 K⁺가 5 mM에서 10 mM로 늘었다. K⁺의 평형 전위와 휴지 막전위는 각각 어떻게 변하는가? Na⁺ 투과도는 K⁺의 0.04배, Cl⁻ 투과도는 0.45배이다.</p>
           </div>
           <p>K⁺의 평형 전위는 \(61.5\log(5/140) \approx -89\) mV에서 \(61.5\log(10/140) \approx -70\) mV로 19 mV 오른다. 휴지 막전위는 \(61.5\log\dfrac{5 + 0.04 \times 145 + 0.45 \times 10}{140 + 0.04 \times 15 + 0.45 \times 110} = 61.5\log\dfrac{15.3}{190.1} \approx -67\) mV에서 \(61.5\log\dfrac{20.3}{190.1} \approx -60\) mV로 약 7 mV 오른다.</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>한 이온만 통과하는 막의 전위는 그 이온의 농도비로 정해지는 평형 전위가 되고, 여러 이온이 통과하면 투과도로 가중한 골드만 식이 막전위를 정한다. 휴지 상태에서는 K⁺ 투과도가 커서 막전위가 K⁺의 평형 전위 근처에 있고, 활동 전위 때는 Na⁺ 투과도가 커져 Na⁺의 평형 전위 쪽으로 오른다. 그래서 처음 질문의 혈액 속 칼륨이 늘면 K⁺의 평형 전위가 올라 휴지 막전위가 높아지고, 심장 근육의 흥분이 흐트러진다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a><a href="../../c/mateng/2-3.html#text-mateng-osmotic"><small class="mono">물질과 에너지 2.3</small>바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?</a><a href="../../c/cell/1-5.html#text-cell-membrane-transport"><small class="mono">세포와 물질대사 1.5</small>농도 차를 두 배로 늘리면 들어오는 포도당도 두 배가 될까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/2-2.html#card-bio-syndir"><small class="mono">생명과학 2.2</small>시냅스에서 신호는 왜 한 방향으로만 갈까?</a><a href="../../c/bio/2-2.html#card-bio-syndrug"><small class="mono">생명과학 2.2</small>약물은 시냅스의 어느 단계에 끼어들까?</a><a href="../../c/bio/2-2.html#text-bio-synapse"><small class="mono">생명과학 2.2</small>약물은 신경 신호의 어디에 끼어들까?</a><a href="../../c/adbio/2-4.html#text-adbio-summation"><small class="mono">고급 생명과학 2.4</small>시냅스 하나로는 부족한 신호가 어떻게 뉴런을 흥분시킬까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a><a href="../../c/mateng/2-3.html#text-mateng-osmotic"><small class="mono">물질과 에너지 2.3</small>삼투 현상</a><a href="../../c/cell/1-5.html#text-cell-membrane-transport"><small class="mono">세포와 물질대사 1.5</small>세포막과 물질 수송</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>뉴런과 흥분 전도</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/2-2.html#card-bio-syndir"><small class="mono">생명과학 2.2</small>시냅스에서 신호는 왜 한 방향으로만 갈까?</a><a href="../../c/bio/2-2.html#card-bio-syndrug"><small class="mono">생명과학 2.2</small>약물은 시냅스의 어느 단계에 끼어들까?</a><a href="../../c/bio/2-2.html#text-bio-synapse"><small class="mono">생명과학 2.2</small>시냅스와 약물</a><a href="../../c/adbio/2-4.html#text-adbio-summation"><small class="mono">고급 생명과학 2.4</small>시냅스 전달과 시냅스후 전위</a></div></nav>
 
       <article class="card" id="card-bio-saltatory">
         <header class="card-head">
@@ -157,7 +157,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a><a href="../../c/mateng/2-3.html#text-mateng-osmotic"><small class="mono">물질과 에너지 2.3</small>바닷물을 마실 물로 바꾸려면 얼마나 세게 눌러야 할까?</a><a href="../../c/cell/1-5.html#text-cell-membrane-transport"><small class="mono">세포와 물질대사 1.5</small>농도 차를 두 배로 늘리면 들어오는 포도당도 두 배가 될까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/2-2.html#card-bio-syndir"><small class="mono">생명과학 2.2</small>시냅스에서 신호는 왜 한 방향으로만 갈까?</a><a href="../../c/bio/2-2.html#card-bio-syndrug"><small class="mono">생명과학 2.2</small>약물은 시냅스의 어느 단계에 끼어들까?</a><a href="../../c/bio/2-2.html#text-bio-synapse"><small class="mono">생명과학 2.2</small>약물은 신경 신호의 어디에 끼어들까?</a><a href="../../c/adbio/2-4.html#text-adbio-summation"><small class="mono">고급 생명과학 2.4</small>시냅스 하나로는 부족한 신호가 어떻게 뉴런을 흥분시킬까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a><a href="../../c/mateng/2-3.html#text-mateng-osmotic"><small class="mono">물질과 에너지 2.3</small>삼투 현상</a><a href="../../c/cell/1-5.html#text-cell-membrane-transport"><small class="mono">세포와 물질대사 1.5</small>세포막과 물질 수송</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/bio/2-2.html#card-bio-syndir"><small class="mono">생명과학 2.2</small>시냅스에서 신호는 왜 한 방향으로만 갈까?</a><a href="../../c/bio/2-2.html#card-bio-syndrug"><small class="mono">생명과학 2.2</small>약물은 시냅스의 어느 단계에 끼어들까?</a><a href="../../c/bio/2-2.html#text-bio-synapse"><small class="mono">생명과학 2.2</small>시냅스와 약물</a><a href="../../c/adbio/2-4.html#text-adbio-summation"><small class="mono">고급 생명과학 2.4</small>시냅스 전달과 시냅스후 전위</a></div></nav>
 
       <article class="card" id="card-adbio-ghk">
         <header class="card-head">
@@ -210,7 +210,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/2-4.html#card-adbio-psp"><small class="mono">고급 생명과학 2.4</small>시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>뉴런과 흥분 전도</a><a href="../../c/is1/3-5.html#card-is1-membrane"><small class="mono">통합과학1 3.5</small>세포막은 무엇을 통과시키고 무엇을 막을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adbio/2-4.html#card-adbio-psp"><small class="mono">고급 생명과학 2.4</small>시냅스 하나로는 부족할 때, 뉴런은 신호를 어떻게 더할까?</a></div></nav>
 
       <article class="card" id="card-adbio-hh">
         <header class="card-head">
@@ -305,7 +305,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/bio/2-1.html#card-bio-ap"><small class="mono">생명과학 2.1</small>신경 신호는 전선 속 전류와 무엇이 다를까?</a><a href="../../c/bio/2-1.html#card-bio-snapshot"><small class="mono">생명과학 2.1</small>자극하고 몇 ms 뒤, 축삭의 각 지점은 어떤 상태일까?</a><a href="../../c/bio/2-1.html#text-bio-neuron"><small class="mono">생명과학 2.1</small>뉴런과 흥분 전도</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adbio&amp;sec=2-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
 

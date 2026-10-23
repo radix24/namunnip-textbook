@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc2-param" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>\(x\)와 \(y\)가 모두 시간의 함수일 때 접선의 기울기는?</h2><span class="kind">본문 · 매개변수 함수의 미분</span></header>
+  <header class="card-head"><span class="no"></span><h2>매개변수 함수의 미분</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">운동장 트랙을 도는 사람의 위치는 시간 \(t\)에 따라 \(x\)좌표와 \(y\)좌표가 함께 바뀐다. 트랙처럼 둥근 곡선은 \(y\)를 \(x\)의 함수 하나로 나타내기 어렵다. 한 \(x\)에 \(y\)가 두 개씩 있기 때문이다. 이런 곡선 위 한 점에서 접선의 기울기는 어떻게 구할까?</p>
     <figure class="q-fig" data-q="calc2-param">
@@ -18,12 +18,12 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>합성함수의 미분법(<a href="2-5.html">합성함수의 미분법</a>), 사인·코사인함수의 도함수, 접선의 방정식(미적분Ⅰ).</div>
 
-    <h3><span class="mono">1</span>매개변수로 나타낸 곡선</h3>
+    <h3><span class="no">2.6.1</span>매개변수로 나타낸 곡선</h3>
     <p>두 변수 \(x\), \(y\)를 제3의 변수 \(t\)의 함수 \(x = f(t)\), \(y = g(t)\)로 나타낸 것을 매개변수로 나타낸 함수라 하고, \(t\)를 매개변수라 한다. \(t\)를 시간으로 보면 점이 평면 위를 움직이는 경로가 된다. 원 \(x^2 + y^2 = 1\)은 \(x = \cos t\), \(y = \sin t\)로, 그림 1의 타원 \(\dfrac{x^2}{4} + y^2 = 1\)은 \(x = 2\cos t\), \(y = \sin t\)로 나타낼 수 있다.</p>
 
-    <h3><span class="mono">2</span>매개변수로 나타낸 함수의 미분</h3>
+    <h3><span class="no">2.6.2</span>매개변수로 나타낸 함수의 미분</h3>
     <p>곡선의 일부에서 \(y\)를 \(x\)의 함수로 볼 수 있다면, 합성함수의 미분법에 의해 \(\dfrac{dy}{dt} = \dfrac{dy}{dx} \cdot \dfrac{dx}{dt}\)이다. 따라서 \(\dfrac{dx}{dt} \ne 0\)인 곳에서 양변을 \(\dfrac{dx}{dt}\)로 나누면 접선의 기울기를 얻는다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">매개변수로 나타낸 함수의 미분법</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">매개변수로 나타낸 함수의 미분법</span></span>
       <p>\(x = f(t)\), \(y = g(t)\)가 미분가능하고 \(f'(t) \ne 0\)이면 \[\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{g'(t)}{f'(t)}\]</p>
     </div>
     <p>그림 1에서 \(t\)를 움직여 보자. \(t = 0\)이나 \(t = \pi\)에서는 \(\dfrac{dx}{dt} = -2\sin t = 0\)이므로 접선이 세로선이 된다. \(t = \dfrac{\pi}{2}\)에서는 \(\dfrac{dy}{dt} = \cos t = 0\)이므로 접선이 가로선이다. 한 \(x\)에 \(y\)가 두 개인 곡선이지만, \(t\)를 거치면 각 점의 접선을 문제없이 구할 수 있다.<sup class="fn"><a href="#fn-calc2-param-1">1</a></sup></p>
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 매개변수 곡선 위의 점이 움직이는 속도의 가로 성분과 세로 성분의 비가 접선의 기울기이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
       <p>곡선 \(x = 2\cos t\), \(y = \sin t\) 위에서 \(t = \dfrac{\pi}{4}\)인 점에서의 접선의 방정식을 구하여라.</p>
     </div>
     <p>\(t = \dfrac{\pi}{4}\)인 점은 \(\left(2 \cdot \dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right) = \left(\sqrt{2}, \dfrac{\sqrt{2}}{2}\right)\)이다. \(\dfrac{dx}{dt} = -2\sin t = -\sqrt{2}\), \(\dfrac{dy}{dt} = \cos t = \dfrac{\sqrt{2}}{2}\)이므로 기울기는 \(\dfrac{\sqrt{2}/2}{-\sqrt{2}} = -\dfrac{1}{2}\)이다.</p>

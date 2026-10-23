@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-is2-diagnosis" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>검사 결과가 양성이면 정말 감염된 것일까?</h2><span class="kind">본문 · 감염병 진단</span></header>
+  <header class="card-head"><span class="no"></span><h2>감염병 진단</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">감염된 사람의 95%를 양성으로 찾아내고, 감염되지 않은 사람의 98%를 음성으로 판정하는 검사가 있다. 꽤 정확해 보인다. 그런데 감염자가 1%뿐인 지역에서 이 검사로 양성이 나온 사람이 실제로 감염되었을 확률은 얼마일까? 95%일까?</p>
     <figure class="q-fig" data-q="is2-bayes">
@@ -18,12 +18,12 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>DNA의 염기 짝(<a href="../is1/3-6.html">유전자와 단백질</a>), 10의 거듭제곱, 비율과 백분율.</div>
 
-    <h3><span class="mono">1</span>아주 적은 바이러스를 찾는 방법</h3>
+    <h3><span class="no">3.1.1</span>아주 적은 바이러스를 찾는 방법</h3>
     <p>콧속을 문지른 면봉에 묻은 바이러스는 너무 적어서 그대로는 찾을 수 없다. 그래서 바이러스의 유전 물질에서 특정한 부분만 골라 복제해 늘린다. 이것이 중합 효소 연쇄 반응(PCR)이다. 온도를 올려 DNA 두 가닥을 떼어 놓고, 온도를 낮추어 찾으려는 부분의 양 끝에 짧은 프라이머를 붙인 뒤, 효소로 나머지를 이어 붙인다. 이 한 번의 순환마다 목표 DNA가 두 배가 된다.</p>
     <p>두 배씩 늘어나므로 30번 순환하면 \(2^{30} \approx 10^9\)배, 곧 약 10억 배가 된다. 처음에 바이러스 유전 물질이 몇 개뿐이어도 30번이면 형광 신호로 잴 수 있을 만큼 많아진다. 반면 신속 항원 검사는 바이러스의 단백질을 항체로 직접 잡아 줄을 나타내므로 빠르지만, 늘리는 과정이 없어 바이러스가 적으면 놓치기 쉽다.<sup class="fn"><a href="#fn-is2-diagnosis-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>검사의 정확도를 나타내는 두 수</h3>
-    <div class="tb-env"><span class="lb">정의 <span class="nm">민감도와 특이도</span></span>
+    <h3><span class="no">3.1.2</span>검사의 정확도를 나타내는 두 수</h3>
+    <div class="tb-env"><span class="lb">정의 3.1.1 <span class="nm">민감도와 특이도</span></span>
       <p>민감도는 실제 감염자 가운데 검사가 양성으로 판정하는 비율이고, 특이도는 실제 비감염자 가운데 검사가 음성으로 판정하는 비율이다. 감염자를 음성으로 판정하면 거짓 음성, 비감염자를 양성으로 판정하면 거짓 양성이라 한다.</p>
     </div>
     <p>그런데 검사를 받은 사람이 알고 싶은 것은 민감도가 아니다. '내가 양성이 나왔는데, 정말 감염일 확률'이다. 이 값은 검사의 성능뿐 아니라 검사를 받는 집단에 감염자가 얼마나 있는지에도 달려 있다.</p>
@@ -44,8 +44,8 @@
       <figcaption>그림 2. PCR은 순환마다 목표 DNA를 두 배로 늘려, 30번이면 약 10억 배가 된다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
       <p>같은 검사(민감도 95%, 특이도 98%)를 증상이 있어 감염자 비율이 20%인 사람들에게 쓰면, 양성인 사람이 실제로 감염되었을 확률은 얼마인가? 또 1%인 지역에서 양성이 나온 사람에게 같은 검사를 한 번 더 해서 다시 양성이 나오면 확률은 어떻게 될까?</p>
     </div>
     <p>1000명 가운데 감염자 200명의 95%인 190명이 양성이다. 비감염자 800명의 2%인 16명이 거짓 양성이다. 따라서 양성 206명 가운데 190명이 감염자이므로 확률은 \(\dfrac{190}{206} \approx 92\%\)이다. 감염자가 흔한 집단에서는 같은 검사의 양성이 훨씬 믿을 만해진다.</p>

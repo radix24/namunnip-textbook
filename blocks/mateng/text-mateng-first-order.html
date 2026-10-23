@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-mateng-first-order" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>약을 두 알 먹으면 효과가 두 배 오래갈까?</h2><span class="kind">본문 · 1차 반응과 반감기</span></header>
+  <header class="card-head"><span class="no"></span><h2>1차 반응과 반감기</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">진통제 설명서에는 '6시간마다 한 알씩'이라고 적혀 있다. 그렇다면 한 번에 두 알을 먹으면 12시간 동안 효과가 이어질까? 몸속의 약은 일정한 양씩 줄어드는 것이 아니라 일정한 시간마다 절반씩 줄어든다. 이 규칙을 따르면 두 알을 먹었을 때 효과는 얼마나 더 오래갈까?</p>
     <figure class="q-fig" data-q="mat-drug">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>반응 속도식과 반응 차수(<a href="4-1.html">반응 속도식</a>), 지수함수와 로그(수학), 방사성 붕괴(통합과학).</div>
 
-    <h3><span class="mono">1</span>1차 반응의 특징</h3>
+    <h3><span class="no">4.2.1</span>1차 반응의 특징</h3>
     <p>1차 반응은 반응 속도가 반응물 농도에 정비례하는 반응이다(\(v = k[\text{A}]\)). 농도가 크면 빨리 줄고, 줄어들수록 느려진다. 그래서 농도는 일정한 양씩이 아니라 일정한 비율씩 줄어들어, 시간에 대한 지수함수가 된다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">1차 반응의 반감기</span></span>
+    <div class="tb-env thm"><span class="lb">정리 4.2.1 <span class="nm">1차 반응의 반감기</span></span>
       <p>1차 반응에서 반응물의 농도가 처음의 절반이 되는 시간 \(t_{1/2}\)은 처음 농도와 관계없이 일정하다. 시간 \(t\)가 지난 뒤의 농도는 \[[\text{A}] = [\text{A}]_0\left(\frac{1}{2}\right)^{t/t_{1/2}}\] 이다. 속도 상수와는 \(t_{1/2} = \dfrac{0.693}{k}\)의 관계가 있다.</p>
     </div>
     <p>처음 양이 1000 mg이든 10 mg이든 반으로 줄어드는 시간은 같다. 따라서 반감기가 두 번 지나면 4분의 1, 세 번 지나면 8분의 1이 남는다. 그림 1에서 반감기를 바꾸어 보자. 반감기가 짧은 약은 빨리 빠져나가므로 더 자주 먹어야 한다. 반대로 반감기가 하루가 넘는 약은 하루 한 번만 먹어도 몸속 농도가 유지된다.</p>
 
-    <h3><span class="mono">2</span>반감기의 쓰임</h3>
+    <h3><span class="no">4.2.2</span>반감기의 쓰임</h3>
     <p>방사성 원소의 붕괴도 1차 반응이다. 탄소-14는 반감기가 약 5730년이며, 살아 있는 생물은 대기와 같은 비율로 탄소-14를 가진다. 생물이 죽으면 새로 들어오지 않고 붕괴만 하므로, 남은 비율로 죽은 지 얼마나 지났는지 알 수 있다. 의약품의 복용 간격, 혈중 알코올이 빠지는 시간, 원자력 폐기물의 보관 기간도 반감기로 계산한다.<sup class="fn"><a href="#fn-mateng-first-order-1">1</a></sup></p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="반감기가 지날 때마다 남은 양">
@@ -37,8 +37,8 @@
       <figcaption>그림 2. 반감기가 한 번 지날 때마다 남은 양이 절반이 된다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">4.2.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 4.2.2</span>
       <p>반감기가 6시간인 약 500 mg을 먹었다. 몸속 약이 50 mg 아래가 되면 효과가 없다. 효과는 몇 시간 이어지는가? 1000 mg을 한꺼번에 먹으면 몇 시간 이어지는가?</p>
     </div>
     <p>500 mg이 50 mg이 되려면 \(\left(\dfrac{1}{2}\right)^{n} = \dfrac{1}{10}\), 곧 \(n = \log_2 10 \approx 3.32\)번의 반감기가 필요하다. 따라서 약 \(3.32 \times 6 \approx 19.9\)시간이다.</p>

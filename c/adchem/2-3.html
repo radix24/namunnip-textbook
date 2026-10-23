@@ -58,7 +58,7 @@
 
     <div>
       <article class="card reading" id="text-adchem-real-gas" data-kind="본문">
-        <header class="card-head"><span class="no">2.3.1</span><h2>탄산음료 공장의 이산화 탄소 통에는 왜 이상 기체 계산보다 더 많이 들어갈까?</h2><span class="kind">본문 · 실제 기체</span></header>
+        <header class="card-head"><span class="no">2.3.1</span><h2>실제 기체</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">탄산음료 공장과 소화기에는 이산화 탄소를 높은 압력으로 담은 강철 통이 쓰인다. 이상 기체 상태 방정식으로 통에 들어갈 양을 계산하면, 실제로 들어가는 양보다 꽤 적게 나온다. 압력을 높일수록 차이가 더 커진다. 이상 기체 상태 방정식이 틀린 것일까? 아니면 어떤 조건에서만 잘 맞는 것일까? 실제 기체는 이상 기체와 무엇이 다를까?</p>
           <figure class="q-fig" data-q="adchem-vdw">
@@ -69,14 +69,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>이상 기체 상태 방정식(<a href="2-2.html">이상 기체와 부분 압력</a>), 분자 사이의 힘(화학), 기체 분자 운동론(<a href="2-1.html">기체 분자 운동론과 속력 분포</a>).</div>
 
-          <h3><span class="mono">1</span>이상 기체의 두 가정</h3>
+          <h3><span class="no">2.3.1</span>이상 기체의 두 가정</h3>
           <p>이상 기체 상태 방정식은 분자 자체의 부피가 없고 분자 사이에 힘이 작용하지 않는다는 두 가정에서 나온다. 압력이 낮아 분자들이 멀리 떨어져 있으면 두 가정이 거의 맞는다. 그런데 압력이 높아지면 분자 사이 거리가 줄어, 분자끼리 끌어당기는 힘이 커진다. 벽으로 다가가던 분자가 뒤쪽 분자에게 끌려 벽을 약하게 치므로 압력이 이상 기체보다 낮아진다. 그리고 더 높은 압력에서는 분자 자체의 부피가 용기의 상당한 몫을 차지해, 분자가 움직일 수 있는 공간이 줄어든다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">판데르발스 상태 방정식</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">판데르발스 상태 방정식</span></span>
             <p>분자 사이의 인력과 분자의 부피를 고쳐 넣은 식은 \[\left(P + \frac{an^2}{V^2}\right)(V - nb) = nRT\]이다. \(a\)는 분자 사이 인력의 세기를, \(b\)는 분자 1몰이 차지하는 부피를 나타낸다. 이산화 탄소는 \(a = 3.64\ \text{L}^2\cdot\text{bar/mol}^2\), \(b = 0.0427\ \text{L/mol}\)이다.</p>
           </div>
           <p>그림 1에서 온도와 압력을 바꾸어 보자. 300 K에서 압력이 높아지면 Z가 빠르게 작아져, 30 bar에서 약 0.86이다. 같은 압력, 같은 온도에서 실제 이산화 탄소의 부피가 이상 기체의 86%라는 뜻이다. 그래서 같은 통에 이상 기체 계산보다 약 16% 더 들어간다. 온도를 600 K로 높이면 분자가 빨라 인력의 영향이 줄어 Z가 1에 가까워진다. 즉 실제 기체는 높은 온도와 낮은 압력에서 이상 기체처럼 행동한다.<sup class="fn"><a href="#fn-adchem-real-gas-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>기체가 액체로 바뀔 때</h3>
+          <h3><span class="no">2.3.2</span>기체가 액체로 바뀔 때</h3>
           <p>이산화 탄소를 31 °C보다 낮은 온도에서 계속 압축하면, 분자 사이 인력이 이겨 기체가 액체로 응축한다. 실온의 이산화 탄소 통 속에는 실제로 액체가 들어 있다. 그런데 31 °C보다 높은 온도에서는 아무리 압축해도 액체가 되지 않는다. 이 온도를 임계 온도라 한다. 분자의 운동 에너지가 인력을 늘 이기기 때문이다. 판데르발스 상수 \(a\)가 클수록 분자 사이 인력이 커서 임계 온도가 높고 액화하기 쉽다. 수소나 헬륨처럼 \(a\)가 아주 작은 기체는 영하 200 °C 아래로 식혀야 액체가 된다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="기체별 판데르발스 상수와 임계 온도">
@@ -91,8 +91,8 @@
             <figcaption>그림 2. 분자 사이 인력을 나타내는 a가 클수록 임계 온도가 높아 쉽게 액화한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
             <p>이산화 탄소 1.00 mol을 300 K에서 부피 1.00 L의 통에 담았다. 이상 기체 상태 방정식과 판데르발스 식으로 각각 압력을 구하고, 압축 인자를 계산하여라. \(R = 0.0831\ \text{L·bar/(mol·K)}\)이다.</p>
           </div>
           <p>이상 기체라면 \(P = nRT/V = 0.0831 \times 300 \div 1.00 \approx 24.9\) bar이다. 판데르발스 식에서는 \(P = \dfrac{nRT}{V - nb} - \dfrac{an^2}{V^2} = \dfrac{24.9}{1.00 - 0.0427} - 3.64 \approx 26.0 - 3.64 = 22.4\) bar이다.</p>

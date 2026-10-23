@@ -61,7 +61,7 @@
 
     <div>
       <article class="card reading" id="text-is1-digital" data-kind="본문">
-        <header class="card-head"><span class="no">1.4.1</span><h2>연속으로 변하는 소리와 온도는 어떻게 숫자가 될까?</h2><span class="kind">본문 · 정보와 디지털 신호</span></header>
+        <header class="card-head"><span class="no">1.4.1</span><h2>정보와 디지털 신호</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">목소리는 공기의 압력이 끊김 없이 오르내리는 연속적인 변화이다. 그런데 휴대 전화는 이 소리를 0과 1로 된 숫자로 저장하고 보낸다. 끊김 없는 변화를 띄엄띄엄한 숫자로 바꾸면 무엇이 남고 무엇을 잃을까?</p>
           <figure class="q-fig" data-q="is1-sample">
@@ -72,14 +72,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>진동수(Hz, 1초에 진동하는 횟수), 2진수, 중학교의 전압·전류·저항의 관계.</div>
 
-          <h3><span class="mono">1</span>아날로그와 디지털</h3>
+          <h3><span class="no">1.4.1</span>아날로그와 디지털</h3>
           <p>온도계의 액체 기둥은 온도에 따라 끊김 없이 오르내린다. 이렇게 연속적으로 변하는 신호를 <em>아날로그 신호</em>라 한다. 반면 디지털 온도계는 '23.4'처럼 정해진 자리의 숫자만 보여 준다. 띄엄띄엄한 값만 갖는 신호를 <em>디지털 신호</em>라 한다.</p>
           <p>컴퓨터는 전압이 높은지 낮은지, 곧 1인지 0인지만 구별하는 장치이다. 그래서 자연의 변화를 컴퓨터로 다루려면 먼저 센서로 전기 신호로 바꾸고, 그 전기 신호를 숫자로 바꾸어야 한다. 가령 온도 센서인 서미스터는 온도에 따라 저항이 바뀌고, 그 결과 흐르는 전압이 바뀐다.</p>
 
-          <h3><span class="mono">2</span>표본화와 양자화</h3>
+          <h3><span class="no">1.4.2</span>표본화와 양자화</h3>
           <p>아날로그 신호를 숫자로 바꾸는 일은 두 단계이다. 먼저 일정한 시간 간격으로 신호의 값을 잰다. 이것을 표본화라 하고, 1초에 잰 횟수를 표본화 주파수라 한다. 다음으로 잰 값을 미리 정해 둔 몇 개의 단계 가운데 가장 가까운 것으로 바꾼다. 이것을 양자화라 한다.</p>
           <p>그림 1의 슬라이더로 1주기당 표본 수를 줄여 보자. 표본이 2개보다 적어지면 원래의 진동 모양을 되살릴 수 없다. 반대로 비트 수를 줄이면 단계가 거칠어져 계단처럼 보인다. 비트 수가 \(n\)이면 단계는 \(2^n\)개이므로, 비트 하나가 늘 때마다 단계가 두 배로 촘촘해진다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">디지털 변환의 두 기준</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">디지털 변환의 두 기준</span></span>
             <p>표본화 주파수가 신호의 가장 높은 진동수의 2배보다 커야 원래 신호를 되살릴 수 있다. 양자화 비트 수가 \(n\)이면 값을 \(2^n\)단계로 나타낸다.</p>
           </div>
           <p>사람이 들을 수 있는 소리는 약 20 000 Hz까지이다. 그래서 음악 CD는 그 두 배보다 조금 큰 44 100 Hz로 표본화하고, 값 하나를 16비트, 곧 \(2^{16} = 65\,536\)단계로 나타낸다.<sup class="fn"><a href="#fn-is1-digital-1">1</a></sup></p>
@@ -95,11 +95,11 @@
             <figcaption>그림 2. 센서가 자연의 변화를 전압으로 바꾸고, 변환기가 그 전압을 숫자로 바꾼다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>왜 굳이 디지털일까</h3>
+          <h3><span class="no">1.4.3</span>왜 굳이 디지털일까</h3>
           <p>숫자로 바꾸면 약간의 정보를 잃는데도 디지털을 쓰는 까닭은 잡음에 강하기 때문이다. 아날로그 신호는 전선을 지나며 조금씩 일그러지면 그 일그러짐이 그대로 남는다. 하지만 디지털 신호는 0과 1만 구별하면 되므로, 일그러져도 원래 값을 그대로 되살릴 수 있다. 그래서 몇 번을 복사하고 멀리 보내도 처음과 똑같다.</p>
 
-          <h3><span class="mono">4</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.4.4</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.4.2</span>
             <p>음악 CD의 방식(44 100 Hz, 16비트, 왼쪽과 오른쪽 2채널)으로 1분짜리 곡을 저장하면 몇 바이트가 필요할까? (1바이트는 8비트이다.)</p>
           </div>
           <p>1초에 표본을 44 100개 잰다. 표본 하나는 16비트이고 채널이 2개이므로, 1초에 필요한 비트는 \(44\,100 \times 16 \times 2 = 1\,411\,200\)비트이다. 이것을 8로 나누면 1초에 176 400바이트이다.</p>
@@ -112,7 +112,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>연속적인 아날로그 신호는 센서로 전압이 된 뒤, 일정한 간격으로 값을 재는 표본화와 정해진 단계로 맞추는 양자화를 거쳐 디지털 숫자가 된다. 표본을 충분히 자주 재고 단계를 촘촘히 하면 원래 신호를 거의 그대로 되살릴 수 있고, 디지털 신호는 잡음에 강해 복사와 전송에서 손상되지 않는다. 그래서 처음 질문의 목소리는 1초에 수만 번 잰 숫자의 나열로 휴대 전화에 담긴다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>0.4초마다 흔들리는 진자가 그래프에서는 왜 2초마다 흔들릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>센서와 컴퓨터 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <article class="card" id="card-is1-sampling">
         <header class="card-head">
@@ -163,7 +163,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>0.4초마다 흔들리는 진자가 그래프에서는 왜 2초마다 흔들릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>센서와 컴퓨터 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <article class="card" id="card-is1-sensor">
         <header class="card-head">
@@ -208,7 +208,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>0.4초마다 흔들리는 진자가 그래프에서는 왜 2초마다 흔들릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>센서와 컴퓨터 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <section class="video-block" id="video-is1-sensors" aria-label="통통사과 영상">
         <div>
@@ -257,7 +257,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>0.4초마다 흔들리는 진자가 그래프에서는 왜 2초마다 흔들릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/labphy/1-4.html#text-labphy-aliasing"><small class="mono">물리학 실험 1.4</small>센서와 컴퓨터 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=is1&amp;sec=1-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">14문항</span></a>
       <a class="px-go" href="../../practice.html?sec=is1-1-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">31문항</span></a>

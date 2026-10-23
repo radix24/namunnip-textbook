@@ -61,7 +61,7 @@
 
     <div>
       <article class="card reading" id="text-econ-interest" data-kind="본문">
-        <header class="card-head"><span class="no">1.4.1</span><h2>지금 100만 원과 5년 뒤 130만 원, 어느 쪽이 더 이득일까?</h2><span class="kind">본문 · 단리와 복리, 현재 가치</span></header>
+        <header class="card-head"><span class="no">1.4.1</span><h2>단리와 복리, 현재 가치</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">누군가 "지금 100만 원을 받을래, 5년 뒤에 130만 원을 받을래?"라고 묻는다. 130만 원이 더 많아 보이지만, 지금 받은 100만 원을 은행에 넣어 두면 5년 동안 이자가 붙는다. 서로 다른 때의 돈을 공정하게 비교하려면 어떻게 해야 할까? 이자에 이자가 붙는 복리는 시간이 지날수록 얼마나 큰 차이를 만들까?</p>
           <figure class="q-fig" data-q="econ-compound">
@@ -72,16 +72,16 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>비율과 백분율(중학교), 등비수열(대수), 지수와 로그.</div>
 
-          <h3><span class="mono">1</span>단리와 복리</h3>
+          <h3><span class="no">1.4.1</span>단리와 복리</h3>
           <p>원금에만 이자를 계산하는 방법을 단리라 한다. 원금 \(a\), 연이율 \(r\)로 \(n\)년 맡기면 해마다 \(ar\)씩 이자가 붙어 원리합계는 \(a(1 + rn)\)이다. 이자를 원금에 더하고, 그 합에 다시 이자를 계산하는 방법을 복리라 한다. 해마다 원리합계가 \((1 + r)\)배가 되므로 \(n\)년 뒤에는 \(a(1 + r)^n\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">원리합계</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">원리합계</span></span>
             <p>단리 \(S = a(1 + rn)\), 복리 \(S = a(1 + r)^n\). 단리는 등차수열, 복리는 등비수열을 이룬다.</p>
           </div>
           <p>그림 1에서 연이율 6%, 12년으로 맞추어 보자. 단리로는 172, 복리로는 약 201로 원금이 두 배가 된다. 복리로 원금이 두 배가 되는 기간은 대략 \(\dfrac{72}{\text{연이율(\%)}}\)년이라는 '72의 법칙'이 있다. 6%이면 12년, 9%이면 8년이다.<sup class="fn"><a href="#fn-econ-interest-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>현재 가치</h3>
+          <h3><span class="no">1.4.2</span>현재 가치</h3>
           <p>복리의 원리합계를 거꾸로 쓰면, 미래의 돈이 지금 얼마의 가치인지 알 수 있다. \(n\)년 뒤의 금액 \(S\)를 얻으려면 지금 \(\dfrac{S}{(1 + r)^n}\)을 맡기면 된다. 이 값을 \(S\)의 현재 가치라 한다. 서로 다른 때의 돈은 모두 현재 가치로 바꾸어야 공정하게 비교할 수 있다.</p>
-          <div class="tb-env thm"><span class="lb">정의 <span class="nm">현재 가치</span></span>
+          <div class="tb-env thm"><span class="lb">정의 1.4.2 <span class="nm">현재 가치</span></span>
             <p>연이율 \(r\)인 복리에서 \(n\)년 뒤의 금액 \(S\)의 현재 가치는 \[P = \frac{S}{(1 + r)^n}\]</p>
           </div>
           <figure class="q-fig">
@@ -96,8 +96,8 @@
             <figcaption>그림 2. 현재의 돈을 미래로 옮길 때는 \((1 + r)^n\)을 곱하고, 미래의 돈을 현재로 옮길 때는 나눈다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.4.3</span>
             <p>연이율 5%, 1년마다 복리일 때, 5년 뒤의 130만 원의 현재 가치를 구하고 지금 받는 100만 원과 비교하여라. 연이율이 6%이면 어떻게 되는가? (\(1.05^5 \approx 1.276\), \(1.06^5 \approx 1.338\))</p>
           </div>
           <p>연 5%이면 현재 가치는 \(\dfrac{130}{1.276} \approx 101.9\)만 원이다. 지금의 100만 원보다 조금 크므로 5년 뒤에 130만 원을 받는 편이 약간 이득이다.</p>
@@ -110,7 +110,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>단리는 원금에만 이자가 붙어 \(a(1 + rn)\), 복리는 이자에도 이자가 붙어 \(a(1 + r)^n\)으로 늘어난다. 미래 금액의 현재 가치는 \(\frac{S}{(1 + r)^n}\)이며, 때가 다른 돈은 현재 가치로 바꾸어 비교한다. 그래서 처음 질문의 답은 이자율에 달려 있어, 연 5%이면 5년 뒤 130만 원이, 연 6%이면 지금 100만 원이 더 이득이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>연금</a></div></nav>
 
       <article class="card" id="card-econ-compound">
         <header class="card-head">
@@ -146,7 +146,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>연금</a></div></nav>
 
       <article class="card" id="card-econ-present-value">
         <header class="card-head">
@@ -179,7 +179,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/econ/1-5.html#card-econ-annuity"><small class="mono">경제 수학 1.5</small>해마다 100만 원씩 20년 모으면 얼마가 될까?</a><a href="../../c/econ/1-5.html#card-econ-lump-or-annuity"><small class="mono">경제 수학 1.5</small>일시금 10억 원과 20년간 해마다 7000만 원, 무엇을 고를까?</a><a href="../../c/econ/1-5.html#text-econ-annuity"><small class="mono">경제 수학 1.5</small>연금</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=econ&amp;sec=1-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
 

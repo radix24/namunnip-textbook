@@ -87,7 +87,7 @@
 
     <div>
       <article class="card reading" id="text-info-print-queue" data-kind="본문">
-        <header class="card-head"><span class="no">2.2.1</span><h2>프린터가 조금 더 바빠졌을 뿐인데 왜 대기 줄이 몇 배로 길어질까?</h2><span class="kind">본문 · 스택·큐로 문제 해결</span></header>
+        <header class="card-head"><span class="no">2.2.1</span><h2>스택·큐로 문제 해결</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">교무실 프린터에 문서가 평소 한 시간에 40개쯤 들어온다. 프린터는 한 시간에 50개를 출력할 수 있다. 이때 대기열에는 평균 4개쯤의 문서가 쌓여 있다. 그런데 시험 기간에 문서가 한 시간에 45개로, 고작 12% 늘었는데 대기열은 9개로 두 배 넘게 길어졌다. 왜 조금 바빠졌을 뿐인데 줄이 이렇게 크게 늘어날까? 그리고 큐와 스택 같은 자료 구조로 이런 문제를 어떻게 다룰까?</p>
           <figure class="q-fig" data-q="info-mm1">
@@ -98,14 +98,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>스택과 큐(<a href="2-1.html">스택과 큐의 구현</a>), 확률과 평균(수학).</div>
 
-          <h3><span class="mono">1</span>큐로 대기열 흉내 내기</h3>
+          <h3><span class="no">2.2.1</span>큐로 대기열 흉내 내기</h3>
           <p>인쇄 대기열은 먼저 들어온 문서를 먼저 출력하는 큐이다. 프로그램으로 흉내 내려면 시간을 조금씩 흘려 보내며, 문서가 도착하면 큐에 넣고, 프린터가 비면 큐 앞에서 문서를 꺼내 출력한다. 도착 간격과 출력 시간을 무작위로 정하면 실제 대기열과 비슷한 모습이 나온다. 이런 시뮬레이션으로 줄이 얼마나 길어지는지, 문서 하나가 얼마나 기다리는지 잴 수 있다. 중요한 문서를 먼저 출력해야 한다면, 우선순위가 높은 것부터 꺼내는 우선순위 큐를 쓴다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">대기열의 평균 길이</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.2.1 <span class="nm">대기열의 평균 길이</span></span>
             <p>문서가 평균 도착률 \(\lambda\)로 무작위로 오고, 프린터가 평균 처리율 \(\mu\)로 무작위 시간에 출력하면, 이용률 \(\rho = \lambda/\mu\)에서 시스템 안의 평균 문서 수는 \[L = \frac{\rho}{1 - \rho}\]이다. 문서 하나가 시스템에 머무는 평균 시간은 출력 시간의 \(\dfrac{1}{1 - \rho}\)배이다.</p>
           </div>
           <p>그림 1에서 이용률을 바꾸어 보자. 이용률 0.8이면 평균 4개, 0.9이면 9개, 0.95이면 19개가 쌓인다. 0.8에서 0.9로 12% 바빠졌을 뿐인데 줄은 두 배 넘게 길어진다. 도착과 출력이 무작위라서, 잠깐 문서가 몰리면 프린터가 따라잡을 여유가 거의 없기 때문이다. 그래서 대기열을 설계할 때는 처리 능력을 도착률보다 넉넉하게, 이용률이 0.7~0.8을 넘지 않게 잡는다.<sup class="fn"><a href="#fn-info-print-queue-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>스택으로 괄호 검사하기</h3>
+          <h3><span class="no">2.2.2</span>스택으로 괄호 검사하기</h3>
           <p>스택은 짝을 맞추는 문제에 알맞다. 수식이나 코드의 괄호가 바르게 닫혔는지 검사하려면 문자를 왼쪽부터 읽으며, 여는 괄호를 만나면 스택에 넣고, 닫는 괄호를 만나면 스택 맨 위의 여는 괄호를 꺼내 짝이 맞는지 확인한다. 짝이 다르거나 스택이 비어 있으면 틀린 식이고, 끝까지 읽은 뒤 스택이 비어야 바른 식이다. 가장 나중에 연 괄호가 가장 먼저 닫혀야 한다는 규칙이 바로 스택의 후입 선출이다. 웹 브라우저의 뒤로 가기, 편집기의 실행 취소도 같은 원리이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="문제와 알맞은 자료 구조">
@@ -120,8 +120,8 @@
             <figcaption>그림 2. 무엇을 먼저 꺼내야 하는지가 알맞은 자료 구조를 정한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.2.2</span>
             <p>프린터가 한 시간에 문서 50개를 출력한다. 문서가 한 시간에 40개 올 때와 45개 올 때, 대기열 속 평균 문서 수와 문서 하나가 시스템에 머무는 평균 시간을 구하여라. 문서 하나의 평균 출력 시간은 1.2분이다.</p>
           </div>
           <p>40개이면 \(\rho = 0.8\)이므로 평균 \(0.8 \div 0.2 = 4\)개가 있고, 문서 하나는 출력 시간의 \(1 \div 0.2 = 5\)배인 6분을 머문다.</p>
@@ -134,7 +134,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>큐는 먼저 온 것을 먼저 처리하는 대기열을, 스택은 나중에 연 것을 먼저 닫는 짝 맞추기를 자연스럽게 나타내며, 큐로 대기열을 시뮬레이션하면 줄의 길이와 기다리는 시간을 잴 수 있다. 무작위로 도착하고 처리되는 대기열의 평균 길이는 \(\rho/(1-\rho)\)로, 이용률이 1에 가까워질수록 폭발적으로 늘어난다. 그래서 처음 질문의 프린터는 이용률이 0.8에서 0.9로 올라가 여유가 거의 사라지면서, 대기 줄이 두 배 넘게 길어졌다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>리스트로 만든 큐는 왜 손님이 많아지면 갑자기 느려질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>사전 앱은 단어 100만 개에서 어떻게 스무 번 만에 한 단어를 찾을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>스택과 큐의 구현</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>트리·그래프로 문제 해결</a></div></nav>
 
       <article class="card" id="card-info-bracket">
         <header class="card-head">
@@ -183,7 +183,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>리스트로 만든 큐는 왜 손님이 많아지면 갑자기 느려질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>사전 앱은 단어 100만 개에서 어떻게 스무 번 만에 한 단어를 찾을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>스택과 큐의 구현</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>트리·그래프로 문제 해결</a></div></nav>
 
       <article class="card" id="card-info-printer">
         <header class="card-head">
@@ -239,7 +239,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>리스트로 만든 큐는 왜 손님이 많아지면 갑자기 느려질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>사전 앱은 단어 100만 개에서 어떻게 스무 번 만에 한 단어를 찾을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/info/2-1.html#card-info-sq"><small class="mono">정보과학 2.1</small>스택과 큐를 리스트로 만들면 무엇이 다를까?</a><a href="../../c/info/2-1.html#text-info-adt"><small class="mono">정보과학 2.1</small>스택과 큐는 어디에 쓰이고, 무엇으로 구현할까?</a><a href="../../c/info/2-1.html#text-info-queue-impl"><small class="mono">정보과학 2.1</small>스택과 큐의 구현</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/info/2-4.html#card-info-maze"><small class="mono">정보과학 2.4</small>미로의 최단 경로는 큐와 스택 중 무엇으로 찾을까?</a><a href="../../c/info/2-4.html#text-info-bst-height"><small class="mono">정보과학 2.4</small>트리·그래프로 문제 해결</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=info&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
 

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-emq-circuit" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>카메라 플래시는 어떻게 순간적으로 밝은 빛을 낼까?</h2><span class="kind">본문 · 저항·축전기·인덕터</span></header>
+  <header class="card-head"><span class="no"></span><h2>저항·축전기·인덕터</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">카메라 플래시는 작은 건전지로 작동하는데도 한순간 눈부신 빛을 낸다. 건전지가 그 순간에 그렇게 큰 전력을 낼 수는 없다. 그렇다면 에너지는 어디에 모여 있다가 한꺼번에 나오는 것일까? 저항, 축전기, 인덕터는 회로에서 에너지를 각각 어떻게 다룰까?</p>
     <figure class="q-fig" data-q="emq-rc">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>옴의 법칙과 전력(물리학), 축전기와 전기 용량(<a href="1-2.html">정전기 유도와 유전 분극</a>), 전자기 유도(<a href="1-5.html">전자기 유도와 변압기</a>).</div>
 
-    <h3><span class="mono">1</span>세 부품이 에너지를 다루는 방식</h3>
+    <h3><span class="no">1.6.1</span>세 부품이 에너지를 다루는 방식</h3>
     <p>저항은 전류가 흐를 때 전기 에너지를 열로 바꾼다. 전력은 \(P = VI = I^2R\)이고, 이 에너지는 되돌아오지 않는다. 축전기는 두 판 사이의 전기장에 에너지를 담아 두었다가 회로로 돌려준다. 인덕터는 코일로, 전류가 만드는 자기장에 에너지를 담는다. 그리고 전류가 변하면 자체 유도로 그 변화를 방해하는 기전력을 만든다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">축전기와 인덕터에 저장되는 에너지</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.6.1 <span class="nm">축전기와 인덕터에 저장되는 에너지</span></span>
       <p>\[U_C = \frac{1}{2}CV^2,\qquad U_L = \frac{1}{2}LI^2\] 축전기는 전압이 걸려 있을 때, 인덕터는 전류가 흐를 때 에너지를 저장한다.</p>
     </div>
 
-    <h3><span class="mono">2</span>충전과 방전</h3>
+    <h3><span class="no">1.6.2</span>충전과 방전</h3>
     <p>빈 축전기를 저항을 거쳐 전원에 연결하면 처음에는 축전기 전압이 0이라 저항에 전원 전압이 모두 걸려 큰 전류가 흐른다. 그런데 축전기에 전하가 쌓일수록 축전기 전압이 올라가 저항에 걸린 전압이 줄고, 전류도 줄어든다. 그래서 충전은 처음에 빠르고 점점 느려지며, 이론적으로는 끝없이 전원 전압에 다가갈 뿐 정확히 닿지는 않는다. 시간 상수의 5배쯤 지나면 99% 넘게 충전되어 사실상 다 찼다고 본다. 그 빠르기는 \(RC\)로 정해지며, 이를 시간 상수라 한다. 그림 1에서 저항이나 전기 용량을 키우면 곡선이 완만해진다.</p>
     <p>충전된 축전기를 작은 저항에 연결하면 같은 에너지가 아주 짧은 시간에 빠져나온다. 시간이 짧으면 전력이 크다. 따라서 건전지가 몇 초에 걸쳐 천천히 채운 에너지를 수천분의 1초 만에 쏟아 내어 강한 빛을 만드는 것이 플래시의 원리이다.<sup class="fn"><a href="#fn-emq-circuit-1">1</a></sup></p>
     <figure class="q-fig">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 저항은 에너지를 소비하고, 축전기와 인덕터는 잠시 담았다가 돌려준다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.6.2</span>
       <p>카메라 플래시의 축전기는 전기 용량이 100 μF이고 300 V로 충전된다. 저장되는 에너지를 구하여라. 이 에너지가 1 ms 동안 모두 빠져나오면 평균 전력은 얼마인가? 또 이 축전기를 10 kΩ의 저항을 거쳐 충전할 때 시간 상수는 얼마인가?</p>
     </div>
     <p>에너지는 \(U = \dfrac{1}{2} \times 100 \times 10^{-6} \times 300^2 = 4.5\) J이다. 4.5 J은 1 kg짜리 물체를 약 46 cm 들어 올리는 일과 같아, 손바닥만 한 부품에 담긴 양으로는 꽤 크다.</p>

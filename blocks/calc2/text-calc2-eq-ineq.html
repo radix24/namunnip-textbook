@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc2-eq-ineq" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>풀 수 없는 방정식의 근은 몇 개일까?</h2><span class="kind">본문 · 방정식과 부등식</span></header>
+  <header class="card-head"><span class="no"></span><h2>방정식과 부등식</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">방정식 \(e^x = 3x\)는 근의 공식이 없어 정확한 근을 식으로 구할 수 없다. 그래도 근이 몇 개인지, 대략 어디쯤 있는지는 알고 싶다. 또 \(e^x \ge kx\)가 모든 실수 \(x\)에서 성립하도록 \(k\)를 최대한 크게 잡으면 얼마일까? 미분이 이런 물음에 어떻게 답할까?</p>
     <figure class="q-fig" data-q="calc2-roots">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>그래프의 개형(<a href="2-9.html">그래프의 개형</a>), 함수의 최댓값과 최솟값(미적분Ⅰ), 접선의 방정식(<a href="2-8.html">여러 가지 곡선의 접선</a>).</div>
 
-    <h3><span class="mono">1</span>방정식의 실근의 개수</h3>
+    <h3><span class="no">2.10.1</span>방정식의 실근의 개수</h3>
     <p>방정식 \(f(x) = g(x)\)의 실근은 두 그래프 \(y = f(x)\), \(y = g(x)\)의 교점의 \(x\)좌표이다. 따라서 근을 직접 구하지 않아도 두 그래프를 그려 교점을 세면 실근의 개수를 알 수 있다. 문자 \(k\)가 들어 있으면 \(k\)만 따로 떼어 \(h(x) = k\) 꼴로 바꾸고, \(y = h(x)\)와 수평선 \(y = k\)의 교점을 세는 것이 편하다.</p>
-    <div class="tb-env thm"><span class="lb">방법 <span class="nm">실근의 개수 조사</span></span>
+    <div class="tb-env thm"><span class="lb">방법 2.10.1 <span class="nm">실근의 개수 조사</span></span>
       <p>방정식을 \(h(x) = k\) 꼴로 정리한다. \(h'(x)\)로 \(y = h(x)\)의 증감과 극값, 끝의 극한을 조사하여 그래프를 그린다. 수평선 \(y = k\)를 위아래로 움직이며 교점의 개수를 센다.</p>
     </div>
     <p>그림 1에서 \(k\)를 바꾸어 보자. \(k &lt; 0\)이면 교점이 하나, \(0 \le k &lt; e\)이면 직선이 곡선 아래를 지나 교점이 없고, \(k = e\)이면 한 점에서 접하며, \(k &gt; e\)이면 두 점에서 만난다. 처음 질문의 \(e^x = 3x\)는 \(3 &gt; e\)이므로 실근이 2개이다.<sup class="fn"><a href="#fn-calc2-eq-ineq-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>부등식의 증명</h3>
+    <h3><span class="no">2.10.2</span>부등식의 증명</h3>
     <p>어떤 범위의 모든 \(x\)에서 \(f(x) \ge g(x)\)를 보이려면 \(h(x) = f(x) - g(x)\)로 놓고, 그 범위에서 \(h(x)\)의 최솟값이 0 이상임을 보인다. 최솟값은 \(h'(x)\)로 증감을 조사하여 구한다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 120" role="img" aria-label="e^x / x 의 그래프와 수평선 y = k 로 실근 개수를 세는 방법">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. \(e^x = kx\)를 \(\dfrac{e^x}{x} = k\)로 바꾸면, \(y = \dfrac{e^x}{x}\)는 \(x &gt; 0\)에서 \(x = 1\)일 때 극솟값 \(e\)를 갖는다. 수평선 \(y = k\)와의 교점이 실근이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.10.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.10.2</span>
       <p>모든 실수 \(x\)에 대하여 \(e^x \ge x + 1\)임을 증명하여라. 또 \(x &gt; 0\)일 때 \(e^x \ge kx\)가 항상 성립하도록 하는 \(k\)의 최댓값을 구하여라.</p>
     </div>
     <p>\(h(x) = e^x - x - 1\)이라 하면 \(h'(x) = e^x - 1\)이다. \(x &lt; 0\)에서 \(h' &lt; 0\), \(x &gt; 0\)에서 \(h' &gt; 0\)이므로 \(h(x)\)는 \(x = 0\)에서 최솟값 \(h(0) = 0\)을 갖는다. 따라서 모든 \(x\)에서 \(h(x) \ge 0\), 곧 \(e^x \ge x + 1\)이다. 등호는 \(x = 0\)일 때 성립하며, 직선 \(y = x + 1\)은 \(y = e^x\)의 \(x = 0\)에서의 접선이다.</p>

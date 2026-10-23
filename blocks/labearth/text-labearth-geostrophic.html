@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-labearth-geostrophic" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</h2><span class="kind">본문 · 밀도 구조와 해류 속도</span></header>
+  <header class="card-head"><span class="no"></span><h2>밀도 구조와 해류 속도</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">위도 30° 부근에서 구로시오를 가로질러 100 km 떨어진 두 관측점에서 1000 m 깊이까지 수온과 염분을 쟀다. 바다 쪽 관측점의 물은 연안 쪽보다 따뜻해, 1000 m까지 평균한 밀도가 1.0 kg/m³ 작았다. 해류 속에 측정기를 띄우지 않았는데도 해양학자들은 이 자료로 해류가 초속 1 m 넘게 흐른다고 계산했다. 바닷물의 밀도 차이가 어떻게 해류의 빠르기를 알려 줄까?</p>
     <figure class="q-fig">
@@ -23,14 +23,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>전향력(<a href="2-4.html">회전 원판과 전향력</a>), 지균풍(<a href="2-5.html">일기도로 지균풍과 경도풍 비교</a>), 해수의 밀도(<a href="2-7.html">ARGO 자료와 해수의 성질</a>).</div>
 
-    <h3><span class="mono">1</span>가벼운 물은 높이 쌓인다</h3>
+    <h3><span class="no">2.9.1</span>가벼운 물은 높이 쌓인다</h3>
     <p>깊은 곳 어딘가에서 물이 거의 움직이지 않는 깊이를 무운동면이라 하고, 이를 1000 m로 놓자. 그 깊이의 수압이 두 관측점에서 같으려면 위에 얹힌 물의 무게가 같아야 한다. 그래서 가벼운 물이 있는 바다 쪽에서는 물기둥이 더 높아야 하고, 해수면이 연안 쪽보다 솟는다. 해수면이 기울면 높은 쪽에서 낮은 쪽으로 수압 경도력이 생기고, 물이 움직이면 전향력이 진행 방향의 오른쪽으로 작용한다. 두 힘이 균형을 이룬 흐름이 지형류이며, 지균풍과 같은 원리로 기울기를 따라 흐르지 않고 기울기에 수직으로 흐른다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">밀도 차와 지형류</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.9.1 <span class="nm">밀도 차와 지형류</span></span>
       <p>무운동면까지의 깊이 \(H\)에서 두 관측점의 평균 밀도 차가 \(\Delta\rho\)이면 해수면 높이 차는 \(\Delta\eta \approx H\,\Delta\rho/\rho\)이다. 두 점 사이 거리가 \(\Delta x\)이면 해수면의 지형류 속력은 \[v = \frac{g}{f}\,\frac{\Delta\eta}{\Delta x}\]이고, 북반구에서는 해수면이 높은 쪽을 오른쪽에 두고 흐른다.</p>
     </div>
     <p>해수면은 100 km를 가는 동안 1 m 남짓 기울 뿐이어서, 배 위에서 그 기울기를 직접 느끼거나 잴 수 없다. 그러나 그 기울기는 바닷물 속 밀도의 차이가 만든 것이므로, 깊이별 수온과 염분을 재면 해수면의 기울기를 계산할 수 있다. 해수면에서 흐름이 가장 빠르고 무운동면으로 갈수록 느려지는데, 깊어질수록 남은 밀도 차가 줄기 때문이다.<sup class="fn"><a href="#fn-labearth-geostrophic-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>깊이에 따라 줄어드는 흐름</h3>
+    <h3><span class="no">2.9.2</span>깊이에 따라 줄어드는 흐름</h3>
     <p>관측점 사이의 물기둥을 몇 층으로 나누어 층마다 밀도 차를 더해 가면, 깊이마다 등압면이 얼마나 기울었는지 알 수 있다. 수온 약층 위의 따뜻한 물은 밀도 차가 커서 기울기가 크고, 약층 아래로 내려갈수록 두 관측점의 물이 비슷해져 기울기가 줄어든다. 그래서 구로시오는 해수면에서 초속 1~2 m로 빠르게 흐르고 수백 m 아래에서는 크게 느려진다. 오늘날에는 인공위성이 해수면 높이를 cm 단위로 재어, 같은 식으로 전 세계 해류를 날마다 계산한다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="깊이에 따른 지형류 속력">
@@ -45,8 +45,8 @@
       <figcaption>그림 2. 밀도 차가 큰 표층에서 해류가 가장 빠르고, 무운동면으로 갈수록 느려진다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.9.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.9.2</span>
       <p>처음 질문의 자료로 두 관측점의 해수면 높이 차와 해수면의 지형류 속력을 구하여라. \(\rho = 1025\) kg/m³이다. 해류는 어느 쪽을 오른쪽에 두고 흐르는가?</p>
     </div>
     <p>해수면 높이 차는 \(\Delta\eta \approx 1000 \times 1.0/1025 \approx 0.98\) m로, 바다 쪽이 약 1 m 높다. 위도 30°의 전향 인자는 \(f = 2\times7.29\times10^{-5}\times0.5 = 7.29\times10^{-5}\)/s이다.</p>

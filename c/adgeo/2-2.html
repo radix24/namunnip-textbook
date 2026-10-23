@@ -60,7 +60,7 @@
 
     <div>
       <article class="card reading" id="text-adgeo-locus" data-kind="본문">
-        <header class="card-head"><span class="no">2.2.1</span><h2>벽에서 미끄러지는 사다리의 가운데 점은 어떤 길을 그릴까?</h2><span class="kind">본문 · 점의 자취 탐구</span></header>
+        <header class="card-head"><span class="no">2.2.1</span><h2>점의 자취 탐구</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">길이 4 m인 사다리가 수직인 벽에 기대어 서 있다가, 아래 끝이 바닥을 따라 미끄러지며 넘어진다. 사다리의 위 끝은 벽을 따라, 아래 끝은 바닥을 따라 움직인다. 사다리 가운데에 묶인 페인트 통은 어떤 길을 그릴까? 직선일 것 같기도 하고 바깥으로 불룩한 곡선일 것 같기도 하다. 한편 두 점 \(A(0, 0)\), \(B(3, 0)\)까지의 거리의 비가 \(2 : 1\)인 점들은 어디에 모일까? 조건을 만족하는 점들의 모임을 식으로 구하는 방법을 알아보자.</p>
           <figure class="q-fig">
@@ -78,14 +78,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>평면곡선의 매개변수 방정식(<a href="2-1.html">평면곡선의 매개변수 방정식</a>), 원의 방정식, 두 점 사이의 거리.</div>
 
-          <h3><span class="mono">1</span>조건을 식으로 바꾸다</h3>
+          <h3><span class="no">2.2.1</span>조건을 식으로 바꾸다</h3>
           <p>주어진 조건을 만족하는 점 전체의 모임을 자취라 한다. 자취를 구하려면 움직이는 점을 \(P(x, y)\)로 놓고, 조건을 \(x\)와 \(y\)의 식으로 바꾼 뒤 정리해 어떤 도형의 방정식인지 알아본다. 조건이 다른 움직이는 양으로 주어지면 그 양을 매개변수로 삼아 \(x\)와 \(y\)를 각각 쓴 뒤 매개변수를 없앤다. 마지막에는 식을 만족하는 모든 점이 실제로 조건을 만족하는지, 곧 자취가 도형 전체인지 일부인지 확인한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">두 가지 자취</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.2.1 <span class="nm">두 가지 자취</span></span>
             <p>길이 \(L\)인 선분의 두 끝이 각각 \(x\)축과 \(y\)축 위를 움직일 때 선분의 중점은 원 \(x^2 + y^2 = (L/2)^2\) 위를 움직인다. 두 점 \(A\), \(B\)까지의 거리의 비가 \(m : n\)(\(m \ne n\))인 점의 자취는 원이며, 이를 아폴로니오스의 원이라 한다.</p>
           </div>
           <p>사다리의 아래 끝을 \((a, 0)\), 위 끝을 \((0, b)\)라 하면 \(a^2 + b^2 = L^2\)이다. 가운데 점은 \(\left(\tfrac a2, \tfrac b2\right)\)이므로 \(x = a/2\), \(y = b/2\)로 놓으면 \(x^2 + y^2 = (a^2 + b^2)/4 = (L/2)^2\)이다. 그래서 가운데 점은 원점에서 늘 \(L/2\)만큼 떨어져 있다. 직각삼각형의 빗변의 중점이 세 꼭짓점에서 같은 거리에 있다는 성질과 같은 이야기이다. 사다리가 벽에 서 있을 때부터 바닥에 누울 때까지 움직이므로 자취는 원 전체가 아니라 제1사분면의 사분원이다.<sup class="fn"><a href="#fn-adgeo-locus-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>거리의 비가 일정한 점</h3>
+          <h3><span class="no">2.2.2</span>거리의 비가 일정한 점</h3>
           <p>\(PA : PB = 2 : 1\)이면 \(PA = 2PB\)이고, 양변을 제곱해 \(x^2 + y^2 = 4[(x - 3)^2 + y^2]\)이다. 정리하면 \(3x^2 + 3y^2 - 24x + 36 = 0\), 곧 \((x - 4)^2 + y^2 = 4\)로 중심 \((4, 0)\), 반지름 2인 원이다. 이 원은 선분 \(AB\)를 \(2 : 1\)로 내분하는 점 \((2, 0)\)과 외분하는 점 \((6, 0)\)을 지름의 두 끝으로 한다. 비가 \(1 : 1\)이면 원이 아니라 \(AB\)의 수직이등분선이 된다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="아폴로니오스의 원 위의 점 확인">
@@ -100,8 +100,8 @@
             <figcaption>그림 2. 중심 \((4, 0)\), 반지름 2인 원 위의 점은 모두 \(A\)까지의 거리가 \(B\)까지의 거리의 두 배이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.2.2</span>
             <p>처음 질문의 사다리에서 페인트 통 대신 아래 끝에서 1 m 떨어진 곳(위 끝에서 3 m)에 매단 등불의 자취를 구하여라. 사다리와 바닥이 이루는 각을 \(\theta\)로 쓴다.</p>
           </div>
           <p>사다리와 바닥이 이루는 각이 \(\theta\)이면 아래 끝은 \((4\cos\theta, 0)\), 위 끝은 \((0, 4\sin\theta)\)이다. 등불은 아래 끝에서 위 끝 쪽으로 사다리 길이의 \(1/4\)만큼 간 점이므로 \(x = 4\cos\theta - \cos\theta = 3\cos\theta\), \(y = \sin\theta\)이다.</p>
@@ -114,7 +114,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>조건을 만족하는 점 전체의 모임인 자취는 움직이는 점을 좌표나 매개변수로 나타내 조건을 식으로 바꾸고 정리해 구하며, 식을 만족하는 점이 모두 조건에 맞는지도 확인한다. 길이 \(L\)인 선분이 두 축 위를 미끄러지면 중점은 반지름 \(L/2\)인 원을, 다른 점은 타원을 그리고, 두 점까지 거리의 비가 일정한 점은 아폴로니오스의 원을 이룬다. 처음 질문의 페인트 통은 모서리를 중심으로 하는 반지름 2 m의 사분원을 그린다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴에 붙은 반사판은 어떤 곡선을 그릴까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>평면곡선의 매개변수 방정식</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
 
       <article class="card" id="card-adgeo-ladder">
         <header class="card-head">
@@ -149,7 +149,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴에 붙은 반사판은 어떤 곡선을 그릴까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>평면곡선의 매개변수 방정식</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
 
       <article class="card" id="card-adgeo-apollonius">
         <header class="card-head">
@@ -182,7 +182,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴에 붙은 반사판은 어떤 곡선을 그릴까?</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-1.html#card-adgeo-cycloid"><small class="mono">고급 기하 2.1</small>굴러가는 바퀴 위의 점은 어떤 곡선을 그릴까?</a><a href="../../c/adgeo/2-1.html#card-adgeo-lissajous"><small class="mono">고급 기하 2.1</small>가로와 세로로 따로 흔들리는 점은 어떤 무늬를 그릴까?</a><a href="../../c/adgeo/2-1.html#text-adgeo-plane-param"><small class="mono">고급 기하 2.1</small>평면곡선의 매개변수 방정식</a><a href="../../c/geo/1-2.html#card-geo-ellipse-def"><small class="mono">기하 1.2</small>두 핀과 끈으로 그린 곡선은 무엇일까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adgeo&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
 

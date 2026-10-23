@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-emq-photoelectric" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>빨간빛은 아무리 세게 비춰도 왜 전자를 떼어 내지 못할까?</h2><span class="kind">본문 · 광전 효과와 광센서</span></header>
+  <header class="card-head"><span class="no"></span><h2>광전 효과와 광센서</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">금속에 빛을 비추면 전자가 튀어나오기도 한다. 빛이 파동이라면, 약한 빛이라도 오래 비추거나 센 빛을 비추면 에너지가 쌓여 결국 전자가 나와야 한다. 그런데 실제로는 나트륨에 빨간빛을 아무리 세게 비춰도 전자가 하나도 나오지 않고, 아주 약한 파란빛을 비추면 곧바로 전자가 나온다. 빛의 세기보다 색이 중요한 까닭은 무엇일까?</p>
     <figure class="q-fig" data-q="emq-photo">
@@ -18,15 +18,15 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>광전 효과와 광자(물리학), 에너지띠와 반도체(<a href="1-7.html">반도체 소자와 전자 회로</a>), 전자볼트 eV(<a href="1-1.html">전기장과 등전위면</a>).</div>
 
-    <h3><span class="mono">1</span>광자와 일함수</h3>
+    <h3><span class="no">2.4.1</span>광자와 일함수</h3>
     <p>아인슈타인은 빛이 진동수 \(f\)에 비례하는 에너지 \(E = hf\)를 가진 알갱이, 곧 광자의 흐름이라고 보았다. \(h \approx 6.63 \times 10^{-34}\) J·s는 플랑크 상수이다. 빛의 세기는 광자의 개수를 나타내고, 광자 하나의 에너지는 진동수, 곧 색이 정한다.</p>
     <p>금속 속 전자를 밖으로 떼어 내려면 최소한의 에너지가 필요하다. 이를 일함수 \(W\)라 하며 나트륨은 약 2.3 eV, 아연은 약 4.3 eV이다. 전자 하나는 광자 하나와만 부딪치므로 광자 에너지가 일함수보다 작으면 광자가 아무리 많아도 전자를 떼어 내지 못한다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">광전 효과의 식</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.4.1 <span class="nm">광전 효과의 식</span></span>
       <p>튀어나온 전자의 최대 운동 에너지는 \[K_{\max} = hf - W\] 이다. \(hf_0 = W\)인 진동수 \(f_0\)을 문턱 진동수라 하며, 그보다 낮은 진동수의 빛으로는 전자가 나오지 않는다.</p>
     </div>
     <p>그림 1에서 진동수를 바꾸어 보자. 빨간빛(약 \(4.5 \times 10^{14}\) Hz, 1.9 eV)은 나트륨의 일함수보다 에너지가 작아 전자가 나오지 않는다. 파란빛(약 \(7 \times 10^{14}\) Hz, 2.9 eV)은 나트륨에서 전자를 떼어 내지만, 아연에는 자외선이 필요하다. 그리고 빛을 세게 하면 튀어나오는 전자의 수만 늘 뿐, 전자 하나의 최대 에너지는 그대로이다.</p>
 
-    <h3><span class="mono">2</span>광센서</h3>
+    <h3><span class="no">2.4.2</span>광센서</h3>
     <p>반도체에 빛을 비추면 전자가 밖으로 튀어나오지는 않지만, 띠 간격보다 큰 에너지의 광자가 전자를 원자에 묶인 상태에서 자유롭게 움직이는 상태로 올려 전류가 흐르게 한다. 디지털카메라의 이미지 센서는 픽셀마다 이렇게 생긴 전자의 수를 세어 빛의 밝기를 숫자로 바꾼다. 태양 전지는 같은 원리로 햇빛에서 전기를 얻는다.<sup class="fn"><a href="#fn-emq-photoelectric-1">1</a></sup></p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 120" role="img" aria-label="빛의 세기와 진동수가 광전자에 미치는 영향">
@@ -41,8 +41,8 @@
       <figcaption>그림 2. 빛의 세기는 광자 수를, 진동수는 광자 하나의 에너지를 정한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.4.2</span>
       <p>파장 400 nm인 보라빛을 나트륨(일함수 2.3 eV)에 비추었다. 광자 하나의 에너지와 튀어나온 전자의 최대 운동 에너지를 구하여라. 나트륨에서 전자를 떼어 낼 수 있는 가장 긴 파장은 얼마인가? (\(hc \approx 1240\) eV·nm)</p>
     </div>
     <p>광자 에너지는 \(E = \dfrac{hc}{\lambda} = \dfrac{1240}{400} = 3.1\) eV이다. 최대 운동 에너지는 \(3.1 - 2.3 = 0.8\) eV이며, 이 전자를 멈추려면 0.8 V의 역전압이 필요하다.</p>

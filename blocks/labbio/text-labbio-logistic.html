@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-labbio-logistic" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>날마다 두 배 넘게 늘던 짚신벌레는 왜 400마리에서 멈출까?</h2><span class="kind">본문 · 개체군 생장 곡선</span></header>
+  <header class="card-head"><span class="no"></span><h2>개체군 생장 곡선</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">볏짚 삶은 물 10 mL에 짚신벌레를 1 mL당 10마리가 되게 넣고, 날마다 한 방울씩 덜어 세었다. 처음 사흘 동안은 하루에 두세 배씩 늘어 1 mL당 26, 64, 136마리가 되었다. 이대로라면 열흘 뒤에는 20만 마리가 넘어야 한다. 그런데 다섯째 날 317마리, 여섯째 날 365마리로 늘어나는 빠르기가 줄더니, 여드레 뒤부터는 400마리 근처에서 더 늘지 않았다. 무엇이 짚신벌레의 증가를 멈추게 했을까?</p>
     <figure class="q-fig">
@@ -23,14 +23,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>개체군의 밀도, 지수 함수, 효모와 미생물의 생장, 플랑크톤 세기(<a href="1-1.html">플랑크톤 관찰</a>).</div>
 
-    <h3><span class="mono">1</span>J자에서 S자로</h3>
+    <h3><span class="no">4.4.1</span>J자에서 S자로</h3>
     <p>먹이와 공간이 충분하면 개체군은 일정한 시간마다 같은 비율로 불어나는 지수적 증가를 한다. 짚신벌레는 분열로 늘어나므로, 처음에는 개체가 많을수록 더 빨리 늘어 J자 모양의 곡선을 그린다. 그러나 개체가 많아지면 먹이인 세균이 부족해지고, 노폐물이 쌓이며, 서로 부딪히는 일이 늘어난다. 이렇게 개체군의 증가를 억누르는 요인을 환경 저항이라 한다. 환경 저항은 개체가 많을수록 커져서, 결국 태어나는 수와 죽는 수가 같아지는 곳에서 개체 수가 멈춘다. 그 개체 수를 환경 수용력이라 한다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">로지스틱 생장</span></span>
+    <div class="tb-env thm"><span class="lb">정리 4.4.1 <span class="nm">로지스틱 생장</span></span>
       <p>개체 수 \(N\)의 증가 빠르기가 \[\frac{\Delta N}{\Delta t} = rN\left(1 - \frac{N}{K}\right)\]를 따르면, 처음에는 \(rN\)으로 지수적으로 늘다가 \(N\)이 환경 수용력 \(K\)에 다가가며 증가가 멈춘다. 증가 빠르기가 가장 큰 때는 \(N = K/2\)일 때이다.</p>
     </div>
     <p>괄호 안의 \(1 - N/K\)는 아직 채워지지 않은 환경의 몫이다. 개체가 적으면 이 값이 1에 가까워 지수적으로 늘고, \(K\)에 다가가면 0에 가까워져 증가가 멈춘다. 그림 1에서 넷째 날과 다섯째 날 사이, 개체 수가 200마리 근처일 때 하루에 가장 많이 늘었다. 이 지점이 S자 곡선이 가장 가파른 곳이다.<sup class="fn"><a href="#fn-labbio-logistic-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>개체를 세는 방법</h3>
+    <h3><span class="no">4.4.2</span>개체를 세는 방법</h3>
     <p>짚신벌레는 너무 많아 모두 셀 수 없으므로, 배양액을 잘 흔들어 일정한 부피를 덜어 현미경으로 센다. 혈구 계산판처럼 부피를 아는 칸이 그려진 슬라이드를 쓰면 정확하다. 짚신벌레가 빨리 헤엄쳐 세기 어려우면 묽은 고정액을 한 방울 떨어뜨려 움직임을 멈춘다. 개체가 많아지면 배양액을 정해진 비율로 묽힌 뒤 세고 그 배수를 곱한다. 날마다 같은 시각에 세고, 세 번 덜어 평균을 내어 흔들림을 줄인다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="날짜별 개체 수와 지수적 증가의 비교">
@@ -45,8 +45,8 @@
       <figcaption>그림 2. 처음 이틀은 지수적 증가와 비슷하지만, 그 뒤로는 환경 저항 때문에 크게 벌어진다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">4.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 4.4.2</span>
       <p>짚신벌레의 \(r = 1.0\) /일, \(K = 400\) /mL일 때, 개체 수가 100, 200, 350 /mL일 때의 하루 증가 빠르기를 정리의 식으로 구하여라. 배양액에 먹이가 되는 세균을 두 배로 넣어 \(K\)가 800이 되면 곡선은 어떻게 바뀌는가?</p>
     </div>
     <p>\(N = 100\)이면 \(1.0 \times 100 \times (1 - 100/400) = 75\), \(N = 200\)이면 \(200 \times 0.5 = 100\), \(N = 350\)이면 \(350 \times 0.125 \approx 44\) 마리/(mL·일)이다. 증가 빠르기는 \(N = K/2 = 200\)에서 가장 크고, 그보다 적어도 많아도 작아진다.</p>

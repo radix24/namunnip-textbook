@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-mateng-rate-control" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>냉장고와 촉매 장치는 반응 속도를 어떻게 바꿀까?</h2><span class="kind">본문 · 농도·온도·촉매와 반응 속도</span></header>
+  <header class="card-head"><span class="no"></span><h2>농도·온도·촉매와 반응 속도</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">음식은 냉장고에 넣으면 며칠 더 버티고, 장작은 잘게 쪼개야 불이 잘 붙는다. 자동차 배기관의 촉매 장치는 짧은 순간에 유독한 일산화 탄소를 이산화 탄소로 바꾼다. 세 방법은 모두 반응 속도를 조절하지만, 바꾸는 것은 서로 다르다. 농도, 온도, 촉매는 각각 무엇을 바꾸어 반응을 빠르거나 느리게 할까?</p>
     <figure class="q-fig" data-q="mat-arr">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>유효 충돌과 활성화 에너지(<a href="4-3.html">유효 충돌과 활성화 에너지</a>), 반응 속도식(<a href="4-1.html">반응 속도식</a>), 지수와 로그(수학).</div>
 
-    <h3><span class="mono">1</span>농도와 표면적</h3>
+    <h3><span class="no">4.4.1</span>농도와 표면적</h3>
     <p>반응물의 농도가 크면 단위 부피 안의 분자 수가 많아 충돌 횟수가 늘어난다. 활성화 에너지를 넘는 비율은 그대로이지만 전체 충돌이 늘어 유효 충돌도 늘어난다. 고체가 반응할 때는 표면에서만 충돌이 일어나므로, 잘게 쪼개 표면적을 넓히면 반응이 빨라진다. 그래서 장작보다 톱밥이 잘 타고, 밀가루 먼지는 폭발하기도 한다.</p>
 
-    <h3><span class="mono">2</span>온도와 촉매</h3>
+    <h3><span class="no">4.4.2</span>온도와 촉매</h3>
     <p>온도를 높이면 분자의 평균 운동 에너지가 커져, 활성화 에너지를 넘는 분자의 비율이 지수적으로 늘어난다. 충돌 횟수도 조금 늘지만, 속도가 빨라지는 주된 까닭은 이 비율의 증가이다.</p>
     <p>촉매는 반응에 참여하되 반응이 끝나면 처음 상태로 돌아오는 물질이다. 촉매는 활성화 에너지가 더 낮은 새 반응 경로를 열어 준다. 그래서 같은 온도에서도 고개를 넘는 분자가 훨씬 많아진다. 그런데 촉매는 반응물과 생성물의 에너지를 바꾸지 않으므로 반응열 \(\Delta H\)는 그대로이다.<sup class="fn"><a href="#fn-mateng-rate-control-1">1</a></sup></p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">속도 상수와 온도 (아레니우스 식)</span></span>
+    <div class="tb-env thm"><span class="lb">정리 4.4.1 <span class="nm">속도 상수와 온도 (아레니우스 식)</span></span>
       <p>\[k = Ae^{-E_a/RT}\] 온도가 오르거나 활성화 에너지가 낮아지면 속도 상수가 지수적으로 커진다. 농도는 \(k\)를 바꾸지 않고 속도식의 농도 항을 바꾼다.</p>
     </div>
     <figure class="q-fig">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 세 요인은 모두 유효 충돌의 수를 늘리지만, 그 방법이 서로 다르다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">4.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 4.4.2</span>
       <p>음식이 상하는 반응의 활성화 에너지가 50 kJ/mol이라 하자. 25 °C에 둔 음식과 4 °C 냉장고에 둔 음식의 반응 속도를 비교하여라. 또 25 °C에서 촉매가 활성화 에너지를 30 kJ/mol로 낮추면 속도는 몇 배가 되는가? (\(R = 8.31\) J/(mol·K))</p>
     </div>
     <p>절대 온도는 298 K와 277 K이다. 속도의 비는 \(\exp\left[\dfrac{50\,000}{8.31}\left(\dfrac{1}{277} - \dfrac{1}{298}\right)\right] = \exp(6017 \times 2.54 \times 10^{-4}) = e^{1.53} \approx 4.6\)이다. 따라서 냉장고 속 음식은 약 4.6배 느리게 상한다. 실온에서 하루면 상할 음식이 냉장고에서는 4~5일 버티는 셈이다.</p>

@@ -59,7 +59,7 @@
 
     <div>
       <article class="card reading" id="text-pmath-binomial-theorem" data-kind="본문">
-        <header class="card-head"><span class="no">3.2.1</span><h2>못이 박힌 판에 떨어뜨린 공은 왜 가운데에 가장 많이 쌓일까?</h2><span class="kind">본문 · 이항정리</span></header>
+        <header class="card-head"><span class="no">3.2.1</span><h2>이항정리</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">과학관의 갤턴 보드에는 못이 10줄로 박혀 있고, 위에서 떨어뜨린 공은 못에 부딪힐 때마다 왼쪽이나 오른쪽으로 반반의 확률로 튄다. 공 1024개를 떨어뜨리니 아래 11개의 칸 가운데 한가운데 칸에 250개 가까이 모였고, 양 끝 칸에는 한두 개씩만 들어갔다. 한가운데 칸에 들어가는 길은 몇 가지이고, 끝 칸에 들어가는 길은 몇 가지일까? 이 수는 \((a + b)^{10}\)을 전개했을 때의 계수와 무슨 관계가 있을까?</p>
           <figure class="q-fig">
@@ -78,14 +78,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>조합 \({}_n\mathrm{C}_r\)와 그 성질, 곱셈 공식 \((a + b)^3\), 이항 전개와 파스칼의 삼각형.</div>
 
-          <h3><span class="mono">1</span>전개는 길 고르기이다</h3>
+          <h3><span class="no">3.2.1</span>전개는 길 고르기이다</h3>
           <p>\((a + b)^n\)은 \((a + b)\)를 \(n\)번 곱한 것이다. 전개하면 \(n\)개의 괄호마다 \(a\)와 \(b\) 가운데 하나를 골라 곱한 항들이 모두 나오고, 그 가운데 \(b\)를 \(r\)번 고른 항은 \(a^{n-r}b^r\)이다. \(n\)개의 괄호 가운데 \(b\)를 고를 \(r\)개의 괄호를 정하는 방법은 \({}_n\mathrm{C}_r\)가지이므로, \(a^{n-r}b^r\)의 계수는 \({}_n\mathrm{C}_r\)이다. 갤턴 보드에서도 공은 10번 부딪힐 때마다 왼쪽과 오른쪽 가운데 하나를 고르므로, 오른쪽으로 \(r\)번 튄 공이 들어가는 칸까지의 길은 \({}_{10}\mathrm{C}_r\)가지이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">이항정리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.2.1 <span class="nm">이항정리</span></span>
             <p>자연수 \(n\)에 대하여 \[(a + b)^n = \sum_{r=0}^{n}{}_n\mathrm{C}_r\,a^{n-r}b^r\]이다. 계수 \({}_n\mathrm{C}_r\)를 이항계수라 하며, \({}_n\mathrm{C}_r = {}_{n-1}\mathrm{C}_{r-1} + {}_{n-1}\mathrm{C}_r\)이 성립한다. \(a = b = 1\)을 넣으면 \(\sum_{r=0}^{n}{}_n\mathrm{C}_r = 2^n\)이다.</p>
           </div>
           <p>이항계수의 관계 \({}_n\mathrm{C}_r = {}_{n-1}\mathrm{C}_{r-1} + {}_{n-1}\mathrm{C}_r\)은 파스칼의 삼각형에서 각 수가 바로 위 두 수의 합인 것과 같다. 갤턴 보드로 보면 어떤 못에 도착하는 길은 왼쪽 위 못에서 오는 길과 오른쪽 위 못에서 오는 길을 더한 것이다. 또 모든 이항계수의 합 \(2^n\)은 공이 갈 수 있는 길 전체의 수이다. 그래서 공 하나가 가운데 칸에 들어갈 확률은 가운데 칸까지의 길 수를 \(2^{10}\)으로 나눈 값이다.<sup class="fn"><a href="#fn-pmath-binomial-theorem-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>작은 수의 거듭제곱 어림하기</h3>
+          <h3><span class="no">3.2.2</span>작은 수의 거듭제곱 어림하기</h3>
           <p>이항정리는 \(1\)에 가까운 수의 거듭제곱을 손으로 어림하는 데도 쓴다. \((1 + x)^n = 1 + nx + {}_n\mathrm{C}_2x^2 + {}_n\mathrm{C}_3x^3 + \cdots\)에서 \(x\)가 작으면 뒤로 갈수록 항이 빠르게 작아진다. 그래서 앞의 몇 항만 더해도 소수 몇째 자리까지 정확한 값을 얻는다. 예금 이자를 계산하거나 물리에서 작은 변화를 어림할 때 \((1 + x)^n \approx 1 + nx\)를 자주 쓰는 것도 이 때문이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="1.01의 10제곱을 이항정리로 어림하기">
@@ -100,8 +100,8 @@
             <figcaption>그림 2. 넷째 항까지 더하면 \(1.01^{10} = 1.104622\cdots\)의 소수 넷째 자리까지 맞는다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.2.2</span>
             <p>처음 질문의 10줄 갤턴 보드에서 공이 한가운데 칸에 들어갈 확률과 양 끝 칸 가운데 하나에 들어갈 확률을 구하여라. 공 1024개를 떨어뜨리면 한가운데 칸에 몇 개쯤 모이겠는가?</p>
           </div>
           <p>한가운데 칸은 오른쪽으로 5번, 왼쪽으로 5번 튄 공이 들어가므로 길의 수는 \({}_{10}\mathrm{C}_5 = 252\)이다. 전체 길의 수는 \(2^{10} = 1024\)이므로 확률은 \(252/1024 \approx 0.246\)이다. 양 끝 칸은 10번 모두 같은 쪽으로 튀어야 해서 각각 길이 1가지뿐이므로, 둘 가운데 하나에 들어갈 확률은 \(2/1024 \approx 0.002\)이다.</p>
@@ -114,7 +114,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>\((a + b)^n\)을 전개하면 \(n\)개의 괄호에서 \(b\)를 고를 \(r\)개를 정하는 방법의 수 \({}_n\mathrm{C}_r\)가 \(a^{n-r}b^r\)의 계수가 되며, 이것이 이항정리이다. 이항계수는 파스칼의 삼각형에서 위 두 수의 합으로 이어지고, 모두 더하면 \(2^n\)이며, 1에 가까운 수의 거듭제곱을 어림하는 데도 쓴다. 처음 질문의 갤턴 보드에서 한가운데 칸까지의 길은 \({}_{10}\mathrm{C}_5 = 252\)가지로, 공 1024개 가운데 약 252개가 그 칸에 모인다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ을 전개한 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>이항정리</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
 
       <article class="card" id="card-pmath-galton">
         <header class="card-head">
@@ -156,7 +156,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ을 전개한 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>이항정리</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
 
       <article class="card" id="card-pmath-binom-approx">
         <header class="card-head">
@@ -205,7 +205,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ을 전개한 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/1-3.html#card-stat-binom-expand"><small class="mono">확률과 통계 1.3</small>(a + b)ⁿ의 계수는 왜 조합의 수일까?</a><a href="../../c/stat/1-3.html#text-stat-binomial-thm"><small class="mono">확률과 통계 1.3</small>이항정리</a><a href="../../c/stat/1-3.html#card-stat-pascal"><small class="mono">확률과 통계 1.3</small>이항계수를 삼각형으로 쌓으면 어떤 규칙이 보일까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=pmath&amp;sec=3-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">9문항</span></a>
 

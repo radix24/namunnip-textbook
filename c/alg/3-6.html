@@ -64,7 +64,7 @@
 
     <div>
       <article class="card reading" id="text-alg-recursion" data-kind="본문">
-        <header class="card-head"><span class="no">3.6.1</span><h2>바로 앞의 항만 알면 다음 항을 정할 수 있을까?</h2><span class="kind">본문 · 수열의 귀납적 정의</span></header>
+        <header class="card-head"><span class="no">3.6.1</span><h2>수열의 귀납적 정의</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">가로 2, 세로 \(n\)인 판을 \(1 \times 2\) 크기의 타일로 빈틈없이 덮는 방법의 수를 \(a_n\)이라 하자. \(n = 10\)일 때의 방법은 그림을 다 그려 세기에는 너무 많다. 그런데 \(a_9\)와 \(a_8\)을 알면 \(a_{10}\)을 바로 구할 수 있다고 한다. 어떻게 그럴까?</p>
           <figure class="q-fig" data-q="alg-tiling">
@@ -75,13 +75,13 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>수열과 일반항(<a href="3-1.html">수열의 뜻</a>), 등차수열과 등비수열(<a href="3-2.html">등차수열</a>, <a href="3-3.html">등비수열</a>), 합의 법칙(공통수학1).</div>
 
-          <h3><span class="mono">1</span>첫째항과 규칙으로 정하기</h3>
+          <h3><span class="no">3.6.1</span>첫째항과 규칙으로 정하기</h3>
           <p>수열은 일반항으로 정할 수도 있지만, 첫째항과 이웃한 항 사이의 관계로 정할 수도 있다. 가령 '\(a_1 = 3\)이고, \(a_{n+1} = a_n + 2\)'라고 하면 \(a_2 = 5\), \(a_3 = 7\), …로 모든 항이 차례로 정해진다. 이렇게 처음 몇 항과 이웃한 항 사이의 관계식으로 수열을 정하는 것을 수열의 <em>귀납적 정의</em>라 하고, 관계식을 점화식이라 한다.</p>
-          <div class="tb-env"><span class="lb">정리 <span class="nm">대표적인 점화식</span></span>
+          <div class="tb-env"><span class="lb">정리 3.6.1 <span class="nm">대표적인 점화식</span></span>
             <p>\(a_{n+1} = a_n + d\)이면 공차가 \(d\)인 등차수열이고, \(a_{n+1} = ra_n\)이면 공비가 \(r\)인 등비수열이다. \(2a_{n+1} = a_n + a_{n+2}\)이면 등차수열, \(a_{n+1}^2 = a_na_{n+2}\)이면 등비수열이다.</p>
           </div>
 
-          <h3><span class="mono">2</span>경우를 나누어 점화식 세우기</h3>
+          <h3><span class="no">3.6.2</span>경우를 나누어 점화식 세우기</h3>
           <p>점화식은 일반항을 찾기 어려운 문제에서 특히 쓸모 있다. 처음 질문의 판에서 맨 오른쪽 끝을 어떻게 덮었는지로 경우를 나누어 보자. 세로 타일 하나로 덮었다면 나머지 \(2 \times (n - 1)\) 판을 덮는 방법은 \(a_{n-1}\)가지이다. 가로 타일 두 개를 위아래로 겹쳐 덮었다면 나머지는 \(2 \times (n - 2)\) 판이고 \(a_{n-2}\)가지이다.</p>
           <p>두 경우는 겹치지 않고 모든 경우를 빠짐없이 나누므로, 합의 법칙에 따라 \(a_n = a_{n-1} + a_{n-2}\)이다. 그런데 이 식만으로는 출발할 수 없다. \(a_1 = 1\), \(a_2 = 2\)를 직접 세어 주어야 \(a_3 = 3\), \(a_4 = 5\), \(a_5 = 8\), …이 차례로 정해진다. 그림 1의 슬라이더로 \(n\)을 바꾸어 보면 두 경우의 수가 앞의 두 값이다.<sup class="fn"><a href="#fn-alg-recursion-1">1</a></sup></p>
           <figure class="q-fig">
@@ -100,8 +100,8 @@
             <figcaption>그림 2. 귀납적 정의에서는 첫째항과 규칙이 사슬처럼 다음 항을 차례로 정한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.6.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.6.2</span>
             <p>처음 질문의 \(a_{10}\)을 구하여라. 또 \(a_1 = 1\), \(a_{n+1} = 2a_n + 1\)로 정해진 수열의 제5항을 구하고, \(b_n = a_n + 1\)로 두어 일반항을 구하여라.</p>
           </div>
           <p>\(a_1 = 1\), \(a_2 = 2\)에서 점화식으로 차례로 더하면 3, 5, 8, 13, 21, 34, 55, 89이므로 \(a_{10} = 89\)이다. 10칸짜리 판을 덮는 방법이 89가지라는 것을 그림을 하나도 그리지 않고 얻었다.</p>
@@ -114,7 +114,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>귀납적 정의는 처음 몇 항과 이웃한 항 사이의 점화식으로 수열을 정하며, 일반항을 바로 찾기 어려운 경우의 수 문제에서 경우를 나누어 점화식을 세우면 쉽게 풀린다. 그래서 처음 질문의 판은 맨 끝을 덮는 두 가지 방법으로 나누어 \(a_n = a_{n-1} + a_{n-2}\)를 얻고, \(a_{10} = 89\)이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>무한히 많은 자연수를 한 번에 확인하는 방법이 있을까?</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>수학적 귀납법</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
 
       <article class="card" id="card-alg-recur-rule">
         <header class="card-head">
@@ -171,7 +171,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>무한히 많은 자연수를 한 번에 확인하는 방법이 있을까?</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>수학적 귀납법</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
 
       <article class="card" id="card-alg-recur-tiling">
         <header class="card-head">
@@ -211,7 +211,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>무한히 많은 자연수를 한 번에 확인하는 방법이 있을까?</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-7.html#card-alg-induct-domino"><small class="mono">대수 3.7</small>몇 개를 확인하면 모든 자연수에서 참일까?</a><a href="../../c/alg/3-7.html#card-alg-induct-proof"><small class="mono">대수 3.7</small>P(k)에서 P(k + 1)로 어떻게 건너갈까?</a><a href="../../c/alg/3-7.html#text-alg-induction"><small class="mono">대수 3.7</small>수학적 귀납법</a><a href="../../c/adcalc/3-1.html#card-adcalc-monotone"><small class="mono">고급 미적분 3.1</small>계속 커지는데 어떤 수도 넘지 못하는 수열은 어디로 갈까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=alg&amp;sec=3-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=alg-3-6"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">261문항</span></a>

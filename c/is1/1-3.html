@@ -66,7 +66,7 @@
 
     <div>
       <article class="card reading" id="text-is1-measurement" data-kind="본문">
-        <header class="card-head"><span class="no">1.3.1</span><h2>같은 것을 두 번 재면 왜 값이 다를까?</h2><span class="kind">본문 · 측정과 어림</span></header>
+        <header class="card-head"><span class="no">1.3.1</span><h2>측정과 어림</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">같은 연필의 길이를 다섯 번 재었더니 14.2 cm, 14.3 cm, 14.1 cm, 14.3 cm, 14.2 cm가 나왔다. 연필의 '진짜' 길이는 무엇이고, 이 측정을 얼마나 믿을 수 있을까? 계산기가 보여 주는 14.22라는 평균값을 그대로 적어도 될까?</p>
           <figure class="q-fig" data-q="is1-error">
@@ -77,14 +77,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>평균 구하기, 반올림, 단위(<a href="1-2.html">기본량과 단위</a>).</div>
 
-          <h3><span class="mono">1</span>오차는 왜 생길까</h3>
+          <h3><span class="no">1.3.1</span>오차는 왜 생길까</h3>
           <p>측정값과 참값의 차이를 <em>오차</em>라 한다. 연필을 잴 때 눈금을 비스듬히 읽거나, 자를 대는 위치가 조금씩 달라지면 값이 위아래로 흩어진다. 이렇게 매번 크기와 방향이 달라지는 오차를 우연 오차라 한다. 우연 오차는 여러 번 재어 평균을 내면 서로 상쇄되어 줄어든다.</p>
           <p>그런데 자의 끝이 닳아 0 눈금이 1 mm 안쪽에 있다면 어떨까? 이때는 몇 번을 재든 값이 늘 1 mm 크게 나온다. 이렇게 한쪽으로 치우치는 오차를 계통 오차라 한다. 계통 오차는 평균을 내도 사라지지 않으므로, 기구를 고치거나 다른 방법으로 비교해서 찾아야 한다.</p>
           <p>그림 1의 슬라이더로 측정 횟수를 늘려 보자. 점들의 평균이 점점 한 값에 모인다. 그런데 계통 오차를 넣으면 평균이 모이는 자리 자체가 참값에서 옮겨 간다. 즉 많이 잴수록 정밀해지지만, 그것만으로 정확해지지는 않는다.<sup class="fn"><a href="#fn-is1-measurement-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>믿을 수 있는 자릿수</h3>
+          <h3><span class="no">1.3.2</span>믿을 수 있는 자릿수</h3>
           <p>눈금이 1 mm인 자로 재면 mm 자리까지는 눈금으로 읽고, 그 아래 한 자리는 눈대중으로 어림한다. 그래서 14.2 cm라는 값의 마지막 자리 2는 조금 불확실하지만 의미가 있다. 측정값에서 이렇게 의미 있는 숫자를 <em>유효 숫자</em>라 하고, 14.2 cm는 유효 숫자가 세 개이다.</p>
-          <div class="tb-env"><span class="lb">정리 <span class="nm">유효 숫자의 규칙</span></span>
+          <div class="tb-env"><span class="lb">정리 1.3.1 <span class="nm">유효 숫자의 규칙</span></span>
             <p>0이 아닌 숫자는 모두 유효 숫자이다. 0이 아닌 숫자 사이의 0도 유효 숫자이다. 소수에서 처음 나오는 0이 아닌 숫자 앞의 0은 자리를 나타낼 뿐 유효 숫자가 아니다(0.0052는 두 개). 곱셈과 나눗셈의 결과는 유효 숫자가 가장 적은 값에 맞추고, 덧셈과 뺄셈의 결과는 소수 자리가 가장 적은 값에 맞춘다.</p>
           </div>
           <p>계산기가 보여 주는 숫자를 모두 적으면 측정이 실제보다 정밀한 것처럼 보인다. 가령 가로 4.2 cm, 세로 3.15 cm인 카드의 넓이를 계산기로 구하면 13.23이 나오지만, 가로가 유효 숫자 두 개뿐이므로 넓이도 두 자리로 맞춘 13 \(\text{cm}^2\)이 정직한 값이다.</p>
@@ -98,11 +98,11 @@
             <figcaption>그림 2. 값이 서로 가까이 모이는 것(정밀도)과 참값에 가까운 것(정확도)은 다른 성질이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>어림으로 크기 가늠하기</h3>
+          <h3><span class="no">1.3.3</span>어림으로 크기 가늠하기</h3>
           <p>정확한 측정이 어려울 때는 알고 있는 값으로 대략의 크기를 어림한다. 한 사람이 하루에 쓰는 물, 학교 운동장의 모래알 수처럼 바로 잴 수 없는 양도 단계별로 어림하면 몇 배 범위 안에서 맞출 수 있다. 이런 방법을 페르미 추정이라 한다.</p>
 
-          <h3><span class="mono">4</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.3.4</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.3.2</span>
             <p>처음 질문의 다섯 측정값으로 연필 길이를 나타내어라. 또 이 연필 15자루를 일렬로 늘어놓은 길이를 유효 숫자에 맞게 구하여라.</p>
           </div>
           <p>다섯 값의 평균은 \(\dfrac{14.2 + 14.3 + 14.1 + 14.3 + 14.2}{5} = \dfrac{71.1}{5} = 14.22\)이다. 그런데 하나하나의 측정이 0.1 cm 자리까지만 믿을 수 있으므로 평균도 그 자리에 맞추어 14.2 cm로 적는다. 측정값이 14.1에서 14.3 사이에 흩어졌으니, 연필 길이는 약 \(14.2 \pm 0.1\) cm라고 쓰는 것이 측정을 정직하게 보여 준다.</p>
@@ -115,7 +115,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>측정에는 매번 흩어지는 우연 오차와 한쪽으로 치우치는 계통 오차가 있고, 평균을 내면 우연 오차만 줄어든다. 측정값은 믿을 수 있는 자리, 곧 유효 숫자까지만 적는다. 그래서 처음 질문의 연필은 평균 14.22를 그대로 쓰지 않고 \(14.2 \pm 0.1\) cm로 나타내는 것이 측정의 신뢰도를 정직하게 전한다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>저울은 0.001 g까지 재는데 밀도는 왜 두 자리밖에 믿을 수 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 언제나 옳을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>데이터 분석과 표현</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>유효숫자</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>빅데이터</a></div></nav>
 
       <article class="card" id="card-is1-error">
         <header class="card-head">
@@ -162,7 +162,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>저울은 0.001 g까지 재는데 밀도는 왜 두 자리밖에 믿을 수 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 언제나 옳을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>데이터 분석과 표현</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>유효숫자</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>빅데이터</a></div></nav>
 
       <article class="card" id="card-is1-sigfig">
         <header class="card-head">
@@ -205,7 +205,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>저울은 0.001 g까지 재는데 밀도는 왜 두 자리밖에 믿을 수 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 언제나 옳을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>데이터 분석과 표현</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>유효숫자</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>빅데이터</a></div></nav>
 
       <article class="card reading" id="text-is1-standards">
         <header class="card-head">
@@ -230,7 +230,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-2.html#card-chem-mole"><small class="mono">화학 1.2</small>원자는 왜 ‘몰’이라는 묶음으로 셀까?</a><a href="../../c/chem/1-2.html#card-chem-cup"><small class="mono">화학 1.2</small>물 한 컵을 계속 반으로 나누면, 몇 번 만에 분자 하나가 남을까?</a><a href="../../c/chem/1-2.html#card-chem-molvol"><small class="mono">화학 1.2</small>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</a><a href="../../c/chem/1-2.html#card-chem-molar-mass"><small class="mono">화학 1.2</small>물 1몰과 설탕 1몰은 왜 무게가 다를까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-2.html#card-chem-mole"><small class="mono">화학 1.2</small>원자는 왜 ‘몰’이라는 묶음으로 셀까?</a><a href="../../c/chem/1-2.html#card-chem-cup"><small class="mono">화학 1.2</small>물 한 컵을 계속 반으로 나누면, 몇 번 만에 분자 하나가 남을까?</a><a href="../../c/chem/1-2.html#card-chem-molvol"><small class="mono">화학 1.2</small>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</a><a href="../../c/chem/1-2.html#card-chem-molar-mass"><small class="mono">화학 1.2</small>물 1몰과 설탕 1몰은 왜 무게가 다를까?</a></div></nav>
 
       <article class="card" id="card-is1-four-measure">
         <header class="card-head">
@@ -266,7 +266,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>저울은 0.001 g까지 재는데 밀도는 왜 두 자리밖에 믿을 수 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 언제나 옳을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie1/2-3.html#text-sie1-graph-axis"><small class="mono">과학탐구실험1 2.3</small>데이터 분석과 표현</a><a href="../../c/labchem/1-1.html#text-labchem-digits"><small class="mono">화학 실험 1.1</small>유효숫자</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-2.html#card-is2-confound"><small class="mono">통합과학2 3.2</small>자료가 많으면 결론도 항상 옳을까?</a><a href="../../c/is2/3-2.html#card-is2-dredge"><small class="mono">통합과학2 3.2</small>자료를 많이 뒤지면 우연도 규칙처럼 보일까?</a><a href="../../c/is2/3-2.html#card-is2-reident"><small class="mono">통합과학2 3.2</small>이름을 지운 자료로도 나를 찾아낼 수 있을까?</a><a href="../../c/is2/3-2.html#text-is2-big-data"><small class="mono">통합과학2 3.2</small>빅데이터</a></div></nav>
 
       <article class="card" id="card-is1-standard">
         <header class="card-head">
@@ -312,7 +312,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-2.html#card-chem-mole"><small class="mono">화학 1.2</small>원자는 왜 ‘몰’이라는 묶음으로 셀까?</a><a href="../../c/chem/1-2.html#card-chem-cup"><small class="mono">화학 1.2</small>물 한 컵을 계속 반으로 나누면, 몇 번 만에 분자 하나가 남을까?</a><a href="../../c/chem/1-2.html#card-chem-molvol"><small class="mono">화학 1.2</small>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</a><a href="../../c/chem/1-2.html#card-chem-molar-mass"><small class="mono">화학 1.2</small>물 1몰과 설탕 1몰은 왜 무게가 다를까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/chem/1-2.html#card-chem-mole"><small class="mono">화학 1.2</small>원자는 왜 ‘몰’이라는 묶음으로 셀까?</a><a href="../../c/chem/1-2.html#card-chem-cup"><small class="mono">화학 1.2</small>물 한 컵을 계속 반으로 나누면, 몇 번 만에 분자 하나가 남을까?</a><a href="../../c/chem/1-2.html#card-chem-molvol"><small class="mono">화학 1.2</small>기체 1몰의 부피는 왜 기체 종류와 상관없을까?</a><a href="../../c/chem/1-2.html#card-chem-molar-mass"><small class="mono">화학 1.2</small>물 1몰과 설탕 1몰은 왜 무게가 다를까?</a></div></nav>
 
       <article class="card" id="card-is1-fermi">
         <header class="card-head">
@@ -359,7 +359,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-2.html#card-is1-units"><small class="mono">통합과학1 1.2</small>모든 단위는 7개로 만들어질까?</a><a href="../../c/is1/1-2.html#card-is1-dimension"><small class="mono">통합과학1 1.2</small>단위만 보고 공식을 맞힐 수 있을까?</a><a href="../../c/is1/1-2.html#card-is1-new-unit"><small class="mono">통합과학1 1.2</small>두 양을 나누면 왜 쓸모 있는 새 단위가 생길까?</a><a href="../../c/is1/1-2.html#text-is1-base-units"><small class="mono">통합과학1 1.2</small>수십 가지 단위는 어디서 왔을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-2.html#card-is1-units"><small class="mono">통합과학1 1.2</small>모든 단위는 7개로 만들어질까?</a><a href="../../c/is1/1-2.html#card-is1-dimension"><small class="mono">통합과학1 1.2</small>단위만 보고 공식을 맞힐 수 있을까?</a><a href="../../c/is1/1-2.html#card-is1-new-unit"><small class="mono">통합과학1 1.2</small>두 양을 나누면 왜 쓸모 있는 새 단위가 생길까?</a><a href="../../c/is1/1-2.html#text-is1-base-units"><small class="mono">통합과학1 1.2</small>기본량과 단위</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=is1&amp;sec=1-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
       <a class="px-go" href="../../practice.html?sec=is1-1-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">4문항</span></a>

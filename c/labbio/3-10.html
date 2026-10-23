@@ -59,7 +59,7 @@
 
     <div>
       <article class="card reading" id="text-labbio-hardy" data-kind="본문">
-        <header class="card-head"><span class="no">3.10.1</span><h2>열성 개체를 세대마다 모두 없애면 열성 대립유전자는 곧 사라질까?</h2><span class="kind">본문 · 대립유전자 빈도 모의실험</span></header>
+        <header class="card-head"><span class="no">3.10.1</span><h2>대립유전자 빈도 모의실험</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">주머니에 빨간 구슬 60개(대립유전자 A)와 흰 구슬 40개(a)를 넣고, 두 개씩 꺼내 한 개체의 유전자형으로 삼는 모의실험을 했다. 흰 구슬 두 개인 aa 개체는 살아남지 못한다고 정하고, 세대마다 aa를 빼고 남은 구슬로 다음 세대를 만들었다. 첫 세대에 40%이던 흰 구슬은 둘째 세대에 29%, 셋째 세대에 22%, 넷째 세대에 18%로 줄었다. 그런데 줄어드는 빠르기가 점점 느려진다. 흰 구슬은 결국 사라질까? 왜 점점 느려질까?</p>
           <figure class="q-fig">
@@ -76,14 +76,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>대립유전자와 유전자형, 확률의 곱셈, 가계 조사(<a href="3-9.html">가계 조사와 사람의 유전</a>).</div>
 
-          <h3><span class="mono">1</span>아무 일도 없으면 빈도는 그대로</h3>
+          <h3><span class="no">3.10.1</span>아무 일도 없으면 빈도는 그대로</h3>
           <p>집단 속 대립유전자 A의 빈도를 \(p\), a의 빈도를 \(q\)라 하자(\(p + q = 1\)). 개체들이 무작위로 짝짓고, 선택, 돌연변이, 이주가 없으며, 집단이 충분히 크면 다음 세대에도 \(p\)와 \(q\)는 바뀌지 않는다. 이때 유전자형의 빈도는 구슬 두 개를 무작위로 꺼낼 때의 확률과 같아 AA가 \(p^2\), Aa가 \(2pq\), aa가 \(q^2\)이다. 이것을 하디-바인베르크 평형이라 한다. 진화는 이 조건이 깨져 대립유전자 빈도가 바뀌는 것이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">열성 개체를 없애는 선택</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.10.1 <span class="nm">열성 개체를 없애는 선택</span></span>
             <p>세대마다 aa 개체를 모두 없애면 다음 세대의 a의 빈도는 \[q' = \frac{q}{1 + q}\]이다. \(q\)가 작아지면 a의 대부분이 Aa 속에 있게 되어, 선택이 a를 거의 없애지 못한다.</p>
           </div>
           <p>a의 빈도가 0.4일 때 aa는 16%로 꽤 많아 한 세대에 많은 a를 없앤다. 그러나 a의 빈도가 0.04로 줄면 aa는 0.16%뿐이고, a의 대부분인 96%가 형질이 드러나지 않는 Aa 속에 숨어 있다. 선택은 형질이 드러난 aa에만 작용하므로, 숨은 a는 그대로 다음 세대로 넘어간다. 그래서 열성 대립유전자는 아무리 강하게 선택해도 아주 느리게 줄어들 뿐 쉽게 사라지지 않는다.<sup class="fn"><a href="#fn-labbio-hardy-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>작은 집단의 우연</h3>
+          <h3><span class="no">3.10.2</span>작은 집단의 우연</h3>
           <p>구슬을 몇 개만 꺼내는 작은 집단에서는 선택이 없어도 우연히 한쪽 구슬이 더 많이 뽑혀 빈도가 세대마다 흔들린다. 이것을 유전적 부동이라 한다. 큰 집단에서는 흔들림이 서로 상쇄되어 작지만, 개체가 10마리뿐인 집단에서는 몇 세대 만에 한 대립유전자가 사라지기도 한다. 모의실험에서 매 세대 꺼내는 구슬 수를 바꾸어 보면, 작은 집단일수록 빈도가 크게 요동치는 것을 확인할 수 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="하디-바인베르크 평형의 유전자형 빈도">
@@ -98,8 +98,8 @@
             <figcaption>그림 2. a가 드물어지면 a를 가진 개체는 거의 모두 Aa이고, aa는 아주 드물다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.10.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.10.2</span>
             <p>처음 \(q = 0.4\)에서 aa를 세대마다 없앨 때 둘째 세대의 \(q\)를 구하여 그림 1을 확인하여라. \(q = 0.04\)일 때 a 가운데 Aa 속에 숨어 있는 비율은 얼마인가? q가 0.4에서 0.04로 줄어드는 데는 몇 세대가 걸리는가? 이 선택에서는 \(1/q\)가 세대마다 1씩 늘어난다.</p>
           </div>
           <p>\(q' = 0.4/1.4 \approx 0.286\)으로 그림 1의 0.29와 같다. \(q = 0.04\)일 때 a의 전체는 Aa의 \(2pq = 0.0768\)의 절반과 aa의 \(q^2 = 0.0016\)에서 온다. 대립유전자 수로 보면 Aa 속의 a는 \(0.0768\), aa 속의 a는 \(2 \times 0.0016 = 0.0032\)이므로, Aa 속에 숨은 비율은 \(0.0768/0.08 = 96\)%이다.</p>
@@ -112,7 +112,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>무작위 교배하는 큰 집단에서 선택, 돌연변이, 이주가 없으면 대립유전자 빈도가 유지되고 유전자형은 \(p^2\), \(2pq\), \(q^2\)의 비율을 이룬다. 열성 개체를 없애는 선택은 \(q' = q/(1+q)\)로 a를 줄이지만, a가 드물어질수록 대부분이 보인자 속에 숨어 줄어드는 빠르기가 느려지고, 작은 집단에서는 우연에 따른 유전적 부동도 빈도를 바꾼다. 처음 질문의 흰 구슬은 결국 줄어들지만 쉽게 사라지지 않는다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>네 가지 염기로 어떻게 수만 가지 단백질을 만들까?</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 하나가 더 들어가는 일은 왜, 언제 생길까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/1-2.html#card-is2-selection"><small class="mono">통합과학2 1.2</small>자연선택은 어떻게 작동할까?</a><a href="../../c/is2/1-2.html#card-is2-resistance"><small class="mono">통합과학2 1.2</small>항생제 내성 세균은 어떻게 늘어날까?</a><a href="../../c/is2/1-2.html#card-is2-lamarck"><small class="mono">통합과학2 1.2</small>기린은 필요해서 목이 길어졌을까?</a><a href="../../c/bio/3-3.html#card-bio-selection"><small class="mono">생명과학 3.3</small>진화는 ‘더 나아지는 것’일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/1-2.html#text-is2-biodiversity"><small class="mono">통합과학2 1.2</small>생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?</a><a href="../../c/bio/3-4.html#card-bio-rank"><small class="mono">생명과학 3.4</small>고래는 왜 물고기가 아닐까?</a><a href="../../c/bio/3-4.html#card-bio-species"><small class="mono">생명과학 3.4</small>‘종’은 어떻게 정할까?</a><a href="../../c/bio/3-4.html#card-bio-domains"><small class="mono">생명과학 3.4</small>처음 보는 생물을 3역 6계 중 어디에 넣을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>유전자와 단백질</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 이상과 유전자 이상</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/1-2.html#card-is2-selection"><small class="mono">통합과학2 1.2</small>자연선택은 어떻게 작동할까?</a><a href="../../c/is2/1-2.html#card-is2-resistance"><small class="mono">통합과학2 1.2</small>항생제 내성 세균은 어떻게 늘어날까?</a><a href="../../c/is2/1-2.html#card-is2-lamarck"><small class="mono">통합과학2 1.2</small>기린은 필요해서 목이 길어졌을까?</a><a href="../../c/bio/3-3.html#card-bio-selection"><small class="mono">생명과학 3.3</small>진화는 ‘더 나아지는 것’일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/1-2.html#text-is2-biodiversity"><small class="mono">통합과학2 1.2</small>생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?</a><a href="../../c/bio/3-4.html#card-bio-rank"><small class="mono">생명과학 3.4</small>고래는 왜 물고기가 아닐까?</a><a href="../../c/bio/3-4.html#card-bio-species"><small class="mono">생명과학 3.4</small>‘종’은 어떻게 정할까?</a><a href="../../c/bio/3-4.html#card-bio-domains"><small class="mono">생명과학 3.4</small>처음 보는 생물을 3역 6계 중 어디에 넣을까?</a></div></nav>
 
       <article class="card" id="card-bio-genepool">
         <header class="card-head">
@@ -170,7 +170,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>네 가지 염기로 어떻게 수만 가지 단백질을 만들까?</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 하나가 더 들어가는 일은 왜, 언제 생길까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/1-2.html#card-is2-selection"><small class="mono">통합과학2 1.2</small>자연선택은 어떻게 작동할까?</a><a href="../../c/is2/1-2.html#card-is2-resistance"><small class="mono">통합과학2 1.2</small>항생제 내성 세균은 어떻게 늘어날까?</a><a href="../../c/is2/1-2.html#card-is2-lamarck"><small class="mono">통합과학2 1.2</small>기린은 필요해서 목이 길어졌을까?</a><a href="../../c/is2/1-2.html#text-is2-natural-selection"><small class="mono">통합과학2 1.2</small>생물은 어떻게 환경에 맞게 바뀌어 갈까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/1-2.html#text-is2-biodiversity"><small class="mono">통합과학2 1.2</small>생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?</a><a href="../../c/bio/3-4.html#card-bio-rank"><small class="mono">생명과학 3.4</small>고래는 왜 물고기가 아닐까?</a><a href="../../c/bio/3-4.html#card-bio-species"><small class="mono">생명과학 3.4</small>‘종’은 어떻게 정할까?</a><a href="../../c/bio/3-4.html#card-bio-domains"><small class="mono">생명과학 3.4</small>처음 보는 생물을 3역 6계 중 어디에 넣을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>유전자와 단백질</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 이상과 유전자 이상</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is2/1-2.html#card-is2-selection"><small class="mono">통합과학2 1.2</small>자연선택은 어떻게 작동할까?</a><a href="../../c/is2/1-2.html#card-is2-resistance"><small class="mono">통합과학2 1.2</small>항생제 내성 세균은 어떻게 늘어날까?</a><a href="../../c/is2/1-2.html#card-is2-lamarck"><small class="mono">통합과학2 1.2</small>기린은 필요해서 목이 길어졌을까?</a><a href="../../c/is2/1-2.html#text-is2-natural-selection"><small class="mono">통합과학2 1.2</small>변이, 자연선택, 진화</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/1-2.html#text-is2-biodiversity"><small class="mono">통합과학2 1.2</small>생물다양성은 무엇을 세는 것이고, 어떻게 지킬까?</a><a href="../../c/bio/3-4.html#card-bio-rank"><small class="mono">생명과학 3.4</small>고래는 왜 물고기가 아닐까?</a><a href="../../c/bio/3-4.html#card-bio-species"><small class="mono">생명과학 3.4</small>‘종’은 어떻게 정할까?</a><a href="../../c/bio/3-4.html#card-bio-domains"><small class="mono">생명과학 3.4</small>처음 보는 생물을 3역 6계 중 어디에 넣을까?</a></div></nav>
 
       <article class="card" id="card-labbio-bead-sim">
         <header class="card-head">

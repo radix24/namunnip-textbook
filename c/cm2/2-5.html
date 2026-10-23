@@ -65,7 +65,7 @@
 
     <div>
       <article class="card reading" id="text-cm2-converse" data-kind="본문">
-        <header class="card-head"><span class="no">2.5.1</span><h2>가정과 결론을 바꾸거나 부정하면 참, 거짓은 어떻게 될까?</h2><span class="kind">본문 · 역과 대우</span></header>
+        <header class="card-head"><span class="no">2.5.1</span><h2>역과 대우</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">"비가 오면 땅이 젖는다"가 참이라고 하자. 그러면 "땅이 젖었으면 비가 왔다"도 참일까? "땅이 젖지 않았으면 비가 오지 않았다"는 어떨까? 일상에서 자주 헷갈리는 이 두 문장을 집합으로 보면 어느 쪽이 언제나 참인지 가릴 수 있을까?</p>
           <figure class="q-fig" data-q="cm2-conv">
@@ -76,14 +76,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>명제 \(p \to q\)와 진리집합, 조건의 부정(<a href="2-4.html">명제와 조건</a>), 여집합과 포함관계(<a href="2-3.html">집합의 연산</a>).</div>
 
-          <h3><span class="mono">1</span>역과 대우</h3>
+          <h3><span class="no">2.5.1</span>역과 대우</h3>
           <p>명제 \(p \to q\)에서 가정과 결론을 맞바꾼 \(q \to p\)를 <em>역</em>이라 한다. 가정과 결론을 각각 부정한 뒤 맞바꾼 \({\sim}q \to {\sim}p\)를 <em>대우</em>라 한다. 처음 질문에서 "땅이 젖었으면 비가 왔다"는 역이고, "땅이 젖지 않았으면 비가 오지 않았다"는 대우이다.</p>
           <p>역은 참이 아닐 수 있다. 땅은 비가 아니어도 물을 뿌리면 젖는다. 그런데 대우는 원래 명제가 참이면 언제나 참이다. 비가 오면 반드시 땅이 젖는데 땅이 젖지 않았다면, 비가 왔을 리가 없기 때문이다.</p>
 
-          <h3><span class="mono">2</span>집합으로 보는 까닭</h3>
+          <h3><span class="no">2.5.2</span>집합으로 보는 까닭</h3>
           <p>진리집합으로 옮겨 보자. \(p \to q\)가 참이면 \(P \subset Q\)이다. 이때 \(Q\) 밖의 원소는 \(P\) 밖에도 있을 수밖에 없다. \(P\)가 \(Q\) 안에 통째로 들어 있기 때문이다. 즉 \(Q^C \subset P^C\)이고, 이것은 대우 \({\sim}q \to {\sim}p\)가 참이라는 뜻이다.</p>
           <p>거꾸로 대우가 참이어서 \(Q^C \subset P^C\)이면, 같은 이유로 \(P \subset Q\)이다. 따라서 명제와 대우는 참, 거짓이 언제나 같다. 반면에 역 \(q \to p\)는 \(Q \subset P\)를 묻는데, \(P \subset Q\)에서 이것이 따라 나오지는 않는다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">명제와 대우</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.5.1 <span class="nm">명제와 대우</span></span>
             <p>명제 \(p \to q\)가 참이면 그 대우 \({\sim}q \to {\sim}p\)도 참이고, \(p \to q\)가 거짓이면 대우도 거짓이다. 명제가 참이어도 그 역은 참이 아닐 수 있다.</p>
           </div>
           <p>그림 1의 슬라이더로 확인해 보자. \(q\)는 \(x \le 3\)으로 고정하고 \(p\)를 \(x \le a\)로 두었다. \(a = 2\)이면 \(P \subset Q\)이므로 명제가 참이고, 대우도 참이며, 역은 \(x = 2.5\) 같은 반례 때문에 거짓이다. \(a\)를 4로 올리면 명제와 대우가 함께 거짓이 되고, 이번에는 역이 참이 된다.</p>
@@ -96,8 +96,8 @@
             <figcaption>그림 2. \(P \subset Q\)이면 \(Q\) 바깥은 \(P\) 바깥에 들어 있으므로, 대우 \({\sim}q \to {\sim}p\)도 참이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.5.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.5.2</span>
             <p>자연수 \(n\)에 대한 명제 '\(n^2\)이 홀수이면 \(n\)은 홀수이다'의 역과 대우를 쓰고, 각각의 참, 거짓을 판별하여라.</p>
           </div>
           <p>역은 '\(n\)이 홀수이면 \(n^2\)은 홀수이다'이다. \(n = 2k - 1\)로 두면 \(n^2 = 4k^2 - 4k + 1 = 2(2k^2 - 2k) + 1\)이므로 홀수이다. 따라서 역은 참이다.</p>
@@ -110,7 +110,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>명제 \(p \to q\)가 참이면 \(P \subset Q\)이고, 이는 \(Q^C \subset P^C\)와 같으므로 대우 \({\sim}q \to {\sim}p\)도 참이다. 반면 역 \(q \to p\)는 \(Q \subset P\)를 따로 확인해야 한다. 그래서 처음 질문에서 "땅이 젖지 않았으면 비가 오지 않았다"는 언제나 참이지만, "땅이 젖었으면 비가 왔다"는 참이 아닐 수 있다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>참인지 거짓인지를 집합으로 판정할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>직접 보이기 어려운 명제는 어떻게 증명할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>명제와 조건</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>대우와 귀류법</a></div></nav>
 
       <article class="card" id="card-cm2-converse">
         <header class="card-head">
@@ -159,7 +159,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>참인지 거짓인지를 집합으로 판정할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>직접 보이기 어려운 명제는 어떻게 증명할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>명제와 조건</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>대우와 귀류법</a></div></nav>
 
       <article class="card" id="card-cm2-contra-venn">
         <header class="card-head">
@@ -204,7 +204,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>참인지 거짓인지를 집합으로 판정할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>직접 보이기 어려운 명제는 어떻게 증명할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/cm2/2-4.html#card-cm2-all-some"><small class="mono">공통수학2 2.4</small>'모든'과 '어떤'이 붙으면 참·거짓은 어떻게 정해질까?</a><a href="../../c/cm2/2-4.html#card-cm2-prop-truthset"><small class="mono">공통수학2 2.4</small>'p이면 q이다'가 참인지 집합으로 어떻게 판단할까?</a><a href="../../c/cm2/2-4.html#text-cm2-prop-terms"><small class="mono">공통수학2 2.4</small>정의와 정리는 어떻게 다르고, 조건은 어떻게 부정할까?</a><a href="../../c/cm2/2-4.html#text-cm2-proposition"><small class="mono">공통수학2 2.4</small>명제와 조건</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/cm2/2-7.html#card-cm2-contra-square"><small class="mono">공통수학2 2.7</small>n²이 짝수이면 n도 짝수임을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#card-cm2-sqrt2-absurd"><small class="mono">공통수학2 2.7</small>√2가 분수가 아니라는 것을 어떻게 증명할까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof-ways"><small class="mono">공통수학2 2.7</small>어떤 명제에 어떤 증명법을 쓸까?</a><a href="../../c/cm2/2-7.html#text-cm2-proof"><small class="mono">공통수학2 2.7</small>대우와 귀류법</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=cm2&amp;sec=2-5"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=cm2-2-5"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">8문항</span></a>

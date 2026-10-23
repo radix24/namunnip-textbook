@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc2-chain" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>안쪽 함수와 바깥 함수의 변화율은 어떻게 합쳐질까?</h2><span class="kind">본문 · 합성함수의 미분법</span></header>
+  <header class="card-head"><span class="no"></span><h2>합성함수의 미분법</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">톱니바퀴 세 개가 맞물려 있다. 첫째 바퀴가 1바퀴 돌 때 둘째가 3바퀴, 둘째가 1바퀴 돌 때 셋째가 2바퀴 돈다면, 첫째가 1바퀴 돌 때 셋째는 몇 바퀴 돌까? 답은 \(3 \times 2 = 6\)바퀴이다. 함수 \(y = \sin(x^2)\)처럼 함수 안에 함수가 들어 있을 때, 변화율도 이렇게 곱하면 될까?</p>
     <figure class="q-fig" data-q="calc2-chain">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>합성함수(공통수학2), 평균변화율과 미분계수(미적분Ⅰ), 지수·로그·삼각함수의 도함수(<a href="2-1.html">지수·로그함수의 극한과 미분</a>, <a href="2-3.html">삼각함수의 극한과 미분</a>).</div>
 
-    <h3><span class="mono">1</span>합성함수의 미분법</h3>
+    <h3><span class="no">2.5.1</span>합성함수의 미분법</h3>
     <p>\(y = f(u)\), \(u = g(x)\)라 하자. \(x\)가 \(\Delta x\)만큼 변하면 \(u\)가 \(\Delta u\)만큼, 그에 따라 \(y\)가 \(\Delta y\)만큼 변한다. \(\Delta u \ne 0\)이면 \[\frac{\Delta y}{\Delta x} = \frac{\Delta y}{\Delta u} \cdot \frac{\Delta u}{\Delta x}\] 이다. \(\Delta x \to 0\)이면 \(\Delta u \to 0\)이므로, 양변의 극한을 취하면 두 변화율의 곱이 된다. 톱니바퀴의 회전수를 곱한 것과 같다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">합성함수의 미분법</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.5.1 <span class="nm">합성함수의 미분법</span></span>
       <p>\[\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx},\qquad \{f(g(x))\}' = f'(g(x))\,g'(x)\] 바깥 함수를 미분하되 안쪽은 그대로 두고, 안쪽 함수의 도함수를 곱한다.</p>
     </div>
     <p>그림 1에서 \(x\)를 움직여 보자. \(x\)가 0에서 멀어질수록 안쪽 \(u = x^2\)가 빠르게 변하므로(\(2x\)가 큼) 그래프가 점점 촘촘하게 출렁인다. 접선의 기울기는 \(\cos(x^2) \cdot 2x\)로, 두 변화율을 곱한 값이다.<sup class="fn"><a href="#fn-calc2-chain-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>실수 지수의 거듭제곱</h3>
+    <h3><span class="no">2.5.2</span>실수 지수의 거듭제곱</h3>
     <p>\(x &gt; 0\)이고 \(r\)이 실수일 때 \(x^r = e^{r\ln x}\)이다. 바깥 함수 \(e^u\), 안쪽 함수 \(u = r\ln x\)로 보고 합성함수의 미분법을 쓰면 \[(x^r)' = e^{r\ln x} \cdot \frac{r}{x} = x^r \cdot \frac{r}{x} = rx^{r-1}\] 이다. 그래서 \((x^n)' = nx^{n-1}\)은 지수가 \(\sqrt{2}\) 같은 무리수여도 성립한다. 또 \(\ln|f(x)|\)를 미분하면 \(\dfrac{f'(x)}{f(x)}\)인데, 이를 이용해 복잡한 곱이나 거듭제곱을 로그를 취해 미분하기도 한다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="x에서 u로, u에서 y로 이어지는 변화율의 곱">
@@ -41,8 +41,8 @@
       <figcaption>그림 2. 변화가 \(x \to u \to y\)로 전달될 때 각 단계의 변화율을 곱하면 전체 변화율이 된다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.5.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.5.2</span>
       <p>다음 함수를 미분하여라. (1) \(y = (2x^2 + 1)^5\) (2) \(y = e^{\sin x}\) (3) \(y = \ln(x^2 + 1)\)</p>
     </div>
     <p>(1) \(u = 2x^2 + 1\)로 놓으면 \(y = u^5\)이므로 \(y' = 5u^4 \cdot 4x = 20x(2x^2 + 1)^4\)이다. 전개해서 미분했다면 10차식을 다루어야 했다.</p>

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-labphy-amplitude" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>크게 흔들어도 작게 흔들어도 주기가 같다는 말은 어디까지 맞을까?</h2><span class="kind">본문 · 진자의 주기</span></header>
+  <header class="card-head"><span class="no"></span><h2>진자의 주기</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">길이 1 m인 진자를 10°만큼 당겼다 놓고 10번 왕복하는 시간을 재니 20.1 s였다. 30°로 당겨 다시 재니 20.4 s, 60°로 당기니 21.5 s였다. 진자의 주기는 진폭과 상관없다고 배웠는데 크게 흔들수록 시간이 길어졌다. 측정이 서툰 것일까, 아니면 그 규칙에 한계가 있는 것일까? 주기를 정하는 것은 무엇이고, 진자로 \(g\)를 재려면 어떻게 해야 할까?</p>
     <figure class="q-fig" data-q="lp-pend">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>변인 통제, 주기와 진동수, 복원력, 반복 측정(<a href="2-5.html">구심력 측정</a>).</div>
 
-    <h3><span class="mono">1</span>작은 각의 공식</h3>
+    <h3><span class="no">2.6.1</span>작은 각의 공식</h3>
     <p>길이 \(L\)인 줄에 매달린 추를 각 \(\theta\)만큼 기울이면, 중력의 성분 \(mg\sin\theta\)가 추를 아래로 되돌린다. 각이 작으면 \(\sin\theta \approx \theta\)이므로 복원력이 변위에 비례하고, 진자는 용수철 진자처럼 단진동을 한다. 이때 주기는 \(T_0 = 2\pi\sqrt{L/g}\)로 질량과 진폭에 상관없다. 질량은 복원력과 관성에 똑같이 들어가 지워지고, 진폭이 크면 그만큼 복원력도 커져 왕복 시간이 같아지는 것이다. 그런데 이 결과는 \(\sin\theta \approx \theta\)라는 어림에 기대고 있다. 각이 커지면 \(\sin\theta\)가 \(\theta\)보다 점점 작아져, 복원력이 단진동에서보다 약해지고 주기가 길어진다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">진폭이 큰 진자의 주기</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">진폭이 큰 진자의 주기</span></span>
       <p>진폭 \(\theta_0\)(라디안)인 진자의 주기는 \[T \approx 2\pi\sqrt{\frac{L}{g}}\left(1 + \frac{\theta_0^2}{16}\right)\]이다. 진폭 10°에서 약 0.2%, 30°에서 약 1.7%, 60°에서 약 7% 길어진다.</p>
     </div>
     <p>그림 1에서 진폭을 바꾸어 보자. 5°에서는 공식과의 차이가 0.05%로 보이지 않을 만큼 작다. 30°이면 1.7%로, 1 m 진자의 주기 2.007 s가 2.042 s가 된다. 90°에서는 18%나 길어지고, 어림식도 실제 값에서 벗어난다. 그래서 주기가 진폭과 상관없다는 규칙은 작은 진폭에서만 맞는 어림이다. 처음 질문의 측정은 서툴지 않았고, 이 한계를 정확히 잡아낸 것이다.<sup class="fn"><a href="#fn-labphy-amplitude-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>작은 차이를 재려면</h3>
+    <h3><span class="no">2.6.2</span>작은 차이를 재려면</h3>
     <p>진폭 10°에서 늘어나는 시간은 한 주기에 0.004 s밖에 되지 않는다. 초시계를 누르는 반응의 흔들림 0.05 s보다 훨씬 작으므로, 한 주기만 재서는 진폭의 효과를 볼 수 없다. 10번 왕복하면 차이가 0.04 s, 50번 왕복하면 0.19 s로 쌓이지만, 반응 시간의 오차는 시작과 끝에서 한 번씩만 생긴다. 시계는 진자가 가장 빠르게 지나가는 가장 낮은 점에서 누르는 것이 좋다. 끝점에서는 진자가 느리게 멈췄다 돌아오므로 정확히 언제 멈췄는지 판단하기 어렵다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="진폭별 10회 왕복 시간">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 처음 질문의 측정값은 진폭을 고려한 이론값과 0.1 s 안쪽으로 맞는다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
       <p>처음 질문의 30° 측정(10회 20.4 s)만으로 \(g\)를 구하면 얼마가 나오는가? 진폭을 보정하면 어떻게 되는가? 진폭 효과를 0.1% 안쪽으로 줄이려면 진폭을 몇 도 이하로 해야 하는가?</p>
     </div>
     <p>주기는 \(T = 2.04\) s이고, 작은 각의 공식을 그대로 쓰면 \(g = 4\pi^2 L/T^2 = 39.48 \times 1.000/4.162 \approx 9.49\) m/s²로 3% 작다. 주기가 1.7% 길면 제곱 때문에 \(g\)는 3.4% 작게 나오는 것이다. 진폭을 보정하여 \(T_0 = T/(1 + \theta_0^2/16)\)로 바꾸면, \(\theta_0 = 30° = 0.524\) rad에서 보정 인자는 \(1 + 0.274/16 = 1.017\)이고 \(T_0 = 2.04/1.017 = 2.006\) s이다. 이 값으로 \(g = 39.48/4.024 \approx 9.81\) m/s²를 얻는다.</p>

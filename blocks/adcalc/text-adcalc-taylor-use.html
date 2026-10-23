@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adcalc-taylor-use" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>진자의 주기 공식은 몇 도까지 흔들 때 믿을 수 있을까?</h2><span class="kind">본문 · 테일러급수의 활용</span></header>
+  <header class="card-head"><span class="no"></span><h2>테일러급수의 활용</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">길이 1 m인 진자를 작게 흔들면 주기는 \(2\pi\sqrt{L/g} \approx 2.007\)초이다. 그런데 진폭을 크게 하면 주기가 조금씩 길어져, 60°로 흔들면 약 7% 길어진다. 주기 공식은 \(\sin\theta \approx \theta\)라는 어림에서 나왔다고 한다. 이 어림은 각이 얼마일 때까지 믿을 수 있을까? 또 계산기는 \(\sin1000°\) 같은 값을 다항식으로 어떻게 계산할까? 테일러급수의 첫 몇 항이 물리 공식과 계산기 속에서 어떻게 쓰이는지 알아보자.</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>삼각함수의 정의와 그래프, 일반각과 호도법, 테일러다항식과 나머지(<a href="3-6.html">테일러다항식과 테일러급수</a>).</div>
 
-    <h3><span class="mono">1</span>첫 항만 남기는 어림</h3>
+    <h3><span class="no">3.7.1</span>첫 항만 남기는 어림</h3>
     <p>테일러급수의 첫 몇 항만 남기면 복잡한 함수를 다루기 쉬운 다항식으로 바꿀 수 있다. 진자의 운동 방정식은 \(\theta'' = -\dfrac gL\sin\theta\)인데, \(\sin\theta = \theta - \dfrac{\theta^3}{6} + \cdots\)의 첫 항만 남기면 \(\theta'' = -\dfrac gL\theta\)가 되어 단진동이 된다. 그래서 주기 공식 \(2\pi\sqrt{L/g}\)는 \(\theta^3/6\)을 무시할 수 있을 때 성립한다. 버린 항이 남긴 항보다 얼마나 작은지, 곧 \(\theta^2/6\)이 얼마인지가 어림의 정확도를 알려 준다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">자주 쓰는 어림</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.7.1 <span class="nm">자주 쓰는 어림</span></span>
       <p>\(|x|\)가 작을 때 \(\sin x \approx x\), \(\cos x \approx 1 - \dfrac{x^2}{2}\), \(e^x \approx 1 + x\), \((1 + x)^a \approx 1 + ax + \dfrac{a(a-1)}{2}x^2\)이다. 다음 항이 오차의 크기를 알려 주며, 교대급수이면 오차는 다음 항보다 작다.</p>
     </div>
     <p>상대성 이론의 운동 에너지 \(E_k = mc^2\left(\dfrac{1}{\sqrt{1 - v^2/c^2}} - 1\right)\)에 \((1 + x)^{-1/2}\)의 어림을 쓰면 \(E_k \approx \tfrac12mv^2 + \tfrac38m\dfrac{v^4}{c^2}\)이다. 첫 항이 뉴턴 역학의 운동 에너지이고, 둘째 항은 \(v/c\)가 작으면 무시할 만하다. 그래서 일상의 속도에서는 뉴턴 역학이 상대성 이론의 테일러 어림이라고 볼 수 있다. 이렇게 테일러급수는 어떤 공식이 다른 공식의 근사인지, 언제까지 믿을 수 있는지를 보여 준다.<sup class="fn"><a href="#fn-adcalc-taylor-use-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>계산기 속의 다항식</h3>
+    <h3><span class="no">3.7.2</span>계산기 속의 다항식</h3>
     <p>계산기는 \(\sin\)을 계산할 때 테일러다항식을 쓰되, \(x\)를 작게 만든 뒤에 쓴다. \(x\)가 클수록 항이 늦게 줄어 많은 항이 필요하기 때문이다. 먼저 주기성으로 각을 \(0°\)에서 \(360°\) 사이로 줄이고, 대칭성으로 다시 \(0°\)에서 \(45°\) 사이의 사인이나 코사인으로 바꾼다. 그러면 \(x\)가 \(\pi/4 \approx 0.785\) 이하가 되어 몇 항만으로 계산기의 자릿수만큼 정확한 값을 얻는다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="sin 1000°를 작은 각으로 바꾸는 단계">
@@ -46,8 +46,8 @@
       <figcaption>그림 2. 큰 각을 작은 각으로 바꾸어야 테일러다항식이 몇 항만으로 정확해진다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.7.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.7.2</span>
       <p>그림 2의 방법으로 \(\sin1000°\)를 소수 다섯째 자리까지 구하여라. 길이 1 m인 진자를 20°로 흔들 때의 주기를 \(1 + \theta_0^2/16\)의 보정으로 구하여라. \(g = 9.8\) m/s²이다.</p>
     </div>
     <p>\(x = 10° = \pi/18 \approx 0.174533\)이므로 \(x^2 \approx 0.0304617\), \(x^4 \approx 0.000928\)이다. \(\cos10° \approx 1 - 0.0152309 + 0.0000387 = 0.9848078\)이고, 다음 항 \(x^6/720 \approx 4\times10^{-8}\)이 오차의 상한이다. 그래서 \(\sin1000° \approx -0.98481\)이다.</p>

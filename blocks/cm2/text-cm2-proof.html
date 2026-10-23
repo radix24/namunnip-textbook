@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-cm2-proof" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>직접 보이기 어려운 명제는 어떻게 증명할까?</h2><span class="kind">본문 · 대우와 귀류법</span></header>
+  <header class="card-head"><span class="no"></span><h2>대우와 귀류법</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">\(\sqrt{2}\)가 분수로 나타낼 수 없는 수라는 것을 어떻게 보일까? 분수를 하나씩 대입해 보는 방법으로는 끝이 없다. '그런 분수는 없다'처럼 없다는 것을 증명할 때는 어디서부터 출발해야 할까?</p>
     <figure class="q-fig" data-q="cm2-sqrt2">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>명제와 대우(<a href="2-5.html">역과 대우</a>), 짝수와 홀수, 기약분수, 중학교의 유리수와 무리수.</div>
 
-    <h3><span class="mono">1</span>대우를 이용한 증명</h3>
+    <h3><span class="no">2.7.1</span>대우를 이용한 증명</h3>
     <p>명제 '자연수 \(n\)에 대하여 \(n^2\)이 짝수이면 \(n\)은 짝수이다'를 직접 증명하려 하면 막힌다. \(n^2 = 2k\)에서 \(n\)에 대해 무엇을 말할지 마땅치 않기 때문이다. 그런데 대우 '\(n\)이 홀수이면 \(n^2\)은 홀수이다'는 쉽다. \(n = 2k - 1\)이면 \(n^2 = 2(2k^2 - 2k) + 1\)이므로 홀수이다.</p>
     <p>명제와 대우는 참, 거짓이 같으므로 대우가 참이면 원래 명제도 참이다. 이렇게 대우를 증명해서 원래 명제를 증명하는 방법을 대우를 이용한 증명법이라 한다. 결론의 부정에서 출발하면 손에 쥔 정보가 더 구체적일 때 이 방법이 쓸모 있다.</p>
 
-    <h3><span class="mono">2</span>귀류법</h3>
+    <h3><span class="no">2.7.2</span>귀류법</h3>
     <p>처음 질문처럼 '어떤 것이 없다'를 보일 때는 다른 길을 쓴다. 일단 그런 것이 있다고 가정하고 논리를 따라가다 모순에 부딪히면, 가정이 틀렸다고 결론 내리는 것이다. 이 방법을 <em>귀류법</em>이라 한다.</p>
-    <div class="tb-env"><span class="lb">방법 <span class="nm">귀류법</span></span>
+    <div class="tb-env"><span class="lb">방법 2.7.1 <span class="nm">귀류법</span></span>
       <p>명제의 결론을 부정했다고 가정한다. 이 가정과 이미 참으로 알려진 사실에서 모순이 생김을 보인다. 그러면 결론을 부정한 가정이 틀렸으므로 원래 결론이 참이다.</p>
     </div>
     <p>\(\sqrt{2}\)가 유리수라고 가정하자. 그러면 서로소인 두 자연수 \(p\), \(q\)로 \(\sqrt{2} = \dfrac{p}{q}\)라 쓸 수 있다. 양변을 제곱하면 \(p^2 = 2q^2\)이므로 \(p^2\)은 짝수이고, 1에서 증명한 명제에 따라 \(p\)도 짝수이다.</p>
@@ -42,8 +42,8 @@
     </figure>
     <p>그림 1에서 분모를 키우며 확인해 보자. \(\tfrac{17}{12}\), \(\tfrac{41}{29}\)처럼 제곱이 2에 아주 가까운 분수는 계속 나오지만, 정확히 2가 되지는 않는다.<sup class="fn"><a href="#fn-cm2-proof-1">1</a></sup> 그림은 짐작을 줄 뿐이고, 모든 분수에 대해 확실히 말해 주는 것은 귀류법의 논증이다.</p>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.7.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.7.2</span>
       <p>자연수 \(a\), \(b\)에 대하여 '\(ab\)가 홀수이면 \(a\)와 \(b\)는 모두 홀수이다'를 대우를 이용하여 증명하여라.</p>
     </div>
     <p>결론 '\(a\)와 \(b\)는 모두 홀수이다'의 부정은 '\(a\)와 \(b\) 가운데 적어도 하나는 짝수이다'이다. 따라서 대우는 '\(a\)와 \(b\) 가운데 적어도 하나가 짝수이면 \(ab\)는 짝수이다'이다.</p>

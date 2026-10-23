@@ -55,7 +55,7 @@
 
     <div>
       <article class="card reading" id="text-mech-standing" data-kind="본문">
-        <header class="card-head"><span class="no">3.5.1</span><h2>기타 줄은 왜 정해진 높이의 음만 낼까?</h2><span class="kind">본문 · 정상파와 악기</span></header>
+        <header class="card-head"><span class="no">3.5.1</span><h2>정상파와 악기</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">기타 줄을 튕기면 늘 같은 높이의 음이 난다. 줄을 아무렇게나 튕겨도 아무 진동수로나 떨지 않고, 정해진 몇 가지 진동수로만 떤다. 왜 그럴까? 또 손가락으로 줄을 짚어 짧게 하면 왜 음이 높아지고, 같은 '라' 음이라도 기타와 피아노의 소리가 다르게 들리는 까닭은 무엇일까?</p>
           <figure class="q-fig" data-q="mech-standing">
@@ -66,15 +66,15 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>고정단에서의 반사(<a href="3-2.html">탄성파의 진행·반사·투과</a>), 중첩과 간섭(<a href="3-4.html">음파의 간섭과 소음 제어</a>), \(v = f\lambda\).</div>
 
-          <h3><span class="mono">1</span>정상파</h3>
+          <h3><span class="no">3.5.1</span>정상파</h3>
           <p>진폭과 파장이 같은 두 파동이 반대 방향으로 진행하며 겹치면, 파형이 어느 쪽으로도 진행하지 않고 제자리에서 진동하는 파동이 생긴다. 이를 정상파라 한다. 정상파에서 전혀 진동하지 않는 점을 마디, 가장 크게 진동하는 점을 배라 한다. 이웃한 마디 사이의 거리는 반파장 \(\dfrac{\lambda}{2}\)이다.</p>
           <p>기타 줄을 튕기면 파동이 양 끝에서 반사되며 오가고, 들어가는 파동과 반사된 파동이 겹쳐 정상파가 된다. 그런데 양 끝은 고정되어 있으므로 반드시 마디여야 한다. 줄 길이 \(L\) 안에 반파장이 정수 개 들어가야 하므로 \(L = n\dfrac{\lambda}{2}\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">양 끝이 고정된 줄의 고유 진동수</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.5.1 <span class="nm">양 끝이 고정된 줄의 고유 진동수</span></span>
             <p>길이 \(L\)인 줄에서 파동의 속력이 \(v\)이면 \[\lambda_n = \frac{2L}{n},\quad f_n = \frac{nv}{2L}\quad (n = 1, 2, 3, \cdots)\] 이다. \(n = 1\)을 기본 진동, \(n \ge 2\)를 배진동이라 한다.</p>
           </div>
           <p>그림 1에서 \(n\)을 바꾸어 보자. \(n = 1\)이면 가운데 배 하나, \(n = 2\)이면 가운데에 마디가 하나 더 생긴다. 다른 진동수의 파동은 반사를 거듭하며 서로 어긋나 곧 사라지므로, 줄은 이 진동수들로만 떤다. 줄을 짚어 \(L\)을 줄이면 \(f_n\)이 커져 음이 높아진다.<sup class="fn"><a href="#fn-mech-standing-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>관악기와 음색</h3>
+          <h3><span class="no">3.5.2</span>관악기와 음색</h3>
           <p>관악기에서는 관 속 공기 기둥에 정상파가 생긴다. 열린 끝은 공기가 자유롭게 움직이는 배가 되고, 막힌 끝은 마디가 된다. 양쪽이 열린 관은 줄처럼 \(f_n = \dfrac{nv}{2L}\)이고, 한쪽이 막힌 관은 \(L = \dfrac{\lambda}{4}\)부터 시작하여 \(f = \dfrac{(2n - 1)v}{4L}\)의 홀수배 진동만 생긴다.</p>
           <p>실제 악기는 기본 진동과 여러 배진동을 동시에 낸다. 음의 높이는 기본 진동수가 정하고, 배진동들이 섞인 비율이 음색을 정한다. 그래서 같은 '라'라도 기타와 피아노, 플루트의 소리가 다르게 들린다.</p>
           <figure class="q-fig">
@@ -89,8 +89,8 @@
             <figcaption>그림 2. 열린 끝은 배, 닫힌 끝은 마디가 된다. 같은 길이라면 닫힌 관의 기본음이 한 옥타브 낮다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.5.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.5.2</span>
             <p>길이 0.65 m인 기타 줄에서 파동의 속력이 260 m/s이다. 기본 진동수와 두 번째 배진동수를 구하여라. 줄의 한가운데를 짚어 길이를 절반으로 하면 기본 진동수는 얼마가 되는가?</p>
           </div>
           <p>기본 진동에서 파장은 \(2L = 1.3\) m이므로 \(f_1 = \dfrac{260}{1.3} = 200\) Hz이다. 두 번째 배진동(\(n = 2\))은 파장 0.65 m, 진동수 400 Hz이다.</p>
@@ -103,7 +103,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>반대 방향으로 진행하는 두 파동이 겹치면 마디와 배가 제자리에 고정된 정상파가 생긴다. 양 끝이 고정된 줄은 길이가 반파장의 정수배일 때만 정상파를 이루므로 고유 진동수 \(\frac{nv}{2L}\)로만 진동하며, 배진동이 섞인 비율이 음색을 정한다. 그래서 처음 질문의 기타 줄은 정해진 진동수들로만 떨고, 줄을 짚어 짧게 하면 음이 높아진다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 왜 뒤집혀 돌아오기도 할까?</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/4-1.html#text-labphy-water-column"><small class="mono">물리학 실험 4.1</small>첫 공명 위치만 재면 왜 음속이 조금 틀리게 나올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/4-1.html#card-labphy-standing"><small class="mono">물리학 실험 4.1</small>물높이만 바꿔서 소리의 속력을 잴 수 있을까?</a><a href="../../c/adphy/4-5.html#card-adphy-well"><small class="mono">고급 물리학 4.5</small>상자에 갇힌 전자는 왜 아무 에너지나 가질 수 없을까?</a><a href="../../c/adearth/2-10.html#card-adearth-tide-resonance"><small class="mono">고급 지구과학 2.10</small>평형 조석은 1 m도 안 되는데, 왜 어떤 만에서는 조차가 10 m를 넘을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>탄성파의 진행·반사·투과</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/4-1.html#text-labphy-water-column"><small class="mono">물리학 실험 4.1</small>정상파와 공명</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/4-1.html#card-labphy-standing"><small class="mono">물리학 실험 4.1</small>물높이만 바꿔서 소리의 속력을 잴 수 있을까?</a><a href="../../c/adphy/4-5.html#card-adphy-well"><small class="mono">고급 물리학 4.5</small>상자에 갇힌 전자는 왜 아무 에너지나 가질 수 없을까?</a><a href="../../c/adearth/2-10.html#card-adearth-tide-resonance"><small class="mono">고급 지구과학 2.10</small>평형 조석은 1 m도 안 되는데, 왜 어떤 만에서는 조차가 10 m를 넘을까?</a></div></nav>
 
       <article class="card" id="card-mech-standing">
         <header class="card-head">
@@ -149,7 +149,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 왜 뒤집혀 돌아오기도 할까?</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/4-1.html#text-labphy-water-column"><small class="mono">물리학 실험 4.1</small>첫 공명 위치만 재면 왜 음속이 조금 틀리게 나올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/4-1.html#card-labphy-standing"><small class="mono">물리학 실험 4.1</small>물높이만 바꿔서 소리의 속력을 잴 수 있을까?</a><a href="../../c/adphy/4-5.html#card-adphy-well"><small class="mono">고급 물리학 4.5</small>상자에 갇힌 전자는 왜 아무 에너지나 가질 수 없을까?</a><a href="../../c/adearth/2-10.html#card-adearth-tide-resonance"><small class="mono">고급 지구과학 2.10</small>평형 조석은 1 m도 안 되는데, 왜 어떤 만에서는 조차가 10 m를 넘을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>탄성파의 진행·반사·투과</a><a href="../../c/mech/3-4.html#card-mech-two-speaker"><small class="mono">역학과 에너지 3.4</small>스피커 두 대 사이에서 소리가 사라지는 자리는 어디일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/4-1.html#text-labphy-water-column"><small class="mono">물리학 실험 4.1</small>정상파와 공명</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/4-1.html#card-labphy-standing"><small class="mono">물리학 실험 4.1</small>물높이만 바꿔서 소리의 속력을 잴 수 있을까?</a><a href="../../c/adphy/4-5.html#card-adphy-well"><small class="mono">고급 물리학 4.5</small>상자에 갇힌 전자는 왜 아무 에너지나 가질 수 없을까?</a><a href="../../c/adearth/2-10.html#card-adearth-tide-resonance"><small class="mono">고급 지구과학 2.10</small>평형 조석은 1 m도 안 되는데, 왜 어떤 만에서는 조차가 10 m를 넘을까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=mech&amp;sec=3-5"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
       <a class="px-go" href="../../practice.html?sec=mech-3-5"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">53문항</span></a>

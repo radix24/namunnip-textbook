@@ -63,7 +63,7 @@
 
     <div>
       <article class="card reading" id="text-labphy-aliasing" data-kind="본문">
-        <header class="card-head"><span class="no">1.4.1</span><h2>0.4초마다 흔들리는 진자가 그래프에서는 왜 2초마다 흔들릴까?</h2><span class="kind">본문 · 센서와 컴퓨터 측정</span></header>
+        <header class="card-head"><span class="no">1.4.1</span><h2>센서와 컴퓨터 측정</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">용수철에 매단 추 아래에 초음파 거리 센서를 두고, 데이터 기록기를 1초에 2번 재도록 맞췄다. 추는 눈으로 보아도 1초에 두 번 넘게 오르내리는데, 화면의 그래프는 2초에 한 번씩 느릿하게 오르내린다. 센서가 고장 난 것일까? 컴퓨터로 잰 값을 믿으려면 얼마나 자주, 그리고 얼마나 잘게 재야 할까?</p>
           <figure class="q-fig" data-q="lp-alias">
@@ -74,15 +74,15 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>아날로그 신호와 디지털 신호, 용수철 진자의 주기, 2진수, 진동수와 주기(<a href="1-3.html">오실로스코프와 함수 발생기</a>).</div>
 
-          <h3><span class="mono">1</span>띄엄띄엄 재는 측정</h3>
+          <h3><span class="no">1.4.1</span>띄엄띄엄 재는 측정</h3>
           <p>센서는 위치나 온도 같은 양을 전압으로 바꾸고, 데이터 기록기는 그 전압을 일정한 시간 간격마다 읽어 숫자로 바꾼다. 연속으로 변하는 양을 띄엄띄엄 읽는 이 과정을 표본화라 하고, 1초에 읽는 횟수를 표본화 진동수라 한다. 컴퓨터가 그리는 그래프는 그 점들을 이은 선일 뿐이므로, 점과 점 사이에서 일어난 일은 알 수 없다. 따라서 측정 간격이 운동의 변화보다 충분히 짧아야 점들이 실제 운동을 따라간다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">표본화 정리와 앨리어싱</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">표본화 정리와 앨리어싱</span></span>
             <p>진동수 \(f\)인 진동을 표본화 진동수 \(f_s\)로 잴 때, \(f_s > 2f\)이어야 진동수를 바르게 기록한다. \(f_s\)가 그보다 작으면 점들은 진동수 \[f_a = |f - n f_s| \quad (n\text{은 } f_a \text{를 가장 작게 하는 정수})\]인 가짜 진동을 그린다. 이것을 앨리어싱이라 한다.</p>
           </div>
           <p>그림 1에서 측정 횟수를 바꾸어 보자. 1초에 0.5번 재면 매번 진자가 같은 자리에 있을 때만 재게 되어, 진자가 멈춘 것처럼 기록된다. 그런데 0.6번 재면 매번 조금씩 늦게 재게 되어, 주기 10 s의 느린 진동이 그려진다. 1초에 1번보다 많이 재야 비로소 주기 2 s가 드러나고, 물결의 모양까지 매끄럽게 보려면 주기마다 10번 이상, 곧 1초에 5번 넘게 재야 한다. 또 점이 적으면 봉우리를 건너뛰어 진폭도 작게 기록된다.<sup class="fn"><a href="#fn-labphy-aliasing-1">1</a></sup></p>
           <p>왜 하필 2배일까? 진동 한 번은 올라가는 반과 내려오는 반으로 이루어져 있다. 한 주기에 점이 두 개보다 많으면 올라가는 쪽과 내려오는 쪽에 적어도 한 점씩 떨어져서, 점들이 오르내림을 빠짐없이 기록한다. 반대로 한 주기에 점이 두 개도 안 되면 어떤 오르내림은 점 사이로 통째로 빠져나가고, 남은 점들은 실제보다 느린 진동을 그리게 된다. 그래서 2배는 진동수를 읽기 위한 최소한일 뿐이고, 모양까지 보려면 앞에서처럼 훨씬 자주 재야 한다.</p>
 
-          <h3><span class="mono">2</span>얼마나 잘게 재는가</h3>
+          <h3><span class="no">1.4.2</span>얼마나 잘게 재는가</h3>
           <p>측정 간격과 함께, 한 번 잴 때 값을 얼마나 잘게 나누는지도 중요하다. 데이터 기록기 안의 변환기는 전압을 정해진 개수의 단계로 나누어 2진수로 적는다. 10비트 변환기는 \(2^{10} = 1024\)단계로 나누므로, 0~5 V를 재는 변환기의 한 단계는 \(5/1024 \approx 4.9\) mV이다. 예를 들어 거리 센서가 0~2 m를 0~5 V로 바꾼다면 한 단계는 약 2 mm이고, 이보다 작은 움직임은 기록되지 않는다. 그래서 12비트로 늘리면 4096단계가 되어 한 단계가 0.5 mm로 준다. 이 단계의 크기가 디지털 측정의 분해능이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="측정 설정과 기록되는 값">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 측정 간격은 운동의 빠르기를, 비트 수는 움직임의 작은 차이를 기록할 수 있는지를 정한다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.4.2</span>
             <p>처음 질문의 추는 주기 0.4 s로 진동한다. 1초에 2번 재면 그래프에 나타나는 진동의 주기는 얼마인가? 진동을 바르게 기록하려면 1초에 몇 번보다 많이 재야 하고, 주기마다 10점을 얻으려면 몇 번 재야 하는가?</p>
           </div>
           <p>추의 진동수는 \(f = 1/0.4 = 2.5\) Hz이고 표본화 진동수는 \(f_s = 2\) Hz이다. \(n = 1\)일 때 \(f_a = |2.5 - 2| = 0.5\) Hz로 가장 작으므로, 그래프에는 주기 \(1/0.5 = 2\) s인 가짜 진동이 그려진다. 센서는 고장 나지 않았고, 0.5초마다 잴 때마다 추가 한 주기와 4분의 1을 더 움직여 있어서 점들이 천천히 한 바퀴를 도는 것이다.</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>컴퓨터 측정은 연속으로 변하는 양을 일정한 간격으로 읽어 단계로 나눈 숫자로 적는다. 진동수 \(f\)인 운동을 \(2f\)보다 드물게 재면 \(|f - nf_s|\)의 가짜 진동이 기록되고, 모양까지 보려면 주기마다 10점쯤 재야 하며, 비트 수는 기록할 수 있는 가장 작은 차이를 정한다. 처음 질문의 그래프는 2.5 Hz의 진자를 2 Hz로 재어 생긴 0.5 Hz의 앨리어싱이고, 1초에 25번쯤 재면 바른 운동이 기록된다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>연속으로 변하는 소리와 온도는 어떻게 숫자가 될까?</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>정보와 디지털 신호</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <article class="card" id="card-is1-sampling">
         <header class="card-head">
@@ -162,7 +162,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <article class="card" id="card-is1-sensor">
         <header class="card-head">
@@ -207,7 +207,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>원자핵부터 우주까지, 시간과 길이를 어떻게 잴까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 배우고, 그 답은 언제 믿으면 안 될까?</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-1.html#card-is1-scale"><small class="mono">통합과학1 1.1</small>원자핵에서 우주까지, 무엇으로 잴까?</a><a href="../../c/is1/1-1.html#card-is1-clock"><small class="mono">통합과학1 1.1</small>1초는 누가, 어떻게 정할까?</a><a href="../../c/is1/1-1.html#text-is1-measure-space-time"><small class="mono">통합과학1 1.1</small>시간과 공간의 측정</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/3-3.html#card-is2-learn"><small class="mono">통합과학2 3.3</small>인공지능은 어떻게 ‘학습’할까?</a><a href="../../c/is2/3-3.html#card-is2-trust"><small class="mono">통합과학2 3.3</small>AI가 ‘99% 확실하다’고 하면 믿어도 될까?</a><a href="../../c/is2/3-3.html#text-is2-ai-robot"><small class="mono">통합과학2 3.3</small>인공지능과 로봇</a><a href="../../c/is2/3-3.html#card-is2-robot"><small class="mono">통합과학2 3.3</small>로봇은 어떻게 선을 따라갈까?</a></div></nav>
 
       <article class="card" id="card-labphy-logger">
         <header class="card-head">
@@ -254,7 +254,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>연속으로 변하는 소리와 온도는 어떻게 숫자가 될까?</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>정보와 디지털 신호</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a></div></nav>
 
       <article class="card" id="card-sie2-calib">
         <header class="card-head">
@@ -301,7 +301,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>연속으로 변하는 소리와 온도는 어떻게 숫자가 될까?</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>센서가 보낸 숫자를 어떻게 온도로 바꿀까?</a><a href="../../c/sie1/2-3.html#card-sie1-plot"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/sie2/2-2.html#card-sie2-co2"><small class="mono">과학탐구실험2 2.2</small>교실 공기, 숫자로 보면 무엇이 달라질까?</a><a href="../../c/fusi/2-3.html#card-fusi-sampling"><small class="mono">융합과학 탐구 2.3</small>설문에 응답한 사람이 많으면 전교생을 대표할까?</a><a href="../../c/fusi/2-3.html#card-fusi-pmsensor"><small class="mono">융합과학 탐구 2.3</small>값싼 미세먼지 센서가 보낸 숫자를 믿어도 될까?</a><a href="../../c/fusi/2-3.html#text-fusi-response-bias"><small class="mono">융합과학 탐구 2.3</small>응답자가 수백 명인 설문이 왜 틀린 답을 내놓을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-4.html#text-is1-ict-history"><small class="mono">통합과학1 1.4</small>정보 통신 기술은 문명을 어떻게 바꾸었을까?</a><a href="../../c/is1/1-4.html#text-is1-digital"><small class="mono">통합과학1 1.4</small>정보와 디지털 신호</a><a href="../../c/sie2/2-1.html#text-sie2-sensor-calibration"><small class="mono">과학탐구실험2 2.1</small>첨단 과학기술 속 과학 원리</a><a href="../../c/sie1/2-3.html#card-sie1-plot"><small class="mono">과학탐구실험1 2.3</small>같은 자료인데 왜 그래프마다 다른 이야기를 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/sie2/2-2.html#card-sie2-co2"><small class="mono">과학탐구실험2 2.2</small>교실 공기, 숫자로 보면 무엇이 달라질까?</a><a href="../../c/fusi/2-3.html#card-fusi-sampling"><small class="mono">융합과학 탐구 2.3</small>설문에 응답한 사람이 많으면 전교생을 대표할까?</a><a href="../../c/fusi/2-3.html#card-fusi-pmsensor"><small class="mono">융합과학 탐구 2.3</small>값싼 미세먼지 센서가 보낸 숫자를 믿어도 될까?</a><a href="../../c/fusi/2-3.html#text-fusi-response-bias"><small class="mono">융합과학 탐구 2.3</small>데이터 수집과 신뢰성 평가</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=labphy&amp;sec=1-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">7문항</span></a>
 

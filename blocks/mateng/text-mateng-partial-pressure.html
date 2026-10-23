@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-mateng-partial-pressure" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>깊은 바다에서는 왜 공기 대신 다른 기체를 마실까?</h2><span class="kind">본문 · 부분 압력과 몰 분율</span></header>
+  <header class="card-head"><span class="no"></span><h2>부분 압력과 몰 분율</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">스쿠버 다이버는 압축 공기통을 메고 물속에 들어간다. 그런데 60 m보다 깊이 내려가는 잠수부는 공기 대신 산소를 줄이고 헬륨을 섞은 특별한 기체를 쓴다. 산소는 생명에 꼭 필요한데 왜 일부러 줄일까? 또 높은 산에서는 공기 속 산소 비율이 같은데도 왜 숨이 찰까? 섞인 기체가 저마다 내는 압력을 따져 보면 답이 나온다.</p>
     <figure class="q-fig" data-q="mat-dive">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>이상 기체 방정식(<a href="1-1.html">이상 기체 방정식</a>), 몰, 압력(물리학).</div>
 
-    <h3><span class="mono">1</span>돌턴의 부분 압력 법칙</h3>
+    <h3><span class="no">1.2.1</span>돌턴의 부분 압력 법칙</h3>
     <p>이상 기체에서 분자들은 서로 거의 영향을 주지 않는다. 그래서 여러 기체가 섞여 있어도 각 기체는 마치 혼자 그 용기를 차지한 것처럼 압력을 낸다. 한 성분이 혼자 있을 때 낼 압력을 그 성분의 부분 압력이라 한다. 그리고 전체 압력은 부분 압력의 합이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">부분 압력과 몰 분율</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.2.1 <span class="nm">부분 압력과 몰 분율</span></span>
       <p>혼합 기체에서 성분 A의 몰 분율을 \(x_A = \dfrac{n_A}{n_{\text{전체}}}\)라 하면 \[P_A = x_A P_{\text{전체}},\qquad P_{\text{전체}} = P_A + P_B + \cdots\] 이다.</p>
     </div>
     <p>공기는 몰 분율로 질소 약 78%, 산소 약 21%이다. 그래서 1 atm인 해수면에서 산소의 부분 압력은 0.21 atm이다. 우리 몸이 산소를 받아들이는 정도는 산소의 비율이 아니라 부분 압력이 정한다. 한편 해발 5000 m에서는 기압이 약 0.53 atm으로 떨어져, 비율은 21% 그대로라도 산소의 부분 압력은 0.11 atm으로 절반 가까이 줄어든다. 그래서 높은 산에서 숨이 찬다.</p>
 
-    <h3><span class="mono">2</span>잠수와 부분 압력</h3>
+    <h3><span class="no">1.2.2</span>잠수와 부분 압력</h3>
     <p>물속으로 내려가면 수압 때문에 폐로 들어가는 공기의 압력도 커진다. 그런데 몰 분율은 그대로이므로 산소와 질소의 부분 압력이 모두 커진다. 산소의 부분 압력이 너무 크면 신경계와 폐가 손상되는 산소 중독이 일어나고, 질소의 부분 압력이 크면 술에 취한 듯 판단력이 흐려지는 질소 마취가 일어난다.<sup class="fn"><a href="#fn-mateng-partial-pressure-1">1</a></sup> 그림 1에서 깊이를 늘려 보자. 약 57 m에서 산소의 부분 압력이 1.4 atm을 넘는다. 따라서 깊은 잠수에서는 산소의 몰 분율을 줄이고, 질소 대신 마취 효과가 거의 없는 헬륨을 섞는다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="장소에 따른 산소의 부분 압력">
@@ -38,8 +38,8 @@
       <figcaption>그림 2. 산소의 몰 분율은 모두 21%이지만 전체 압력이 달라 부분 압력은 8배 가까이 차이 난다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.2.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.2.2</span>
       <p>수심 60 m에서 공기를 마시면 산소의 부분 압력은 얼마인가? 이 깊이에서 산소의 부분 압력을 0.7 atm으로 맞추려면 혼합 기체 속 산소의 몰 분율을 얼마로 해야 하는가?</p>
     </div>
     <p>수심 60 m의 전체 압력은 대기압 1 atm에 수압 6 atm을 더한 7 atm이다. 공기를 마시면 산소의 부분 압력은 \(0.21 \times 7 = 1.47\) atm으로 한계 1.4 atm을 넘는다.</p>

@@ -61,7 +61,7 @@
 
     <div>
       <article class="card reading" id="text-dmath-planar" data-kind="본문">
-        <header class="card-head"><span class="no">4.4.1</span><h2>세 집에 수도, 전기, 가스를 선이 겹치지 않게 놓을 수 있을까?</h2><span class="kind">본문 · 평면그래프</span></header>
+        <header class="card-head"><span class="no">4.4.1</span><h2>평면그래프</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">평평한 땅 위에 집 세 채와 수도국, 전력소, 가스소가 있다. 각 집을 세 시설과 모두 관으로 이어야 하는데, 관끼리는 겹치거나 교차하면 안 되고 땅 밖으로 우회할 수도 없다. 관은 모두 9개인데, 아무리 구불구불하게 돌려 보아도 마지막 하나가 꼭 다른 관을 가로지른다. 정말 불가능한 것일까? 정육면체의 꼭짓점과 모서리를 평면에 펼쳐 그리면 선이 겹치지 않는데, 둘은 무엇이 다를까?</p>
           <figure class="q-fig">
@@ -79,14 +79,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>그래프와 차수(<a href="4-1.html">그래프와 실생활 문제</a>), 악수 정리(<a href="4-2.html">꼭짓점의 차수와 변의 개수</a>).</div>
 
-          <h3><span class="mono">1</span>오일러 공식</h3>
+          <h3><span class="no">4.4.1</span>오일러 공식</h3>
           <p>변끼리 꼭짓점이 아닌 곳에서 만나지 않도록 평면에 그릴 수 있는 그래프를 평면그래프라 한다. 평면그래프를 그리면 변들이 평면을 여러 영역으로 나누는데, 그 영역을 면이라 하고 바깥의 끝없는 영역도 하나의 면으로 센다. 연결된 평면그래프에서는 꼭짓점 수 \(v\), 변 수 \(e\), 면 수 \(f\)가 늘 \(v - e + f = 2\)를 만족한다. 변 하나를 더하면 면이 하나 늘거나 꼭짓점이 하나 늘어, \(v - e + f\)는 바뀌지 않기 때문이다. 꼭짓점 하나에서 출발하면 \(1 - 0 + 1 = 2\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">오일러 공식과 그 결과</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.4.1 <span class="nm">오일러 공식과 그 결과</span></span>
             <p>연결된 평면그래프에서 \(v - e + f = 2\)이다. 꼭짓점이 3개 이상인 단순 평면그래프는 \(e \le 3v - 6\)이고, 삼각형이 없으면 \(e \le 2v - 4\)이다. 그래서 \(K_5\)(5개의 꼭짓점이 모두 서로 이어진 그래프)와 \(K_{3,3}\)은 평면그래프가 아니다.</p>
           </div>
           <p>단순그래프에서 각 면은 적어도 세 개의 변으로 둘러싸이고, 각 변은 많아야 두 면의 경계가 된다. 그래서 면의 경계를 이루는 변을 모두 세면 \(3f \le 2e\)이다. 이것을 오일러 공식에 넣으면 \(e \le 3v - 6\)이 된다. 삼각형이 없으면 각 면이 적어도 네 변으로 둘러싸여 \(4f \le 2e\)이고, 같은 방법으로 \(e \le 2v - 4\)가 된다. 이 부등식을 어기는 그래프는 아무리 잘 그려도 선이 겹친다.<sup class="fn"><a href="#fn-dmath-planar-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>정다면체가 다섯 가지뿐인 까닭</h3>
+          <h3><span class="no">4.4.2</span>정다면체가 다섯 가지뿐인 까닭</h3>
           <p>볼록한 다면체의 꼭짓점과 모서리는 한 면을 펼쳐 바깥 면으로 삼으면 평면그래프로 그릴 수 있다. 그래서 다면체에서도 꼭짓점 수에서 모서리 수를 빼고 면 수를 더하면 2이다. 이 공식에 모든 면이 같은 정다각형이고 각 꼭짓점에 같은 수의 면이 모인다는 조건을 넣으면, 가능한 경우가 정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체의 다섯 가지뿐임을 보일 수 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="두 그래프가 평면그래프가 아님을 보이는 부등식">
@@ -101,8 +101,8 @@
             <figcaption>그림 2. 변이 너무 많으면 오일러 공식과 맞지 않아 평면에 겹치지 않게 그릴 수 없다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.4.2</span>
             <p>처음 질문의 세 집과 세 시설의 그래프 \(K_{3,3}\)이 평면그래프가 아님을 증명하여라. 정육면체의 그래프에서 오일러 공식을 확인하여라.</p>
           </div>
           <p>\(K_{3,3}\)은 꼭짓점 6개, 변 9개이다. 변은 늘 집과 시설 사이에만 있으므로 집끼리나 시설끼리는 이어져 있지 않고, 그래서 삼각형이 없다. 만약 평면그래프라면 \(e \le 2v - 4 = 8\)이어야 하는데 변이 9개이므로 모순이다. 오일러 공식으로 보면 평면그래프일 때 면이 \(f = 2 - 6 + 9 = 5\)개여야 하는데, 각 면이 네 변 이상으로 둘러싸이면 \(4\times5 = 20 \le 2\times9 = 18\)이 되어 모순이다. 그래서 관 하나는 반드시 다른 관을 가로지른다.</p>
@@ -115,7 +115,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>변이 꼭짓점이 아닌 곳에서 만나지 않게 평면에 그릴 수 있는 평면그래프는 꼭짓점, 변, 면의 수가 \(v - e + f = 2\)를 만족하며, 단순그래프이면 \(e \le 3v - 6\), 삼각형이 없으면 \(e \le 2v - 4\)이다. 이 부등식을 어기는 \(K_5\)와 \(K_{3,3}\)은 평면그래프가 아니고, 다면체에도 같은 공식이 성립한다. 처음 질문의 세 집과 세 시설은 \(K_{3,3}\)이어서 관 9개를 겹치지 않게 놓을 수 없다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>아홉 명이 저마다 꼭 세 명과 악수할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>시험 시간표를 짤 때 교시가 최소 몇 개 필요할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>꼭짓점의 차수와 변의 개수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>채색수와 채색다항식</a></div></nav>
 
       <article class="card" id="card-dmath-untangle">
         <header class="card-head">
@@ -148,7 +148,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>아홉 명이 저마다 꼭 세 명과 악수할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>시험 시간표를 짤 때 교시가 최소 몇 개 필요할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>꼭짓점의 차수와 변의 개수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>채색수와 채색다항식</a></div></nav>
 
       <article class="card" id="card-dmath-euler-formula">
         <header class="card-head">
@@ -182,7 +182,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>아홉 명이 저마다 꼭 세 명과 악수할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>시험 시간표를 짤 때 교시가 최소 몇 개 필요할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/4-2.html#card-dmath-handshake"><small class="mono">이산 수학 4.2</small>악수한 횟수를 모두 더하면 왜 늘 짝수일까?</a><a href="../../c/dmath/4-2.html#card-dmath-degree-seq"><small class="mono">이산 수학 4.2</small>차수 목록만 보고 그런 그래프가 있는지 알 수 있을까?</a><a href="../../c/dmath/4-2.html#text-dmath-degree"><small class="mono">이산 수학 4.2</small>꼭짓점의 차수와 변의 개수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/4-7.html#card-dmath-map-color"><small class="mono">이산 수학 4.7</small>지도를 칠하는 데 색이 최소 몇 가지 필요할까?</a><a href="../../c/dmath/4-7.html#card-dmath-chromatic-poly"><small class="mono">이산 수학 4.7</small>색이 k가지일 때 칠하는 방법은 몇 가지일까?</a><a href="../../c/dmath/4-7.html#text-dmath-coloring"><small class="mono">이산 수학 4.7</small>채색수와 채색다항식</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=dmath&amp;sec=4-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">10문항</span></a>
       <a class="px-go" href="../../practice.html?sec=dmath-4-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">6문항</span></a>

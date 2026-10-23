@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-adphy-resonance" data-kind="본문">
-        <header class="card-head"><span class="no">2.6.1</span><h2>라디오는 하늘을 채운 수많은 방송 가운데 하나만 어떻게 골라 들을까?</h2><span class="kind">본문 · 교류와 RLC 회로의 공진</span></header>
+        <header class="card-head"><span class="no">2.6.1</span><h2>교류와 RLC 회로의 공진</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">지금 우리 주변에는 수십 개 방송국의 전파가 한꺼번에 지나가고 있다. 라디오 안테나에는 이 모든 전파가 만든 작은 전류가 뒤섞여 흐른다. 그런데 다이얼을 돌리면 그중 하나의 방송만 또렷하게 들린다. 라디오 속의 회로는 어떻게 특정한 진동수의 전류만 크게 키우고 나머지는 거의 막을까? 코일과 축전기가 함께 있는 교류 회로에서 무슨 일이 일어날까?</p>
           <figure class="q-fig" data-q="adphy-res">
@@ -73,14 +73,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>전자기 유도와 발전기, 자체 유도 계수와 전기 용량(물리학), 삼각 함수의 미분(수학), 자체 유도(<a href="2-3.html">전류의 자기장과 자체 유도</a>).</div>
 
-          <h3><span class="mono">1</span>리액턴스와 위상</h3>
+          <h3><span class="no">2.6.1</span>리액턴스와 위상</h3>
           <p>코일에 교류 전류 \(I_0 \sin\omega t\)가 흐르면, 코일 양 끝의 전압은 \(L\dfrac{dI}{dt} = \omega L I_0 \cos\omega t\)로 전류보다 4분의 1주기 앞선다. 전압의 진폭을 전류의 진폭으로 나눈 \(X_L = \omega L\)을 유도 리액턴스라 한다. 진동수가 높을수록 전류가 빨리 변하므로 코일이 더 세게 막는다. 반대로 축전기의 전압은 쌓인 전하에 비례하여 전류보다 4분의 1주기 늦고, 용량 리액턴스는 \(X_C = \dfrac{1}{\omega C}\)이다. 진동수가 높을수록 축전기는 전류를 잘 통과시킨다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">직렬 RLC 회로의 임피던스와 공진</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">직렬 RLC 회로의 임피던스와 공진</span></span>
             <p>코일과 축전기의 전압은 서로 반주기 어긋나 상쇄되므로, 회로 전체의 임피던스는 \[Z = \sqrt{R^2 + (X_L - X_C)^2}\]이고 전류의 진폭은 \(V_0/Z\)이다. \(X_L = X_C\)가 되는 공진 진동수 \(f_0 = \dfrac{1}{2\pi\sqrt{LC}}\)에서 임피던스가 \(R\)로 가장 작아져 전류가 가장 크다.</p>
           </div>
           <p>그림 1에서 진동수를 바꾸어 보자. \(L = 10\) mH, \(C = 1\) μF이면 공진 진동수는 약 1592 Hz이다. 여기서 두 리액턴스가 모두 약 100 Ω으로 같아 서로 지우고, 저항 10 Ω만 남아 전류가 100 mA로 가장 크다. 1000 Hz로 내려가면 용량 리액턴스가 159 Ω, 유도 리액턴스가 63 Ω이라 차이가 96 Ω이 되어 전류가 약 10 mA로 줄어든다. 저항을 키우면 봉우리가 낮고 넓어져, 이웃한 진동수를 잘 가르지 못한다.<sup class="fn"><a href="#fn-adphy-resonance-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>공진으로 방송을 고르기</h3>
+          <h3><span class="no">2.6.2</span>공진으로 방송을 고르기</h3>
           <p>라디오의 동조 회로는 코일과 가변 축전기로 되어 있다. 다이얼을 돌리면 축전기 극판의 겹친 넓이가 변해 \(C\)가 바뀌고, 공진 진동수가 원하는 방송국의 진동수에 맞춰진다. 그러면 그 방송의 전류만 크게 흐르고, 진동수가 다른 방송의 전류는 큰 임피던스에 막혀 작아진다. 공진 때 코일과 축전기는 에너지를 서로 주고받으며, 그 사이에 저항이 에너지를 조금씩 열로 바꾼다. 저항이 작을수록 공진이 날카로워져, 이웃 방송과 섞이지 않고 깨끗하게 들린다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="교류 회로에서 세 소자의 성질">
@@ -95,8 +95,8 @@
             <figcaption>그림 2. 코일과 축전기는 진동수에 대해 정반대로 행동하여, 특정 진동수에서 서로를 지운다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
             <p>자체 유도 계수 0.25 mH인 코일과 가변 축전기로 AM 방송 1 MHz를 고르려 한다. 축전기의 용량을 얼마로 맞추어야 하는가? 같은 회로로 600 kHz 방송을 고르려면 용량을 몇 배로 바꾸어야 하는가?</p>
           </div>
           <p>\(f_0 = \dfrac{1}{2\pi\sqrt{LC}}\)에서 \(C = \dfrac{1}{4\pi^2 f_0^2 L} = \dfrac{1}{39.5 \times (10^6)^2 \times 2.5 \times 10^{-4}} \approx 1.0 \times 10^{-10}\) F, 곧 약 100 pF이다.</p>
@@ -109,7 +109,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>교류 회로에서 코일은 진동수에 비례하여, 축전기는 진동수에 반비례하여 전류를 막고, 두 전압은 위상이 반주기 어긋나 서로를 지운다. 그래서 두 리액턴스가 같아지는 공진 진동수 \(1/(2\pi\sqrt{LC})\)에서 임피던스가 저항만 남아 전류가 가장 크다. 처음 질문의 라디오는 가변 축전기로 이 공진 진동수를 원하는 방송에 맞추어, 그 방송의 전류만 크게 키운다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-5.html#card-phy-oersted"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a><a href="../../c/phy/2-5.html#card-phy-motor"><small class="mono">물리학 2.5</small>전동기는 어떻게 계속 돌까?</a><a href="../../c/phy/2-5.html#text-phy-current-mag"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a><a href="../../c/is2/2-5.html#text-is2-power"><small class="mono">통합과학2 2.5</small>발전소의 전기는 어떻게 만들어져 먼 도시까지 올까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/emq/1-5.html#card-emq-transformer"><small class="mono">전자기와 양자 1.5</small>변압기는 왜 교류에서만 작동할까?</a><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-5.html#card-phy-oersted"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a><a href="../../c/phy/2-5.html#card-phy-motor"><small class="mono">물리학 2.5</small>전동기는 어떻게 계속 돌까?</a><a href="../../c/phy/2-5.html#text-phy-current-mag"><small class="mono">물리학 2.5</small>전류의 자기 작용</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a><a href="../../c/is2/2-5.html#text-is2-power"><small class="mono">통합과학2 2.5</small>발전과 전력 수송</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/emq/1-5.html#card-emq-transformer"><small class="mono">전자기와 양자 1.5</small>변압기는 왜 교류에서만 작동할까?</a><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a></div></nav>
 
       <article class="card" id="card-is2-generator">
         <header class="card-head">
@@ -165,7 +165,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-5.html#card-phy-oersted"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a><a href="../../c/phy/2-5.html#card-phy-motor"><small class="mono">물리학 2.5</small>전동기는 어떻게 계속 돌까?</a><a href="../../c/phy/2-5.html#text-phy-current-mag"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a><a href="../../c/phy/2-6.html#text-phy-induction"><small class="mono">물리학 2.6</small>자석으로 전류를 만들 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/emq/1-5.html#card-emq-transformer"><small class="mono">전자기와 양자 1.5</small>변압기는 왜 교류에서만 작동할까?</a><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-5.html#card-phy-oersted"><small class="mono">물리학 2.5</small>전류가 흐르면 왜 나침반이 돌까?</a><a href="../../c/phy/2-5.html#card-phy-motor"><small class="mono">물리학 2.5</small>전동기는 어떻게 계속 돌까?</a><a href="../../c/phy/2-5.html#text-phy-current-mag"><small class="mono">물리학 2.5</small>전류의 자기 작용</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a><a href="../../c/phy/2-6.html#text-phy-induction"><small class="mono">물리학 2.6</small>전자기 유도</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-5.html#text-is2-power-plants"><small class="mono">통합과학2 2.5</small>화력 발전과 원자력 발전은 무엇을 얻고 무엇을 치를까?</a><a href="../../c/emq/1-5.html#card-emq-transformer"><small class="mono">전자기와 양자 1.5</small>변압기는 왜 교류에서만 작동할까?</a><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a></div></nav>
 
       <article class="card" id="card-emq-rlc">
         <header class="card-head">
@@ -213,7 +213,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-3.html#card-phy-capacitor"><small class="mono">물리학 2.3</small>축전기는 전기 에너지를 어떻게 저장할까?</a><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>금속판 두 장은 어떻게 전기를 담아 둘까?</a><a href="../../c/adphy/2-2.html#text-adphy-dielectric"><small class="mono">고급 물리학 2.2</small>축전기 속을 얇은 세라믹으로 채우면 왜 전하를 더 많이 담을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-3.html#card-phy-capacitor"><small class="mono">물리학 2.3</small>축전기는 전기 에너지를 어떻게 저장할까?</a><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>축전기</a><a href="../../c/adphy/2-2.html#text-adphy-dielectric"><small class="mono">고급 물리학 2.2</small>축전기의 연결과 유전체</a></div></nav>
 
       <article class="card" id="card-adphy-ac">
         <header class="card-head">
@@ -264,7 +264,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-2.html#card-adphy-capnet"><small class="mono">고급 물리학 2.2</small>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>카메라 플래시는 어떻게 순간적으로 밝은 빛을 낼까?</a><a href="../../c/adphy/2-5.html#card-adphy-kirchhoff"><small class="mono">고급 물리학 2.5</small>전류 방향을 거꾸로 가정해도 답이 맞을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adphy/2-3.html#card-adphy-selfind"><small class="mono">고급 물리학 2.3</small>코일을 두 배로 감으면 자체 유도 계수는 왜 네 배가 될까?</a><a href="../../c/adphy/2-2.html#card-adphy-capnet"><small class="mono">고급 물리학 2.2</small>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>저항·축전기·인덕터</a><a href="../../c/adphy/2-5.html#card-adphy-kirchhoff"><small class="mono">고급 물리학 2.5</small>전류 방향을 거꾸로 가정해도 답이 맞을까?</a></div></nav>
 
       <article class="card" id="card-labphy-rlc">
         <header class="card-head">
@@ -307,7 +307,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adphy/2-3.html#card-labphy-rc"><small class="mono">고급 물리학 2.3</small>축전기가 다 차는 데 걸리는 시간은 무엇이 정할까?</a><a href="../../c/labphy/3-8.html#text-labphy-time-constant"><small class="mono">물리학 실험 3.8</small>축전기는 왜 처음엔 빨리 차다가 점점 느려질까?</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a><a href="../../c/labphy/2-8.html#text-labphy-energy-sum"><small class="mono">물리학 실험 2.8</small>가장 낮은 곳의 추는 탄성 에너지가 1.19 J인데, 왜 전체는 0.70 J일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/3-9.html#text-labphy-q-factor"><small class="mono">물리학 실험 3.9</small>라디오는 수많은 방송 가운데 어떻게 한 곳만 골라 들을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adphy/2-3.html#card-labphy-rc"><small class="mono">고급 물리학 2.3</small>축전기가 다 차는 데 걸리는 시간은 무엇이 정할까?</a><a href="../../c/labphy/3-8.html#text-labphy-time-constant"><small class="mono">물리학 실험 3.8</small>RC·RL 회로의 시간 상수</a><a href="../../c/mech/3-1.html#card-mech-shm"><small class="mono">역학과 에너지 3.1</small>용수철에 매단 추는 언제 가장 빠르고, 언제 가장 세게 당겨질까?</a><a href="../../c/labphy/2-8.html#text-labphy-energy-sum"><small class="mono">물리학 실험 2.8</small>용수철 진자의 역학적 에너지</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/3-9.html#text-labphy-q-factor"><small class="mono">물리학 실험 3.9</small>RLC 회로의 특성</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adphy&amp;sec=2-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">10문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adphy-2-6"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">40문항</span></a>

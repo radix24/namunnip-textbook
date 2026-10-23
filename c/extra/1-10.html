@@ -53,7 +53,7 @@
 
     <div>
       <article class="card reading" id="text-extra-random-walk" data-kind="본문">
-        <header class="card-head"><span class="no">1.10.1</span><h2>동전을 던져 100걸음을 걸으면 출발점에서 얼마나 멀어질까?</h2><span class="kind">본문 · 마구 걷기와 √n</span></header>
+        <header class="card-head"><span class="no">1.10.1</span><h2>마구 걷기와 √n</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">긴 복도 한가운데에 서서 동전을 던진다. 앞면이 나오면 오른쪽으로 한 걸음, 뒷면이 나오면 왼쪽으로 한 걸음 간다. 이것을 100번 하면 나는 출발점에서 얼마나 떨어져 있을까? 오른쪽과 왼쪽이 반반이니 제자리에 있을 것 같기도 하고, 100걸음이나 걸었으니 꽤 멀리 갔을 것 같기도 하다. 답은 둘 다 아니고, 대략 10걸음이다. 왜 하필 100의 제곱근일까?</p>
           <figure class="q-fig">
@@ -62,10 +62,10 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>확률의 뜻, 평균, 제곱근.</div>
 
-          <h3><span class="mono">1</span>평균은 0인데 멀어진다</h3>
+          <h3><span class="no">1.10.1</span>평균은 0인데 멀어진다</h3>
           <p>한 걸음을 \(+1\) 또는 \(-1\)로 적으면 \(n\)걸음 뒤의 위치는 \(X_n = s_1 + s_2 + \cdots + s_n\)이다. 각 걸음의 평균은 0이므로 위치의 평균도 0이다. 그런데 평균이 0이라는 것은 오른쪽으로 간 사람과 왼쪽으로 간 사람이 고르게 섞여 있다는 뜻일 뿐, 한 사람 한 사람이 제자리에 있다는 뜻이 아니다. 그림 1에서도 여섯 사람 가운데 출발점에 서 있는 사람은 거의 없다.</p>
           <p>그래서 얼마나 멀어졌는지를 재려면 부호를 없애야 한다. 절댓값보다 다루기 쉬운 제곱을 쓰자. \(X_n^2\)을 전개하면 \(s_i^2\)들의 합과 서로 다른 두 걸음의 곱 \(s_is_j\)들의 합이 나온다. \(s_i^2\)은 언제나 1이니 그 합은 정확히 \(n\)이다. 한편 서로 다른 두 걸음은 따로 던진 동전이라 곱이 \(+1\)인 경우와 \(-1\)인 경우가 반반이어서 평균이 0이다. 그러니 \(X_n^2\)의 평균은 \(n\)이고, 거리의 크기는 대략 \(\sqrt n\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">마구 걷기의 거리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.10.1 <span class="nm">마구 걷기의 거리</span></span>
             <p>한 걸음에 \(+1\) 또는 \(-1\)을 같은 확률로 가는 걸음을 \(n\)번 하면, 위치 \(X_n\)의 평균은 0이고 \(X_n^2\)의 평균은 \(n\)이다. 따라서 출발점에서의 거리는 대략 \(\sqrt n\) 정도이다. 평면에서 상하좌우로 걷는 경우에도 거리의 제곱의 평균은 \(n\)이다.</p>
           </div>
           <p>이 결과는 걸음 수를 네 배로 늘려야 거리가 두 배가 된다는 뜻이다. 100걸음에 10걸음쯤 멀어졌다면, 20걸음쯤 멀어지려면 400걸음이 필요하다. 평면에서 걸어도 마찬가지여서, 그림 2처럼 300걸음을 걸은 사람은 대개 반지름 \(\sqrt{300} \approx 17\)걸음인 원 근처 안쪽에서 끝난다.</p>
@@ -74,12 +74,12 @@
             <figcaption>그림 2. 격자 위에서 상하좌우를 고르게 골라 300걸음을 걸은 길. 300걸음을 걸었지만 출발점에서는 15걸음쯤 떨어졌을 뿐이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">2</span>잉크 한 방울이 퍼지는 빠르기</h3>
+          <h3><span class="no">1.10.2</span>잉크 한 방울이 퍼지는 빠르기</h3>
           <p>물에 떨어뜨린 잉크 분자도 물 분자와 끊임없이 부딪혀 방향을 바꾸므로 마구 걷기를 한다. 그래서 잉크가 퍼진 범위는 시간에 비례하지 않고 시간의 제곱근에 비례한다. 1분 만에 1 cm 퍼진 잉크가 2 cm 퍼지려면 2분이 아니라 4분이 걸리고, 10 cm 퍼지려면 100분이 걸린다. 우리 몸의 세포가 아주 작은 것도 이 때문이다. 세포 안에서는 산소와 영양분이 대개 마구 걷기로 옮겨 다니는데, 세포가 10배 커지면 안쪽까지 퍼지는 데 100배의 시간이 든다.</p>
           <p>또 하나 신기한 사실은 직선 위를 마구 걷는 사람은 언젠가 반드시 출발점으로 돌아온다는 것이다. 100걸음 안에 한 번이라도 돌아올 확률이 약 92%이고, 걸음을 늘릴수록 1에 가까워진다. 평면에서도 언젠가는 반드시 돌아오지만, 공간에서 위아래까지 여섯 방향으로 걷는 새는 끝내 돌아오지 못할 확률이 3분의 2에 가깝다.<sup class="fn"><a href="#fn-extra-random-walk-1">1</a></sup></p>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.10.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.10.2</span>
             <p>동전을 100번 던져 직선 위를 걸을 때, 100걸음 뒤 정확히 출발점에 있을 확률을 구하여라. 또 출발점에서 10걸음 이내에 있을 확률은 대략 얼마인가?</p>
           </div>
           <p>100걸음 뒤 출발점에 있으려면 오른쪽으로 50번, 왼쪽으로 50번 가야 한다. 100번 가운데 앞면이 나올 50번을 고르는 방법이 \({}_{100}\mathrm{C}_{50}\)가지이고, 모든 경우는 \(2^{100}\)가지이므로 확률은 \({}_{100}\mathrm{C}_{50}/2^{100} \approx 0.080\), 약 8%이다. 위치가 가장 흔한 값인 0인데도 열에 한 번도 안 된다.</p>
@@ -96,7 +96,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>한 걸음에 \(+1\) 또는 \(-1\)을 같은 확률로 가는 마구 걷기는 위치의 평균이 0이지만, 위치의 제곱의 평균이 걸음 수 \(n\)과 같아서 출발점에서 대략 \(\sqrt n\)만큼 멀어진다. 그래서 거리를 두 배로 늘리려면 걸음이 네 배 필요하고, 잉크나 산소가 퍼지는 범위도 시간의 제곱근에 비례한다. 처음 질문의 100걸음은 대략 10걸음 떨어진 곳에서 끝나며, 딱 출발점에 있을 확률은 약 8%이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-3.html#text-stat-binomial"><small class="mono">확률과 통계 3.3</small>성공률이 같은 시도를 여러 번 하면 성공 횟수는 어떻게 분포할까?</a><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-3.html#text-stat-binomial"><small class="mono">확률과 통계 3.3</small>이항분포</a><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a></div></nav>
 
       <article class="card" id="card-extra-walk">
         <header class="card-head">
@@ -143,7 +143,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-3.html#text-stat-binomial"><small class="mono">확률과 통계 3.3</small>성공률이 같은 시도를 여러 번 하면 성공 횟수는 어떻게 분포할까?</a><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/stat/3-3.html#card-stat-binom-shape"><small class="mono">확률과 통계 3.3</small>자유투 10번 중 몇 번 들어갈까?</a><a href="../../c/stat/3-3.html#text-stat-binomial"><small class="mono">확률과 통계 3.3</small>이항분포</a><a href="../../c/stat/3-2.html#card-stat-balance"><small class="mono">확률과 통계 3.2</small>확률분포의 '가운데'와 '퍼짐'은 어디서 읽을까?</a><a href="../../c/stat/3-2.html#card-stat-linear-rv"><small class="mono">확률과 통계 3.2</small>점수를 두 배 하고 5점을 빼면 표준편차는?</a></div></nav>
 
 
       <nav class="next" aria-label="절 이동"></nav>

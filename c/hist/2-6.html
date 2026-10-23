@@ -59,7 +59,7 @@
 
     <div>
       <article class="card reading" id="text-hist-chain-reaction" data-kind="본문">
-        <header class="card-head"><span class="no">2.6.1</span><h2>같은 핵분열인데 왜 발전소는 전기를 만들고 폭탄은 도시를 파괴할까?</h2><span class="kind">본문 · 산업혁명 이후 과학기술의 명암</span></header>
+        <header class="card-head"><span class="no">2.6.1</span><h2>산업혁명 이후 과학기술의 명암</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">원자력 발전소와 핵폭탄은 둘 다 우라늄 원자핵이 쪼개지는 핵분열에서 에너지를 얻는다. 그런데 하나는 수십 년 동안 꾸준히 전기를 만들고, 다른 하나는 100만 분의 1초 만에 도시를 파괴한다. 같은 원리에서 어떻게 이렇게 다른 결과가 나올까? 그리고 같은 과학기술이 사람을 살리기도 하고 해치기도 하는 일은 왜 되풀이될까?</p>
           <figure class="q-fig" data-q="hist-chain">
@@ -70,14 +70,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>핵분열과 원자력(물리학, 통합과학), 지수함수, 과학기술과 윤리, 교통과 사회(<a href="2-5.html">교통수단과 미래 사회</a>).</div>
 
-          <h3><span class="mono">1</span>연쇄 반응과 증배 계수</h3>
+          <h3><span class="no">2.6.1</span>연쇄 반응과 증배 계수</h3>
           <p>우라늄-235 원자핵이 중성자 하나를 흡수하면 둘로 쪼개지며 큰 에너지와 함께 중성자 2~3개를 내놓는다. 이 중성자가 다른 원자핵을 쪼개면 반응이 이어지는데, 이를 연쇄 반응이라 한다. 한 세대의 핵분열이 다음 세대에 평균 몇 번의 핵분열을 일으키는지를 증배 계수 \(k\)라 한다. 중성자의 일부는 밖으로 새거나 다른 물질에 흡수되므로, \(k\)는 내놓는 중성자 수보다 작다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">임계 상태</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">임계 상태</span></span>
           <p>\(n\)세대 뒤의 핵분열 수는 처음의 \(k^n\)배이다. \(k = 1\)이면 반응이 일정하게 유지되는 임계 상태, \(k &lt; 1\)이면 꺼져 가는 미임계, \(k &gt; 1\)이면 지수적으로 커지는 초임계 상태이다.</p>
           </div>
           <p>원자력 발전소는 우라늄-235가 3~5%뿐인 연료를 쓰고, 중성자를 흡수하는 제어봉을 넣었다 뺐다 하여 \(k\)를 1에 맞춘다. 그래서 일정한 열이 나오고 그 열로 물을 끓여 터빈을 돌린다. 핵폭탄은 우라늄-235가 90% 넘는 물질을 순식간에 한데 모아 \(k\)를 2 가까이 만든다. 그림 1에서 \(k\)를 바꾸어 보자. 2이면 80세대 만에 \(10^{24}\)배가 넘는다.<sup class="fn"><a href="#fn-hist-chain-reaction-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>과학기술의 명암</h3>
+          <h3><span class="no">2.6.2</span>과학기술의 명암</h3>
           <p>산업혁명 이후 과학기술은 삶을 크게 바꾸었다. 하버의 암모니아 합성은 비료로 수십억 명을 먹여 살렸지만, 같은 하버가 독가스 개발을 이끌었다. 다이너마이트는 광산과 터널 공사를 바꾸었지만 전쟁에도 쓰였다. 핵분열은 전기와 의료용 방사성 동위 원소를 주었지만 핵무기도 낳았다. 같은 지식이 어디에, 누구를 위해 쓰이는지는 과학만으로 정해지지 않으며, 과학자와 시민이 함께 책임을 나누어야 한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="원자로와 핵폭탄의 비교">
@@ -91,8 +91,8 @@
             <figcaption>그림 2. 같은 핵분열이지만 연료와 증배 계수가 결과를 가른다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
           <p>핵폭탄에서 한 세대가 약 10 ns(1억분의 1초)이고 \(k = 2\)이다. 핵분열 한 번에서 시작해 \(10^{24}\)번에 이르는 데 몇 세대, 몇 초가 걸리는가? 원자로에서 \(k\)가 실수로 1.001이 되었고 한 세대가 0.1 ms라면, 1초 뒤 출력은 몇 배인가? (\(\log 2 \approx 0.301\), \(e^{10} \approx 22\,000\))</p>
           </div>
           <p>\(2^n = 10^{24}\)에서 \(n = \dfrac{24}{0.301} \approx 80\)세대이다. 시간은 \(80 \times 10\) ns \(= 800\) ns, 곧 100만 분의 1초도 안 걸린다.</p>
@@ -105,7 +105,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>핵분열의 연쇄 반응은 증배 계수 \(k\)에 따라 \(k^n\)으로 변하며, 원자력 발전소는 제어봉으로 \(k = 1\)을 유지하고 핵폭탄은 고농축 연료로 \(k \approx 2\)를 만들어 순식간에 폭발시킨다. 같은 과학기술이 쓰임에 따라 사람을 살리기도 해치기도 한다. 그래서 처음 질문의 발전소와 폭탄의 차이는 연료의 농축도와 증배 계수를 1에 묶어 두느냐, 2 가까이 만드느냐에 있다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>할 수 있게 된 일을 모두 해도 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>과학기술과 윤리</a></div></nav>
 
       <article class="card" id="card-hist-chain">
         <header class="card-head">
@@ -150,7 +150,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>할 수 있게 된 일을 모두 해도 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>과학기술과 윤리</a></div></nav>
 
       <article class="card reading" id="text-hist-dual-use">
         <header class="card-head">
@@ -195,7 +195,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>할 수 있게 된 일을 모두 해도 될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is2/3-4.html#card-is2-ethics"><small class="mono">통합과학2 3.4</small>확진자의 이동 경로, 어디까지 공개해야 할까?</a><a href="../../c/is2/3-4.html#text-is2-science-role"><small class="mono">통합과학2 3.4</small>과학은 미래의 문제를 어디까지 해결할 수 있을까?</a><a href="../../c/is2/3-4.html#text-is2-genai"><small class="mono">통합과학2 3.4</small>생성형 AI가 그린 그림은 누구의 것일까?</a><a href="../../c/is2/3-4.html#text-is2-ethics"><small class="mono">통합과학2 3.4</small>과학기술과 윤리</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=hist&amp;sec=2-6"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
 

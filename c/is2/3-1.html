@@ -65,7 +65,7 @@
 
     <div>
       <article class="card reading" id="text-is2-diagnosis" data-kind="본문">
-        <header class="card-head"><span class="no">3.1.1</span><h2>검사 결과가 양성이면 정말 감염된 것일까?</h2><span class="kind">본문 · 감염병 진단</span></header>
+        <header class="card-head"><span class="no">3.1.1</span><h2>감염병 진단</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">감염된 사람의 95%를 양성으로 찾아내고, 감염되지 않은 사람의 98%를 음성으로 판정하는 검사가 있다. 꽤 정확해 보인다. 그런데 감염자가 1%뿐인 지역에서 이 검사로 양성이 나온 사람이 실제로 감염되었을 확률은 얼마일까? 95%일까?</p>
           <figure class="q-fig" data-q="is2-bayes">
@@ -76,12 +76,12 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>DNA의 염기 짝(<a href="../is1/3-6.html">유전자와 단백질</a>), 10의 거듭제곱, 비율과 백분율.</div>
 
-          <h3><span class="mono">1</span>아주 적은 바이러스를 찾는 방법</h3>
+          <h3><span class="no">3.1.1</span>아주 적은 바이러스를 찾는 방법</h3>
           <p>콧속을 문지른 면봉에 묻은 바이러스는 너무 적어서 그대로는 찾을 수 없다. 그래서 바이러스의 유전 물질에서 특정한 부분만 골라 복제해 늘린다. 이것이 중합 효소 연쇄 반응(PCR)이다. 온도를 올려 DNA 두 가닥을 떼어 놓고, 온도를 낮추어 찾으려는 부분의 양 끝에 짧은 프라이머를 붙인 뒤, 효소로 나머지를 이어 붙인다. 이 한 번의 순환마다 목표 DNA가 두 배가 된다.</p>
           <p>두 배씩 늘어나므로 30번 순환하면 \(2^{30} \approx 10^9\)배, 곧 약 10억 배가 된다. 처음에 바이러스 유전 물질이 몇 개뿐이어도 30번이면 형광 신호로 잴 수 있을 만큼 많아진다. 반면 신속 항원 검사는 바이러스의 단백질을 항체로 직접 잡아 줄을 나타내므로 빠르지만, 늘리는 과정이 없어 바이러스가 적으면 놓치기 쉽다.<sup class="fn"><a href="#fn-is2-diagnosis-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>검사의 정확도를 나타내는 두 수</h3>
-          <div class="tb-env"><span class="lb">정의 <span class="nm">민감도와 특이도</span></span>
+          <h3><span class="no">3.1.2</span>검사의 정확도를 나타내는 두 수</h3>
+          <div class="tb-env"><span class="lb">정의 3.1.1 <span class="nm">민감도와 특이도</span></span>
             <p>민감도는 실제 감염자 가운데 검사가 양성으로 판정하는 비율이고, 특이도는 실제 비감염자 가운데 검사가 음성으로 판정하는 비율이다. 감염자를 음성으로 판정하면 거짓 음성, 비감염자를 양성으로 판정하면 거짓 양성이라 한다.</p>
           </div>
           <p>그런데 검사를 받은 사람이 알고 싶은 것은 민감도가 아니다. '내가 양성이 나왔는데, 정말 감염일 확률'이다. 이 값은 검사의 성능뿐 아니라 검사를 받는 집단에 감염자가 얼마나 있는지에도 달려 있다.</p>
@@ -102,8 +102,8 @@
             <figcaption>그림 2. PCR은 순환마다 목표 DNA를 두 배로 늘려, 30번이면 약 10억 배가 된다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
             <p>같은 검사(민감도 95%, 특이도 98%)를 증상이 있어 감염자 비율이 20%인 사람들에게 쓰면, 양성인 사람이 실제로 감염되었을 확률은 얼마인가? 또 1%인 지역에서 양성이 나온 사람에게 같은 검사를 한 번 더 해서 다시 양성이 나오면 확률은 어떻게 될까?</p>
           </div>
           <p>1000명 가운데 감염자 200명의 95%인 190명이 양성이다. 비감염자 800명의 2%인 16명이 거짓 양성이다. 따라서 양성 206명 가운데 190명이 감염자이므로 확률은 \(\dfrac{190}{206} \approx 92\%\)이다. 감염자가 흔한 집단에서는 같은 검사의 양성이 훨씬 믿을 만해진다.</p>
@@ -116,7 +116,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>PCR은 목표 DNA를 순환마다 두 배로 늘려 아주 적은 바이러스도 찾아낸다. 그러나 양성 판정이 실제 감염을 뜻할 확률은 민감도, 특이도와 함께 집단의 감염자 비율에 달려 있어, 감염자가 드물면 거짓 양성의 비중이 커진다. 그래서 처음 질문에서 감염자가 1%인 지역의 양성자는 실제 감염일 확률이 약 32%에 그치며, 다시 검사해 확인해야 한다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>네 가지 염기로 어떻게 수만 가지 단백질을 만들까?</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 하나가 더 들어가는 일은 왜, 언제 생길까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>DNA 100분자가 두 시간 만에 1000억 분자가 될 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>유전자와 단백질</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 이상과 유전자 이상</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>PCR 유전자 증폭</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
 
       <article class="card" id="card-is2-pcr">
         <header class="card-head">
@@ -173,7 +173,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>네 가지 염기로 어떻게 수만 가지 단백질을 만들까?</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 하나가 더 들어가는 일은 왜, 언제 생길까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>DNA 100분자가 두 시간 만에 1000억 분자가 될 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>유전자와 단백질</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 이상과 유전자 이상</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>PCR 유전자 증폭</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
 
       <article class="card" id="card-is2-test">
         <header class="card-head">
@@ -231,7 +231,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-3.html#card-is1-error"><small class="mono">통합과학1 1.3</small>여러 번 재면 오차가 사라질까?</a><a href="../../c/is1/1-3.html#card-is1-sigfig"><small class="mono">통합과학1 1.3</small>계산기에 나온 숫자를 다 적어도 될까?</a><a href="../../c/is1/1-3.html#card-is1-four-measure"><small class="mono">통합과학1 1.3</small>길이·시간·질량·온도 중 가장 정밀하게 잴 수 있는 것은?</a><a href="../../c/is1/1-3.html#text-is1-measurement"><small class="mono">통합과학1 1.3</small>같은 것을 두 번 재면 왜 값이 다를까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/fusi/3-3.html#text-fusi-ethics"><small class="mono">융합과학 탐구 3.3</small>여러 분야가 함께하는 탐구에서는 어떤 약속을 더 지켜야 할까?</a><a href="../../c/fusi/3-3.html#card-fusi-fairness"><small class="mono">융합과학 탐구 3.3</small>인공지능의 판정을 두 집단에 모두 공정하게 만들 수 있을까?</a><a href="../../c/fusi/3-3.html#text-fusi-fair-ai"><small class="mono">융합과학 탐구 3.3</small>정확도가 같은 인공지능이 왜 집단마다 다르게 틀릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/1-3.html#card-is1-error"><small class="mono">통합과학1 1.3</small>여러 번 재면 오차가 사라질까?</a><a href="../../c/is1/1-3.html#card-is1-sigfig"><small class="mono">통합과학1 1.3</small>계산기에 나온 숫자를 다 적어도 될까?</a><a href="../../c/is1/1-3.html#card-is1-four-measure"><small class="mono">통합과학1 1.3</small>길이·시간·질량·온도 중 가장 정밀하게 잴 수 있는 것은?</a><a href="../../c/is1/1-3.html#text-is1-measurement"><small class="mono">통합과학1 1.3</small>측정과 어림</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/fusi/3-3.html#text-fusi-ethics"><small class="mono">융합과학 탐구 3.3</small>여러 분야가 함께하는 탐구에서는 어떤 약속을 더 지켜야 할까?</a><a href="../../c/fusi/3-3.html#card-fusi-fairness"><small class="mono">융합과학 탐구 3.3</small>인공지능의 판정을 두 집단에 모두 공정하게 만들 수 있을까?</a><a href="../../c/fusi/3-3.html#text-fusi-fair-ai"><small class="mono">융합과학 탐구 3.3</small>융합과학 탐구의 윤리</a></div></nav>
 
       <article class="card" id="card-is2-rapid-test">
         <header class="card-head">
@@ -275,7 +275,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>네 가지 염기로 어떻게 수만 가지 단백질을 만들까?</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 하나가 더 들어가는 일은 왜, 언제 생길까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>DNA 100분자가 두 시간 만에 1000억 분자가 될 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/3-6.html#card-is1-dogma"><small class="mono">통합과학1 3.6</small>DNA의 정보는 어떻게 단백질이 될까?</a><a href="../../c/is1/3-6.html#card-is1-mutation"><small class="mono">통합과학1 3.6</small>염기 하나가 바뀌면 무슨 일이 생길까?</a><a href="../../c/is1/3-6.html#text-is1-gene-protein"><small class="mono">통합과학1 3.6</small>유전자와 단백질</a><a href="../../c/gene/1-4.html#text-gene-chromosome-error"><small class="mono">생물의 유전 1.4</small>염색체 이상과 유전자 이상</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labbio/5-7.html#text-labbio-pcr-cycles"><small class="mono">생명과학 실험 5.7</small>PCR 유전자 증폭</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labbio/5-7.html#card-labbio-pcr"><small class="mono">생명과학 실험 5.7</small>온도만 오르내리게 했는데 DNA가 왜 수억 배로 늘어날까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=is2&amp;sec=3-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">18문항</span></a>
       <a class="px-go" href="../../practice.html?sec=is2-3-1"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">1문항</span></a>

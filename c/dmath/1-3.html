@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-dmath-inclusion-exclusion" data-kind="본문">
-        <header class="card-head"><span class="no">1.3.1</span><h2>모자를 섞어 돌려주면 아무도 제 것을 받지 못할 확률은 얼마일까?</h2><span class="kind">본문 · 포함배제의 원리</span></header>
+        <header class="card-head"><span class="no">1.3.1</span><h2>포함배제의 원리</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">네 사람이 식당에 모자를 맡겼는데, 직원이 모자를 마구 섞어 아무렇게나 하나씩 돌려주었다. 네 사람 모두 남의 모자를 받을 확률은 얼마일까? 사람이 10명, 100명으로 늘어나면 이 확률은 커질까, 작아질까? 한 사람이라도 제 모자를 받는 경우를 세려 하면, 두 사람이 동시에 받는 경우, 세 사람이 동시에 받는 경우가 겹쳐서 여러 번 세어진다. 겹친 것을 어떻게 정확히 덜어 낼 수 있을까?</p>
           <figure class="q-fig">
@@ -80,14 +80,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>합집합의 원소의 개수, 순열, 확률.</div>
 
-          <h3><span class="mono">1</span>더하고 빼고 다시 더하다</h3>
+          <h3><span class="no">1.3.1</span>더하고 빼고 다시 더하다</h3>
           <p>두 집합의 합집합의 원소 수는 \(n(A) + n(B)\)에서 두 번 세어진 교집합을 한 번 빼서 구한다. 세 집합이면 세 집합의 원소 수를 더하고, 두 집합씩의 교집합을 빼는데, 그러면 세 집합의 공통 부분은 세 번 더해지고 세 번 빠져서 하나도 세어지지 않는다. 그래서 세 집합의 교집합을 다시 한 번 더한다. 이렇게 겹치는 부분을 번갈아 더하고 빼서 각 원소가 정확히 한 번씩 세어지게 하는 것이 포함배제의 원리이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">포함배제의 원리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.3.1 <span class="nm">포함배제의 원리</span></span>
             <p>\(n(A \cup B \cup C) = n(A) + n(B) + n(C) - n(A \cap B) - n(B \cap C) - n(C \cap A) + n(A \cap B \cap C)\)이다. 일반적으로 \(k\)개씩의 교집합의 원소 수를 \(k\)가 홀수이면 더하고 짝수이면 뺀다. \(n\)개를 모두 제자리가 아니게 늘어놓는 완전순열의 수는 \[D_n = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!}\right)\]이다.</p>
           </div>
           <p>완전순열의 식은 포함배제에서 나온다. \(i\)번째 사람이 제 모자를 받는 배열의 집합을 \(A_i\)라 하면, 한 사람 이상이 제 것을 받는 배열의 수는 \(A_1 \cup \cdots \cup A_n\)의 원소 수이다. 특정한 \(k\)명이 제 것을 받는 배열은 나머지 \(n - k\)명을 아무렇게나 늘어놓는 \((n - k)!\)가지이고, \(k\)명을 고르는 방법은 \({}_n\mathrm{C}_k\)가지이므로 \(k\)개씩의 교집합의 합은 \({}_n\mathrm{C}_k(n - k)! = n!/k!\)이다. 이것을 번갈아 더하고 빼 전체 \(n!\)에서 덜어 내면 완전순열의 식이 된다.<sup class="fn"><a href="#fn-dmath-inclusion-exclusion-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>배수의 개수 세기</h3>
+          <h3><span class="no">1.3.2</span>배수의 개수 세기</h3>
           <p>1부터 100까지의 자연수 가운데 2, 3, 5 가운데 적어도 하나의 배수인 수를 세어 보자. 2의 배수는 50개, 3의 배수는 33개, 5의 배수는 20개이다. 2와 3의 공배수는 6의 배수여서 16개, 3과 5는 15의 배수 6개, 2와 5는 10의 배수 10개이고, 세 수의 공배수는 30의 배수 3개이다. 포함배제로 \(50 + 33 + 20 - 16 - 6 - 10 + 3 = 74\)개이다. 그래서 2, 3, 5 어느 것으로도 나누어떨어지지 않는 수는 26개이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="네 사람의 완전순열 계산">
@@ -102,8 +102,8 @@
             <figcaption>그림 2. 전체 24가지에서 겹치는 경우를 번갈아 빼고 더하면 모두 남의 것을 받는 9가지가 남는다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.3.2</span>
             <p>처음 질문의 네 사람이 모두 남의 모자를 받는 배열의 수와 확률을 구하여라. 사람 수가 많아지면 이 확률은 어떤 값으로 다가가는가?</p>
           </div>
           <p>그림 2처럼 \(D_4 = 24 - 24 + 12 - 4 + 1 = 9\)이다. 확률은 \(9/24 = 0.375\)이다. 직접 확인하면 네 모자를 모두 제자리가 아니게 놓는 방법은 \(BADC\), \(BCDA\), \(BDAC\), \(CADB\), \(CDAB\), \(CDBA\), \(DABC\), \(DCAB\), \(DCBA\)의 아홉 가지이다.</p>
@@ -116,7 +116,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>포함배제의 원리는 여러 집합의 합집합의 원소 수를, 각 집합의 원소 수를 더하고 두 개씩의 교집합을 빼고 세 개씩의 교집합을 다시 더하는 식으로 번갈아 계산해 각 원소를 정확히 한 번씩 세게 한다. 모두 제자리가 아닌 완전순열의 수 \(D_n\)도 이 원리로 구하며, 그 비율은 \(1/e\)에 다가간다. 처음 질문의 네 사람이 모두 남의 모자를 받을 확률은 \(9/24 = 0.375\)이고, 사람이 많아져도 약 0.368이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 자연수 해는 몇 개일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 이름 없는 세 모둠으로 나누는 방법은 몇 가지일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>중복조합</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>집합의 분할과 자연수의 분할</a></div></nav>
 
       <article class="card" id="card-dmath-venn-count">
         <header class="card-head">
@@ -154,7 +154,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 자연수 해는 몇 개일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 이름 없는 세 모둠으로 나누는 방법은 몇 가지일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>중복조합</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>집합의 분할과 자연수의 분할</a></div></nav>
 
       <article class="card" id="card-dmath-derange">
         <header class="card-head">
@@ -188,7 +188,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 자연수 해는 몇 개일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 이름 없는 세 모둠으로 나누는 방법은 몇 가지일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/1-2.html#card-dmath-stars-bars"><small class="mono">이산 수학 1.2</small>같은 사탕을 친구들에게 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-2.html#card-dmath-int-solutions"><small class="mono">이산 수학 1.2</small>조건이 붙은 방정식의 정수해는 몇 개일까?</a><a href="../../c/dmath/1-2.html#text-dmath-multiset"><small class="mono">이산 수학 1.2</small>중복조합</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/1-4.html#card-dmath-set-partition"><small class="mono">이산 수학 1.4</small>다섯 명을 세 모둠으로 나누는 방법은 몇 가지일까?</a><a href="../../c/dmath/1-4.html#card-dmath-young"><small class="mono">이산 수학 1.4</small>점 그림을 뒤집으면 어떤 분할이 나올까?</a><a href="../../c/dmath/1-4.html#text-dmath-partition"><small class="mono">이산 수학 1.4</small>집합의 분할과 자연수의 분할</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=dmath&amp;sec=1-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=dmath-1-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">8문항</span></a>

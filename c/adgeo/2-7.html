@@ -60,7 +60,7 @@
 
     <div>
       <article class="card reading" id="text-adgeo-reparam" data-kind="본문">
-        <header class="card-head"><span class="no">2.7.1</span><h2>나선 위를 속력 1로 움직이게 하려면 매개변수를 어떻게 바꿀까?</h2><span class="kind">본문 · 단위속력곡선으로 재매개화</span></header>
+        <header class="card-head"><span class="no">2.7.1</span><h2>단위속력곡선으로 재매개화</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">나선 \(\vec r(t) = (\cos t, \sin t, t)\) 위를 움직이는 점은 빠르기가 \(\sqrt2\)이다. 이 점이 같은 나선을 따라가되 빠르기가 정확히 1이 되도록 식을 바꾸려 한다. 한 학생은 \(t\) 대신 \(\sqrt2\,s\)를 넣어 \((\cos\sqrt2 s, \sin\sqrt2 s, \sqrt2 s)\)로 썼는데, 미분해 보니 빠르기가 2가 되었다. 어디서 잘못되었을까? 곡선의 모양은 그대로 두고 빠르기만 1로 바꾸는 바른 방법은 무엇일까?</p>
           <figure class="q-fig">
@@ -78,14 +78,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>호의 길이 함수(<a href="2-6.html">단위속력곡선과 호의 길이 매개변수</a>), 역함수의 미분, 합성함수의 미분법.</div>
 
-          <h3><span class="mono">1</span>세 단계의 재매개화</h3>
+          <h3><span class="no">2.7.1</span>세 단계의 재매개화</h3>
           <p>같은 곡선을 다른 매개변수로 다시 나타내는 것을 재매개화라 한다. 예를 들어 정칙곡선을 단위속력곡선으로 재매개화하는 순서는 세 단계이다. 먼저 빠르기 \(|\vec r'(t)|\)를 구하고 적분해 호의 길이 함수 \(s(t)\)를 얻는다. 다음으로 \(s = s(t)\)를 \(t\)에 대해 풀어 \(t = t(s)\)를 구한다. 마지막으로 원래 식에 \(t = t(s)\)를 대입해 \(\vec r(t(s))\)를 쓴다. 이렇게 얻은 곡선은 모양과 방향이 원래와 같고, 빠르기만 1이 된다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">단위속력 재매개화</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.7.1 <span class="nm">단위속력 재매개화</span></span>
             <p>정칙곡선 \(\vec r(t)\)의 호의 길이 함수를 \(s(t)\), 그 역함수를 \(t(s)\)라 하면 \(\tilde r(s) = \vec r(t(s))\)는 단위속력곡선이다. 합성함수와 역함수의 미분법으로 \[\left|\frac{d\tilde r}{ds}\right| = |\vec r'(t)|\cdot\frac{dt}{ds} = |\vec r'(t)|\cdot\frac{1}{s'(t)} = 1\]이다.</p>
           </div>
           <p>또 합성함수의 미분법으로 새 빠르기는 원래 빠르기에 \(dt/ds\)를 곱한 것이다. 원래 빠르기가 \(\sqrt2\)이면 새 빠르기를 1로 만들려면 \(dt/ds = 1/\sqrt2\)이어야 하고, 그러려면 \(t = s/\sqrt2\)이다. 처음 질문의 학생은 \(s = \sqrt2\,t\)라는 관계에서 \(t\)를 \(s\)로 나타내지 않고 거꾸로 \(t = \sqrt2\,s\)를 넣어, 빠르기에 \(\sqrt2\)를 한 번 더 곱해 2를 만들었다. 시간을 늘리는 대신 줄인 셈이다.<sup class="fn"><a href="#fn-adgeo-reparam-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>빠르기가 바뀌는 곡선의 재매개화</h3>
+          <h3><span class="no">2.7.2</span>빠르기가 바뀌는 곡선의 재매개화</h3>
           <p>한편 빠르기가 일정하지 않은 곡선도 같은 방법으로 재매개화한다. 원 \((\cos t^2, \sin t^2)\)(\(t \ge 0\))는 빠르기가 \(2t\)이고 \(s(t) = t^2\)이므로 \(t = \sqrt s\)이다. 대입하면 \((\cos s, \sin s)\)로, 익숙한 단위원의 단위속력 매개변수가 된다. 그런데 호의 길이 함수의 적분이나 역함수를 식으로 구할 수 없는 곡선도 많다. 그런 곡선은 수치 계산으로 \(s\)와 \(t\)의 표를 만들어 재매개화한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="재매개화의 세 단계">
@@ -100,8 +100,8 @@
             <figcaption>그림 2. 빠르기를 적분하고, 거꾸로 풀고, 대입하는 세 단계로 단위속력곡선을 얻는다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.7.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.7.2</span>
             <p>나선 \(\vec r(t) = (3\cos t, 3\sin t, 4t)\)를 단위속력곡선으로 재매개화하고, 빠르기가 1인지 확인하여라. 출발점에서 호의 길이 \(10\pi\)인 곳의 좌표를 구하여라.</p>
           </div>
           <p>\(\vec r'(t) = (-3\sin t, 3\cos t, 4)\)이므로 빠르기는 \(\sqrt{9 + 16} = 5\)이고 \(s = 5t\), 곧 \(t = s/5\)이다. 대입하면 \(\tilde r(s) = \left(3\cos\dfrac s5, 3\sin\dfrac s5, \dfrac{4s}{5}\right)\)이다. 미분하면 \(\tilde r'(s) = \left(-\tfrac35\sin\tfrac s5, \tfrac35\cos\tfrac s5, \tfrac45\right)\)이고 크기는 \(\sqrt{\tfrac{9}{25} + \tfrac{16}{25}} = 1\)이다.</p>
@@ -114,7 +114,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>정칙곡선을 단위속력곡선으로 재매개화하려면 빠르기를 적분해 호의 길이 함수 \(s(t)\)를 구하고, 이를 \(t = t(s)\)로 거꾸로 풀어 원래 식에 대입한다. 합성함수와 역함수의 미분법으로 새 빠르기는 \(|\vec r'(t)|/s'(t) = 1\)이 된다. 처음 질문의 학생은 \(s = \sqrt2\,t\)를 거꾸로 풀지 않고 \(t = \sqrt2\,s\)를 넣어 빠르기가 2가 되었고, 바른 재매개화는 \(t = s/\sqrt2\)를 넣은 \((\cos(s/\sqrt2), \sin(s/\sqrt2), s/\sqrt2)\)이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면 어디에 세워야 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 직선에 원을 바로 잇지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>단위속력곡선과 호의 길이 매개변수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>곡률과 곡률반경</a></div></nav>
 
       <article class="card" id="card-adgeo-reparam">
         <header class="card-head">
@@ -151,7 +151,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면 어디에 세워야 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 직선에 원을 바로 잇지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>단위속력곡선과 호의 길이 매개변수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>곡률과 곡률반경</a></div></nav>
 
       <article class="card" id="card-adgeo-reparam-spot">
         <header class="card-head">
@@ -222,7 +222,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면 어디에 세워야 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 직선에 원을 바로 잇지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adgeo/2-6.html#card-adgeo-speed-param"><small class="mono">고급 기하 2.6</small>같은 원을 그리는데 왜 점마다 빠르기가 다를까?</a><a href="../../c/adgeo/2-6.html#card-adgeo-milestones"><small class="mono">고급 기하 2.6</small>구불구불한 산길에 1 km마다 표지판을 세우려면?</a><a href="../../c/adgeo/2-6.html#text-adgeo-arc-length"><small class="mono">고급 기하 2.6</small>단위속력곡선과 호의 길이 매개변수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/2-8.html#card-adgeo-osculating"><small class="mono">고급 기하 2.8</small>곡선이 얼마나 휘었는지를 원으로 잴 수 있을까?</a><a href="../../c/adgeo/2-8.html#card-adgeo-road-curve"><small class="mono">고급 기하 2.8</small>고속도로의 굽은 길은 왜 원을 바로 잇지 않을까?</a><a href="../../c/adgeo/2-8.html#text-adgeo-curvature"><small class="mono">고급 기하 2.8</small>곡률과 곡률반경</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adgeo&amp;sec=2-7"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
 

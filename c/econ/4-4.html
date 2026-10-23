@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-econ-optimize" data-kind="본문">
-        <header class="card-head"><span class="no">4.4.1</span><h2>몇 개를 만들어 팔아야 이윤이 가장 클까?</h2><span class="kind">본문 · 최적화</span></header>
+        <header class="card-head"><span class="no">4.4.1</span><h2>최적화</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">많이 팔수록 이윤이 클 것 같지만, 많이 팔려면 값을 내려야 하고 만드는 비용도 늘어난다. 너무 적게 만들면 팔 기회를 놓치고, 너무 많이 만들면 싸게 팔아 남는 게 없다. 이윤이 가장 큰 생산량은 어디일까? 그 점을 찾는 규칙을 미분으로 세울 수 있을까?</p>
           <figure class="q-fig" data-q="econ-profit">
@@ -73,14 +73,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>함수의 증가·감소와 극대·극소(미적분Ⅰ), 한계비용과 한계수입(<a href="4-1.html">경제 함수의 미분</a>), 탄력성(<a href="4-3.html">탄력성</a>).</div>
 
-          <h3><span class="mono">1</span>이윤 극대화 조건</h3>
+          <h3><span class="no">4.4.1</span>이윤 극대화 조건</h3>
           <p>이윤은 \(\pi(q) = R(q) - C(q)\)이다. 이윤이 최대가 되는 곳에서는 이윤 그래프의 접선이 수평이므로 \(\pi'(q) = 0\), 곧 \(R'(q) = C'(q)\)이다. 직관적으로도, 하나 더 팔아 얻는 수입(한계수입)이 하나 더 만드는 비용(한계비용)보다 크면 더 만들어야 하고, 작으면 줄여야 한다. 둘이 같아지는 곳에서 멈춘다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">이윤 극대화의 조건</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.4.1 <span class="nm">이윤 극대화의 조건</span></span>
             <p>이윤이 최대인 생산량에서 \[MR = MC,\quad \text{곧 } R'(q) = C'(q)\] 이고, 그 좌우에서 \(\pi'(q)\)의 부호가 양에서 음으로 바뀐다.</p>
           </div>
           <p>그림 1에서 생산량을 늘려 보자. \(q = 20\)에서는 한계수입 60이 한계비용 20보다 커서 더 만들수록 이윤이 는다. \(q = 40\)에서 한계수입이 \(100 - 80 = 20\)으로 한계비용과 같아지고, 이윤이 1100으로 최대가 된다. 그 뒤로는 하나 더 팔 때 버는 돈이 드는 돈보다 적어 이윤이 준다.<sup class="fn"><a href="#fn-econ-optimize-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>수입이 최대인 점과 이윤이 최대인 점</h3>
+          <h3><span class="no">4.4.2</span>수입이 최대인 점과 이윤이 최대인 점</h3>
           <p>판매 수입 \(R(q) = q(100 - q)\)는 \(q = 50\)에서 최대 2500이다. 그러나 이윤은 \(q = 40\)에서 최대이다. 50개를 팔면 수입은 크지만, 마지막 10개는 버는 돈(한계수입 20 미만)보다 드는 돈(한계비용 20)이 더 크다. 매출을 최대로 하는 것과 이윤을 최대로 하는 것은 다른 목표이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="한계수입과 한계비용의 비교에 따른 판단">
@@ -95,8 +95,8 @@
             <figcaption>그림 2. 한계수입과 한계비용을 비교하면 생산을 늘릴지 줄일지 판단할 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.4.2</span>
             <p>학교 축제 공연 티켓의 수요가 \(q = 600 - 50p\)(\(p\)는 천 원 단위)이고, 공연장 대관료 등 고정비가 50만 원, 관객 한 명당 비용은 2천 원이다. 이윤을 최대로 하는 티켓 값과 그때의 이윤을 구하여라.</p>
           </div>
           <p>가격으로 나타내면 수입은 \(R = pq = p(600 - 50p)\)천 원, 비용은 \(C = 500 + 2q = 500 + 2(600 - 50p) = 1700 - 100p\)천 원이다. 이윤은 \(\pi(p) = 600p - 50p^2 - 1700 + 100p = -50p^2 + 700p - 1700\)이다.</p>
@@ -109,7 +109,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>이윤 \(\pi = R - C\)가 최대인 생산량에서는 \(\pi' = 0\), 곧 한계수입과 한계비용이 같다. 한계수입이 더 크면 생산을 늘리고, 작으면 줄인다. 수입이 최대인 점과 이윤이 최대인 점은 다르다. 그래서 처음 질문의 이윤이 가장 큰 생산량은 하나 더 팔아 버는 돈과 하나 더 만드는 데 드는 돈이 같아지는 곳이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>그래프의 개형과 해석</a></div></nav>
 
       <article class="card" id="card-econ-profit-max">
         <header class="card-head">
@@ -148,7 +148,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>그래프의 개형과 해석</a></div></nav>
 
       <article class="card" id="card-econ-ticket-price">
         <header class="card-head">
@@ -187,7 +187,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/econ/4-2.html#card-econ-avg-marginal"><small class="mono">경제 수학 4.2</small>개당 평균 비용이 가장 낮은 생산량은 어디일까?</a><a href="../../c/econ/4-2.html#card-econ-revenue-shape"><small class="mono">경제 수학 4.2</small>이윤 그래프를 직접 그리지 않고 모양을 알 수 있을까?</a><a href="../../c/econ/4-2.html#text-econ-avg-cost"><small class="mono">경제 수학 4.2</small>그래프의 개형과 해석</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=econ&amp;sec=4-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
 

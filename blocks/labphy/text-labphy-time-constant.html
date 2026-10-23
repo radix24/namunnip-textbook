@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-labphy-time-constant" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>축전기는 왜 처음엔 빨리 차다가 점점 느려질까?</h2><span class="kind">본문 · RC·RL 회로의 시간 상수</span></header>
+  <header class="card-head"><span class="no"></span><h2>RC·RL 회로의 시간 상수</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">47 kΩ 저항과 100 μF 축전기를 5 V 전원에 직렬로 잇고 스위치를 넣었다. 축전기의 전압은 처음 2초 동안 1.73 V로 빠르게 올랐지만, 다음 2초에는 1.14 V, 그다음 2초에는 0.74 V만 올라 점점 느려졌다. 10초가 지나도 4.4 V로 아직 5 V에 이르지 못했다. 이 변화에는 회로가 정하는 시간 눈금이 하나 숨어 있다고 한다. 그 눈금은 무엇이고, 측정값에서 어떻게 정확히 찾아낼 수 있을까?</p>
     <figure class="q-fig" data-q="lp-rc">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>전기 용량 \(Q = CV\), 자체 유도, 지수 함수와 자연로그, 평행판 축전기(<a href="3-2.html">평행판 축전기의 전기 용량</a>).</div>
 
-    <h3><span class="mono">1</span>남은 만큼에 비례하는 변화</h3>
+    <h3><span class="no">3.8.1</span>남은 만큼에 비례하는 변화</h3>
     <p>스위치를 넣는 순간 축전기는 비어 있어서 전원의 5 V가 모두 저항에 걸리고 큰 전류가 흐른다. 전하가 쌓여 축전기의 전압이 오르면 저항에 걸리는 전압은 그만큼 줄고, 전류도 준다. 전류가 줄면 전하가 쌓이는 빠르기도 준다. 그래서 축전기의 전압이 오르는 빠르기는 아직 남은 전압 \(\mathcal{E} - V\)에 비례한다. 남은 만큼에 비례해 줄어드는 양은 지수 함수를 따르고, 그 빠르기를 정하는 시간 눈금이 시간 상수 \(\tau = RC\)이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">RC 회로의 충전</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.8.1 <span class="nm">RC 회로의 충전</span></span>
       <p>기전력 \(\mathcal{E}\)로 충전할 때 축전기의 전압은 \[V = \mathcal{E}\left(1 - e^{-t/RC}\right)\]이다. \(t = RC\)일 때 \(V\)는 \(\mathcal{E}\)의 약 63%, \(5RC\)일 때 99%에 이른다. 코일과 저항의 RL 회로에서는 전류가 같은 꼴로 늘고 시간 상수는 \(L/R\)이다.</p>
     </div>
     <p>그림 1에서 저항을 바꾸어 보자. 저항이 크면 전류가 작아 전하가 느리게 쌓이므로 곡선이 완만해지고, 시간 상수가 비례해서 길어진다. 시간 상수가 지날 때마다 남은 전압이 \(1/e \approx 0.37\)배로 줄어든다. 그래서 축전기는 이론적으로 영원히 다 차지 않지만, \(5RC\)가 지나면 남은 것이 1% 아래여서 실제로는 다 찬 것으로 본다.<sup class="fn"><a href="#fn-labphy-time-constant-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>시간 상수를 재는 세 방법</h3>
+    <h3><span class="no">3.8.2</span>시간 상수를 재는 세 방법</h3>
     <p>첫째, 전압이 \(\mathcal{E}\)의 63%가 되는 시각을 그래프에서 읽는다. 간단하지만 점 하나에 기대므로 흔들림이 크다. 둘째, 남은 전압이 절반이 되는 시각 \(t_{1/2}\)을 읽어 \(\tau = t_{1/2}/\ln 2 \approx 1.44\,t_{1/2}\)로 구한다. 셋째, 모든 점을 쓰는 방법으로, \(\ln(1 - V/\mathcal{E})\)를 시간에 대해 그린다. 식을 바꾸면 \(\ln(1 - V/\mathcal{E}) = -t/RC\)이므로 이 그래프는 원점을 지나고 기울기가 \(-1/RC\)인 직선이다. 직선 맞춤의 기울기로 구한 시간 상수가 가장 믿을 만하다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 132" role="img" aria-label="시간별 축전기 전압과 로그 변환 값">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 지수적으로 다가가는 전압도 \(\ln(1 - V/\mathcal{E})\)로 바꾸면 고르게 줄어드는 직선이 된다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.8.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.8.2</span>
       <p>처음 질문의 회로에서 시간 상수를 계산하여라. 그림 2의 직선의 기울기에서 구한 시간 상수와 비교하고, 반감 시간으로도 구하여라. 저항을 그대로 두고 축전기만 220 μF로 바꾸면 5 V의 99%에 이르는 데 얼마나 걸리는가?</p>
     </div>
     <p>\(\tau = RC = 47 \times 10^3 \times 100 \times 10^{-6} = 4.7\) s이다. 그림 2의 아래 줄은 10초 동안 \(-2.13\)만큼 줄었으므로 기울기는 \(-0.213\) /s이고, \(\tau = 1/0.213 \approx 4.7\) s로 같다. 남은 전압이 절반, 곧 \(V = 2.5\) V가 되는 시각은 \(4.7 \times \ln 2 \approx 3.3\) s이고, 거꾸로 \(3.3 \times 1.44 \approx 4.7\) s를 얻는다.</p>

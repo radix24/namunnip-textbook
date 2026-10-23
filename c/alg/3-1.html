@@ -64,7 +64,7 @@
 
     <div>
       <article class="card reading" id="text-alg-sequence" data-kind="본문">
-        <header class="card-head"><span class="no">3.1.1</span><h2>수를 차례로 늘어놓은 것은 어떤 함수일까?</h2><span class="kind">본문 · 수열의 뜻</span></header>
+        <header class="card-head"><span class="no">3.1.1</span><h2>수열의 뜻</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">1, 4, 9, 16, … 다음에 올 수는 25일까? 1, 2, 4, 8 다음은 꼭 16일까? 수를 차례로 늘어놓은 것을 수학에서는 어떻게 정확하게 다루고, '다음 수'를 확실히 말하려면 무엇이 주어져야 할까?</p>
           <figure class="q-fig" data-q="alg-seqfunc">
@@ -75,15 +75,15 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>함수의 뜻, 정의역과 치역(공통수학2), 일차함수와 이차함수의 그래프.</div>
 
-          <h3><span class="mono">1</span>수열과 항</h3>
+          <h3><span class="no">3.1.1</span>수열과 항</h3>
           <p>차례로 늘어놓은 수의 열을 <em>수열</em>이라 하고, 늘어놓은 수 하나하나를 그 수열의 항이라 한다. 앞에서부터 첫째항, 둘째항, …, \(n\)째항이라 하고 \(a_1, a_2, \ldots, a_n, \ldots\)으로 쓴다. 수열을 간단히 \(\{a_n\}\)으로 나타낸다.</p>
           <p>그런데 수열에서 중요한 것은 수만이 아니라 순서이다. '셋째 자리의 수'처럼 자리 번호마다 수가 하나씩 정해져 있기 때문이다. 따라서 수열은 자연수 1, 2, 3, …을 정의역으로 하고 각 자연수 \(n\)에 \(a_n\)을 대응시키는 함수로 볼 수 있다.</p>
-          <div class="tb-env"><span class="lb">정의 <span class="nm">수열과 일반항</span></span>
+          <div class="tb-env"><span class="lb">정의 3.1.1 <span class="nm">수열과 일반항</span></span>
             <p>수열 \(\{a_n\}\)은 자연수 전체의 집합을 정의역으로 하는 함수 \(f(n) = a_n\)이다. 제\(n\)항 \(a_n\)을 \(n\)에 대한 식으로 나타낸 것을 일반항이라 한다.</p>
           </div>
           <p>그림 1에서 일반항을 바꾸어 보자. \(a_n = n^2\)의 점들은 포물선 \(y = x^2\) 위에 띄엄띄엄 놓인다. 정의역이 자연수뿐이므로 그래프는 이어진 곡선이 아니라 점의 모임이다.</p>
 
-          <h3><span class="mono">2</span>앞의 몇 항만으로는 정해지지 않는다</h3>
+          <h3><span class="no">3.1.2</span>앞의 몇 항만으로는 정해지지 않는다</h3>
           <p>1, 2, 4, 8 다음은 16일 것 같다. 그런데 \(a_n = 2^{n-1}\)도 1, 2, 4, 8, 16, …이고, \(a_n = \dfrac{n^3 - 3n^2 + 8n}{6}\)도 앞의 네 항이 1, 2, 4, 8로 같다. 이 수열의 다섯째 항은 15이다.<sup class="fn"><a href="#fn-alg-sequence-1">1</a></sup> 다시 말해 앞의 몇 항이 같아도 그 뒤가 같다는 보장은 없다.</p>
           <p>그래서 수열을 정확하게 주려면 일반항을 주거나, 첫째항과 이웃한 항 사이의 규칙을 주어야 한다. '규칙을 짐작하는 것'과 '규칙이 주어진 것'은 다르다. 그림 1의 마지막 두 일반항을 번갈아 보면, 넷째 항까지는 점이 겹치다가 다섯째 항부터 갈라진다.</p>
           <figure class="q-fig">
@@ -98,8 +98,8 @@
             <figcaption>그림 2. 수열은 자리 번호 \(n\)에 수 \(a_n\)을 하나씩 대응시키는 함수이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
             <p>일반항이 \(a_n = n^2 - 6n + 10\)인 수열의 첫째항부터 제5항까지 구하고, 가장 작은 항을 구하여라. 또 이 수열에서 50은 제몇 항인가?</p>
           </div>
           <p>\(n = 1, 2, 3, 4, 5\)를 차례로 넣으면 5, 2, 1, 2, 5이다. 일반항을 \(a_n = (n - 3)^2 + 1\)로 고치면, \(n = 3\)일 때 가장 작은 항 1을 갖는다. 그래프로 보면 꼭짓점이 \((3, 1)\)인 포물선 위의 점들이다.</p>
@@ -112,7 +112,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>수열은 자연수 \(n\)마다 수 \(a_n\)을 하나씩 정하는 함수이고, 일반항은 그 대응을 \(n\)의 식으로 쓴 것이다. 앞의 몇 항이 같아도 다른 수열일 수 있으므로, 수열은 일반항이나 규칙이 주어져야 정해진다. 그래서 처음 질문의 1, 2, 4, 8 다음은 규칙이 주어지기 전에는 16이라고 단정할 수 없다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div></nav>
 
       <article class="card" id="card-alg-seq-func">
         <header class="card-head">
@@ -162,7 +162,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div></nav>
 
       <article class="card" id="card-alg-seq-guess">
         <header class="card-head">
@@ -209,7 +209,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>1부터 100까지 빠르게 더하는 방법은 무엇일까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/alg/3-2.html#card-alg-arith-term"><small class="mono">대수 3.2</small>같은 수씩 커지는 수열의 100번째 항은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sum"><small class="mono">대수 3.2</small>1부터 100까지 더하는 빠른 방법은?</a><a href="../../c/alg/3-2.html#card-alg-arith-sn"><small class="mono">대수 3.2</small>합을 알면 각 항도 알 수 있을까?</a><a href="../../c/alg/3-2.html#text-alg-arithmetic"><small class="mono">대수 3.2</small>등차수열</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=alg&amp;sec=3-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">9문항</span></a>
       <a class="px-go" href="../../practice.html?sec=alg-3-1"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">8문항</span></a>

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-cm1-quad-ineq" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>이차식이 양수가 되는 범위는 그래프의 어디일까?</h2><span class="kind">본문 · 이차부등식</span></header>
+  <header class="card-head"><span class="no"></span><h2>이차부등식</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">공을 위로 던지면 \(t\)초 뒤의 높이가 \(h = -5t^2 + 20t\) m라고 하자. 공이 15 m보다 높이 있는 시간은 언제부터 언제까지일까? 부등식 \(-5t^2 + 20t &gt; 15\)를 풀어야 하는데, 이차식에서는 부등호를 어떻게 다룰까?</p>
     <figure class="q-fig" data-q="cm1-qineq">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>이차방정식과 이차함수의 관계(<a href="2-4.html">이차방정식과 이차함수</a>), 판별식(<a href="2-2.html">이차방정식의 판별식</a>), 연립일차부등식(<a href="2-9.html">연립일차부등식</a>).</div>
 
-    <h3><span class="mono">1</span>부호를 그래프로 읽기</h3>
+    <h3><span class="no">2.11.1</span>부호를 그래프로 읽기</h3>
     <p>정리하면 \(-5t^2 + 20t - 15 &gt; 0\)이고, 양변을 \(-5\)로 나누면 부등호가 뒤집혀 \(t^2 - 4t + 3 &lt; 0\)이다. 이차식의 값이 음수인 \(t\)를 찾는 문제가 되었다.</p>
     <p>그림 1의 슬라이더를 \(k = 3\)에 두면 \(y = x^2 - 4x + 3\)의 그래프가 보인다. 그래프는 \(x = 1\)과 \(x = 3\)에서 \(x\)축과 만나고, 그 사이에서는 \(x\)축보다 아래에 있다. \(y\)좌표가 음수라는 것은 이차식의 값이 음수라는 뜻이므로, \(x^2 - 4x + 3 &lt; 0\)의 해는 \(1 &lt; x &lt; 3\)이다. 처음 질문의 공은 1초부터 3초까지 15 m보다 높이 있다.</p>
     <p>이렇게 이차식을 포함한 부등식 가운데 정리했을 때 \(ax^2 + bx + c &gt; 0\)꼴이 되는 것을 <em>이차부등식</em>이라 한다(부등호는 \(&lt;, \ge, \le\)도 된다). 이차방정식의 근이 \(x\)축과의 교점이었다면, 이차부등식의 해는 그래프가 \(x\)축의 위나 아래에 있는 범위이다.</p>
 
-    <h3><span class="mono">2</span>판별식에 따른 세 경우</h3>
+    <h3><span class="no">2.11.2</span>판별식에 따른 세 경우</h3>
     <p>\(a &gt; 0\)인 이차식 \(ax^2 + bx + c\)의 그래프는 아래로 볼록하다. 판별식이 양수이면 두 근 \(\alpha &lt; \beta\)에서 \(x\)축을 가로지르므로, 두 근 사이에서는 음수이고 바깥에서는 양수이다. 슬라이더로 \(k\)를 4로 올리면 그래프가 \(x\)축에 접하고, 그보다 올리면 \(x\)축보다 완전히 위로 떠서 음수인 곳이 사라진다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">이차부등식의 해 (\(a &gt; 0\))</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.11.1 <span class="nm">이차부등식의 해 (\(a &gt; 0\))</span></span>
       <div class="tbl"><table>
         <thead><tr><th></th><th>\(D &gt; 0\) (두 근 \(\alpha &lt; \beta\))</th><th>\(D = 0\) (중근 \(\alpha\))</th><th>\(D &lt; 0\)</th></tr></thead>
         <tbody>
@@ -47,8 +47,8 @@
       <figcaption>그림 2. \(a &gt; 0\), \(D &gt; 0\)이면 이차식의 부호는 두 근을 경계로 양, 음, 양으로 바뀐다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.11.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.11.2</span>
       <p>모든 실수 \(x\)에 대하여 \(x^2 - 2kx + 2k + 3 &gt; 0\)이 성립하도록 하는 실수 \(k\)의 값의 범위를 구하여라. 또 연립부등식 \(\begin{cases} x^2 - x - 6 \le 0 \\ x^2 - 4x &gt; 0 \end{cases}\)을 풀어라.</p>
     </div>
     <p>최고차항 계수가 양수이므로, 모든 \(x\)에서 양수이려면 그래프가 \(x\)축보다 완전히 위에 있어야 한다. 즉 \(x\)축과 만나지 않아야 하므로 \(\dfrac{D}{4} = k^2 - (2k + 3) &lt; 0\)이다. \(k^2 - 2k - 3 = (k + 1)(k - 3) &lt; 0\)이므로 \(-1 &lt; k &lt; 3\)이다. 접하는 경우(\(D = 0\))에는 접점에서 값이 0이 되어 '\(&gt; 0\)'이 깨지므로 등호는 들어가지 않는다.</p>

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc2-motion" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>흔들리는 물체는 어디에서 가장 빠르고, 어디에서 가속도가 가장 클까?</h2><span class="kind">본문 · 속도와 가속도</span></header>
+  <header class="card-head"><span class="no"></span><h2>속도와 가속도</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">용수철에 매달린 추는 위아래로 일정하게 흔들린다. 추가 가장 높이 올라간 순간에는 잠깐 멈추고, 가운데를 지날 때는 가장 빠르다. 그렇다면 가속도는 어디에서 가장 클까? 가장 빠른 가운데일까, 멈춘 끝일까? 또 일정한 빠르기로 원을 도는 물체에도 가속도가 있을까?</p>
     <figure class="q-fig" data-q="calc2-shm">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>직선 운동의 속도와 가속도(미적분Ⅰ), 삼각함수·지수함수의 도함수(<a href="2-3.html">삼각함수의 극한과 미분</a>), 매개변수 함수의 미분(<a href="2-6.html">매개변수 함수의 미분</a>).</div>
 
-    <h3><span class="mono">1</span>직선 위의 운동</h3>
+    <h3><span class="no">2.11.1</span>직선 위의 운동</h3>
     <p>수직선 위를 움직이는 점의 시각 \(t\)에서의 위치가 \(x = f(t)\)이면, 속도는 \(v = \dfrac{dx}{dt} = f'(t)\), 가속도는 \(a = \dfrac{dv}{dt} = f''(t)\)이다. 미적분Ⅰ에서 다항함수로 다루던 것을 이제 삼각함수와 지수함수로 나타낸 운동에도 쓴다.</p>
     <p>추의 위치가 \(x = \cos t\)이면 \(v = -\sin t\), \(a = -\cos t\)이다. 그림 1에서 시각을 옮겨 보자. \(t = \dfrac{\pi}{2}\)처럼 \(x = 0\)인 가운데에서는 속도의 크기가 1로 가장 크고 가속도는 0이다. \(t = 0\)이나 \(t = \pi\)처럼 끝에서는 속도가 0이고 가속도의 크기가 1로 가장 크다. 가속도 \(a = -x\)는 언제나 가운데를 향한다.<sup class="fn"><a href="#fn-calc2-motion-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>평면 위의 운동</h3>
+    <h3><span class="no">2.11.2</span>평면 위의 운동</h3>
     <p>평면 위를 움직이는 점의 위치가 \((x, y) = (f(t), g(t))\)이면 각 성분을 따로 미분한다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">평면 운동의 속도와 가속도</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.11.1 <span class="nm">평면 운동의 속도와 가속도</span></span>
       <p>속도 \(\vec v = \left(\dfrac{dx}{dt}, \dfrac{dy}{dt}\right)\), 속력 \(|\vec v| = \sqrt{\left(\dfrac{dx}{dt}\right)^2 + \left(\dfrac{dy}{dt}\right)^2}\), 가속도 \(\vec a = \left(\dfrac{d^2x}{dt^2}, \dfrac{d^2y}{dt^2}\right)\)</p>
     </div>
     <p>반지름 \(r\)인 원을 \(x = r\cos\omega t\), \(y = r\sin\omega t\)로 도는 점의 속도는 \((-r\omega\sin\omega t, r\omega\cos\omega t)\)이고 속력은 \(r\omega\)로 일정하다. 그런데 가속도는 \((-r\omega^2\cos\omega t, -r\omega^2\sin\omega t) = -\omega^2(x, y)\)로, 크기 \(r\omega^2\)이고 늘 원의 중심을 향한다. 빠르기는 그대로여도 방향이 바뀌므로 가속도가 있다.</p>
@@ -42,8 +42,8 @@
       <figcaption>그림 2. 등속 원운동에서 속도는 원의 접선 방향, 가속도는 중심 방향을 향한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.11.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.11.2</span>
       <p>평면 위를 움직이는 점 P의 시각 \(t\)에서의 위치가 \(x = t - \sin t\), \(y = 1 - \cos t\)이다. \(t = \dfrac{\pi}{2}\)일 때 점 P의 속력과 가속도의 크기를 구하여라.</p>
     </div>
     <p>\(\dfrac{dx}{dt} = 1 - \cos t\), \(\dfrac{dy}{dt} = \sin t\)이다. \(t = \dfrac{\pi}{2}\)이면 속도는 \((1, 1)\)이고 속력은 \(\sqrt{1 + 1} = \sqrt{2}\)이다.</p>

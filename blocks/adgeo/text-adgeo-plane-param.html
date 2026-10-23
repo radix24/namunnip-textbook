@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adgeo-plane-param" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>굴러가는 바퀴에 붙은 반사판은 어떤 곡선을 그릴까?</h2><span class="kind">본문 · 평면곡선의 매개변수 방정식</span></header>
+  <header class="card-head"><span class="no"></span><h2>평면곡선의 매개변수 방정식</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">반지름 30 cm인 자전거 바퀴의 테두리에 반사판이 붙어 있다. 밤에 옆에서 사진을 오래 노출해 찍으니, 반사판의 빛이 땅에 닿았다가 솟아오르고 다시 땅에 닿는 아치를 되풀이해 그렸다. 땅에 닿는 곳은 뾰족하고, 꼭대기는 바퀴 지름만큼 높았다. 이 곡선은 \(y = f(x)\) 꼴로 쓰기 어렵지만, 바퀴가 돈 각을 \(t\)로 두고 \(x\)와 \(y\)를 각각 \(t\)의 식으로 쓰면 간단해진다고 한다. 어떻게 쓸까? 아치 하나의 길이는 얼마일까?</p>
     <figure class="q-fig">
@@ -21,14 +21,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>삼각함수의 그래프, 매개변수로 나타낸 함수, 곡선의 길이.</div>
 
-    <h3><span class="mono">1</span>두 좌표를 따로 쓰다</h3>
+    <h3><span class="no">2.1.1</span>두 좌표를 따로 쓰다</h3>
     <p>평면 위를 움직이는 점의 위치를 시간이나 각 같은 매개변수 \(t\)의 함수 \(x = f(t)\), \(y = g(t)\)로 나타낸 것을 곡선의 매개변수 방정식이라 한다. \(y\)를 \(x\)의 함수로 쓸 수 없는 곡선, 곧 한 \(x\)에 여러 \(y\)가 대응하거나 되돌아오는 곡선도 매개변수로는 쉽게 쓸 수 있다. 원 \(x = r\cos t\), \(y = r\sin t\)가 그 예이다. 또 매개변수는 곡선의 모양뿐 아니라 점이 곡선을 따라 움직이는 방향과 빠르기까지 알려 준다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">사이클로이드</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.1.1 <span class="nm">사이클로이드</span></span>
       <p>반지름 \(r\)인 원이 직선 위를 미끄러지지 않고 구를 때 원 위의 한 점의 자취는 \[x = r(t - \sin t),\qquad y = r(1 - \cos t)\]이다. 여기서 \(t\)는 원이 돈 각(rad)이다. 아치 하나(\(0 \le t \le 2\pi\))의 길이는 \(8r\), 아치 아래 넓이는 \(3\pi r^2\)이다.</p>
     </div>
     <p>원이 각 \(t\)만큼 구르면 미끄러지지 않으므로 땅에 닿은 호의 길이 \(rt\)만큼 중심이 앞으로 간다. 그래서 중심은 \((rt, r)\)에 있다. 원 위의 점은 처음에 땅에 닿아 있었고, 중심에서 보면 \(t\)만큼 시계 방향으로 돌아 \((-r\sin t, -r\cos t)\)만큼 떨어져 있다. 두 위치를 더하면 사이클로이드의 식이 나온다. \(t = 2\pi\)마다 점이 다시 땅에 닿으므로 아치의 폭은 바퀴 둘레 \(2\pi r\)이다.<sup class="fn"><a href="#fn-adgeo-plane-param-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>두 방향의 흔들림이 만드는 무늬</h3>
+    <h3><span class="no">2.1.2</span>두 방향의 흔들림이 만드는 무늬</h3>
     <p>가로와 세로로 따로 흔들리는 점은 \(x = \sin at\), \(y = \sin bt\) 꼴로 움직이며, 그 자취를 리사주 곡선이라 한다. \(a = b\)이면 대각선 위를 오가는 선분이나 타원이 되고, \(a : b = 1 : 2\)이면 8자, \(2 : 3\)이면 더 복잡한 매듭 모양이 된다. 두 진동수의 비가 유리수이면 점이 언젠가 처음 자리로 돌아와 닫힌 곡선이 되고, 무리수이면 영원히 닫히지 않고 직사각형을 채워 간다. 오실로스코프로 두 신호의 진동수 비를 잴 때 이 무늬를 쓴다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="반지름 30 cm 바퀴의 사이클로이드">
@@ -43,8 +43,8 @@
       <figcaption>그림 2. 바퀴가 한 바퀴 구르는 동안 반사판은 바퀴 둘레보다 긴 240 cm의 길을 움직인다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.1.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.1.2</span>
       <p>처음 질문의 반사판이 그리는 사이클로이드의 아치 하나의 길이를 적분으로 구하여라. \(1 - \cos t = 2\sin^2(t/2)\)를 쓴다. 또 \(t = \pi\)일 때 반사판의 위치와 그때의 속도 방향을 구하여라.</p>
     </div>
     <p>\(\dfrac{dx}{dt} = r(1 - \cos t)\), \(\dfrac{dy}{dt} = r\sin t\)이므로 \(\left(\dfrac{dx}{dt}\right)^2 + \left(\dfrac{dy}{dt}\right)^2 = r^2(2 - 2\cos t) = 4r^2\sin^2\dfrac t2\)이다. 아치 하나의 길이는 \(\int_0^{2\pi}2r\sin\dfrac t2\,dt = 2r\left[-2\cos\dfrac t2\right]_0^{2\pi} = 8r\)이고, \(r = 30\)이면 240 cm이다.</p>

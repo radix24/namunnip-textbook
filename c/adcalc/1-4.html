@@ -59,7 +59,7 @@
 
     <div>
       <article class="card reading" id="text-adcalc-hyp-integral" data-kind="본문">
-        <header class="card-head"><span class="no">1.4.1</span><h2>100 m 사이에 전선을 1 m만 더 길게 걸면 가운데는 얼마나 처질까?</h2><span class="kind">본문 · 쌍곡선함수의 부정적분</span></header>
+        <header class="card-head"><span class="no">1.4.1</span><h2>쌍곡선함수의 부정적분</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">같은 높이의 두 전봇대가 100 m 떨어져 있다. 전선을 팽팽하게 100 m로 걸 수는 없어서 조금 느슨하게 101 m로 걸었다. 겨우 1%를 더 길게 걸었을 뿐이니 가운데는 몇십 cm쯤 처질 것 같다. 그런데 계산해 보면 가운데가 6 m 넘게 처진다. 전선은 현수선 \(y = a\cosh(x/a)\)를 그리는데, 이 곡선의 길이를 구하려면 \(\sqrt{1 + \sinh^2}\) 꼴의 적분을 해야 한다. 쌍곡선함수의 적분은 어떻게 할까?</p>
           <figure class="q-fig">
@@ -75,14 +75,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>치환적분법, 부분적분법, 쌍곡선함수의 도함수(<a href="1-3.html">쌍곡선함수의 도함수</a>), 곡선의 길이.</div>
 
-          <h3><span class="mono">1</span>미분을 거꾸로 읽다</h3>
+          <h3><span class="no">1.4.1</span>미분을 거꾸로 읽다</h3>
           <p>쌍곡선함수의 부정적분은 도함수 공식을 거꾸로 읽으면 얻는다. \((\sinh x)' = \cosh x\)이므로 \(\int\cosh x\,dx = \sinh x + C\)이고, \(\int\sinh x\,dx = \cosh x + C\)이다. 역쌍곡선함수의 도함수에서는 \(\int\dfrac{dx}{\sqrt{x^2 + 1}} = \sinh^{-1}x + C = \ln(x + \sqrt{x^2 + 1}) + C\)를 얻는다. 이 적분은 삼각치환으로도 풀 수 있지만, \(x = \sinh t\)로 치환하면 \(\sqrt{x^2 + 1} = \cosh t\), \(dx = \cosh t\,dt\)가 되어 피적분함수가 1로 바뀌므로 훨씬 간단하다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">쌍곡선함수의 적분과 쌍곡치환</span></span>
+          <div class="tb-env thm"><span class="lb">정리 1.4.1 <span class="nm">쌍곡선함수의 적분과 쌍곡치환</span></span>
             <p>\(\int\cosh x\,dx = \sinh x + C\), \(\int\sinh x\,dx = \cosh x + C\), \(\int\dfrac{dx}{\sqrt{x^2 + a^2}} = \sinh^{-1}\dfrac{x}{a} + C\)이다. \(\sqrt{x^2 + a^2}\)이 있으면 \(x = a\sinh t\)로 치환하여 \(\cosh^2 t - \sinh^2 t = 1\)로 근호를 없앤다.</p>
           </div>
           <p>원의 \(\sqrt{1 - x^2}\)을 \(x = \sin\theta\)로 없앴듯, \(\sqrt{x^2 + 1}\)은 \(x = \sinh t\)로, \(\sqrt{x^2 - 1}\)은 \(x = \cosh t\)로 없앤다. 각 경우 쓰는 항등식이 \(1 - \sin^2 = \cos^2\), \(1 + \sinh^2 = \cosh^2\), \(\cosh^2 - 1 = \sinh^2\)이다. 그래서 근호 속 식의 모양을 보면 어떤 치환을 쓸지 알 수 있다. 특히 현수선 \(y = a\cosh(x/a)\)의 길이를 구할 때 \(\sqrt{1 + y'^2} = \sqrt{1 + \sinh^2(x/a)} = \cosh(x/a)\)가 되어 적분이 바로 끝난다.<sup class="fn"><a href="#fn-adcalc-hyp-integral-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>현수선의 길이</h3>
+          <h3><span class="no">1.4.2</span>현수선의 길이</h3>
           <p>가운데가 가장 낮은 현수선 \(y = a\cosh(x/a)\)에서 \(x = -L\)부터 \(L\)까지의 길이는 \(\int_{-L}^{L}\cosh\dfrac{x}{a}\,dx = 2a\sinh\dfrac{L}{a}\)이다. 가운데가 처진 깊이는 양 끝의 높이에서 가운데 높이를 뺀 \(a\cosh(L/a) - a\)이다. 매개변수 \(a\)가 크면 곡선이 평평하고 작으면 깊게 처진다. 간격과 길이가 주어지면 \(2a\sinh(L/a)\)가 그 길이가 되도록 \(a\)를 정하고, 그 \(a\)로 처짐을 계산한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="간격 100 m에서 전선 길이에 따른 처짐">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 전선을 아주 조금만 더 길게 걸어도 가운데는 크게 처진다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">1.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 1.4.2</span>
             <p>처음 질문의 전선에서 \(L = 50\)이고 길이는 101이다. \(u = 50/a\)로 놓고 \(\sinh u \approx u + u^3/6\)을 써서 \(a\)를 어림하고, 처짐을 구하여라. \(\cosh u \approx 1 + u^2/2\)이다.</p>
           </div>
           <p>길이의 식은 \(2a\sinh u = 101\)이고 \(a = 50/u\)이므로 \(\dfrac{\sinh u}{u} = 1.01\)이다. \(\sinh u/u \approx 1 + u^2/6\)이므로 \(u^2/6 \approx 0.01\), 곧 \(u^2 \approx 0.06\), \(u \approx 0.245\)이다. 그래서 \(a \approx 50/0.245 \approx 204\) m이다.</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>쌍곡선함수의 부정적분은 \(\int\cosh x\,dx = \sinh x + C\)처럼 도함수를 거꾸로 읽어 얻고, \(\sqrt{x^2 + a^2}\)은 \(x = a\sinh t\)로 치환해 근호를 없앤다. 현수선 \(y = a\cosh(x/a)\)는 \(\sqrt{1 + y'^2} = \cosh(x/a)\)여서 길이가 \(2a\sinh(L/a)\)로 바로 나온다. 처음 질문의 전선은 길이를 1% 늘렸을 뿐이지만 \(a \approx 204\) m인 현수선이 되어 가운데가 약 6.1 m 처진다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>쌍곡선함수의 도함수</a></div></nav>
 
       <article class="card" id="card-adcalc-hyp-sub">
         <header class="card-head">
@@ -163,7 +163,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>쌍곡선함수의 도함수</a></div></nav>
 
       <article class="card" id="card-adcalc-cable-length">
         <header class="card-head">
@@ -209,7 +209,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-slope"><small class="mono">고급 미적분 1.3</small>cosh x의 접선의 기울기를 모으면 어떤 그래프가 될까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-hyp-deriv-spot"><small class="mono">고급 미적분 1.3</small>이 미분 풀이, 어디가 틀렸을까?</a><a href="../../c/adcalc/1-3.html#card-adcalc-skydiver"><small class="mono">고급 미적분 1.3</small>스카이다이버의 속도는 왜 끝없이 빨라지지 않을까?</a><a href="../../c/adcalc/1-3.html#text-adcalc-hyp-derivative"><small class="mono">고급 미적분 1.3</small>쌍곡선함수의 도함수</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adcalc&amp;sec=1-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">10문항</span></a>
 

@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adgeo-circle-theorems" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>원 밖의 한 점에서 그은 직선은 어떻게 그어도 변하지 않는 곱이 있을까?</h2><span class="kind">본문 · 원에 관한 정리</span></header>
+  <header class="card-head"><span class="no"></span><h2>원에 관한 정리</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">반지름 6 cm인 원의 중심에서 10 cm 떨어진 점 \(P\)가 있다. \(P\)에서 원을 지나는 직선을 그으면 원과 두 점 \(A\), \(B\)에서 만난다. 직선을 이리저리 돌려 \(PA\)와 \(PB\)를 재어 곱해 보니, 중심을 지나게 그으면 \(4\times16 = 64\), 비스듬히 그으면 \(5\times12.8 = 64\)로 늘 64였다. 원에 접하도록 그으면 접선의 길이는 8이고 그 제곱도 64이다. 왜 이 곱은 직선의 방향과 상관없이 일정할까?</p>
     <figure class="q-fig">
@@ -25,14 +25,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>원주각의 성질, 닮음, 원의 접선의 성질, 피타고라스 정리.</div>
 
-    <h3><span class="mono">1</span>원주각이 만드는 닮음</h3>
+    <h3><span class="no">1.6.1</span>원주각이 만드는 닮음</h3>
     <p>점 \(P\)에서 원을 지나는 두 직선이 원과 각각 \(A\), \(B\)와 \(C\), \(D\)에서 만난다고 하자. 사각형 \(ABDC\)가 원에 내접하므로 \(\angle PAC\)와 \(\angle PDB\)는 같은 호에 대한 각이어서 같고, \(\angle P\)는 공통이다. 그래서 삼각형 \(PAC\)와 \(PDB\)는 닮음이고, 대응하는 변의 비에서 \(PA : PD = PC : PB\), 곧 \(PA\times PB = PC\times PD\)이다. 직선을 돌려 접선이 되면 두 교점이 하나로 겹쳐 \(PT\times PT = PT^2\)이 된다. 그래서 이 곱은 직선과 상관없이 점 \(P\)와 원만으로 정해진다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">방멱 정리와 프톨레마이오스 정리</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.6.1 <span class="nm">방멱 정리와 프톨레마이오스 정리</span></span>
       <p>점 \(P\)를 지나는 직선이 중심 \(O\), 반지름 \(r\)인 원과 \(A\), \(B\)에서 만나면 \(PA\times PB = |OP^2 - r^2|\)이다. 원에 내접하는 사각형 \(ABCD\)에서는 \[AC\times BD = AB\times CD + AD\times BC\]이다.</p>
     </div>
     <p>\(OP^2 - r^2\)은 중심을 지나는 직선으로 계산하면 바로 나온다. 이 직선은 원과 \(OP - r\), \(OP + r\)만큼 떨어진 두 점에서 만나므로 곱은 \((OP - r)(OP + r) = OP^2 - r^2\)이다. 이 값을 점 \(P\)의 원에 대한 방멱이라 하며, \(P\)가 원 밖이면 양수, 원 안이면 음수, 원 위면 0이다. 원 안의 점에서도 두 현이 서로를 나누는 두 부분의 곱이 같다는 것이 같은 정리이다.<sup class="fn"><a href="#fn-adgeo-circle-theorems-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>내접사각형의 대각선</h3>
+    <h3><span class="no">1.6.2</span>내접사각형의 대각선</h3>
     <p>프톨레마이오스 정리는 원에 내접하는 사각형에서 두 대각선의 곱이 두 쌍의 마주 보는 변의 곱의 합과 같다는 것이다. 대각선 \(AC\) 위에 \(\angle ABE = \angle DBC\)인 점 \(E\)를 잡으면 원주각 때문에 닮은 삼각형 두 쌍이 생기고, 두 닮음에서 얻은 식을 더하면 정리가 나온다. 직사각형에 쓰면 대각선의 제곱이 두 변의 제곱의 합이 되어, 피타고라스 정리는 프톨레마이오스 정리의 특별한 경우이다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="P에서 그은 여러 직선의 곱">
@@ -47,8 +47,8 @@
       <figcaption>그림 2. 직선의 방향이 바뀌어도 두 교점까지의 거리의 곱은 \(OP^2 - r^2 = 64\)로 일정하다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.6.2</span>
       <p>처음 질문에서 \(P\)에서 그은 할선이 원과 만나는 가까운 점까지의 거리가 5 cm이면 먼 점까지는 몇 cm인가? 또 원에 내접하는 직사각형의 두 변이 3과 4일 때 프톨레마이오스 정리로 대각선의 길이를 구하여라.</p>
     </div>
     <p>방멱은 \(10^2 - 6^2 = 64\)이므로 \(PA\times PB = 64\)이다. \(PA = 5\)이면 \(PB = 64/5 = 12.8\) cm이다. 이때 현 \(AB\)의 길이는 \(12.8 - 5 = 7.8\) cm이다. 접선의 길이는 \(\sqrt{64} = 8\) cm로, 이는 직각삼각형 \(OTP\)에서 피타고라스 정리로 구한 \(\sqrt{10^2 - 6^2}\)과 같다.</p>

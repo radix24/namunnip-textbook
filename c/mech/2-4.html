@@ -63,7 +63,7 @@
 
     <div>
       <article class="card reading" id="text-mech-engine" data-kind="본문">
-        <header class="card-head"><span class="no">2.4.1</span><h2>자동차 엔진은 연료 에너지의 몇 %를 바퀴로 보낼까?</h2><span class="kind">본문 · 열기관과 열효율</span></header>
+        <header class="card-head"><span class="no">2.4.1</span><h2>열기관과 열효율</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">자동차 엔진은 휘발유를 태워 얻은 열로 바퀴를 굴린다. 그런데 엔진은 늘 뜨겁고, 배기구로는 뜨거운 가스가 나오며, 냉각수는 열을 식혀 내보낸다. 연료가 낸 열 가운데 실제로 차를 움직이는 일이 되는 것은 얼마나 될까? 기술이 아무리 좋아져도 열을 모두 일로 바꾸는 엔진은 만들 수 없을까?</p>
           <figure class="q-fig" data-q="mech-cycle">
@@ -74,14 +74,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>열역학 제1법칙과 기체가 한 일 \(P\Delta V\)(<a href="2-3.html">열역학 제1법칙</a>), 이상 기체 상태 방정식(<a href="2-2.html">상태 변화와 이상 기체</a>).</div>
 
-          <h3><span class="mono">1</span>순환 과정과 열기관</h3>
+          <h3><span class="no">2.4.1</span>순환 과정과 열기관</h3>
           <p>열을 받아 일을 계속하려면 기체가 한 번 팽창하고 끝나서는 안 된다. 팽창한 기체를 다시 압축하여 처음 상태로 되돌린 뒤 다시 팽창시켜야 한다. 이렇게 처음 상태로 돌아오는 과정을 순환 과정이라 한다. 한 바퀴 돌면 온도가 처음과 같으므로 \(\Delta U = 0\)이고, 제1법칙에 따라 기체가 받은 열의 합이 한 일과 같다.</p>
           <p>그런데 팽창할 때 한 일만큼 압축할 때 일을 받으면 남는 것이 없다. 그래서 팽창은 뜨거울 때(압력이 높을 때), 압축은 식은 뒤(압력이 낮을 때) 한다. 그림 1의 사각형에서 위쪽 경로로 팽창하고 아래쪽 경로로 압축하면 그 차이, 곧 사각형의 넓이가 한 바퀴 동안의 일이 된다. 그러려면 기체를 식히는 동안 열 \(Q_2\)를 낮은 온도의 곳으로 버려야 한다.</p>
-          <div class="tb-env thm"><span class="lb">정의 <span class="nm">열효율</span></span>
+          <div class="tb-env thm"><span class="lb">정의 2.4.1 <span class="nm">열효율</span></span>
             <p>열기관이 고온의 열원에서 열 \(Q_1\)을 받아 일 \(W\)를 하고 저온의 열원으로 열 \(Q_2\)를 버리면 \(W = Q_1 - Q_2\)이고, 열효율은 \[e = \frac{W}{Q_1} = 1 - \frac{Q_2}{Q_1}\] 이다.</p>
           </div>
 
-          <h3><span class="mono">2</span>열효율의 한계</h3>
+          <h3><span class="no">2.4.2</span>열효율의 한계</h3>
           <p>열역학 제2법칙에 따르면 열을 버리지 않고 받은 열을 모두 일로 바꾸는 열기관은 만들 수 없다. 즉 \(Q_2\)는 0이 될 수 없어 열효율은 늘 1보다 작다. 고온 \(T_1\), 저온 \(T_2\)(절대 온도) 사이에서 작동하는 열기관의 효율은 \(1 - \dfrac{T_2}{T_1}\)을 넘을 수 없다. 이 상한을 카르노 효율이라 한다.<sup class="fn"><a href="#fn-mech-engine-1">1</a></sup></p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 130" role="img" aria-label="열기관의 에너지 흐름">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 열기관은 고온에서 받은 열의 일부만 일로 바꾸고, 나머지는 반드시 저온으로 버린다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.4.2</span>
             <p>어떤 열기관이 한 번 순환할 때 고온에서 2000 J의 열을 받아 1400 J을 버린다. 열효율을 구하여라. 또 이 엔진의 고온부가 600 K, 저온부가 300 K이면 효율의 이론적 상한은 얼마인가?</p>
           </div>
           <p>한 일은 \(W = 2000 - 1400 = 600\) J이므로 열효율은 \(e = \dfrac{600}{2000} = 0.30\), 곧 30%이다. 실제 휘발유 엔진의 효율도 대략 25~35%이다.</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>열기관은 순환 과정을 되풀이하며 고온에서 받은 열 \(Q_1\)의 일부를 일로 바꾸고 나머지 \(Q_2\)를 저온으로 버린다. 열효율은 \(1 - \frac{Q_2}{Q_1}\)이며, 제2법칙에 따라 1이 될 수 없고 \(1 - \frac{T_2}{T_1}\)을 넘지 못한다. 그래서 처음 질문의 자동차 엔진은 연료 에너지의 약 30%만 일로 바꾸며, 열을 모두 일로 바꾸는 엔진은 만들 수 없다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/1-6.html#text-phy-engine"><small class="mono">물리학 1.6</small>열을 모두 일로 바꾸는 기관은 왜 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>열과 에너지 보존</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/1-6.html#text-phy-engine"><small class="mono">물리학 1.6</small>열기관과 효율</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div></nav>
 
       <article class="card" id="card-phy-engine">
         <header class="card-head">
@@ -162,7 +162,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>열과 에너지 보존</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div></nav>
 
       <article class="card" id="card-phy-wheel">
         <header class="card-head">
@@ -213,7 +213,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/1-5.html#card-phy-brake"><small class="mono">물리학 1.5</small>멈춘 자동차의 운동 에너지는 어디로 갔을까?</a><a href="../../c/phy/1-5.html#card-phy-joule"><small class="mono">물리학 1.5</small>물을 저어서 데울 수 있을까?</a><a href="../../c/phy/1-5.html#card-phy-heat-transfer"><small class="mono">물리학 1.5</small>난로의 열은 어떤 길로 나에게 올까?</a><a href="../../c/phy/1-5.html#text-phy-heat"><small class="mono">물리학 1.5</small>열과 에너지 보존</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div></nav>
 
       <article class="card reading" id="text-is2-power-plants">
         <header class="card-head">
@@ -271,7 +271,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/is2/2-5.html#card-is2-generator"><small class="mono">통합과학2 2.5</small>자석을 움직이면 왜 전류가 흐를까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-6.html#card-is2-efficiency"><small class="mono">통합과학2 2.6</small>에너지는 보존되는데 왜 아껴야 할까?</a><a href="../../c/is2/2-6.html#card-is2-renewable"><small class="mono">통합과학2 2.6</small>태양광과 풍력만으로 하루 전기를 채울 수 있을까?</a><a href="../../c/is2/2-6.html#card-is2-energy-design"><small class="mono">통합과학2 2.6</small>우리 학교 전기를 신재생 에너지로 채운다면 무엇을 얼마나 지을까?</a><a href="../../c/is2/2-6.html#text-is2-efficiency"><small class="mono">통합과학2 2.6</small>에너지는 보존되는데 왜 아껴야 할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-6.html#card-phy-lenz"><small class="mono">물리학 2.6</small>자석을 코일에 넣으면 전류는 어느 쪽으로 흐를까?</a><a href="../../c/phy/2-6.html#card-phy-wireless"><small class="mono">물리학 2.6</small>무선 충전기는 선 없이 어떻게 전기를 보낼까?</a><a href="../../c/is2/2-5.html#card-is2-generator"><small class="mono">통합과학2 2.5</small>자석을 움직이면 왜 전류가 흐를까?</a><a href="../../c/phy/2-6.html#text-phy-induction-tech"><small class="mono">물리학 2.6</small>교통 카드와 금속 탐지기는 어떻게 전자기 유도를 쓸까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is2/2-6.html#card-is2-efficiency"><small class="mono">통합과학2 2.6</small>에너지는 보존되는데 왜 아껴야 할까?</a><a href="../../c/is2/2-6.html#card-is2-renewable"><small class="mono">통합과학2 2.6</small>태양광과 풍력만으로 하루 전기를 채울 수 있을까?</a><a href="../../c/is2/2-6.html#card-is2-energy-design"><small class="mono">통합과학2 2.6</small>우리 학교 전기를 신재생 에너지로 채운다면 무엇을 얼마나 지을까?</a><a href="../../c/is2/2-6.html#text-is2-efficiency"><small class="mono">통합과학2 2.6</small>에너지 효율과 신재생 에너지</a></div></nav>
 
       <section class="video-block" id="video-phy-engine" aria-label="통통사과 영상">
         <div>
@@ -332,7 +332,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>밀폐된 강철 통에서 잰 연소열은 왜 열린 그릇에서 잰 값과 다를까?</a><a href="../../c/phy/1-6.html#text-phy-engine"><small class="mono">물리학 1.6</small>열을 모두 일로 바꾸는 기관은 왜 없을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>발전소는 왜 연료 에너지의 절반 넘게를 바다에 버릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-5.html#card-mech-entropy"><small class="mono">역학과 에너지 2.5</small>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a><a href="../../c/mech/2-5.html#text-mech-entropy"><small class="mono">역학과 에너지 2.5</small>퍼진 향기는 왜 저절로 병 속으로 돌아오지 않을까?</a><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>열을 흡수하는 변화는 왜 저절로 일어날까?</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>뜨거운 물체와 차가운 물체를 맞대면 왜 늘 온도가 같아지는 쪽으로만 갈까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-3.html#card-mech-first-law"><small class="mono">역학과 에너지 2.3</small>기체에 준 열은 어디에 쓰일까?</a><a href="../../c/adchem/3-1.html#text-adchem-internal-energy"><small class="mono">고급 화학 3.1</small>내부 에너지와 열역학 제1법칙</a><a href="../../c/phy/1-6.html#text-phy-engine"><small class="mono">물리학 1.6</small>열기관과 효율</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/adphy/1-6.html#text-adphy-entropy-flow"><small class="mono">고급 물리학 1.6</small>열효율과 엔트로피</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mech/2-5.html#card-mech-entropy"><small class="mono">역학과 에너지 2.5</small>퍼진 기체는 왜 저절로 다시 모이지 않을까?</a><a href="../../c/mech/2-5.html#text-mech-entropy"><small class="mono">역학과 에너지 2.5</small>엔트로피와 비가역 현상</a><a href="../../c/mateng/3-3.html#text-mateng-spontaneity"><small class="mono">물질과 에너지 3.3</small>엔트로피와 자발성</a><a href="../../c/adchem/3-3.html#text-adchem-microstates"><small class="mono">고급 화학 3.3</small>엔트로피</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=mech&amp;sec=2-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">14문항</span></a>
       <a class="px-go" href="../../practice.html?sec=mech-2-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">4문항</span></a>

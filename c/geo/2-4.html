@@ -66,7 +66,7 @@
 
     <div>
       <article class="card reading" id="text-geo-coord3" data-kind="본문">
-        <header class="card-head"><span class="no">2.4.1</span><h2>공간에서 두 점 사이의 거리는 어떻게 잴까?</h2><span class="kind">본문 · 공간좌표</span></header>
+        <header class="card-head"><span class="no">2.4.1</span><h2>공간좌표</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">교실 바닥 한구석에서 반대편 천장 구석까지 줄을 팽팽하게 당기면 길이가 얼마일까? 가로 8 m, 세로 6 m, 높이 3 m인 교실이라면 피타고라스 정리를 쓰면 될 것 같다. 그런데 직각삼각형이 공중에 비스듬히 놓여 있다. 공간의 점을 수로 나타내면 이런 계산을 체계적으로 할 수 있지 않을까?</p>
           <figure class="q-fig" data-q="geo-coord3">
@@ -77,13 +77,13 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>좌표평면 위의 두 점 사이의 거리와 내분점(공통수학2), 정사영(<a href="2-3.html">정사영</a>), 피타고라스 정리.</div>
 
-          <h3><span class="mono">1</span>공간좌표</h3>
+          <h3><span class="no">2.4.1</span>공간좌표</h3>
           <p>공간의 한 점 O에서 서로 수직인 세 수직선을 \(x\)축, \(y\)축, \(z\)축이라 하고, 두 축이 정하는 세 평면을 \(xy\)평면, \(yz\)평면, \(zx\)평면이라 한다. 공간의 점 P에서 세 좌표평면에 수직인 평면을 그어 각 축과 만나는 점의 좌표를 \(a\), \(b\), \(c\)라 하면, 점 P를 세 실수의 순서쌍 \((a, b, c)\)로 나타낼 수 있다. 이를 점 P의 공간좌표라 한다.</p>
           <p>점 \((a, b, c)\)를 \(xy\)평면에 정사영하면 \((a, b, 0)\)이 되고, \(xy\)평면에 대해 대칭이동하면 \((a, b, -c)\)가 된다. 좌표평면에서처럼 대칭이동한 축이나 평면에 해당하는 좌표만 부호가 바뀌지 않는다.</p>
 
-          <h3><span class="mono">2</span>두 점 사이의 거리와 내분점</h3>
+          <h3><span class="no">2.4.2</span>두 점 사이의 거리와 내분점</h3>
           <p>원점 O와 점 \(P(a, b, c)\) 사이의 거리를 구하자. P의 \(xy\)평면 위로의 정사영 \(P'(a, b, 0)\)에 대하여 \(\overline{OP'} = \sqrt{a^2 + b^2}\)이다. 삼각형 \(OP'P\)는 \(P'\)에서 직각인 직각삼각형이므로 \(\overline{OP}^2 = a^2 + b^2 + c^2\)이다. 피타고라스 정리를 두 번 쓴 셈이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">두 점 사이의 거리와 내분점</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.4.1 <span class="nm">두 점 사이의 거리와 내분점</span></span>
             <p>\(A(x_1, y_1, z_1)\), \(B(x_2, y_2, z_2)\)에 대하여 \[\overline{AB} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}\] 선분 AB를 \(m : n\)으로 내분하는 점은 \(\left(\dfrac{mx_2 + nx_1}{m + n}, \dfrac{my_2 + ny_1}{m + n}, \dfrac{mz_2 + nz_1}{m + n}\right)\)이다.</p>
           </div>
           <p>내분점은 선분을 세 좌표축에 각각 정사영하여 생각하면, 축마다 좌표평면에서와 같은 비로 나뉜다. 그래서 좌표마다 따로 계산하면 된다. 그림 1에서 \(a\), \(b\), \(c\)를 바꾸어 보며 거리가 어떻게 변하는지 확인해 보자.<sup class="fn"><a href="#fn-geo-coord3-1">1</a></sup></p>
@@ -99,8 +99,8 @@
             <figcaption>그림 2. 좌표공간의 공식은 좌표평면의 공식에 \(z\)좌표 하나를 더한 꼴이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.4.2</span>
             <p>가로 8 m, 세로 6 m, 높이 3 m인 교실의 바닥 한구석에서 반대편 천장 구석까지의 거리를 구하여라. 또 두 점 \(A(1, -2, 3)\), \(B(4, 4, -3)\)을 잇는 선분을 \(1 : 2\)로 내분하는 점을 구하여라.</p>
           </div>
           <p>바닥 구석을 원점으로 잡으면 반대편 천장 구석은 \((8, 6, 3)\)이다. 거리는 \(\sqrt{64 + 36 + 9} = \sqrt{109} \approx 10.4\) m이다. 바닥 대각선이 \(\sqrt{64 + 36} = 10\) m이고, 그것과 높이 3 m로 다시 직각삼각형을 만든 것과 같다.</p>
@@ -113,7 +113,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>공간의 점은 세 좌표축에 대한 순서쌍 \((a, b, c)\)로 나타내며, 두 점 사이의 거리는 피타고라스 정리를 두 번 써서 \(\sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}\)로 구하고, 내분점은 좌표마다 따로 계산한다. 그래서 처음 질문의 교실 대각선 길이는 \(\sqrt{8^2 + 6^2 + 3^2} = \sqrt{109} \approx 10.4\) m이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>기울어진 판의 그림자 넓이는 어떻게 구할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a><a href="../../c/adgeo/3-1.html#text-adgeo-level-curves"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 산의 모양과 가파른 곳을 알 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>정사영</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a><a href="../../c/adgeo/3-1.html#text-adgeo-level-curves"><small class="mono">고급 기하 3.1</small>등위곡선과 곡면</a></div></nav>
 
       <article class="card" id="card-geo-coord-point">
         <header class="card-head">
@@ -166,7 +166,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>기울어진 판의 그림자 넓이는 어떻게 구할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a><a href="../../c/adgeo/3-1.html#text-adgeo-level-curves"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 산의 모양과 가파른 곳을 알 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-3.html#card-geo-proj-segment"><small class="mono">기하 2.3</small>막대를 기울이면 그림자 길이는 어떤 규칙으로 줄어들까?</a><a href="../../c/geo/2-3.html#text-geo-projection"><small class="mono">기하 2.3</small>정사영</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-1.html#card-adgeo-contour"><small class="mono">고급 기하 3.1</small>지도의 등고선은 곡면을 어떻게 나타낸 것일까?</a><a href="../../c/adgeo/3-1.html#card-adgeo-level-match"><small class="mono">고급 기하 3.1</small>등고선 지도만 보고 함수를 알아맞힐 수 있을까?</a><a href="../../c/adgeo/3-1.html#text-adgeo-level-curves"><small class="mono">고급 기하 3.1</small>등위곡선과 곡면</a></div></nav>
 
       <article class="card" id="card-geo-dist3">
         <header class="card-head">
@@ -223,7 +223,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구를 평면으로 자르면 단면의 크기는 어떻게 정해질까?</a><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구의 방정식</a><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a></div></nav>
 
       <article class="card" id="card-geo-section3">
         <header class="card-head">
@@ -271,7 +271,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a><a href="../../c/pmath/2-5.html#card-pmath-section3d"><small class="mono">전문 수학 2.5</small>선분 밖에서도 선분을 m : n으로 나눌 수 있을까?</a><a href="../../c/pmath/2-5.html#text-pmath-sphere-eq"><small class="mono">전문 수학 2.5</small>세 기지국까지의 거리만으로 드론의 위치를 알아낼 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-5.html#card-pmath-treasure3d"><small class="mono">전문 수학 2.5</small>거리만 알려 주는 탐지기로 공간 속 보물을 찾을 수 있을까?</a><a href="../../c/pmath/2-5.html#card-pmath-section3d"><small class="mono">전문 수학 2.5</small>선분 밖에서도 선분을 m : n으로 나눌 수 있을까?</a><a href="../../c/pmath/2-5.html#text-pmath-sphere-eq"><small class="mono">전문 수학 2.5</small>공간좌표와 구의 방정식</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=geo&amp;sec=2-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">15문항</span></a>
       <a class="px-go" href="../../practice.html?sec=geo-2-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">36문항</span></a>

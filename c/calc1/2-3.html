@@ -64,7 +64,7 @@
 
     <div>
       <article class="card reading" id="text-calc1-power-rule" data-kind="본문">
-        <header class="card-head"><span class="no">2.3.1</span><h2>모든 점의 접선의 기울기를 한 번에 나타낼 수 있을까?</h2><span class="kind">본문 · \(y = x^n\)의 도함수</span></header>
+        <header class="card-head"><span class="no">2.3.1</span><h2>y = xⁿ의 도함수</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">\(y = x^2\)에서 \(x = 1\)의 접선 기울기는 2, \(x = 3\)에서는 6이었다. 점마다 극한을 새로 계산하는 대신, '\(x\)에서의 기울기'를 \(x\)의 식 하나로 쓸 수는 없을까? 그리고 \(x^3\), \(x^{10}\)의 기울기는 어떤 규칙을 따를까?</p>
           <figure class="q-fig" data-q="calc1-deriv">
@@ -75,17 +75,17 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>미분계수(<a href="2-1.html">미분계수</a>), 함수의 극한(<a href="1-1.html">함수의 극한</a>), 곱셈 공식과 이항 전개.</div>
 
-          <h3><span class="mono">1</span>도함수</h3>
+          <h3><span class="no">2.3.1</span>도함수</h3>
           <p>\(f(x) = x^2\)의 미분계수를 \(a\) 대신 문자 \(x\)로 계산해 보자. \(\dfrac{(x + h)^2 - x^2}{h} = \dfrac{2xh + h^2}{h} = 2x + h\)이므로, \(h \to 0\)이면 \(2x\)이다. 즉 어느 점에서든 접선의 기울기는 그 점의 \(x\)좌표의 2배이다. \(x = 1\)이면 2, \(x = 3\)이면 6으로 앞의 값과 맞는다.</p>
           <p>다시 말해 각 \(x\)에 그 점의 미분계수를 대응시키면 새로운 함수가 생긴다.</p>
-          <div class="tb-env"><span class="lb">정의 <span class="nm">도함수</span></span>
+          <div class="tb-env"><span class="lb">정의 2.3.1 <span class="nm">도함수</span></span>
             <p>미분가능한 함수 \(f(x)\)의 정의역의 각 \(x\)에 미분계수 \(f'(x)\)를 대응시키는 함수 \[f'(x) = \lim_{h \to 0}\frac{f(x + h) - f(x)}{h}\] 를 \(f(x)\)의 도함수라 한다. \(y'\), \(\dfrac{dy}{dx}\)로도 쓰며, 도함수를 구하는 것을 미분한다고 한다.</p>
           </div>
 
-          <h3><span class="mono">2</span>\(x^n\)의 도함수</h3>
+          <h3><span class="no">2.3.2</span>\(x^n\)의 도함수</h3>
           <p>\(x^3\)도 같은 방법으로 미분한다. \((x + h)^3 = x^3 + 3x^2h + 3xh^2 + h^3\)이므로 \(\dfrac{(x + h)^3 - x^3}{h} = 3x^2 + 3xh + h^2\)이고, \(h \to 0\)이면 \(3x^2\)이다. 여기서 \(h\)가 하나뿐인 항 \(3x^2h\)만 살아남고, \(h\)가 둘 이상 곱해진 항은 모두 사라진 것에 주목하자.</p>
           <p>\(n\)제곱에서도 같다. \((x + h)^n\)을 전개하면 \(x^n + nx^{n-1}h + (h^2\text{ 이상이 곱해진 항})\)이다. \(x^n\)을 빼고 \(h\)로 나눈 뒤 \(h \to 0\)으로 보내면 \(nx^{n-1}\)만 남는다.<sup class="fn"><a href="#fn-calc1-power-rule-1">1</a></sup></p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">\(y = x^n\)의 도함수</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.2 <span class="nm">\(y = x^n\)의 도함수</span></span>
             <p>\(n\)이 자연수일 때 \((x^n)' = nx^{n-1}\)이다. 또 상수함수 \(y = c\)의 도함수는 0이다.</p>
           </div>
           <p>그림 1에서 \(n\)과 \(x\)를 바꾸어 보자. 위 그래프의 접선 기울기가 아래 그래프의 점의 높이가 된다. \(n = 2\)이면 아래 그래프는 직선 \(y = 2x\), \(n = 3\)이면 포물선 \(y = 3x^2\)이다. \(x^3\)은 원점에서 기울기가 0이고 양쪽에서 모두 올라가므로, 도함수 \(3x^2\)은 원점에서 0이고 나머지에서 양수이다.</p>
@@ -98,8 +98,8 @@
             <figcaption>그림 2. 전개에서 \(h\)가 하나 곱해진 항만 남고, 나머지는 \(h \to 0\)일 때 모두 0이 된다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.3.3</span>
             <p>\(f(x) = x^4\)의 도함수를 구하고, \(x = -1\), \(0\), \(2\)에서의 접선의 기울기를 구하여라. 또 \(y = x^3\)의 그래프 위에서 접선의 기울기가 12인 점을 모두 구하여라.</p>
           </div>
           <p>공식에 따라 \(f'(x) = 4x^3\)이다. 그러면 \(f'(-1) = -4\), \(f'(0) = 0\), \(f'(2) = 32\)이다. \(x^4\)의 그래프는 원점에서 바닥이 평평하고, 왼쪽에서는 내려가며 오른쪽에서는 가파르게 올라간다는 것이 기울기의 부호와 크기에서 읽힌다.</p>
@@ -112,7 +112,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>도함수는 각 점의 미분계수를 \(x\)의 함수로 모은 것이다. \((x + h)^n\)을 전개해 \(h\)로 나누면 \(h\)가 하나 곱해진 항만 남으므로 \((x^n)' = nx^{n-1}\)이다. 그래서 처음 질문의 기울기는 \(x^2\)에서 \(2x\), \(x^3\)에서 \(3x^2\), \(x^{10}\)에서 \(10x^9\)이라는 한 규칙을 따른다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-1.html#text-calc1-derivative-coef"><small class="mono">미적분Ⅰ 2.1</small>어느 한 순간의 빠르기는 어떻게 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-1.html#card-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a><a href="../../c/adcalc/4-1.html#card-adcalc-field-match"><small class="mono">고급 미적분 4.1</small>방향장만 보고 미분방정식을 알아맞힐 수 있을까?</a><a href="../../c/adcalc/4-1.html#text-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>식을 풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-1.html#text-calc1-derivative-coef"><small class="mono">미적분Ⅰ 2.1</small>미분계수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-1.html#card-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a><a href="../../c/adcalc/4-1.html#card-adcalc-field-match"><small class="mono">고급 미적분 4.1</small>방향장만 보고 미분방정식을 알아맞힐 수 있을까?</a><a href="../../c/adcalc/4-1.html#text-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>미분방정식과 방향장</a></div></nav>
 
       <article class="card" id="card-calc1-deriv-graph">
         <header class="card-head">
@@ -165,7 +165,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-1.html#text-calc1-derivative-coef"><small class="mono">미적분Ⅰ 2.1</small>어느 한 순간의 빠르기는 어떻게 잴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-1.html#card-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a><a href="../../c/adcalc/4-1.html#card-adcalc-field-match"><small class="mono">고급 미적분 4.1</small>방향장만 보고 미분방정식을 알아맞힐 수 있을까?</a><a href="../../c/adcalc/4-1.html#text-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>식을 풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc1/2-1.html#card-calc1-secant"><small class="mono">미적분Ⅰ 2.1</small>할선의 기울기는 h가 0에 가까워지면 어디로 갈까?</a><a href="../../c/calc1/2-1.html#card-calc1-zoom"><small class="mono">미적분Ⅰ 2.1</small>곡선을 계속 확대하면 무엇이 보일까?</a><a href="../../c/calc1/2-1.html#text-calc1-derivative-coef"><small class="mono">미적분Ⅰ 2.1</small>미분계수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/4-1.html#card-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>풀지 않고도 미분방정식의 해를 그릴 수 있을까?</a><a href="../../c/adcalc/4-1.html#card-adcalc-field-match"><small class="mono">고급 미적분 4.1</small>방향장만 보고 미분방정식을 알아맞힐 수 있을까?</a><a href="../../c/adcalc/4-1.html#text-adcalc-slope-field"><small class="mono">고급 미적분 4.1</small>미분방정식과 방향장</a></div></nav>
 
       <article class="card" id="card-calc1-power-rule">
         <header class="card-head">
@@ -213,7 +213,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/calc1/2-4.html#card-calc1-sum-rule"><small class="mono">미적분Ⅰ 2.4</small>두 함수를 더하면 기울기도 더해질까?</a><a href="../../c/calc1/2-4.html#text-calc1-poly-deriv"><small class="mono">미적분Ⅰ 2.4</small>여러 항이 더해진 다항식은 어떻게 미분할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">이어지는 카드</span><a href="../../c/calc1/2-4.html#card-calc1-sum-rule"><small class="mono">미적분Ⅰ 2.4</small>두 함수를 더하면 기울기도 더해질까?</a><a href="../../c/calc1/2-4.html#text-calc1-poly-deriv"><small class="mono">미적분Ⅰ 2.4</small>다항함수의 도함수</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=calc1&amp;sec=2-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">10문항</span></a>
       <a class="px-go" href="../../practice.html?sec=calc1-2-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">2문항</span></a>

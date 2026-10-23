@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-alg-exp-log-apply" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>반으로 줄어드는 양에서 지나간 시간을 어떻게 거꾸로 셀까?</h2><span class="kind">본문 · 지수함수와 로그함수의 활용</span></header>
+  <header class="card-head"><span class="no"></span><h2>지수함수와 로그함수의 활용</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">탄소-14는 5730년마다 양이 절반으로 줄어든다. 어떤 나무 화석에 남은 탄소-14가 처음의 \(\tfrac{1}{4}\)이면 약 11 460년이 지난 것이다. 그런데 처음의 30%가 남았다면 몇 년이 지난 것일까? 지수가 미지수인 방정식은 어떻게 풀까?</p>
     <figure class="q-fig" data-q="alg-decay">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>지수함수와 로그함수의 그래프(<a href="1-7.html">지수함수와 로그함수의 그래프</a>), 로그의 성질, 상용로그(<a href="1-5.html">상용로그</a>).</div>
 
-    <h3><span class="mono">1</span>지수방정식</h3>
+    <h3><span class="no">1.8.1</span>지수방정식</h3>
     <p>지수에 미지수가 있는 방정식을 지수방정식이라 한다. 지수함수는 일대일대응이므로 \(a^{f(x)} = a^{g(x)}\)이면 \(f(x) = g(x)\)이다. 따라서 양변의 밑을 같게 만들면 지수끼리 비교하는 방정식이 된다. 가령 \(4^x = 8\)은 \(2^{2x} = 2^3\)이므로 \(x = \tfrac{3}{2}\)이다.</p>
     <p>밑을 같게 만들 수 없을 때는 양변에 로그를 취한다. \(2^x = 5\)이면 \(x = \log_2 5\)이고, 상용로그로 \(x = \dfrac{\log 5}{\log 2}\)처럼 계산한다. 또 \(4^x - 2^{x+1} - 8 = 0\)처럼 \(2^x\)가 여러 번 나오면 \(2^x = t\ (t &gt; 0)\)로 두어 이차방정식으로 바꾼다.</p>
 
-    <h3><span class="mono">2</span>지수부등식과 부등호의 방향</h3>
+    <h3><span class="no">1.8.2</span>지수부등식과 부등호의 방향</h3>
     <p>부등식에서는 밑이 1보다 큰지 작은지가 중요하다. \(a &gt; 1\)이면 지수함수가 증가하므로 \(a^{f(x)} &lt; a^{g(x)} \iff f(x) &lt; g(x)\)이다. 그런데 \(0 &lt; a &lt; 1\)이면 감소함수이므로 부등호의 방향이 바뀐다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">지수부등식과 로그부등식</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.8.1 <span class="nm">지수부등식과 로그부등식</span></span>
       <p>\(a &gt; 1\)일 때 \(a^{f(x)} &lt; a^{g(x)} \iff f(x) &lt; g(x)\), \(\log_a f(x) &lt; \log_a g(x) \iff 0 &lt; f(x) &lt; g(x)\)이다. \(0 &lt; a &lt; 1\)이면 오른쪽 부등호의 방향이 바뀐다.</p>
     </div>
     <p>로그부등식에서는 진수가 양수라는 조건을 함께 챙겨야 한다. \(\log_2 (x - 1) &lt; 3\)은 \(x - 1 &lt; 8\)뿐 아니라 \(x - 1 &gt; 0\)도 만족해야 하므로 해는 \(1 &lt; x &lt; 9\)이다.<sup class="fn"><a href="#fn-alg-exp-log-apply-1">1</a></sup></p>
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 반감기마다 남은 양이 절반이 되므로, 남은 비율은 시간에 대한 지수함수이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.8.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.8.2</span>
       <p>탄소-14가 처음의 30% 남은 화석은 약 몇 년 전의 것인가? (\(\log 2 = 0.3010\), \(\log 3 = 0.4771\)) 또 연이율 5%로 복리 예금을 하면 원금이 2배 이상이 되는 데 최소 몇 년이 걸리는가? (\(\log 1.05 = 0.0212\))</p>
     </div>
     <p>지난 시간을 \(t\)년이라 하면 \(\left(\tfrac{1}{2}\right)^{t/5730} = 0.3\)이다. 양변에 상용로그를 취하면 \(-\dfrac{t}{5730}\log 2 = \log 0.3 = \log 3 - 1 = -0.5229\)이다. 따라서 \(t = 5730 \times \dfrac{0.5229}{0.3010} \approx 9954\), 곧 약 1만 년 전의 것이다. 남은 양이 \(\tfrac{1}{2}\)과 \(\tfrac{1}{4}\) 사이이므로, 반감기 한 번과 두 번 사이라는 그림 2의 짐작과도 맞는다.</p>

@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-adgeo-spherical-triangle" data-kind="본문">
-        <header class="card-head"><span class="no">3.3.1</span><h2>지구 위에 세 각이 모두 90°인 삼각형을 그릴 수 있을까?</h2><span class="kind">본문 · 구면삼각형</span></header>
+        <header class="card-head"><span class="no">3.3.1</span><h2>구면삼각형</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">북극점에서 출발해 경도 0°의 자오선을 따라 적도까지 내려간 뒤, 적도를 따라 동쪽으로 경도 90°까지 가고, 다시 경도 90°의 자오선을 따라 북극점으로 돌아왔다. 세 길은 모두 지구 표면에서 가장 짧은 길인 대원의 일부이다. 이 삼각형의 세 각은 모두 90°여서 합이 270°이다. 평면에서는 삼각형의 세 각의 합이 늘 180°인데, 구면에서는 왜 180°보다 클까? 그 넘치는 각은 무엇을 알려 줄까?</p>
           <figure class="q-fig">
@@ -81,14 +81,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>구의 방정식, 호도법과 부채꼴의 넓이, 위도와 경도.</div>
 
-          <h3><span class="mono">1</span>구면 위의 곧은 선</h3>
+          <h3><span class="no">3.3.1</span>구면 위의 곧은 선</h3>
           <p>구면 위의 두 점 사이의 가장 짧은 길은 구의 중심을 지나는 평면으로 구를 자른 큰 원, 곧 대원의 호이다. 적도와 경선은 대원이지만, 적도가 아닌 위선은 대원이 아니다. 구면 위에서는 대원이 평면의 직선 역할을 하므로, 세 대원의 호로 둘러싸인 도형을 구면삼각형이라 한다. 구면삼각형의 각은 두 대원이 만나는 점에서 두 대원의 접선이 이루는 각이고, 변의 길이는 대원의 호에 대한 중심각으로 잰다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">지라르의 정리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.3.1 <span class="nm">지라르의 정리</span></span>
             <p>반지름 \(R\)인 구면 위의 구면삼각형의 세 각을 \(A\), \(B\), \(C\)(rad)라 하면 세 각의 합은 \(\pi\)보다 크고, 그 넓이는 \[S = R^2(A + B + C - \pi)\]이다. \(A + B + C - \pi\)를 구면 초과라 한다.</p>
           </div>
           <p>두 대원은 구면 위에서 서로 반대편의 두 점에서 만나며, 각 \(A\)를 이루는 두 대원 사이에 생기는 반달 모양 영역의 넓이는 구 전체 넓이 \(4\pi R^2\)의 \(A/(2\pi)\)배, 곧 \(2AR^2\)이다. 삼각형의 세 각에서 생기는 반달 모양과 그 반대편의 반달 모양을 모두 더하면 구 전체를 덮는데, 삼각형과 그 반대편 삼각형은 세 번씩 겹친다. 이것을 식으로 쓰면 \(2(2AR^2 + 2BR^2 + 2CR^2) = 4\pi R^2 + 4S\)이고, 정리하면 지라르의 정리가 된다.<sup class="fn"><a href="#fn-adgeo-spherical-triangle-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>작은 삼각형은 거의 평면</h3>
+          <h3><span class="no">3.3.2</span>작은 삼각형은 거의 평면</h3>
           <p>구면 초과는 넓이를 \(R^2\)으로 나눈 값이어서, 구에 비해 아주 작은 삼각형은 구면 초과가 거의 0이고 세 각의 합이 180°에 가깝다. 그래서 운동장이나 마을 크기의 삼각형에서는 평면 기하가 잘 맞는다. 그러나 대륙만큼 큰 삼각형에서는 넘치는 각이 눈에 띄게 커진다. 서울에서 뉴욕으로 가는 비행기가 지도에서 북쪽으로 크게 휘어 보이는 길로 가는 것도, 그 길이 평면 지도에서는 굽어 보여도 구면에서는 가장 짧은 대원이기 때문이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="크기에 따른 구면 초과">
@@ -103,8 +103,8 @@
             <figcaption>그림 2. 구면 초과는 넓이에 비례해, 작은 삼각형은 거의 평면과 같고 큰 삼각형은 각의 합이 크게 넘친다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.3.2</span>
             <p>처음 질문의 삼각형의 넓이를 지라르의 정리로 구하고, 지구 겉넓이의 몇 분의 몇인지 확인하여라. 지구의 반지름은 6371 km이다. 세 각이 각각 60°, 70°, 80°인 구면삼각형의 넓이는 얼마인가?</p>
           </div>
           <p>세 각이 모두 \(\pi/2\)이므로 구면 초과는 \(3\pi/2 - \pi = \pi/2\)이고, 넓이는 \(R^2\pi/2 = \dfrac{\pi\times6371^2}{2} \approx 6.38\times10^7\) km²이다. 지구 겉넓이 \(4\pi R^2\)의 \(\dfrac{\pi/2}{4\pi} = \dfrac18\)이다. 실제로 적도면과 두 경선면이 지구를 8등분하므로 맞는다.</p>
@@ -117,7 +117,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>구면 위의 가장 짧은 길은 구의 중심을 지나는 대원의 호이며, 세 대원의 호로 둘러싸인 구면삼각형은 세 각의 합이 180°보다 크다. 지라르의 정리에 따라 넓이는 구면 초과에 \(R^2\)을 곱한 \(R^2(A + B + C - \pi)\)이고, 작은 삼각형은 구면 초과가 거의 0이어서 평면 기하와 같아진다. 처음 질문의 삼각형은 세 각이 모두 90°여서 구면 초과가 \(\pi/2\)이고, 넓이는 지구 겉넓이의 8분의 1이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구를 평면으로 자르면 단면의 크기는 어떻게 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 서울에서 뉴욕까지의 거리를 구할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면코사인법칙과 구면사인법칙</a></div></nav>
 
       <article class="card" id="card-adgeo-sphere-triangle">
         <header class="card-head">
@@ -156,7 +156,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구를 평면으로 자르면 단면의 크기는 어떻게 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 서울에서 뉴욕까지의 거리를 구할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면코사인법칙과 구면사인법칙</a></div></nav>
 
       <article class="card" id="card-adgeo-flight-route">
         <header class="card-head">
@@ -192,7 +192,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구를 평면으로 자르면 단면의 크기는 어떻게 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 서울에서 뉴욕까지의 거리를 구할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-5.html#card-geo-sphere-eq"><small class="mono">기하 2.5</small>중심과 반지름을 알면 구를 식 하나로 쓸 수 있을까?</a><a href="../../c/geo/2-5.html#card-geo-sphere-complete"><small class="mono">기하 2.5</small>전개된 식에서 구의 중심과 반지름을 되찾을 수 있을까?</a><a href="../../c/geo/2-5.html#text-geo-sphere"><small class="mono">기하 2.5</small>구의 방정식</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adgeo/3-4.html#card-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면삼각형에서도 코사인법칙이 성립할까?</a><a href="../../c/adgeo/3-4.html#card-adgeo-city-distance"><small class="mono">고급 기하 3.4</small>위도와 경도만으로 두 도시 사이 거리를 구할 수 있을까?</a><a href="../../c/adgeo/3-4.html#text-adgeo-spherical-law"><small class="mono">고급 기하 3.4</small>구면코사인법칙과 구면사인법칙</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adgeo&amp;sec=3-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">13문항</span></a>
 

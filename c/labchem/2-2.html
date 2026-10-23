@@ -54,7 +54,7 @@
 
     <div>
       <article class="card reading" id="text-labchem-gas-constant" data-kind="본문">
-        <header class="card-head"><span class="no">2.2.1</span><h2>물 위에서 모은 수소의 압력은 왜 대기압과 같지 않을까?</h2><span class="kind">본문 · 기체 상수 구하기</span></header>
+        <header class="card-head"><span class="no">2.2.1</span><h2>기체 상수 구하기</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">마그네슘 리본 0.0350 g을 묽은 염산과 반응시켜, 물을 채워 거꾸로 세운 눈금관에 수소를 모았다. 22 °C에서 수소 36.2 mL가 모였고, 관 안팎의 물높이를 맞추었을 때 대기압은 755 mmHg였다. 이 값들을 \(R = pV/(nT)\)에 넣으니 0.0846 L·atm/(mol·K)가 나와 교과서의 0.08206보다 3% 컸다. 마그네슘도 수소의 부피도 정확히 쟀는데, 무엇을 빠뜨린 것일까?</p>
           <figure class="q-fig">
@@ -73,14 +73,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>이상 기체 방정식, 화학 반응식과 몰수, 부분 압력, 유효숫자(<a href="1-1.html">유효숫자</a>).</div>
 
-          <h3><span class="mono">1</span>몰수, 부피, 온도, 압력</h3>
+          <h3><span class="no">2.2.1</span>몰수, 부피, 온도, 압력</h3>
           <p>마그네슘은 염산과 \(\mathrm{Mg + 2HCl \rightarrow MgCl_2 + H_2}\)로 반응하므로, 마그네슘 1 mol마다 수소 1 mol이 생긴다. 마그네슘의 질량을 몰 질량 24.31 g/mol로 나누면 수소의 몰수를 안다. 부피는 눈금관에서, 온도는 물의 온도에서 읽는다. 남은 것은 압력인데, 수소를 물 위에서 모았기 때문에 관 안에는 물에서 증발한 수증기가 함께 있다. 관 안의 전체 압력은 수소와 수증기의 부분 압력을 합한 값이므로, 수소의 압력은 전체 압력에서 그 온도의 수증기압을 빼야 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">물 위에서 모은 기체의 압력</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.2.1 <span class="nm">물 위에서 모은 기체의 압력</span></span>
             <p>관 안팎의 물높이를 맞추면 관 안의 전체 압력은 대기압과 같고, \[p_{\mathrm{H_2}} = p_{\text{대기}} - p_{\text{수증기}}(T)\]이다. 22 °C 물의 수증기압은 19.8 mmHg이다. 이 압력으로 \(R = \dfrac{p_{\mathrm{H_2}} V}{nT}\)를 구한다.</p>
           </div>
           <p>수증기압은 온도에 따라 정해진 값이어서 표에서 찾는다. 22 °C에서는 대기압의 약 2.6%로 작아 보이지만, 처음 질문의 3% 오차는 대부분 이것을 빠뜨린 데서 나왔다. 관 안의 물높이가 바깥보다 높으면 관 안의 압력이 물기둥만큼 대기압보다 낮으므로, 물높이를 맞추거나 물기둥의 높이를 수은의 높이로 바꾸어 빼 준다. 물기둥 13.6 mm가 수은 1 mm에 해당한다.<sup class="fn"><a href="#fn-labchem-gas-constant-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>남은 오차를 따지기</h3>
+          <h3><span class="no">2.2.2</span>남은 오차를 따지기</h3>
           <p>수증기압을 보정하고도 남는 작은 오차는 다른 곳에서 온다. 마그네슘 리본 표면의 산화막은 수소를 내지 않으므로 몰수를 크게 잡게 만들어 \(R\)을 작게 한다. 반대로 반응열로 물이 데워진 채 부피를 읽으면 기체가 팽창해 있어 \(R\)을 크게 한다. 수소가 물에 조금 녹으면 부피가 작아진다. 그래서 리본은 사포로 닦아 쓰고, 반응이 끝난 뒤 관이 실내 온도로 식을 때까지 기다려 부피를 읽는다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 132" role="img" aria-label="기체 상수 계산에 쓴 값">
@@ -96,8 +96,8 @@
             <figcaption>그림 2. 수증기압 19.8 mmHg를 빼면 기체 상수가 이론값과 0.4% 안쪽으로 맞는다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.2.2</span>
             <p>처음 질문의 측정값으로 수증기압을 보정한 기체 상수를 구하여라. 리본 표면의 2%가 산화마그네슘이었다면 결과는 어느 쪽으로 얼마나 바뀌는가?</p>
           </div>
           <p>수소의 몰수는 \(0.0350/24.31 = 1.440 \times 10^{-3}\) mol이다. 수소의 압력은 \(755 - 19.8 = 735.2\) mmHg이므로 \(735.2/760 = 0.9674\) atm이다. 따라서 \(R = \dfrac{0.9674 \times 0.0362}{1.440 \times 10^{-3} \times 295.2} = \dfrac{0.03502}{0.4250} \approx 0.0824\) L·atm/(mol·K)로, 이론값 0.08206과 0.4% 차이이다.</p>
@@ -110,7 +110,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>마그네슘과 염산의 반응으로 생긴 수소의 몰수, 부피, 온도, 압력을 재면 \(R = pV/(nT)\)로 기체 상수를 구할 수 있다. 물 위에서 모은 기체에는 수증기가 섞여 있어, 관 안팎의 물높이를 맞춘 뒤 대기압에서 그 온도의 수증기압을 빼야 수소의 압력이 된다. 처음 질문의 3% 오차는 수증기압 19.8 mmHg를 빼지 않아 생긴 것이고, 보정하면 0.0824로 이론값과 0.4% 안쪽으로 맞는다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/mateng/1-1.html#text-mateng-gas-law"><small class="mono">물질과 에너지 1.1</small>에어백을 순식간에 부풀리려면 기체가 얼마나 필요할까?</a><a href="../../c/adphy/1-5.html#text-adphy-expansion-work"><small class="mono">고급 물리학 1.5</small>스프레이를 오래 뿌리면 왜 깡통이 차가워질까?</a><a href="../../c/adchem/2-1.html#text-adchem-speed-distribution"><small class="mono">고급 화학 2.1</small>지구의 대기에는 왜 수소가 거의 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/2-3.html#card-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기의 질량으로 미지 액체의 분자량을 알 수 있을까?</a><a href="../../c/labchem/2-3.html#text-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기 0.5 g으로 미지 액체의 이름을 맞힐 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/mateng/1-1.html#text-mateng-gas-law"><small class="mono">물질과 에너지 1.1</small>이상 기체 방정식</a><a href="../../c/adphy/1-5.html#text-adphy-expansion-work"><small class="mono">고급 물리학 1.5</small>이상 기체와 열역학 제1법칙</a><a href="../../c/adchem/2-1.html#text-adchem-speed-distribution"><small class="mono">고급 화학 2.1</small>기체 분자 운동론과 속력 분포</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/2-3.html#card-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기의 질량으로 미지 액체의 분자량을 알 수 있을까?</a><a href="../../c/labchem/2-3.html#text-labchem-dumas"><small class="mono">화학 실험 2.3</small>미지 기체의 분자량</a></div></nav>
 
       <article class="card" id="card-labchem-gas-r">
         <header class="card-head">
@@ -160,7 +160,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/mateng/1-1.html#text-mateng-gas-law"><small class="mono">물질과 에너지 1.1</small>에어백을 순식간에 부풀리려면 기체가 얼마나 필요할까?</a><a href="../../c/adphy/1-5.html#text-adphy-expansion-work"><small class="mono">고급 물리학 1.5</small>스프레이를 오래 뿌리면 왜 깡통이 차가워질까?</a><a href="../../c/adchem/2-1.html#text-adchem-speed-distribution"><small class="mono">고급 화학 2.1</small>지구의 대기에는 왜 수소가 거의 없을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/2-3.html#card-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기의 질량으로 미지 액체의 분자량을 알 수 있을까?</a><a href="../../c/labchem/2-3.html#text-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기 0.5 g으로 미지 액체의 이름을 맞힐 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/2-2.html#card-mech-ideal-gas"><small class="mono">역학과 에너지 2.2</small>기체를 데우면 압력은 왜 커질까?</a><a href="../../c/mateng/1-1.html#text-mateng-gas-law"><small class="mono">물질과 에너지 1.1</small>이상 기체 방정식</a><a href="../../c/adphy/1-5.html#text-adphy-expansion-work"><small class="mono">고급 물리학 1.5</small>이상 기체와 열역학 제1법칙</a><a href="../../c/adchem/2-1.html#text-adchem-speed-distribution"><small class="mono">고급 화학 2.1</small>기체 분자 운동론과 속력 분포</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labchem/2-3.html#card-labchem-dumas"><small class="mono">화학 실험 2.3</small>플라스크를 채운 증기의 질량으로 미지 액체의 분자량을 알 수 있을까?</a><a href="../../c/labchem/2-3.html#text-labchem-dumas"><small class="mono">화학 실험 2.3</small>미지 기체의 분자량</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=labchem&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">6문항</span></a>
 

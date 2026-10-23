@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-calc2-distance" data-kind="본문">
-        <header class="card-head"><span class="no">3.7.1</span><h2>속도 그래프만 보고 얼마나 움직였는지 알 수 있을까?</h2><span class="kind">본문 · 속도와 거리</span></header>
+        <header class="card-head"><span class="no">3.7.1</span><h2>속도와 거리</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">자동차의 속도계 기록만 남아 있다고 하자. 그 기록으로 자동차가 처음 위치에서 얼마나 떨어진 곳에 있는지, 그리고 실제로 얼마나 먼 길을 달렸는지 알 수 있을까? 앞으로 갔다가 후진했다면 두 값은 다를 것이다. 또 평면 위를 구불구불 움직인 점이 지나간 길의 길이는 어떻게 구할까?</p>
           <figure class="q-fig" data-q="calc2-dist">
@@ -73,16 +73,16 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>속도와 가속도(<a href="2-11.html">속도와 가속도</a>), 두 곡선 사이의 넓이(<a href="3-5.html">넓이</a>), 치환적분법(<a href="3-2.html">치환적분법</a>).</div>
 
-          <h3><span class="mono">1</span>직선 위의 운동</h3>
+          <h3><span class="no">3.7.1</span>직선 위의 운동</h3>
           <p>수직선 위를 움직이는 점의 속도가 \(v(t)\)이면 위치 \(x(t)\)는 \(v(t)\)의 원시함수이다. 따라서 시각 \(a\)에서 \(b\)까지 위치의 변화는 \(\int_a^b v(t)\,dt\)이다. 그런데 속도가 음수인 동안은 뒤로 가므로, 이 값은 실제로 움직인 거리보다 작을 수 있다. 움직인 거리는 앞으로 간 것과 뒤로 간 것을 모두 더해야 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">위치의 변화와 움직인 거리</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.7.1 <span class="nm">위치의 변화와 움직인 거리</span></span>
             <p>시각 \(t = a\)에서 \(t = b\)까지 \[\text{위치의 변화} = \int_a^b v(t)\,dt,\qquad \text{움직인 거리} = \int_a^b |v(t)|\,dt\]</p>
           </div>
           <p>그림 1에서 \(T\)를 3으로 맞추어 보자. 위치의 변화는 \(\int_0^3 (t^2 - 4t + 3)\,dt = 9 - 18 + 9 = 0\)으로, 처음 자리로 돌아왔다. 그러나 \(0 \le t \le 1\)에서 \(\dfrac{4}{3}\)만큼 앞으로 갔다가 \(1 \le t \le 3\)에서 \(\dfrac{4}{3}\)만큼 뒤로 왔으므로 움직인 거리는 \(\dfrac{8}{3}\)이다.</p>
 
-          <h3><span class="mono">2</span>평면 위의 운동과 곡선의 길이</h3>
+          <h3><span class="no">3.7.2</span>평면 위의 운동과 곡선의 길이</h3>
           <p>평면 위를 움직이는 점의 속도가 \(\left(\dfrac{dx}{dt}, \dfrac{dy}{dt}\right)\)이면 아주 짧은 시간 \(\Delta t\) 동안 움직인 거리는 피타고라스 정리로 \(\sqrt{(\Delta x)^2 + (\Delta y)^2} \approx |\vec v|\,\Delta t\)이다. 이를 모두 더하면 움직인 거리가 된다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">평면 위에서 움직인 거리와 곡선의 길이</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.7.2 <span class="nm">평면 위에서 움직인 거리와 곡선의 길이</span></span>
             <p>\[s = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}\,dt\] 곡선 \(y = f(x)\) (\(a \le x \le b\))의 길이는 \(\displaystyle\int_a^b \sqrt{1 + \{f'(x)\}^2}\,dx\)이다.</p>
           </div>
           <figure class="q-fig">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 곡선을 잘게 나누면 각 조각은 직각삼각형의 빗변처럼 볼 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.7.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.7.3</span>
             <p>평면 위를 움직이는 점의 위치가 \(x = t^2\), \(y = \dfrac{2}{3}t^3\)일 때, \(t = 0\)에서 \(t = \sqrt{3}\)까지 움직인 거리를 구하여라.</p>
           </div>
           <p>\(\dfrac{dx}{dt} = 2t\), \(\dfrac{dy}{dt} = 2t^2\)이므로 속력은 \(\sqrt{4t^2 + 4t^4} = 2t\sqrt{1 + t^2}\)이다 (\(t \ge 0\)).</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>위치의 변화는 속도를 그대로 적분한 \(\int v\,dt\)이고, 움직인 거리는 속도의 절댓값을 적분한 \(\int|v|\,dt\)이다. 평면 위에서 움직인 거리는 속력 \(\sqrt{(dx/dt)^2 + (dy/dt)^2}\)을 적분한다. 그래서 처음 질문의 속도계 기록만으로도, 부호를 살린 적분으로 처음 위치와의 거리를, 절댓값의 적분으로 실제로 달린 거리를 알 수 있다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 가운데는 얼마나 처질까?</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>여러 가지 함수의 적분</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>쌍곡선함수의 부정적분</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
 
       <article class="card" id="card-calc2-distance-area">
         <header class="card-head">
@@ -157,7 +157,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 가운데는 얼마나 처질까?</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>여러 가지 함수의 적분</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>쌍곡선함수의 부정적분</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
 
       <article class="card" id="card-calc2-path-length">
         <header class="card-head">
@@ -204,7 +204,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 가운데는 얼마나 처질까?</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/calc2/3-1.html#card-calc2-xn-integral"><small class="mono">미적분Ⅱ 3.1</small>xⁿ의 적분 공식은 n = -1에서 왜 멈출까?</a><a href="../../c/calc2/3-1.html#card-calc2-antideriv-check"><small class="mono">미적분Ⅱ 3.1</small>어느 후보가 ex, sin x의 진짜 원시함수일까?</a><a href="../../c/calc2/3-1.html#text-calc2-integrals"><small class="mono">미적분Ⅱ 3.1</small>여러 가지 함수의 적분</a><a href="../../c/calc2/3-4.html#card-calc2-sum-read"><small class="mono">미적분Ⅱ 3.4</small>항이 n개인 합의 극한을 넓이로 읽을 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adcalc/1-4.html#card-adcalc-hyp-sub"><small class="mono">고급 미적분 1.4</small>근호 속의 x² + 1을 없애는 치환은?</a><a href="../../c/adcalc/1-4.html#card-adcalc-cable-length"><small class="mono">고급 미적분 1.4</small>100 m 사이에 전선을 1 m만 더 길게 걸면 얼마나 처질까?</a><a href="../../c/adcalc/1-4.html#text-adcalc-hyp-integral"><small class="mono">고급 미적분 1.4</small>쌍곡선함수의 부정적분</a><a href="../../c/adcalc/1-6.html#card-adcalc-vase"><small class="mono">고급 미적분 1.6</small>정확히 1 L가 들어가는 꽃병을 디자인할 수 있을까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=calc2&amp;sec=3-7"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">9문항</span></a>
       <a class="px-go" href="../../practice.html?sec=calc2-3-7"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">4문항</span></a>

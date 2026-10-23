@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-labphy-energy-sum" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>가장 낮은 곳의 추는 탄성 에너지가 1.19 J인데, 왜 전체는 0.70 J일까?</h2><span class="kind">본문 · 용수철 진자의 역학적 에너지</span></header>
+  <header class="card-head"><span class="no"></span><h2>용수철 진자의 역학적 에너지</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">용수철 상수 20 N/m인 용수철에 0.5 kg 추를 매달고, 평형 위치에서 10 cm 아래로 당겼다 놓았다. 추 아래의 운동 센서가 위치를 기록한다. 가장 낮은 곳에서 용수철은 34.5 cm 늘어나 있어 탄성 에너지가 1.19 J이고, 가장 높은 곳에서는 14.5 cm만 늘어나 0.21 J이다. 두 곳 모두 추는 멈춰 있다. 탄성 에너지가 이렇게 다른데 역학적 에너지는 보존된다고 할 수 있을까? 빠뜨린 에너지는 무엇일까?</p>
     <figure class="q-fig" data-q="lp-spe">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>훅 법칙 \(F = kx\), 운동 에너지와 퍼텐셜 에너지, 위치–시간 그래프에서 속도 구하기, 데이터 기록(<a href="1-4.html">센서와 컴퓨터 측정</a>).</div>
 
-    <h3><span class="mono">1</span>세 가지 에너지</h3>
+    <h3><span class="no">2.8.1</span>세 가지 에너지</h3>
     <p>세로로 매단 용수철 진자에는 세 가지 에너지가 있다. 추가 움직이는 운동 에너지 \(\tfrac{1}{2}mv^2\), 용수철이 늘어난 탄성 퍼텐셜 에너지 \(\tfrac{1}{2}kx^2\), 그리고 추의 높이에 따른 중력 퍼텐셜 에너지 \(mgh\)이다. 추가 내려가면 용수철이 더 늘어 탄성 에너지가 커지지만, 동시에 높이가 낮아져 중력 에너지가 준다. 탄성 에너지만 보면 에너지가 보존되지 않는 것처럼 보이는 까닭이 여기에 있다. 세 에너지를 모두 더해야 일정한 값이 나온다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">평형 위치를 기준으로 하면</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.8.1 <span class="nm">평형 위치를 기준으로 하면</span></span>
       <p>추가 평형 위치에서 \(y\)만큼 벗어났을 때, 탄성 에너지와 중력 에너지의 변화를 더하면 \(\tfrac{1}{2}ky^2\)이 된다. 따라서 \[\tfrac{1}{2}mv^2 + \tfrac{1}{2}ky^2 = \tfrac{1}{2}kA^2\]으로 일정하다(\(A\)는 진폭). 세로 용수철 진자는 평형 위치를 기준으로 보면 중력이 없는 수평 용수철 진자와 같다.</p>
     </div>
     <p>평형 위치에서는 용수철이 \(x_0 = mg/k\)만큼 늘어나 추의 무게를 받친다. 여기서 \(y\)만큼 더 내려가면 탄성 에너지는 \(\tfrac{1}{2}k(x_0 + y)^2 - \tfrac{1}{2}kx_0^2 = kx_0 y + \tfrac{1}{2}ky^2\)만큼 늘고, 중력 에너지는 \(mgy = kx_0 y\)만큼 준다. 첫째 항이 서로 지워지고 \(\tfrac{1}{2}ky^2\)만 남는다. 그림 1에서 시각을 바꾸어 보자. 주기의 4분의 1 지점에서 추가 평형 위치를 지날 때는 모든 에너지가 운동 에너지이고, 양 끝에서는 모두 퍼텐셜 에너지이다. 그 사이 어디에서든 두 막대의 합은 \(\tfrac{1}{2} \times 20 \times 0.1^2 = 0.1\) J로 같다.</p>
 
-    <h3><span class="mono">2</span>센서 자료로 확인하기</h3>
+    <h3><span class="no">2.8.2</span>센서 자료로 확인하기</h3>
     <p>운동 센서는 위치를 1초에 수십 번 기록하고, 이웃한 두 위치의 차를 시간 간격으로 나누어 속도를 계산한다. 위치와 속도를 알면 시각마다 세 에너지를 계산해 더할 수 있다. 실제로 기록하면 합이 몇 주기에 걸쳐 조금씩 줄어드는데, 공기 저항과 용수철 내부의 마찰이 역학적 에너지를 열로 바꾸기 때문이다. 줄어드는 비율이 한 주기의 에너지에 비해 작으면, 한 주기 안에서는 에너지가 보존된다고 말할 수 있다. 용수철의 질량을 무시했으므로, 용수철이 추보다 아주 가벼워야 이 계산이 맞는다.<sup class="fn"><a href="#fn-labphy-energy-sum-1">1</a></sup></p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="세 위치에서의 세 에너지">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 탄성 에너지만은 크게 바뀌지만, 중력 에너지까지 더한 합은 세 위치에서 모두 0.700 J이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.8.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.8.2</span>
       <p>처음 질문의 진자에서 평형 위치일 때 용수철이 늘어난 길이, 추의 최대 속력, 그리고 세 위치에서의 에너지를 구하여 그림 2를 확인하여라. 중력 에너지의 기준은 평형 위치로 한다.</p>
     </div>
     <p>평형 위치에서 늘어난 길이는 \(x_0 = mg/k = 0.5 \times 9.8 / 20 = 0.245\) m이다. 각진동수는 \(\omega = \sqrt{k/m} = \sqrt{40} \approx 6.32\) rad/s이므로 최대 속력은 \(A\omega = 0.10 \times 6.32 = 0.632\) m/s이고, 그때 운동 에너지는 \(\tfrac{1}{2} \times 0.5 \times 0.632^2 = 0.100\) J이다. 평형 위치의 탄성 에너지는 \(\tfrac{1}{2} \times 20 \times 0.245^2 = 0.600\) J이므로 합은 0.700 J이다.</p>

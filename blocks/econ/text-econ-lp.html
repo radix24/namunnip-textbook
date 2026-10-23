@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-econ-lp" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>책상과 의자를 몇 개씩 만들어야 이익이 가장 클까?</h2><span class="kind">본문 · 부등식의 영역과 경제</span></header>
+  <header class="card-head"><span class="no"></span><h2>부등식의 영역과 경제</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">가구 공방은 하루에 목재 100단위와 작업 시간 80시간을 쓸 수 있다. 책상 하나에는 목재 2단위와 1시간, 의자 하나에는 목재 1단위와 2시간이 든다. 책상 하나는 40만 원, 의자 하나는 30만 원의 이익을 낸다. 목재와 시간이 모자라지 않는 범위에서 이익을 가장 크게 하려면 몇 개씩 만들어야 할까?</p>
     <figure class="q-fig" data-q="econ-lp">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>연립 일차 부등식, 부등식의 영역(공통수학2), 일차함수의 그래프.</div>
 
-    <h3><span class="mono">1</span>제약 조건과 실행 가능 영역</h3>
+    <h3><span class="no">2.6.1</span>제약 조건과 실행 가능 영역</h3>
     <p>책상을 \(x\)개, 의자를 \(y\)개 만든다고 하자. 목재 조건은 \(2x + y \le 100\), 시간 조건은 \(x + 2y \le 80\)이고, 개수는 음수가 될 수 없으므로 \(x \ge 0\), \(y \ge 0\)이다. 이 부등식들을 모두 만족하는 점 \((x, y)\)의 영역이 가능한 생산 계획 전체이다. 영역은 네 꼭짓점 \((0, 0)\), \((50, 0)\), \((40, 20)\), \((0, 40)\)을 가진 볼록한 사각형이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">일차식의 최댓값과 최솟값</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.6.1 <span class="nm">일차식의 최댓값과 최솟값</span></span>
       <p>일차부등식들로 둘러싸인 볼록한 다각형 영역에서 일차식 \(ax + by\)의 최댓값과 최솟값은 다각형의 꼭짓점에서 나타난다.</p>
     </div>
     <p>이익 \(40x + 30y = k\)는 기울기가 \(-\dfrac{4}{3}\)인 직선이고, \(k\)가 커질수록 위로 평행이동한다. 이 직선이 영역과 만나는 동안 \(k\)를 최대한 키우면, 직선이 영역의 한 꼭짓점에 마지막으로 닿는다. 그래서 꼭짓점만 비교하면 된다. 이런 문제를 선형계획법이라 한다. 영역 안쪽의 점은 모든 방향으로 조금씩 움직일 수 있어 이익을 더 늘릴 여지가 있으므로 최적이 될 수 없다.<sup class="fn"><a href="#fn-econ-lp-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>이익이 바뀌면 답도 바뀐다</h3>
+    <h3><span class="no">2.6.2</span>이익이 바뀌면 답도 바뀐다</h3>
     <p>그림 1에서 책상의 이익을 바꾸어 보자. 책상 이익이 15만 원보다 작으면 이익 직선이 완만해져 의자만 만드는 \((0, 40)\)이, 60만 원보다 크면 가팔라져 책상만 만드는 \((50, 0)\)이 최적이 된다. 그 사이에서는 두 조건이 모두 빠듯해지는 \((40, 20)\)이 최적이다. 이익 직선의 기울기가 영역의 변의 기울기를 넘어설 때마다 최적의 꼭짓점이 옮겨 간다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="꼭짓점마다 이익 비교">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 영역의 꼭짓점에서 이익을 비교하면 최댓값을 찾을 수 있다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.6.2</span>
       <p>위 공방에서 책상 이익이 40만 원, 의자 이익이 30만 원일 때 이익을 최대로 하는 생산량과 그때의 이익을 구하여라. 이때 목재와 시간이 남는가?</p>
     </div>
     <p>꼭짓점 \((40, 20)\)은 \(2x + y = 100\)과 \(x + 2y = 80\)을 연립하여 얻는다. 첫 식에 2를 곱해 둘째 식을 빼면 \(3x = 120\), 곧 \(x = 40\), \(y = 20\)이다.</p>

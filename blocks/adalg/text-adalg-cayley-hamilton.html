@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adalg-cayley-hamilton" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>행렬을 열 번 곱한 결과를 곱셈 아홉 번 없이 구할 수 있을까?</h2><span class="kind">본문 · 케일리-해밀턴 정리</span></header>
+  <header class="card-head"><span class="no"></span><h2>케일리-해밀턴 정리</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">행렬 \(A = \begin{pmatrix}2 & 1\\ 1 & 2\end{pmatrix}\)의 10제곱 \(A^{10}\)을 구하려면 행렬을 아홉 번 곱해야 할 것 같다. 그런데 \(A^2\)을 계산해 보면 \(\begin{pmatrix}5 & 4\\ 4 & 5\end{pmatrix}\)이고, 이것은 \(4A - 3I\)와 정확히 같다. 그렇다면 \(A^3 = A\cdot A^2 = 4A^2 - 3A\)이고, 다시 \(A^2\)을 \(4A - 3I\)로 바꾸면 \(A^3\)도 \(A\)와 \(I\)만으로 쓸 수 있다. \(A^2 = 4A - 3I\)라는 관계는 어디서 나왔을까? 이 관계로 \(A^{10}\)을 빨리 구할 수 있을까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>고윳값과 고유벡터(<a href="3-1.html">고윳값과 고유벡터</a>), 행렬의 곱셈, 수열의 귀납적 정의.</div>
 
-    <h3><span class="mono">1</span>행렬도 자기 특성방정식을 만족한다</h3>
+    <h3><span class="no">3.2.1</span>행렬도 자기 특성방정식을 만족한다</h3>
     <p>\(2\times2\) 행렬 \(A\)의 특성방정식은 \(\lambda^2 - (\mathrm{tr}\,A)\lambda + \det A = 0\)이다. 여기서 \(\lambda\) 자리에 행렬 \(A\)를 넣고 상수항에 단위행렬을 붙이면 \(A^2 - (\mathrm{tr}\,A)A + (\det A)I\)가 되는데, 이 행렬은 언제나 영행렬이다. 이것이 케일리–해밀턴 정리이다. \(A = \begin{pmatrix}a & b\\ c & d\end{pmatrix}\)에 직접 넣어 성분을 계산하면 모든 항이 지워져 확인할 수 있다. 처음 질문의 행렬은 \(\mathrm{tr}\,A = 4\), \(\det A = 3\)이어서 \(A^2 - 4A + 3I = O\)이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">케일리–해밀턴 정리</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.2.1 <span class="nm">케일리–해밀턴 정리</span></span>
       <p>\(2\times2\) 행렬 \(A\)에 대하여 \[A^2 - (\mathrm{tr}\,A)A + (\det A)I = O\]이다. 그래서 모든 자연수 \(n\)에 대해 \(A^n = p_nA + q_nI\)인 수 \(p_n\), \(q_n\)이 있고, \(A\)의 서로 다른 고윳값 \(\lambda_1\), \(\lambda_2\)에 대해 \(\lambda_i^n = p_n\lambda_i + q_n\)을 만족한다.</p>
     </div>
     <p>\(A^2\)을 \(A\)와 \(I\)로 쓸 수 있으면, \(A^3 = A\cdot A^2\)에 다시 \(A^2\)을 바꿔 넣어 \(A^3\)도 \(A\)와 \(I\)로 쓸 수 있다. 이것을 되풀이하면 모든 거듭제곱이 \(p_nA + q_nI\) 꼴이 된다. 계수는 고윳값으로 바로 구한다. 고유벡터 \(\vec v\)에 \(A^n = p_nA + q_nI\)를 곱하면 \(\lambda^n\vec v = (p_n\lambda + q_n)\vec v\)이므로, 두 고윳값에서 각각 \(\lambda^n = p_n\lambda + q_n\)이라는 일차방정식이 생긴다. 이 둘을 연립하면 \(p_n\), \(q_n\)이 나온다.<sup class="fn"><a href="#fn-adalg-cayley-hamilton-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>점화식으로 보기</h3>
+    <h3><span class="no">3.2.2</span>점화식으로 보기</h3>
     <p>\(A^{n+1} = A\cdot A^n = p_nA^2 + q_nA = p_n(4A - 3I) + q_nA\)이므로 \(p_{n+1} = 4p_n + q_n\), \(q_{n+1} = -3p_n\)이다. 그래서 \(p_n\)은 \(p_{n+1} = 4p_n - 3p_{n-1}\)이라는 점화식을 따른다. 이 점화식의 특성방정식이 바로 \(A\)의 특성방정식 \(x^2 - 4x + 3 = 0\)이고, 그 근 3과 1이 일반항 \(p_n = \dfrac{3^n - 1}{2}\)을 정한다. 행렬의 거듭제곱 문제가 수열의 점화식 문제로 바뀐 것이다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="고윳값으로 계수를 구하는 연립방정식">
@@ -46,8 +46,8 @@
       <figcaption>그림 2. 두 고윳값에서 세운 일차방정식 두 개로 \(A^{10}\)의 계수를 구한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.2.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.2.2</span>
       <p>처음 질문의 행렬에서 케일리–해밀턴 정리를 성분으로 확인하고, \(A^{10}\)을 구하여라. 또 \(A^{-1}\)을 케일리–해밀턴 정리로 구하여라.</p>
     </div>
     <p>\(A^2 = \begin{pmatrix}5 & 4\\ 4 & 5\end{pmatrix}\), \(4A = \begin{pmatrix}8 & 4\\ 4 & 8\end{pmatrix}\), \(3I = \begin{pmatrix}3 & 0\\ 0 & 3\end{pmatrix}\)이므로 \(A^2 - 4A + 3I = O\)이다. 그림 2의 연립방정식에서 \(p = 29524\), \(q = -29523\)이므로 \(A^{10} = 29524A - 29523I = \begin{pmatrix}29525 & 29524\\ 29524 & 29525\end{pmatrix}\)이다.</p>

@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adcalc-revolution" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>페인트로 채울 수는 있는데 겉면을 칠할 수는 없는 나팔이 있을까?</h2><span class="kind">본문 · 회전체의 부피와 겉넓이</span></header>
+  <header class="card-head"><span class="no"></span><h2>회전체의 부피와 겉넓이</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">곡선 \(y = 1/x\)의 \(x \ge 1\)인 부분을 \(x\)축 둘레로 돌리면 끝없이 가늘어지며 뻗는 나팔 모양이 생긴다. 이 나팔의 부피를 계산하면 \(\pi\)로 유한한데, 겉넓이를 계산하면 무한대가 나온다. 그렇다면 나팔에 페인트 \(\pi\) 리터를 부어 안을 가득 채울 수는 있지만, 겉면을 칠하는 데는 끝없이 많은 페인트가 필요하다는 뜻일까? 회전체의 부피와 겉넓이는 어떻게 구하고, 왜 이런 일이 생길까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>기둥과 뿔의 부피, 정적분과 급수의 합, 곡선의 길이, 이상적분(<a href="1-5.html">이상적분</a>).</div>
 
-    <h3><span class="mono">1</span>원판을 쌓아 부피를, 띠를 이어 겉넓이를</h3>
+    <h3><span class="no">1.6.1</span>원판을 쌓아 부피를, 띠를 이어 겉넓이를</h3>
     <p>곡선 \(y = f(x)\)를 \(x\)축 둘레로 돌린 입체를 \(x\)축에 수직으로 얇게 자르면, 단면은 반지름 \(f(x)\)인 원판이다. 두께 \(\Delta x\)인 원판의 부피 \(\pi f(x)^2\Delta x\)를 모두 더하고 극한을 취하면 부피가 된다. 겉넓이는 원판의 옆면을 이은 띠로 구하는데, 띠의 폭은 \(\Delta x\)가 아니라 곡선을 따라 잰 길이 \(\sqrt{1 + f'(x)^2}\,\Delta x\)이다. 반지름 \(f(x)\)인 띠의 넓이는 둘레 \(2\pi f(x)\)에 폭을 곱한 것이다. 폭을 \(\Delta x\)로 쓰면 곡선이 기울어진 만큼 넓이가 빠져서 틀린 값이 나온다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">회전체의 부피와 겉넓이</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.6.1 <span class="nm">회전체의 부피와 겉넓이</span></span>
       <p>\(f(x) \ge 0\)인 곡선 \(y = f(x)\)의 \(a \le x \le b\)인 부분을 \(x\)축 둘레로 돌린 회전체의 부피와 겉넓이는 \[V = \pi\int_a^b f(x)^2\,dx,\qquad S = 2\pi\int_a^b f(x)\sqrt{1 + f'(x)^2}\,dx\]이다.</p>
     </div>
     <p>반지름 \(r\)인 구는 \(f(x) = \sqrt{r^2 - x^2}\)를 \(-r\)부터 \(r\)까지 돌린 것이다. 부피는 \(\pi\int_{-r}^{r}(r^2 - x^2)\,dx = \tfrac43\pi r^3\)이다. 겉넓이에서는 \(f' = -x/f\)이므로 \(f\sqrt{1 + f'^2} = \sqrt{f^2 + x^2} = r\)로 일정해, \(S = 2\pi\int_{-r}^{r}r\,dx = 4\pi r^2\)이다. 피적분함수가 상수라는 것은 같은 두께로 자른 구의 띠들이 높이와 상관없이 모두 같은 넓이라는 뜻이다.<sup class="fn"><a href="#fn-adcalc-revolution-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>부피와 겉넓이가 다르게 줄어들 때</h3>
+    <h3><span class="no">1.6.2</span>부피와 겉넓이가 다르게 줄어들 때</h3>
     <p>가브리엘의 나팔에서 부피의 피적분함수는 \(\pi/x^2\)이고, 겉넓이의 피적분함수는 \(2\pi\cdot\dfrac1x\sqrt{1 + 1/x^4}\)으로 \(2\pi/x\)보다 크다. 이상적분에서 \(1/x^2\)은 수렴하고 \(1/x\)은 발산하므로, 부피는 유한하고 겉넓이는 무한하다. 반지름이 \(1/x\)로 줄면 단면의 넓이는 그 제곱인 \(1/x^2\)으로 빨리 줄지만, 둘레는 \(1/x\)로만 줄기 때문이다. 그래서 차원이 하나 낮은 겉넓이가 더 느리게 줄어 끝없이 쌓인다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="가브리엘의 나팔을 x = b에서 자른 부분의 부피와 겉넓이">
@@ -46,8 +46,8 @@
       <figcaption>그림 2. 나팔을 길게 할수록 부피는 \(\pi\)에 다가가지만 겉넓이는 로그처럼 끝없이 커진다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.6.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.6.2</span>
       <p>가브리엘의 나팔의 부피를 구하고, 겉넓이가 발산함을 보여라. 페인트 \(\pi\) 리터로 나팔을 채울 수 있다면 안쪽 벽은 칠해진 것이 아닌지, 이 역설을 설명하여라.</p>
     </div>
     <p>부피는 \(\pi\int_1^\infty\dfrac{dx}{x^2} = \pi\lim_{b\to\infty}\left(1 - \dfrac1b\right) = \pi\)이다. 겉넓이는 \(\sqrt{1 + 1/x^4} > 1\)이므로 \(S > 2\pi\int_1^\infty\dfrac{dx}{x} = 2\pi\lim_{b\to\infty}\ln b = \infty\)로 발산한다.</p>

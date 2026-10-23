@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-esys-stability-lift" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>떠오른 공기 덩어리는 어디까지 올라갈까?</h2><span class="kind">본문 · 대기 안정도와 구름·강수</span></header>
+  <header class="card-head"><span class="no"></span><h2>대기 안정도와 구름·강수</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">여름 오후에는 하얀 뭉게구름이 하늘 높이 솟아오르다가 소나기를 쏟는다. 그런데 어떤 날은 구름이 납작하게 깔리기만 하고 비는 오지 않는다. 지표에서 데워진 공기 덩어리가 떠오르는 것은 같은데, 어떤 날은 높이 올라가고 어떤 날은 곧 멈춘다. 공기 덩어리는 무엇에 따라 계속 올라가거나 멈출까? 그리고 구름 바닥의 높이는 어떻게 정해질까?</p>
     <figure class="q-fig" data-q="esys-parcel">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>단열 팽창과 단열 압축(역학과 에너지), 포화 수증기량과 이슬점(지구과학), 부력, 지구의 열수지(<a href="3-2.html">지구의 열수지</a>).</div>
 
-    <h3><span class="mono">1</span>단열 감률</h3>
+    <h3><span class="no">3.3.1</span>단열 감률</h3>
     <p>공기 덩어리가 떠오르면 주변 기압이 낮아져 팽창한다. 열을 주고받지 않고 팽창하면 그만큼 일을 하므로 온도가 내려간다. 수증기가 포화되기 전에는 1 km 올라갈 때마다 약 10 °C씩 식는데, 이를 건조 단열 감률이라 한다. 포화되어 구름이 생긴 뒤에는 수증기가 응결하며 숨은열을 내놓아 덜 식는다. 이를 습윤 단열 감률이라 하며 약 5 °C/km이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">대기 안정도</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.3.1 <span class="nm">대기 안정도</span></span>
       <p>주변 공기의 기온 감률을 \(\Gamma\)라 하면, \(\Gamma\)가 습윤 단열 감률보다 작으면 절대 안정, 건조 단열 감률보다 크면 절대 불안정, 그 사이이면 조건부 불안정이다. 공기 덩어리는 주변보다 따뜻하면 부력으로 계속 떠오르고, 차가우면 다시 가라앉는다.</p>
     </div>
     <p>그림 1에서 주변 기온 감률을 바꾸어 보자. 4 °C/km이면 공기 덩어리가 어디서나 주변보다 차가워 곧 되돌아간다. 이런 날은 구름이 옆으로 퍼진 층운이 된다. 6.5 °C/km이면 구름이 생기기 전에는 주변보다 차갑지만, 구름이 생긴 뒤 천천히 식으므로 어느 높이부터 주변보다 따뜻해져 높이 솟는다. 그래서 여름 오후 지표가 뜨거워지면 적운이 높이 자라 소나기를 뿌린다.<sup class="fn"><a href="#fn-esys-stability-lift-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>구름 바닥의 높이</h3>
+    <h3><span class="no">3.3.2</span>구름 바닥의 높이</h3>
     <p>공기 덩어리가 떠오르면 기온은 1 km에 10 °C, 이슬점은 약 2 °C씩 내려간다. 둘의 차가 1 km에 8 °C씩 줄어들어 같아지는 높이에서 포화되어 구름이 생긴다. 그래서 구름 바닥의 높이는 대략 \(125 \times (T - T_d)\) m이다. 지표 공기가 건조하여 기온과 이슬점의 차가 클수록 구름 바닥이 높다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="대기 안정도의 세 경우">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 주변 기온 감률과 단열 감률의 비교로 대기의 안정도를 판단한다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.3.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.3.2</span>
       <p>지표의 기온이 25 °C, 이슬점이 17 °C이다. 공기 덩어리가 떠오를 때 구름 바닥의 높이와 그 높이에서의 기온을 구하여라. 구름이 생긴 뒤 습윤 단열 감률 5 °C/km로 식고 주변 기온 감률이 6.5 °C/km라면, 높이 4 km에서 공기 덩어리와 주변의 기온은 각각 얼마이며 공기 덩어리는 계속 떠오르는가?</p>
     </div>
     <p>구름 바닥은 \(125 \times (25 - 17) = 1000\) m이고, 그 높이에서 공기 덩어리의 기온은 \(25 - 10 = 15\) °C이다.</p>

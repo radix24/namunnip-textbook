@@ -64,7 +64,7 @@
 
     <div>
       <article class="card reading" id="text-dmath-algorithm" data-kind="본문">
-        <header class="card-head"><span class="no">2.3.1</span><h2>최대공약수를 구하는 절차를 기계에게 어떻게 알려 줄까?</h2><span class="kind">본문 · 알고리즘과 그 표현</span></header>
+        <header class="card-head"><span class="no">2.3.1</span><h2>알고리즘과 그 표현</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">1071과 462의 최대공약수를 구하려 한다. 두 수를 소인수분해하는 방법은 수가 커지면 매우 오래 걸린다. 그런데 "큰 수를 작은 수로 나눈 나머지를 구하고, 작은 수와 그 나머지로 같은 일을 되풀이하다가 나머지가 0이 되면 마지막 나누는 수가 답이다"라는 절차를 따르면 세 번의 나눗셈으로 21을 얻는다. 이 절차를 사람이 아닌 기계가 따르게 하려면 어떻게 적어야 할까? 그리고 절차가 늘 옳은 답을 낸다는 것은 어떻게 확인할까?</p>
           <figure class="q-fig">
@@ -82,14 +82,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>최대공약수, 나눗셈의 몫과 나머지, 점화 관계(<a href="2-2.html">점화 관계와 일반항</a>).</div>
 
-          <h3><span class="mono">1</span>기계가 따를 수 있는 절차</h3>
+          <h3><span class="no">2.3.1</span>기계가 따를 수 있는 절차</h3>
           <p>어떤 문제를 풀기 위해 정해진 순서대로 따르는 명확한 단계들을 알고리즘이라 한다. 알고리즘은 입력과 출력이 정해져 있고, 각 단계가 뜻이 하나로만 해석될 만큼 명확하며, 유한한 단계 안에 반드시 끝나야 한다. "적당히 나눈다"처럼 모호한 지시나, 끝나지 않을 수도 있는 되풀이는 알고리즘이 아니다. 알고리즘은 자연어로 단계를 번호 매겨 적거나, 상자와 화살표로 흐름을 그린 순서도로 나타내거나, 프로그래밍 언어와 비슷한 의사코드로 적는다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">유클리드 호제법</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">유클리드 호제법</span></span>
             <p>자연수 \(a\), \(b\)에 대해 \(a\)를 \(b\)로 나눈 나머지를 \(r\)라 하면 \(\gcd(a, b) = \gcd(b, r)\)이다. 그래서 \((a, b) \to (b, r)\)을 나머지가 0이 될 때까지 되풀이하면, 마지막의 0이 아닌 나누는 수가 최대공약수이다. 나머지는 매번 줄어드는 음이 아닌 정수이므로 이 절차는 반드시 끝난다.</p>
           </div>
           <p>호제법이 옳은 까닭은 \(a = qb + r\)에서 \(a\)와 \(b\)의 공약수는 \(r = a - qb\)도 나누고, \(b\)와 \(r\)의 공약수는 \(a = qb + r\)도 나누기 때문이다. 그래서 두 쌍의 공약수는 모두 같고, 최대공약수도 같다. 반드시 끝나는 까닭은 나머지가 나누는 수보다 작아 매 단계 줄어드는 자연수이고, 자연수는 한없이 줄어들 수 없기 때문이다. 이렇게 알고리즘은 결과가 옳다는 것과 반드시 끝난다는 것을 함께 확인해야 한다.<sup class="fn"><a href="#fn-dmath-algorithm-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>어떤 입력에서 틀릴까</h3>
+          <h3><span class="no">2.3.2</span>어떤 입력에서 틀릴까</h3>
           <p>알고리즘을 만들 때는 예외적인 입력을 따져야 한다. 예를 들어 여러 수 가운데 가장 큰 수를 찾는 알고리즘을 "최댓값을 0으로 두고, 각 수가 최댓값보다 크면 최댓값을 그 수로 바꾼다"로 적으면, 입력이 모두 음수일 때 0이라는 틀린 답을 낸다. 최댓값의 처음 값을 첫째 수로 두어야 어떤 입력에서도 옳다. 이렇게 빈 입력, 음수, 같은 값이 여러 개인 경우처럼 경계에 있는 입력을 넣어 보는 것이 알고리즘의 오류를 찾는 좋은 방법이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="최댓값 찾기 알고리즘의 두 판본">
@@ -104,8 +104,8 @@
             <figcaption>그림 2. 보통의 입력에서는 둘 다 맞지만, 모두 음수인 입력에서 첫째 판본이 틀린다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
             <p>유클리드 호제법을 단계별 자연어로 적고, 이 알고리즘으로 \(\gcd(1071, 462)\)와 \(\gcd(89, 55)\)를 구하여라. 두 경우의 나눗셈 횟수를 비교하여라.</p>
           </div>
           <p>알고리즘은 이렇게 적는다. 1단계에서 두 자연수 \(a\), \(b\)를 입력받는다. 2단계에서 \(b = 0\)이면 \(a\)를 출력하고 끝낸다. 3단계에서 \(a\)를 \(b\)로 나눈 나머지 \(r\)를 구한다. 4단계에서 \(a\)를 \(b\)로, \(b\)를 \(r\)로 바꾸고 2단계로 돌아간다. 그림 1처럼 \(\gcd(1071, 462)\)는 세 번의 나눗셈으로 21이다.</p>
@@ -118,7 +118,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>알고리즘은 입력과 출력이 정해지고, 각 단계가 명확하며, 유한한 단계 안에 끝나는 절차로, 자연어, 순서도, 의사코드로 나타낸다. 유클리드 호제법은 \(\gcd(a, b) = \gcd(b, r)\)을 되풀이하며 나머지가 줄어드는 자연수여서 반드시 끝나고, 알고리즘은 이렇게 옳음과 끝남을 함께 확인하며 경계의 입력으로 오류를 찾는다. 처음 질문의 1071과 462의 최대공약수는 세 번의 나눗셈으로 21이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀적 알고리즘</a></div></nav>
 
       <article class="card" id="card-dmath-euclid-flow">
         <header class="card-head">
@@ -155,7 +155,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀적 알고리즘</a></div></nav>
 
       <article class="card" id="card-dmath-algo-bug">
         <header class="card-head">
@@ -234,7 +234,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/dmath/2-4.html#card-dmath-call-tree"><small class="mono">이산 수학 2.4</small>재귀로 피보나치 수를 구하면 왜 이렇게 느릴까?</a><a href="../../c/dmath/2-4.html#card-dmath-fast-power"><small class="mono">이산 수학 2.4</small>a¹⁰⁰을 곱셈 몇 번 만에 구할 수 있을까?</a><a href="../../c/dmath/2-4.html#text-dmath-recursion"><small class="mono">이산 수학 2.4</small>재귀적 알고리즘</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=dmath&amp;sec=2-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
 

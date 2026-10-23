@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adcalc-euler" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>원을 그리며 돌아야 할 공이 컴퓨터 화면에서는 왜 점점 멀어질까?</h2><span class="kind">본문 · 오일러의 방법</span></header>
+  <header class="card-head"><span class="no"></span><h2>오일러의 방법</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">게임 속 공이 원점 둘레를 원을 그리며 돌도록, 위치 \((x, y)\)의 속도를 \((-y, x)\)로 정했다. 컴퓨터는 매 순간 "지금 위치에 속도와 시간 간격 0.1을 곱한 만큼 더한다"는 규칙으로 공을 옮긴다. 그런데 반지름 1에서 출발한 공이 한 바퀴를 돌고 나니 반지름이 1.37로 커져 있었고, 계속 돌릴수록 바깥으로 나선을 그리며 멀어졌다. 미분방정식의 해는 분명히 원인데, 컴퓨터가 한 걸음씩 계산한 길은 왜 원에서 벗어날까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>접선의 기울기, 자연로그, 수열의 귀납적 정의, 방향장(<a href="4-1.html">미분방정식과 방향장</a>).</div>
 
-    <h3><span class="mono">1</span>접선을 따라 한 걸음씩</h3>
+    <h3><span class="no">4.2.1</span>접선을 따라 한 걸음씩</h3>
     <p>미분방정식 \(y' = f(x, y)\)의 해를 식으로 구할 수 없으면, 방향장의 선분을 따라 한 걸음씩 걸어가며 해를 어림한다. 현재 점 \((x_n, y_n)\)에서의 기울기는 \(f(x_n, y_n)\)이므로, \(x\)를 \(h\)만큼 옮기는 동안 그 기울기로 직선을 따라가면 \(y\)는 \(h\,f(x_n, y_n)\)만큼 변한다. 도착한 점에서 다시 기울기를 구해 다음 걸음을 걷는다. 이 방법이 오일러의 방법이다. 매 걸음 접선을 따라가므로, 곡선이 휘어 있으면 걸음마다 조금씩 곡선에서 벗어난다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">오일러의 방법</span></span>
+    <div class="tb-env thm"><span class="lb">정리 4.2.1 <span class="nm">오일러의 방법</span></span>
       <p>\(y' = f(x, y)\), \(y(x_0) = y_0\)에 대하여 걸음 \(h\)로 \[x_{n+1} = x_n + h,\qquad y_{n+1} = y_n + h\,f(x_n, y_n)\]을 되풀이한다. 정해진 구간까지 갈 때의 오차는 대략 \(h\)에 비례한다.</p>
     </div>
     <p>\(y' = y\), \(y(0) = 1\)에 쓰면 \(y_{n+1} = y_n + hy_n = (1 + h)y_n\)이므로 \(y_n = (1 + h)^n\)이다. \(h = 0.1\)로 10걸음 가면 \(y(1) \approx 1.1^{10} \approx 2.594\)로, 참값 \(e \approx 2.718\)보다 0.12 작다. 해 \(e^x\)는 아래로 볼록해서 접선이 늘 곡선 아래에 있기 때문이다. \(h = 0.01\)로 100걸음 가면 \(1.01^{100} \approx 2.705\)로 오차가 0.013으로 줄어, 걸음을 10분의 1로 하면 오차도 거의 10분의 1이 된다.<sup class="fn"><a href="#fn-adcalc-euler-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>원이 나선이 되는 까닭</h3>
+    <h3><span class="no">4.2.2</span>원이 나선이 되는 까닭</h3>
     <p>원운동 \(x' = -y\), \(y' = x\)에 오일러의 방법을 쓰면 \((x, y)\)에서 \((x - hy,\ y + hx)\)로 옮긴다. 이동한 거리 \(h\sqrt{x^2 + y^2}\)는 원의 접선 방향이므로, 새 점까지의 거리는 피타고라스 정리로 \(\sqrt{(x^2 + y^2)(1 + h^2)}\)이다. 그래서 한 걸음마다 반지름이 \(\sqrt{1 + h^2}\)배로 늘어난다. 접선은 원 바깥에 있으므로 접선을 따라가면 늘 원 밖으로 나가고, 이 작은 바깥쪽 어긋남이 쌓여 나선이 된다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 210" role="img" aria-label="오일러 방법으로 계산한 원운동이 나선이 되는 모습">
@@ -45,8 +45,8 @@
       <figcaption>그림 2. 매 걸음 원의 접선을 따라가므로 원 밖으로 조금씩 벗어나 나선이 된다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">4.2.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 4.2.2</span>
       <p>처음 질문의 원운동에서 \(h = 0.1\)로 한 바퀴, 곧 \(2\pi/0.1 \approx 63\)걸음을 갔을 때 반지름을 구하여라. 반지름이 1.01을 넘지 않게 한 바퀴를 돌려면 \(h\)를 얼마로 해야 하는가? \(\ln1.01 \approx 0.00995\)이다.</p>
     </div>
     <p>한 걸음마다 반지름이 \(\sqrt{1.01}\)배이므로, 63걸음 뒤에는 \(1.01^{63/2} = 1.01^{31.5}\)배이다. \(\ln\)을 취하면 \(31.5\times0.00995 \approx 0.313\)이므로 반지름은 \(e^{0.313} \approx 1.37\)이다. 처음 질문에서 본 값과 같다.</p>

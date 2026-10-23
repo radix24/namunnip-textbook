@@ -65,7 +65,7 @@
 
     <div>
       <article class="card reading" id="text-adchem-integrated-rate" data-kind="본문">
-        <header class="card-head"><span class="no">4.8.1</span><h2>먹은 약은 왜 같은 시간마다 반씩 줄어들까?</h2><span class="kind">본문 · 적분 속도식</span></header>
+        <header class="card-head"><span class="no">4.8.1</span><h2>적분 속도식</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">두통약 설명서에는 '4~6시간마다 한 알'이라고 적혀 있다. 몸속에 들어간 약은 간과 콩팥에서 분해되고 걸러져, 대부분의 약은 일정한 시간마다 남은 양의 절반씩 줄어든다. 처음 4시간에 반이 줄면, 다음 4시간에는 남은 것의 반이 또 준다. 그런데 술의 알코올은 그렇지 않아, 몸속 양에 상관없이 한 시간에 일정한 양씩 줄어든다. 두 경우는 무엇이 다를까? 농도가 시간에 따라 어떻게 변하는지 식으로 나타낼 수 있을까?</p>
           <figure class="q-fig" data-q="adchem-integ">
@@ -76,14 +76,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>반응 속도와 속도 법칙(화학), 아레니우스 식(<a href="4-7.html">반응 속도와 아레니우스 식</a>), 지수 함수와 로그, 미분(수학).</div>
 
-          <h3><span class="mono">1</span>속도 법칙에서 적분 속도식으로</h3>
+          <h3><span class="no">4.8.1</span>속도 법칙에서 적분 속도식으로</h3>
           <p>반응 A → 생성물의 속도가 \(-\dfrac{d[\text{A}]}{dt} = k[\text{A}]^n\)일 때 \(n\)을 반응 차수라 한다. 이 미분 방정식을 풀면 시간에 따른 농도를 바로 계산하는 식을 얻는다. 이것을 적분 속도식이라 한다. 0차 반응은 농도에 상관없이 일정한 빠르기로 줄어든다. 1차 반응은 빠르기가 농도에 비례하므로, 농도가 줄수록 느려지며 늘 같은 비율로 준다. 2차 반응은 농도의 제곱에 비례하여, 농도가 줄면 훨씬 더 느려진다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">적분 속도식과 반감기</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.8.1 <span class="nm">적분 속도식과 반감기</span></span>
             <p>처음 농도 \([\text{A}]_0\)에서 0차는 \([\text{A}] = [\text{A}]_0 - kt\), 1차는 \(\ln[\text{A}] = \ln[\text{A}]_0 - kt\), 2차는 \(\dfrac{1}{[\text{A}]} = \dfrac{1}{[\text{A}]_0} + kt\)이다. 반감기는 차례로 \(\dfrac{[\text{A}]_0}{2k}\), \(\dfrac{\ln 2}{k}\), \(\dfrac{1}{k[\text{A}]_0}\)이다. 1차 반응의 반감기만 처음 농도에 관계없다.</p>
           </div>
           <p>그림 1에서 차수를 바꾸어 보자. 1차 반응은 \(k = 0.1\)이면 반감기가 \(\ln 2 \div 0.1 \approx 6.9\)분으로 늘 같다. 0차 반응은 첫 반감기가 5분이지만 다음은 2.5분으로 짧아져 10분이면 다 없어진다. 2차 반응은 반감기가 10분, 20분, 40분으로 점점 길어진다. 그래서 농도를 재어 \([\text{A}]\), \(\ln[\text{A}]\), \(1/[\text{A}]\)를 시간에 대해 그려 보고, 어느 그래프가 직선이 되는지로 반응 차수를 알아낸다.<sup class="fn"><a href="#fn-adchem-integrated-rate-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>몸속의 약과 알코올</h3>
+          <h3><span class="no">4.8.2</span>몸속의 약과 알코올</h3>
           <p>대부분의 약은 몸속 농도에 비례하는 빠르기로 분해되고 걸러지므로 1차 반응을 따른다. 그래서 반감기가 약마다 정해져 있고, 그 반감기에 맞추어 복용 간격을 정한다. 반면 알코올은 간의 효소가 처리하는데, 술을 조금만 마셔도 효소가 모두 일하고 있어 더 빨리 처리할 수 없다. 그래서 몸속 알코올의 양에 상관없이 시간당 일정한 양, 대략 한 시간에 7~10 g씩 줄어드는 0차 반응을 따른다. 술을 많이 마시면 깨는 데 그만큼 오래 걸리는 까닭이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="반응 차수에 따른 직선 그래프와 반감기">
@@ -98,8 +98,8 @@
             <figcaption>그림 2. 농도 자료를 세 가지로 그려 보면 직선이 되는 그래프가 반응 차수를 알려 준다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.8.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.8.2</span>
             <p>어떤 약의 몸속 반감기는 4.0시간이고 1차 반응으로 줄어든다. 처음 몸속에 400 mg이 있었다면 12시간 뒤에는 몇 mg이 남는가? 처음 양의 5%로 줄어드는 데 몇 시간이 걸리는가?</p>
           </div>
           <p>12시간은 반감기의 3배이므로 \(400 \times \left(\dfrac{1}{2}\right)^3 = 50\) mg이 남는다. 속도 상수는 \(k = \ln 2 \div 4.0 \approx 0.173\)/시간이다.</p>
@@ -112,7 +112,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>속도 법칙을 시간에 대해 풀면 반응 차수에 따라 다른 적분 속도식을 얻으며, 0차는 일정한 양씩, 1차는 일정한 비율씩, 2차는 점점 더 느리게 줄어든다. 1차 반응만 반감기가 처음 농도에 관계없이 일정하여, 반감기 하나로 시간에 따른 양을 계산할 수 있다. 그래서 처음 질문의 약은 농도에 비례하는 빠르기로 분해되는 1차 반응이라, 같은 시간마다 반씩 줄어든다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/4-2.html#card-chem-molar-lab"><small class="mono">화학 4.2</small>정확히 0.100 M 용액을 만들려면?</a><a href="../../c/chem/4-2.html#card-chem-dilution"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/4-2.html#text-chem-molarity"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/4-1.html#text-mateng-rate-law"><small class="mono">물질과 에너지 4.1</small>농도를 2배로 하면 반응은 몇 배 빨라질까?</a><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>용액이 남색으로 바뀌는 시간만 재서 반응 속도식을 구할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/4-2.html#card-mateng-half-life"><small class="mono">물질과 에너지 4.2</small>약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/mateng/4-3.html#text-mateng-activation"><small class="mono">물질과 에너지 4.3</small>분자들은 1초에 수십억 번 부딪치는데 왜 반응은 느릴까?</a><a href="../../c/adchem/4-9.html#text-adchem-collision"><small class="mono">고급 화학 4.9</small>공기 속 분자는 1초에 수십억 번 부딪치는데 왜 대부분 반응하지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/4-2.html#card-chem-molar-lab"><small class="mono">화학 4.2</small>정확히 0.100 M 용액을 만들려면?</a><a href="../../c/chem/4-2.html#card-chem-dilution"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/4-2.html#text-chem-molarity"><small class="mono">화학 4.2</small>몰 농도</a><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/mateng/4-1.html#text-mateng-rate-law"><small class="mono">물질과 에너지 4.1</small>반응 속도식</a><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>초기 속도법과 반응 차수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/4-2.html#card-mateng-half-life"><small class="mono">물질과 에너지 4.2</small>약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/mateng/4-3.html#text-mateng-activation"><small class="mono">물질과 에너지 4.3</small>유효 충돌과 활성화 에너지</a><a href="../../c/adchem/4-9.html#text-adchem-collision"><small class="mono">고급 화학 4.9</small>충돌 이론</a></div></nav>
 
       <article class="card" id="card-mateng-rate-law">
         <header class="card-head">
@@ -158,7 +158,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/4-2.html#card-chem-molar-lab"><small class="mono">화학 4.2</small>정확히 0.100 M 용액을 만들려면?</a><a href="../../c/chem/4-2.html#card-chem-dilution"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/4-2.html#text-chem-molarity"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>용액이 남색으로 바뀌는 시간만 재서 반응 속도식을 구할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/4-2.html#card-mateng-half-life"><small class="mono">물질과 에너지 4.2</small>약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/mateng/4-3.html#text-mateng-activation"><small class="mono">물질과 에너지 4.3</small>분자들은 1초에 수십억 번 부딪치는데 왜 반응은 느릴까?</a><a href="../../c/adchem/4-9.html#text-adchem-collision"><small class="mono">고급 화학 4.9</small>공기 속 분자는 1초에 수십억 번 부딪치는데 왜 대부분 반응하지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/chem/4-2.html#card-chem-molar-lab"><small class="mono">화학 4.2</small>정확히 0.100 M 용액을 만들려면?</a><a href="../../c/chem/4-2.html#card-chem-dilution"><small class="mono">화학 4.2</small>물을 더 부으면 무엇이 그대로이고 무엇이 변할까?</a><a href="../../c/chem/4-2.html#text-chem-molarity"><small class="mono">화학 4.2</small>몰 농도</a><a href="../../c/chem/1-3.html#card-chem-balance"><small class="mono">화학 1.3</small>화학 반응식의 계수는 무엇을 뜻할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>초기 속도법과 반응 차수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/mateng/4-2.html#card-mateng-half-life"><small class="mono">물질과 에너지 4.2</small>약을 두 알 먹으면 몸에서 빠져나가는 데 두 배가 걸릴까?</a><a href="../../c/mateng/4-3.html#card-mateng-ea"><small class="mono">물질과 에너지 4.3</small>부딪친다고 모두 반응할까?</a><a href="../../c/mateng/4-3.html#text-mateng-activation"><small class="mono">물질과 에너지 4.3</small>유효 충돌과 활성화 에너지</a><a href="../../c/adchem/4-9.html#text-adchem-collision"><small class="mono">고급 화학 4.9</small>충돌 이론</a></div></nav>
 
       <article class="card" id="card-adchem-integrated">
         <header class="card-head">
@@ -214,7 +214,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mateng/4-1.html#text-mateng-rate-law"><small class="mono">물질과 에너지 4.1</small>농도를 2배로 하면 반응은 몇 배 빨라질까?</a><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>용액이 남색으로 바뀌는 시간만 재서 반응 속도식을 구할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/4-10.html#card-adchem-mechanism"><small class="mono">고급 화학 4.10</small>두 단계 반응에서 전체 빠르기는 누가 정할까?</a><a href="../../c/adchem/4-10.html#text-adchem-mechanism"><small class="mono">고급 화학 4.10</small>일산화 탄소를 더 넣어도 왜 반응이 빨라지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mateng/4-1.html#text-mateng-rate-law"><small class="mono">물질과 에너지 4.1</small>반응 속도식</a><a href="../../c/labchem/3-7.html#text-labchem-clock"><small class="mono">화학 실험 3.7</small>초기 속도법과 반응 차수</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adchem/4-10.html#card-adchem-mechanism"><small class="mono">고급 화학 4.10</small>두 단계 반응에서 전체 빠르기는 누가 정할까?</a><a href="../../c/adchem/4-10.html#text-adchem-mechanism"><small class="mono">고급 화학 4.10</small>반응 메커니즘과 속도 결정 단계</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adchem&amp;sec=4-8"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">8문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adchem-4-8"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">88문항</span></a>

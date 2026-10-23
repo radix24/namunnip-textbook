@@ -69,7 +69,7 @@
 
     <div>
       <article class="card reading" id="text-adphy-gauss-sphere" data-kind="본문">
-        <header class="card-head"><span class="no">2.1.1</span><h2>벼락 맞은 자동차 안의 사람은 왜 무사할까?</h2><span class="kind">본문 · 가우스 법칙과 전기장</span></header>
+        <header class="card-head"><span class="no">2.1.1</span><h2>가우스 법칙과 전기장</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">자동차가 달리다 벼락을 맞아도 안에 탄 사람은 대개 다치지 않는다. 비행기도 해마다 한두 번씩 벼락을 맞지만 승객은 모르고 지나간다. 고무 타이어 덕분이라고 흔히 말하지만, 실제로는 금속으로 된 차체가 중요하다. 수만 암페어의 전류가 쏟아지는데, 금속 상자 속은 어떻게 안전할까? 전하가 퍼져 있는 물체가 만드는 전기장을 일일이 더하지 않고 한 줄로 구하는 방법이 있을까?</p>
           <figure class="q-fig" data-q="adphy-gsph">
@@ -80,14 +80,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>쿨롱 법칙과 전기장, 전위와 등전위면(물리학), 구의 겉넓이와 부피(수학).</div>
 
-          <h3><span class="mono">1</span>전기 선속과 가우스 법칙</h3>
+          <h3><span class="no">2.1.1</span>전기 선속과 가우스 법칙</h3>
           <p>전기장 속에 면을 하나 두면, 그 면을 수직으로 뚫고 지나가는 전기력선의 수를 생각할 수 있다. 이것을 전기 선속이라 하고, 전기장의 면에 수직인 성분과 넓이의 곱 \(\Phi = E_\perp A\)로 계산한다. 점전하 \(q\)를 반지름 \(r\)인 구면으로 감싸면, 전기장 \(\dfrac{q}{4\pi\varepsilon_0 r^2}\)에 겉넓이 \(4\pi r^2\)을 곱해 선속이 \(q/\varepsilon_0\)이 된다. 반지름이 사라졌으므로 구면의 크기와 상관없다. 그리고 면이 찌그러져도 뚫고 나가는 전기력선의 수는 같다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">가우스 법칙</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.1.1 <span class="nm">가우스 법칙</span></span>
             <p>닫힌 면을 뚫고 나가는 전기 선속은 그 면 안에 든 알짜 전하 \(Q_{\text{안}}\)을 \(\varepsilon_0\)으로 나눈 값과 같다. \[\oint E_\perp\,dA = \frac{Q_{\text{안}}}{\varepsilon_0}\] 면 밖의 전하는 들어간 만큼 나오므로 선속에 기여하지 않는다. 대칭이 있으면 \(E\)를 적분 밖으로 꺼내 바로 구할 수 있다.</p>
           </div>
           <p>그림 1에서 거리를 바꾸어 보자. 전하가 고르게 찬 구에서 반지름 \(r\) 안에 든 전하는 부피의 비 \((r/R)^3\)만큼이다. 이를 \(4\pi r^2\)으로 나누면 구 안의 전기장은 \(r\)에 비례하여, 중심에서 0이고 겉면에서 가장 크다. 반면 전하가 껍질에만 있으면 안쪽의 가우스 면에는 전하가 하나도 없으므로 전기장이 0이다. 구 밖에서는 두 경우 모두 모든 전하가 중심에 모인 점전하와 같다.<sup class="fn"><a href="#fn-adphy-gauss-sphere-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>도체 속의 전기장</h3>
+          <h3><span class="no">2.1.2</span>도체 속의 전기장</h3>
           <p>도체 속에는 자유롭게 움직이는 전자가 많다. 도체 안에 전기장이 조금이라도 있으면 전자가 움직이고, 전자는 그 전기장을 지우는 쪽으로 다시 배열될 때까지 움직인다. 그래서 정전기적 평형에 이른 도체 속의 전기장은 0이다. 가우스 법칙을 도체 속에 그린 면에 적용하면 그 안의 알짜 전하도 0이어야 하므로, 남는 전하는 모두 겉면에 모인다. 속이 빈 금속 상자라면 바깥에 어떤 전하가 와도 상자 안의 전기장은 0이다. 이를 정전기 차폐라 하며, 이런 상자를 패러데이 상자라 한다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="대칭에 따른 가우스 면과 전기장">
@@ -102,8 +102,8 @@
             <figcaption>그림 2. 대칭에 맞는 가우스 면을 고르면 전기장을 한 줄로 구할 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.1.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.1.2</span>
             <p>반지름 10 cm인 플라스틱 공 속에 전하 \(2.0 \times 10^{-8}\) C이 고르게 퍼져 있다. 중심에서 5 cm, 10 cm, 20 cm 떨어진 곳의 전기장의 세기를 구하여라. \(\dfrac{1}{4\pi\varepsilon_0} = 9.0 \times 10^9\ \text{N·m}^2/\text{C}^2\)이다.</p>
           </div>
           <p>겉면(10 cm)에서는 모든 전하가 안에 들어 있으므로 \(E = 9.0 \times 10^9 \times \dfrac{2.0 \times 10^{-8}}{0.10^2} = 1.8 \times 10^4\) N/C이다. 5 cm에서는 안에 든 전하가 \((0.5)^3 = 1/8\)이고 거리가 반이므로 \(E = 9.0 \times 10^9 \times \dfrac{2.5 \times 10^{-9}}{0.05^2} = 9.0 \times 10^3\) N/C로, 겉면의 절반이다.</p>
@@ -116,7 +116,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>가우스 법칙은 닫힌 면을 뚫고 나가는 전기 선속이 면 안의 알짜 전하에만 달려 있다고 말하며, 대칭이 있으면 전기장을 한 줄로 구하게 해 준다. 그래서 고르게 대전된 구 안의 전기장은 거리에 비례하고, 껍질 속이나 도체 속의 전기장은 0이다. 처음 질문의 자동차 안이 안전한 것은 금속 차체가 패러데이 상자처럼 전하를 겉면으로 흘려보내 차 안의 전기장을 0으로 지키기 때문이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/2-2.html#card-phy-multitap"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a><a href="../../c/phy/2-2.html#card-phy-bulbs"><small class="mono">물리학 2.2</small>40 W 전구와 100 W 전구를 직렬로 이으면?</a><a href="../../c/phy/2-2.html#card-phy-circuit-meter"><small class="mono">물리학 2.2</small>직렬과 병렬 회로에서 전류계와 전압계는 무엇을 말해 줄까?</a><a href="../../c/phy/2-2.html#text-phy-circuit"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/2-2.html#card-phy-multitap"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a><a href="../../c/phy/2-2.html#card-phy-bulbs"><small class="mono">물리학 2.2</small>40 W 전구와 100 W 전구를 직렬로 이으면?</a><a href="../../c/phy/2-2.html#card-phy-circuit-meter"><small class="mono">물리학 2.2</small>직렬과 병렬 회로에서 전류계와 전압계는 무엇을 말해 줄까?</a><a href="../../c/phy/2-2.html#text-phy-circuit"><small class="mono">물리학 2.2</small>저항의 연결과 전력</a></div></nav>
 
       <article class="card" id="card-phy-field">
         <header class="card-head">
@@ -169,7 +169,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/2-2.html#card-phy-multitap"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a><a href="../../c/phy/2-2.html#card-phy-bulbs"><small class="mono">물리학 2.2</small>40 W 전구와 100 W 전구를 직렬로 이으면?</a><a href="../../c/phy/2-2.html#card-phy-circuit-meter"><small class="mono">물리학 2.2</small>직렬과 병렬 회로에서 전류계와 전압계는 무엇을 말해 줄까?</a><a href="../../c/phy/2-2.html#text-phy-circuit"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/phy/2-2.html#card-phy-multitap"><small class="mono">물리학 2.2</small>멀티탭에 기구를 많이 꽂으면 왜 위험할까?</a><a href="../../c/phy/2-2.html#card-phy-bulbs"><small class="mono">물리학 2.2</small>40 W 전구와 100 W 전구를 직렬로 이으면?</a><a href="../../c/phy/2-2.html#card-phy-circuit-meter"><small class="mono">물리학 2.2</small>직렬과 병렬 회로에서 전류계와 전압계는 무엇을 말해 줄까?</a><a href="../../c/phy/2-2.html#text-phy-circuit"><small class="mono">물리학 2.2</small>저항의 연결과 전력</a></div></nav>
 
       <article class="card" id="card-emq-equipotential">
         <header class="card-head">
@@ -210,7 +210,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div></nav>
 
       <article class="card" id="card-adphy-gauss">
         <header class="card-head">
@@ -265,7 +265,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/2-2.html#card-adphy-capnet"><small class="mono">고급 물리학 2.2</small>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a><a href="../../c/adphy/2-4.html#text-adphy-maxwell"><small class="mono">고급 물리학 2.4</small>맥스웰은 어떻게 전기와 자기의 식에서 빛의 속력을 꺼냈을까?</a><a href="../../c/adphy/2-4.html#text-adphy-antenna"><small class="mono">고급 물리학 2.4</small>휴대 전화의 안테나는 왜 라디오 안테나보다 훨씬 짧을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/2-2.html#card-adphy-capnet"><small class="mono">고급 물리학 2.2</small>유전체를 반만 끼운 축전기는 직렬일까, 병렬일까?</a><a href="../../c/adphy/2-4.html#card-adphy-wave"><small class="mono">고급 물리학 2.4</small>안테나 바로 위에 수신기를 두면 왜 신호가 잡히지 않을까?</a><a href="../../c/adphy/2-4.html#text-adphy-maxwell"><small class="mono">고급 물리학 2.4</small>맥스웰은 어떻게 전기와 자기의 식에서 빛의 속력을 꺼냈을까?</a><a href="../../c/adphy/2-4.html#text-adphy-antenna"><small class="mono">고급 물리학 2.4</small>전자기파의 발생과 성질</a></div></nav>
 
       <article class="card" id="card-adphy-dipole">
         <header class="card-head">
@@ -308,7 +308,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adphy&amp;sec=2-1"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adphy-2-1"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">90문항</span></a>

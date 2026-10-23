@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-mres-buffon" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>바늘을 1000번 떨어뜨려 구한 π는 몇째 자리까지 믿을 수 있을까?</h2><span class="kind">본문 · 수학 실험</span></header>
+  <header class="card-head"><span class="no"></span><h2>수학 실험</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">바닥에 같은 간격으로 평행선을 긋고, 그 간격과 길이가 같은 바늘을 아무렇게나 떨어뜨린다. 바늘이 선에 걸치는 비율을 세면 원주율 π를 어림할 수 있다고 한다. 모둠이 1000번을 떨어뜨려 637번 걸쳤고, 계산해 보니 3.140이 나왔다. 실제 π = 3.14159…와 소수 둘째 자리까지 맞았으니 이 실험으로 π를 둘째 자리까지 구했다고 말해도 될까? 같은 실험을 다시 하면 어떤 값이 나올까?</p>
     <figure class="q-fig">
@@ -21,14 +21,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>독립시행의 확률, 표본비율의 분포, 신뢰구간.</div>
 
-    <h3><span class="mono">1</span>실험으로 값을 어림하기</h3>
+    <h3><span class="no">2.3.1</span>실험으로 값을 어림하기</h3>
     <p>수학 실험은 직접 해 보거나 컴퓨터로 시뮬레이션하여 수학적 사실을 확인하거나 값을 어림하는 탐구이다. 뷔퐁의 바늘 실험에서 바늘이 선에 걸칠지는 두 가지로 정해진다. 바늘의 가운데가 가장 가까운 선에서 얼마나 떨어져 있는지와 바늘이 선과 이루는 각이다. 각이 \(\theta\)일 때 바늘이 선 방향과 수직으로 뻗은 길이는 \(l\sin\theta\)이고, 바늘의 가운데가 선에서 그 절반 안쪽에 있으면 걸친다. 이것을 모든 각에 대해 평균하면 걸칠 확률이 나온다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">뷔퐁의 바늘</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">뷔퐁의 바늘</span></span>
       <p>간격 \(d\)인 평행선 위에 길이 \(l \le d\)인 바늘을 무작위로 떨어뜨리면 선에 걸칠 확률은 \[P = \frac{2l}{\pi d}\]이다. \(l = d\)이면 \(P = 2/\pi\)이므로, \(N\)번 중 \(H\)번 걸쳤다면 \(\pi \approx 2N/H\)이다.</p>
     </div>
     <p>이 실험이 흥미로운 것은 원을 전혀 그리지 않았는데 π가 나온다는 점이다. 바늘이 아무 방향으로나 떨어지므로, 각의 평균을 구할 때 원의 둘레를 따라 고르게 도는 셈이 되기 때문이다. 확률을 이용해 값을 어림하는 이런 방법을 몬테카를로 방법이라 한다.<sup class="fn"><a href="#fn-mres-buffon-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>결과는 흔들린다</h3>
+    <h3><span class="no">2.3.2</span>결과는 흔들린다</h3>
     <p>실험 결과는 우연에 따라 흔들린다. 1000번 떨어뜨려 걸친 비율 \(\hat{p}\)는 참값 0.637 근처에서 표준오차 \(\sqrt{p(1-p)/N} \approx 0.015\)만큼 흔들린다. 그런데 \(\pi\)는 \(2/\hat{p}\)로 계산하므로 \(\hat{p}\)의 작은 흔들림이 커져서 들어간다. 실험을 다시 하면 걸친 횟수가 600번이 될 수도 있고, 그러면 \(\pi\)를 3.33으로 어림한다. 그래서 실험 결과를 보고할 때는 몇 번 실험했는지와 결과가 얼마나 흔들리는지를 함께 적어야 한다. 한 번의 결과가 참값에 가까웠다는 것만으로 정확한 실험이라고 말할 수 없다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="실험 횟수에 따른 π 어림의 흔들림">
@@ -43,8 +43,8 @@
       <figcaption>그림 2. 오차를 열 배 줄이려면 실험 횟수를 백 배 늘려야 해서, 바늘 실험으로 π를 정밀하게 구하기는 어렵다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
       <p>1000번 중 637번 걸쳤을 때 π의 어림값을 구하고, 같은 실험의 π 어림값이 95% 확률로 흔들리는 범위를 구하여라. π를 ±0.01 안으로 어림하려면 몇 번 떨어뜨려야 하는가?</p>
     </div>
     <p>\(\pi \approx 2 \times 1000 / 637 \approx 3.140\)이다. \(\hat{p}\)의 표준오차는 \(\sqrt{0.637 \times 0.363 / 1000} \approx 0.0152\)이고, \(\pi = 2/p\)이므로 \(p\)가 조금 변할 때 \(\pi\)는 그 \(2/p^2 \approx 4.93\)배만큼 변한다. 그래서 \(\pi\) 어림값의 표준오차는 약 \(0.075\), 95% 범위는 약 \(\pm 0.15\)이다. 같은 실험을 다시 하면 2.99에서 3.29 사이의 값이 나올 수 있으므로, 3.140이 둘째 자리까지 맞은 것은 운이 좋았던 것이다.</p>

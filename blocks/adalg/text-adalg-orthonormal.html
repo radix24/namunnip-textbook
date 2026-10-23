@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adalg-orthonormal" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>비스듬한 두 벡터로 직각 자를 만들 수 있을까?</h2><span class="kind">본문 · 정규직교기저</span></header>
+  <header class="card-head"><span class="no"></span><h2>정규직교기저</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">기저 \((2, 1)\), \((1, 2)\)로 점의 좌표를 구하려면 매번 연립방정식을 풀어야 한다. 그런데 서로 수직이고 길이가 1인 기저를 쓰면, 좌표가 점과 기저 벡터의 내적 한 번으로 바로 나온다. 예를 들어 \(\vec u_1 = (0.6, 0.8)\), \(\vec u_2 = (0.8, -0.6)\)을 기저로 쓰면 점 \((2, 1)\)의 좌표는 \((2, 1)\cdot\vec u_1 = 2\)와 \((2, 1)\cdot\vec u_2 = 1\)이다. 비스듬한 벡터 \((3, 4)\)와 \((1, 0)\)에서 이런 직각 자를 만들어 낼 수 있을까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>벡터의 내적과 수직 조건, 기저(<a href="1-5.html">기저</a>), 벡터의 정사영(<a href="1-7.html">벡터의 정사영</a>).</div>
 
-    <h3><span class="mono">1</span>내적 한 번으로 좌표를</h3>
+    <h3><span class="no">1.8.1</span>내적 한 번으로 좌표를</h3>
     <p>기저 벡터들이 서로 수직이고 길이가 모두 1이면 정규직교기저라 한다. \(\vec v = c_1\vec u_1 + c_2\vec u_2\)의 양변에 \(\vec u_1\)을 내적하면, \(\vec u_1\cdot\vec u_1 = 1\), \(\vec u_2\cdot\vec u_1 = 0\)이므로 \(\vec v\cdot\vec u_1 = c_1\)만 남는다. 그래서 각 좌표는 연립방정식을 풀 필요 없이 그 기저 벡터와의 내적 한 번으로 구해진다. 표준기저 \((1, 0)\), \((0, 1)\)이 편리한 것도 정규직교기저이기 때문이고, 돌린 좌표축처럼 다른 정규직교기저를 써도 같은 편리함을 누릴 수 있다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">그람–슈미트 과정</span></span>
+    <div class="tb-env thm"><span class="lb">정리 1.8.1 <span class="nm">그람–슈미트 과정</span></span>
       <p>일차독립인 \(\vec v_1, \vec v_2, \ldots\)에서 \(\vec u_1 = \vec v_1/|\vec v_1|\)로 두고, \(\vec w_2 = \vec v_2 - (\vec v_2\cdot\vec u_1)\vec u_1\), \(\vec u_2 = \vec w_2/|\vec w_2|\)처럼 각 벡터에서 앞의 정규직교 벡터들 위로의 정사영을 빼고 길이를 1로 맞춘다. 이렇게 얻은 \(\vec u_1, \vec u_2, \ldots\)는 같은 공간을 생성하는 정규직교기저이다.</p>
     </div>
     <p>둘째 벡터에서 첫째 방향의 정사영을 빼면 남는 부분은 첫째 벡터에 수직이다. 정사영의 오차가 늘 수직이었던 것과 같은 이치이다. 셋째 벡터가 있으면 앞의 두 방향으로의 정사영을 모두 빼고 남은 부분을 정규화한다. 그래서 비스듬한 기저에서 출발해도 같은 공간을 생성하는 직각 자를 차례로 만들 수 있다. 처음 벡터들이 일차종속이면 어느 단계에서 남는 부분이 영벡터가 되어 과정이 멈추므로, 이 과정은 일차독립을 판정하는 데도 쓰인다.<sup class="fn"><a href="#fn-adalg-orthonormal-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>길이와 각이 그대로이다</h3>
+    <h3><span class="no">1.8.2</span>길이와 각이 그대로이다</h3>
     <p>정규직교기저로 바꾼 좌표에서는 길이와 내적이 표준좌표에서와 똑같이 계산된다. \(\vec v\)의 좌표가 \((c_1, c_2)\)이면 \(|\vec v|^2 = c_1^2 + c_2^2\)이다. 비스듬한 기저의 좌표로는 이렇게 계산할 수 없는데, 기저 벡터끼리의 내적이 0이 아니어서 교차하는 항이 남기 때문이다. 그래서 정규직교기저는 좌표축을 돌리거나 뒤집은 것과 같고, 도형의 모양과 크기를 바꾸지 않는다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="두 기저에서 같은 점의 좌표를 구하는 방법">
@@ -46,8 +46,8 @@
       <figcaption>그림 2. 정규직교기저에서는 좌표를 내적으로 바로 구하고, 좌표로 계산한 길이도 그대로이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">1.8.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 1.8.2</span>
       <p>\(\vec v_1 = (3, 4)\), \(\vec v_2 = (1, 0)\)에 그람–슈미트 과정을 써서 정규직교기저를 만들고, 점 \((2, 1)\)과 \((-1, 7)\)의 좌표를 구하여라. 좌표로 구한 길이가 원래 길이와 같은지 확인하여라.</p>
     </div>
     <p>\(\vec u_1 = (3, 4)/5 = (0.6, 0.8)\)이다. \(\vec v_2\cdot\vec u_1 = 0.6\)이므로 \(\vec w_2 = (1, 0) - 0.6(0.6, 0.8) = (0.64, -0.48)\)이고, 길이 \(\sqrt{0.4096 + 0.2304} = 0.8\)로 나누면 \(\vec u_2 = (0.8, -0.6)\)이다. \(\vec u_1\cdot\vec u_2 = 0.48 - 0.48 = 0\)이다.</p>

@@ -66,7 +66,7 @@
 
     <div>
       <article class="card reading" id="text-adphy-quantum-box" data-kind="본문">
-        <header class="card-head"><span class="no">4.5.1</span><h2>같은 물질의 알갱이가 크기만 달라도 왜 다른 색으로 빛날까?</h2><span class="kind">본문 · 퍼텐셜 상자와 띠 이론</span></header>
+        <header class="card-head"><span class="no">4.5.1</span><h2>퍼텐셜 상자와 띠 이론</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">퀀텀닷 텔레비전에는 지름이 몇 나노미터인 반도체 알갱이가 들어 있다. 같은 물질로 만든 알갱이인데도, 작은 것은 파란빛을, 조금 큰 것은 초록빛을, 더 큰 것은 빨간빛을 낸다. 보통의 물질은 크기를 바꾸어도 색이 그대로인데, 나노미터 세계에서는 왜 크기가 색을 바꿀까? 전자를 아주 작은 상자에 가두면 무슨 일이 생길까?</p>
           <figure class="q-fig" data-q="adphy-box">
@@ -77,14 +77,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>드브로이 파장(<a href="4-3.html">빛의 이중성과 물질파</a>), 정상파, 수소 원자의 에너지 준위(물리학).</div>
 
-          <h3><span class="mono">1</span>상자 속의 정상파</h3>
+          <h3><span class="no">4.5.1</span>상자 속의 정상파</h3>
           <p>전자가 길이 \(L\)인 상자 속에 갇혀 벽 밖으로 나갈 수 없다고 하자. 전자의 물질파는 벽에서 0이 되어야 하므로, 양 끝이 고정된 줄의 정상파처럼 상자 길이가 반파장의 정수배일 때만 존재한다. 즉 \(L = n\dfrac{\lambda}{2}\)이고, 파장은 \(\lambda = 2L/n\)으로 정해진다. 드브로이 관계에서 운동량은 \(p = h/\lambda = nh/(2L)\)이 되어, 에너지도 아무 값이나 가질 수 없고 띄엄띄엄한 값만 가진다. 이것을 에너지의 양자화라 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">상자 속 입자의 에너지 준위</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.5.1 <span class="nm">상자 속 입자의 에너지 준위</span></span>
             <p>질량 \(m\)인 입자가 길이 \(L\)인 상자에 갇히면 에너지는 \[E_n = \frac{p^2}{2m} = \frac{n^2 h^2}{8mL^2}\qquad (n = 1, 2, 3, \dots)\]이다. 전자의 경우 \(L\)을 nm로 쓰면 \(E_1 \approx 0.376/L^2\) eV이다. 가장 낮은 에너지 \(E_1\)도 0이 아니며, 준위의 간격은 \(L^2\)에 반비례한다.</p>
           </div>
           <p>그림 1에서 상자 길이를 바꾸어 보자. \(L = 1\) nm이면 \(E_1 \approx 0.38\) eV, \(E_2 \approx 1.50\) eV이다. 전자가 n = 2에서 1로 떨어지면 1.13 eV의 광자를 내고, 그 파장은 \(1240 \div 1.13 \approx 1100\) nm인 적외선이다. 상자를 0.6 nm로 줄이면 간격이 약 2.8배 넓어져 파장 약 400 nm인 보랏빛이 된다. 즉 상자의 크기가 빛의 색을 정한다.<sup class="fn"><a href="#fn-adphy-quantum-box-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>상자를 이어 붙이면 띠가 된다</h3>
+          <h3><span class="no">4.5.2</span>상자를 이어 붙이면 띠가 된다</h3>
           <p>원자 하나 속의 전자도 핵의 끌어당김이라는 상자에 갇혀 있어 띄엄띄엄한 에너지 준위를 가진다. 원자 두 개가 가까이 오면 각 준위가 두 개로 갈라지고, 원자 \(N\)개가 모여 결정을 이루면 각 준위가 \(N\)개로 갈라져 촘촘한 띠를 이룬다. 띠와 띠 사이에는 전자가 가질 수 없는 에너지 구간인 띠틈이 남는다. 전자가 다 찬 띠 위에 빈 띠가 띠틈을 두고 있으면 절연체나 반도체이고, 띠가 반쯤 차 있으면 도체이다. 반도체 알갱이를 몇 nm로 줄이면 띠의 양 끝이 상자 효과로 다시 벌어져 띠틈이 커진다. 퀀텀닷의 색이 크기에 따라 바뀌는 까닭이다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="갇힌 정도에 따른 에너지 구조">
@@ -99,8 +99,8 @@
             <figcaption>그림 2. 전자가 갇힌 공간의 크기에 따라 에너지 구조가 준위에서 띠까지 이어진다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.5.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.5.2</span>
             <p>일차원 상자 모형에서, 전자가 n = 2에서 n = 1로 떨어질 때 파장 650 nm인 빨간빛을 내려면 상자의 길이가 얼마여야 하는가? 같은 모형으로 파장 450 nm인 파란빛을 내는 상자의 길이도 구하여라.</p>
           </div>
           <p>650 nm 광자의 에너지는 \(1240 \div 650 \approx 1.91\) eV이다. 이것이 \(E_2 - E_1 = 3E_1\)이므로 \(E_1 \approx 0.636\) eV이고, \(0.376/L^2 = 0.636\)에서 \(L \approx 0.77\) nm이다.</p>
@@ -113,7 +113,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>상자에 갇힌 전자의 물질파는 정상파만 가능하여 에너지가 \(n^2h^2/(8mL^2)\)로 띄엄띄엄 정해지고, 준위의 간격은 상자 길이의 제곱에 반비례한다. 원자가 많이 모이면 준위가 띠로 퍼지고, 나노 크기의 알갱이에서는 상자 효과로 띠틈이 다시 벌어진다. 그래서 처음 질문의 퀀텀닷은 같은 물질이라도 알갱이가 작을수록 띠틈이 커져 짧은 파장의 파란빛을, 클수록 빨간빛을 낸다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/3-4.html#card-phy-lm-spec"><small class="mono">물리학 3.4</small>빛만 보고 무엇이 빛나는지 알 수 있을까?</a><a href="../../c/phy/3-4.html#card-phy-prism"><small class="mono">물리학 3.4</small>프리즘은 하얀빛 속에 숨은 무지개를 어떻게 꺼낼까?</a><a href="../../c/phy/3-4.html#text-phy-levels"><small class="mono">물리학 3.4</small>수소는 왜 몇 가지 색의 빛만 낼까?</a><a href="../../c/labchem/2-1.html#text-labchem-lines"><small class="mono">화학 실험 2.1</small>수소 기체는 왜 빨강, 청록, 파랑, 보라 네 줄의 빛만 낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a><a href="../../c/labphy/5-4.html#text-labphy-mercury"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 전류는 왜 4.9 V마다 뚝 떨어질까?</a><a href="../../c/labchem/2-1.html#card-labchem-spectrum"><small class="mono">화학 실험 2.1</small>분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛과 물질의 이중성</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/3-4.html#card-phy-lm-spec"><small class="mono">물리학 3.4</small>빛만 보고 무엇이 빛나는지 알 수 있을까?</a><a href="../../c/phy/3-4.html#card-phy-prism"><small class="mono">물리학 3.4</small>프리즘은 하얀빛 속에 숨은 무지개를 어떻게 꺼낼까?</a><a href="../../c/phy/3-4.html#text-phy-levels"><small class="mono">물리학 3.4</small>에너지 준위와 스펙트럼</a><a href="../../c/labchem/2-1.html#text-labchem-lines"><small class="mono">화학 실험 2.1</small>원소의 스펙트럼과 에너지 준위</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a><a href="../../c/labphy/5-4.html#text-labphy-mercury"><small class="mono">물리학 실험 5.4</small>프랑크–헤르츠 실험</a><a href="../../c/labchem/2-1.html#card-labchem-spectrum"><small class="mono">화학 실험 2.1</small>분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?</a></div></nav>
 
       <article class="card" id="card-phy-lm-hyd">
         <header class="card-head">
@@ -161,7 +161,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labchem/2-1.html#text-labchem-lines"><small class="mono">화학 실험 2.1</small>수소 기체는 왜 빨강, 청록, 파랑, 보라 네 줄의 빛만 낼까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a><a href="../../c/labphy/5-4.html#text-labphy-mercury"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 전류는 왜 4.9 V마다 뚝 떨어질까?</a><a href="../../c/labchem/2-1.html#card-labchem-spectrum"><small class="mono">화학 실험 2.1</small>분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-photo"><small class="mono">물리학 3.3</small>빛을 세게 비추면 전자가 더 빨리 튀어나올까?</a><a href="../../c/phy/3-3.html#text-phy-image-sensor"><small class="mono">물리학 3.3</small>디지털카메라는 빛을 어떻게 숫자로 저장할까?</a><a href="../../c/phy/3-3.html#card-phy-compton"><small class="mono">물리학 3.3</small>X선이 전자에 부딪혀 튕겨 나오면 왜 색(파장)이 바뀔까?</a><a href="../../c/phy/3-3.html#text-phy-duality"><small class="mono">물리학 3.3</small>빛과 물질의 이중성</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labchem/2-1.html#text-labchem-lines"><small class="mono">화학 실험 2.1</small>원소의 스펙트럼과 에너지 준위</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/labphy/5-4.html#card-labphy-franck-hertz"><small class="mono">물리학 실험 5.4</small>전압을 올리는데 왜 전류가 4.9 V마다 줄어들까?</a><a href="../../c/labphy/5-4.html#text-labphy-mercury"><small class="mono">물리학 실험 5.4</small>프랑크–헤르츠 실험</a><a href="../../c/labchem/2-1.html#card-labchem-spectrum"><small class="mono">화학 실험 2.1</small>분광기로 본 몇 줄의 빛에서 에너지 준위를 어떻게 알아낼까?</a></div></nav>
 
       <article class="card" id="card-adphy-well">
         <header class="card-head">
@@ -216,7 +216,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-emicro"><small class="mono">물리학 3.3</small>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a><a href="../../c/mech/3-5.html#card-mech-standing"><small class="mono">역학과 에너지 3.5</small>기타 줄과 리코더는 왜 정해진 음만 낼까?</a><a href="../../c/mech/3-5.html#text-mech-standing"><small class="mono">역학과 에너지 3.5</small>기타 줄은 왜 정해진 높이의 음만 낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-emicro"><small class="mono">물리학 3.3</small>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>단일 양자의 이중 슬릿 실험</a><a href="../../c/mech/3-5.html#card-mech-standing"><small class="mono">역학과 에너지 3.5</small>기타 줄과 리코더는 왜 정해진 음만 낼까?</a><a href="../../c/mech/3-5.html#text-mech-standing"><small class="mono">역학과 에너지 3.5</small>정상파와 악기</a></div></nav>
 
       <article class="card" id="card-emq-tunnel">
         <header class="card-head">
@@ -257,7 +257,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-emicro"><small class="mono">물리학 3.3</small>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>전자를 하나씩 쏘아도 왜 간섭무늬가 생길까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/4-6.html#card-adphy-gamow"><small class="mono">고급 물리학 4.6</small>태양 중심은 쿨롱 장벽을 넘기에 너무 차가운데, 어떻게 핵융합이 일어날까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/3-3.html#card-phy-lm-emicro"><small class="mono">물리학 3.3</small>전자 현미경은 왜 광학 현미경보다 더 작은 것을 볼까?</a><a href="../../c/emq/3-1.html#text-emq-single-quantum"><small class="mono">전자기와 양자 3.1</small>단일 양자의 이중 슬릿 실험</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/4-6.html#card-adphy-gamow"><small class="mono">고급 물리학 4.6</small>태양 중심은 쿨롱 장벽을 넘기에 너무 차가운데, 어떻게 핵융합이 일어날까?</a></div></nav>
 
       <article class="card" id="card-phy-lm-bands">
         <header class="card-head">
@@ -304,7 +304,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-4.html#card-is1-bond"><small class="mono">통합과학1 2.4</small>원자는 왜 전자를 주고받거나 함께 쓸까?</a><a href="../../c/is1/2-4.html#card-is1-conduct"><small class="mono">통합과학1 2.4</small>소금물은 전기가 통하는데 설탕물은 왜 안 통할까?</a><a href="../../c/chem/2-1.html#card-chem-nacl"><small class="mono">화학 2.1</small>고체 소금은 전기가 안 통하는데, 녹이면 왜 통할까?</a><a href="../../c/chem/2-1.html#card-chem-h2oel"><small class="mono">화학 2.1</small>물을 전기 분해하면 왜 수소가 산소의 2배 나올까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/is1/2-6.html#text-is1-electric-materials"><small class="mono">통합과학1 2.6</small>어떤 물질은 전기가 잘 통하고 어떤 물질은 왜 안 통할까?</a><a href="../../c/emq/1-7.html#text-emq-semiconductor"><small class="mono">전자기와 양자 1.7</small>다이오드는 왜 전류를 한쪽으로만 흘릴까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-6.html#card-is1-doping"><small class="mono">통합과학1 2.6</small>반도체에 불순물을 넣으면 왜 전기가 잘 통할까?</a><a href="../../c/phy/3-5.html#card-phy-lm-led"><small class="mono">물리학 3.5</small>LED는 색마다 왜 필요한 전압이 다를까?</a><a href="../../c/phy/3-5.html#card-phy-diode-iv"><small class="mono">물리학 3.5</small>다이오드는 왜 한쪽으로만 전류를 흘릴까?</a><a href="../../c/phy/3-5.html#card-phy-solar-panel"><small class="mono">물리학 3.5</small>작은 태양 전지 12장으로 휴대 전화를 충전하려면 어떻게 이어야 할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/is1/2-4.html#card-is1-bond"><small class="mono">통합과학1 2.4</small>원자는 왜 전자를 주고받거나 함께 쓸까?</a><a href="../../c/is1/2-4.html#card-is1-conduct"><small class="mono">통합과학1 2.4</small>소금물은 전기가 통하는데 설탕물은 왜 안 통할까?</a><a href="../../c/chem/2-1.html#card-chem-nacl"><small class="mono">화학 2.1</small>고체 소금은 전기가 안 통하는데, 녹이면 왜 통할까?</a><a href="../../c/chem/2-1.html#card-chem-h2oel"><small class="mono">화학 2.1</small>물을 전기 분해하면 왜 수소가 산소의 2배 나올까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/is1/2-6.html#text-is1-electric-materials"><small class="mono">통합과학1 2.6</small>물질의 전기적 성질</a><a href="../../c/emq/1-7.html#text-emq-semiconductor"><small class="mono">전자기와 양자 1.7</small>반도체 소자와 전자 회로</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/2-6.html#card-is1-doping"><small class="mono">통합과학1 2.6</small>반도체에 불순물을 넣으면 왜 전기가 잘 통할까?</a><a href="../../c/phy/3-5.html#card-phy-lm-led"><small class="mono">물리학 3.5</small>LED는 색마다 왜 필요한 전압이 다를까?</a><a href="../../c/phy/3-5.html#card-phy-diode-iv"><small class="mono">물리학 3.5</small>다이오드는 왜 한쪽으로만 전류를 흘릴까?</a><a href="../../c/phy/3-5.html#card-phy-solar-panel"><small class="mono">물리학 3.5</small>작은 태양 전지 12장으로 휴대 전화를 충전하려면 어떻게 이어야 할까?</a></div></nav>
 
       <article class="card" id="card-adphy-bands">
         <header class="card-head">
@@ -353,7 +353,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/emq/3-3.html#text-emq-tunneling"><small class="mono">전자기와 양자 3.3</small>에너지가 모자란 전자는 어떻게 벽을 통과할까?</a><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/is1/2-6.html#text-is1-electric-materials"><small class="mono">통합과학1 2.6</small>어떤 물질은 전기가 잘 통하고 어떤 물질은 왜 안 통할까?</a><a href="../../c/phy/3-5.html#text-phy-semiconductor"><small class="mono">물리학 3.5</small>LED는 왜 색마다 켜는 전압이 다를까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/emq/3-3.html#text-emq-tunneling"><small class="mono">전자기와 양자 3.3</small>터널 효과</a><a href="../../c/is1/2-6.html#card-is1-bands"><small class="mono">통합과학1 2.6</small>도체·반도체·절연체는 무엇이 다를까?</a><a href="../../c/is1/2-6.html#text-is1-electric-materials"><small class="mono">통합과학1 2.6</small>물질의 전기적 성질</a><a href="../../c/phy/3-5.html#text-phy-semiconductor"><small class="mono">물리학 3.5</small>에너지띠와 반도체</a></div></nav>
 
       <article class="card reading" id="text-adphy-nano">
         <header class="card-head">

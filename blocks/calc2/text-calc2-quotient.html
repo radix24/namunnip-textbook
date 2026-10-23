@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc2-quotient" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>몫 \(\frac{f}{g}\)의 도함수는 \(\frac{f'}{g'}\)일까?</h2><span class="kind">본문 · 몫의 미분법</span></header>
+  <header class="card-head"><span class="no"></span><h2>몫의 미분법</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">\(\tan x = \dfrac{\sin x}{\cos x}\)이니, 분자와 분모를 따로 미분하면 \(\dfrac{\cos x}{-\sin x}\)가 되어야 할까? 그런데 \(x = 0\)에서 이 값은 정의되지 않는다. 그래프를 보면 \(\tan x\)는 원점에서 기울기 1로 올라가고 있다. 몫의 도함수는 어떻게 구해야 할까?</p>
     <figure class="q-fig" data-q="calc2-tan">
@@ -18,16 +18,16 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>곱의 미분법(미적분Ⅰ), 사인·코사인함수의 도함수(<a href="2-3.html">삼각함수의 극한과 미분</a>), 유리함수.</div>
 
-    <h3><span class="mono">1</span>몫의 미분법</h3>
+    <h3><span class="no">2.4.1</span>몫의 미분법</h3>
     <p>먼저 \(\dfrac{1}{g(x)}\)의 도함수를 구하자. 정의대로 쓰면 \[\frac{1}{h}\left(\frac{1}{g(x+h)} - \frac{1}{g(x)}\right) = -\frac{g(x+h) - g(x)}{h} \cdot \frac{1}{g(x+h)g(x)}\] 이고, \(h \to 0\)이면 \(-\dfrac{g'(x)}{\{g(x)\}^2}\)이다. \(\dfrac{f}{g} = f \cdot \dfrac{1}{g}\)이므로 곱의 미분법을 쓰면 몫의 도함수를 얻는다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">몫의 미분법</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.4.1 <span class="nm">몫의 미분법</span></span>
       <p>\(g(x) \ne 0\)일 때 \[\left\{\frac{f(x)}{g(x)}\right\}' = \frac{f'(x)g(x) - f(x)g'(x)}{\{g(x)\}^2},\qquad \left\{\frac{1}{g(x)}\right\}' = -\frac{g'(x)}{\{g(x)\}^2}\]</p>
     </div>
     <p>분자의 순서에 주의해야 한다. 분자를 미분한 것에 분모를 곱한 뒤, 분자에 분모를 미분한 것을 곱한 것을 뺀다. 이 공식으로 \(x^{-n} = \dfrac{1}{x^n}\)을 미분하면 \(-\dfrac{nx^{n-1}}{x^{2n}} = -nx^{-n-1}\)이 되어, \((x^n)' = nx^{n-1}\)이 음의 정수 \(n\)에서도 성립한다.<sup class="fn"><a href="#fn-calc2-quotient-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>여러 가지 삼각함수의 도함수</h3>
+    <h3><span class="no">2.4.2</span>여러 가지 삼각함수의 도함수</h3>
     <p>\(\tan x = \dfrac{\sin x}{\cos x}\)에 몫의 미분법을 쓰면 \[(\tan x)' = \frac{\cos x \cdot \cos x - \sin x \cdot (-\sin x)}{\cos^2 x} = \frac{1}{\cos^2 x} = \sec^2 x\] 이다. \(\cos^2 x \le 1\)이므로 기울기는 언제나 1 이상이다. 그림 1에서 접점을 옮겨 보면 원점에서 기울기 1, 가장자리로 갈수록 기울기가 커진다. 처음 질문처럼 분자와 분모를 따로 미분한 \(\dfrac{\cos x}{-\sin x}\)는 전혀 다른 값이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">삼각함수의 도함수</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.4.2 <span class="nm">삼각함수의 도함수</span></span>
       <p>\[(\tan x)' = \sec^2 x,\quad (\sec x)' = \sec x \tan x,\quad (\csc x)' = -\csc x \cot x,\quad (\cot x)' = -\csc^2 x\] 여기서 \(\sec x = \dfrac{1}{\cos x}\), \(\csc x = \dfrac{1}{\sin x}\), \(\cot x = \dfrac{1}{\tan x}\)이다.</p>
     </div>
     <figure class="q-fig">
@@ -43,8 +43,8 @@
       <figcaption>그림 2. 몫의 미분법은 '분자 미분 곱하기 분모, 빼기 분자 곱하기 분모 미분, 나누기 분모의 제곱'의 순서이다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.4.3</span>
       <p>함수 \(f(x) = \dfrac{x^2 + 1}{x - 1}\)의 도함수를 구하고, \(f'(x) = 0\)이 되는 \(x\)를 구하여라.</p>
     </div>
     <p>분자 \(x^2 + 1\)의 도함수는 \(2x\), 분모 \(x - 1\)의 도함수는 1이므로 \[f'(x) = \frac{2x(x - 1) - (x^2 + 1) \cdot 1}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}\] 이다.</p>

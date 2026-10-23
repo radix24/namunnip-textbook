@@ -55,7 +55,7 @@
 
     <div>
       <article class="card reading" id="text-mech-doppler" data-kind="본문">
-        <header class="card-head"><span class="no">3.3.1</span><h2>다가오는 구급차의 사이렌은 왜 더 높게 들릴까?</h2><span class="kind">본문 · 도플러 효과</span></header>
+        <header class="card-head"><span class="no">3.3.1</span><h2>도플러 효과</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">구급차가 사이렌을 울리며 다가올 때는 소리가 높게 들리다가, 바로 앞을 지나쳐 멀어지는 순간 뚝 낮아진다. 구급차 안의 사이렌은 늘 같은 소리를 내는데 왜 듣는 사람에게는 높이가 달라질까? 또 얼마나 빨리 움직이면 소리가 얼마나 높아질까?</p>
           <figure class="q-fig" data-q="mech-doppler">
@@ -66,15 +66,15 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>파동의 속력, 진동수, 파장 \(v = f\lambda\), 탄성파의 진행(<a href="3-2.html">탄성파의 진행·반사·투과</a>), 소리의 높이와 진동수(중학교).</div>
 
-          <h3><span class="mono">1</span>음원이 움직일 때</h3>
+          <h3><span class="no">3.3.1</span>음원이 움직일 때</h3>
           <p>음원이 정지해 있으면 매 주기마다 낸 파면이 같은 중심의 동심원으로 퍼진다. 음원이 움직이면 한 파면을 낸 뒤 다음 파면을 내기 전까지 앞으로 이동한다. 그래서 진행 방향 앞쪽에서는 파면이 촘촘해지고 뒤쪽에서는 성겨진다. 소리의 속력은 공기가 정하므로 그대로이고, 파장이 짧아진 앞쪽에서는 진동수가 높게 들린다.</p>
           <p>음원의 진동수가 \(f_0\), 속력이 \(v_s\), 음속이 \(v\)이면 한 주기 \(\dfrac{1}{f_0}\) 동안 소리는 \(\dfrac{v}{f_0}\)만큼, 음원은 \(\dfrac{v_s}{f_0}\)만큼 나아간다. 앞쪽 파장은 \(\lambda = \dfrac{v - v_s}{f_0}\)이므로 듣는 진동수는 \(f = \dfrac{v}{\lambda} = f_0\dfrac{v}{v - v_s}\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">도플러 효과</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.3.1 <span class="nm">도플러 효과</span></span>
             <p>음원이 \(v_s\), 관찰자가 \(v_o\)의 속력으로 서로 가까워지면 관찰자가 듣는 진동수는 \[f = f_0\,\frac{v + v_o}{v - v_s}\] 이다. 멀어지는 경우에는 \(v_o\), \(v_s\)의 부호를 바꾼다.</p>
           </div>
           <p>관찰자가 다가가는 경우에는 파장은 그대로이지만 관찰자가 파면을 더 자주 만나므로 진동수가 높아진다. 그림 1에서 음원의 속력을 키워 보자. 앞쪽 파면이 점점 촘촘해지고, 음속에 가까워지면 파면이 한곳에 겹쳐 쌓인다.<sup class="fn"><a href="#fn-mech-doppler-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>빛의 도플러 효과와 활용</h3>
+          <h3><span class="no">3.3.2</span>빛의 도플러 효과와 활용</h3>
           <p>빛에서도 도플러 효과가 일어난다. 멀어지는 별의 빛은 파장이 길어져 붉은 쪽으로 치우치는데, 이를 적색 편이라 한다. 허블은 먼 은하일수록 적색 편이가 크다는 것을 발견하여 우주가 팽창한다는 증거를 얻었다. 경찰의 속도 측정기, 기상 레이더, 혈류를 재는 초음파 장비도 반사파의 진동수 변화로 속력을 잰다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="다가올 때와 멀어질 때의 진동수 비교">
@@ -87,8 +87,8 @@
             <figcaption>그림 2. 같은 사이렌도 다가올 때와 멀어질 때 진동수가 약 90 Hz 차이 난다. 지나치는 순간 높이가 뚝 떨어지는 까닭이다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.3.2</span>
             <p>500 Hz의 사이렌을 울리는 구급차가 30 m/s(시속 108 km)로 달린다. 길가에 서 있는 사람이 구급차가 다가올 때와 멀어질 때 듣는 진동수를 구하여라. (음속 340 m/s)</p>
           </div>
           <p>다가올 때 \(f = 500 \times \dfrac{340}{340 - 30} = 500 \times \dfrac{340}{310} \approx 548\) Hz이다.</p>
@@ -101,7 +101,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>음원이나 관찰자가 움직이면 파면 사이의 간격이나 파면을 만나는 빈도가 바뀌어, 관찰자가 듣는 진동수가 \(f_0\frac{v + v_o}{v - v_s}\)로 달라진다. 빛에서도 같은 효과가 나타나 은하의 후퇴 속도나 차의 속력을 재는 데 쓰인다. 그래서 처음 질문의 구급차는 다가올 때 앞쪽 파면이 촘촘해져 높게, 멀어질 때 성겨져 낮게 들린다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 왜 뒤집혀 돌아오기도 할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-5.html#text-space-transit"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-5.html#card-space-exoplanet"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?</a><a href="../../c/space/2-3.html#card-space-proper-motion"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/2-3.html#text-space-velocity"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/3-3.html#card-space-rotation"><small class="mono">행성우주과학 3.3</small>은하의 바깥쪽 별은 왜 느려지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>탄성파의 진행·반사·투과</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-5.html#text-space-transit"><small class="mono">행성우주과학 1.5</small>외계 행성계와 생명체</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-5.html#card-space-exoplanet"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?</a><a href="../../c/space/2-3.html#card-space-proper-motion"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/2-3.html#text-space-velocity"><small class="mono">행성우주과학 2.3</small>별의 공간 운동</a><a href="../../c/space/3-3.html#card-space-rotation"><small class="mono">행성우주과학 3.3</small>은하의 바깥쪽 별은 왜 느려지지 않을까?</a></div></nav>
 
       <article class="card" id="card-mech-doppler">
         <header class="card-head">
@@ -145,7 +145,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 왜 뒤집혀 돌아오기도 할까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-5.html#text-space-transit"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-5.html#card-space-exoplanet"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?</a><a href="../../c/space/2-3.html#card-space-proper-motion"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/2-3.html#text-space-velocity"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/3-3.html#card-space-rotation"><small class="mono">행성우주과학 3.3</small>은하의 바깥쪽 별은 왜 느려지지 않을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/mech/3-2.html#card-mech-pulse"><small class="mono">역학과 에너지 3.2</small>줄의 끝에 닿은 파동은 어떻게 되돌아올까?</a><a href="../../c/mech/3-2.html#text-mech-elastic-use"><small class="mono">역학과 에너지 3.2</small>보이지 않는 곳을 탄성파로 어떻게 볼까?</a><a href="../../c/mech/3-2.html#text-mech-pulse"><small class="mono">역학과 에너지 3.2</small>탄성파의 진행·반사·투과</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/space/1-5.html#text-space-transit"><small class="mono">행성우주과학 1.5</small>외계 행성계와 생명체</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/space/1-5.html#card-space-exoplanet"><small class="mono">행성우주과학 1.5</small>보이지도 않는 외계 행성을 어떻게 찾고, 생명이 살 만한지 가늠할까?</a><a href="../../c/space/2-3.html#card-space-proper-motion"><small class="mono">행성우주과학 2.3</small>10만 년 뒤 북두칠성은 어떤 모양일까?</a><a href="../../c/space/2-3.html#text-space-velocity"><small class="mono">행성우주과학 2.3</small>별의 공간 운동</a><a href="../../c/space/3-3.html#card-space-rotation"><small class="mono">행성우주과학 3.3</small>은하의 바깥쪽 별은 왜 느려지지 않을까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=mech&amp;sec=3-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
       <a class="px-go" href="../../practice.html?sec=mech-3-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">71문항</span></a>

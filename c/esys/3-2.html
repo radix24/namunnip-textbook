@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-esys-heat-budget" data-kind="본문">
-        <header class="card-head"><span class="no">3.2.1</span><h2>지구는 왜 계속 뜨거워지지도, 식지도 않을까?</h2><span class="kind">본문 · 지구의 열수지</span></header>
+        <header class="card-head"><span class="no">3.2.1</span><h2>지구의 열수지</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">지구는 매 순간 태양 에너지를 받는다. 그런데 수천 년 동안 지구의 평균 기온은 크게 오르지도 내리지도 않았다. 받은 만큼 어딘가로 내보내고 있다는 뜻이다. 지구는 받은 에너지를 어떤 길로 내보낼까? 그리고 온실 효과가 없다면 지구의 기온은 몇 도일까? 반사율이나 온실 기체가 조금 바뀌면 기온은 얼마나 달라질까?</p>
           <figure class="q-fig" data-q="esys-budget">
@@ -73,14 +73,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>복사 평형과 슈테판–볼츠만 법칙(지구과학), 대기의 선택적 흡수(<a href="3-1.html">대기의 선택적 흡수와 생명체</a>), 물의 숨은열.</div>
 
-          <h3><span class="mono">1</span>복사 평형</h3>
+          <h3><span class="no">3.2.1</span>복사 평형</h3>
           <p>지구가 흡수하는 태양 복사와 우주로 내보내는 지구 복사가 같으면 온도가 일정하게 유지된다. 이를 복사 평형이라 한다. 지구는 단면적 \(\pi R^2\)으로 햇빛을 받지만 표면적 \(4\pi R^2\) 전체로 복사를 내보내므로, 표면 1 m²당 평균으로 받는 햇빛은 태양 상수의 4분의 1인 약 340 W/m²이다. 그 가운데 약 30%는 구름과 얼음 등에 반사된다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">복사 평형 온도</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.2.1 <span class="nm">복사 평형 온도</span></span>
             <p>태양 상수 \(S\), 반사율 \(a\)일 때 \(\dfrac{S(1 - a)}{4} = \sigma T_e^4\)에서 \[T_e = \left(\frac{S(1 - a)}{4\sigma}\right)^{1/4}\] 이다. 지구는 약 255 K(−18 °C)이다. 대기가 지표 복사의 일부 \(\varepsilon\)을 흡수했다가 되돌려 보내면 지표 온도는 \(T_s = T_e\left(\dfrac{2}{2 - \varepsilon}\right)^{1/4}\)로 높아진다.</p>
           </div>
           <p>그림 1에서 흡수율을 0으로 내려 보자. 지표 온도는 −18 °C로, 지구 전체가 얼어붙는다. 흡수율 0.78이면 15 °C이다. 온실 효과가 약 33 °C를 더해 주는 셈이다. 반사율을 0.3에서 0.32로 조금만 올려도 기온은 약 2 °C 내려간다.</p>
 
-          <h3><span class="mono">2</span>지표의 에너지 출구</h3>
+          <h3><span class="no">3.2.2</span>지표의 에너지 출구</h3>
           <p>지표는 받은 에너지를 세 가지 길로 내보낸다. 적외선 복사, 물을 증발시켜 숨은열로 대기에 넘기는 잠열 수송, 데워진 공기가 올라가는 현열 수송이다. 잠열은 수증기가 높은 곳에서 구름이 될 때 대기에 풀려나므로, 지표의 열을 높은 곳으로 나르는 큰 통로이다. 지표가 받는 햇빛을 100이라 하면 그 가운데 약 절반이 증발에 쓰인다.<sup class="fn"><a href="#fn-esys-heat-budget-1">1</a></sup></p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="지구의 열수지 (W/m², 대략값)">
@@ -93,8 +93,8 @@
             <figcaption>그림 2. 지구 열수지(대략값). 대기 위와 지표에서 각각 들어오고 나가는 에너지가 균형을 이룬다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.2.2</span>
             <p>태양 상수 1361 W/m², 반사율 0.3, 슈테판–볼츠만 상수 \(5.67 \times 10^{-8}\) W/(m²·K⁴)로 지구의 복사 평형 온도를 구하여라. 대기의 적외선 흡수율이 0.78일 때 지표 온도는 얼마인가?</p>
           </div>
           <p>흡수하는 복사는 \(\dfrac{1361 \times 0.7}{4} \approx 238\) W/m²이다. \(T_e^4 = \dfrac{238}{5.67 \times 10^{-8}} \approx 4.2 \times 10^9\)이므로 \(T_e \approx 255\) K, 곧 약 −18 °C이다.</p>
@@ -107,7 +107,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>지구는 흡수한 태양 복사만큼 적외선으로 내보내는 복사 평형 상태이며, 복사 평형 온도는 약 −18 °C이지만 대기의 온실 효과로 지표는 약 15 °C이다. 지표는 적외선 복사, 잠열, 현열로 에너지를 내보낸다. 그래서 처음 질문의 지구는 받은 만큼 내보내 기온이 유지되며, 반사율이나 온실 기체가 바뀌면 새로운 온도에서 다시 평형을 이룬다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/esys/3-1.html#card-esys-absorb"><small class="mono">지구시스템과학 3.1</small>공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-5.html#card-labearth-circulation"><small class="mono">고급 지구과학 2.5</small>사하라 사막과 아마존 밀림은 같은 순환의 두 얼굴일까?</a><a href="../../c/adearth/2-5.html#text-adearth-angular-momentum"><small class="mono">고급 지구과학 2.5</small>적도에서 데워진 공기는 왜 곧장 극까지 가지 못할까?</a><a href="../../c/labearth/2-6.html#text-labearth-circulation"><small class="mono">지구과학 실험 2.6</small>적도에서 올라간 공기는 왜 극까지 가지 못하고 위도 30°에서 내려올까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/esys/3-1.html#card-esys-absorb"><small class="mono">지구시스템과학 3.1</small>공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-5.html#card-labearth-circulation"><small class="mono">고급 지구과학 2.5</small>사하라 사막과 아마존 밀림은 같은 순환의 두 얼굴일까?</a><a href="../../c/adearth/2-5.html#text-adearth-angular-momentum"><small class="mono">고급 지구과학 2.5</small>대기 대순환과 제트류</a><a href="../../c/labearth/2-6.html#text-labearth-circulation"><small class="mono">지구과학 실험 2.6</small>대기 대순환 시뮬레이션</a></div></nav>
 
       <article class="card" id="card-esys-budget">
         <header class="card-head">
@@ -152,7 +152,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/esys/3-1.html#card-esys-absorb"><small class="mono">지구시스템과학 3.1</small>공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-5.html#card-labearth-circulation"><small class="mono">고급 지구과학 2.5</small>사하라 사막과 아마존 밀림은 같은 순환의 두 얼굴일까?</a><a href="../../c/adearth/2-5.html#text-adearth-angular-momentum"><small class="mono">고급 지구과학 2.5</small>적도에서 데워진 공기는 왜 곧장 극까지 가지 못할까?</a><a href="../../c/labearth/2-6.html#text-labearth-circulation"><small class="mono">지구과학 실험 2.6</small>적도에서 올라간 공기는 왜 극까지 가지 못하고 위도 30°에서 내려올까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/esys/3-1.html#card-esys-absorb"><small class="mono">지구시스템과학 3.1</small>공기는 어떤 빛을 막고, 어떤 빛을 통과시킬까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-5.html#card-labearth-circulation"><small class="mono">고급 지구과학 2.5</small>사하라 사막과 아마존 밀림은 같은 순환의 두 얼굴일까?</a><a href="../../c/adearth/2-5.html#text-adearth-angular-momentum"><small class="mono">고급 지구과학 2.5</small>대기 대순환과 제트류</a><a href="../../c/labearth/2-6.html#text-labearth-circulation"><small class="mono">지구과학 실험 2.6</small>대기 대순환 시뮬레이션</a></div></nav>
 
       <article class="card" id="card-is1-earth-energy">
         <header class="card-head">
@@ -206,7 +206,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/esys/1-1.html#text-esys-frost-line"><small class="mono">지구시스템과학 1.1</small>안쪽 행성은 왜 암석으로, 바깥 행성은 왜 기체로 되어 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/3-1.html#card-is1-carbon-cycle"><small class="mono">통합과학1 3.1</small>사람이 내보낸 탄소는 모두 공기 중에 남을까?</a><a href="../../c/is1/3-1.html#text-is1-human-impact"><small class="mono">통합과학1 3.1</small>숲 하나를 베면 지구시스템의 어디까지 흔들릴까?</a><a href="../../c/is1/3-2.html#card-is1-seafloor"><small class="mono">통합과학1 3.2</small>바다 밑 줄무늬는 무엇을 기록하고 있을까?</a><a href="../../c/is1/3-2.html#card-is1-plate-boundary"><small class="mono">통합과학1 3.2</small>판 경계마다 지진과 화산은 어떻게 다를까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">다른 과목에서</span><a href="../../c/esys/1-1.html#text-esys-frost-line"><small class="mono">지구시스템과학 1.1</small>지구시스템 권역의 형성</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/is1/3-1.html#card-is1-carbon-cycle"><small class="mono">통합과학1 3.1</small>사람이 내보낸 탄소는 모두 공기 중에 남을까?</a><a href="../../c/is1/3-1.html#text-is1-human-impact"><small class="mono">통합과학1 3.1</small>숲 하나를 베면 지구시스템의 어디까지 흔들릴까?</a><a href="../../c/is1/3-2.html#card-is1-seafloor"><small class="mono">통합과학1 3.2</small>바다 밑 줄무늬는 무엇을 기록하고 있을까?</a><a href="../../c/is1/3-2.html#card-is1-plate-boundary"><small class="mono">통합과학1 3.2</small>판 경계마다 지진과 화산은 어떻게 다를까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=esys&amp;sec=3-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">18문항</span></a>
       <a class="px-go" href="../../practice.html?sec=esys-3-2"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">62문항</span></a>

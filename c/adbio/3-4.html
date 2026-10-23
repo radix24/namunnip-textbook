@@ -60,7 +60,7 @@
 
     <div>
       <article class="card reading" id="text-adbio-response-time" data-kind="본문">
-        <header class="card-head"><span class="no">3.4.1</span><h2>유전자를 켠 뒤 단백질이 다 차오르기까지 왜 대장균은 1시간, 사람 세포는 하루가 넘게 걸릴까?</h2><span class="kind">본문 · 원핵·진핵세포의 발현 조절</span></header>
+        <header class="card-head"><span class="no">3.4.1</span><h2>원핵·진핵세포의 발현 조절</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">대장균에게 갑자기 젖당을 주면 몇 분 안에 젖당 분해 효소의 전사가 시작되고, 한 시간쯤 지나면 효소의 양이 새 수준에 다다른다. 그런데 사람 세포에서 어떤 유전자를 켜면, 단백질이 새 수준에 다다르기까지 하루가 넘게 걸리기도 한다. 전사와 번역의 속도는 크게 다르지 않은데 왜 이렇게 차이가 날까? 단백질의 양을 정하는 것은 만드는 빠르기만이 아니다.</p>
           <figure class="q-fig" data-q="adbio-resp">
@@ -71,14 +71,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>오페론과 유전자 발현 조절(생명과학), 반감기와 지수 함수(수학), 전사의 조절 요소(<a href="3-2.html">전사의 조절 요소</a>).</div>
 
-          <h3><span class="mono">1</span>만드는 빠르기와 없애는 빠르기</h3>
+          <h3><span class="no">3.4.1</span>만드는 빠르기와 없애는 빠르기</h3>
           <p>세포 속 단백질의 양은 만드는 빠르기와 없어지는 빠르기의 균형으로 정해진다. 만드는 빠르기를 \(\beta\), 단백질이 분해되거나 세포 분열로 희석되어 줄어드는 비율을 \(k\)라 하면, 단백질 양은 \(\dfrac{dP}{dt} = \beta - kP\)를 따른다. 오래 지나면 \(P\)는 \(\beta/k\)에 머무는 정상 상태에 이른다. 그런데 정상 상태에 얼마나 빨리 다가가는지는 \(\beta\)가 아니라 \(k\)가 정한다. 많이 만들면 정상 상태의 높이가 높아질 뿐, 다다르는 시간은 그대로이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">반응 시간</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.4.1 <span class="nm">반응 시간</span></span>
             <p>유전자를 켠 순간부터 단백질 양은 \(P(t) = \dfrac{\beta}{k}(1 - e^{-kt})\)로 늘어난다. 정상 상태의 절반에 이르는 시간은 단백질의 반감기 \(t_{1/2} = \ln 2/k\)와 같고, 90%에 이르는 데는 약 \(3.3\,t_{1/2}\)가 걸린다.</p>
           </div>
           <p>그림 1에서 반감기를 바꾸어 보자. 대장균의 단백질은 대부분 분해되지 않지만, 20분마다 세포가 분열해 둘로 나뉘므로 반감기가 20분인 셈이다. 그래서 약 1시간이면 새 정상 상태의 90%에 이른다. 분열하지 않는 사람 세포의 단백질은 분해되어야만 줄어드는데, 반감기가 10시간이면 90%까지 33시간이 걸린다. 그래서 진핵세포는 빠르게 바꾸어야 하는 단백질에는 분해 표지를 붙여 반감기를 짧게 하고, 오래 유지해야 하는 단백질은 길게 둔다.<sup class="fn"><a href="#fn-adbio-response-time-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>단계마다 조절하는 진핵세포</h3>
+          <h3><span class="no">3.4.2</span>단계마다 조절하는 진핵세포</h3>
           <p>원핵세포는 주로 전사를 켜고 끄는 방식으로 발현을 조절한다. 전사와 번역이 세포질에서 동시에 일어나고 mRNA의 반감기도 몇 분으로 짧아, 전사 조절만으로 빠르게 반응할 수 있다. 진핵세포는 여러 단계에서 조절한다. 염색질이 얼마나 풀려 있는지, 어떤 전사 인자가 붙는지, RNA가 어떻게 이어 맞추어지는지, mRNA가 핵 밖으로 나가 얼마나 오래 살아남는지, 번역이 얼마나 자주 시작되는지, 단백질이 언제 분해되는지가 모두 조절된다. 그래서 같은 유전체로도 세포 종류마다 다른 상태를 평생 유지할 수 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="원핵세포와 진핵세포의 발현 조절 비교">
@@ -93,8 +93,8 @@
             <figcaption>그림 2. 진핵세포는 여러 단계를 조절하여 반응의 빠르기와 지속성을 세밀하게 맞춘다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.4.2</span>
             <p>사람 세포에서 반감기가 2시간인 단백질 A와 반감기가 20시간인 단백질 B의 유전자를 동시에 켰다. 두 단백질이 새 정상 상태의 90%에 이르는 시간을 각각 구하여라. 유전자를 다시 끄면, 각 단백질이 처음의 10%로 줄어드는 데 걸리는 시간은 얼마인가?</p>
           </div>
           <p>90%에 이르려면 \(e^{-kt} = 0.1\)이어야 하므로 \(t = \dfrac{\ln 10}{k} = \dfrac{\ln 10}{\ln 2}\,t_{1/2} \approx 3.32\,t_{1/2}\)이다. A는 \(3.32 \times 2 \approx 6.6\)시간, B는 \(3.32 \times 20 \approx 66\)시간이다.</p>
@@ -107,7 +107,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>단백질의 양은 만드는 빠르기와 없어지는 빠르기의 균형으로 정해지며, 새 정상 상태에 다다르는 시간은 없어지는 빠르기, 곧 반감기가 정해 약 반감기의 3.3배이다. 원핵세포는 분열에 의한 희석과 짧은 mRNA 수명으로 빠르게 반응하고, 진핵세포는 여러 단계를 조절하며 단백질마다 반감기를 다르게 둔다. 그래서 처음 질문의 대장균은 20분마다 분열해 단백질이 희석되므로 1시간이면 새 수준에 이르지만, 분해로만 줄어드는 사람 세포의 단백질은 하루가 넘게 걸리기도 한다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>약한 프로모터는 어떻게 활성자 하나로 수십 배 강해질까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>대장균은 젖당 분해 효소를 언제 만들까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/gene/2-4.html#card-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?</a><a href="../../c/gene/2-4.html#text-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 수정체도 될까?</a><a href="../../c/adbio/3-5.html#text-adbio-bicoid"><small class="mono">고급 생명과학 3.5</small>초파리 배아는 어느 쪽이 머리가 될지 어떻게 알까?</a><a href="../../c/adbio/4-2.html#card-adbio-cloning"><small class="mono">고급 생명과학 4.2</small>어떤 제한 효소로 잘라야 원하는 재조합 플라스미드만 얻을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>전사의 조절 요소</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>유전자 발현 조절</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/gene/2-4.html#card-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?</a><a href="../../c/gene/2-4.html#text-gene-differentiation"><small class="mono">생물의 유전 2.4</small>세포 분화와 발생</a><a href="../../c/adbio/3-5.html#text-adbio-bicoid"><small class="mono">고급 생명과학 3.5</small>발생 유전자와 진화</a><a href="../../c/adbio/4-2.html#card-adbio-cloning"><small class="mono">고급 생명과학 4.2</small>어떤 제한 효소로 잘라야 원하는 재조합 플라스미드만 얻을 수 있을까?</a></div></nav>
 
       <article class="card" id="card-gene-lac">
         <header class="card-head">
@@ -154,7 +154,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>약한 프로모터는 어떻게 활성자 하나로 수십 배 강해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/gene/2-4.html#card-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?</a><a href="../../c/gene/2-4.html#text-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 수정체도 될까?</a><a href="../../c/adbio/3-5.html#text-adbio-bicoid"><small class="mono">고급 생명과학 3.5</small>초파리 배아는 어느 쪽이 머리가 될지 어떻게 알까?</a><a href="../../c/adbio/4-2.html#card-adbio-cloning"><small class="mono">고급 생명과학 4.2</small>어떤 제한 효소로 잘라야 원하는 재조합 플라스미드만 얻을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>전사의 조절 요소</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/gene/2-4.html#card-gene-differentiation"><small class="mono">생물의 유전 2.4</small>같은 DNA를 가진 세포가 어떻게 근육도 되고 눈의 수정체도 될까?</a><a href="../../c/gene/2-4.html#text-gene-differentiation"><small class="mono">생물의 유전 2.4</small>세포 분화와 발생</a><a href="../../c/adbio/3-5.html#text-adbio-bicoid"><small class="mono">고급 생명과학 3.5</small>발생 유전자와 진화</a><a href="../../c/adbio/4-2.html#card-adbio-cloning"><small class="mono">고급 생명과학 4.2</small>어떤 제한 효소로 잘라야 원하는 재조합 플라스미드만 얻을 수 있을까?</a></div></nav>
 
       <article class="card" id="card-adbio-operon">
         <header class="card-head">
@@ -203,7 +203,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>대장균은 젖당 분해 효소를 언제 만들까?</a><a href="../../c/adbio/3-2.html#card-adbio-promoter"><small class="mono">고급 생명과학 3.2</small>RNA 중합 효소는 수백만 염기쌍 가운데 어디서 전사를 시작할지 어떻게 알까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>유전자 발현 조절</a><a href="../../c/adbio/3-2.html#card-adbio-promoter"><small class="mono">고급 생명과학 3.2</small>RNA 중합 효소는 수백만 염기쌍 가운데 어디서 전사를 시작할지 어떻게 알까?</a></div></nav>
 
       <article class="card reading" id="text-adbio-eukreg">
         <header class="card-head">
@@ -270,7 +270,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>대장균은 젖당 분해 효소를 언제 만들까?</a><a href="../../c/adbio/3-2.html#card-adbio-promoter"><small class="mono">고급 생명과학 3.2</small>RNA 중합 효소는 수백만 염기쌍 가운데 어디서 전사를 시작할지 어떻게 알까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/2-3.html#text-gene-operon"><small class="mono">생물의 유전 2.3</small>유전자 발현 조절</a><a href="../../c/adbio/3-2.html#card-adbio-promoter"><small class="mono">고급 생명과학 3.2</small>RNA 중합 효소는 수백만 염기쌍 가운데 어디서 전사를 시작할지 어떻게 알까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adbio&amp;sec=3-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adbio-3-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">35문항</span></a>

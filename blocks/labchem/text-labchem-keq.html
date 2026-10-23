@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-labchem-keq" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>섞는 양을 아무리 바꿔도 변하지 않는 값이 정말 있을까?</h2><span class="kind">본문 · 평형 이동과 평형 상수</span></header>
+  <header class="card-head"><span class="no"></span><h2>평형 이동과 평형 상수</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">옅은 노란색의 철(III) 이온 용액과 무색의 티오사이안산 이온 용액을 섞으면 피처럼 붉은 착이온이 생긴다. 네 시험관에 두 용액을 서로 다른 양으로 섞고, 붉은색의 흡광도로 착이온의 농도를 재었다. 착이온은 24.0 μM부터 84.6 μM까지 시험관마다 달랐고, 남은 두 이온의 농도도 모두 달랐다. 그런데 세 농도를 어떤 방식으로 묶으면 네 시험관에서 모두 같은 값이 나온다고 한다. 그 값은 무엇이고, 왜 변하지 않을까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>가역 반응과 화학 평형, 몰 농도, 흡광도와 검량선(<a href="1-3.html">첨단 분석 기기와 데이터 해석</a>).</div>
 
-    <h3><span class="mono">1</span>앞뒤로 같은 빠르기</h3>
+    <h3><span class="no">3.2.1</span>앞뒤로 같은 빠르기</h3>
     <p>\(\mathrm{Fe^{3+} + SCN^- \rightleftharpoons FeSCN^{2+}}\) 반응은 앞으로도 뒤로도 일어난다. 처음에는 앞으로 가는 반응이 빨라 착이온이 늘지만, 착이온이 늘수록 거꾸로 분해되는 반응도 빨라진다. 두 빠르기가 같아지면 농도가 더는 변하지 않는 평형에 이른다. 앞으로 가는 빠르기는 두 반응물 농도의 곱에, 거꾸로 가는 빠르기는 착이온 농도에 비례하므로, 두 빠르기가 같다는 조건은 생성물 농도를 반응물 농도의 곱으로 나눈 값이 일정하다는 뜻이 된다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">평형 상수</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.2.1 <span class="nm">평형 상수</span></span>
       <p>평형에서 \[K = \frac{[\mathrm{FeSCN^{2+}}]}{[\mathrm{Fe^{3+}}][\mathrm{SCN^-}]}\]는 처음 농도와 상관없이 온도가 같으면 일정하다. 평형이 아닐 때 같은 식으로 계산한 값 \(Q\)가 \(K\)보다 작으면 반응이 앞으로, 크면 뒤로 진행해 \(K\)에 다가간다.</p>
     </div>
     <p>그림 1에서 착이온의 농도만 보면 일정한 규칙이 보이지 않는다. 남은 반응물의 농도로 나누어야 비로소 140이라는 같은 값이 나온다. 반응물을 더 넣으면 \(Q\)가 \(K\)보다 작아져 착이온이 더 생기고, 착이온을 묽히거나 다른 물질로 붙잡아 빼면 반대로 간다. 이렇게 평형이 바뀐 조건을 줄이는 쪽으로 이동한다는 것이 르샤틀리에 원리이며, 그 이동의 끝은 언제나 같은 \(K\)이다.<sup class="fn"><a href="#fn-labchem-keq-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>평형 농도 구하기</h3>
+    <h3><span class="no">3.2.2</span>평형 농도 구하기</h3>
     <p>평형에서 착이온의 농도는 흡광도와 검량선으로 잰다. 착이온이 1 mol 생길 때 두 반응물이 1 mol씩 쓰이므로, 남은 반응물의 농도는 처음 농도에서 착이온 농도를 빼서 구한다. 섞기 전 농도가 아니라 섞은 뒤 전체 부피로 묽혀진 처음 농도를 써야 한다는 점에 주의한다. 온도가 바뀌면 \(K\)도 바뀌는데, 이 반응은 열을 내므로 온도가 오르면 \(K\)가 작아져 붉은색이 옅어진다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="조건 변화에 따른 평형 이동">
@@ -46,8 +46,8 @@
       <figcaption>그림 2. 농도를 바꾸면 \(Q\)가 바뀌어 평형이 이동하고, 온도를 바꾸면 \(K\) 자체가 바뀐다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.2.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.2.2</span>
       <p>시험관 1에서 섞은 뒤의 처음 농도가 \(\mathrm{Fe^{3+}}\) 1000 μM, \(\mathrm{SCN^-}\) 200 μM이고 평형의 착이온이 24.0 μM이다. 평형 상수를 구하여라. 만약 이 시험관에 착이온의 농도만 단순히 \(\mathrm{SCN^-}\)의 처음 농도로 나눈 비를 계산하면, 네 시험관에서 일정한가?</p>
     </div>
     <p>남은 \(\mathrm{Fe^{3+}}\)는 \(1000 - 24.0 = 976\) μM, 남은 \(\mathrm{SCN^-}\)는 \(200 - 24.0 = 176\) μM이다. 단위를 M으로 바꾸어 \(K = \dfrac{24.0 \times 10^{-6}}{(976 \times 10^{-6})(176 \times 10^{-6})} \approx 140\)이다.</p>

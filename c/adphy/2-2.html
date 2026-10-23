@@ -66,7 +66,7 @@
 
     <div>
       <article class="card reading" id="text-adphy-dielectric" data-kind="본문">
-        <header class="card-head"><span class="no">2.2.1</span><h2>축전기 속을 얇은 세라믹으로 채우면 왜 전하를 더 많이 담을까?</h2><span class="kind">본문 · 축전기의 연결과 유전체</span></header>
+        <header class="card-head"><span class="no">2.2.1</span><h2>축전기의 연결과 유전체</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">스마트폰 기판에는 쌀알보다 작은 적층 세라믹 축전기가 수백 개 붙어 있다. 이 작은 부품 속에는 아주 얇은 금속 판과 세라믹 층이 수백 겹 번갈아 쌓여 있다. 극판 사이를 공기 대신 세라믹으로 채우면 같은 크기에 수천 배의 전하를 담을 수 있다. 극판 사이의 물질은 무슨 일을 하는 걸까? 그리고 유전체를 극판 사이의 절반만 채우면 축전기의 용량은 어떻게 될까?</p>
           <figure class="q-fig" data-q="adphy-diel">
@@ -77,14 +77,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>전기 용량과 평행판 사이의 전기장, 유전 분극(물리학), 가우스 법칙(<a href="2-1.html">가우스 법칙과 전기장</a>).</div>
 
-          <h3><span class="mono">1</span>유전체와 유전 상수</h3>
+          <h3><span class="no">2.2.1</span>유전체와 유전 상수</h3>
           <p>평행판 축전기의 극판에 전하 \(\pm Q\)를 주면, 가우스 법칙에 따라 극판 사이의 전기장은 \(E_0 = \dfrac{Q}{\varepsilon_0 A}\)이고 전위차는 \(V_0 = E_0 d\)이다. 그래서 전기 용량은 \(C_0 = Q/V_0 = \varepsilon_0 A/d\)이다. 극판 사이에 절연체를 넣으면, 절연체의 분자들이 전기장 방향으로 조금씩 늘어나 양전하와 음전하가 어긋난다. 이를 유전 분극이라 한다. 분극된 절연체의 겉면에는 극판의 전하와 반대 부호의 전하가 나타나 전기장을 일부 지운다. 이렇게 분극하는 절연체를 유전체라 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">유전체를 채운 축전기</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.2.1 <span class="nm">유전체를 채운 축전기</span></span>
             <p>유전체가 전기장을 \(1/\kappa\)로 줄이면 같은 전하에서 전위차도 \(1/\kappa\)이 되므로 용량은 \(C = \kappa C_0\)이다. \(\kappa\)를 유전 상수라 한다. 축전기를 병렬로 이으면 \(C = C_1 + C_2\), 직렬로 이으면 \(\dfrac{1}{C} = \dfrac{1}{C_1} + \dfrac{1}{C_2}\)이다.</p>
           </div>
           <p>그림 1에서 두 값을 바꾸어 보자. \(\kappa = 4\)인 유전체로 극판 넓이의 절반을 채우면, 공기 부분 \(C_0/2\)와 유전체 부분 \(4C_0/2\)가 병렬로 이어져 \(2.5C_0\)이다. 같은 유전체로 극판 간격의 절반을 층으로 채우면, 간격이 반인 두 축전기 \(2C_0\)과 \(8C_0\)이 직렬로 이어져 \(1.6C_0\)이다. 같은 양의 유전체라도 채우는 방법에 따라 용량이 다르다. 층으로 채우면 공기층의 작은 용량이 전체를 묶어 두기 때문이다.<sup class="fn"><a href="#fn-adphy-dielectric-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>작은 부품에 큰 용량</h3>
+          <h3><span class="no">2.2.2</span>작은 부품에 큰 용량</h3>
           <p>용량을 키우는 방법은 극판을 넓히고, 간격을 좁히고, 유전 상수가 큰 물질을 채우는 것이다. 적층 세라믹 축전기는 이 셋을 모두 쓴다. 유전 상수가 수천에 이르는 타이타늄산 바륨을 1 μm 남짓한 두께로 깔고, 그 위에 금속 막을 번갈아 수백 층 쌓는다. 그러면 극판들이 모두 병렬로 이어져 넓이가 층 수만큼 늘어난다. 다만 유전체에 너무 센 전기장이 걸리면 절연이 깨져 전류가 흐르므로, 축전기마다 견딜 수 있는 최대 전압이 정해져 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="물질별 유전 상수">
@@ -99,8 +99,8 @@
             <figcaption>그림 2. 유전 상수가 큰 물질일수록 같은 크기의 축전기에 더 많은 전하를 담는다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.2.2</span>
             <p>넓이 1 cm², 간격 1 μm인 평행판 축전기의 극판 사이를 유전 상수 2000인 세라믹으로 채웠다. 이 층의 용량을 구하여라. 같은 층을 200장 병렬로 쌓으면 전체 용량은 얼마인가? \(\varepsilon_0 = 8.85 \times 10^{-12}\ \text{F/m}\)이다.</p>
           </div>
           <p>한 층의 용량은 \(C = \kappa\varepsilon_0 A/d = 2000 \times 8.85 \times 10^{-12} \times \dfrac{1.0 \times 10^{-4}}{1.0 \times 10^{-6}} \approx 1.8 \times 10^{-6}\) F, 곧 약 1.8 μF이다.</p>
@@ -113,7 +113,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>유전체는 전기장 속에서 분극하여 극판 사이의 전기장을 \(1/\kappa\)로 줄이므로, 같은 전압에 \(\kappa\)배의 전하를 담게 한다. 유전체를 일부만 채우면 채우는 방향에 따라 병렬이나 직렬 연결이 되어 용량이 다르게 늘어난다. 그래서 처음 질문의 적층 세라믹 축전기는 유전 상수가 수천인 얇은 세라믹 층과 수백 겹의 병렬 적층으로 작은 크기에 큰 용량을 얻는다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>금속판 두 장은 어떻게 전기를 담아 둘까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>카메라 플래시는 어떻게 순간적으로 밝은 빛을 낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>축전기</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>저항·축전기·인덕터</a></div></nav>
 
       <article class="card" id="card-phy-capacitor">
         <header class="card-head">
@@ -168,7 +168,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>카메라 플래시는 어떻게 순간적으로 밝은 빛을 낼까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/emq/1-6.html#card-emq-rlc"><small class="mono">전자기와 양자 1.6</small>축전기에 담긴 에너지는 회로에서 어디로 갈까?</a><a href="../../c/emq/1-6.html#text-emq-circuit"><small class="mono">전자기와 양자 1.6</small>저항·축전기·인덕터</a></div></nav>
 
       <article class="card" id="card-emq-polarize">
         <header class="card-head">
@@ -215,7 +215,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>닿지 않은 전하는 어떻게 힘을 전할까?</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>등전위면이 촘촘한 곳에서는 왜 전기장이 셀까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-1.html#card-phy-field"><small class="mono">물리학 2.1</small>보이지 않는 전기장을 어떻게 그릴까?</a><a href="../../c/phy/2-1.html#card-phy-potential"><small class="mono">물리학 2.1</small>전위차는 ‘전기의 높이’일까?</a><a href="../../c/phy/2-1.html#text-phy-efield"><small class="mono">물리학 2.1</small>전기장과 전위차</a><a href="../../c/emq/1-1.html#text-emq-field"><small class="mono">전자기와 양자 1.1</small>전기장과 등전위면</a></div></nav>
 
       <article class="card" id="card-adphy-capnet">
         <header class="card-head">
@@ -276,7 +276,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>금속판 두 장은 어떻게 전기를 담아 둘까?</a><a href="../../c/emq/1-2.html#text-emq-polarization"><small class="mono">전자기와 양자 1.2</small>전하를 띠지 않은 종잇조각은 왜 대전체에 끌려올까?</a><a href="../../c/adphy/2-1.html#card-adphy-gauss"><small class="mono">고급 물리학 2.1</small>닫힌 면 하나로 전기장을 구할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/2-6.html#card-adphy-ac"><small class="mono">고급 물리학 2.6</small>코일과 축전기의 전압을 더했는데 왜 전원 전압보다 클까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/phy/2-3.html#card-phy-touch"><small class="mono">물리학 2.3</small>터치스크린은 손가락을 어떻게 알아챌까?</a><a href="../../c/phy/2-3.html#text-phy-capacitor"><small class="mono">물리학 2.3</small>축전기</a><a href="../../c/emq/1-2.html#text-emq-polarization"><small class="mono">전자기와 양자 1.2</small>정전기 유도와 유전 분극</a><a href="../../c/adphy/2-1.html#card-adphy-gauss"><small class="mono">고급 물리학 2.1</small>닫힌 면 하나로 전기장을 구할 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adphy/2-6.html#card-adphy-ac"><small class="mono">고급 물리학 2.6</small>코일과 축전기의 전압을 더했는데 왜 전원 전압보다 클까?</a></div></nav>
 
       <article class="card" id="card-labphy-capacitor">
         <header class="card-head">
@@ -320,7 +320,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labphy/3-1.html#card-labphy-equipotential"><small class="mono">물리학 실험 3.1</small>전압계 탐침 하나로 보이지 않는 전기장의 지도를 그릴 수 있을까?</a><a href="../../c/labphy/3-1.html#text-labphy-field-map"><small class="mono">물리학 실험 3.1</small>전압계 탐침 하나로 보이지 않는 전기장의 지도를 그릴 수 있을까?</a><a href="../../c/resr/3-1.html#card-labphy-lsq"><small class="mono">과학과제 연구 3.1</small>흩어진 점들에 그은 직선의 기울기는 얼마나 믿을 수 있을까?</a><a href="../../c/labphy/1-2.html#text-labphy-fit-slope"><small class="mono">물리학 실험 1.2</small>다섯 명이 자를 대고 그은 다섯 직선, 어느 것이 맞는 직선일까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/3-2.html#text-labphy-foil"><small class="mono">물리학 실험 3.2</small>종이를 한 장씩 끼울 때마다 전기 용량은 어떤 규칙으로 줄어들까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labphy/3-1.html#card-labphy-equipotential"><small class="mono">물리학 실험 3.1</small>전압계 탐침 하나로 보이지 않는 전기장의 지도를 그릴 수 있을까?</a><a href="../../c/labphy/3-1.html#text-labphy-field-map"><small class="mono">물리학 실험 3.1</small>등전위선 그리기</a><a href="../../c/resr/3-1.html#card-labphy-lsq"><small class="mono">과학과제 연구 3.1</small>흩어진 점들에 그은 직선의 기울기는 얼마나 믿을 수 있을까?</a><a href="../../c/labphy/1-2.html#text-labphy-fit-slope"><small class="mono">물리학 실험 1.2</small>최소 제곱법과 신뢰구간</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labphy/3-2.html#text-labphy-foil"><small class="mono">물리학 실험 3.2</small>평행판 축전기의 전기 용량</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adphy&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adphy-2-2"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">87문항</span></a>

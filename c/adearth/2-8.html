@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-adearth-geostrophic-current" data-kind="본문">
-        <header class="card-head"><span class="no">2.8.1</span><h2>위성이 잰 해수면의 높이 차이만으로 해류의 빠르기를 알 수 있을까?</h2><span class="kind">본문 · 지형류·경도류·에크만 수송</span></header>
+        <header class="card-head"><span class="no">2.8.1</span><h2>지형류·경도류·에크만 수송</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">바다의 표면은 평평하지 않다. 쿠로시오처럼 강한 해류를 사이에 두고 해수면은 100 km 남짓한 거리에서 1 m 가까이 차이 난다. 인공위성은 레이더로 해수면의 높이를 몇 cm 정확도로 잰다. 그런데 바닷물이 높은 곳에서 낮은 곳으로 흐르지 않고, 높이 차이를 옆에 둔 채 나란히 흐른다. 왜 그럴까? 그리고 그 높이 차이로 해류의 빠르기를 어떻게 계산할까?</p>
           <figure class="q-fig" data-q="adearth-geo">
@@ -73,14 +73,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>해류와 에크만 수송(지구과학), 지균풍(<a href="2-4.html">지균풍·경도풍·지상풍</a>), 정수압(물리학).</div>
 
-          <h3><span class="mono">1</span>지형류</h3>
+          <h3><span class="no">2.8.1</span>지형류</h3>
           <p>해수면이 기울어 있으면 같은 깊이라도 높은 쪽 아래의 물기둥이 더 높아 수압이 크다. 그래서 바닷물에는 높은 쪽에서 낮은 쪽으로 미는 압력 경도력이 작용한다. 물이 움직이기 시작하면 전향력이 북반구에서 오른쪽으로 휘게 하고, 대기의 지균풍과 같은 방식으로 압력 경도력과 전향력이 균형을 이룰 때 물은 해수면의 등고선을 따라 나란히 흐른다. 이 흐름을 지형류라 한다. 북반구에서는 해수면이 높은 쪽을 오른쪽에 두고 흐른다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">지형류의 속력</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.8.1 <span class="nm">지형류의 속력</span></span>
             <p>해수면이 거리 \(\Delta x\)에서 \(\Delta\eta\)만큼 기울어 있으면, 압력 경도력은 단위 질량당 \(g\dfrac{\Delta\eta}{\Delta x}\)이고 이것이 전향력 \(fv\)와 같으므로 \[v = \frac{g}{f}\frac{\Delta\eta}{\Delta x}\]이다. \(f = 2\Omega\sin\varphi\)는 전향 인자이다.</p>
           </div>
           <p>그림 1에서 두 값을 바꾸어 보자. 위도 35°에서 100 km에 1 m 기울어진 해수면은 \(v = \dfrac{9.8}{8.4 \times 10^{-5}} \times 10^{-5} \approx 1.2\) m/s의 지형류를 만든다. 쿠로시오나 멕시코 만류의 표층 속력과 비슷하다. 같은 경사가 위도 10°에 있다면 전향력이 약해 3 m/s를 넘는다. 적도 바로 위에서는 전향력이 0이라 지형류의 균형이 성립하지 않는다. 그래서 인공위성이 잰 해수면 높이 지도는 곧 지형류의 지도가 된다.<sup class="fn"><a href="#fn-adearth-geostrophic-current-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>바람이 해수면을 기울인다</h3>
+          <h3><span class="no">2.8.2</span>바람이 해수면을 기울인다</h3>
           <p>해수면의 경사는 바람이 만든다. 바람은 표층의 물을 끌지만, 전향력 때문에 바닷물 전체는 북반구에서 바람 방향의 오른쪽 90°로 움직인다. 이를 에크만 수송이라 한다. 북태평양의 아열대에서는 북쪽의 편서풍이 물을 남쪽으로, 남쪽의 무역풍이 물을 북쪽으로 보내 바다 한가운데에 물이 모인다. 그래서 아열대 환류의 가운데는 해수면이 1 m 가까이 볼록하게 높아지고, 그 둘레를 지형류가 시계 방향으로 돈다. 해류가 크게 휘어 도는 곳에서는 원심력까지 균형에 끼어든 경도류가 된다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="해류에서 균형을 이루는 힘">
@@ -95,8 +95,8 @@
             <figcaption>그림 2. 어떤 힘이 맞서는지에 따라 해류의 방향과 속력이 정해진다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.8.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.8.2</span>
             <p>인공위성 자료에서 위도 30°의 어느 해역을 가로질러 동쪽으로 갈수록 해수면이 150 km에 60 cm 낮아졌다. 지형류의 속력과 방향을 구하여라. 위도 30°의 전향 인자는 \(7.3 \times 10^{-5}\)/s이다.</p>
           </div>
           <p>해수면 경사는 \(0.60 \div 1.5 \times 10^5 = 4.0 \times 10^{-6}\)이므로 \(v = \dfrac{9.8}{7.3 \times 10^{-5}} \times 4.0 \times 10^{-6} \approx 0.54\) m/s이다.</p>
@@ -109,7 +109,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>해수면이 기울면 압력 경도력이 생기고, 이것이 전향력과 균형을 이룰 때 바닷물은 해수면의 등고선을 따라 지형류로 흐르며 그 속력은 \((g/f)(\Delta\eta/\Delta x)\)이다. 해수면의 경사는 바람이 일으킨 에크만 수송이 물을 모으거나 흩어 만든다. 그래서 처음 질문의 해류는 위성이 잰 해수면의 높이 차이와 위도만으로 빠르기와 방향을 계산할 수 있다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/1-5.html#card-earth-upwelling"><small class="mono">지구과학 1.5</small>바람이 불면 왜 해안에 찬물이 올라올까?</a><a href="../../c/earth/1-5.html#card-earth-enso"><small class="mono">지구과학 1.5</small>엘니뇨 때는 적도 태평양에서 무엇이 뒤바뀔까?</a><a href="../../c/is2/2-3.html#text-is2-enso-desert"><small class="mono">통합과학2 2.3</small>엘니뇨와 사막화는 우리 삶을 어떻게 바꿀까?</a><a href="../../c/earth/1-5.html#card-earth-oni"><small class="mono">지구과학 1.5</small>실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/1-5.html#card-earth-upwelling"><small class="mono">지구과학 1.5</small>바람이 불면 왜 해안에 찬물이 올라올까?</a><a href="../../c/earth/1-5.html#card-earth-enso"><small class="mono">지구과학 1.5</small>엘니뇨 때는 적도 태평양에서 무엇이 뒤바뀔까?</a><a href="../../c/is2/2-3.html#text-is2-enso-desert"><small class="mono">통합과학2 2.3</small>엘니뇨와 사막화는 우리 삶을 어떻게 바꿀까?</a><a href="../../c/earth/1-5.html#card-earth-oni"><small class="mono">지구과학 1.5</small>실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>밀도 구조와 해류 속도</a></div></nav>
 
       <article class="card" id="card-esys-ekman">
         <header class="card-head">
@@ -155,7 +155,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/1-5.html#card-earth-upwelling"><small class="mono">지구과학 1.5</small>바람이 불면 왜 해안에 찬물이 올라올까?</a><a href="../../c/earth/1-5.html#card-earth-enso"><small class="mono">지구과학 1.5</small>엘니뇨 때는 적도 태평양에서 무엇이 뒤바뀔까?</a><a href="../../c/is2/2-3.html#text-is2-enso-desert"><small class="mono">통합과학2 2.3</small>엘니뇨와 사막화는 우리 삶을 어떻게 바꿀까?</a><a href="../../c/earth/1-5.html#card-earth-oni"><small class="mono">지구과학 1.5</small>실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/earth/1-5.html#card-earth-upwelling"><small class="mono">지구과학 1.5</small>바람이 불면 왜 해안에 찬물이 올라올까?</a><a href="../../c/earth/1-5.html#card-earth-enso"><small class="mono">지구과학 1.5</small>엘니뇨 때는 적도 태평양에서 무엇이 뒤바뀔까?</a><a href="../../c/is2/2-3.html#text-is2-enso-desert"><small class="mono">통합과학2 2.3</small>엘니뇨와 사막화는 우리 삶을 어떻게 바꿀까?</a><a href="../../c/earth/1-5.html#card-earth-oni"><small class="mono">지구과학 1.5</small>실제 관측 자료에서 엘니뇨와 라니냐의 해를 찾을 수 있을까?</a></div><div><span class="mono">다른 과목에서</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>밀도 구조와 해류 속도</a></div></nav>
 
       <article class="card" id="card-adearth-gradcur">
         <header class="card-head">
@@ -206,7 +206,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</a><a href="../../c/adearth/2-4.html#card-labearth-geowind"><small class="mono">고급 지구과학 2.4</small>일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?</a><a href="../../c/adearth/2-3.html#card-labearth-coriolis"><small class="mono">고급 지구과학 2.3</small>돌아가는 원판 위로 굴린 공은 정말 휘어서 갈까?</a><a href="../../c/adearth/2-3.html#text-adearth-rossby-number"><small class="mono">고급 지구과학 2.3</small>욕조의 소용돌이는 정말 북반구에서 늘 시계 반대 방향으로 돌까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>밀도 구조와 해류 속도</a><a href="../../c/adearth/2-4.html#card-labearth-geowind"><small class="mono">고급 지구과학 2.4</small>일기도의 등고선 간격만으로 바람의 세기를 잴 수 있을까?</a><a href="../../c/adearth/2-3.html#card-labearth-coriolis"><small class="mono">고급 지구과학 2.3</small>돌아가는 원판 위로 굴린 공은 정말 휘어서 갈까?</a><a href="../../c/adearth/2-3.html#text-adearth-rossby-number"><small class="mono">고급 지구과학 2.3</small>대기와 해양에 작용하는 힘</a></div></nav>
 
       <article class="card" id="card-labearth-geostrophic">
         <header class="card-head">
@@ -256,7 +256,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</a><a href="../../c/earth/1-1.html#card-earth-thermocline"><small class="mono">지구과학 1.1</small>따뜻한 물은 왜 바다 위쪽에만 있을까?</a><a href="../../c/earth/1-1.html#card-earth-salinity"><small class="mono">지구과학 1.1</small>짠 바다와 싱거운 바다, 성분 비율도 다를까?</a><a href="../../c/earth/1-1.html#text-earth-oxygen"><small class="mono">지구과학 1.1</small>바닷물에 녹은 산소는 어느 깊이에 가장 적을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>밀도 구조와 해류 속도</a><a href="../../c/earth/1-1.html#card-earth-thermocline"><small class="mono">지구과학 1.1</small>따뜻한 물은 왜 바다 위쪽에만 있을까?</a><a href="../../c/earth/1-1.html#card-earth-salinity"><small class="mono">지구과학 1.1</small>짠 바다와 싱거운 바다, 성분 비율도 다를까?</a><a href="../../c/earth/1-1.html#text-earth-oxygen"><small class="mono">지구과학 1.1</small>바닷물에 녹은 산소는 어느 깊이에 가장 적을까?</a></div></nav>
 
       <article class="card" id="card-adearth-ekman-spiral">
         <header class="card-head">
@@ -306,7 +306,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>배에서 잰 수온과 염분만으로 구로시오의 빠르기를 계산할 수 있을까?</a><a href="../../c/adearth/2-3.html#card-labearth-coriolis"><small class="mono">고급 지구과학 2.3</small>돌아가는 원판 위로 굴린 공은 정말 휘어서 갈까?</a><a href="../../c/adearth/2-3.html#text-adearth-rossby-number"><small class="mono">고급 지구과학 2.3</small>욕조의 소용돌이는 정말 북반구에서 늘 시계 반대 방향으로 돌까?</a><a href="../../c/labearth/2-4.html#text-labearth-coriolis"><small class="mono">지구과학 실험 2.4</small>돌아가는 원판 위에서 곧게 굴린 공은 왜 휘어 보일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-9.html#card-adearth-sverdrup"><small class="mono">고급 지구과학 2.9</small>바람만 알면 쿠로시오가 나르는 물의 양을 계산할 수 있을까?</a><a href="../../c/adearth/2-11.html#card-adearth-enso-osc"><small class="mono">고급 지구과학 2.11</small>엘니뇨는 왜 2~7년마다 저절로 되풀이될까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/labearth/2-9.html#text-labearth-geostrophic"><small class="mono">지구과학 실험 2.9</small>밀도 구조와 해류 속도</a><a href="../../c/adearth/2-3.html#card-labearth-coriolis"><small class="mono">고급 지구과학 2.3</small>돌아가는 원판 위로 굴린 공은 정말 휘어서 갈까?</a><a href="../../c/adearth/2-3.html#text-adearth-rossby-number"><small class="mono">고급 지구과학 2.3</small>대기와 해양에 작용하는 힘</a><a href="../../c/labearth/2-4.html#text-labearth-coriolis"><small class="mono">지구과학 실험 2.4</small>회전 원판과 전향력</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/adearth/2-9.html#card-adearth-sverdrup"><small class="mono">고급 지구과학 2.9</small>바람만 알면 쿠로시오가 나르는 물의 양을 계산할 수 있을까?</a><a href="../../c/adearth/2-11.html#card-adearth-enso-osc"><small class="mono">고급 지구과학 2.11</small>엘니뇨는 왜 2~7년마다 저절로 되풀이될까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adearth&amp;sec=2-8"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">7문항</span></a>
       <a class="px-go" href="../../practice.html?sec=adearth-2-8"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">90문항</span></a>

@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-adgeo-space-curve" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>용수철 하나를 만드는 데 철사가 몇 cm 필요할까?</h2><span class="kind">본문 · 공간곡선의 매개변수 방정식</span></header>
+  <header class="card-head"><span class="no"></span><h2>공간곡선의 매개변수 방정식</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">반지름 1 cm인 원통에 철사를 감아 10바퀴에 높이 5 cm인 용수철을 만들려 한다. 철사는 원통을 한 바퀴 돌 때마다 0.5 cm씩 올라간다. 위에서 내려다보면 철사는 원을 그리고, 옆에서 보면 물결을 그린다. 이런 곡선은 평면 위에 있지 않아서 공간의 세 좌표를 모두 써야 한다. 세 좌표를 하나의 매개변수로 어떻게 쓸까? 그리고 용수철 하나를 만드는 데 철사가 얼마나 필요할까?</p>
     <figure class="q-fig">
@@ -22,14 +22,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>평면곡선의 매개변수 방정식(<a href="2-1.html">평면곡선의 매개변수 방정식</a>), 공간좌표, 곡선의 길이.</div>
 
-    <h3><span class="mono">1</span>세 좌표를 하나의 매개변수로</h3>
+    <h3><span class="no">2.3.1</span>세 좌표를 하나의 매개변수로</h3>
     <p>공간에서 움직이는 점은 매개변수 \(t\)로 \(x = f(t)\), \(y = g(t)\), \(z = h(t)\)처럼 세 좌표를 각각 나타낸다. 위치벡터로 쓰면 \(\vec r(t) = (f(t), g(t), h(t))\)이다. 평면곡선과 달리 공간곡선은 한 평면에 들어가지 않을 수 있어, 두 좌표의 관계식 하나로는 나타낼 수 없다. 식을 보고 모양을 알아보려면 두 좌표씩 짝지어 좌표평면에 비친 그림자를 생각한다. 예를 들어 \(x\)와 \(y\)가 원을 그리면 위에서 본 모양이 원이다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">원기둥 나선</span></span>
+    <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">원기둥 나선</span></span>
       <p>반지름 \(R\)인 원기둥을 감아 올라가며 한 바퀴에 높이 \(2\pi c\)만큼 오르는 나선은 \[\vec r(t) = (R\cos t,\ R\sin t,\ ct)\]이다. 한 바퀴(\(0 \le t \le 2\pi\))의 길이는 \(2\pi\sqrt{R^2 + c^2}\)이다.</p>
     </div>
     <p>나선의 \(x\)와 \(y\)는 원을 그리므로 위에서 보면 반지름 \(R\)인 원이고, \(z = ct\)는 일정하게 늘어나므로 돌면서 고르게 올라간다. 원통을 세로로 잘라 펼치면 나선은 기울기가 일정한 직선이 된다. 한 바퀴는 밑변이 원의 둘레 \(2\pi R\), 높이가 \(2\pi c\)인 직각삼각형의 빗변이어서 길이가 \(2\pi\sqrt{R^2 + c^2}\)이다. 적분으로 구해도 \(|\vec r'(t)| = \sqrt{R^2 + c^2}\)이 일정하므로 같은 값이 나온다.<sup class="fn"><a href="#fn-adgeo-space-curve-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>식에서 모양 읽기</h3>
+    <h3><span class="no">2.3.2</span>식에서 모양 읽기</h3>
     <p>\((\cos t, \sin t, \sin 2t)\)는 위에서 보면 원이지만, 높이가 한 바퀴에 두 번 오르내려 감자칩 가장자리 같은 물결 모양의 닫힌 곡선이다. \((t, t^2, t^3)\)은 세 그림자가 각각 직선, 포물선, 삼차곡선인 뒤틀린 곡선이다. \((\cos t, \sin t, 0)\)처럼 한 좌표가 상수이면 그 평면 위의 곡선이다. 이렇게 두 좌표씩 짝지어 보면 그리기 어려운 공간곡선의 모양도 알 수 있다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="공간곡선의 식과 모양">
@@ -44,8 +44,8 @@
       <figcaption>그림 2. 두 좌표씩 짝지어 그림자를 보면 공간곡선의 모양을 짐작할 수 있다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 2.3.2</span>
       <p>처음 질문의 용수철을 매개변수 방정식으로 나타내어라. 한 바퀴의 철사 길이와 용수철 전체의 철사 길이를 구하여라. \(\pi \approx 3.1416\)이다.</p>
     </div>
     <p>반지름 \(R = 1\)이고 한 바퀴에 0.5 cm 오르므로 \(2\pi c = 0.5\), 곧 \(c = \dfrac{0.5}{2\pi} \approx 0.0796\)이다. 그래서 용수철은 \(\vec r(t) = (\cos t, \sin t, 0.0796t)\), \(0 \le t \le 20\pi\)이다. 끝에서 \(z = 0.0796\times20\pi \approx 5\) cm로 높이와 맞는다.</p>

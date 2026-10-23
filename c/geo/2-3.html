@@ -62,7 +62,7 @@
 
     <div>
       <article class="card reading" id="text-geo-projection" data-kind="본문">
-        <header class="card-head"><span class="no">2.3.1</span><h2>기울어진 판의 그림자 넓이는 어떻게 구할까?</h2><span class="kind">본문 · 정사영</span></header>
+        <header class="card-head"><span class="no">2.3.1</span><h2>정사영</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">한낮에 해가 바로 머리 위에 있을 때, 땅에 비스듬히 세운 막대의 그림자는 막대보다 짧다. 기울어진 태양광 패널의 그림자도 패널보다 작다. 기울기에 따라 그림자의 길이와 넓이는 어떤 규칙으로 줄어들까?</p>
           <figure class="q-fig" data-q="geo-proj">
@@ -73,16 +73,16 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>직선과 평면의 수직(<a href="2-1.html">직선과 평면의 위치 관계</a>), 이면각(<a href="2-2.html">삼수선 정리</a>), 삼각비.</div>
 
-          <h3><span class="mono">1</span>정사영과 선분의 길이</h3>
+          <h3><span class="no">2.3.1</span>정사영과 선분의 길이</h3>
           <p>점 P에서 평면 \(\alpha\)에 내린 수선의 발 P′을 점 P의 평면 \(\alpha\) 위로의 정사영이라 한다. 그리고 도형 위의 모든 점의 정사영을 모은 것이 도형의 정사영이다. 햇빛이 평면에 수직으로 비칠 때의 그림자라고 생각하면 된다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">정사영의 길이</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.1 <span class="nm">정사영의 길이</span></span>
             <p>선분 AB와 평면 \(\alpha\)가 이루는 각이 \(\theta\)이면, 선분 AB의 평면 위로의 정사영 A′B′의 길이는 \[\overline{A'B'} = \overline{AB}\cos\theta\] 이다.</p>
           </div>
           <p>왜냐하면 선분 AB와 그 정사영은 수직선 두 개와 함께 직각삼각형(또는 사다리꼴)을 이루므로, 정사영은 빗변에 대한 밑변처럼 \(\cos\theta\)배가 되기 때문이다. 그림 1에서 각을 0°에서 90°로 늘려 보자. 0°이면 정사영의 길이가 그대로 4이고, 90°이면 점이 되어 길이가 0이다.</p>
 
-          <h3><span class="mono">2</span>정사영의 넓이</h3>
+          <h3><span class="no">2.3.2</span>정사영의 넓이</h3>
           <p>평면 \(\beta\) 위의 도형을 평면 \(\alpha\)에 정사영하자. 두 평면의 교선에 나란한 방향의 길이는 변하지 않고, 교선에 수직인 방향의 길이만 \(\cos\theta\)배가 된다. 따라서 도형을 교선에 수직인 가는 띠로 잘라 생각하면 띠마다 넓이가 \(\cos\theta\)배가 되므로, 전체 넓이도 \(\cos\theta\)배이다.<sup class="fn"><a href="#fn-geo-projection-1">1</a></sup></p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">정사영의 넓이</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.3.2 <span class="nm">정사영의 넓이</span></span>
             <p>평면 \(\beta\) 위의 넓이 \(S\)인 도형을 평면 \(\alpha\) 위에 정사영한 도형의 넓이를 \(S'\)이라 하면, 두 평면이 이루는 각 \(\theta\)에 대하여 \[S' = S\cos\theta\]</p>
           </div>
           <figure class="q-fig">
@@ -97,8 +97,8 @@
             <figcaption>그림 2. 정사영은 교선에 나란한 방향(가로)의 길이는 그대로 두고, 수직인 방향(세로)만 \(\cos\theta\)배로 줄인다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.3.3</span>
             <p>한 변의 길이가 2인 정사면체 ABCD에서 면 ABC를 밑면 BCD 위로 정사영한 넓이를 구하고, 두 면이 이루는 각 \(\theta\)에 대하여 \(\cos\theta\)를 구하여라.</p>
           </div>
           <p>A에서 밑면에 내린 수선의 발은 정삼각형 BCD의 무게중심 G이다. 면 ABC의 정사영은 삼각형 GBC이고, 그 넓이는 정삼각형 BCD 넓이의 \(\dfrac{1}{3}\)이다. 정삼각형 BCD의 넓이는 \(\dfrac{\sqrt{3}}{4} \times 2^2 = \sqrt{3}\)이므로 정사영의 넓이는 \(\dfrac{\sqrt{3}}{3}\)이다.</p>
@@ -111,7 +111,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>점에서 평면에 내린 수선의 발이 정사영이며, 평면과 \(\theta\)를 이루는 선분의 정사영 길이는 \(\cos\theta\)배, 평면과 \(\theta\)를 이루는 도형의 정사영 넓이도 \(\cos\theta\)배이다. 그래서 처음 질문의 기울어진 판의 그림자 넓이는 판의 넓이에 땅과 이루는 각의 코사인을 곱하여 구한다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-1.html#card-geo-line-plane"><small class="mono">기하 2.1</small>평면 위의 직선 몇 개에 수직이면 평면에 수직일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a><a href="../../c/geo/2-4.html#text-geo-coord3"><small class="mono">기하 2.4</small>공간에서 두 점 사이의 거리는 어떻게 잴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-1.html#card-geo-line-plane"><small class="mono">기하 2.1</small>평면 위의 직선 몇 개에 수직이면 평면에 수직일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a><a href="../../c/geo/2-4.html#text-geo-coord3"><small class="mono">기하 2.4</small>공간좌표</a></div></nav>
 
       <article class="card" id="card-geo-proj-segment">
         <header class="card-head">
@@ -158,7 +158,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-1.html#card-geo-line-plane"><small class="mono">기하 2.1</small>평면 위의 직선 몇 개에 수직이면 평면에 수직일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a><a href="../../c/geo/2-4.html#text-geo-coord3"><small class="mono">기하 2.4</small>공간에서 두 점 사이의 거리는 어떻게 잴까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-1.html#card-geo-line-plane"><small class="mono">기하 2.1</small>평면 위의 직선 몇 개에 수직이면 평면에 수직일까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/2-4.html#card-geo-coord-point"><small class="mono">기하 2.4</small>공간의 점 하나를 수 몇 개로 나타낼 수 있을까?</a><a href="../../c/geo/2-4.html#text-geo-coord3"><small class="mono">기하 2.4</small>공간좌표</a></div></nav>
 
       <article class="card" id="card-geo-proj-area">
         <header class="card-head">
@@ -208,7 +208,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-2.html#card-geo-dihedral"><small class="mono">기하 2.2</small>두 평면이 벌어진 정도는 어떤 각으로 재야 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-4.html#card-pmath-disk-shadow"><small class="mono">전문 수학 2.4</small>동전을 기울이면 그림자의 넓이는 얼마나 줄어들까?</a><a href="../../c/pmath/2-4.html#card-pmath-solar-panel"><small class="mono">전문 수학 2.4</small>태양광 패널은 몇 도로 세워야 햇빛을 가장 많이 받을까?</a><a href="../../c/pmath/2-4.html#text-pmath-projection"><small class="mono">전문 수학 2.4</small>서울에서 태양광 패널은 몇 도로 기울여야 한낮의 햇빛을 가장 많이 받을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/2-2.html#card-geo-dihedral"><small class="mono">기하 2.2</small>두 평면이 벌어진 정도는 어떤 각으로 재야 할까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-4.html#card-pmath-disk-shadow"><small class="mono">전문 수학 2.4</small>동전을 기울이면 그림자의 넓이는 얼마나 줄어들까?</a><a href="../../c/pmath/2-4.html#card-pmath-solar-panel"><small class="mono">전문 수학 2.4</small>태양광 패널은 몇 도로 세워야 햇빛을 가장 많이 받을까?</a><a href="../../c/pmath/2-4.html#text-pmath-projection"><small class="mono">전문 수학 2.4</small>정사영</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=geo&amp;sec=2-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">15문항</span></a>
       <a class="px-go" href="../../practice.html?sec=geo-2-3"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">50문항</span></a>

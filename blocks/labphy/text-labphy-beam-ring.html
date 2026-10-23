@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-labphy-beam-ring" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>빛나는 고리의 지름을 자로 재서 전자의 무엇을 알 수 있을까?</h2><span class="kind">본문 · 전자의 비전하</span></header>
+  <header class="card-head"><span class="no"></span><h2>전자의 비전하</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">기체가 조금 든 둥근 유리관 안에서 전자를 200 V로 가속해 쏘면, 전자가 기체와 부딪힌 자리가 빛나 전자의 길이 보인다. 유리관 양옆의 헬름홀츠 코일에 1.5 A를 흘리자 전자의 길이 휘어 지름 8.2 cm의 빛나는 고리가 되었다. 전류를 늘리면 고리가 작아지고, 가속 전압을 높이면 커졌다. 전자 하나의 질량은 저울로 잴 수 없을 만큼 작은데, 이 고리의 지름에서 전자에 대해 무엇을 알아낼 수 있을까?</p>
     <figure class="q-fig" data-q="lp-em">
@@ -18,14 +18,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>로런츠 힘 \(F = qvB\), 등속 원운동과 구심력(<a href="2-5.html">구심력 측정</a>), 전기력이 한 일 \(qV = \tfrac{1}{2}mv^2\), 음극선의 성질(<a href="5-2.html">음극선의 성질</a>).</div>
 
-    <h3><span class="mono">1</span>원운동의 반지름에 담긴 비</h3>
+    <h3><span class="no">5.3.1</span>원운동의 반지름에 담긴 비</h3>
     <p>전자는 가속 전압 \(V\)를 지나며 운동 에너지 \(eV\)를 얻어 속력 \(v\)로 날아간다. 자기장 속에서 움직이는 전자는 속도에 수직인 로런츠 힘 \(evB\)를 받는다. 힘이 언제나 속도에 수직이므로 전자는 속력을 바꾸지 않고 방향만 바꾸어 원을 그린다. 이때 로런츠 힘이 구심력 \(mv^2/r\)이 된다. 두 식에서 속력 \(v\)를 지우면 반지름이 전하와 질량의 비, 곧 비전하 \(e/m\)으로 나타난다. 전자의 전하도 질량도 따로 알 수는 없지만, 그 비는 자로 잰 반지름에서 나온다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">전자의 비전하</span></span>
+    <div class="tb-env thm"><span class="lb">정리 5.3.1 <span class="nm">전자의 비전하</span></span>
       <p>\(eV = \tfrac{1}{2}mv^2\)과 \(evB = mv^2/r\)에서 \[r = \frac{1}{B}\sqrt{\frac{2V}{e/m}}, \qquad \frac{e}{m} = \frac{2V}{B^2 r^2}\]이다. 헬름홀츠 코일 가운데의 자기장은 감은 수 \(N\), 반지름 \(R\), 전류 \(I\)에서 \(B = \left(\tfrac{4}{5}\right)^{3/2}\dfrac{\mu_0 N I}{R}\)이다.</p>
     </div>
     <p>그림 1에서 두 값을 바꾸어 보자. 가속 전압을 높이면 전자가 빨라져 같은 자기장에서 덜 휘므로 고리가 커진다. 반지름은 \(\sqrt{V}\)에 비례하므로 전압을 네 배로 해야 고리가 두 배가 된다. 자기장을 세게 하면 힘이 커져 고리가 작아지며, 반지름은 \(B\)에 반비례한다. 헬름홀츠 코일은 반지름과 같은 거리만큼 떨어뜨린 두 코일로, 그 사이에 고른 자기장을 만들어 전자가 정확한 원을 그리게 한다.<sup class="fn"><a href="#fn-labphy-beam-ring-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>여러 조건에서 확인하기</h3>
+    <h3><span class="no">5.3.2</span>여러 조건에서 확인하기</h3>
     <p>고리의 지름은 유리관 앞뒤에서 눈금을 대고 읽는데, 고리와 눈금이 같은 평면에 있지 않으면 보는 각도에 따라 읽는 값이 달라진다. 그래서 거울 눈금을 써서 고리와 그 반사가 겹쳐 보이는 방향에서 읽는다. 한 조건에서만 계산하지 않고, 가속 전압과 코일 전류를 여러 가지로 바꾸어 \(r^2\)을 \(V/B^2\)에 대해 그리면 기울기 \(2/(e/m)\)인 직선이 된다. 점들이 직선을 잘 따르는지 보면 측정을 검증할 수 있다. 지구 자기장도 코일의 자기장에 더해지므로, 관을 동서 방향으로 놓거나 코일 전류의 방향을 바꾸어 두 번 재어 그 영향을 줄인다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="전자 비전하 측정값">
@@ -40,8 +40,8 @@
       <figcaption>그림 2. 고리의 지름 하나로 구한 비전하가 알려진 값과 1% 안쪽으로 맞는다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">5.3.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 5.3.2</span>
       <p>감은 수 130, 반지름 15 cm인 헬름홀츠 코일에 1.50 A를 흘릴 때 가운데의 자기장을 구하여라. \(\mu_0 = 4\pi \times 10^{-7}\) T·m/A이다. 200 V로 가속한 전자의 고리 지름이 8.2 cm이면 비전하는 얼마인가? 이때 전자의 속력은 얼마인가?</p>
     </div>
     <p>\(B = 0.716 \times \dfrac{4\pi \times 10^{-7} \times 130 \times 1.50}{0.15} \approx 1.17 \times 10^{-3}\) T이다. 반지름은 4.1 cm이므로 \(\dfrac{e}{m} = \dfrac{2 \times 200}{(1.17 \times 10^{-3})^2 \times 0.041^2} \approx 1.74 \times 10^{11}\) C/kg이다. 알려진 값 \(1.76 \times 10^{11}\) C/kg와 1% 차이이다.</p>

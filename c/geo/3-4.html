@@ -74,7 +74,7 @@
 
     <div>
       <article class="card reading" id="text-geo-line-eq" data-kind="본문">
-        <header class="card-head"><span class="no">3.4.1</span><h2>한 점과 방향만으로 직선 위의 모든 점을 가리킬 수 있을까?</h2><span class="kind">본문 · 직선의 방정식</span></header>
+        <header class="card-head"><span class="no">3.4.1</span><h2>직선의 방정식</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">평면에서는 직선을 \(y = mx + n\)처럼 기울기로 나타냈다. 그런데 공간의 직선에는 '기울기' 하나로 나타낼 수 있는 방향이 없다. 비행기가 한 점에서 출발하여 일정한 방향으로 곧게 날아간다면, 그 경로의 모든 점을 어떻게 나타낼까? 출발점과 방향만 알면 충분할까?</p>
           <figure class="q-fig" data-q="geo-line">
@@ -85,14 +85,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>위치벡터(<a href="3-2.html">위치벡터</a>), 벡터의 실수배, 벡터의 내적과 수직 조건(<a href="3-3.html">벡터의 내적</a>).</div>
 
-          <h3><span class="mono">1</span>방향벡터로 나타낸 직선</h3>
+          <h3><span class="no">3.4.1</span>방향벡터로 나타낸 직선</h3>
           <p>점 A를 지나고 벡터 \(\vec u\)에 평행한 직선 위의 점 P에 대하여, \(\overrightarrow{AP}\)는 \(\vec u\)와 평행하므로 어떤 실수 \(t\)에 대해 \(\overrightarrow{AP} = t\vec u\)이다. 위치벡터로 쓰면 \(\vec p - \vec a = t\vec u\)이다. 이 \(\vec u\)를 직선의 방향벡터라 한다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">직선의 벡터방정식</span></span>
+          <div class="tb-env thm"><span class="lb">정리 3.4.1 <span class="nm">직선의 벡터방정식</span></span>
             <p>점 \(A(x_1, y_1, z_1)\)을 지나고 방향벡터가 \(\vec u = (a, b, c)\)인 직선은 \[\vec p = \vec a + t\vec u\] 이다. 성분으로 쓰면 \(x = x_1 + at\), \(y = y_1 + bt\), \(z = z_1 + ct\)이고, \(t\)를 없애면 \[\frac{x - x_1}{a} = \frac{y - y_1}{b} = \frac{z - z_1}{c}\ (abc \ne 0)\]</p>
           </div>
           <p>그림 1에서 \(t\)를 움직여 보자. \(t = 0\)이면 P가 A에 있고, \(t &gt; 0\)이면 \(\vec u\) 방향으로, \(t &lt; 0\)이면 반대 방향으로 간다. 평면이든 공간이든 같은 식을 쓰며, 성분의 개수만 다르다. 두 점 A, B를 지나는 직선은 방향벡터로 \(\overrightarrow{AB}\)를 쓴다.<sup class="fn"><a href="#fn-geo-line-eq-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>법선벡터로 나타낸 직선과 두 직선의 각</h3>
+          <h3><span class="no">3.4.2</span>법선벡터로 나타낸 직선과 두 직선의 각</h3>
           <p>평면 위의 직선은 방향 대신 그에 수직인 벡터로도 정할 수 있다. 점 A를 지나고 벡터 \(\vec n = (a, b)\)에 수직인 직선 위의 점 P는 \(\vec n \cdot (\vec p - \vec a) = 0\)을 만족한다. 성분으로 쓰면 \(a(x - x_1) + b(y - y_1) = 0\)이다. 이 \(\vec n\)을 법선벡터라 한다. 곧 직선 \(ax + by + c = 0\)의 법선벡터는 \((a, b)\)이다.</p>
           <p>두 직선이 이루는 각은 방향벡터 \(\vec u_1\), \(\vec u_2\)가 이루는 각으로 구한다. 예각을 택하므로 \(\cos\theta = \dfrac{|\vec u_1 \cdot \vec u_2|}{|\vec u_1||\vec u_2|}\)이다.</p>
           <figure class="q-fig">
@@ -108,8 +108,8 @@
             <figcaption>그림 2. 방향벡터는 직선과 나란하고, 법선벡터는 직선과 수직이다. 평면 위의 직선은 둘 중 하나로 정할 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">3.4.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 3.4.2</span>
             <p>두 점 \(A(1, 0, 2)\), \(B(3, 1, 0)\)을 지나는 직선의 방정식을 구하고, 이 직선이 \(xy\)평면과 만나는 점을 구하여라.</p>
           </div>
           <p>방향벡터는 \(\overrightarrow{AB} = (2, 1, -2)\)이므로 직선은 \(x = 1 + 2t\), \(y = t\), \(z = 2 - 2t\)이다. \(t\)를 없애면 \(\dfrac{x - 1}{2} = y = \dfrac{z - 2}{-2}\)이다.</p>
@@ -122,7 +122,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>점 A를 지나고 방향벡터가 \(\vec u\)인 직선은 \(\vec p = \vec a + t\vec u\)이며, 성분으로 쓰거나 \(t\)를 없애 \(\frac{x - x_1}{a} = \frac{y - y_1}{b} = \frac{z - z_1}{c}\)로 나타낸다. 평면 위에서는 법선벡터로도 직선을 정할 수 있다. 그래서 처음 질문의 비행기 경로는 출발점과 방향만으로 모든 점을 \(\vec a + t\vec u\)로 가리킬 수 있다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>화살표를 수 몇 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>카메라에서 쏜 빛줄기가 공에 닿는 점을 어떻게 계산할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>위치벡터</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>벡터로 나타낸 도형의 방정식</a></div></nav>
 
       <article class="card" id="card-geo-line-dir">
         <header class="card-head">
@@ -163,7 +163,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>화살표를 수 몇 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>카메라에서 쏜 빛줄기가 공에 닿는 점을 어떻게 계산할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>위치벡터</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>벡터로 나타낸 도형의 방정식</a></div></nav>
 
       <article class="card" id="card-geo-line-space">
         <header class="card-head">
@@ -212,7 +212,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>화살표를 수 몇 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>카메라에서 쏜 빛줄기가 공에 닿는 점을 어떻게 계산할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-2.html#card-geo-pos-section"><small class="mono">기하 3.2</small>두 점의 위치벡터로 선분을 나누는 점을 어떻게 나타낼까?</a><a href="../../c/geo/3-2.html#text-geo-position-vec"><small class="mono">기하 3.2</small>위치벡터</a><a href="../../c/geo/3-2.html#card-geo-components"><small class="mono">기하 3.2</small>화살표를 수 두 개로 바꿀 수 있을까?</a><a href="../../c/geo/3-2.html#card-geo-space-components"><small class="mono">기하 3.2</small>공간의 화살표는 수 몇 개로 정해질까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/pmath/2-8.html#card-pmath-param-line-plane"><small class="mono">전문 수학 2.8</small>매개변수 하나는 직선을, 둘은 평면을 그릴까?</a><a href="../../c/pmath/2-8.html#card-pmath-circle-sphere-vec"><small class="mono">전문 수학 2.8</small>원과 구는 같은 식 하나로 쓸 수 있을까?</a><a href="../../c/pmath/2-8.html#text-pmath-vector-equations"><small class="mono">전문 수학 2.8</small>벡터로 나타낸 도형의 방정식</a></div></nav>
 
       <article class="card" id="card-geo-line-normal">
         <header class="card-head">
@@ -251,7 +251,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/geo/3-3.html#text-geo-dot"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/3-5.html#card-geo-plane-normal"><small class="mono">기하 3.5</small>공간에서 수직인 벡터 하나는 무엇을 정할까?</a><a href="../../c/geo/3-5.html#text-geo-plane-eq"><small class="mono">기하 3.5</small>공간에서 수직인 벡터 하나는 무엇을 정할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/geo/3-3.html#card-geo-dot-angle"><small class="mono">기하 3.3</small>두 화살표가 같은 쪽을 얼마나 향하는지 수 하나로 나타낼 수 있을까?</a><a href="../../c/geo/3-3.html#card-geo-dot-space"><small class="mono">기하 3.3</small>공간에서 두 벡터가 수직인지 어떻게 알까?</a><a href="../../c/geo/3-3.html#text-geo-dot"><small class="mono">기하 3.3</small>벡터의 내적</a></div><div><span class="mono">이어지는 카드</span><a href="../../c/geo/3-5.html#card-geo-plane-normal"><small class="mono">기하 3.5</small>공간에서 수직인 벡터 하나는 무엇을 정할까?</a><a href="../../c/geo/3-5.html#text-geo-plane-eq"><small class="mono">기하 3.5</small>평면과 구의 방정식</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=geo&amp;sec=3-4"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">14문항</span></a>
       <a class="px-go" href="../../practice.html?sec=geo-3-4"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">22문항</span></a>

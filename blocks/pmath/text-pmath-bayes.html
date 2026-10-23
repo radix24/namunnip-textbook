@@ -6,7 +6,7 @@
 }
 -->
 <article class="card reading" id="text-pmath-bayes" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>정확도 99%인 검사에서 양성이 나오면 병에 걸렸을 확률도 99%일까?</h2><span class="kind">본문 · 확률의 여러 가지 정리</span></header>
+  <header class="card-head"><span class="no"></span><h2>확률의 여러 가지 정리</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">어떤 병은 사람들 가운데 1%가 걸려 있다. 이 병의 검사는 병에 걸린 사람의 99%를 양성으로, 걸리지 않은 사람의 99%를 음성으로 바르게 가려낸다. 아무 증상 없는 사람이 이 검사를 받았는데 양성이 나왔다. 검사가 99% 정확하니 병에 걸렸을 확률도 99%라고 생각하기 쉽다. 그런데 실제로 계산해 보면 그 확률은 50%밖에 되지 않는다. 무엇을 빠뜨렸기에 이렇게 큰 차이가 날까?</p>
     <figure class="q-fig">
@@ -24,14 +24,14 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>확률의 덧셈정리, 조건부확률, 독립과 종속, 독립시행의 확률.</div>
 
-    <h3><span class="mono">1</span>조건이 바뀌면 확률도 바뀐다</h3>
+    <h3><span class="no">3.4.1</span>조건이 바뀌면 확률도 바뀐다</h3>
     <p>병에 걸린 사건을 \(D\), 양성이 나온 사건을 \(T\)라 하자. 검사의 정확도 99%는 \(P(T \mid D)\), 곧 병에 걸렸다는 조건에서 양성이 나올 확률이다. 그런데 궁금한 것은 \(P(D \mid T)\), 곧 양성이 나왔다는 조건에서 병에 걸렸을 확률이다. 두 조건부확률은 조건과 사건이 뒤바뀐 것이어서 일반적으로 다르다. 두 값을 잇는 다리는 곱셈정리이다. \(P(D \cap T) = P(D)P(T \mid D) = P(T)P(D \mid T)\)이므로, \(P(T)\)를 알면 하나에서 다른 하나를 구할 수 있다.</p>
-    <div class="tb-env thm"><span class="lb">정리 <span class="nm">전확률 공식과 베이즈 정리</span></span>
+    <div class="tb-env thm"><span class="lb">정리 3.4.1 <span class="nm">전확률 공식과 베이즈 정리</span></span>
       <p>사건 \(D\)와 그 여사건 \(D^c\)에 대하여 \(P(T) = P(D)P(T \mid D) + P(D^c)P(T \mid D^c)\)이고, \[P(D \mid T) = \frac{P(D)P(T \mid D)}{P(D)P(T \mid D) + P(D^c)P(T \mid D^c)}\]이다. 두 사건 \(A\), \(B\)가 독립이면 \(P(B \mid A) = P(B)\)이다.</p>
     </div>
     <p>베이즈 정리의 분모에는 걸린 사람이 양성일 몫과 걸리지 않은 사람이 잘못 양성일 몫이 함께 들어 있다. 병이 드물면 \(P(D)\)가 작아 첫째 몫이 작고, 걸리지 않은 사람이 많아 오류가 1%라도 둘째 몫이 첫째 몫과 비슷해진다. 그래서 검사가 정확해도 드문 병에서는 양성 결과의 상당수가 잘못 나온 것이다. 처음 질문에서 빠뜨린 것은 검사하기 전에 병에 걸려 있을 확률 1%이다.<sup class="fn"><a href="#fn-pmath-bayes-1">1</a></sup></p>
 
-    <h3><span class="mono">2</span>문을 바꿀까, 동전은 기억할까</h3>
+    <h3><span class="no">3.4.2</span>문을 바꿀까, 동전은 기억할까</h3>
     <p>세 문 가운데 하나 뒤에만 상품이 있는 게임에서, 하나를 고르면 상품 위치를 아는 사회자가 남은 두 문 가운데 빈 문 하나를 열어 보여 준다. 이때 고른 문을 바꾸면 이길 확률은 \(2/3\)이다. 처음 고른 문이 맞을 확률은 \(1/3\)이고, 사회자가 빈 문을 연다고 이 확률이 바뀌지는 않으므로 나머지 \(2/3\)가 남은 문에 몰리기 때문이다. 반면 동전 던지기는 앞의 결과와 독립이어서, 앞면이 다섯 번 연속 나왔어도 다음에 뒷면이 나올 확률은 그대로 \(1/2\)이다. 조건이 실제로 정보를 주는지, 아니면 독립인지를 가려야 한다.</p>
     <figure class="q-fig">
       <svg viewBox="0 0 520 110" role="img" aria-label="병이 흔한 정도에 따라 양성일 때 걸렸을 확률">
@@ -45,8 +45,8 @@
       <figcaption>그림 2. 같은 검사라도 병이 드물수록 양성 결과를 믿을 수 있는 정도가 크게 떨어진다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.4.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.4.2</span>
       <p>처음 질문의 검사에서 양성일 때 병에 걸렸을 확률을 베이즈 정리로 구하여라. 양성이 나온 사람이 같은 검사를 한 번 더 받아 다시 양성이 나왔다면, 그때 걸렸을 확률은 얼마인가? 두 검사 결과는 병의 여부가 정해지면 서로 독립이라고 한다.</p>
     </div>
     <p>\(P(D \mid T) = \dfrac{0.01\times0.99}{0.01\times0.99 + 0.99\times0.01} = \dfrac{0.0099}{0.0198} = 0.5\)이다. 그림 1의 표에서 양성 198명 가운데 99명인 것과 같다.</p>

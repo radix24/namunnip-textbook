@@ -63,7 +63,7 @@
 
     <div>
       <article class="card reading" id="text-dmath-recurrence" data-kind="본문">
-        <header class="card-head"><span class="no">2.2.1</span><h2>1000만 원을 빌리면 매달 얼마씩 갚아야 24개월 만에 끝날까?</h2><span class="kind">본문 · 점화 관계와 일반항</span></header>
+        <header class="card-head"><span class="no">2.2.1</span><h2>점화 관계와 일반항</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">1000만 원을 월 이자율 0.5%로 빌렸다. 매달 말에 이자가 붙고, 같은 금액 \(x\)원씩 갚는다. 그러면 \(n\)개월 뒤 남은 빚 \(a_n\)은 \(a_{n+1} = 1.005a_n - x\)라는 점화 관계를 따른다. 24개월 뒤 빚이 정확히 0이 되려면 \(x\)는 얼마여야 할까? 한 달씩 24번 계산해 맞추어 보는 대신, \(a_n\)을 \(n\)의 식으로 바로 쓸 수 있다면 한 번에 풀 수 있을 것이다. 이런 점화 관계의 일반항은 어떻게 구할까?</p>
           <figure class="q-fig">
@@ -81,14 +81,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>점화 관계(<a href="2-1.html">수열의 귀납적 정의</a>), 등비수열의 일반항과 합.</div>
 
-          <h3><span class="mono">1</span>고정점을 기준으로 보기</h3>
+          <h3><span class="no">2.2.1</span>고정점을 기준으로 보기</h3>
           <p>\(a_{n+1} = pa_n + q\) 꼴의 점화 관계는 수열이 변하지 않는 값, 곧 \(\alpha = p\alpha + q\)인 고정점을 먼저 찾으면 풀린다. 두 식을 빼면 \(a_{n+1} - \alpha = p(a_n - \alpha)\)이므로, 고정점에서 벗어난 정도 \(a_n - \alpha\)는 공비 \(p\)인 등비수열이다. 그래서 \(a_n = \alpha + (a_0 - \alpha)p^n\)이다. \(|p| &lt; 1\)이면 수열은 고정점으로 다가가고, \(|p| > 1\)이면 고정점에서 점점 멀어진다. 그래서 점화식만 보고도 수열이 어디로 갈지 알 수 있다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">일차 점화 관계의 일반항</span></span>
+          <div class="tb-env thm"><span class="lb">정리 2.2.1 <span class="nm">일차 점화 관계의 일반항</span></span>
             <p>\(a_{n+1} = pa_n + q\)이고 \(p \ne 1\)이면 고정점 \(\alpha = \dfrac{q}{1 - p}\)에 대해 \[a_n = \alpha + (a_0 - \alpha)p^n\]이다. \(a_{n+2} = pa_{n+1} + qa_n\) 꼴이면 특성방정식 \(t^2 = pt + q\)의 서로 다른 두 근 \(t_1\), \(t_2\)로 \(a_n = Ct_1^n + Dt_2^n\)이다.</p>
           </div>
           <p>대출의 점화 관계는 \(p = 1.005\), \(q = -x\)이므로 고정점은 \(\alpha = \dfrac{-x}{1 - 1.005} = 200x\)이다. 고정점은 빚이 늘지도 줄지도 않는 금액, 곧 매달 갚는 \(x\)원이 이자와 꼭 같은 빚이다. 빚이 고정점보다 작으면 \(a_n - \alpha\)가 음수이고 1.005배씩 커지므로 빚은 점점 빨리 줄어든다. 두 항 점화 관계도 같은 생각으로, 등비수열 \(t^n\)이 점화식을 만족하도록 \(t\)를 정한 뒤 두 해를 섞어 처음 항에 맞춘다.<sup class="fn"><a href="#fn-dmath-recurrence-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>점화식만 보고 내다보기</h3>
+          <h3><span class="no">2.2.2</span>점화식만 보고 내다보기</h3>
           <p>\(a_{n+1} = 0.5a_n + 3\)은 고정점이 6이고 \(p = 0.5\)이므로, 어디서 출발하든 6으로 다가가며 6과의 차이가 매번 절반이 된다. \(a_{n+1} = 2a_n - 3\)은 고정점이 3이지만 \(p = 2\)이므로, 3에서 조금만 벗어나도 차이가 두 배씩 커져 멀어진다. \(a_{n+1} = -a_n + 4\)는 \(p = -1\)이어서 고정점 2를 사이에 두고 두 값을 번갈아 오간다. 그래서 \(p\)의 크기와 부호를 보면 수열이 모이는지, 퍼지는지, 진동하는지 알 수 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="세 점화식의 고정점과 행동">
@@ -103,8 +103,8 @@
             <figcaption>그림 2. 고정점과 공비 \(p\)만 보면 수열의 앞날을 알 수 있다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">2.2.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 2.2.2</span>
             <p>처음 질문의 대출에서 \(a_{24} = 0\)이 되는 \(x\)를 구하여라. \(1.005^{24} \approx 1.12716\)이다. 24개월 동안 낸 이자는 모두 얼마인가?</p>
           </div>
           <p>일반항은 \(a_n = 200x + (10^7 - 200x)\times1.005^n\)이다. \(a_{24} = 0\)이면 \(200x = (200x - 10^7)\times1.12716\)이므로 \(200x\times0.12716 = 10^7\times1.12716\), 곧 \(x = \dfrac{10^7\times0.005\times1.12716}{0.12716} \approx 443206\)원이다.</p>
@@ -117,7 +117,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>\(a_{n+1} = pa_n + q\) 꼴의 점화 관계는 고정점 \(\alpha = q/(1 - p)\)에서 벗어난 정도가 공비 \(p\)인 등비수열이어서 \(a_n = \alpha + (a_0 - \alpha)p^n\)이고, \(|p|\)가 1보다 작으면 모이고 크면 멀어진다. 두 항 점화 관계는 특성방정식의 근으로 일반항을 구한다. 처음 질문의 대출은 일반항으로 \(a_{24} = 0\)을 풀어 매달 약 443206원씩 갚아야 하고, 이자는 모두 약 63.7만 원이다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
 
       <article class="card" id="card-dmath-recur-plot">
         <header class="card-head">
@@ -156,7 +156,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
 
       <article class="card" id="card-dmath-loan">
         <header class="card-head">
@@ -194,7 +194,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>2×10 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/dmath/2-1.html#card-dmath-hanoi"><small class="mono">이산 수학 2.1</small>원판 n개를 옮기는 최소 횟수는 어떻게 구할까?</a><a href="../../c/dmath/2-1.html#card-dmath-domino"><small class="mono">이산 수학 2.1</small>2×n 복도에 1×2 타일을 까는 방법은 몇 가지일까?</a><a href="../../c/dmath/2-1.html#text-dmath-recursive"><small class="mono">이산 수학 2.1</small>수열의 귀납적 정의</a><a href="../../c/alg/3-3.html#card-alg-geo-term"><small class="mono">대수 3.3</small>같은 수를 계속 곱하면 항은 어떻게 변할까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=dmath&amp;sec=2-2"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">12문항</span></a>
       <a class="px-go" href="../../practice.html?sec=dmath-2-2"><span class="mono">수능·모의평가·학력평가</span><b>기출문제 풀어보기</b><span class="mono px-n">17문항</span></a>

@@ -7,7 +7,7 @@
 }
 -->
 <article class="card reading" id="text-calc1-antiderivative" data-kind="본문">
-  <header class="card-head"><span class="no"></span><h2>기울기만 알고 원래 함수를 되찾을 수 있을까?</h2><span class="kind">본문 · 부정적분</span></header>
+  <header class="card-head"><span class="no"></span><h2>부정적분</h2><span class="kind">본문</span></header>
   <div class="reading-body q-text">
     <p class="q-ask">어떤 함수를 미분했더니 \(2x\)가 나왔다. 원래 함수는 \(x^2\)일 것 같다. 그런데 \(x^2 + 5\)나 \(x^2 - 3\)을 미분해도 \(2x\)이다. 그렇다면 원래 함수는 몇 개이고, 하나로 정하려면 무엇이 더 필요할까?</p>
     <figure class="q-fig" data-q="calc1-family">
@@ -18,13 +18,13 @@
     </figure>
     <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>도함수와 \(y = x^n\)의 도함수(<a href="2-3.html">y = xⁿ의 도함수</a>), 평균값 정리(<a href="2-6.html">평균값 정리</a>), 접선의 기울기.</div>
 
-    <h3><span class="mono">1</span>미분을 거꾸로</h3>
+    <h3><span class="no">3.1.1</span>미분을 거꾸로</h3>
     <p>미분은 함수에서 기울기의 함수를 얻는 일이다. 그 반대로 기울기의 함수에서 원래 함수를 찾는 일을 생각하자. 함수 \(F(x)\)의 도함수가 \(f(x)\)일 때, 곧 \(F'(x) = f(x)\)일 때 \(F(x)\)를 \(f(x)\)의 <em>부정적분</em>이라 한다.</p>
     <p>\(F(x) = x^2\)이 \(2x\)의 부정적분이면 \(x^2 + C\)(\(C\)는 상수)도 모두 부정적분이다. 상수는 미분하면 0이 되어 사라지기 때문이다. 그림 1에서 보듯 이 함수들의 그래프는 같은 모양의 포물선을 위아래로 옮긴 것이어서, 같은 \(x\)에서 접선의 기울기가 모두 같다.</p>
 
-    <h3><span class="mono">2</span>부정적분은 상수만큼만 다르다</h3>
+    <h3><span class="no">3.1.2</span>부정적분은 상수만큼만 다르다</h3>
     <p>거꾸로, 도함수가 같은 두 함수는 상수만큼만 다를까? \(F' = G'\)이면 \(H = F - G\)의 도함수는 0이다. 평균값 정리에 따라 어느 두 점 사이에서도 \(H(b) - H(a) = H'(c)(b - a) = 0\)이므로 \(H\)는 상수이다. 즉 \(f\)의 부정적분은 하나를 찾으면 나머지는 모두 그것에 상수를 더한 것이다.</p>
-    <div class="tb-env"><span class="lb">정의 <span class="nm">부정적분과 적분상수</span></span>
+    <div class="tb-env"><span class="lb">정의 3.1.1 <span class="nm">부정적분과 적분상수</span></span>
       <p>\(F'(x) = f(x)\)일 때 \(f(x)\)의 부정적분은 \[\int f(x)\,dx = F(x) + C\ (C\text{는 상수})\] 이고, \(C\)를 적분상수라 한다. \(f(x)\)의 부정적분을 구하는 것을 \(f(x)\)를 적분한다고 한다.</p>
     </div>
     <p>적분상수를 하나로 정하려면 조건이 하나 더 있어야 한다. 그림 1의 슬라이더로 그래프가 지나는 점을 정하면, 포물선 가족 가운데 그 점을 지나는 것은 하나뿐이다.<sup class="fn"><a href="#fn-calc1-antiderivative-1">1</a></sup></p>
@@ -38,8 +38,8 @@
       <figcaption>그림 2. 미분하면 상수가 사라지므로, 적분으로 되돌릴 때는 사라진 상수를 \(C\)로 붙여 둔다.</figcaption>
     </figure>
 
-    <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-    <div class="tb-env ex"><span class="lb">예제</span>
+    <h3><span class="no">3.1.3</span>예제 하나를 끝까지</h3>
+    <div class="tb-env ex"><span class="lb">예제 3.1.2</span>
       <p>곡선 \(y = F(x)\) 위의 점 \((x, F(x))\)에서의 접선의 기울기가 \(2x\)이고, 이 곡선이 점 \((1, 3)\)을 지날 때 \(F(x)\)를 구하여라. 또 \(\displaystyle\frac{d}{dx}\int f(x)\,dx\)와 \(\displaystyle\int \left\{\frac{d}{dx}f(x)\right\}dx\)가 어떻게 다른지 \(f(x) = x^2 + 1\)로 확인하여라.</p>
     </div>
     <p>접선의 기울기가 \(F'(x) = 2x\)이므로 \(F(x) = x^2 + C\)이다. 점 \((1, 3)\)을 지나므로 \(1 + C = 3\), 곧 \(C = 2\)이다. 따라서 \(F(x) = x^2 + 2\)이다. 그림 1의 처음 모습이 이 곡선이다.</p>

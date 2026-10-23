@@ -61,7 +61,7 @@
 
     <div>
       <article class="card reading" id="text-adbio-coverage" data-kind="본문">
-        <header class="card-head"><span class="no">4.3.1</span><h2>유전체를 한 번만 읽으면 왜 3분의 1이 빠질까?</h2><span class="kind">본문 · 생명공학기술의 활용과 학문 분야</span></header>
+        <header class="card-head"><span class="no">4.3.1</span><h2>생명공학기술의 활용과 학문 분야</h2><span class="kind">본문</span></header>
         <div class="reading-body q-text">
           <p class="q-ask">사람 유전체 31억 염기쌍을 처음 읽는 데는 13년과 수조 원이 들었다. 지금은 기계 한 대가 하루 만에 수십 명의 유전체를 읽는다. 그런데 이 기계는 긴 DNA를 처음부터 끝까지 한 번에 읽지 못하고, 수억 개의 짧은 조각으로 잘라 무작위로 읽은 뒤 컴퓨터로 맞춘다. 유전체 전체 길이만큼만 읽으면 다 읽은 것일까? 몇 배를 읽어야 빠진 곳이 거의 없을까?</p>
           <figure class="q-fig" data-q="adbio-cov">
@@ -72,14 +72,14 @@
           </figure>
           <div class="tb-goal"><span class="lb">먼저 알아야 할 것</span>유전체와 염기 서열(생명과학), 확률과 지수 함수(수학), 유전자 재조합 기술(<a href="4-2.html">유전자 재조합 기술</a>).</div>
 
-          <h3><span class="mono">1</span>무작위로 읽을 때의 빈틈</h3>
+          <h3><span class="no">4.3.1</span>무작위로 읽을 때의 빈틈</h3>
           <p>짧은 조각을 유전체의 아무 곳에서나 무작위로 골라 읽으면, 같은 곳이 여러 번 읽히고 어떤 곳은 한 번도 읽히지 않는다. 비 오는 날 땅에 떨어지는 빗방울처럼, 평균으로는 고르게 떨어져도 마른 자리가 남는 것이다. 읽은 염기의 총수를 유전체 길이로 나눈 값을 평균 커버리지라 한다. 어느 한 염기가 몇 번 읽히는지는 평균이 커버리지인 푸아송 분포를 따른다. 그래서 한 번도 읽히지 않을 확률은 \(e^{-c}\)이다.</p>
-          <div class="tb-env thm"><span class="lb">정리 <span class="nm">커버리지와 빠진 비율</span></span>
+          <div class="tb-env thm"><span class="lb">정리 4.3.1 <span class="nm">커버리지와 빠진 비율</span></span>
             <p>평균 커버리지가 \(c\)이면, 유전체에서 한 번도 읽히지 않는 비율은 \(e^{-c}\)이고 \(k\)번 읽히는 비율은 \(\dfrac{c^k e^{-c}}{k!}\)이다. 염기 하나의 서열을 믿으려면 여러 번 읽어 다수결로 정해야 하므로, 실제 분석에는 30배 안팎의 커버리지를 쓴다.</p>
           </div>
           <p>그림 1에서 커버리지를 바꾸어 보자. 유전체 길이만큼만 읽는 1배에서는 \(e^{-1} \approx 37\)%가 한 번도 읽히지 않는다. 3배로 읽어도 5%, 곧 1억 5천만 염기가 빠진다. 10배이면 0.0045%, 약 14만 염기로 줄어든다. 30배이면 빠진 염기가 사실상 0이고, 대부분의 염기가 20번 넘게 읽혀 기계의 읽기 오류도 다수결로 걸러진다. 실제로는 반복 서열처럼 맞추기 어려운 부분이 있어 이보다 조금 더 빠진다.<sup class="fn"><a href="#fn-adbio-coverage-1">1</a></sup></p>
 
-          <h3><span class="mono">2</span>생물학과 다른 학문의 만남</h3>
+          <h3><span class="no">4.3.2</span>생물학과 다른 학문의 만남</h3>
           <p>하루에 수십 명의 유전체를 읽으면 수 테라바이트의 자료가 쏟아진다. 이 조각들을 맞추고, 사람마다 다른 염기를 찾고, 그 차이가 병과 관련 있는지 따지는 일은 생물학만으로는 할 수 없다. 그래서 컴퓨터 과학, 통계학, 수학과 결합한 생물 정보학이 생겼다. 단백질의 아미노산 서열에서 입체 구조를 예측하는 인공지능은 신약 개발을 앞당겼고, 플라스틱을 분해하는 효소를 설계해 환경 문제에 쓰기도 한다. 생명공학기술은 의약, 농업, 환경, 에너지 분야로 넓어지고 있다.</p>
           <figure class="q-fig">
             <svg viewBox="0 0 520 110" role="img" aria-label="커버리지와 빠진 염기 수">
@@ -94,8 +94,8 @@
             <figcaption>그림 2. 커버리지를 두 배로 하면 빠진 비율은 제곱으로 줄어든다.</figcaption>
           </figure>
 
-          <h3><span class="mono">3</span>예제 하나를 끝까지</h3>
-          <div class="tb-env ex"><span class="lb">예제</span>
+          <h3><span class="no">4.3.3</span>예제 하나를 끝까지</h3>
+          <div class="tb-env ex"><span class="lb">예제 4.3.2</span>
             <p>길이 150염기의 조각을 읽는 기계로 사람 유전체(31억 염기쌍)를 30배 커버리지로 읽으려면 조각을 몇 개 읽어야 하는가? 이때 한 번도 읽히지 않는 염기는 몇 개로 예상되며, 10번 미만으로 읽히는 염기의 비율은 대략 얼마인가?</p>
           </div>
           <p>읽어야 할 염기의 총수는 \(31 \times 10^8 \times 30 = 9.3 \times 10^{10}\)이므로, 조각은 \(9.3 \times 10^{10} \div 150 \approx 6.2 \times 10^8\)개, 곧 약 6억 개이다.</p>
@@ -108,7 +108,7 @@
           <div class="tb-summary"><span class="lb">마무리</span><p>유전체를 짧은 조각으로 무작위로 읽으면 염기마다 읽힌 횟수가 푸아송 분포를 따라, 평균 커버리지 \(c\)에서 한 번도 읽히지 않는 비율이 \(e^{-c}\)이다. 그래서 유전체 길이만큼만 읽으면 37%가 빠지고, 30배쯤 읽어야 빈틈과 읽기 오류가 거의 사라진다. 이렇게 쏟아지는 자료를 다루려고 생물학은 컴퓨터와 통계와 손잡았다. 처음 질문의 '한 번 읽기'는 무작위 읽기의 빈틈 때문에 유전체의 3분의 1 남짓을 빠뜨린다.</p></div>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>약한 프로모터는 어떻게 활성자 하나로 수십 배 강해질까?</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>전사의 조절 요소</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
 
       <article class="card reading" id="text-adbio-omics">
         <header class="card-head">
@@ -181,7 +181,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>약한 프로모터는 어떻게 활성자 하나로 수십 배 강해질까?</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>전사의 조절 요소</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
 
       <article class="card" id="card-adbio-assembly">
         <header class="card-head">
@@ -226,7 +226,7 @@
           </ol>
         </div>
       </article>
-      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>약한 프로모터는 어떻게 활성자 하나로 수십 배 강해질까?</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
+      <nav class="rel" aria-label="연관 카드"><div><span class="mono">먼저 볼 카드</span><a href="../../c/gene/1-6.html#card-gene-genome"><small class="mono">생물의 유전 1.6</small>사람의 DNA 가운데 유전자는 얼마나 될까?</a><a href="../../c/gene/2-1.html#card-gene-central"><small class="mono">생물의 유전 2.1</small>핵 속 DNA의 정보는 어떻게 세포질의 단백질이 될까?</a><a href="../../c/adbio/3-2.html#text-adbio-activator"><small class="mono">고급 생명과학 3.2</small>전사의 조절 요소</a><a href="../../c/labbio/5-8.html#card-labbio-bioinfo"><small class="mono">생명과학 실험 5.8</small>염기 서열을 컴퓨터로 비교하면 병의 원인을 찾을 수 있을까?</a></div></nav>
 
       <a class="px-go" href="../../bank.html?c=adbio&amp;sec=4-3"><span class="mono">AI 출제 문항</span><b>연습문제 풀어보기</b><span class="mono px-n">11문항</span></a>
 
